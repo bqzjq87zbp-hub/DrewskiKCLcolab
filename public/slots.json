@@ -1,0 +1,472 @@
+[
+  {
+    "id": "color-balls",
+    "title": "Color & play",
+    "src": "/media/c4a641f3b456ab59149913ea.jpg",
+    "full": "/media/363fdb503e956d0273863e50.jpg",
+    "alt": "Two children stand back-to-back on the beach with pink and blue balls.",
+    "side": "left",
+    "depth": 1,
+    "quad": [
+      [
+        213,
+        498
+      ],
+      [
+        637,
+        617
+      ],
+      [
+        685,
+        1033
+      ],
+      [
+        223,
+        979
+      ]
+    ],
+    "edge": [
+      [
+        215,
+        493
+      ],
+      [
+        638,
+        611
+      ],
+      [
+        689,
+        1035
+      ],
+      [
+        222,
+        982
+      ],
+      [
+        210,
+        978
+      ],
+      [
+        208,
+        507
+      ]
+    ]
+  },
+  {
+    "id": "shared-glance",
+    "title": "A shared glance",
+    "src": "/media/1e7f972e651c8e41c91168b6.jpg",
+    "full": "/media/481288d072d928eac1b8b2c6.jpg",
+    "alt": "Two children in yellow shirts look toward each other beneath the pier.",
+    "side": "right",
+    "depth": 1,
+    "quad": [
+      [
+        1917,
+        620
+      ],
+      [
+        2330,
+        497
+      ],
+      [
+        2330,
+        980
+      ],
+      [
+        1874,
+        1031
+      ]
+    ],
+    "edge": [
+      [
+        1917,
+        618
+      ],
+      [
+        2329,
+        490
+      ],
+      [
+        2339,
+        500
+      ],
+      [
+        2338,
+        979
+      ],
+      [
+        1870,
+        1035
+      ]
+    ]
+  },
+  {
+    "id": "toward-the-water",
+    "title": "Toward the water",
+    "src": "/media/c6231e82c5d10dbda7f1220d.jpg",
+    "full": "/media/0a7d2faec6cf918c625f0619.jpg",
+    "alt": "Two children seen from behind hold hands while facing the ocean.",
+    "side": "left",
+    "depth": 2,
+    "quad": [
+      [
+        660,
+        794
+      ],
+      [
+        920,
+        873
+      ],
+      [
+        934,
+        1151
+      ],
+      [
+        677,
+        1111
+      ]
+    ],
+    "edge": [
+      [
+        660,
+        789
+      ],
+      [
+        921,
+        869
+      ],
+      [
+        929,
+        875
+      ],
+      [
+        938,
+        1152
+      ],
+      [
+        677,
+        1117
+      ]
+    ]
+  },
+  {
+    "id": "coastal-poise",
+    "title": "Coastal poise",
+    "src": "/media/07f59839133492f58ad8884a.jpg",
+    "full": "/media/07f59839133492f58ad8884a.jpg",
+    "alt": "A person stands in shallow surf, seen from behind.",
+    "side": "right",
+    "depth": 2,
+    "quad": [
+      [
+        1632,
+        873
+      ],
+      [
+        1875,
+        796
+      ],
+      [
+        1869,
+        1110
+      ],
+      [
+        1603,
+        1153
+      ]
+    ],
+    "edge": [
+      [
+        1629,
+        873
+      ],
+      [
+        1878,
+        791
+      ],
+      [
+        1884,
+        795
+      ],
+      [
+        1873,
+        1113
+      ],
+      [
+        1602,
+        1157
+      ]
+    ]
+  },
+  {
+    "id": "nwprt-hat-lager",
+    "title": "NWPRT · Hat & lager",
+    "src": "/media/0d730119329ad4799756e2bd.jpg",
+    "full": "/media/0d730119329ad4799756e2bd.jpg",
+    "alt": "A NWPRT lager hat and a glass of beer under yellow umbrellas.",
+    "side": "left",
+    "depth": 3,
+    "quad": [
+      [
+        925,
+        1006
+      ],
+      [
+        1066,
+        1051
+      ],
+      [
+        1079,
+        1244
+      ],
+      [
+        919,
+        1210
+      ]
+    ],
+    "edge": [
+      [
+        922,
+        1006
+      ],
+      [
+        1068,
+        1049
+      ],
+      [
+        1081,
+        1248
+      ],
+      [
+        917,
+        1213
+      ]
+    ]
+  },
+  {
+    "id": "nwprt-underpier-branded",
+    "title": "NWPRT · Under the pier",
+    "src": "/media/08bfbe519671b2a3ec187588.jpg",
+    "full": "/media/08bfbe519671b2a3ec187588.jpg",
+    "alt": "A photograph of waves beneath the pier with an existing NWPRT badge.",
+    "side": "right",
+    "depth": 3,
+    "quad": [
+      [
+        1490,
+        1052
+      ],
+      [
+        1622,
+        1010
+      ],
+      [
+        1635,
+        1209
+      ],
+      [
+        1476,
+        1239
+      ]
+    ],
+    "edge": [
+      [
+        1489,
+        1051
+      ],
+      [
+        1623,
+        1007
+      ],
+      [
+        1637,
+        1212
+      ],
+      [
+        1475,
+        1243
+      ]
+    ]
+  },
+  {
+    "id": "beach-culture",
+    "title": "Beach culture",
+    "src": "/media/6c2bcb595c230d3249389708.jpg",
+    "full": "/media/6c2bcb595c230d3249389708.jpg",
+    "alt": "A child in a pink sun hat walks past a striped umbrella on Newport Beach.",
+    "side": "left",
+    "depth": 4,
+    "quad": [
+      [
+        1071,
+        1145
+      ],
+      [
+        1154,
+        1169
+      ],
+      [
+        1164,
+        1295
+      ],
+      [
+        1065,
+        1280
+      ]
+    ],
+    "edge": [
+      [
+        1068,
+        1145
+      ],
+      [
+        1156,
+        1168
+      ],
+      [
+        1167,
+        1297
+      ],
+      [
+        1063,
+        1283
+      ]
+    ]
+  },
+  {
+    "id": "coke-beach-campaign",
+    "title": "Beach campaign",
+    "src": "/media/335e2ea0847bd07fec38d935.jpg",
+    "full": "/media/335e2ea0847bd07fec38d935.jpg",
+    "alt": "Coca-Cola bottles in a red ice bucket with beach volleyball players behind them.",
+    "side": "right",
+    "depth": 4,
+    "quad": [
+      [
+        1401,
+        1173
+      ],
+      [
+        1491,
+        1145
+      ],
+      [
+        1495,
+        1277
+      ],
+      [
+        1392,
+        1294
+      ]
+    ],
+    "edge": [
+      [
+        1400,
+        1172
+      ],
+      [
+        1492,
+        1142
+      ],
+      [
+        1497,
+        1280
+      ],
+      [
+        1391,
+        1299
+      ]
+    ]
+  },
+  {
+    "id": "coke-beach-cold-detail",
+    "title": "Cold detail",
+    "src": "/media/aa854f83427a78814a8c9330.jpg",
+    "full": "/media/aa854f83427a78814a8c9330.jpg",
+    "alt": "Four red Coca-Cola bottle caps on a pale surface with water droplets.",
+    "side": "left",
+    "depth": 5,
+    "quad": [
+      [
+        1159,
+        1225
+      ],
+      [
+        1211,
+        1238
+      ],
+      [
+        1223,
+        1327
+      ],
+      [
+        1148,
+        1313
+      ]
+    ],
+    "edge": [
+      [
+        1157,
+        1223
+      ],
+      [
+        1213,
+        1237
+      ],
+      [
+        1224,
+        1332
+      ],
+      [
+        1148,
+        1316
+      ]
+    ]
+  },
+  {
+    "id": "coastal-panorama",
+    "title": "Newport shoreline",
+    "src": "/media/459d0941c6b06f06023017bd.jpg",
+    "full": "/media/459d0941c6b06f06023017bd.jpg",
+    "alt": "Beachgoers and umbrellas along the Newport shoreline.",
+    "side": "right",
+    "depth": 5,
+    "quad": [
+      [
+        1346,
+        1238
+      ],
+      [
+        1401,
+        1224
+      ],
+      [
+        1402,
+        1319
+      ],
+      [
+        1334,
+        1328
+      ]
+    ],
+    "edge": [
+      [
+        1345,
+        1237
+      ],
+      [
+        1402,
+        1222
+      ],
+      [
+        1404,
+        1322
+      ],
+      [
+        1334,
+        1332
+      ]
+    ]
+  }
+]
