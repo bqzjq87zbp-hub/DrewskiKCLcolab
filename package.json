@@ -1,0 +1,13 @@
+{
+  "name": "drewski-kcl-colab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Photographic Newport Pier portfolio collaboration preview",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "check": "node scripts/verify.mjs"
+  },
+  "engines": {"node": ">=20"}
+}

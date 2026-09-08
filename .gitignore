@@ -1,0 +1,23 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+.openai/
+.staging/
+.export-local.mjs
+*.log
+*.pem
+*.key
+public/local-licensed-rooms/
+public/local-rooms.json
+
+# Keep provider masters, private evidence and local credentials out of collaboration.
+*.mp4
+*.mov
+*.mkv
+private/
+evidence/
+local-masters/
+*.private.json
+**/generation.json
