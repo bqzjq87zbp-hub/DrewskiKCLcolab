@@ -33,11 +33,14 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   const progress=engine.viewport.querySelector('.aisle-progress');
   const prev=document.createElement('button'),next=document.createElement('button');prev.type=next.type='button';prev.textContent='← Previous pair';next.textContent='Next pair →';prev.setAttribute('aria-label','Walk back to the previous pair of canvases');next.setAttribute('aria-label','Walk forward to the next pair of canvases');prev.className=next.className='walk-step';const stepTools=document.createElement('div');stepTools.className='aisle-step-controls';stepTools.append(prev,next);menu.querySelector('nav').append(stepTools);progress.setAttribute('aria-label','Scroll or swipe to walk; arrow buttons advance one pair');
   const stops=FOCUS_STOPS,reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  function step(direction){const state=engine.getState(),target=direction>0?stops.find(v=>v>state.progress+.015):[...stops].reverse().find(v=>v<state.progress-.015);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*(engine.journey.offsetHeight-engine.viewport.clientHeight);scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
+  function step(direction){const state=engine.getState(),target=direction>0?stops.find(v=>v>state.progress+.015):[...stops].reverse().find(v=>v<state.progress-.015);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*engine.getScrollRange();scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
   prev.onclick=()=>step(-1);next.onclick=()=>step(1);
   let frame=0;
   function layout(){frame=0;if(collections.active||mount.hidden)return;const state=engine.getState();if(!state.viewport.width||!state.viewport.height)return;
     start.hidden=!state.reducedMotion;looks.hidden=state.reducedMotion;
+    // Respect the rendered scene size, which can be shorter than the window.
+    menu.style.setProperty('--aisle-menu-height',Math.max(48,state.viewport.height-96)+'px');
+    menu.dataset.sideLook=String(Boolean(state.physical?.environment?.camera?.sideLookSupported));
     const invitationOpacity=state.reducedMotion?1:Math.max(0,1-state.progress/.045);
     invitation.style.opacity=String(invitationOpacity);invitation.setAttribute('aria-hidden',String(invitationOpacity===0));
     invitationCue.textContent=state.reducedMotion?'Choose a collection below to explore.':'Scroll or swipe to explore.';

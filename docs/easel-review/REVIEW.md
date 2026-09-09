@@ -14,6 +14,10 @@ The previous view combined flat-looking dark supports, brightly pasted image pla
 - Native vertical wheel/trackpad and touch scrolling work immediately, including under system reduced motion. That preference disables ambient motion. Phone viewing is guided across artwork pairs by the user's scroll position. Source-frustum checks keep supported views inside the available photograph.
 - Clear floating controls replace opaque surfaces. The caption sits away from the central aisle. Optional controls live inside Menu. The HUD has one text owner and stable dimensions; the alternating-label jitter is removed.
 
+## Constrained browser panels
+
+The full scene now fits desktop panels in both dimensions, preserving its proportions with margins. The framed scene stays centered through the final pair, and menus scroll inside their actual scene, including Still mode. Phone portrait navigation remains available. [Normal before/after renders and the 104 desktop plus separate 21-check phone review](VIEWPORT-FIT.md) document this correction and its direct-IAB inspection limit.
+
 ## Reproduce
 
 ```sh
@@ -95,6 +99,6 @@ Reflection validation: the first compact run passed 450/453 assertions. The thre
 
 Six lower-foot/contact-mask variants were rendered and rejected because they introduced pale shelves or sharp water boundaries without an overall visual gain. The accepted runtime is restored and verified. [The comparison and geometry diagnosis](PIER-CONTACT.md) show the retained and rejected desktop/phone endpoints, the tested scope and the available real pier views.
 
-The next useful step is a coupled adjustment of complete posts and their newly exposed background. Lower-foot extensions on the existing broad walls cannot reconcile the estimated contact depths while leaving the upper trunks at their old depths. A shipped real exterior photograph supplies additional unregistered geometry references; new footage is not a prerequisite for another inferred reconstruction attempt. Faithful recovered geometry would still require sufficient real multiview/depth evidence and a reviewed solve. Further cosmetic blur does not address this geometry mismatch.
+A subsequent isolated registration stage traced and modeled a complete near bent from the source photograph and checked the other shipped real pier views. Both rendered prototypes were rejected: correcting the entrance silhouette still left stretched unseen faces, hard foot boundaries and artwork occlusion. [Registration evidence and rejected prototype review](PIER-REGISTRATION.md) distinguish measured image features from authored dimensions. The next useful implementation is one connected next bay with explicit timber, sky and water surfaces and reconciled artwork sightlines. Current assets are sufficient for that inferred construction attempt; it is not yet built or a recovered physical camera solve.
 
 This branch does not merge the separate collaborator water-shader PR, alter the upstream default branch, or deploy Pixpa/production.

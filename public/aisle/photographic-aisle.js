@@ -43,11 +43,14 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
   // Native scrolling always navigates unless Still is explicitly selected.
   // System reduced motion disables idle water and smooth scrolling, not access.
   const isReduced=()=>motionPreference==='still';
+  // Scroll across the full viewing area even when the photograph is framed
+  // in a smaller stage. This reaches the last pair before sticky exit begins.
+  const getScrollRange=()=>Math.max(1,journey.offsetHeight-innerHeight);
   function measure(){dimensions={width:viewport.clientWidth,height:viewport.clientHeight};}
   function render(now=performance.now()){
     frame=0;if(destroyed||!dimensions.width||!dimensions.height)return;frameCount++;
     if(now-lastPaint<30){schedule();return;}lastPaint=now;
-    const reducedMode=isReduced(),top=journey.getBoundingClientRect().top+scrollY,range=Math.max(1,journey.offsetHeight-viewport.clientHeight),requestedProgress=reducedMode?0:clamp((scrollY-top)/range,0,1);
+    const reducedMode=isReduced(),top=journey.getBoundingClientRect().top+scrollY,range=getScrollRange(),requestedProgress=reducedMode?0:clamp((scrollY-top)/range,0,1);
     video.setSuppressed(reducedMode||reduced.matches);video.request(requestedProgress);
     const committed=video.commit();p=committed?committed.progress:requestedProgress;
     z=committed?null:p*travel;
@@ -116,8 +119,8 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
   document.addEventListener('visibilitychange',schedule);
   const observer=new ResizeObserver(resize);observer.observe(viewport);window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',resize,{passive:true});reduced.addEventListener('change',preference);preference();
   Promise.all([original.decode(),...records.map(r=>r.wood.decode())]).then(resize).catch(()=>{const error=document.createElement('p');error.className='aisle-source-failure';error.textContent='A source photograph could not load. The ordinary photograph list remains available below.';viewport.append(error);journey.dataset.reduced='true';resize();});
-  const getState=()=>({kind:physical.ready?'dimensional easels with shared-camera photographic proxies; depth approximate':video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',physical:physical.getState?.(),scrollY,cameraZ:z,progress:p,motionPreference,lookDirection:look,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,physical:r.physical,source:r.source,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
+  const getState=()=>({kind:physical.ready?'dimensional easels with shared-camera photographic proxies; depth approximate':video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',physical:physical.getState?.(),scrollY,scrollRange:getScrollRange(),cameraZ:z,progress:p,motionPreference,lookDirection:look,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,physical:r.physical,source:r.source,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
   const restore=state=>{if(!state||!Number.isFinite(state.scrollY))return;scrollTo({top:state.scrollY,behavior:'instant'});schedule();};
   const destroy=()=>{destroyed=true;if(frame)cancelAnimationFrame(frame);physical.destroy();video.destroy();observer.disconnect();document.removeEventListener('visibilitychange',schedule);window.removeEventListener('scroll',schedule);window.removeEventListener('resize',resize);reduced.removeEventListener('change',preference);journey.remove();ownedStyle.remove();};
-  return{viewport,journey,getState,restore,destroy,setMotionPreference,setLook,setVideoPreview:video.setEnabled,slotAnchors:records.map(({slot,anchor,group})=>({slot,anchor,group})),homography};
+  return{viewport,journey,getState,getScrollRange,restore,destroy,setMotionPreference,setLook,setVideoPreview:video.setEnabled,slotAnchors:records.map(({slot,anchor,group})=>({slot,anchor,group})),homography};
 }

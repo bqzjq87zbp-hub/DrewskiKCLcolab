@@ -55,3 +55,21 @@ body[data-appearance=clear] .aisle-viewport #menu option{background:#163346}
 .aisle-viewport .aisle-progress>span{width:145px;font-size:11px}
 .aisle-viewport #menu .aisle-step-controls{display:flex;gap:4px;border-top:1px solid #ffffff50;padding-top:4px}
 .aisle-viewport #menu .aisle-step-controls button{flex:1;font-size:11px;padding:6px 4px;text-align:center}
+
+/* Fit the complete shared scene in tall mouse-driven browser panels. Touch
+   phones retain the guided portrait walk. The camera and photo keep one ratio. */
+@media (hover:hover) and (pointer:fine){
+ .aisle-journey:not([data-reduced=true]) .aisle-viewport{
+  width:min(100%,calc(100svh * 4000 / 2667));
+  height:auto;aspect-ratio:4000/2667;max-height:100svh;margin-inline:auto;
+  top:max(0px,calc((100svh - 66.675vw)/2));
+ }
+}
+/* The menu is bounded by its actual scene, including compact Still view. */
+.aisle-viewport #menu nav{
+ max-height:var(--aisle-menu-height,calc(100svh - 96px));
+ overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;
+ scroll-padding-block:8px;
+}
+.aisle-viewport #menu[data-side-look=false] .aisle-look-controls{display:none}
+.aisle-viewport #menu[data-side-look=true] .aisle-look-controls{display:flex}

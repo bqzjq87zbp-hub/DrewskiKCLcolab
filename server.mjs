@@ -35,7 +35,7 @@ const reloadScript=`<script>
   const restore=()=>{const a=window.PhotographicAisle;if(!a?.getState().physical?.ready){if(++attempts<200)setTimeout(restore,100);return;}
    if(s.version===2&&['guided','system','still'].includes(s.mode)){a.setMotionPreference(s.mode);const select=document.querySelector('#travel-mode');if(select)select.value=s.mode;}
    a.setLook(s.look||'auto');
-   if(!location.hash.startsWith('#collection'))requestAnimationFrame(()=>scrollTo({top:a.journey.getBoundingClientRect().top+scrollY+s.progress*(a.journey.offsetHeight-a.viewport.clientHeight),behavior:'instant'}));
+   if(!location.hash.startsWith('#collection'))requestAnimationFrame(()=>scrollTo({top:a.journey.getBoundingClientRect().top+scrollY+s.progress*(a.getScrollRange?.()??(a.journey.offsetHeight-a.viewport.clientHeight)),behavior:'instant'}));
   };setTimeout(restore,0);
  }
 })();</script>`;

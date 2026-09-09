@@ -19,7 +19,7 @@ try{
   await page.waitForFunction(()=>window.PhotographicAisle?.getState().physical?.ready,{},{timeout:30000});
   const timing=await page.evaluate(()=>{
     const a=window.PhotographicAisle;a.setMotionPreference('guided');
-    const j=a.journey,top=j.getBoundingClientRect().top+scrollY,range=j.offsetHeight-a.viewport.clientHeight;
+    const j=a.journey,top=j.getBoundingClientRect().top+scrollY,range=a.getScrollRange?.()??(j.offsetHeight-a.viewport.clientHeight);
     return new Promise(resolve=>{let start,last;const intervals=[];function tick(now){start??=now;if(last!==undefined)intervals.push(now-last);last=now;const t=(now-start)/16000,p=t<.0625?0:t<.4375?(t-.0625)/.375:t<.5625?1:t<.9375?1-(t-.5625)/.375:0;
       scrollTo({top:top+Math.max(0,Math.min(1,p))*range,behavior:'instant'});
       if(t>=1){const sorted=[...intervals].sort((a,b)=>a-b);resolve({durationMs:now-start,frames:intervals.length,medianRafIntervalMs:sorted[Math.floor(sorted.length*.5)],p95RafIntervalMs:sorted[Math.floor(sorted.length*.95)],maxRafIntervalMs:Math.max(...intervals)});}else requestAnimationFrame(tick);

@@ -53,7 +53,7 @@ async function nativeNavigation(page,device,label){
   await settle(page,0);return {before,after};
 }
 async function settle(page,progress,{video=false,reduced=false}={}){
-  await page.evaluate(p=>{const a=window.PhotographicAisle,j=a.journey;scrollTo({top:j.getBoundingClientRect().top+scrollY+p*(j.offsetHeight-a.viewport.clientHeight),behavior:'instant'});},progress);
+  await page.evaluate(p=>{const a=window.PhotographicAisle,j=a.journey;scrollTo({top:j.getBoundingClientRect().top+scrollY+p*(a.getScrollRange?.()??(j.offsetHeight-a.viewport.clientHeight)),behavior:'instant'});},progress);
   await page.waitForFunction(({p,video,reduced})=>{
     const s=window.PhotographicAisle.getState();
     return s.physical?.ready && (reduced?s.reducedMotion&&s.progress===0:Math.abs(s.progress-p)<.012) && (!video || (s.video.status==='ready'&&s.video.requestedFrame===s.video.committedFrame));

@@ -27,3 +27,9 @@ Six same-pose desktop/phone comparisons preserved visible artwork pixels, print 
 ## Pier-contact restoration
 
 Six experimental variants were visually rejected; their runtime was restored to `8b0c073`. Twelve actual desktop/phone poses match baseline camera, artwork pixels, print geometry/UVs, projected quads and HUD. All 216 original image hashes match. A separate 25/25 targeted smoke pass confirms native navigation, normal water motion, reduced-motion freeze and no browser/HTTP failures. [Details and comparisons](PIER-CONTACT.md). This does not claim that the remaining pier contact is visually accepted or that the earlier full suite was rerun.
+
+## Constrained desktop viewport follow-up
+
+104 desktop assertions passed across eight panel sizes. A separate 390×844 phone retest passed 21/21. Normal renders confirm complete entry/final artworks, centered travel through progress 1 and reachable menus. Native input, saved Still, reduced preference, resize and reload checks passed; protected rendering modules are unchanged.
+
+The initial combined run retains its fatal mixed-input touch timeout despite 118 passed assertions. Four isolated gestures and the separate phone sequence passed. These are separate completed checks, not a clean rerun of the full 661-check checkpoint. [Comparisons, accounting and limitations](VIEWPORT-FIT.md). Actual Codex panel inspection and physical-device performance remain unverified.
