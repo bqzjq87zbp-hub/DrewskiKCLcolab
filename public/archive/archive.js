@@ -14,9 +14,10 @@ import { createLightbox } from "./lightbox.js";
 import { createSound, buildControls, runPreloader, loadPrefs } from "./chrome.js";
 import { enhanceHero } from "./hero.js";
 
-// TODO(Kyle): the real booking address. Nothing else in the repo carries one,
-// so this placeholder is deliberately obvious rather than invented.
-export const BOOKING_EMAIL = "booking@example.com";
+// Kyle's address, as it appears on his own commits in this repository. It is an
+// Apple private relay, so it forwards to him but may reject unknown senders;
+// swap this one constant if a direct address is preferred for public booking.
+export const BOOKING_EMAIL = "bqzjq87zbp@privaterelay.appleid.com";
 const BOOKING_HREF = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Booking enquiry")}`;
 
 const ORDER = ["branding", "families", "headshots", "coastal"];
