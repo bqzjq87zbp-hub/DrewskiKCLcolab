@@ -50,3 +50,4 @@ let appearance='system';try{const saved=sessionStorage.getItem('kcl-preview-appe
 document.body.dataset.appearance=appearance;menu.dataset.appearance=appearance;$('#appearance').value=appearance;
 window.PhotographicCollections={slots,collections,display,enterCategory,menu,signLayer};
 window.PhotographicAisle=attachAisle(window.PhotographicCollections);
+import('/below.js').then(m=>m.initBelow()).catch(()=>{});

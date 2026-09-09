@@ -11,7 +11,7 @@ export function createVideoFrameSeam({viewport, poster, onReady, manifestURL='/v
   controls.className='aisle-video-controls';
   const button=document.createElement('button');
   button.type='button'; button.className='aisle-video-toggle';
-  button.textContent='Preview video walk'; button.setAttribute('aria-pressed','false');
+  button.textContent='Video walk'; button.setAttribute('aria-pressed','false');
   const status=document.createElement('span');
   status.className='aisle-video-status'; status.setAttribute('role','status');
   status.setAttribute('aria-live','polite');
@@ -29,12 +29,12 @@ export function createVideoFrameSeam({viewport, poster, onReady, manifestURL='/v
   function updateControl() {
     button.disabled=suppressed;
     button.setAttribute('aria-pressed',String(enabled&&!suppressed));
-    button.textContent=enabled&&!suppressed?'Return to still photo':'Preview video walk';
+    button.textContent=enabled&&!suppressed?'Return to still photo':'Play video walk';
     if(suppressed)announce('Video preview is off in Still or reduced motion.');
     else if(failed)announce('Video preview unavailable. The still photograph remains available.');
     else if(!enabled)announce('');
     else if(!manifest||committed<0)announce('Loading video frame…');
-    else announce('Video preview · 2D tracked alignment; depth is approximate.');
+    else announce('Video walk · measured dolly alignment.');
   }
   function release(entry) {
     if(!entry)return;

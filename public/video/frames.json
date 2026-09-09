@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "generated-video-frame-preview",
   "reviewStatus": "preview-only",
-  "warning": "AI-generated forward-move preview. Not pixel-faithful original, not a solved3D camera.4:3 output differs from3:2 source. Temporal/tracking review is pending; no tracked easel geometry is enabled.",
+  "warning": "AI-generated forward-move preview, not the unaltered source photograph. Easel geometry is driven by a measured global forward-dolly solve; depth is estimated from image motion, not a solved 3D camera.",
   "source": {
     "videoSha256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
     "sourceImageSha256": "8881a29e772272716d6770b8f45843bf330bfda34ba634259290c252eb601c5d",
@@ -14,7 +14,7 @@
     "timestampOrigin": 0.0,
     "decodedFrameCount": 241
   },
-  "nativeFrameStride": 2,
+  "nativeFrameStride": 1,
   "frames": [
     {
       "index": 0,
@@ -23,7 +23,20 @@
       "file": "frame-0000.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "16ccfda0b73243667688f0e373f27439e1803c7fa90a4be307f68d18b3d60ab8",
+      "sha256": "d25133efb5a177ce7ad7b8619bad69ac4805eefcf28a237034b6f86c7d80b4d4",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 1,
+      "time": 0.041667,
+      "mediaTime": 0.041667,
+      "file": "frame-0001.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "9fb29a8a465e59dddccd2ebe97dbfca01af10be48bdb148d3fa70cae0561e5ac",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -33,10 +46,23 @@
       "index": 2,
       "time": 0.083333,
       "mediaTime": 0.083333,
-      "file": "frame-0001.jpg",
+      "file": "frame-0002.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "1bcc0e8caf3f64b877b99673a0239e55214830f6449091b74ef6c28ef1d6fc5f",
+      "sha256": "1e9e699aa380aecdc46fbc5ba3c9f25c9caad08b4bdbbbf01c0dde2b51af600b",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 3,
+      "time": 0.125,
+      "mediaTime": 0.125,
+      "file": "frame-0003.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "e2a886fdc3dd1d4b6ac4675fc5c4089278b7c097e28dd702c9285df275de6984",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -46,10 +72,23 @@
       "index": 4,
       "time": 0.166667,
       "mediaTime": 0.166667,
-      "file": "frame-0002.jpg",
+      "file": "frame-0004.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "d0f06b76a8920cf89ee109f6512100813d819de6c50e75aab93ce707eee7dc57",
+      "sha256": "3d9c316fd56239457aa26fd89a13fb808dece6b674011d7dd48ae59b05612573",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 5,
+      "time": 0.208333,
+      "mediaTime": 0.208333,
+      "file": "frame-0005.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "35bd1a218573edea3708615e7c7c3c8eb3985481164c6ed16d1b1fc88c8c2f49",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -59,10 +98,23 @@
       "index": 6,
       "time": 0.25,
       "mediaTime": 0.25,
-      "file": "frame-0003.jpg",
+      "file": "frame-0006.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "81b1abe3c262d59e358bc5b94668113aef478266dd7136d255062f8a895b1a1d",
+      "sha256": "1ffb0e94683fd5c754955227a6726b3800a4a2e34402d367379e6ba82b4bc27e",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 7,
+      "time": 0.291667,
+      "mediaTime": 0.291667,
+      "file": "frame-0007.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "cab81c264f9e80897cac5020cfa7a42bc011e8cc9a2dd5227c4525e173a9b1f0",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -72,10 +124,23 @@
       "index": 8,
       "time": 0.333333,
       "mediaTime": 0.333333,
-      "file": "frame-0004.jpg",
+      "file": "frame-0008.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "e31e851401b57522b6777a3617526f08911c8c74abe5a0b739f16a4d86c206c5",
+      "sha256": "0f1b2d422845fed9894c47f3601f395c2cb9b50c5dc4ecc9c2a9909b97036d65",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 9,
+      "time": 0.375,
+      "mediaTime": 0.375,
+      "file": "frame-0009.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "fe9cf7fb5a2176a9a1b4f1f0f82b839bbb2ae2615f3e8cb7b6bbb79162275b8f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -85,10 +150,23 @@
       "index": 10,
       "time": 0.416667,
       "mediaTime": 0.416667,
-      "file": "frame-0005.jpg",
+      "file": "frame-0010.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "f179e3ecc57e1ecbbb1378e2e3ddb5da69f2c755285d3184ddc601f00dd62adc",
+      "sha256": "f85d1c0de85ee26c17770b09e5d3fa9370ea87fabe9fd29a27b007dce44c6f22",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 11,
+      "time": 0.458333,
+      "mediaTime": 0.458333,
+      "file": "frame-0011.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "acc951ede50fe4ca89b3cd6cde6e6a8ddab112afa854f985dfb353a6658c4121",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -98,10 +176,23 @@
       "index": 12,
       "time": 0.5,
       "mediaTime": 0.5,
-      "file": "frame-0006.jpg",
+      "file": "frame-0012.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "118afae309d1c3b4c0fe4813351394e7ccf1cb421c48f77412673f6fb9f7a051",
+      "sha256": "43f888edaeae648c8f174af9c85f9d16677d731a7844a162fc01cc6fea1b4c6a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 13,
+      "time": 0.541667,
+      "mediaTime": 0.541667,
+      "file": "frame-0013.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "f4df17862e3ef326f629f49deeb525d5ff543c0073e940da30ce40a3283ff3af",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -111,10 +202,23 @@
       "index": 14,
       "time": 0.583333,
       "mediaTime": 0.583333,
-      "file": "frame-0007.jpg",
+      "file": "frame-0014.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "af9bb36eea496e03978cb64d232088c065383e188307c841dded1d3a03709e8c",
+      "sha256": "065c16b39a193376f3f631e1db296abd616264c24fd732fb56989bd54755cb43",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 15,
+      "time": 0.625,
+      "mediaTime": 0.625,
+      "file": "frame-0015.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "874c25e5d4030b99ac95964b4efdac768997749e581fe28dd02464f72dd4d359",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -124,10 +228,23 @@
       "index": 16,
       "time": 0.666667,
       "mediaTime": 0.666667,
-      "file": "frame-0008.jpg",
+      "file": "frame-0016.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "103c0c8ec0dd0745fa83d3a38cb1bef49b4eb94b822cf54e34a3f786144c8412",
+      "sha256": "19f09147e118d3dbb058f17186b0653bced270427623ff0677008928d79b82e8",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 17,
+      "time": 0.708333,
+      "mediaTime": 0.708333,
+      "file": "frame-0017.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8664f41a0db22541d2ea5355e64f106795c290e1a99942c22c22e5860e44d94c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -137,10 +254,23 @@
       "index": 18,
       "time": 0.75,
       "mediaTime": 0.75,
-      "file": "frame-0009.jpg",
+      "file": "frame-0018.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "440943a153b418c9d5254b0ee9ef14ee9621eed916a1b5f76dad3d8341292204",
+      "sha256": "e17bc2138d88472db899e46bad394af651eeceb72dde4b325e143c8e17a8cd88",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 19,
+      "time": 0.791667,
+      "mediaTime": 0.791667,
+      "file": "frame-0019.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "ad4043d36382016398046771d614a3c8b7c4200d27d61dd9ace4ac702236bc04",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -150,10 +280,23 @@
       "index": 20,
       "time": 0.833333,
       "mediaTime": 0.833333,
-      "file": "frame-0010.jpg",
+      "file": "frame-0020.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "b5a93018689bd0c65ca49280d3b0fda5be81dca91ce104cbd992cb9b5228180b",
+      "sha256": "3733f0f2490652dbfa0f1795ad20474cf2324cc88d6892955d19ba5e87eff2f6",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 21,
+      "time": 0.875,
+      "mediaTime": 0.875,
+      "file": "frame-0021.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "454710ae891acb703d55a9e5532af8b5d2e94a97ced598ebaf80c984c956b72c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -163,10 +306,23 @@
       "index": 22,
       "time": 0.916667,
       "mediaTime": 0.916667,
-      "file": "frame-0011.jpg",
+      "file": "frame-0022.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "6f7ae52bbb02e7e69e2ccba17ea77f6ada20db6e245f7386f77a3f15ba4e62bc",
+      "sha256": "2ccd3d4d0df6cb6da64007abb69e9f35832ddf405430860392c943dcd6540daf",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 23,
+      "time": 0.958333,
+      "mediaTime": 0.958333,
+      "file": "frame-0023.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "782f646e03ffcc1eb806a5da8a088ac5d2cc64d2df0c771f8b7bf4c51cb6e8a1",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -176,10 +332,23 @@
       "index": 24,
       "time": 1.0,
       "mediaTime": 1.0,
-      "file": "frame-0012.jpg",
+      "file": "frame-0024.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "55daf10fb822a66218aa51cab1e9512b3600ff73fef89200bb33e9d23e74080e",
+      "sha256": "0fa382db7c65faef6e84df5af75db90e2651ac5c8efd793489de9a5a2ce2a759",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 25,
+      "time": 1.041667,
+      "mediaTime": 1.041667,
+      "file": "frame-0025.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "5af9fd7a03d25f32b8480d6f0e5328ad902e53f9de0ab4f82fefc47a19d5dc74",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -189,10 +358,23 @@
       "index": 26,
       "time": 1.083333,
       "mediaTime": 1.083333,
-      "file": "frame-0013.jpg",
+      "file": "frame-0026.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "575abfb263d5b576541f857e400fc4546d4d1d3562cb1b3f7ff0df21adda0a2a",
+      "sha256": "d94ad94ca1f37d24a5fcbf6b2f07fee40a97ffd59cc13f168eac344d1d8ce04b",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 27,
+      "time": 1.125,
+      "mediaTime": 1.125,
+      "file": "frame-0027.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "508f8130a11b1ffb7b18fea71003ae00a60c2e652a4857db6c2504183bf147ff",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -202,10 +384,23 @@
       "index": 28,
       "time": 1.166667,
       "mediaTime": 1.166667,
-      "file": "frame-0014.jpg",
+      "file": "frame-0028.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "e8a1ee8f3f79d50196404d04e15ebee33ebbbc99f879e92b67b8a3ce299f9520",
+      "sha256": "aeeb9a8a433d846900e12f251e8044542a3369bdd9f3fa4b6befecfcfa75c3c6",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 29,
+      "time": 1.208333,
+      "mediaTime": 1.208333,
+      "file": "frame-0029.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "a11d183f57e9bd9711720d16f8de3fe6e2ffe918bfc4511d058ed3420586344c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -215,10 +410,23 @@
       "index": 30,
       "time": 1.25,
       "mediaTime": 1.25,
-      "file": "frame-0015.jpg",
+      "file": "frame-0030.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "e99e7dce58f02bc2281f861bdc7834c4bf1076f195ad45ce7962ab714c58f6e8",
+      "sha256": "4c23f73e6b8f341a42562ad23494286da9b1cc85fecb2090e2e5eb37a4eddd67",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 31,
+      "time": 1.291667,
+      "mediaTime": 1.291667,
+      "file": "frame-0031.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "3490b24de0850f7b48215feaad687bfb0618bc9ac62abfbe6239283e8795d783",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -228,10 +436,23 @@
       "index": 32,
       "time": 1.333333,
       "mediaTime": 1.333333,
-      "file": "frame-0016.jpg",
+      "file": "frame-0032.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "a0e0b21832371804b4a482a74e0d25d44be2f21b02028169700e6afbff17a13d",
+      "sha256": "af2a22daf136ead54886eba4e9e3debf800fd8c13dbe03e5d737eff7047e8c93",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 33,
+      "time": 1.375,
+      "mediaTime": 1.375,
+      "file": "frame-0033.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "3b0372bf957a647c23f972961901bea96c4db31f0bc106ae67210f32a70326dc",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -241,10 +462,23 @@
       "index": 34,
       "time": 1.416667,
       "mediaTime": 1.416667,
-      "file": "frame-0017.jpg",
+      "file": "frame-0034.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "59fa050ffe97c33edacd13b52eb7c44482c43fc148e667d4f8265e06c21de5db",
+      "sha256": "73abb70baddd2f58b785948b11206a1a1ac4fe9c4432bbfed628dcd04c967062",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 35,
+      "time": 1.458333,
+      "mediaTime": 1.458333,
+      "file": "frame-0035.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "71873cda5ffbba8676f721f3fcabb144248204d065a4e19ee6649831b9a0fa0a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -254,10 +488,23 @@
       "index": 36,
       "time": 1.5,
       "mediaTime": 1.5,
-      "file": "frame-0018.jpg",
+      "file": "frame-0036.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "2934956f48636f1e42c12aacd62ea6156f8dfcabccc295c32d9bedb500c91f75",
+      "sha256": "7bea41c7c5989ba2b8191c3ecee8aa7c9185dfb4deec7b5da45201c82ab50180",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 37,
+      "time": 1.541667,
+      "mediaTime": 1.541667,
+      "file": "frame-0037.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "f59a2cf8c6f4a38d073ace52fc36333956c49fd48b362791b73344b4df6bf02c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -267,10 +514,23 @@
       "index": 38,
       "time": 1.583333,
       "mediaTime": 1.583333,
-      "file": "frame-0019.jpg",
+      "file": "frame-0038.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "08a91244be685601e975dfd9e5c4331cfc1e016dfeb94ea82433cd8c1b4357bc",
+      "sha256": "22e23f46ac28a3b4231668765104a47336fb98ec85a21b1b37c78ecd13f646cf",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 39,
+      "time": 1.625,
+      "mediaTime": 1.625,
+      "file": "frame-0039.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "c58e0f47f56728201a16585442af6935a8eb03a0e13995dd1df840d942e0aae6",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -280,10 +540,23 @@
       "index": 40,
       "time": 1.666667,
       "mediaTime": 1.666667,
-      "file": "frame-0020.jpg",
+      "file": "frame-0040.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "4a56bc1557e9e35281726175b46a090b85519d751523f9efecfdc30960746631",
+      "sha256": "7f5d35448b1ed6a3e62adf9c7025970431ca72186f2214d9a8c72fad53438952",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 41,
+      "time": 1.708333,
+      "mediaTime": 1.708333,
+      "file": "frame-0041.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "67d5c2ff5a1731dadd38b0b90dda784e6d39c7c5042a22e49002877dc1fc4248",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -293,10 +566,23 @@
       "index": 42,
       "time": 1.75,
       "mediaTime": 1.75,
-      "file": "frame-0021.jpg",
+      "file": "frame-0042.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "2cc4f13bcfe698e17b5317902384ffc498a7e2d84bc058cc61934fe7737fd847",
+      "sha256": "537f67a4f693a2802f8f42b700e3cfeda4fbafeea674e84ecfcec79451d0f683",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 43,
+      "time": 1.791667,
+      "mediaTime": 1.791667,
+      "file": "frame-0043.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "7e5990a8303d3d82b687fb511db1cc2ded3553780ffb51eeffb464bd3409ca36",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -306,10 +592,23 @@
       "index": 44,
       "time": 1.833333,
       "mediaTime": 1.833333,
-      "file": "frame-0022.jpg",
+      "file": "frame-0044.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "9f070ee5c33d96da05681eb69a707fbcb0c6d3df7f79935be055e166fdd4ba20",
+      "sha256": "bae13e1976751daaa89a232cd46139f6bb15751a12fd799f68945dad6a7ec3ce",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 45,
+      "time": 1.875,
+      "mediaTime": 1.875,
+      "file": "frame-0045.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "89412444b9edde30468e7c5c9390179dce400ba740e74a6864556d12d37e846f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -319,10 +618,23 @@
       "index": 46,
       "time": 1.916667,
       "mediaTime": 1.916667,
-      "file": "frame-0023.jpg",
+      "file": "frame-0046.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "a9115efaa2871e2ef3c479d9e9536586c8ed6111eeb45d2f3c40606b59089800",
+      "sha256": "f70e84018d8dddfcc30a8b0c6edfa44acd21ef458a3ddbace4d4674905a364c3",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 47,
+      "time": 1.958333,
+      "mediaTime": 1.958333,
+      "file": "frame-0047.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "78d60897478fc7972947674d69a3dab9b7b59879597c7dabf2132047baa5ae60",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -332,10 +644,23 @@
       "index": 48,
       "time": 2.0,
       "mediaTime": 2.0,
-      "file": "frame-0024.jpg",
+      "file": "frame-0048.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "45b7c859cd6717e989d8f60f50d742243abfcc47e3e74a9da47706754d4e1f02",
+      "sha256": "5beacf2a78002745d1f8d33df4a0cba18f698d69fff67dbecade3ef20927f490",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 49,
+      "time": 2.041667,
+      "mediaTime": 2.041667,
+      "file": "frame-0049.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "46be3c21fe53ba9d53d18253bd4fcc22d0af9aa8bd3ab0e992a628ca21b214aa",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -345,10 +670,23 @@
       "index": 50,
       "time": 2.083333,
       "mediaTime": 2.083333,
-      "file": "frame-0025.jpg",
+      "file": "frame-0050.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "ca6f85cf32b5ac4e3ef7e69698b5bba55c2091c1855d64ebb620bfb95d2b7645",
+      "sha256": "b90442243240f4a5caf028ad003be38d329d6702051836a7dba6d518d486022c",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 51,
+      "time": 2.125,
+      "mediaTime": 2.125,
+      "file": "frame-0051.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "ec0fef0a2c98a50ed0154f922dc0aec5c2f6ffe5576dc6e286544c782c420641",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -358,10 +696,23 @@
       "index": 52,
       "time": 2.166667,
       "mediaTime": 2.166667,
-      "file": "frame-0026.jpg",
+      "file": "frame-0052.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "64170528bfa83e31a3e9df0695a8626b01011dcfca91ab0101c29e3ab730b7c8",
+      "sha256": "b4988533a5e8e0b1cce9784a866e26f330fcf748dea9ad520d285dd2682ce65a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 53,
+      "time": 2.208333,
+      "mediaTime": 2.208333,
+      "file": "frame-0053.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "96ab1a8df59af144cda81e5d95bfeaf9eea9446858132a9d34d6a332c11fc443",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -371,10 +722,23 @@
       "index": 54,
       "time": 2.25,
       "mediaTime": 2.25,
-      "file": "frame-0027.jpg",
+      "file": "frame-0054.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "ba7850efcba920aa2a0efde7bb6c9979194b647cb0a59481aebe96211f47da68",
+      "sha256": "08d5dd3f5b88035028b4b7e12d42b6d57426cd29313c313d2e1e78ce611fb733",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 55,
+      "time": 2.291667,
+      "mediaTime": 2.291667,
+      "file": "frame-0055.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8e39fda28f53e9721f4bfd2cd5583a3fc7a5bd9789771d9956f4d9977af89857",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -384,10 +748,23 @@
       "index": 56,
       "time": 2.333333,
       "mediaTime": 2.333333,
-      "file": "frame-0028.jpg",
+      "file": "frame-0056.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "fd03b3364c4c26804c7b5493b9ea9e996a790441e9ca64c57db44971a7b771ec",
+      "sha256": "d1d75e374456c9ccaf8f43a3195f3cdc7d9a81f3598d07f1f299ccb04f2a039f",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 57,
+      "time": 2.375,
+      "mediaTime": 2.375,
+      "file": "frame-0057.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "1669c31d4e12a4df0c8f65f59ecdebbbd98f4c4767e4f7020ce3516e1df82c65",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -397,10 +774,23 @@
       "index": 58,
       "time": 2.416667,
       "mediaTime": 2.416667,
-      "file": "frame-0029.jpg",
+      "file": "frame-0058.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "45b137d4d3ae27029da3e16c81a14fc11dcca99ebb3b89d71d748c46faef2247",
+      "sha256": "910bae5de5f0563c23a0e9286f9538feaaf60da15b9a31b739060bed9e004c49",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 59,
+      "time": 2.458333,
+      "mediaTime": 2.458333,
+      "file": "frame-0059.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "85a125bbe02fc48d595e37d60be1ee70a998cd88662355d7ddfaf861e4411151",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -410,10 +800,23 @@
       "index": 60,
       "time": 2.5,
       "mediaTime": 2.5,
-      "file": "frame-0030.jpg",
+      "file": "frame-0060.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "5956709e262dd9f0bdf0ad91b9320244c31727b6c4e50d34cb847cb6692d7046",
+      "sha256": "ac05a4e8cdf2fc4ac834ffea44181ee6448bfa6f4084e101ba22e86f15c4bde5",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 61,
+      "time": 2.541667,
+      "mediaTime": 2.541667,
+      "file": "frame-0061.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "fa93d7956f324435f1155025eb186275c81b110f1a391f0893374b697f58577a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -423,10 +826,23 @@
       "index": 62,
       "time": 2.583333,
       "mediaTime": 2.583333,
-      "file": "frame-0031.jpg",
+      "file": "frame-0062.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "819b20448c16360ebfe83d6ea0fb577c38241b2dde793c495a2fddb0e11a29b9",
+      "sha256": "84d7e5b1ab802f563016c7fdb709a4118da0e3f8075e579356b60a6fee093e53",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 63,
+      "time": 2.625,
+      "mediaTime": 2.625,
+      "file": "frame-0063.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "f22bc571dfa9720c295c068e49e8a4cc352e5750c7ce8922f2a3e1c47f6dd720",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -436,10 +852,23 @@
       "index": 64,
       "time": 2.666667,
       "mediaTime": 2.666667,
-      "file": "frame-0032.jpg",
+      "file": "frame-0064.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "21ddcd688dab71f0b5444c2537b6eda69533b61bb3de44f426f8dd0b85a84e5b",
+      "sha256": "c8135ae6bcb3a7fa1ddb9a9388dbdfbf7d30d1b689b943a2b10cdac7c22f275b",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 65,
+      "time": 2.708333,
+      "mediaTime": 2.708333,
+      "file": "frame-0065.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "586a6e3eb5f1587b4445b4b44c2b1eab3023c5e4c17284190a2bed8e1192cb29",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -449,10 +878,23 @@
       "index": 66,
       "time": 2.75,
       "mediaTime": 2.75,
-      "file": "frame-0033.jpg",
+      "file": "frame-0066.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "8229513361299e3cda05ef75f619e23de5e3c34dd17f10be6b4175bb351229bd",
+      "sha256": "e85c18d56cacd9d79a222f4879d924eda9275a405fa7165b42f3a8ad1ef657e1",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 67,
+      "time": 2.791667,
+      "mediaTime": 2.791667,
+      "file": "frame-0067.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "7584728c2954e4c388dda927ac303cc9fa362d940266a65374022029544610a8",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -462,10 +904,23 @@
       "index": 68,
       "time": 2.833333,
       "mediaTime": 2.833333,
-      "file": "frame-0034.jpg",
+      "file": "frame-0068.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "1f022926aa8597607adce14a246de81d0da105d0eaf4d1667fb88536da286d02",
+      "sha256": "8af6118707dc399d9edcd3052e551d1e5a774a113df4e7bee726801223190a64",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 69,
+      "time": 2.875,
+      "mediaTime": 2.875,
+      "file": "frame-0069.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "e4b8fbb8ebf69afc86205c5b780126b2456522b70a64c013c3f4e8d3243eb82a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -475,10 +930,23 @@
       "index": 70,
       "time": 2.916667,
       "mediaTime": 2.916667,
-      "file": "frame-0035.jpg",
+      "file": "frame-0070.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "bf3144191350d6cf74f53fe0b560cc9e8bbc881b0ce7219b171d55e8d7b885a6",
+      "sha256": "0d2df2917fc47085ca00ec6ec19920fcbd161f4e81744db33b83d9e8fcab24c5",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 71,
+      "time": 2.958333,
+      "mediaTime": 2.958333,
+      "file": "frame-0071.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "684c0239f56d930bcafd0c4150423baa808783844187e40fe3424fbb89bb9b46",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -488,10 +956,23 @@
       "index": 72,
       "time": 3.0,
       "mediaTime": 3.0,
-      "file": "frame-0036.jpg",
+      "file": "frame-0072.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "366e7f552277af9c9da6799bc08648fe2bbb72cabf1fd2a8409077ce0f161db0",
+      "sha256": "68e21957e0dbdd4040f853352d60469aa5c48e5475ceeff3c70544d198fdd637",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 73,
+      "time": 3.041667,
+      "mediaTime": 3.041667,
+      "file": "frame-0073.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "e0d7debfe5c719c4ef30fa5b0fae847d7092a2471d4a37ddd83a9d874b35b35f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -501,10 +982,23 @@
       "index": 74,
       "time": 3.083333,
       "mediaTime": 3.083333,
-      "file": "frame-0037.jpg",
+      "file": "frame-0074.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "35bf7c25051034e9f1fa803e55949cf045ec7ce9882c01e1672974af8b0b1d13",
+      "sha256": "c836fdbbf791a4bc973cb281f4898043f0d58f7a3bf8de776100daf3ed132df4",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 75,
+      "time": 3.125,
+      "mediaTime": 3.125,
+      "file": "frame-0075.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "7ef35af3cd8f747263f783ca76ede1dbc030170f789411a352bf1d852d1cea8f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -514,10 +1008,23 @@
       "index": 76,
       "time": 3.166667,
       "mediaTime": 3.166667,
-      "file": "frame-0038.jpg",
+      "file": "frame-0076.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "e47225f644184f2311cf095d5ab8e211f691ef4263d2943a7b008bd7f397b4b7",
+      "sha256": "c0bd0a9bb5d93bc7f8371bc5a1ae3201921e26ab64302ee9db9dd27795cfd16b",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 77,
+      "time": 3.208333,
+      "mediaTime": 3.208333,
+      "file": "frame-0077.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "6dc2ec899057f025766f85a7ae413b5ab90a080015db74a1e9ae9f3f754c77ba",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -527,10 +1034,23 @@
       "index": 78,
       "time": 3.25,
       "mediaTime": 3.25,
-      "file": "frame-0039.jpg",
+      "file": "frame-0078.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "93e3a5c94aaab16c47960a21899a9e6f510965032a8a2adf5af71de05b178f7f",
+      "sha256": "d07f44c84b5546f71a780fccb5135a704381549750a4baa8218b01ec9208a1b8",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 79,
+      "time": 3.291667,
+      "mediaTime": 3.291667,
+      "file": "frame-0079.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "9c04bb4de3b2f980c69cdacd6416862fda6eba81dd20d9437449b0b3d186bc77",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -540,10 +1060,23 @@
       "index": 80,
       "time": 3.333333,
       "mediaTime": 3.333333,
-      "file": "frame-0040.jpg",
+      "file": "frame-0080.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "32187f0ab6ab9c4b1f5e388ee10635406f963676ab2e563049adba87baa7ed2a",
+      "sha256": "32136850fd0fef68b92f6596ca0a7c4b4e452c13601faf1d8987c86dbc77634f",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 81,
+      "time": 3.375,
+      "mediaTime": 3.375,
+      "file": "frame-0081.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "a890c7f007cd7c26a01a6d87378734dc6aed2825d84648118612101afc1e6bce",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -553,10 +1086,23 @@
       "index": 82,
       "time": 3.416667,
       "mediaTime": 3.416667,
-      "file": "frame-0041.jpg",
+      "file": "frame-0082.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "0a95e4b68b5c86406a2c44f589d665ea935ac14011889e94da45f2f8a5af53e3",
+      "sha256": "a5d74c52369d738b97bb6ce3df4080359e418fc535e2db2d6b6d9c83fe525c78",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 83,
+      "time": 3.458333,
+      "mediaTime": 3.458333,
+      "file": "frame-0083.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "ac7f022467d99441c5c5a15607ddb730ad717491648157ac000d23cf2e9ee44a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -566,10 +1112,23 @@
       "index": 84,
       "time": 3.5,
       "mediaTime": 3.5,
-      "file": "frame-0042.jpg",
+      "file": "frame-0084.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "05b50c7271909a6212e890e8ca526f571348e09970925448de3a689541813672",
+      "sha256": "b835eae76b8604b31cb8e72d6ac644dd6271e4b952491fdd852c2bf3decc9b2a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 85,
+      "time": 3.541667,
+      "mediaTime": 3.541667,
+      "file": "frame-0085.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8f52234d79a6dc8336ec4c48bc4e0b2c0c87ff616fac8c590d1c39e8c38ae99c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -579,10 +1138,23 @@
       "index": 86,
       "time": 3.583333,
       "mediaTime": 3.583333,
-      "file": "frame-0043.jpg",
+      "file": "frame-0086.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "89badac8436975b79e68352093fb2f307682081c23d82ab39f50b0f6cb5e6d32",
+      "sha256": "8875016cb3ee5eae6d4e7d8f92b9514ad9536a449847744ca239dfa910da3740",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 87,
+      "time": 3.625,
+      "mediaTime": 3.625,
+      "file": "frame-0087.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "ca91d52c80f2ea88780f5816650e70b7534accf76bdf5ff68f806a637e53e09b",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -592,10 +1164,23 @@
       "index": 88,
       "time": 3.666667,
       "mediaTime": 3.666667,
-      "file": "frame-0044.jpg",
+      "file": "frame-0088.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "c8ea222cfd3bc1951219a8ac561fcbb131c28034981abcfeb1f7918bd6a18318",
+      "sha256": "843702f241af26bd53fd655a9453203881a32d39daec0df51daa44bf89352f36",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 89,
+      "time": 3.708333,
+      "mediaTime": 3.708333,
+      "file": "frame-0089.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "d9756ec9bf9fccf35667aed1b35803a4c761c5f486c8643551f5489bfb98c8e9",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -605,10 +1190,23 @@
       "index": 90,
       "time": 3.75,
       "mediaTime": 3.75,
-      "file": "frame-0045.jpg",
+      "file": "frame-0090.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "3dbfc3b70f70c087f412d05c980d2226aaed74a4cb6df76de3cc3944eabcef93",
+      "sha256": "ed1821015291c0a2f269e34b1ecb419c1a70a6aa298711423026df39b2eafae5",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 91,
+      "time": 3.791667,
+      "mediaTime": 3.791667,
+      "file": "frame-0091.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "9ed4253c2b0d0c32ffcf564526ab8e88840675094473dd78c41091868b504912",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -618,10 +1216,23 @@
       "index": 92,
       "time": 3.833333,
       "mediaTime": 3.833333,
-      "file": "frame-0046.jpg",
+      "file": "frame-0092.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "d9f4938a2b6228bc8f156b7d0cd6e02caefe677d303f29fb2ababb279d2a520f",
+      "sha256": "d60df042ade26a3e90fb4b5d88e57f45514f31d7abe8a0dc0342d9440d8b2684",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 93,
+      "time": 3.875,
+      "mediaTime": 3.875,
+      "file": "frame-0093.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "277be1f08d54429d4a714dd08ecb2214284055029bc8e42b95d6bbfb5f3aa259",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -631,10 +1242,23 @@
       "index": 94,
       "time": 3.916667,
       "mediaTime": 3.916667,
-      "file": "frame-0047.jpg",
+      "file": "frame-0094.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "34f45c49a89c1ee360afd83b1310e5641475af4300dae034f847f7f5858c8bf3",
+      "sha256": "0f9c3f6518c036e4cd382eb8891812e391980292565fa389dfcf5616ffa73737",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 95,
+      "time": 3.958333,
+      "mediaTime": 3.958333,
+      "file": "frame-0095.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "cc07bdbec596e6a2cec29be50c4ecb150a6971a1f2dce57440c9451c685282bc",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -644,10 +1268,23 @@
       "index": 96,
       "time": 4.0,
       "mediaTime": 4.0,
-      "file": "frame-0048.jpg",
+      "file": "frame-0096.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "51d3b777cb751cd953acc4b70c60a7dfc64ff148e798040f01e0025be954889d",
+      "sha256": "e7e263efb1c847c52bea881e081804794d07a7d2d9c689772447de84b928b68a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 97,
+      "time": 4.041667,
+      "mediaTime": 4.041667,
+      "file": "frame-0097.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "aa4bf6838b6b0245e3be5b968353834cd3d7ba530291b1c08de7ffdfecf3c3dc",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -657,10 +1294,23 @@
       "index": 98,
       "time": 4.083333,
       "mediaTime": 4.083333,
-      "file": "frame-0049.jpg",
+      "file": "frame-0098.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "fb108a155f6a29394ca410a282f63ab1b5554d69541f520c2f2d691187d5425b",
+      "sha256": "dd341d204a17265039b659295b4d7bd15073c4b20d060fb9e66dd55063c5b899",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 99,
+      "time": 4.125,
+      "mediaTime": 4.125,
+      "file": "frame-0099.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "77934a7250264584d19dbfc755f86da6e1c2a6b2a0b1ad70354798232e1ac964",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -670,10 +1320,23 @@
       "index": 100,
       "time": 4.166667,
       "mediaTime": 4.166667,
-      "file": "frame-0050.jpg",
+      "file": "frame-0100.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "e28550cf4388ead87bf1324f47daf54aa16dae0f42f5b1e65710707c0a5311ce",
+      "sha256": "8f14b7c2c984e0bef67cf717778ce3f9c399c5c29722e9979236a05f027131f4",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 101,
+      "time": 4.208333,
+      "mediaTime": 4.208333,
+      "file": "frame-0101.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "bac8aea16780c1d75f07e4873abd9b2d46e38ef0da31a7c088e80079844b0e50",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -683,10 +1346,23 @@
       "index": 102,
       "time": 4.25,
       "mediaTime": 4.25,
-      "file": "frame-0051.jpg",
+      "file": "frame-0102.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "daff7a5b8197220a5c16d61740b3446631620d170f479f69a0c94dab98705a2a",
+      "sha256": "db982bd922676c55337190d9aeb693cc91b8fc799a654c56aad8fb189ee7367a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 103,
+      "time": 4.291667,
+      "mediaTime": 4.291667,
+      "file": "frame-0103.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "dd88171a054d0f306fa62687ebb2328f5dc2bb8d4023c273eefbf0985fea8304",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -696,10 +1372,23 @@
       "index": 104,
       "time": 4.333333,
       "mediaTime": 4.333333,
-      "file": "frame-0052.jpg",
+      "file": "frame-0104.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "63591bf74fc5563dd561bdac11495b58b5535d28a29da37a70c546e035555ea0",
+      "sha256": "b525de48a8446bbb9fdc8acba42e9371efe093f2631fbce7e1c989112ea92dfe",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 105,
+      "time": 4.375,
+      "mediaTime": 4.375,
+      "file": "frame-0105.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "d4836b17aab30972cbd30ac746454fbf45bf187c909f48e11e95b069ae522254",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -709,10 +1398,23 @@
       "index": 106,
       "time": 4.416667,
       "mediaTime": 4.416667,
-      "file": "frame-0053.jpg",
+      "file": "frame-0106.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "6de7f00a87fe12dc6779d4eac856dd0734de381709dd3b054e808dcb350d3e45",
+      "sha256": "63b3121f6453f13b76975fa4500372afa1e1cfc0272f3b8fd8915e89653ffb8d",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 107,
+      "time": 4.458333,
+      "mediaTime": 4.458333,
+      "file": "frame-0107.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "1bcf1d8222e091ba0b31d47d337e2f64033712fd28fa9bc7f88e6f6cb364895c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -722,10 +1424,23 @@
       "index": 108,
       "time": 4.5,
       "mediaTime": 4.5,
-      "file": "frame-0054.jpg",
+      "file": "frame-0108.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "320a1778c6d9ece709b3788f64279b71be3ecb63a40b51aaa576777d0f07965a",
+      "sha256": "50e0f40ea382ef2f8b9ea8404ff1ea30059b75eedfe49d5c7894b695b185af62",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 109,
+      "time": 4.541667,
+      "mediaTime": 4.541667,
+      "file": "frame-0109.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "05224de0c8df48a0fd5b07a19bbf1e947c8c31a4f6bef91aab2cd73857a1840c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -735,10 +1450,23 @@
       "index": 110,
       "time": 4.583333,
       "mediaTime": 4.583333,
-      "file": "frame-0055.jpg",
+      "file": "frame-0110.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "7c047fa680ee080cf2708525ce8ed51e5a88da173adfe0e092af6e037a758703",
+      "sha256": "927b6e9f171a275a83282d5afdb763cb1410b287a897fba0889480dbb41c1598",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 111,
+      "time": 4.625,
+      "mediaTime": 4.625,
+      "file": "frame-0111.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "29a137980cd843de59d61d0620f5d5df783454caa2b50f361ef791432bc0b26a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -748,10 +1476,23 @@
       "index": 112,
       "time": 4.666667,
       "mediaTime": 4.666667,
-      "file": "frame-0056.jpg",
+      "file": "frame-0112.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "8269914cbafb5f720a82b3f48b6cf1131d2beb15ff0fdba17e9dc4cac8a376ec",
+      "sha256": "f4c7602392bbbf9825225b1840bab4755f6cdc949950a476a0811bc64a4ce68c",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 113,
+      "time": 4.708333,
+      "mediaTime": 4.708333,
+      "file": "frame-0113.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "a5e30ca4f3edbd7b9cd6d534c20205d256a618c5e75c0d99d711f92ca43d0cf5",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -761,10 +1502,23 @@
       "index": 114,
       "time": 4.75,
       "mediaTime": 4.75,
-      "file": "frame-0057.jpg",
+      "file": "frame-0114.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "651e7e4a3c0ce731942319b1c6884d173c41b459a00ce18666ee12c5685a0567",
+      "sha256": "fc0481998c67c92b181c2003b89a0ba00cef1909e4a60d9dedb2a3d00ca6ae17",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 115,
+      "time": 4.791667,
+      "mediaTime": 4.791667,
+      "file": "frame-0115.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "adc51edcb15d32b6ba6ee7ea4885a3b1d55872f99d7083d1caeaa68be4dfe23b",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -774,10 +1528,23 @@
       "index": 116,
       "time": 4.833333,
       "mediaTime": 4.833333,
-      "file": "frame-0058.jpg",
+      "file": "frame-0116.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "9f3fdd24d087e3ff086a62fe206cb185b5c6112487f4dfdc5735c5e9cba459a9",
+      "sha256": "c9e89c3664f9f2ee8b145502dd9ba36d8c2489c195337fd1f464888f3bfbe0aa",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 117,
+      "time": 4.875,
+      "mediaTime": 4.875,
+      "file": "frame-0117.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "89da5f41c8636bec96bf719d46484e6bdd9fc63385e167ea14df7bd2cc3e0c65",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -787,10 +1554,23 @@
       "index": 118,
       "time": 4.916667,
       "mediaTime": 4.916667,
-      "file": "frame-0059.jpg",
+      "file": "frame-0118.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "4cf93e677640cbefab002b93309a4170211ef4b1491bf2dcb00817a0463a76d8",
+      "sha256": "5edae333482f64c656fb48b4b5bb19ab967c536f09589578646cc51eca6281a3",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 119,
+      "time": 4.958333,
+      "mediaTime": 4.958333,
+      "file": "frame-0119.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "bf02c44c5a958c2461d8de16d9568dc87154a67b1e3c8dd92bb6508f1f218348",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -800,10 +1580,23 @@
       "index": 120,
       "time": 5.0,
       "mediaTime": 5.0,
-      "file": "frame-0060.jpg",
+      "file": "frame-0120.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "66c499d21ed12b65817b5f218c6c06c3dba51cba9dd49990a175e33e1b9ec852",
+      "sha256": "450ff10e7f0b29d8dbd0ef9cb1bcf1203a2716079c40eacf1850e445988611d3",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 121,
+      "time": 5.041667,
+      "mediaTime": 5.041667,
+      "file": "frame-0121.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "3ee42d5c89a2500fa8af677bbfdd36d5884a71068afe6b180f0ca40738da0bd9",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -813,10 +1606,23 @@
       "index": 122,
       "time": 5.083333,
       "mediaTime": 5.083333,
-      "file": "frame-0061.jpg",
+      "file": "frame-0122.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "4dc6cbfe7951f561476b8547be13c75a5a11b576cc63ecd9c295759105a2c94a",
+      "sha256": "23490bf11e9ca384e8f47c8028f68fe801a9172186f6b7e386596dbbe5b79ed2",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 123,
+      "time": 5.125,
+      "mediaTime": 5.125,
+      "file": "frame-0123.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "f867b6d894ae3ef0b5cbbc70b6eb2f5ccfd7b32ba77b684ee8c0d0c20f83fea9",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -826,10 +1632,23 @@
       "index": 124,
       "time": 5.166667,
       "mediaTime": 5.166667,
-      "file": "frame-0062.jpg",
+      "file": "frame-0124.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "7d85cfcabbff037506e96763258d76077325e2d6fbc9ccb798b4ec6e8a6cacdb",
+      "sha256": "5b091a351bafbda3e1b50dc06d83458f76a13a8f624312a3e5a6e15525a8552e",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 125,
+      "time": 5.208333,
+      "mediaTime": 5.208333,
+      "file": "frame-0125.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "6f85363f84125495bccbf4199fb3e30184bcddc1ad80a424fc22c31533d83843",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -839,10 +1658,23 @@
       "index": 126,
       "time": 5.25,
       "mediaTime": 5.25,
-      "file": "frame-0063.jpg",
+      "file": "frame-0126.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "26ecffe6a120030e501266473ea8c44ffdfa1034328e898f44135cde2402f0d0",
+      "sha256": "7472c85213ac2f3c37de88d08b3f4b1ac62d975a6b25dad4e4503cd44ec6dbf5",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 127,
+      "time": 5.291667,
+      "mediaTime": 5.291667,
+      "file": "frame-0127.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "efa8e5bcfa629b648e25723b717d29efc96b95a499c0170695eb0b5ed3796fe7",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -852,10 +1684,23 @@
       "index": 128,
       "time": 5.333333,
       "mediaTime": 5.333333,
-      "file": "frame-0064.jpg",
+      "file": "frame-0128.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "fab4d4ecb5a28406320d94cfc216ff63798c19e3068f66e61d5468eaa66bde65",
+      "sha256": "fd0de8399869b7a27093e3fd8b2c2af2411fae800204c01d2489183a05f0c240",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 129,
+      "time": 5.375,
+      "mediaTime": 5.375,
+      "file": "frame-0129.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "3f6a38c7087fa3bca6405e2423086d3b5692cbe80ad039a746b4d499d03a5d8e",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -865,10 +1710,23 @@
       "index": 130,
       "time": 5.416667,
       "mediaTime": 5.416667,
-      "file": "frame-0065.jpg",
+      "file": "frame-0130.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "9fa620a6ab73c2e54431201f75d500b97c99bb2bd5f1a8d49c5fb3b1cdd8141b",
+      "sha256": "4491f5e7a296fe3826975a802640810c83492c8676f411bb3fc6a338df056492",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 131,
+      "time": 5.458333,
+      "mediaTime": 5.458333,
+      "file": "frame-0131.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "ec7bd808eb5615025abbff531314ce6df354a6ffd15005c8ae41230d5a813319",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -878,10 +1736,23 @@
       "index": 132,
       "time": 5.5,
       "mediaTime": 5.5,
-      "file": "frame-0066.jpg",
+      "file": "frame-0132.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "71f5b6fae95f5b92f690c23d320fdad45622f334e46d27ff7fa4ea919dc1452c",
+      "sha256": "773aaac25ec2b62c482ae5223cf60abe913d6037cc75c05b1c84e5987953bc96",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 133,
+      "time": 5.541667,
+      "mediaTime": 5.541667,
+      "file": "frame-0133.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "c0d0c2b24c3b54976e13e595c63384d7a3b9e4bf67d150a5c7c81190a628e1f8",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -891,10 +1762,23 @@
       "index": 134,
       "time": 5.583333,
       "mediaTime": 5.583333,
-      "file": "frame-0067.jpg",
+      "file": "frame-0134.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "a215ad9f61fddbb9d9cff563924e49b77a7a6a0b1a9ccd3ed08365a6ae00ecc1",
+      "sha256": "f9e73be0b553cee82ce91135b18bb5e34c034037d8b1b5ed15d6e9b9ef60df3d",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 135,
+      "time": 5.625,
+      "mediaTime": 5.625,
+      "file": "frame-0135.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8f121a3ceb2134201866209a97362d029188f495a19cdb60fe51c6e7f431b33f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -904,10 +1788,23 @@
       "index": 136,
       "time": 5.666667,
       "mediaTime": 5.666667,
-      "file": "frame-0068.jpg",
+      "file": "frame-0136.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "2509c293369621112f85c163667c1e3eec062cfaf853f795089ebeee0702c638",
+      "sha256": "d451c564da5faf99884202064c88b976a43bba2d7e3b7817147efcf2043c0c35",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 137,
+      "time": 5.708333,
+      "mediaTime": 5.708333,
+      "file": "frame-0137.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "437860132f437c3ba9697fb2d85b2e345315d05a7c887e983be02834420b7db6",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -917,10 +1814,23 @@
       "index": 138,
       "time": 5.75,
       "mediaTime": 5.75,
-      "file": "frame-0069.jpg",
+      "file": "frame-0138.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "daefb67e821e57af8d41eedf58137a6073084519e1bc490f9bf9ad560f8e0488",
+      "sha256": "f5303870768eccb145ea760ddfcc77de16192659d0799d94f0487b1d17ac6fe6",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 139,
+      "time": 5.791667,
+      "mediaTime": 5.791667,
+      "file": "frame-0139.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "86e31f0f795afddf096af25f3ea0b5378691d3c4802396baacecdd9ca1d884f7",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -930,10 +1840,23 @@
       "index": 140,
       "time": 5.833333,
       "mediaTime": 5.833333,
-      "file": "frame-0070.jpg",
+      "file": "frame-0140.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "b5371cdc9e687a37b9f6e8fc0a256bc9fda7bedbd4a9d59742338f99d7f78cc1",
+      "sha256": "0db2f13f702383940c22471a075dc505360fd72f0c981a2c09068f1e2a2b8a56",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 141,
+      "time": 5.875,
+      "mediaTime": 5.875,
+      "file": "frame-0141.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "300afa5d446d5b7b9aadf737fd1d5f211ce35d4b9df15778b6d4e9729651f66a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -943,10 +1866,23 @@
       "index": 142,
       "time": 5.916667,
       "mediaTime": 5.916667,
-      "file": "frame-0071.jpg",
+      "file": "frame-0142.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "bd18c0e6904b0ebaa4dbe82b7a57215f4b5bf37de96b292b2bc98f3ace6b91a6",
+      "sha256": "59ef82979960d7df5915f9988a73e6ea7446bac631ca9945c4058b02485ee32c",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 143,
+      "time": 5.958333,
+      "mediaTime": 5.958333,
+      "file": "frame-0143.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "d3aef2c3967bc249fc725f13fada3a69f924273468a4bf773bc1e3c004abad35",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -956,10 +1892,23 @@
       "index": 144,
       "time": 6.0,
       "mediaTime": 6.0,
-      "file": "frame-0072.jpg",
+      "file": "frame-0144.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "03e2a5f4cbaf7875ed30c8c908e77b3bd5dd8ec8c00388e40b594a3d6cfbb4f3",
+      "sha256": "49b2e693c6211d44f1c7f3d3e85baf7a25dc17fe5fc927061b275bf67c3eee01",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 145,
+      "time": 6.041667,
+      "mediaTime": 6.041667,
+      "file": "frame-0145.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "2b7296e9778f0b1241b97cdc425dc5417f3fe9d2f1bb7b08dea525384fce911e",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -969,10 +1918,23 @@
       "index": 146,
       "time": 6.083333,
       "mediaTime": 6.083333,
-      "file": "frame-0073.jpg",
+      "file": "frame-0146.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "c3f79eb17366e38868846866a052a98d651f8a592fbbf191fbaddc42246d1143",
+      "sha256": "a41055a626639425335147e36c91dea67316d39e333812673a2157d633f27c2b",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 147,
+      "time": 6.125,
+      "mediaTime": 6.125,
+      "file": "frame-0147.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "bf7942594469ea34554ff153da86796ffe26cedb4b64ce62bd2e898cfcba543c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -982,10 +1944,23 @@
       "index": 148,
       "time": 6.166667,
       "mediaTime": 6.166667,
-      "file": "frame-0074.jpg",
+      "file": "frame-0148.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "6c84137352488af8dc50dc1effc95178c4718304a4d39540db69a782daa18162",
+      "sha256": "8851299324a5006e7c01c5f3c90a10f0395097c2ca001c2e946f71cb1dd70478",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 149,
+      "time": 6.208333,
+      "mediaTime": 6.208333,
+      "file": "frame-0149.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "11144aee6d23be12b5a9295e4f3d998c1bfd19a2ce9bba16558c21ef921c6657",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -995,10 +1970,23 @@
       "index": 150,
       "time": 6.25,
       "mediaTime": 6.25,
-      "file": "frame-0075.jpg",
+      "file": "frame-0150.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "ca4e2c505680e119b73d39eb0ca6a733fe5fb2f66527a84b41575c57068baebe",
+      "sha256": "a5a377e69776d6814f48d24ce0edc55be9fd7233ea52126478a55b88316a6154",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 151,
+      "time": 6.291667,
+      "mediaTime": 6.291667,
+      "file": "frame-0151.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "cfb425f6a67f1215818b8e5aa9c40e56169a7b50c9edd875605d1292b64ce2aa",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1008,10 +1996,23 @@
       "index": 152,
       "time": 6.333333,
       "mediaTime": 6.333333,
-      "file": "frame-0076.jpg",
+      "file": "frame-0152.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "8b0239d41c7e7615ce0a06e2b676f5d0e521ed73d6191ed581e0e0151026a7b6",
+      "sha256": "a1b34777fec079e856ff80c89b9e0a261da8c652df7404809b2bd534278dcce0",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 153,
+      "time": 6.375,
+      "mediaTime": 6.375,
+      "file": "frame-0153.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8b24551a4d6aeb58d1c6456e3f582099188eec9987f7cdcf92e1ea7491f3d973",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1021,10 +2022,23 @@
       "index": 154,
       "time": 6.416667,
       "mediaTime": 6.416667,
-      "file": "frame-0077.jpg",
+      "file": "frame-0154.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "59ff7789fb6fbe0dd7a5781d285fd0ee5f3d1dd53cbce57c3834758250962859",
+      "sha256": "322d9874db3c613823e3b7c5484f8a0e8554d300c2c4e8ffc4a6bbe0e79f952e",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 155,
+      "time": 6.458333,
+      "mediaTime": 6.458333,
+      "file": "frame-0155.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "12394c3cfaa9cb55383509f4fd589ce24b5c95b721e42bc6d5c156d73e00a072",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1034,10 +2048,23 @@
       "index": 156,
       "time": 6.5,
       "mediaTime": 6.5,
-      "file": "frame-0078.jpg",
+      "file": "frame-0156.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "d5bef0f54bfee35663bb20292157cde4fce91e3d8b0e48d34239c3f341f6c2d8",
+      "sha256": "1c4972993ede9258ec1c26b4fee72751ab7da223afc9f5bf2c707c7334b2ad67",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 157,
+      "time": 6.541667,
+      "mediaTime": 6.541667,
+      "file": "frame-0157.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "d3e68d06e30c231503df9c76d4a73f1d5a405a4804a13c39bdb7a78b5119f9c3",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1047,10 +2074,23 @@
       "index": 158,
       "time": 6.583333,
       "mediaTime": 6.583333,
-      "file": "frame-0079.jpg",
+      "file": "frame-0158.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "6e31fb6d323dd2597268e236b3358f713ee6303fd6247ad6efdb233a40132206",
+      "sha256": "80e9a0a9727b6752ea4c34ef06a5984eec8ebc4bfda855fd072871146413bf3b",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 159,
+      "time": 6.625,
+      "mediaTime": 6.625,
+      "file": "frame-0159.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "05174c325e604af98e26588b2b60d6e50edabefe842dddf99996fa93a524bb1f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1060,10 +2100,23 @@
       "index": 160,
       "time": 6.666667,
       "mediaTime": 6.666667,
-      "file": "frame-0080.jpg",
+      "file": "frame-0160.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "dad0cd38431c8ff630a3d4145b1852dc651b2c6464a5c25c1086cb785756e53f",
+      "sha256": "6fd6bc284ffeb266f03ec7493118c28d30325a03b50ad9cbc1808bea23e2c29e",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 161,
+      "time": 6.708333,
+      "mediaTime": 6.708333,
+      "file": "frame-0161.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "618cfc210d2905cc3befc2d4f5b33b032b13c24a676004f6b08e03cde862a372",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1073,10 +2126,23 @@
       "index": 162,
       "time": 6.75,
       "mediaTime": 6.75,
-      "file": "frame-0081.jpg",
+      "file": "frame-0162.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "9cc1f32979c37d9184f77d3d9e520f7d3210771cd8eaba34f6b5fe88d021c6e1",
+      "sha256": "8fcc1af0fb39585f549069a22c88e821cf0f215cfb3b894005bda182ad20dbd2",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 163,
+      "time": 6.791667,
+      "mediaTime": 6.791667,
+      "file": "frame-0163.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "d4e90e05180e54d18a0dc5aae3dcb8291601c9655adabcf3829f96ba613c2a3f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1086,10 +2152,23 @@
       "index": 164,
       "time": 6.833333,
       "mediaTime": 6.833333,
-      "file": "frame-0082.jpg",
+      "file": "frame-0164.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "98098b6dbc9712659382c7edb4bda531e7725967d8bb1e597771567445a68c59",
+      "sha256": "e20cb21da93fb2830796c15b7610d80a52c57f9680228462cee86d4068674560",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 165,
+      "time": 6.875,
+      "mediaTime": 6.875,
+      "file": "frame-0165.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "97d47dff51ad143ea686bd8063230a25c3002633737cf5250b25e4096c804cda",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1099,10 +2178,23 @@
       "index": 166,
       "time": 6.916667,
       "mediaTime": 6.916667,
-      "file": "frame-0083.jpg",
+      "file": "frame-0166.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "a1e60db6b6c7158d294b3a214933e81206b3948d3a5a3b63dd12a3e9853b1875",
+      "sha256": "e90ce196076536bf427da7d23b7898896149917b023dd3210f77abcf8025d850",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 167,
+      "time": 6.958333,
+      "mediaTime": 6.958333,
+      "file": "frame-0167.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "4656f9da5e96f8673ac6c16c77d4a5685ced5e0ba9ea9560dd060764a796e8ec",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1112,10 +2204,23 @@
       "index": 168,
       "time": 7.0,
       "mediaTime": 7.0,
-      "file": "frame-0084.jpg",
+      "file": "frame-0168.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "88b37b3f52adda67c415b9bde0807d65d29dd78fd1849868cd24d95a785b1f81",
+      "sha256": "e918de577bac149105b85fb7da1de9e1bc25be9096edd08a2cc69301f17a30dc",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 169,
+      "time": 7.041667,
+      "mediaTime": 7.041667,
+      "file": "frame-0169.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "71d50c2e5e79d27d3674f0c746b8b090a6afc90f69a7674e8d9a5b129cacf604",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1125,10 +2230,23 @@
       "index": 170,
       "time": 7.083333,
       "mediaTime": 7.083333,
-      "file": "frame-0085.jpg",
+      "file": "frame-0170.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "49549de6f04875809d6a713a578dfd01bea37db054b0a3dc1664b748d1458728",
+      "sha256": "1c68acf7e6dc3bc5f1a8852178451693008aa55e71cc854c79d2d6461535bbc5",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 171,
+      "time": 7.125,
+      "mediaTime": 7.125,
+      "file": "frame-0171.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "baa41d6c57e1aec33c513bbc54668369e035352ce0b76220d7e7515a8b62d709",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1138,10 +2256,23 @@
       "index": 172,
       "time": 7.166667,
       "mediaTime": 7.166667,
-      "file": "frame-0086.jpg",
+      "file": "frame-0172.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "ac6071066bcc5b5786e085ea91255b685442efe78377da200bca2c894a97233a",
+      "sha256": "86e193aa5075f6dd4be74d60fd9185b7cecc23795bc73321c2ba54f4a01ba1d1",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 173,
+      "time": 7.208333,
+      "mediaTime": 7.208333,
+      "file": "frame-0173.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "c32cf8590cb251cf19ec49c3d27a15e6303c4e4d01134484572fe2e48ce662fa",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1151,10 +2282,23 @@
       "index": 174,
       "time": 7.25,
       "mediaTime": 7.25,
-      "file": "frame-0087.jpg",
+      "file": "frame-0174.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "722aba6ce3185167422135168457b8bd1914cf7f08e8f2e4409656379c4d3192",
+      "sha256": "13a3e8fbad373abb7f81083f44475a87dd0b8460b7e9b19e51cc46ab4d87e9ec",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 175,
+      "time": 7.291667,
+      "mediaTime": 7.291667,
+      "file": "frame-0175.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "da52b3517b2d6617b62a352207188ecef430d1e238c357c444997a8131b39ef9",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1164,10 +2308,23 @@
       "index": 176,
       "time": 7.333333,
       "mediaTime": 7.333333,
-      "file": "frame-0088.jpg",
+      "file": "frame-0176.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "a270d7f5fcbb1eb0257cca54b9dd7e9c1ccef10ffba9bb7a5bdbe1588b41ee93",
+      "sha256": "15105e0ced0fc363db8a535bd7c98bf3761076308bb5452a9e4c9e4afc7a8760",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 177,
+      "time": 7.375,
+      "mediaTime": 7.375,
+      "file": "frame-0177.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "01e69c14892b99e97bbea1ab11b79a69e5fd0bc8b6547e8698c582834d558a6a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1177,10 +2334,23 @@
       "index": 178,
       "time": 7.416667,
       "mediaTime": 7.416667,
-      "file": "frame-0089.jpg",
+      "file": "frame-0178.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "b49f94522ffeb4a461aaea20e0d8c57a9c5844acfbb49a4b0c73ab79f30265fe",
+      "sha256": "2e41ab51a47fc254e93467caec6049d3da1fe533f75defff01026a80d1969d95",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 179,
+      "time": 7.458333,
+      "mediaTime": 7.458333,
+      "file": "frame-0179.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "4c98fc9f8b18b674bf339909e373f0871d5b3c761a70ad68fd90db4ccc372f5c",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1190,10 +2360,23 @@
       "index": 180,
       "time": 7.5,
       "mediaTime": 7.5,
-      "file": "frame-0090.jpg",
+      "file": "frame-0180.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "ca04a5de6305a4cbf11abc0d5a5af2fc62ee3435fcbd0adbac96239b5ce71e31",
+      "sha256": "567ea470cf06199cd98f43dd4e6e481abd30d471dbae8089a5c436c2271bf69e",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 181,
+      "time": 7.541667,
+      "mediaTime": 7.541667,
+      "file": "frame-0181.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8aeff06700fd43d6ea516049d24c6b773c0866a30f76ad7d88bb4ef3cf749b9a",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1203,10 +2386,23 @@
       "index": 182,
       "time": 7.583333,
       "mediaTime": 7.583333,
-      "file": "frame-0091.jpg",
+      "file": "frame-0182.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "4bd438e671dc3cf988ac506e9731e533581d6148f6b9edcc217354f79d540ac4",
+      "sha256": "323780a4f8669a80f3eb552a3ae186fa1b0b5aa75e19298b5bbeeac9274b8b17",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 183,
+      "time": 7.625,
+      "mediaTime": 7.625,
+      "file": "frame-0183.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "9789522cf045bf7d445453f3373130bd8981e4eb9fa06ef08bd6467cdf02a8f3",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1216,10 +2412,23 @@
       "index": 184,
       "time": 7.666667,
       "mediaTime": 7.666667,
-      "file": "frame-0092.jpg",
+      "file": "frame-0184.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "9895067ccea590de192ff1e582ffa2ffb26d6ca5b3d25bca73bb357194060344",
+      "sha256": "ba94fef283493846f1a8a2b8d88d2c025e05a6354dbe6931586f367b7cf5282f",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 185,
+      "time": 7.708333,
+      "mediaTime": 7.708333,
+      "file": "frame-0185.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "9c71c52c1368563fdba4897863c9074bc6ff4e3ee91b778232ccef6a19deae4b",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1229,10 +2438,23 @@
       "index": 186,
       "time": 7.75,
       "mediaTime": 7.75,
-      "file": "frame-0093.jpg",
+      "file": "frame-0186.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "6942310b199e44a80c5b57688256a1fab8bd7fa3a68105d0838bccf07bac792d",
+      "sha256": "612abeb027090624a7851452ac9d94421e6075b24925b9cb8378ff442ee5726d",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 187,
+      "time": 7.791667,
+      "mediaTime": 7.791667,
+      "file": "frame-0187.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "d8e4d9aa01e541e0b96da53cba821aba963e0402aa9ba2976822e886d2da7dd7",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1242,10 +2464,23 @@
       "index": 188,
       "time": 7.833333,
       "mediaTime": 7.833333,
-      "file": "frame-0094.jpg",
+      "file": "frame-0188.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "eb38a128512b31cfb697045a0bd79529b8c3f54b51b57157233c31f0c0525b15",
+      "sha256": "fd618ec44c80528d0d38fe81d15a53c84f20313bcbc2253c5a1f208ec631af75",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 189,
+      "time": 7.875,
+      "mediaTime": 7.875,
+      "file": "frame-0189.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "18d8c4c6c7eb25945590271552b1ff7a5e1a233f64f85624f68da7caaaebb65f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1255,10 +2490,23 @@
       "index": 190,
       "time": 7.916667,
       "mediaTime": 7.916667,
-      "file": "frame-0095.jpg",
+      "file": "frame-0190.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "98ecf781279f34e43beee38e7ff5ce16cfd0121d60ee5de03fa60d574c8aab01",
+      "sha256": "2be47443e18c06ba8b1ffd99f6ee72e21862de25067aa9cfa2d797f9c7e7231a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 191,
+      "time": 7.958333,
+      "mediaTime": 7.958333,
+      "file": "frame-0191.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "4dfe0410c00b9ee309107829c5fa83e1ad9011491ce6a3032f3312dcbb4150ba",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1268,10 +2516,23 @@
       "index": 192,
       "time": 8.0,
       "mediaTime": 8.0,
-      "file": "frame-0096.jpg",
+      "file": "frame-0192.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "e8a41ee2c4ffb7c48b556a15895b2f998bbcf6907b917c040803819ff6efcc58",
+      "sha256": "cd8e241b58b4ab9aecb58cca8ca660c372d551201987a83b16e14641ff459299",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 193,
+      "time": 8.041667,
+      "mediaTime": 8.041667,
+      "file": "frame-0193.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "2dd31e5380ccbac26b7f39875ed4fe623462186657680732ede8d092c9930241",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1281,10 +2542,23 @@
       "index": 194,
       "time": 8.083333,
       "mediaTime": 8.083333,
-      "file": "frame-0097.jpg",
+      "file": "frame-0194.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "81edd0025e8957945faa2f1c1a6282579f5ad53d0deed95a5f9ee69c6aff9f63",
+      "sha256": "7a6151e58699d32032637ca054d97dee134d4bd1fa66a08ec41739dcdd3cd593",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 195,
+      "time": 8.125,
+      "mediaTime": 8.125,
+      "file": "frame-0195.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8fc0b3d3624a94e9f71ef748295861f5fcc1926e9a864b6a231a55da823b33b4",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1294,10 +2568,23 @@
       "index": 196,
       "time": 8.166667,
       "mediaTime": 8.166667,
-      "file": "frame-0098.jpg",
+      "file": "frame-0196.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "09749187056ff80d62590e38b3f88877335969208ce4844fde20bf35f448f5e1",
+      "sha256": "e99b4fc3b28817c1efd74f90e263a3475456f34166962a4ebf7c24dbedad613f",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 197,
+      "time": 8.208333,
+      "mediaTime": 8.208333,
+      "file": "frame-0197.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "cf059e2344bb6e76edb0c1a317c46a8deb2b2f444be30e94bbecc6944949e4e6",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1307,10 +2594,23 @@
       "index": 198,
       "time": 8.25,
       "mediaTime": 8.25,
-      "file": "frame-0099.jpg",
+      "file": "frame-0198.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "362536fea9924d73f94891d91ff3bc3b5240ab95406385e40656e9bb702701bf",
+      "sha256": "0a16a7e5a4330f19bf10ffdd567cac5095dd276cf07eb2ed3f6205690f2a8c1a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 199,
+      "time": 8.291667,
+      "mediaTime": 8.291667,
+      "file": "frame-0199.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "cc3fc1fb97e1863ed0d19d02d1cae93aafc6a003f2f7a6e1d609e087212a376f",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1320,10 +2620,23 @@
       "index": 200,
       "time": 8.333333,
       "mediaTime": 8.333333,
-      "file": "frame-0100.jpg",
+      "file": "frame-0200.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "03072d77e08271fb86a5192e6cf541bbd34c701707052ddeef579a05444a8770",
+      "sha256": "a209f2b6fb2e16529d037808ff2280b64091db2c7367543239777cbdcea6dcaf",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 201,
+      "time": 8.375,
+      "mediaTime": 8.375,
+      "file": "frame-0201.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "c3240f4bebfe53d9f423bf8363e01594f428bc438a4188b35f345713f381fd32",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1333,10 +2646,23 @@
       "index": 202,
       "time": 8.416667,
       "mediaTime": 8.416667,
-      "file": "frame-0101.jpg",
+      "file": "frame-0202.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "67cba94d2d84c1222ccde36bd9ac0ac05783d42a80f26d73f99f77f18635626d",
+      "sha256": "6eb81ae1ea7e428a2293acdf32a64ba5413fc50e35e8cd3f86622ec2996ab329",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 203,
+      "time": 8.458333,
+      "mediaTime": 8.458333,
+      "file": "frame-0203.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "1d03aae214f0690d65ae710ca0c6631cc313ddbd8f1fc65321863e29f8e561c4",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1346,10 +2672,23 @@
       "index": 204,
       "time": 8.5,
       "mediaTime": 8.5,
-      "file": "frame-0102.jpg",
+      "file": "frame-0204.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "bc37b5fbc9c92daa7920b71810d1487285b20941490116f790eec485d2be391c",
+      "sha256": "69fe393207cde470b3c25301b66203b294102cce997f6152c2691040477dd00d",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 205,
+      "time": 8.541667,
+      "mediaTime": 8.541667,
+      "file": "frame-0205.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "053b7d2a6b0ad550cc37a8d11b10fcb0d57ba63edff98cf22af4aa9463a43580",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1359,10 +2698,23 @@
       "index": 206,
       "time": 8.583333,
       "mediaTime": 8.583333,
-      "file": "frame-0103.jpg",
+      "file": "frame-0206.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "e76ea92f44e03c417944f9f8c026362554f5d122ace25216db3438ab367d668b",
+      "sha256": "a3cd837d09ad10c08e966225d99ec194fd8f12df2e62bbc0a94eba9bf9c68a71",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 207,
+      "time": 8.625,
+      "mediaTime": 8.625,
+      "file": "frame-0207.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "77665f943842b9680a8781d2ca412e2c7167c26b96cdbb2063aa70c3672d4f14",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1372,10 +2724,23 @@
       "index": 208,
       "time": 8.666667,
       "mediaTime": 8.666667,
-      "file": "frame-0104.jpg",
+      "file": "frame-0208.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "87ba4dc3c7f0beec6f59e05e73aa91916568ffd663101caec4fa61a4a7d84885",
+      "sha256": "d8b9bbbe74a62c691d15fcbde211ab8fe03de0f559b64cff0b48ff442ab254ad",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 209,
+      "time": 8.708333,
+      "mediaTime": 8.708333,
+      "file": "frame-0209.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "58ecb86e125ba8f295c3be42b0e47bfbb7d190f6b3b8c77eb1cc1db77cb7b474",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1385,10 +2750,23 @@
       "index": 210,
       "time": 8.75,
       "mediaTime": 8.75,
-      "file": "frame-0105.jpg",
+      "file": "frame-0210.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "0ba15d3ceb6c5e3b2479e75e728cd8a1b35154e03e0bd59c3e9d08c1735d63c3",
+      "sha256": "5e1bdb2ef9a9dadea6c2752437c177e0c5ffffa56e6b0150217f569b39735391",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 211,
+      "time": 8.791667,
+      "mediaTime": 8.791667,
+      "file": "frame-0211.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "1a4fd015e0f1ef9fe942ea3012cc30d4536eed8307a7633bba0dc7f5f4824b85",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1398,10 +2776,23 @@
       "index": 212,
       "time": 8.833333,
       "mediaTime": 8.833333,
-      "file": "frame-0106.jpg",
+      "file": "frame-0212.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "bdf63d29457f74a5c979367416ad377d427db19a28756c2b96d1f9d56a67ae98",
+      "sha256": "0ef01f28d03bc59e8b0edbd9aaaa1f255b02f353cf11a3dc799dccf96b76b57a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 213,
+      "time": 8.875,
+      "mediaTime": 8.875,
+      "file": "frame-0213.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "e51e95a3cca05a03a1a274fc6a1bdd9a2abc4e3bc7e35b9c321d82bd74ed83c3",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1411,10 +2802,23 @@
       "index": 214,
       "time": 8.916667,
       "mediaTime": 8.916667,
-      "file": "frame-0107.jpg",
+      "file": "frame-0214.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "6fe4650fa115e68be44d126dd72f37df13a4538bc8ea580d6e91e067d59b1806",
+      "sha256": "1152591c13011387a796d0174f0dafac934753d42376b600b8cde3f66e25e933",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 215,
+      "time": 8.958333,
+      "mediaTime": 8.958333,
+      "file": "frame-0215.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "91ecfe51d0a097b907ad94624ecaa920b23763c03791f011022599d5cce7bb2d",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1424,10 +2828,23 @@
       "index": 216,
       "time": 9.0,
       "mediaTime": 9.0,
-      "file": "frame-0108.jpg",
+      "file": "frame-0216.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "dbfdd98a37889cc0fd8465b5eac532a5d1f715881963c6ce654c7f8ad43aba2e",
+      "sha256": "1f95a9e0a6dcd1fce5e7aaf8c3b346fb3b1bd4e15e4427a90a1b669fd141c06e",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 217,
+      "time": 9.041667,
+      "mediaTime": 9.041667,
+      "file": "frame-0217.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "8e00aaea4648405a1b0299bcf87b7562a7d03624df5df12c2895132c73277c59",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1437,10 +2854,23 @@
       "index": 218,
       "time": 9.083333,
       "mediaTime": 9.083333,
-      "file": "frame-0109.jpg",
+      "file": "frame-0218.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "6912d6617ae2d7bfcec396aa1699d2e7302b5c3b7f3ccad52c3a92b6754c1e8a",
+      "sha256": "ce424eacdf608c5477f57a1781bc9fd3235ddb1c0b03c34643f09a3ad1a2b3c5",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 219,
+      "time": 9.125,
+      "mediaTime": 9.125,
+      "file": "frame-0219.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "fe2af2b28725e1dcc1e402cb6a5d290ca907ed68c44fec9e6f59a4ba9cb222ec",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1450,10 +2880,23 @@
       "index": 220,
       "time": 9.166667,
       "mediaTime": 9.166667,
-      "file": "frame-0110.jpg",
+      "file": "frame-0220.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "5ab5464b22d88151311d5331152e5706cf8830602ebc2d395243a98f3bd1476c",
+      "sha256": "6bf5f169f4b68ce12700088bc6edac4a65c2ae44897eeb040d88c27c0ee22a45",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 221,
+      "time": 9.208333,
+      "mediaTime": 9.208333,
+      "file": "frame-0221.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "c92672f509980465fdf6027edff0228dfc0febdea91b68997c75e884f52ffe2e",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1463,10 +2906,23 @@
       "index": 222,
       "time": 9.25,
       "mediaTime": 9.25,
-      "file": "frame-0111.jpg",
+      "file": "frame-0222.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "ff7b1aa32286aabb50e64aa759d4b2ead89c9b4669a365f49612e79e0284c2bf",
+      "sha256": "3b91da216a30b1df1d93d587bb2336573c810dd37e47894218687b03cbd5c68c",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 223,
+      "time": 9.291667,
+      "mediaTime": 9.291667,
+      "file": "frame-0223.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "0e021f46a3882dbf83a2d748511fd5fea6ad52cb6001649cc5073a01575387f4",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1476,10 +2932,23 @@
       "index": 224,
       "time": 9.333333,
       "mediaTime": 9.333333,
-      "file": "frame-0112.jpg",
+      "file": "frame-0224.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "0a1e59fdeef18e9a9b19442ecbaf74fb6d2505986fa6ad142cbc6a4290642967",
+      "sha256": "3ab3f1718db727555c94b1ee7ad44a2b37264c335b632dd22e8d54f13765614c",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 225,
+      "time": 9.375,
+      "mediaTime": 9.375,
+      "file": "frame-0225.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "c4ff5335190bd898eba1948771924d3239d3cdd61bcc93146d05d8418a643386",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1489,10 +2958,23 @@
       "index": 226,
       "time": 9.416667,
       "mediaTime": 9.416667,
-      "file": "frame-0113.jpg",
+      "file": "frame-0226.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "694613da36757d2a1018f295d208c50b4c1f96bd139f76cc62a51d6a143267d9",
+      "sha256": "4acafa8bf49651a28e5d7ab0b7bff8e381b9e25abf85314ff8aae3bd1369ec6a",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 227,
+      "time": 9.458333,
+      "mediaTime": 9.458333,
+      "file": "frame-0227.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "7a0d4c5bedc91f03abf4c22bef71126d3e71216e2622d4164357c03b6595c9ae",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1502,10 +2984,23 @@
       "index": 228,
       "time": 9.5,
       "mediaTime": 9.5,
-      "file": "frame-0114.jpg",
+      "file": "frame-0228.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "98fcf471e911c50b857bdb7a4225cb19fee8df48fb55a5d36747a3b9fa00fd38",
+      "sha256": "555830d539fe35084684ca0e095f1a779439e53d69ea8cbccb814cc9631f599c",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 229,
+      "time": 9.541667,
+      "mediaTime": 9.541667,
+      "file": "frame-0229.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "0cce213c33af58101cc9b37df8b680c702defb4c5dfb128f38c3109093e27e79",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1515,10 +3010,23 @@
       "index": 230,
       "time": 9.583333,
       "mediaTime": 9.583333,
-      "file": "frame-0115.jpg",
+      "file": "frame-0230.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "edbf5db122b8979bbb382abc89e947ad52ef6cc565618a5ff9169c9869b62e2c",
+      "sha256": "65bbf77af5ba577234290114de5a3809f56894e2cd058e132c6fdfb2e3eec735",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 231,
+      "time": 9.625,
+      "mediaTime": 9.625,
+      "file": "frame-0231.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "54984ff2c60032b61e84381a197c18dab9c0e5c409a9a1da6b2a3cda0c6c1592",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1528,10 +3036,23 @@
       "index": 232,
       "time": 9.666667,
       "mediaTime": 9.666667,
-      "file": "frame-0116.jpg",
+      "file": "frame-0232.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "c92bdcd8dcef06fefedf6abc4b20e929f3f65e1259a52b9f3a3392a16dd7e5d3",
+      "sha256": "0612bd931dcd314f290bcfe7afb997199a3623a4dbe66e393c3d5f8acd1e8fbd",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 233,
+      "time": 9.708333,
+      "mediaTime": 9.708333,
+      "file": "frame-0233.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "28b2773ee5e7f70aecb68a3a0c95e1477a618844ad2981abfefefa684a8b8dfe",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1541,10 +3062,23 @@
       "index": 234,
       "time": 9.75,
       "mediaTime": 9.75,
-      "file": "frame-0117.jpg",
+      "file": "frame-0234.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "f5f63ece8620c72d4d552c1f9cacfb64fbdf57dc3f42c1d6515fecf397d097c2",
+      "sha256": "f69fc95b51dcb50dfecff6ef9daa0dbc3a056a31f4795572b6026dbd377fccaf",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 235,
+      "time": 9.791667,
+      "mediaTime": 9.791667,
+      "file": "frame-0235.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "7c335144962a1d2cc2482740fd12b0edf73d4e8eb9b9c79a80a3539e202357d4",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1554,10 +3088,23 @@
       "index": 236,
       "time": 9.833333,
       "mediaTime": 9.833333,
-      "file": "frame-0118.jpg",
+      "file": "frame-0236.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "104edc6fa2f7e244d95caf7c438d76be1ef7c8103a13a4bf7ed5efb6ca9f01dc",
+      "sha256": "0bde06b35802292b66790fe6643dec3d1f4425c4cabd9ef220c3eb52631f493d",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 237,
+      "time": 9.875,
+      "mediaTime": 9.875,
+      "file": "frame-0237.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "42ca319432c63ff19f5ea133235b9d75e31031cef2ab2baf73c2ed74e23d1f14",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1567,10 +3114,23 @@
       "index": 238,
       "time": 9.916667,
       "mediaTime": 9.916667,
-      "file": "frame-0119.jpg",
+      "file": "frame-0238.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "7290d54dd26b4b9f6fdc9876f7e711daa4ef794f0377cb3effa54385d32bf3ec",
+      "sha256": "d09ed24bf94b124ceba3e2d0f51f1bcba7aa5eb1f59cb4e4801d26b96a551485",
+      "nativeScale": [
+        0.3848466626578473,
+        0.38492381716118684
+      ]
+    },
+    {
+      "index": 239,
+      "time": 9.958333,
+      "mediaTime": 9.958333,
+      "file": "frame-0239.jpg",
+      "width": 1280,
+      "height": 960,
+      "sha256": "b8585d4807c2c94fbe976c041bcb1e238119c9470059d3995322beb5fef48310",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
@@ -1580,10 +3140,10 @@
       "index": 240,
       "time": 10.0,
       "mediaTime": 10.0,
-      "file": "frame-0120.jpg",
+      "file": "frame-0240.jpg",
       "width": 1280,
       "height": 960,
-      "sha256": "4e81c8e62b56864195e27af0be9ba225e4f9dd0b4c410f77e9e662fedd3ec672",
+      "sha256": "f7a01e59adb2d0df32ae4eb734895c67f841260afa9a646cb363251db4e459e8",
       "nativeScale": [
         0.3848466626578473,
         0.38492381716118684
