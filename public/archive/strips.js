@@ -64,9 +64,9 @@ export function pinnedScrub({ collection, onEnlarge }) {
 
   if (reduced() || coarse()) { section.dataset.fallback = coarse() ? "swipe" : "grid"; return { section }; }
 
-  // Scroll distance is deliberately shorter than the line: the eye travels
-  // faster than the wheel, so a 13-photograph line does not cost 7000px.
-  const RATIO = 0.55;
+  // 1:1 with the line, matching the headshots pass: a pixel of scroll is a
+  // pixel of travel, so every scrub section on the site is paced the same.
+  const RATIO = 1.0;
   let travel = 0, span = 0;
   const size = () => {
     span = Math.max(0, track.scrollWidth - viewport.clientWidth);
