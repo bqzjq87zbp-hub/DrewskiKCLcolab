@@ -211,12 +211,23 @@ export function scrollShuttle({ collection, onEnlarge }) {
   if (reduced() || coarse()) { section.dataset.fallback = coarse() ? "swipe" : "grid"; return { section }; }
 
   const n = collection.items.length;
-  let cur = 0, shown = -1;
-  section.style.setProperty("--pin-h", `${innerHeight * (1 + n * 0.55)}px`);
+  let cur = 0, shown = -1, span = 0;
+
+  // Same 1:1 law as the other pinned lines: a pixel of scroll is a pixel of
+  // lateral travel. Here travel is measured between centred frames, which is
+  // what this section actually moves.
+  const RATIO = 1.0;
+  const centreOf = (b) => b.offsetLeft + b.offsetWidth / 2 - viewport.clientWidth / 2;
+  const size = () => {
+    span = Math.max(0, centreOf(shots[n - 1]) - centreOf(shots[0]));
+    section.style.setProperty("--pin-h", `${innerHeight + span * RATIO}px`);
+  };
+  size();
+  new ResizeObserver(size).observe(viewport);
 
   onFrame((y, dt, vh) => {
-    const top = section.offsetTop, span = section.offsetHeight - vh;
-    const p = clamp((y - top) / Math.max(1, span));
+    const top = section.offsetTop;
+    const p = clamp((y - top) / Math.max(1, span * RATIO));
     cur = damp(cur, p * (n - 1), 14, dt);
     const i = Math.round(cur);
     if (i !== shown) {
@@ -230,7 +241,7 @@ export function scrollShuttle({ collection, onEnlarge }) {
       const offset = target.offsetLeft + target.offsetWidth / 2 - viewport.clientWidth / 2;
       track.style.transform = `translate3d(${-offset.toFixed(2)}px,0,0)`;
     }
-    return y + vh > top && y < top + section.offsetHeight && Math.abs(cur - p * (n - 1)) > 0.005;
+    return y + vh > top && y < top + span * RATIO + vh && Math.abs(cur - p * (n - 1)) > 0.005;
   });
   return { section };
 }
