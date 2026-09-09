@@ -94,7 +94,12 @@ export async function mountWaterLayer(viewport) {
 
   async function adoptFrame(img) {
     const index = Number(img?.dataset.sourceFrame ?? -1);
-    if (!img || !img.complete || index === shownFrame) return;
+    if (!img || !img.complete || (index === shownFrame && hasFrame)) return;
+    // The image and easels already committed this index together. Do not let an
+    // older opaque water frame cover them while bitmap creation/upload awaits.
+    // Reveal this overlay only after the matching frame is uploaded and painted.
+    hasFrame = false;
+    sync();
     const seq = ++adoptSeq;
     try {
       const bitmap = await createImageBitmap(img);
