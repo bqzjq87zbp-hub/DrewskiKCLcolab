@@ -14,7 +14,7 @@ export function initBelow() {
   eyebrow.textContent = "The gallery beneath the pier";
   const lede = document.createElement("p");
   lede.className = "lede";
-  lede.textContent = "Four collections, photographed at Newport Beach. Step into any of them, or walk the pier above first.";
+  lede.textContent = "Explore branding, family portraits, professional headshots, and coastal photographs. Step into a collection, or walk the pier above first.";
   h1.before(eyebrow);
   h1.after(lede);
 
@@ -99,7 +99,11 @@ export function initBelow() {
   meta.textContent = "Photography by Kyle. Development preview.";
   inner.append(ft, nav, meta);
   footer.append(inner);
-  document.querySelector("main").after(footer);
+  // Keep the aisle footer in the same visibility lifecycle as its gallery.
+  // A collection has its own return controls; it must not inherit a second
+  // footer whose walk link points into the hidden aisle.
+  footer.hidden = document.body.dataset.view === "collection";
+  document.querySelector("main").append(footer);
 
   // --- one-shot entrance reveals (never re-fire, never hide no-JS content) --
   const revealTargets = [eyebrow, lede, ...gallery.querySelectorAll(".photo-list li"), nav, meta];

@@ -1,39 +1,38 @@
-/* Control system, Apple grade: one language for every button, sign, pill and
-   chip. Flat translucent material with deep blur and a specular hairline (no
-   drop-shadow crutches, no text shadows), system SF-style type in sentence case
-   with slightly negative tracking, capsule and circle shapes, material-brighten
-   hover and a springy press. Loaded last so it re-skins the controls declared
-   across the older sheets without touching layout or behavior. */
+/* Shared optical control surface. Photography remains visible through a
+   near-colorless film; compact text-local shadows protect white labels.
+   Explicit Solid and the System accessibility preference share one fallback.
+   No photograph, navigation destination, or camera behavior is changed here. */
 
 :root{
   --ctl-font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;
   --ctl-ease:cubic-bezier(.25,.1,.25,1);
-  --ctl-bg:rgba(255,255,255,.14);
-  --ctl-bg-hover:rgba(255,255,255,.24);
-  --ctl-bg-press:rgba(255,255,255,.09);
+  --ctl-bg:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.008) 55%,rgba(255,255,255,.02));
+  --ctl-bg-hover:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02) 55%,rgba(255,255,255,.04));
+  --ctl-bg-press:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015) 55%,rgba(255,255,255,.03));
+  --ctl-blur:blur(8px);
+  --ctl-ink-shadow:0 1px 2px rgba(0,8,16,.98),0 0 3px rgba(0,8,16,.92);
+  --ctl-transition:transform .22s var(--ctl-ease),background-color .2s ease,background .2s ease,border-color .2s ease;
   --ctl-border:rgba(255,255,255,.4);
   --ctl-border-hover:rgba(255,255,255,.6);
   --ctl-highlight:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.07);
   --ctl-float:0 1px 2px rgba(0,8,16,.22),0 8px 28px rgba(0,10,20,.28);
-  --ctl-frost:blur(20px) saturate(180%) brightness(1.12);
 }
 
 /* ---- shared material -------------------------------------------------- */
-.menu>button,.menu nav,.menu select,
-.glass-control,.category-sign,
-.aisle-video-toggle,.walk-step,
-dialog button,.aisle-progress{
+body[data-appearance] :is(.menu>button,.menu nav,.menu select,
+.glass-control,.category-sign,.aisle-video-toggle,.walk-step,
+dialog button,.aisle-progress,.aisle-video-status,.collection-header,.card-arrow){
   border:1px solid var(--ctl-border);
   background:var(--ctl-bg);
   box-shadow:var(--ctl-highlight),var(--ctl-float);
-  backdrop-filter:var(--ctl-frost);
-  -webkit-backdrop-filter:var(--ctl-frost);
-  color:#fff;text-shadow:0 1px 3px rgba(0,10,18,.5);
-  transition:transform .22s var(--ctl-ease),background-color .2s ease,background .2s ease,border-color .2s ease;
+  backdrop-filter:var(--ctl-blur);
+  -webkit-backdrop-filter:var(--ctl-blur);
+  color:#fff;text-shadow:var(--ctl-ink-shadow);
+  transition:var(--ctl-transition);
 }
 .menu nav button,.menu nav a{
   border:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
-  color:#fff;text-shadow:none;border-radius:11px;
+  color:#fff;text-shadow:var(--ctl-ink-shadow);border-radius:11px;
   transition:background-color .15s ease;
 }
 
@@ -52,23 +51,35 @@ dialog button,.aisle-progress{
 }
 .menu>button{font-size:14px;font-weight:500;letter-spacing:-.01em;padding:11px 22px}
 .menu nav button,.menu nav a{font-size:14px;font-weight:450;letter-spacing:-.008em}
-.menu label{font-size:13px;font-weight:500;letter-spacing:-.008em;color:#dfeaf1}
+.menu label{font-size:13px;font-weight:500;letter-spacing:-.008em;color:#fff}
 .menu select{font-size:13px;font-weight:500}
+/* Native selects keep their keyboard/popup behavior. A small two-tone
+   chevron remains distinguishable over bright photography; no nested blur. */
+body[data-appearance] .menu select{
+  appearance:none;-webkit-appearance:none;padding-right:28px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='m2 4 4 4 4-4' fill='none' stroke='%23000810' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m2 4 4 4 4-4' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 9px center;background-size:12px 12px;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+body[data-appearance] :is(.collection-header>.glass-control,.aisle-progress>.walk-step){
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
 .glass-control,dialog button{font-size:14px;font-weight:500;letter-spacing:-.01em;line-height:1.2;padding:10px 20px}
 .category-sign{font-size:12px;font-weight:590;letter-spacing:-.006em;line-height:1.25;padding:9px 15px;min-width:0}
 .aisle-video-toggle{font-size:12px;font-weight:510;letter-spacing:-.006em;padding:10px 18px}
 .aisle-progress span{font-size:12px;font-weight:500;letter-spacing:-.006em}
 .aisle-video-status{font-size:11px;font-weight:450;letter-spacing:-.004em;line-height:1.35;
-  border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);
-  backdrop-filter:var(--ctl-frost);-webkit-backdrop-filter:var(--ctl-frost);
-  border-radius:980px;padding:5px 14px;max-width:420px;text-align:center;text-shadow:0 1px 3px rgba(0,10,18,.5)}
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:980px;padding:5px 14px;max-width:420px;text-align:center}
 .walk-step{font-size:17px}
+body[data-appearance] :is(.menu nav a,.menu nav button,.menu label,
+.collection-switcher a,.aisle-progress span){color:#fff;text-shadow:var(--ctl-ink-shadow)}
 
 /* ---- states: material brightens, springy press, no lift ---------------- */
 @media(hover:hover){
-  .menu>button:hover,.glass-control:hover,.category-sign:hover,
+  body[data-appearance] :is(.menu>button:hover,.glass-control:hover,.category-sign:hover,
   .aisle-video-toggle:hover:not(:disabled),dialog button:hover,
-  .walk-step:hover:not(:disabled){
+  .walk-step:hover:not(:disabled)){
     background:var(--ctl-bg-hover);
     border-color:var(--ctl-border-hover);
   }
@@ -92,25 +103,51 @@ dialog button:active,.walk-step:active:not(:disabled){
 
 /* ---- chips and footer speak the same language -------------------------- */
 .card-arrow{border-color:var(--ctl-border);background:var(--ctl-bg);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.45);backdrop-filter:var(--ctl-frost);-webkit-backdrop-filter:var(--ctl-frost)}
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
 .site-footer nav a{transition:color .2s ease,border-color .2s ease}
+
+/* Keep the title and every focus ring inside a narrow native dialog. */
+@media(max-width:480px){
+  #viewer nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px}
+  #viewer-title{grid-column:1/-1;grid-row:1;min-width:0;overflow-wrap:anywhere}
+  #viewer nav button{min-width:0;min-height:44px;padding:10px 8px}
+}
+/* The footer controls remain reachable in short landscape; the existing
+   invitation fits above them without concealing its scroll/swipe cue. */
+@media(max-height:430px) and (min-width:650px){
+  .aisle-viewport>#menu{top:12px}
+  .aisle-invitation{top:74px}
+  .aisle-invitation .invitation-body{margin-top:6px}
+  .aisle-invitation .invitation-cue{margin-top:6px}
+}
+
+body[data-appearance=solid]{
+  --ctl-bg:#102c40;--ctl-bg-hover:#16384f;--ctl-bg-press:#0c2334;
+  --ctl-blur:none;--ctl-ink-shadow:none;--ctl-transition:none;
+}
 
 /* ---- accessibility contracts stay intact ------------------------------ */
 @media(prefers-reduced-motion:reduce){
+  body{--ctl-transition:none}
   .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
   .aisle-video-toggle,.walk-step,dialog button,.site-footer nav a,.aisle-progress{transition:none}
   .menu>button:active,.glass-control:active,.aisle-video-toggle:active:not(:disabled),
   dialog button:active,.walk-step:active:not(:disabled){transform:none}
   .category-sign:active{transform:translate(-50%,-100%)}
 }
-/* Reduced transparency is governed by the site's own Appearance switcher: the
-   menu already solidifies under appearance=system via index.html's higher-
-   specificity rule, and the glass controls follow Kyle's .glass-control
-   precedent (glass always). No blanket fallback here: it silently turned the
-   whole system into flat #102c40 on any machine with OS transparency off. */
+/* Respect System's reduced-transparency setting without overriding an
+   explicit Clear choice. Explicit Solid uses the same opaque tokens above. */
+@media(prefers-reduced-transparency:reduce){
+  body:not([data-appearance=clear]){
+    --ctl-bg:#102c40;--ctl-bg-hover:#16384f;--ctl-bg-press:#0c2334;
+    --ctl-blur:none;--ctl-ink-shadow:none;--ctl-transition:none;
+  }
+}
 @media(forced-colors:active){
   .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
-  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress,.aisle-video-status,.card-arrow{
+  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress,.aisle-video-status,.card-arrow,.collection-header{
     background:ButtonFace!important;color:ButtonText!important;border:1px solid ButtonText!important;
-    box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;text-shadow:none!important}
+    box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;text-shadow:none!important;transition:none!important}
+  body[data-appearance] :is(.menu label,.collection-switcher a,.aisle-progress span){color:ButtonText!important;text-shadow:none!important}
+  body[data-appearance] .menu select{appearance:auto;-webkit-appearance:auto;background-image:none!important}
 }
