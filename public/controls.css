@@ -1,0 +1,112 @@
+/* Control system: one language for every button, sign, pill and chip on the site.
+   Material = the navy glass the site already speaks, labels = tracked uppercase
+   mono (system stack, no font downloads), states = lift / press / focus on every
+   control. Loaded last so it re-skins the controls declared across the older
+   sheets without touching their layout or behavior. */
+
+:root{
+  --ctl-mono:ui-monospace,"Cascadia Mono","SF Mono",Consolas,"Liberation Mono",monospace;
+  --ctl-ease:cubic-bezier(.22,1,.36,1);
+  --ctl-border:#ffffff47;
+  --ctl-border-hover:#ffffff8a;
+  --ctl-glass:linear-gradient(135deg,#ffffff14,#ffffff03 55%,#ffffff0a);
+  --ctl-glass-hover:linear-gradient(135deg,#ffffff1f,#ffffff08 55%,#ffffff12);
+  --ctl-shadow:inset 0 1px 0 #ffffff66,0 2px 3px #00111f2e,0 10px 26px #00111f3d;
+}
+
+/* ---- shared material -------------------------------------------------- */
+.menu>button,.menu nav button,.menu nav a,.menu select,
+.glass-control,.category-sign,
+.aisle-video-toggle,.walk-step,
+dialog button{
+  border:1px solid var(--ctl-border);
+  background:var(--ctl-glass);
+  box-shadow:var(--ctl-shadow);
+  backdrop-filter:blur(14px) saturate(150%);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  color:#fff;text-shadow:0 1px 3px #000c;
+  transition:transform .18s var(--ctl-ease),border-color .18s ease,background .25s ease,box-shadow .25s ease;
+}
+.aisle-progress{
+  border:1px solid var(--ctl-border);
+  background:linear-gradient(135deg,#0d222f9e,#08182488);
+  box-shadow:var(--ctl-shadow);
+  backdrop-filter:blur(14px) saturate(150%);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  border-radius:999px;
+}
+
+/* ---- shape: pills for actions, circles for steps ---------------------- */
+.menu>button,.glass-control,.category-sign,.aisle-video-toggle,dialog button{border-radius:999px}
+.menu nav{border-radius:16px}
+.menu nav button,.menu nav a{border-radius:10px;border-color:transparent;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.walk-step{border-radius:50%}
+
+/* ---- the label voice: tracked uppercase mono -------------------------- */
+.menu>button,.glass-control,.category-sign,.aisle-video-toggle,dialog button,
+.aisle-progress span,.collection-switcher a,.card-count{
+  font-family:var(--ctl-mono);
+  font-size:11px;font-weight:600;line-height:1.35;
+  letter-spacing:.16em;text-transform:uppercase;
+}
+.category-sign{font-size:10px;letter-spacing:.14em;padding:10px 15px;min-width:0}
+.aisle-video-toggle{font-size:10px;letter-spacing:.15em;padding:11px 18px}
+dialog button{padding:10px 18px}
+.menu>button{padding:12px 22px}
+.aisle-video-status{font-family:var(--ctl-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid #ffffff24;background:#081824c9;border-radius:999px;padding:5px 14px;max-width:380px;text-align:center}
+.menu nav button,.menu nav a{font:600 13px/1.3 system-ui,sans-serif;letter-spacing:.02em}
+.menu label{font:600 11px/1.3 var(--ctl-mono);letter-spacing:.14em;text-transform:uppercase;color:#c9dbe4}
+.menu select{border-radius:10px;font:600 12px/1.3 system-ui,sans-serif}
+
+/* ---- states: lift, press, focus on every control ---------------------- */
+@media(hover:hover){
+  .menu>button:hover,.glass-control:hover,.category-sign:hover,
+  .aisle-video-toggle:hover:not(:disabled),dialog button:hover,
+  .walk-step:hover:not(:disabled){
+    transform:translateY(-2px);
+    border-color:var(--ctl-border-hover);
+    background:var(--ctl-glass-hover);
+    box-shadow:inset 0 1px 0 #ffffff80,0 4px 6px #00111f30,0 14px 34px #00111f4d;
+  }
+  .category-sign:hover{transform:translate(-50%,-100%) translateY(-2px)}
+  .menu nav button:hover,.menu nav a:hover{background:#ffffff14}
+  .site-footer nav a:hover{transform:translateY(-1px)}
+  .walk-step:hover:not(:disabled){transform:translateY(-2px) scale(1.04)}
+}
+.menu>button:active,.glass-control:active,.aisle-video-toggle:active:not(:disabled),
+dialog button:active,.walk-step:active:not(:disabled){
+  transform:translateY(1px) scale(.985);
+}
+.category-sign:active{transform:translate(-50%,-100%) translateY(1px) scale(.985)}
+.walk-step{transition:transform .18s var(--ctl-ease),border-color .18s ease,background .25s ease,opacity .2s ease}
+.walk-step:disabled{opacity:.32}
+
+/* ---- the wayfinding track --------------------------------------------- */
+.aisle-progress progress{width:88px;height:2px;accent-color:#cfeaf7}
+.aisle-progress progress::-webkit-progress-bar{background:#ffffff26;border-radius:99px}
+.aisle-progress progress::-webkit-progress-value{background:linear-gradient(90deg,#9fd6ee,#eaf7ff);border-radius:99px}
+
+/* ---- footer + card chips speak the same language ---------------------- */
+.card-arrow{border-color:var(--ctl-border);background:var(--ctl-glass);box-shadow:inset 0 1px 0 #ffffff55}
+.site-footer nav a{font-family:var(--ctl-mono);transition:transform .18s var(--ctl-ease),color .2s ease,border-color .2s ease}
+
+/* ---- accessibility contracts stay intact ------------------------------ */
+@media(prefers-reduced-motion:reduce){
+  .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
+  .aisle-video-toggle,.walk-step,dialog button,.site-footer nav a{transition:none}
+  .menu>button:hover,.glass-control:hover,.category-sign:hover,.aisle-video-toggle:hover:not(:disabled),
+  dialog button:hover,.walk-step:hover:not(:disabled),.site-footer nav a:hover{transform:none}
+  .category-sign:hover{transform:translate(-50%,-100%)}
+}
+@media(prefers-reduced-transparency:reduce){
+  .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
+  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress{
+    background:#102c40;backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media(forced-colors:active){
+  .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
+  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress,.aisle-video-status,.card-arrow{
+    background:ButtonFace!important;color:ButtonText!important;border:1px solid ButtonText!important;
+    box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;text-shadow:none!important}
+}
