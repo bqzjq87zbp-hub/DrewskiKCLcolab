@@ -91,4 +91,10 @@ Reflection validation: the first compact run passed 450/453 assertions. The thre
 - The 121 existing JPEGs sample AI-generated Seedance motion, as identified by `public/video/frames.json` and `docs/video-scroll-plan.md`. Their tracked features are 2D flow over generated imagery; no real-camera pose or metric depth solve is included. They can inform motion and appearance but do not supply independent measurements of the photographed pier. The video remains an opt-in preview.
 - Viewport tests emulate phones in desktop Chrome; they do not establish performance on a physical iPhone or an actual Magic Mouse's hardware momentum.
 
+## Smallest next visual step
+
+The available photograph and generated frames can support an inferred reconstruction of the nearest individual pier posts and feet. Replace a small part of the broad side planes with individual proxies and irregular contact masks; preserve the entrance photograph, then verify the existing travel and phone views for exposed gaps and water-only movement. Generated frames can guide plausible overlap, but cannot establish measured geometry. New footage is not a prerequisite for this visual experiment.
+
+Faithful recovered pier geometry would require actual overlapping photographs/video or registered depth of this pier, followed by a reviewed camera/depth solve. The current easel Blender asset does not model the pier itself. Further shader blur alone cannot provide missing individual post geometry.
+
 This branch does not merge the separate collaborator water-shader PR, alter the upstream default branch, or deploy Pixpa/production.
