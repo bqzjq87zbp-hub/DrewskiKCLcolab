@@ -1,183 +1,103 @@
 /**
- * The archive: everything after the pier walk.
+ * The archive: one page, four sections, no routes.
  *
- * Owns the collections index, the collection views, the viewer, and the footer,
- * and exposes the small surface the opener needs ({data, open, close, active,
- * section}) so the aisle keeps working untouched. Route changes run through the
- * View Transitions API where the browser has it, and fall back to a plain swap
- * where it does not.
+ * After the pier walk you keep scrolling. Branding, Family portraits,
+ * Professional headshots and Coastal photographs each arrive as one continuous
+ * line of photographs carrying its own signature technique. Nothing navigates
+ * away; the only overlay is the viewer.
  */
-import { reveal, reduced, el, splitWords, onFrame, clamp } from "./motion.js";
+import { reveal, reduced, onFrame, clamp, el, splitWords } from "./motion.js";
 import { initCursor, magnetic } from "./cursor.js";
-import { buildRail } from "./rail.js";
-import { buildStream } from "./stream.js";
+import { pinnedScrub, infiniteDrift, velocitySkew, scrollShuttle } from "./strips.js";
+import { buildChapters } from "./chapters.js";
 import { createLightbox } from "./lightbox.js";
+import { createSound, buildControls, runPreloader, loadPrefs } from "./chrome.js";
 
-const HASH = /^#collection\//;
-const idFromHash = () => decodeURIComponent(location.hash.replace(HASH, ""));
+const ORDER = ["branding", "families", "headshots", "coastal"];
+const BUILDER = [pinnedScrub, infiniteDrift, velocitySkew, scrollShuttle];
 
 export async function createArchive() {
   const payload = await (await fetch("/categories.json")).json();
   const data = new Map(payload.categories.map((c) => [c.id, c]));
   const main = document.querySelector("main");
 
+  const prefs = loadPrefs();
+  const sound = createSound(prefs);
   const lightbox = createLightbox();
   initCursor();
 
-  // ---- the collection view (one node, re-rendered per collection) ---------
-  const section = el("section", {
-    class: "collection", id: "collection", tabIndex: "-1",
-    "aria-label": "Collection", hidden: true,
-  });
+  const enlarge = (c) => (i, trigger) => { sound.blip(700, 0.05, 0.03); lightbox.open(c, i, trigger); };
 
-  let active = null, returnY = 0, returnFocus = null, stream = null;
+  // ---- the four sections, in order ---------------------------------------
+  const intro = el("section", { class: "archive-intro", id: "archive" },
+    el("p", { class: "intro-eyebrow", text: "The archive" }),
+    el("h2", { class: "intro-title" }, splitWords("Keep going. Four collections, one line each.")),
+    el("p", { class: "intro-lede", text: "Every photograph from the easels above, laid out end to end. Nothing to click through: just keep scrolling." }));
+  reveal([...intro.children], { stagger: 90 });
+  main.append(intro);
 
-  function renderCollection(id) {
+  const sections = ORDER.map((id, i) => {
     const c = data.get(id);
-    if (!c) return false;
-    stream?.destroy();
+    if (!c) return null;
+    const { section } = BUILDER[i]({ collection: c, onEnlarge: enlarge(c) });
+    main.append(section);
+    return { id, title: c.title, section };
+  }).filter(Boolean);
 
-    const back = el("button", { class: "col-back", type: "button", dataset: { cursor: "back", cursorLabel: "Back" } },
-      el("span", { class: "col-back-arrow", text: "←", "aria-hidden": "true" }), "Back to the walk");
-    back.addEventListener("click", () => close());
-    magnetic(back);
+  const footer = buildFooter({ collections: data, sound });
+  main.append(footer);
 
-    const switcher = el("nav", { class: "col-switch", "aria-label": "Collections" },
-      [...data.values()].map((o) => {
-        const a = el("a", { href: "#collection/" + o.id, text: o.title });
-        if (o.id === id) a.setAttribute("aria-current", "page");
-        a.addEventListener("click", (e) => {
-          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-          e.preventDefault(); open(o.id, a);
-        });
-        return a;
-      }));
-
-    const heading = el("h1", { class: "col-title" }, splitWords(c.title));
-    const meta = el("p", { class: "col-meta" },
-      el("span", { text: `${c.items.length} photographs` }),
-      el("span", { class: "col-hint", text: reduced() ? "Select a photograph to enlarge it" : "Drag, scroll or use arrow keys" }));
-
-    stream = buildStream({
-      collection: c,
-      onEnlarge: (i, trigger) => lightbox.open(c, i, trigger),
+  // ---- chrome ------------------------------------------------------------
+  const jump = (id) => {
+    sound.blip(560, 0.05, 0.03);
+    document.getElementById(id)?.scrollIntoView({
+      behavior: reduced() ? "instant" : "smooth", block: "start",
     });
-
-    section.replaceChildren(
-      el("header", { class: "col-head" }, back, switcher),
-      el("div", { class: "col-intro" }, heading, meta),
-      stream.root,
-    );
-    reveal([heading, meta], { stagger: 90 });
-    active = id;
-    return true;
-  }
-
-  function swap(fn) {
-    if (reduced() || !document.startViewTransition) { fn(); return; }
-    document.startViewTransition(fn);
-  }
-
-  function show(id, { focus = true } = {}) {
-    swap(() => {
-      if (!renderCollection(id)) return;
-      for (const node of main.children) if (node !== section) node.hidden = true;
-      section.hidden = false;
-      document.body.dataset.view = "collection";
-      scrollTo({ top: 0, behavior: "instant" });
-      if (focus) section.focus({ preventScroll: true });
-    });
-  }
-
-  function open(id, trigger) {
-    if (!data.has(id)) return;
-    if (!active) {
-      returnY = scrollY;
-      returnFocus = trigger || document.activeElement;
-      history.replaceState({ ...history.state, aisleY: returnY }, "", location.href);
-    }
-    const method = active ? "replaceState" : "pushState";
-    history[method]({ localCollection: true, aisleY: returnY }, "", "#collection/" + id);
-    show(id);
-  }
-
-  function restore() {
-    swap(() => {
-      active = null;
-      stream?.destroy(); stream = null;
-      section.hidden = true;
-      for (const node of main.children) {
-        if (node !== section && node.dataset.keepHidden !== "true") node.hidden = false;
-      }
-      document.body.dataset.view = "aisle";
-      scrollTo({ top: returnY, behavior: "instant" });
-    });
-    // The aisle remeasures after its hidden parent reopens; give focus back
-    // only once the target is really on screen and the visitor has not moved on.
-    const target = returnFocus;
-    let attempts = 0, stable = 0;
-    (function settle() {
-      if (active || !target?.isConnected || document.querySelector("dialog[open]") || attempts++ > 16) return;
-      const focused = document.activeElement;
-      if (focused !== document.body && focused !== section && focused !== target) return;
-      const visible = target.getClientRects().length > 0 && !target.closest("[hidden]");
-      stable = visible ? stable + 1 : 0;
-      if (stable >= 3) { target.focus({ preventScroll: true }); return; }
-      requestAnimationFrame(settle);
-    })();
-  }
-
-  function close() {
-    if (history.state?.localCollection) { history.back(); return; }
-    history.replaceState(null, "", location.pathname + location.search);
-    restore();
-  }
-
-  addEventListener("popstate", () => {
-    const id = idFromHash();
-    if (data.has(id)) show(id);
-    else if (active) {
-      if (Number.isFinite(history.state?.aisleY)) returnY = history.state.aisleY;
-      restore();
-    }
-  });
-  addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && active && !document.querySelector("dialog[open]")) {
-      e.preventDefault(); close();
-    }
+  };
+  buildChapters({ chapters: sections.map(({ id, title }) => ({ id, title })), onJump: jump });
+  buildControls({
+    sound,
+    onMotion: () => location.reload(),   // motion mode is structural; a clean remount is honest
+    onBandwidth: (v) => {
+      for (const img of document.querySelectorAll(".shot-img")) img.loading = v ? "lazy" : "eager";
+    },
   });
 
-  // ---- the below-the-walk layer ------------------------------------------
-  const rail = buildRail({ collections: data, onOpen: open });
-  const footer = buildFooter({ collections: data, onOpen: open });
+  // Quiet hover tone on the photographs, only once sound is opted into.
+  main.addEventListener("pointerover", (e) => {
+    if (e.target.closest?.(".shot")) sound.blip(880, 0.03, 0.014);
+  }, { passive: true });
 
-  main.append(rail.section, section, footer);
+  await runPreloader();
 
-  const initial = idFromHash();
-  if (data.has(initial)) show(initial, { focus: false });
+  // Deep link straight to a section without a route.
+  const hash = location.hash.replace(/^#/, "");
+  if (sections.some((s) => s.id === hash)) {
+    document.getElementById(hash)?.scrollIntoView({ block: "start", behavior: "instant" });
+  }
 
-  return { data, open, close, section, get active() { return active; } };
+  return { data, jump, sections };
 }
 
 // ---- footer ---------------------------------------------------------------
-function buildFooter({ collections, onOpen }) {
+function buildFooter({ collections, sound }) {
   const list = [...collections.values()];
   const total = list.reduce((n, c) => n + c.items.length, 0);
 
   const top = el("button", { class: "foot-top", type: "button", dataset: { cursor: "up", cursorLabel: "Top" } },
-    el("span", { class: "foot-top-arrow", text: "↑", "aria-hidden": "true" }), "Walk the pier again");
-  top.addEventListener("click", () => scrollTo({ top: 0, behavior: reduced() ? "instant" : "smooth" }));
+    el("span", { class: "foot-top-arrow", text: "↑", "aria-hidden": "true" }), "Back to the pier");
+  top.addEventListener("click", () => {
+    sound.blip(480, 0.06, 0.03);
+    scrollTo({ top: 0, behavior: reduced() ? "instant" : "smooth" });
+  });
   magnetic(top);
 
-  const nav = el("nav", { class: "foot-nav", "aria-label": "Collections" },
+  const nav = el("nav", { class: "foot-nav", "aria-label": "Sections" },
     list.map((c) => {
-      const a = el("a", { href: "#collection/" + c.id },
+      const a = el("a", { href: "#" + c.id },
         el("span", { text: c.title }),
         el("span", { class: "foot-count", text: String(c.items.length).padStart(2, "0") }));
-      a.addEventListener("click", (e) => {
-        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-        e.preventDefault(); onOpen(c.id, a);
-      });
+      a.addEventListener("click", () => sound.blip(600, 0.04, 0.025));
       return a;
     }));
 
@@ -191,7 +111,6 @@ function buildFooter({ collections, onOpen }) {
       top,
       el("p", { class: "foot-meta", text: "Photography by Kyle. Development preview." })));
 
-  // Count up once, when the number is actually on screen.
   if (reduced()) counter.textContent = String(total);
   else {
     let started = false;
@@ -201,8 +120,7 @@ function buildFooter({ collections, onOpen }) {
       const t0 = performance.now();
       onFrame(() => {
         const p = clamp((performance.now() - t0) / 1100);
-        const eased = 1 - Math.pow(1 - p, 3);
-        counter.textContent = String(Math.round(total * eased));
+        counter.textContent = String(Math.round(total * (1 - Math.pow(1 - p, 3))));
         return p < 1;
       });
     }, { threshold: 0.6 }).observe(counter);

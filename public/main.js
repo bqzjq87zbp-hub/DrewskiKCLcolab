@@ -26,13 +26,14 @@ if (headshot) Object.assign(enriched[3], {
   alt: headshot.alt, objectPosition: headshot.objectPosition || "50% 40%",
 });
 
-const enterCategory = (slot, trigger) => archive.open(slot.category, trigger);
+// One page: the easels and signs travel to their section, they never route away.
+const enterCategory = (slot) => archive.jump(slot.category);
 
 for (const [index, slot] of enriched.entries()) {
   const canvas = createWrappedCanvas(slot, index, { onSelect: (i, a) => enterCategory(enriched[i], a) });
   const link = canvas.querySelector("a");
   link.setAttribute("aria-label", "Explore " + archive.data.get(slot.category).title);
-  link.href = "#collection/" + slot.category;
+  link.href = "#" + slot.category;
   layers.append(canvas);
 }
 
@@ -45,13 +46,13 @@ for (const slot of enriched) {
   if (!category) continue;
   const a = document.createElement("a");
   a.className = "category-sign";
-  a.href = "#collection/" + slot.category;
+  a.href = "#" + slot.category;
   a.textContent = category.title;
   a.dataset.slot = slot.id;
   a.setAttribute("aria-label", "Explore " + category.title);
   a.onclick = (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    e.preventDefault(); enterCategory(slot, a);
+    e.preventDefault(); enterCategory(slot);
   };
   signLayer.append(a);
   signs.push({ slot, a });
@@ -95,15 +96,15 @@ const allLink = panel.querySelector("a");
 allLink.textContent = "All collections";
 allLink.onclick = (e) => {
   e.preventDefault(); closeMenu();
-  document.querySelector("#collections")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  archive.jump("archive");
 };
 for (const c of [...archive.data.values()].reverse()) {
   const a = document.createElement("a");
-  a.href = "#collection/" + c.id;
+  a.href = "#" + c.id;
   a.textContent = c.title;
   a.onclick = (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    e.preventDefault(); closeMenu(); archive.open(c.id, toggle);
+    e.preventDefault(); closeMenu(); archive.jump(c.id);
   };
   panel.prepend(a);
 }

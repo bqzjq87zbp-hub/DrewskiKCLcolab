@@ -25,12 +25,20 @@ export const damp = (current, target, lambda, dt) =>
 
 // ---- one shared frame loop ------------------------------------------------
 const readers = new Set();
-let running = false, last = 0;
+let running = false, last = 0, lastY = 0;
+
+/** Published scroll velocity in px/s, smoothed. Read by skew and drift layers. */
+export const signal = { velocity: 0, direction: 1, y: 0 };
 
 function frame(now) {
   const dt = last ? Math.min(0.05, (now - last) / 1000) : 0.016;
   last = now;
   const y = scrollY, vh = innerHeight;
+  const raw = (y - lastY) / Math.max(dt, 0.001);
+  lastY = y;
+  signal.velocity = damp(signal.velocity, raw, 12, dt);
+  if (Math.abs(raw) > 1) signal.direction = raw > 0 ? 1 : -1;
+  signal.y = y;
   let wants = false;
   for (const r of readers) {
     try { if (r(y, dt, vh) !== false) wants = true; }
@@ -38,9 +46,11 @@ function frame(now) {
   }
   // Keep spinning while any subscriber reports unsettled state; otherwise idle
   // until the next scroll/resize so a still page costs nothing.
-  running = wants && readers.size > 0;
+  // Keep the loop alive while the page is still decelerating so velocity
+  // readers settle instead of freezing mid-skew.
+  running = (wants || Math.abs(signal.velocity) > 2) && readers.size > 0;
   if (running) requestAnimationFrame(frame);
-  else last = 0;
+  else { last = 0; signal.velocity = 0; }
 }
 
 export function kick() {
