@@ -52,7 +52,7 @@ let output='';child.stdout.on('data',chunk=>output+=chunk);child.stderr.on('data
 try{
   await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Test server did not start: '+output)),5000);child.once('error',reject);child.once('exit',code=>reject(Error('Server exited '+code+': '+output)));child.stdout.on('data',()=>{if(output.includes('Portfolio preview:')){clearTimeout(timer);resolve();}});});
   const base='http://127.0.0.1:'+port;
-  for(const url of ['/','/categories.json','/main-v2.js','/aisle/photographic-aisle.js','/aisle/video-frame-seam.js','/video/frames.json','/video/frame-0000.jpg','/video/frame-0120.jpg','/video/frame-0240.jpg'])assert((await fetch(base+url)).status===200,'Runtime route failed '+url);
+  for(const url of ['/','/categories.json','/main.js','/archive/archive.js','/archive/archive.css','/aisle/photographic-aisle.js','/aisle/video-frame-seam.js','/video/frames.json','/video/frame-0000.jpg','/video/frame-0120.jpg','/video/frame-0240.jpg'])assert((await fetch(base+url)).status===200,'Runtime route failed '+url);
   for(const url of ['/server.mjs','/package.json','/docs/asset-manifest.json','/.git/config','/.env','/%2e%2e/package.json','/media/%2e%2e/%2e%2e/server.mjs'])assert((await fetch(base+url)).status===404,'Private route exposed '+url);
   assert((await fetch(base+'/',{method:'POST'})).status===405,'POST should be rejected');
   assert((await fetch(base+'/',{method:'HEAD'})).status===200,'HEAD failed');
