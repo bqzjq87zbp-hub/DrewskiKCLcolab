@@ -141,12 +141,12 @@ body[data-cursor-down] .cur-ring{scale:.86}
 .shot:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 
 /* Pinned sections keep their headline on screen with the line it names. */
-.sec:has(.line-scrub),.sec:has(.line-shuttle){padding:0}
-.sec:has(.line-scrub) .sec-inner,.sec:has(.line-shuttle) .sec-inner{
+.sec:has(.line-scrub),.sec:has(.line-shuttle),.sec:has(.line-skew){padding:0}
+.sec:has(.line-scrub) .sec-inner,.sec:has(.line-shuttle) .sec-inner,.sec:has(.line-skew) .sec-inner{
   position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.sec:has(.line-scrub) .sec-head,.sec:has(.line-shuttle) .sec-head{flex:none;padding-bottom:clamp(16px,2.4vh,30px)}
-.sec:has(.line-scrub) .sec-title,.sec:has(.line-shuttle) .sec-title{font-size:clamp(38px,7vw,116px)}
-.sec:has(.line-scrub) .shot,.sec:has(.line-shuttle) .shot{height:min(46svh,470px);width:calc(min(46svh,470px) * var(--ar))}
+.sec:has(.line-scrub) .sec-head,.sec:has(.line-shuttle) .sec-head,.sec:has(.line-skew) .sec-head{flex:none;padding-bottom:clamp(16px,2.4vh,30px)}
+.sec:has(.line-scrub) .sec-title,.sec:has(.line-shuttle) .sec-title,.sec:has(.line-skew) .sec-title{font-size:clamp(38px,7vw,116px)}
+.sec:has(.line-scrub) .shot,.sec:has(.line-shuttle) .shot,.sec:has(.line-skew) .shot{height:min(46svh,470px);width:calc(min(46svh,470px) * var(--ar))}
 
 /* 01 pinned scrub */
 .sec:has(.line-scrub){height:var(--pin-h,300vh)}
@@ -157,6 +157,8 @@ body[data-cursor-down] .cur-ring{scale:.86}
 .line-drift[data-dragging]{cursor:grabbing}
 
 /* 03 velocity skew */
+.sec:has(.line-skew){height:var(--pin-h,400vh)}
+.line-skew{width:100%}
 .line-skew .line-track{transform-origin:50% 50%;transition:none}
 .line-skew .shot{transform:perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));
   transition:transform .4s var(--ar-ease)}

@@ -52,7 +52,7 @@ const hintFor = (t) => reduced() ? "Select a photograph to enlarge it"
   : coarse() ? "Swipe the line, tap to enlarge"
   : { "Pinned scrub": "Keep scrolling to travel the line",
       "Infinite drift": "Drag to throw the line",
-      "Velocity skew": "Scroll fast to lean the line",
+      "Velocity skew": "Keep scrolling: all 31 pass through here",
       "Scroll shuttle": "Scroll to advance one frame at a time" }[t];
 
 // ---------------------------------------------------------------- 01 scrub --
@@ -151,24 +151,35 @@ export function velocitySkew({ collection, onEnlarge }) {
   const { section, inner } = sectionShell(collection, 2, "Velocity skew");
   const shots = collection.items.map((it, i) => shot(it, i, onEnlarge));
   const track = el("div", { class: "line-track" }, shots);
-  const viewport = el("div", { class: "line line-skew" }, track);
+  const viewport = el("div", { class: "line line-skew", dataset: { cursor: "drag", cursorLabel: "Scroll" } }, track);
   inner.append(el("div", { class: "sec-stage" }, viewport));
 
   if (reduced()) { section.dataset.fallback = "grid"; return { section }; }
   if (coarse()) { section.dataset.fallback = "swipe"; return { section }; }
 
-  // The line leans with scroll speed and drifts laterally as the section passes.
-  let inView = false, skew = 0;
-  new IntersectionObserver(([e]) => { inView = e.isIntersecting; }, { threshold: 0 }).observe(section);
+  // Pinned like the scrub so all 31 photographs pass before the page moves on,
+  // at a slower ratio: this is the longest line on the site and it earns the
+  // extra distance. The skew is what makes it this section's own.
+  const RATIO = 0.78;
+  let travel = 0, span = 0, skew = 0;
+  const size = () => {
+    span = Math.max(0, track.scrollWidth - viewport.clientWidth);
+    section.style.setProperty("--pin-h", `${innerHeight + span * RATIO}px`);
+  };
+  size();
+  new ResizeObserver(size).observe(viewport);
+
   onFrame((y, dt, vh) => {
-    if (!inView) return false;
-    const r = section.getBoundingClientRect();
-    const p = clamp((vh - r.top) / (vh + r.height));
-    const want = clamp(signal.velocity / 190, -7, 7);
-    skew = damp(skew, want, 10, dt);
-    const shift = (0.5 - p) * Math.max(0, track.scrollWidth - viewport.clientWidth);
-    track.style.transform = `translate3d(${shift.toFixed(2)}px,0,0) skewY(${skew.toFixed(2)}deg)`;
-    return Math.abs(skew) > 0.02 || Math.abs(signal.velocity) > 2;
+    const top = section.offsetTop;
+    const p = clamp((y - top) / Math.max(1, span * RATIO));
+    const before = travel;
+    travel = damp(travel, p * span, 10, dt);
+    if (Math.abs(travel - p * span) < 0.25) travel = p * span;
+    const want = clamp(signal.velocity / 210, -6, 6);
+    skew = damp(skew, want, 9, dt);
+    track.style.transform = `translate3d(${-travel.toFixed(2)}px,0,0) skewY(${skew.toFixed(2)}deg)`;
+    return y + vh > top && y < top + span * RATIO + vh
+      && (Math.abs(travel - before) > 0.05 || Math.abs(skew) > 0.02);
   });
 
   // 3D tilt under the pointer, fine pointers only.
