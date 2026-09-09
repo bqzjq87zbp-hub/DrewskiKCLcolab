@@ -157,10 +157,10 @@ export function velocitySkew({ collection, onEnlarge }) {
   if (reduced()) { section.dataset.fallback = "grid"; return { section }; }
   if (coarse()) { section.dataset.fallback = "swipe"; return { section }; }
 
-  // Pinned like the scrub so all 31 photographs pass before the page moves on,
-  // at a slower ratio: this is the longest line on the site and it earns the
-  // extra distance. The skew is what makes it this section's own.
-  const RATIO = 0.78;
+  // Pinned like the scrub so all 31 photographs pass before the page moves on.
+  // 1:1 with the line: a pixel of scroll is a pixel of travel, the slowest and
+  // most deliberate pass on the site. The skew is what makes it its own.
+  const RATIO = 1.0;
   let travel = 0, span = 0, skew = 0;
   const size = () => {
     span = Math.max(0, track.scrollWidth - viewport.clientWidth);
