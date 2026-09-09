@@ -91,10 +91,10 @@ Reflection validation: the first compact run passed 450/453 assertions. The thre
 - The 121 existing JPEGs sample AI-generated Seedance motion, as identified by `public/video/frames.json` and `docs/video-scroll-plan.md`. Their tracked features are 2D flow over generated imagery; no real-camera pose or metric depth solve is included. They can inform motion and appearance but do not supply independent measurements of the photographed pier. The video remains an opt-in preview.
 - Viewport tests emulate phones in desktop Chrome; they do not establish performance on a physical iPhone or an actual Magic Mouse's hardware momentum.
 
-## Smallest next visual step
+## Pier-contact experiment and next geometry step
 
-The available photograph and generated frames can support an inferred reconstruction of the nearest individual pier posts and feet. Replace a small part of the broad side planes with individual proxies and irregular contact masks; preserve the entrance photograph, then verify the existing travel and phone views for exposed gaps and water-only movement. Generated frames can guide plausible overlap, but cannot establish measured geometry. New footage is not a prerequisite for this visual experiment.
+Six lower-foot/contact-mask variants were rendered and rejected because they introduced pale shelves or sharp water boundaries without an overall visual gain. The accepted runtime is restored and verified. [The comparison and geometry diagnosis](PIER-CONTACT.md) show the retained and rejected desktop/phone endpoints, the tested scope and the available real pier views.
 
-Faithful recovered pier geometry would require actual overlapping photographs/video or registered depth of this pier, followed by a reviewed camera/depth solve. The current easel Blender asset does not model the pier itself. Further shader blur alone cannot provide missing individual post geometry.
+The next useful step is a coupled adjustment of complete posts and their newly exposed background. Lower-foot extensions on the existing broad walls cannot reconcile the estimated contact depths while leaving the upper trunks at their old depths. A shipped real exterior photograph supplies additional unregistered geometry references; new footage is not a prerequisite for another inferred reconstruction attempt. Faithful recovered geometry would still require sufficient real multiview/depth evidence and a reviewed solve. Further cosmetic blur does not address this geometry mismatch.
 
 This branch does not merge the separate collaborator water-shader PR, alter the upstream default branch, or deploy Pixpa/production.
