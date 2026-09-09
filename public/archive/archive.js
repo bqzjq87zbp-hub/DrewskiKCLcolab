@@ -12,6 +12,12 @@ import { pinnedScrub, infiniteDrift, velocitySkew, scrollShuttle } from "./strip
 import { buildChapters } from "./chapters.js";
 import { createLightbox } from "./lightbox.js";
 import { createSound, buildControls, runPreloader, loadPrefs } from "./chrome.js";
+import { enhanceHero } from "./hero.js";
+
+// TODO(Kyle): the real booking address. Nothing else in the repo carries one,
+// so this placeholder is deliberately obvious rather than invented.
+export const BOOKING_EMAIL = "booking@example.com";
+const BOOKING_HREF = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Booking enquiry")}`;
 
 const ORDER = ["branding", "families", "headshots", "coastal"];
 const BUILDER = [pinnedScrub, infiniteDrift, velocitySkew, scrollShuttle];
@@ -44,7 +50,7 @@ export async function createArchive() {
     return { id, title: c.title, section };
   }).filter(Boolean);
 
-  const footer = buildFooter({ collections: data, sound });
+  const footer = buildFooter({ collections: data, sound, bookingHref: BOOKING_HREF });
   main.append(footer);
 
   // ---- chrome ------------------------------------------------------------
@@ -76,11 +82,18 @@ export async function createArchive() {
     document.getElementById(hash)?.scrollIntoView({ block: "start", behavior: "instant" });
   }
 
-  return { data, jump, sections };
+  return {
+    data, jump, sections,
+    bookingHref: BOOKING_HREF,
+    enhanceHero: () => enhanceHero({
+      bookingHref: BOOKING_HREF,
+      onSeeWork: () => jump(sections[0]?.id || "archive"),
+    }),
+  };
 }
 
 // ---- footer ---------------------------------------------------------------
-function buildFooter({ collections, sound }) {
+function buildFooter({ collections, sound, bookingHref }) {
   const list = [...collections.values()];
   const total = list.reduce((n, c) => n + c.items.length, 0);
 
@@ -105,7 +118,12 @@ function buildFooter({ collections, sound }) {
   const footer = el("footer", { class: "foot" },
     el("div", { class: "foot-inner" },
       el("p", { class: "foot-eyebrow", text: "Newport Beach, California" }),
-      el("h2", { class: "foot-title" }, splitWords("Shot on the sand.")),
+      el("h2", { class: "foot-title" }, splitWords("Book now.")),
+      el("p", { class: "foot-pitch", text: "Portraits, branding and coastal work on the sand at Newport. Tell me what you have in mind." }),
+      el("div", { class: "foot-actions" },
+        el("a", { class: "foot-book", href: bookingHref, dataset: { cursor: "book", cursorLabel: "Book" } },
+          el("span", { text: "Book a session" }),
+          el("span", { class: "foot-book-arrow", text: "→", "aria-hidden": "true" }))),
       nav,
       el("p", { class: "foot-stat" }, counter, el("span", { text: " photographs in the archive" })),
       top,
@@ -126,7 +144,9 @@ function buildFooter({ collections, sound }) {
     }, { threshold: 0.6 }).observe(counter);
   }
 
-  reveal([footer.querySelector(".foot-eyebrow"), footer.querySelector(".foot-title"), nav,
+  magnetic(footer.querySelector(".foot-book"));
+  reveal([footer.querySelector(".foot-eyebrow"), footer.querySelector(".foot-title"),
+    footer.querySelector(".foot-pitch"), footer.querySelector(".foot-actions"), nav,
     footer.querySelector(".foot-stat"), top, footer.querySelector(".foot-meta")], { stagger: 70 });
   return footer;
 }

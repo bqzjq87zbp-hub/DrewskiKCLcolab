@@ -126,3 +126,7 @@ $("#appearance").value = appearance;
 // ---- the walk ---------------------------------------------------------------
 window.PhotographicCollections = { slots: enriched, collections: archive, enterCategory, menu, signLayer };
 window.PhotographicAisle = attachAisle(window.PhotographicCollections);
+
+// The walk builds its invitation during attach; upgrade it into the hero now
+// that it exists, so the opener's own module stays untouched.
+archive.enhanceHero();

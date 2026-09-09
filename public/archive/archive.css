@@ -20,7 +20,7 @@
 body{background:var(--ar-deep);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 
 /* One display treatment, used everywhere a headline appears. */
-.intro-title,.sec-title,.foot-title{
+.intro-title,.sec-title,.foot-title,.hero .invitation-title{
   font-family:var(--ar-display);
   font-weight:800;
   line-height:.86;
@@ -29,6 +29,65 @@ body{background:var(--ar-deep);-webkit-font-smoothing:antialiased;-moz-osx-font-
   text-wrap:balance;
   margin:0;
 }
+
+
+/* ---- the hero ------------------------------------------------------------ */
+/* The walk owns this element and its fade; this gives it hero scale, sharpens
+   the type and re-enables pointer events on the actions only. */
+.aisle-invitation.hero{width:min(1180px,calc(100% - 44px));top:calc(25% + 58px)}
+/* The headline sits over bright sky and canvases; a soft ground keeps it
+   readable without turning into a box. */
+.aisle-invitation.hero::before{content:"";position:absolute;left:50%;top:50%;translate:-50% -50%;
+  width:130%;height:230%;z-index:-1;pointer-events:none;
+  background:radial-gradient(60% 50% at 50% 45%,rgba(2,12,20,.72),rgba(2,12,20,.34) 55%,transparent 78%)}
+/* While the hero holds the screen, the easel signs would sit on top of the
+   headline. They return the moment the walk starts. */
+body[data-hero-on] .aisle-category-sign{opacity:0;pointer-events:none;transition:opacity .3s ease}
+.aisle-category-sign{transition:opacity .3s ease}
+.aisle-invitation.hero .invitation-title{
+  font-size:clamp(40px,6.6vw,98px);letter-spacing:-.045em;line-height:.9;
+  text-shadow:0 3px 18px rgba(0,10,20,.72),0 1px 3px rgba(0,10,20,.9)}
+.aisle-invitation.hero .invitation-body{
+  font:600 clamp(15px,1.5vw,20px)/1.45 var(--ar-sans);letter-spacing:-.015em;
+  max-width:34ch;margin:16px auto 0;color:#eaf3f8;
+  text-shadow:0 2px 10px rgba(0,10,20,.8),0 1px 3px rgba(0,10,20,.95)}
+.aisle-invitation.hero .invitation-cue{
+  font:700 12px/1.4 var(--ar-sans);letter-spacing:.2em;text-transform:uppercase;
+  margin-top:20px;color:#c6dcea}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px;pointer-events:none}
+.hero-cta{pointer-events:auto;display:inline-flex;align-items:center;gap:10px;min-height:52px;
+  padding:15px 28px;border-radius:980px;text-decoration:none;cursor:pointer;
+  font:700 15px/1 var(--ar-sans);letter-spacing:-.015em;text-shadow:none;
+  transition:background .25s ease,border-color .25s ease,color .25s ease}
+.hero-cta-primary{background:#fff;color:#04101a;border:1px solid #fff;
+  box-shadow:0 10px 34px rgba(0,10,20,.42)}
+.hero-cta-arrow{transition:transform .3s var(--ar-ease)}
+.hero-cta-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.5);
+  backdrop-filter:blur(18px) saturate(170%);-webkit-backdrop-filter:blur(18px) saturate(170%)}
+@media(hover:hover){
+  .hero-cta-primary:hover{background:#dff1fb;border-color:#dff1fb}
+  .hero-cta-primary:hover .hero-cta-arrow{transform:translateX(5px)}
+  .hero-cta-ghost:hover{background:rgba(255,255,255,.24);border-color:#fff}
+}
+.hero-cta:focus-visible{outline:3px solid #bdefff;outline-offset:4px}
+@media(max-width:650px){
+  .aisle-invitation.hero{width:calc(100% - 32px)}
+  .aisle-invitation.hero .invitation-body{font-size:14px;margin-top:10px}
+  .hero-actions{margin-top:18px;gap:9px}
+  .hero-cta{min-height:48px;padding:13px 22px;font-size:14px}
+}
+
+/* ---- footer booking ------------------------------------------------------ */
+.foot-pitch{margin:0;max-width:44ch;font:500 clamp(15px,1.5vw,19px)/1.55 var(--ar-sans);
+  letter-spacing:-.012em;color:var(--ar-dim)}
+.foot-actions{display:flex;gap:12px;flex-wrap:wrap}
+.foot-book{display:inline-flex;align-items:center;gap:11px;min-height:56px;padding:17px 32px;
+  border-radius:980px;background:#fff;color:#04101a;text-decoration:none;
+  font:700 16px/1 var(--ar-sans);letter-spacing:-.02em;
+  box-shadow:0 12px 40px rgba(0,10,20,.4);transition:background .25s ease}
+.foot-book-arrow{transition:transform .3s var(--ar-ease)}
+@media(hover:hover){.foot-book:hover{background:#dff1fb}.foot-book:hover .foot-book-arrow{transform:translateX(5px)}}
+.foot-book:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 
 /* ---- shared motion grammar --------------------------------------------- */
 .will-in{opacity:0;transform:translateY(var(--ar-dist))}
@@ -89,10 +148,10 @@ body[data-cursor-down] .cur-ring{scale:.86}
 /* ---- viewer controls ----------------------------------------------------- */
 .vc{position:fixed;right:clamp(12px,2vw,24px);bottom:clamp(12px,2vw,24px);z-index:82;display:grid;gap:10px;
   justify-items:end}
-.vc-toggle{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:11px 18px;border-radius:980px;
+.vc-toggle{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:12px 20px;border-radius:980px;
   border:1px solid rgba(255,255,255,.36);background:rgba(255,255,255,.12);
   backdrop-filter:blur(18px) saturate(170%);-webkit-backdrop-filter:blur(18px) saturate(170%);
-  color:#fff;font:600 13px/1 var(--ar-sans);letter-spacing:-.01em;cursor:pointer;transition:background .25s ease}
+  color:#fff;font:700 14px/1 var(--ar-sans);letter-spacing:-.015em;cursor:pointer;transition:background .25s ease}
 @media(hover:hover){.vc-toggle:hover{background:rgba(255,255,255,.22)}}
 .vc-panel{width:min(300px,86vw);padding:8px;border-radius:18px;border:1px solid rgba(255,255,255,.3);
   background:rgba(10,24,34,.72);backdrop-filter:blur(22px) saturate(170%);-webkit-backdrop-filter:blur(22px) saturate(170%);
@@ -121,9 +180,9 @@ body[data-cursor-down] .cur-ring{scale:.86}
   font:800 12px/1 var(--ar-sans);letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
 .sec-num{padding:6px 10px;border-radius:99px;border:1.5px solid currentColor;letter-spacing:.08em}
 .sec-title{font-size:clamp(44px,9.5vw,168px);margin-bottom:14px}
-.sec-meta{margin:0;display:flex;gap:8px 22px;flex-wrap:wrap;font:600 13px/1.4 var(--ar-sans);color:var(--ar-dim);
+.sec-meta{margin:0;display:flex;gap:8px 22px;flex-wrap:wrap;font:700 14px/1.4 var(--ar-sans);color:var(--ar-dim);
   letter-spacing:-.005em}
-.sec-hint{color:#7b9dae;font-weight:400}
+.sec-hint{color:#7b9dae;font-weight:500}
 .sec-stage{position:relative}
 
 /* ---- the line ------------------------------------------------------------ */
@@ -200,7 +259,7 @@ html.lb-open{overflow:hidden}
 .lb-close,.lb-zoom{min-height:40px;min-width:40px;padding:9px 16px;border-radius:980px;
   border:1px solid rgba(255,255,255,.34);background:rgba(255,255,255,.12);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  color:#fff;font:600 13px/1 var(--ar-sans);cursor:pointer;transition:background .2s ease}
+  color:#fff;font:700 14px/1 var(--ar-sans);letter-spacing:-.015em;cursor:pointer;transition:background .2s ease}
 @media(hover:hover){.lb-close:hover,.lb-zoom:hover,.lb-nav:hover{background:rgba(255,255,255,.24)}}
 .lb-stage{position:absolute;inset:0;display:grid;place-items:center;touch-action:none;
   transform:translateY(var(--drag-y,0));opacity:var(--drag-o,1)}
@@ -238,12 +297,12 @@ html.lb-open{overflow:hidden}
   transition:padding-left .3s var(--ar-ease),color .2s ease}
 .foot-count{font:800 12px/1 var(--ar-sans);letter-spacing:.18em;color:#7b9dae}
 @media(hover:hover){.foot-nav a:hover{padding-left:16px;color:var(--accent)}}
-.foot-stat{margin:0;font:600 15px/1.4 var(--ar-sans);color:var(--ar-dim);letter-spacing:-.01em}
+.foot-stat{margin:0;font:700 15px/1.4 var(--ar-sans);color:var(--ar-dim);letter-spacing:-.012em}
 .foot-total{font:800 clamp(34px,4vw,56px)/1 var(--ar-display);letter-spacing:-.04em;color:#fff;margin-right:8px}
 .foot-top{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:13px 26px;border-radius:980px;
   border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);
   backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
-  color:#fff;font:600 14px/1 var(--ar-sans);letter-spacing:-.012em;cursor:pointer;transition:background .25s ease}
+  color:#fff;font:700 15px/1 var(--ar-sans);letter-spacing:-.018em;cursor:pointer;transition:background .25s ease}
 .foot-top-arrow{transition:transform .3s var(--ar-ease)}
 @media(hover:hover){.foot-top:hover{background:rgba(255,255,255,.2)}.foot-top:hover .foot-top-arrow{transform:translateY(-3px)}}
 .foot-meta{margin:0;font:11px/1.6 var(--ar-sans);color:#5b7d8f}
