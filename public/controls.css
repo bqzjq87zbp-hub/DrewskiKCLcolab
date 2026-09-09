@@ -1,107 +1,110 @@
-/* Control system: one language for every button, sign, pill and chip on the site.
-   Material = the navy glass the site already speaks, labels = tracked uppercase
-   mono (system stack, no font downloads), states = lift / press / focus on every
-   control. Loaded last so it re-skins the controls declared across the older
-   sheets without touching their layout or behavior. */
+/* Control system, Apple grade: one language for every button, sign, pill and
+   chip. Flat translucent material with deep blur and a specular hairline (no
+   drop-shadow crutches, no text shadows), system SF-style type in sentence case
+   with slightly negative tracking, capsule and circle shapes, material-brighten
+   hover and a springy press. Loaded last so it re-skins the controls declared
+   across the older sheets without touching layout or behavior. */
 
 :root{
-  --ctl-mono:ui-monospace,"Cascadia Mono","SF Mono",Consolas,"Liberation Mono",monospace;
-  --ctl-ease:cubic-bezier(.22,1,.36,1);
-  --ctl-border:#ffffff47;
-  --ctl-border-hover:#ffffff8a;
-  --ctl-glass:linear-gradient(135deg,#ffffff14,#ffffff03 55%,#ffffff0a);
-  --ctl-glass-hover:linear-gradient(135deg,#ffffff1f,#ffffff08 55%,#ffffff12);
-  --ctl-shadow:inset 0 1px 0 #ffffff66,0 2px 3px #00111f2e,0 10px 26px #00111f3d;
+  --ctl-font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;
+  --ctl-ease:cubic-bezier(.25,.1,.25,1);
+  --ctl-bg:rgba(14,30,42,.52);
+  --ctl-bg-hover:rgba(44,66,82,.62);
+  --ctl-bg-press:rgba(10,24,34,.66);
+  --ctl-border:rgba(255,255,255,.28);
+  --ctl-border-hover:rgba(255,255,255,.42);
+  --ctl-highlight:inset 0 1px 0 rgba(255,255,255,.32),inset 0 0 1px rgba(255,255,255,.12);
+  --ctl-float:0 1px 2px rgba(0,8,16,.18),0 10px 30px rgba(0,10,20,.22);
 }
 
 /* ---- shared material -------------------------------------------------- */
-.menu>button,.menu nav button,.menu nav a,.menu select,
+.menu>button,.menu nav,.menu select,
 .glass-control,.category-sign,
 .aisle-video-toggle,.walk-step,
-dialog button{
+dialog button,.aisle-progress{
   border:1px solid var(--ctl-border);
-  background:var(--ctl-glass);
-  box-shadow:var(--ctl-shadow);
-  backdrop-filter:blur(14px) saturate(150%);
-  -webkit-backdrop-filter:blur(14px) saturate(150%);
-  color:#fff;text-shadow:0 1px 3px #000c;
-  transition:transform .18s var(--ctl-ease),border-color .18s ease,background .25s ease,box-shadow .25s ease;
+  background:var(--ctl-bg);
+  box-shadow:var(--ctl-highlight),var(--ctl-float);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  color:#fff;text-shadow:none;
+  transition:transform .22s var(--ctl-ease),background-color .2s ease,background .2s ease,border-color .2s ease;
 }
-.aisle-progress{
-  border:1px solid var(--ctl-border);
-  background:linear-gradient(135deg,#0d222f9e,#08182488);
-  box-shadow:var(--ctl-shadow);
-  backdrop-filter:blur(14px) saturate(150%);
-  -webkit-backdrop-filter:blur(14px) saturate(150%);
-  border-radius:999px;
+.menu nav button,.menu nav a{
+  border:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+  color:#fff;text-shadow:none;border-radius:11px;
+  transition:background-color .15s ease;
 }
 
-/* ---- shape: pills for actions, circles for steps ---------------------- */
-.menu>button,.glass-control,.category-sign,.aisle-video-toggle,dialog button{border-radius:999px}
-.menu nav{border-radius:16px}
-.menu nav button,.menu nav a{border-radius:10px;border-color:transparent;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+/* ---- shape: capsules for actions, circles for steps, concentric panel -- */
+.menu>button,.glass-control,.category-sign,.aisle-video-toggle,dialog button,.aisle-progress{border-radius:980px}
+.menu nav{border-radius:18px;padding:7px}
+.menu select{border-radius:10px}
 .walk-step{border-radius:50%}
 
-/* ---- the label voice: tracked uppercase mono -------------------------- */
-.menu>button,.glass-control,.category-sign,.aisle-video-toggle,dialog button,
-.aisle-progress span,.collection-switcher a,.card-count{
-  font-family:var(--ctl-mono);
-  font-size:11px;font-weight:600;line-height:1.35;
-  letter-spacing:.16em;text-transform:uppercase;
+/* ---- the label voice: system SF, sentence case, tight ------------------ */
+.menu>button,.menu nav button,.menu nav a,.menu select,.menu label,
+.glass-control,.category-sign,.aisle-video-toggle,dialog button,
+.aisle-progress span,.aisle-video-status{
+  font-family:var(--ctl-font);
+  text-transform:none;
 }
-.category-sign{font-size:10px;letter-spacing:.14em;padding:10px 15px;min-width:0}
-.aisle-video-toggle{font-size:10px;letter-spacing:.15em;padding:11px 18px}
-dialog button{padding:10px 18px}
-.menu>button{padding:12px 22px}
-.aisle-video-status{font-family:var(--ctl-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
-  border:1px solid #ffffff24;background:#081824c9;border-radius:999px;padding:5px 14px;max-width:380px;text-align:center}
-.menu nav button,.menu nav a{font:600 13px/1.3 system-ui,sans-serif;letter-spacing:.02em}
-.menu label{font:600 11px/1.3 var(--ctl-mono);letter-spacing:.14em;text-transform:uppercase;color:#c9dbe4}
-.menu select{border-radius:10px;font:600 12px/1.3 system-ui,sans-serif}
+.menu>button{font-size:14px;font-weight:500;letter-spacing:-.01em;padding:11px 22px}
+.menu nav button,.menu nav a{font-size:14px;font-weight:450;letter-spacing:-.008em}
+.menu label{font-size:13px;font-weight:500;letter-spacing:-.008em;color:#dfeaf1}
+.menu select{font-size:13px;font-weight:500}
+.glass-control,dialog button{font-size:14px;font-weight:500;letter-spacing:-.01em;line-height:1.2;padding:10px 20px}
+.category-sign{font-size:12px;font-weight:590;letter-spacing:-.006em;line-height:1.25;padding:9px 15px;min-width:0}
+.aisle-video-toggle{font-size:12px;font-weight:510;letter-spacing:-.006em;padding:10px 18px}
+.aisle-progress span{font-size:12px;font-weight:500;letter-spacing:-.006em}
+.aisle-video-status{font-size:11px;font-weight:450;letter-spacing:-.004em;line-height:1.35;
+  border:1px solid rgba(255,255,255,.16);background:rgba(8,20,30,.6);
+  backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);
+  border-radius:980px;padding:5px 14px;max-width:420px;text-align:center;text-shadow:none}
+.walk-step{font-size:17px}
 
-/* ---- states: lift, press, focus on every control ---------------------- */
+/* ---- states: material brightens, springy press, no lift ---------------- */
 @media(hover:hover){
   .menu>button:hover,.glass-control:hover,.category-sign:hover,
   .aisle-video-toggle:hover:not(:disabled),dialog button:hover,
   .walk-step:hover:not(:disabled){
-    transform:translateY(-2px);
+    background:var(--ctl-bg-hover);
     border-color:var(--ctl-border-hover);
-    background:var(--ctl-glass-hover);
-    box-shadow:inset 0 1px 0 #ffffff80,0 4px 6px #00111f30,0 14px 34px #00111f4d;
   }
-  .category-sign:hover{transform:translate(-50%,-100%) translateY(-2px)}
-  .menu nav button:hover,.menu nav a:hover{background:#ffffff14}
-  .site-footer nav a:hover{transform:translateY(-1px)}
-  .walk-step:hover:not(:disabled){transform:translateY(-2px) scale(1.04)}
+  .menu nav button:hover,.menu nav a:hover{background:rgba(255,255,255,.13)}
+  .site-footer nav a:hover{color:#fff}
 }
 .menu>button:active,.glass-control:active,.aisle-video-toggle:active:not(:disabled),
 dialog button:active,.walk-step:active:not(:disabled){
-  transform:translateY(1px) scale(.985);
+  transform:scale(.96);
+  background:var(--ctl-bg-press);
+  transition-duration:.1s;
 }
-.category-sign:active{transform:translate(-50%,-100%) translateY(1px) scale(.985)}
-.walk-step{transition:transform .18s var(--ctl-ease),border-color .18s ease,background .25s ease,opacity .2s ease}
-.walk-step:disabled{opacity:.32}
+.category-sign:active{transform:translate(-50%,-100%) scale(.96);transition-duration:.1s}
+.menu nav button:active,.menu nav a:active{background:rgba(255,255,255,.2)}
+.walk-step:disabled{opacity:.3}
 
 /* ---- the wayfinding track --------------------------------------------- */
-.aisle-progress progress{width:88px;height:2px;accent-color:#cfeaf7}
-.aisle-progress progress::-webkit-progress-bar{background:#ffffff26;border-radius:99px}
-.aisle-progress progress::-webkit-progress-value{background:linear-gradient(90deg,#9fd6ee,#eaf7ff);border-radius:99px}
+.aisle-progress progress{width:96px;height:3px;accent-color:#fff}
+.aisle-progress progress::-webkit-progress-bar{background:rgba(255,255,255,.22);border-radius:99px}
+.aisle-progress progress::-webkit-progress-value{background:#fff;border-radius:99px}
 
-/* ---- footer + card chips speak the same language ---------------------- */
-.card-arrow{border-color:var(--ctl-border);background:var(--ctl-glass);box-shadow:inset 0 1px 0 #ffffff55}
-.site-footer nav a{font-family:var(--ctl-mono);transition:transform .18s var(--ctl-ease),color .2s ease,border-color .2s ease}
+/* ---- chips and footer speak the same language -------------------------- */
+.card-arrow{border-color:var(--ctl-border);background:var(--ctl-bg);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%)}
+.site-footer nav a{transition:color .2s ease,border-color .2s ease}
 
 /* ---- accessibility contracts stay intact ------------------------------ */
 @media(prefers-reduced-motion:reduce){
   .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
-  .aisle-video-toggle,.walk-step,dialog button,.site-footer nav a{transition:none}
-  .menu>button:hover,.glass-control:hover,.category-sign:hover,.aisle-video-toggle:hover:not(:disabled),
-  dialog button:hover,.walk-step:hover:not(:disabled),.site-footer nav a:hover{transform:none}
-  .category-sign:hover{transform:translate(-50%,-100%)}
+  .aisle-video-toggle,.walk-step,dialog button,.site-footer nav a,.aisle-progress{transition:none}
+  .menu>button:active,.glass-control:active,.aisle-video-toggle:active:not(:disabled),
+  dialog button:active,.walk-step:active:not(:disabled){transform:none}
+  .category-sign:active{transform:translate(-50%,-100%)}
 }
 @media(prefers-reduced-transparency:reduce){
-  .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
-  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress{
+  .menu>button,.menu nav,.menu select,.glass-control,.category-sign,
+  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress,.aisle-video-status{
     background:#102c40;backdrop-filter:none;-webkit-backdrop-filter:none}
 }
 @media(forced-colors:active){
