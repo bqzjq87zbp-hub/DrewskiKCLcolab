@@ -11,15 +11,19 @@ npm run check
 npm start
 ```
 
-Open `http://127.0.0.1:4260/`. No package installation, API key or account is required. Use `PORT=4300 npm start` for a different local port. The server exposes only inventoried files under `public/`; repository documentation and development scripts are not public routes.
+Open `http://127.0.0.1:4260/`. The runtime vendors Three.js, so no API key or account is required. `npm ci` installs the pinned authoring dependency when needed. Use `PORT=4300 npm start` for a different local port. The server exposes only inventoried files under `public/`; repository documentation and development scripts are not public routes.
 
 ## Current experience
 
-The entrance is a photographic 2.5D forward/back projection using separately positioned canvas layers. The pier background is a real photograph. `public/media/easel-composition-reference.jpg` is the supplied AI-generated composition reference used for easel wood cutouts. It is not an unaltered photograph of a physical gallery. `public/media/underpier-photograph.jpg` is the real pier photograph.
+The entrance uses Blender-authored dimensional wooden easels and full-source-ratio stretched canvases in a shared perspective scene. The actual pier photograph is projected onto a small corridor approximation; it is not a 3D scan. The supported forward/reverse path is 7.5 metres, with five pairs of artworks. Source photograph files remain unchanged.
 
-Each canvas opens a category. Galleries include full-image enlargement, keyboard dismissal and focus return. Appearance offers Clear, Solid and System settings; Travel offers Guided, Still and System settings. Reduced-motion and reduced-transparency alternatives remain available.
+Scroll vertically with a mouse/trackpad, or swipe vertically on a phone, to walk immediately. Portrait view looks across the pairs as a deterministic function of scroll position; it does not autoplay. System reduced motion stops ambient water animation and keeps direct scrolling available. **Still** remains an explicit Menu choice. The menu also contains optional previous/next pair controls and phone viewing overrides. Clear glass is the default; Solid and System appearance remain available.
 
-**An optional Seedance 2.0 video-walk preview is included.** Choose **Preview video walk**, then scroll or swipe forward/back. The app displays actual generated-video frames and updates the easel projection on the same decoded-frame clock. Alignment combines measured initial registration with five frame-specific pier-feature flow groups. Invalid groups hide instead of inventing a position. **This is measured 2D alignment with approximate depth, not solved 3D camera tracking.** Easel grounding, occlusion and side crops still need visual refinement; groups can disappear when reliable tracking is lost. The original-photo version is the default and remains available. Still view and operating-system reduced motion suppress the video preview; no video frames are requested before opting in.
+Each canvas opens its category. Galleries retain full-image enlargement, keyboard dismissal and focus return. Canvas construction includes a 38 mm wrapped shell, fine woven surface, rear stretcher, folds and staples. Neutral fill brightens the actual printed surfaces; it does not brighten the pier or timber. The water uses the original photograph with restrained water-only motion, a shared y=0 contact surface, attenuated immersed legs and a reflection of actual easel geometry.
+
+**An optional generated-video preview remains in Menu and is not registered 3D footage.** It lazily loads the included video frames on a shared decode/commit clock, using the same bounded authored travel range as the photographic view. The stored 2D tracking data is retained for research and the legacy fallback; its shear is not applied to the dimensional canvases. No video frames load before opt-in. System reduced motion and Still suppress this secondary preview. Camera registration and physical occlusion remain release limitations.
+
+See [easel review and evidence](docs/easel-review/REVIEW.md) for the current draft, visual limitations, test results and screenshots; [asset provenance](public/aisle/assets/PROVENANCE.md) explains the Blender export and CC0 wood maps.
 
 The generation used the requested 4K provider setting and the original no-logo pier photograph. The actual downloaded master decodes to **3326×2494**, 24 fps, 241 frames, 10.041667 seconds—not 3840×2160. Its first frame is a measured center crop of the original 3:2 photograph to approximately 4:3. The repository contains 121 full-frame **1280×960 JPEG samples at 12 fps**, totaling approximately 31.1 MB, loaded lazily with a bounded decoded cache. No upscaled sample is presented as native 4K. The 128 MB provider master and generation credentials are intentionally excluded. See [video-scroll plan](docs/video-scroll-plan.md) for the remaining tracking/release gates.
 
@@ -28,7 +32,8 @@ The generation used the requested 4K provider setting and the original no-logo p
 - `public/index.html`: page shell and no-JavaScript photograph links.
 - `public/main-v2.js`: canvas/category integration, menu and enlargement.
 - `public/collections.js`, `public/collections.css`: category galleries.
-- `public/aisle/`: photographic camera projection and easel masks.
+- `public/aisle/`: shared camera, photographic proxy environment, physical displays and retained fallback masks.
+- `public/aisle/assets/`: Blender-exported geometry, CC0 material maps, portable authoring scripts and asset inspection page.
 - `public/canvas-wrap.js`, `public/slots.json`: image-to-canvas geometry.
 - `public/categories.json`: browser-safe gallery data with site-relative media URLs.
 - `public/media/`: allowlisted website images only.
@@ -36,7 +41,7 @@ The generation used the requested 4K provider setting and the original no-logo p
 - `public/aisle/video-frame-seam.js`: opt-in frame loading and atomic frame commit.
 - `docs/asset-manifest.json`: shipped image sizes and SHA-256 values.
 
-The app uses root-relative URLs. A static host must serve `public/` at the origin root; a repository subpath deployment needs an explicit base-path adaptation. Restart the local server after adding new files because its public-file inventory is built at startup. There is no deployment configuration or automatic publication here. The noindex metadata is intentionally retained for this development preview. A repository upload is not a Pixpa or production-site release.
+The app uses root-relative URLs. A static host must serve `public/` at the origin root; a repository subpath deployment needs an explicit base-path adaptation. The default server inventories public files at startup. `LIVE_RELOAD=1 PORT=4274 npm start` enables local-only automatic refresh, delayed during active input, with normalized walk/look state restored; it also discovers new public assets. Normal static hosting has no reload endpoint or injected development script. There is no deployment configuration or automatic publication here. The noindex metadata is intentionally retained for this development preview. A repository upload is not a Pixpa or production-site release.
 
 ## Ownership and boundaries
 

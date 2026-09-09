@@ -45,8 +45,8 @@ panel.querySelector('a').textContent='All collections';panel.querySelector('a').
 for(const c of [...collections.data.values()].reverse()){const a=document.createElement('a');a.href='#collection/'+c.id;a.textContent=c.title;a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();closeMenu();collections.open(c.id,toggle);};panel.prepend(a);}
 $('#show-original').onclick=()=>{closeMenu();display(slots,0,toggle,true);};
 $('#show-plate').onclick=()=>{layers.hidden=!layers.hidden;signLayer.hidden=layers.hidden;$('#show-plate').textContent=layers.hidden?'Show wrapped canvases':'Show supplied composition';closeMenu(true);};
-$('#appearance').onchange=e=>{menu.dataset.appearance=e.target.value;document.body.dataset.appearance=e.target.value;try{sessionStorage.setItem('kcl-preview-appearance',e.target.value);}catch{}};
-let appearance='system';try{const saved=sessionStorage.getItem('kcl-preview-appearance');if(['clear','solid','system'].includes(saved))appearance=saved;}catch{}
+$('#appearance').onchange=e=>{menu.dataset.appearance=e.target.value;document.body.dataset.appearance=e.target.value;try{sessionStorage.setItem('kcl-preview-appearance-v2',e.target.value);}catch{}};
+let appearance='clear';try{const saved=sessionStorage.getItem('kcl-preview-appearance-v2');if(['clear','solid','system'].includes(saved))appearance=saved;}catch{}
 document.body.dataset.appearance=appearance;menu.dataset.appearance=appearance;$('#appearance').value=appearance;
 window.PhotographicCollections={slots,collections,display,enterCategory,menu,signLayer};
 window.PhotographicAisle=attachAisle(window.PhotographicCollections);

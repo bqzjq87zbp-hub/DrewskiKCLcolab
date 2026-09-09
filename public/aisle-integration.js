@@ -1,4 +1,5 @@
 import {initPhotographicAisle} from '/aisle/photographic-aisle.js';
+import {FOCUS_STOPS} from '/aisle/gallery-layout.js';
 
 export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   const main=document.querySelector('main'),composition=document.querySelector('#composition');
@@ -7,15 +8,21 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   const engine=initPhotographicAisle({container:mount,slots:enriched,onCategory:enterCategory});
   const travelLabel=document.createElement('label');travelLabel.textContent='Travel';const travelChoice=document.createElement('select');travelChoice.id='travel-mode';travelChoice.setAttribute('aria-label','Aisle travel');
   for(const[value,label]of[['system','System'],['guided','Guided walk'],['still','Still view']]){const option=document.createElement('option');option.value=value;option.textContent=label;travelChoice.append(option);}travelLabel.append(travelChoice);menu.querySelector('nav').append(travelLabel);
-  travelChoice.onchange=()=>{engine.setMotionPreference(travelChoice.value);try{sessionStorage.setItem('kcl-preview-travel',travelChoice.value);}catch{}requestAnimationFrame(schedule);};
-  try{const saved=sessionStorage.getItem('kcl-preview-travel');if(['system','guided','still'].includes(saved)){travelChoice.value=saved;engine.setMotionPreference(saved);}}catch{}
+  travelChoice.onchange=()=>{engine.setMotionPreference(travelChoice.value);try{sessionStorage.setItem('kcl-preview-travel-v2',travelChoice.value);}catch{}requestAnimationFrame(schedule);};
+  try{const saved=sessionStorage.getItem('kcl-preview-travel-v2');if(['system','guided','still'].includes(saved)){travelChoice.value=saved;engine.setMotionPreference(saved);}}catch{}
   engine.viewport.append(menu);composition.hidden=true;composition.dataset.keepHidden='true';signLayer.hidden=true;
+  // The optional video is a secondary review mode; keep it inside the menu.
+  const videoControls=engine.viewport.querySelector('.aisle-video-controls');menu.querySelector('nav').append(videoControls);
   const invitation=document.createElement('div');invitation.className='aisle-invitation';
   const invitationTitle=document.createElement('p');invitationTitle.className='invitation-title';invitationTitle.textContent='Get your feet wet.';
   const invitationBody=document.createElement('p');invitationBody.className='invitation-body';invitationBody.textContent='Take a walk through the art before you.';
   const invitationCue=document.createElement('p');invitationCue.className='invitation-cue';invitationCue.textContent=engine.getState().reducedMotion?'Choose a collection below to explore.':'Scroll or swipe to explore.';
   invitation.append(invitationTitle,invitationBody,invitationCue);engine.viewport.append(invitation);
-  const note=document.querySelector('.note');note.textContent='Your original pier photograph, with separately moving photographic easels. Guided forward/back travel; no free-roaming reconstruction.';
+  const start=document.createElement('button');start.type='button';start.className='aisle-start-walk';start.textContent='Start walk';
+  start.onclick=()=>{travelChoice.value='guided';engine.setMotionPreference('guided');try{sessionStorage.setItem('kcl-preview-travel-v2','guided');}catch{}schedule();};engine.viewport.append(start);
+  const looks=document.createElement('div');looks.className='aisle-look-controls';looks.setAttribute('aria-label','Look toward the artworks');
+  for(const[direction,label]of[['left','Look left'],['auto','Auto'],['right','Look right']]){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',String(direction==='auto'));b.onclick=()=>{engine.setLook(direction);for(const other of looks.children)other.setAttribute('aria-pressed',String(other===b));};looks.append(b);}menu.querySelector('nav').append(looks);
+  const note=document.querySelector('.note');note.textContent='Your original pier photograph, with dimensional wooden easels and printed canvas. The photographic walk and experimental video are still in visual review.';
   for(const{slot,anchor}of engine.slotAnchors){anchor.href='#collection/'+slot.category;anchor.setAttribute('aria-label','Explore '+slot.categoryLabel);}
   engine.journey.querySelectorAll('.aisle-fallback a').forEach((a,i)=>a.href='#collection/'+enriched[i].category);
   const signs=engine.slotAnchors.map(({slot,anchor})=>{
@@ -24,17 +31,20 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
     a.setAttribute('aria-label','Explore '+slot.categoryLabel);engine.viewport.append(a);return{slot,anchor,a};
   });
   const progress=engine.viewport.querySelector('.aisle-progress');
-  const prev=document.createElement('button'),next=document.createElement('button');prev.type=next.type='button';prev.textContent='←';next.textContent='→';prev.setAttribute('aria-label','Walk back to the previous pair of canvases');next.setAttribute('aria-label','Walk forward to the next pair of canvases');prev.className=next.className='walk-step';progress.prepend(prev);progress.append(next);progress.setAttribute('aria-label','Scroll or swipe to walk; arrow buttons advance one pair');
-  const stops=[0,.16,.30,.51,.79,1],reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  const prev=document.createElement('button'),next=document.createElement('button');prev.type=next.type='button';prev.textContent='← Previous pair';next.textContent='Next pair →';prev.setAttribute('aria-label','Walk back to the previous pair of canvases');next.setAttribute('aria-label','Walk forward to the next pair of canvases');prev.className=next.className='walk-step';const stepTools=document.createElement('div');stepTools.className='aisle-step-controls';stepTools.append(prev,next);menu.querySelector('nav').append(stepTools);progress.setAttribute('aria-label','Scroll or swipe to walk; arrow buttons advance one pair');
+  const stops=FOCUS_STOPS,reduced=matchMedia('(prefers-reduced-motion: reduce)');
   function step(direction){const state=engine.getState(),target=direction>0?stops.find(v=>v>state.progress+.015):[...stops].reverse().find(v=>v<state.progress-.015);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*(engine.journey.offsetHeight-engine.viewport.clientHeight);scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
   prev.onclick=()=>step(-1);next.onclick=()=>step(1);
   let frame=0;
   function layout(){frame=0;if(collections.active||mount.hidden)return;const state=engine.getState();if(!state.viewport.width||!state.viewport.height)return;
+    start.hidden=!state.reducedMotion;looks.hidden=state.reducedMotion;
     const invitationOpacity=state.reducedMotion?1:Math.max(0,1-state.progress/.045);
     invitation.style.opacity=String(invitationOpacity);invitation.setAttribute('aria-hidden',String(invitationOpacity===0));
     invitationCue.textContent=state.reducedMotion?'Choose a collection below to explore.':'Scroll or swipe to explore.';
-    for(let i=0;i<signs.length;i++){const{a}=signs[i],r=state.slots[i],q=r.projectedQuad;if(!q.length){a.hidden=true;continue;}const x=(q[0].x+q[1].x)/2,y=Math.min(q[0].y,q[1].y)-12,w=Math.max(...q.map(p=>p.x))-Math.min(...q.map(p=>p.x));
+    const labeledSides=new Set();
+    for(let i=0;i<signs.length;i++){const{a,slot}=signs[i],r=state.slots[i],q=r.projectedQuad;if(!q.length){a.hidden=true;continue;}const x=(q[0].x+q[1].x)/2,y=Math.min(q[0].y,q[1].y)-12,w=Math.max(...q.map(p=>p.x))-Math.min(...q.map(p=>p.x));
       a.hidden=state.reducedMotion||!r.interactive||w<Math.min(105,state.viewport.width*.15)||x<30||x>state.viewport.width-30||y<65||y>state.viewport.height-100;
+      if(state.physical?.ready){if(labeledSides.has(slot.side))a.hidden=true;else if(!a.hidden)labeledSides.add(slot.side);}
       a.style.left=Math.max(66,Math.min(state.viewport.width-66,x))+'px';a.style.top=y+'px';
     }
     prev.disabled=state.progress<.01;next.disabled=state.progress>.985;

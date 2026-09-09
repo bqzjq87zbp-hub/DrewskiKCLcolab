@@ -1,6 +1,7 @@
 import http from 'node:http';
 import path from 'node:path';
 import {readdir,readFile,realpath} from 'node:fs/promises';
+import {watch} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 
 const root=await realpath(path.join(path.dirname(fileURLToPath(import.meta.url)),'public'));
@@ -16,6 +17,36 @@ async function inventory(dir){
   }
 }
 await inventory(root);
+// Explicit local development mode. Production/static hosting has no reload
+// endpoint or injected script. Rebuild the same public-only allowlist so newly
+// exported assets appear without restarting the preview.
+const liveReload=process.env.LIVE_RELOAD==='1',clients=new Set();
+const reloadScript=`<script>
+(() => {
+ let lastInput=0,pending;
+ for(const type of ['pointerdown','wheel','touchstart','keydown'])addEventListener(type,()=>lastInput=Date.now(),{passive:true});
+ const reload=()=>{const wait=1800-(Date.now()-lastInput);if(wait>0){pending=setTimeout(reload,wait);return;}
+  const s=window.PhotographicAisle?.getState();
+  if(s)sessionStorage.setItem('kcl-live-preview-state',JSON.stringify({version:2,progress:s.progress,look:s.lookDirection||'auto',mode:s.motionPreference}));
+  location.reload();};
+ new EventSource('/__preview_events').onmessage=e=>{if(e.data==='reload'){clearTimeout(pending);pending=setTimeout(reload,900);}};
+ const saved=sessionStorage.getItem('kcl-live-preview-state');
+ if(saved){sessionStorage.removeItem('kcl-live-preview-state');const s=JSON.parse(saved);let attempts=0;
+  const restore=()=>{const a=window.PhotographicAisle;if(!a?.getState().physical?.ready){if(++attempts<200)setTimeout(restore,100);return;}
+   if(s.version===2&&['guided','system','still'].includes(s.mode)){a.setMotionPreference(s.mode);const select=document.querySelector('#travel-mode');if(select)select.value=s.mode;}
+   a.setLook(s.look||'auto');
+   if(!location.hash.startsWith('#collection'))requestAnimationFrame(()=>scrollTo({top:a.journey.getBoundingClientRect().top+scrollY+s.progress*(a.journey.offsetHeight-a.viewport.clientHeight),behavior:'instant'}));
+  };setTimeout(restore,0);
+ }
+})();</script>`;
+let reloadTimer,watcher;
+if(liveReload)watcher=watch(root,{recursive:true},()=>{
+  clearTimeout(reloadTimer);
+  reloadTimer=setTimeout(async()=>{
+    await inventory(root);
+    for(const client of clients)client.write('data: reload\n\n');
+  },800);
+});
 const server=http.createServer(async(req,res)=>{
   res.setHeader('X-Content-Type-Options','nosniff');
   res.setHeader('Referrer-Policy','strict-origin-when-cross-origin');
@@ -23,15 +54,20 @@ const server=http.createServer(async(req,res)=>{
   if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'}).end();return;}
   try{
     const url=new URL(req.url,'http://localhost'),requested=decodeURIComponent(url.pathname);
+    if(liveReload&&requested==='/__preview_events'&&req.method==='GET'){
+      res.writeHead(200,{'Content-Type':'text/event-stream','Cache-Control':'no-cache','Connection':'keep-alive'});
+      res.write('data: connected\n\n');clients.add(res);req.on('close',()=>clients.delete(res));return;
+    }
     if(requested.includes('\0')||requested.includes('\\')){res.writeHead(400).end();return;}
     const file=allowed.get(requested==='/'?'/index.html':requested);
     if(!file){res.writeHead(404).end('Not found');return;}
     const resolved=await realpath(file);
     if(!resolved.startsWith(root+path.sep)||resolved!==file){res.writeHead(403).end();return;}
-    const bytes=await readFile(file);
+    let bytes=await readFile(file);
+    if(liveReload&&path.extname(file)==='.html')bytes=Buffer.from(bytes.toString().replace('</body>',reloadScript+'</body>'));
     res.writeHead(200,{'Content-Type':types[path.extname(file).toLowerCase()],'Content-Length':bytes.length});
     res.end(req.method==='HEAD'?undefined:bytes);
   }catch{res.writeHead(404).end('Not found');}
 });
 server.listen(port,host,()=>console.log(`Portfolio preview: http://${host}:${port}/`));
-for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>server.close(()=>process.exit(0)));
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>{watcher?.close();clearTimeout(reloadTimer);for(const client of clients)client.end();server.close(()=>process.exit(0));});

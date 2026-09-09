@@ -1,8 +1,10 @@
 import {createWrappedCanvas,homography} from '/canvas-wrap.js';
 import {easelMask} from './easel-masks.js';
 import {createVideoFrameSeam} from './video-frame-seam.js';
+import {createPhysicalDisplay} from './physical-display.js';
+import {DEPTHS as depths,TRAVEL as travel} from './gallery-layout.js';
 
-const W=2528,H=1684,VP={x:1327,y:1416},depths=[0,4,6.15,9.8,15.2,21],travel=17;
+const W=2528,H=1684,VP={x:1327,y:1416};
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 // CSS affine order [a,b,c,d,e,f]. Compose left × right exactly once.
 const multiply=(l,r)=>[l[0]*r[0]+l[2]*r[1],l[1]*r[0]+l[3]*r[1],l[0]*r[2]+l[2]*r[3],l[1]*r[2]+l[3]*r[3],l[0]*r[4]+l[2]*r[5]+l[4],l[1]*r[4]+l[3]*r[5]+l[5]];
@@ -35,16 +37,25 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
     return{slot,group,anchor,wood,depth:depths[slot.depth],scale:1,projectedQuad:[]};
   });
   journey.append(viewport,fallback);container.append(journey);
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let motionPreference='system',frame=0,destroyed=false,p=0,z=0,dimensions={width:0,height:0},frameCount=0;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let motionPreference='system',frame=0,destroyed=false,p=0,z=0,look='auto',lastPaint=0,dimensions={width:0,height:0},frameCount=0;
   const video=createVideoFrameSeam({viewport,poster:original,onReady:schedule});
-  const isReduced=()=>motionPreference==='still'||(motionPreference==='system'&&reduced.matches);
+  const physical=createPhysicalDisplay({viewport,slots,onReady:schedule});
+  // Native scrolling always navigates unless Still is explicitly selected.
+  // System reduced motion disables idle water and smooth scrolling, not access.
+  const isReduced=()=>motionPreference==='still';
   function measure(){dimensions={width:viewport.clientWidth,height:viewport.clientHeight};}
-  function render(){
+  function render(now=performance.now()){
     frame=0;if(destroyed||!dimensions.width||!dimensions.height)return;frameCount++;
+    if(now-lastPaint<30){schedule();return;}lastPaint=now;
     const reducedMode=isReduced(),top=journey.getBoundingClientRect().top+scrollY,range=Math.max(1,journey.offsetHeight-viewport.clientHeight),requestedProgress=reducedMode?0:clamp((scrollY-top)/range,0,1);
     video.setSuppressed(reducedMode||reduced.matches);video.request(requestedProgress);
     const committed=video.commit();p=committed?committed.progress:requestedProgress;
     z=committed?null:p*travel;
+    // In portrait, vertical scrolling gently looks across each pair so every
+    // artwork is visible without tapping another control. No timed autoplay.
+    const aimedLook=look==='auto'?(dimensions.width<600?Math.cos(p*Math.PI*10):0):look==='left'?1:look==='right'?-1:0;
+    const physicalFrames=physical.render({width:dimensions.width,height:dimensions.height,progress:p,committed,reduced:reducedMode||reduced.matches,time:now/1000,look:aimedLook});
+    viewport.dataset.dimensional=String(Boolean(physicalFrames));
     const fit=dimensions.width/W,vpx=dimensions.width*(VP.x/W),vpy=dimensions.height*.846;
     let cover=null;
     if(committed){
@@ -54,6 +65,20 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
       cover=[k*committed.width/native.width,0,0,k*committed.height/native.height,(dimensions.width-k*committed.width)*.52,(dimensions.height-k*committed.height)*.86];
     }
     for(const r of records){
+      if(physicalFrames){
+        const state=physicalFrames.find(s=>s.id===r.slot.id);
+        r.group.hidden=false;r.group.style.transform='none';r.group.dataset.passed=String(state.passed);
+        r.projectedQuad=state.quad;r.physical=state.physical;r.source=state.source;r.projectionMatrix=null;r.trackingValid=null;r.scale=1;
+        const xs=state.quad.map(q=>q.x),ys=state.quad.map(q=>q.y);
+        const width=Math.max(...xs)-Math.min(...xs),height=Math.max(...ys)-Math.min(...ys);
+        const visible=!state.passed&&Math.max(...xs)>0&&Math.min(...xs)<dimensions.width&&Math.max(...ys)>0&&Math.min(...ys)<dimensions.height;
+        r.anchor.style.transform=homography(state.quad.map(q=>[q.x,q.y])).css;
+        r.anchor.tabIndex=visible&&width>=44&&height>=44&&!reducedMode?0:-1;
+        r.anchor.setAttribute('aria-hidden',String(r.anchor.tabIndex<0));r.group.dataset.small=String(width<44||height<44);
+        r.anchor.dataset.projectedWidth=width.toFixed(2);r.anchor.dataset.projectedHeight=height.toFixed(2);
+        r.anchor.dataset.cameraDepth=state.distance.toFixed(3);
+        continue;
+      }
       let matrix,passed=false,distance=null;
       const tracked=committed?.tracking.groups.find(g=>g.depth===r.slot.depth);
       r.trackingValid=committed?Boolean(tracked?.valid):null;
@@ -76,17 +101,23 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
       const xs=r.projectedQuad.map(q=>q.x),ys=r.projectedQuad.map(q=>q.y),width=Math.max(...xs)-Math.min(...xs),height=Math.max(...ys)-Math.min(...ys),visible=!passed&&Math.max(...xs)>0&&Math.min(...xs)<dimensions.width&&Math.max(...ys)>0&&Math.min(...ys)<dimensions.height,small=width<44||height<44;
       r.group.dataset.small=String(small);r.anchor.tabIndex=visible&&!small&&!reducedMode?0:-1;r.anchor.setAttribute('aria-hidden',String(!visible||small||reducedMode));r.anchor.dataset.projectedWidth=width.toFixed(2);r.anchor.dataset.projectedHeight=height.toFixed(2);r.anchor.dataset.cameraDepth=distance===null?'approximate 2D group':distance.toFixed(3);
     }
-    progress.querySelector('progress').value=p;progress.querySelector('span').textContent=p>.985?'Scroll back to return':'Scroll to move through';
+    // Integration owns the HUD wording. Updating it here and again in the
+    // integration RAF alternated text widths every frame and shook the buttons.
+    progress.querySelector('progress').value=p;
     viewport.dispatchEvent(new CustomEvent('kclaisleframe',{bubbles:true,detail:{frameIndex:committed?.index??null,mediaTime:committed?.mediaTime??null,committedProgress:p,requestedProgress,projectionMethod:committed?.projectionMethod??'static-photo independent-depth projection'}}));
+    const bounds=viewport.getBoundingClientRect();
+    if(!reducedMode&&!reduced.matches&&!document.hidden&&bounds.bottom>0&&bounds.top<innerHeight&&viewport.getClientRects().length)schedule();
   }
   function schedule(){if(!frame&&!destroyed)frame=requestAnimationFrame(render);}
   function resize(){measure();schedule();}
   function preference(){journey.dataset.reduced=String(isReduced());resize();}
   function setMotionPreference(mode){if(!['system','guided','still'].includes(mode))throw new TypeError('Motion preference must be system, guided or still');motionPreference=mode;preference();return mode;}
+  function setLook(direction){look=['left','right','ahead','auto'].includes(direction)?direction:'auto';schedule();}
+  document.addEventListener('visibilitychange',schedule);
   const observer=new ResizeObserver(resize);observer.observe(viewport);window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',resize,{passive:true});reduced.addEventListener('change',preference);preference();
   Promise.all([original.decode(),...records.map(r=>r.wood.decode())]).then(resize).catch(()=>{const error=document.createElement('p');error.className='aisle-source-failure';error.textContent='A source photograph could not load. The ordinary photograph list remains available below.';viewport.append(error);journey.dataset.reduced='true';resize();});
-  const getState=()=>({kind:video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',scrollY,cameraZ:z,progress:p,motionPreference,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
+  const getState=()=>({kind:physical.ready?'dimensional easels with shared-camera photographic proxies; depth approximate':video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',physical:physical.getState?.(),scrollY,cameraZ:z,progress:p,motionPreference,lookDirection:look,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,physical:r.physical,source:r.source,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
   const restore=state=>{if(!state||!Number.isFinite(state.scrollY))return;scrollTo({top:state.scrollY,behavior:'instant'});schedule();};
-  const destroy=()=>{destroyed=true;if(frame)cancelAnimationFrame(frame);video.destroy();observer.disconnect();window.removeEventListener('scroll',schedule);window.removeEventListener('resize',resize);reduced.removeEventListener('change',preference);journey.remove();ownedStyle.remove();};
-  return{viewport,journey,getState,restore,destroy,setMotionPreference,setVideoPreview:video.setEnabled,slotAnchors:records.map(({slot,anchor,group})=>({slot,anchor,group})),homography};
+  const destroy=()=>{destroyed=true;if(frame)cancelAnimationFrame(frame);physical.destroy();video.destroy();observer.disconnect();document.removeEventListener('visibilitychange',schedule);window.removeEventListener('scroll',schedule);window.removeEventListener('resize',resize);reduced.removeEventListener('change',preference);journey.remove();ownedStyle.remove();};
+  return{viewport,journey,getState,restore,destroy,setMotionPreference,setLook,setVideoPreview:video.setEnabled,slotAnchors:records.map(({slot,anchor,group})=>({slot,anchor,group})),homography};
 }
