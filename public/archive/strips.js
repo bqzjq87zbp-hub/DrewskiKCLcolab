@@ -213,10 +213,11 @@ export function scrollShuttle({ collection, onEnlarge }) {
   const n = collection.items.length;
   let cur = 0, shown = -1, span = 0;
 
-  // Same 1:1 law as the other pinned lines: a pixel of scroll is a pixel of
-  // lateral travel. Here travel is measured between centred frames, which is
-  // what this section actually moves.
-  const RATIO = 1.0;
+  // The other pinned lines run 1:1. This one is the closer and holds only four
+  // photographs, so at 1:1 the whole section is over in 1,761px. Doubling the
+  // distance gives every frame more than a full screen of scroll to arrive,
+  // which is the deliberate "one frame at a time" read this section is for.
+  const RATIO = 2.0;
   const centreOf = (b) => b.offsetLeft + b.offsetWidth / 2 - viewport.clientWidth / 2;
   const size = () => {
     span = Math.max(0, centreOf(shots[n - 1]) - centreOf(shots[0]));
