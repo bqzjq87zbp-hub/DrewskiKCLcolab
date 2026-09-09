@@ -101,6 +101,17 @@ dialog button:active,.walk-step:active:not(:disabled){
 .aisle-progress progress::-webkit-progress-bar{background:rgba(255,255,255,.22);border-radius:99px}
 .aisle-progress progress::-webkit-progress-value{background:#fff;border-radius:99px}
 
+/* ---- the photograph viewer is the same material ------------------------ */
+dialog{
+  background:rgba(10,22,32,.6);
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:22px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 24px 80px rgba(0,8,16,.55);
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+}
+dialog::backdrop{background:rgba(2,8,14,.7)}
+
 /* ---- chips and footer speak the same language -------------------------- */
 .card-arrow{border-color:var(--ctl-border);background:var(--ctl-bg);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
@@ -145,7 +156,7 @@ body[data-appearance=solid]{
 }
 @media(forced-colors:active){
   .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
-  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress,.aisle-video-status,.card-arrow,.collection-header{
+  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress,.aisle-video-status,.card-arrow,.collection-header,dialog{
     background:ButtonFace!important;color:ButtonText!important;border:1px solid ButtonText!important;
     box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;text-shadow:none!important;transition:none!important}
   body[data-appearance] :is(.menu label,.collection-switcher a,.aisle-progress span){color:ButtonText!important;text-shadow:none!important}
