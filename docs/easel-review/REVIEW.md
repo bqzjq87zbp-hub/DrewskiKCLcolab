@@ -69,12 +69,26 @@ Follow-up verification: 16 rendered samples across desktop/phone, entrance/end a
 
 ![Gallery after the bounded water blend](after-boundary-blend.png)
 
+## Reflection follow-up
+
+The reflected easel silhouettes previously formed repeated teeth and pale continuous columns. Isolating the render passes identified the planar reflection as the main cause. The reflection now follows broader wave directions, with bounded projected displacement, a soft sampling footprint and uneven transparency that lets the photographed water show through. Distortion stays near zero around the actual foot crossings. The submerged timber, camera, artwork fill and controls are unchanged.
+
+| Same-pose previous reflection | Same-pose revised reflection |
+| --- | --- |
+| ![Repeated silhouette teeth](reflection-before.png) | ![Softer reflection broken by water](reflection-after.png) |
+
+![Revised reflection during normal water motion](reflection-normal-motion.png)
+
+The repeated teeth and broad ribbon effect are reduced, with visible foot attachment retained. The reflection remains an approximate planar rendering; its apparent geometry and wave occlusion are not a measured reconstruction of the photographed ocean.
+
+Reflection validation: the first compact run passed 450/453 assertions. The three phone view comparisons were reproduced as test timing: the reference pose was captured before scrolling had stopped. Waiting for the existing scroll-idle condition preserved the original strict tolerances and passed all 103 targeted assertions, including those three. No application change was needed; the QA helper now uses that stable-pose precondition. Visible artwork pixels, print geometry/UVs/scales and projected quads matched at six desktop/phone entry/end/reverse poses, and every 60-frame HUD sample had one text/rectangle state. No runtime/shader errors were found; system reduced motion and native input remained functional.
+
 ## Remaining release limits
 
 - The pier is one photograph on estimated corridor geometry. Its actual post depths, unseen faces and occlusion have not been recovered from a camera solve. Long-travel timber texture stretch is reduced but still visible.
 - Photographic water motion is a restrained compositing approximation. It is not a measured wave field or fluid simulation. Water/pier contact and easel reflections still need artistic review in continuous motion.
 - The easel uses a scanned repeating pine material and regular modeled cloth corners. It is more detailed than the prior supports but remains visibly computer-rendered at some angles.
-- The video is generated footage with an authored camera path, not validated 3D registration. It remains an opt-in preview.
+- The 121 existing JPEGs sample AI-generated Seedance motion, as identified by `public/video/frames.json` and `docs/video-scroll-plan.md`. Their tracked features are 2D flow over generated imagery; no real-camera pose or metric depth solve is included. They can inform motion and appearance but do not supply independent measurements of the photographed pier. The video remains an opt-in preview.
 - Viewport tests emulate phones in desktop Chrome; they do not establish performance on a physical iPhone or an actual Magic Mouse's hardware momentum.
 
 This branch does not merge the separate collaborator water-shader PR, alter the upstream default branch, or deploy Pixpa/production.

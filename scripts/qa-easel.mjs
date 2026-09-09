@@ -116,7 +116,9 @@ async function waterMotion(page,label,{reduced=false,frozen=reduced}={}){
 async function lookControls(page,label){
   const samples=[];
   for(const p of [.51,1]){
-    const straight=await settle(page,p);
+    await settle(page,p);
+    await scrollIdle(page);
+    const straight=await state(page);
     for(const direction of ['left','right']){
       await menu(page,true);
       const button=page.getByRole('button',{name:'Look '+direction,exact:true});

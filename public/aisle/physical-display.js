@@ -62,25 +62,55 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
   // Distortion acts on the complete reflection, including its silhouette.
   const reflectionTarget=new THREE.WebGLRenderTarget(768,512,{depthBuffer:true});
   const reflectionCamera=new THREE.PerspectiveCamera(),textureMatrix=new THREE.Matrix4();
+  const reflectionContacts=Array.from({length:slots.length*3},()=>new THREE.Vector2(1e4,1e4));
   const water=new THREE.Mesh(new THREE.PlaneGeometry(28,42),new THREE.ShaderMaterial({
     transparent:true,depthWrite:false,side:THREE.DoubleSide,
-    uniforms:{reflectionMap:{value:reflectionTarget.texture},textureMatrix:{value:textureMatrix},waterPhase:uniforms.phase},
+    defines:{CONTACT_COUNT:reflectionContacts.length},
+    uniforms:{reflectionMap:{value:reflectionTarget.texture},textureMatrix:{value:textureMatrix},waterPhase:uniforms.phase,
+      reflectionContacts:{value:reflectionContacts},reflectionTexel:{value:new THREE.Vector2(1/768,1/512)}},
     vertexShader:`uniform mat4 textureMatrix; varying vec4 reflectedUV; varying vec3 worldPoint;
       void main(){vec4 w=modelMatrix*vec4(position,1.0);worldPoint=w.xyz;reflectedUV=textureMatrix*w;
       gl_Position=projectionMatrix*viewMatrix*w;}`,
-    fragmentShader:`uniform sampler2D reflectionMap;uniform float waterPhase;varying vec4 reflectedUV;varying vec3 worldPoint;
+    fragmentShader:`uniform sampler2D reflectionMap;uniform mat4 textureMatrix;uniform float waterPhase;
+      uniform vec2 reflectionContacts[CONTACT_COUNT];uniform vec2 reflectionTexel;
+      varying vec4 reflectedUV;varying vec3 worldPoint;
       float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
       float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);
         return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);}
-      void main(){vec2 uv=reflectedUV.xy/reflectedUV.w;
-      float warp=noise(worldPoint.xz*7.0+waterPhase*.1);
-      float rip=sin(worldPoint.z*49.0+worldPoint.x*21.0+waterPhase+warp*9.0);
-      float ripple=sin(worldPoint.z*91.0-worldPoint.x*13.0+waterPhase*.7+warp*5.0);
-      uv+=vec2(rip*.0024+ripple*.0010,ripple*.0007);
+      void main(){
+      vec2 p=worldPoint.xz;
+      float contactDistance2=1e6;
+      for(int i=0;i<CONTACT_COUNT;i++){
+        vec2 d=p-reflectionContacts[i];contactDistance2=min(contactDistance2,dot(d,d));
+      }
+      // Hold the reflection at the measured water crossings, then let the
+      // same broad wave directions as the photographic water move its body.
+      float freedom=smoothstep(.0081,.09,contactDistance2);
+      float broad=noise(p*1.8+vec2(waterPhase*.035,-waterPhase*.055));
+      float detail=noise(p*vec2(3.2,7.5)+vec2(-waterPhase*.06,waterPhase*.08));
+      float wave=sin(p.y*4.8+p.x*2.2+waterPhase+(broad-.5)*1.4);
+      float crossWave=sin(p.y*7.2-p.x*1.4+waterPhase*.73+1.7+(detail-.5)*1.1);
+      vec2 displacement=vec2(wave*.025+crossWave*.012+(detail-.5)*.016,
+        crossWave*.011+(broad-.5)*.014)*freedom;
+      vec4 projected=textureMatrix*vec4(worldPoint+vec3(displacement.x,0.0,displacement.y),1.0);
+      vec2 uv=reflectedUV.xy/reflectedUV.w;
+      vec2 bend=projected.xy/projected.w-uv;
+      // Perspective must not magnify a centimetre of wave displacement into
+      // a wide ribbon at the near edge of the water plane.
+      bend/=1.0+length(bend/(reflectionTexel*vec2(2.2,1.0)));
+      uv+=bend;
       if(uv.x<0.0||uv.x>1.0||uv.y<0.0||uv.y>1.0)discard;
-      vec4 reflected=texture2D(reflectionMap,uv);
-      float breakup=.55+.45*smoothstep(.15,.85,warp);
-      gl_FragColor=vec4(reflected.rgb*vec3(.72,.84,.89),reflected.a*.42*breakup);
+      // A small, resolution-aware footprint softens displaced silhouettes;
+      // filtering alpha with colour keeps empty water transparent.
+      vec2 footprint=reflectionTexel*mix(.25,1.4,freedom);
+      vec4 reflected=texture2D(reflectionMap,uv)*.5;
+      reflected+=(texture2D(reflectionMap,uv+vec2(footprint.x,0.0))+
+        texture2D(reflectionMap,uv-vec2(footprint.x,0.0)))*.16;
+      reflected+=(texture2D(reflectionMap,uv+vec2(0.0,footprint.y*.5))+
+        texture2D(reflectionMap,uv-vec2(0.0,footprint.y*.5)))*.09;
+      float crest=wave*.6+crossWave*.4+(detail-.5)*.75;
+      float breakup=mix(1.0,mix(.12,1.0,smoothstep(-.55,.55,crest)),freedom);
+      gl_FragColor=vec4(reflected.rgb*vec3(.68,.80,.84),reflected.a*mix(.34,.26,freedom)*breakup);
       #include <colorspace_fragment>
       }`
   }));
@@ -151,6 +181,10 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       m.group.rotation.y=slot.side==='left'?.22:-.22;
       m.group.traverse(o=>{if(o.isMesh){for(const material of Array.isArray(o.material)?o.material:[o.material]){material.clippingPlanes=[surface];wetTimber(material);if(/canvas|photographic/i.test(material.name))o.layers.enable(1);}}});
       scene.add(m.group);m.group.updateMatrixWorld(true);
+      m.waterContacts.forEach((point,contactIndex)=>{
+        const world=point.clone().applyMatrix4(m.group.matrixWorld);
+        reflectionContacts[index*3+contactIndex].set(world.x,world.z);
+      });
       const submerged=waterCopy(m.group,false),ripples=contactRipples(m);
       models.push({...m,slot,submerged,ripples,imageSize:[images[index].naturalWidth,images[index].naturalHeight]});
     });
@@ -165,7 +199,7 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
   function render({width,height,progress,committed,reduced,time=0,look=0}) {
     if(!diagnostics.ready)return null;
     const key=width+'x'+height;
-    if(key!==size){size=key;renderer.setPixelRatio(Math.min(devicePixelRatio||1,width<600?1.5:2));renderer.setSize(width,height,false);reflectionTarget.setSize(Math.min(1024,width),Math.round(Math.min(1024,width)*height/width));}
+    if(key!==size){size=key;renderer.setPixelRatio(Math.min(devicePixelRatio||1,width<600?1.5:2));renderer.setSize(width,height,false);reflectionTarget.setSize(Math.min(1024,width),Math.round(Math.min(1024,width)*height/width));water.material.uniforms.reflectionTexel.value.set(1/reflectionTarget.width,1/reflectionTarget.height);}
     cameraDistance=committed?videoDistance(committed):progress*TRAVEL;
     environment.update({camera,width,height,distance:cameraDistance,enabled:!committed,time,reduced,lookYaw:look*LOOK_ANGLE});
     uniforms.phase.value=reduced?0:time*.8;
