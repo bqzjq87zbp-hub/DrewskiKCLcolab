@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "reviewStatus": "pending",
+  "method": "none",
+  "videoSha256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+  "coordinateSpace": {
+    "kind": "native-video-pixels",
+    "width": 3326,
+    "height": 2494,
+    "origin": "top-left",
+    "quadOrder": "TL,TR,BR,BL"
+  },
+  "timestampOrigin": 0.0,
+  "interpolation": "none",
+  "slotIds": [],
+  "frames": [],
+  "review": null,
+  "warning": "Empty scaffold. No easels or camera geometry have been tracked. Do not enable."
+}
