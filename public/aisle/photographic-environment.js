@@ -125,32 +125,52 @@ export function createPhotographicEnvironment({
       defines: { WATER_SURFACE: water ? 1 : 0 },
       uniforms: { sourcePhoto: { value: texture },
         sourceProjection: { value: water ? waterProjection : sourceProjection },
+        fixedSourceProjection: { value: sourceProjection },
+        waterBounds: { value: new THREE.Vector2(calibration.halfWidth, calibration.farDepth) },
         waterPhase, waterMotion },
       vertexShader: `
         uniform mat4 sourceProjection;
+        uniform mat4 fixedSourceProjection;
         varying vec4 sourceClip;
+        varying vec4 fixedSourceClip;
         varying vec3 waterWorld;
         void main() {
           vec4 world = modelMatrix * vec4(position, 1.0);
           waterWorld = world.xyz;
           sourceClip = sourceProjection * world;
+          fixedSourceClip = fixedSourceProjection * world;
           gl_Position = projectionMatrix * viewMatrix * world;
         }`,
       fragmentShader: `
         uniform sampler2D sourcePhoto;
         uniform float waterPhase;
         uniform float waterMotion;
+        uniform vec2 waterBounds;
         varying vec4 sourceClip;
+        varying vec4 fixedSourceClip;
         varying vec3 waterWorld;
         void main() {
           if (sourceClip.w <= 0.0) discard;
           vec2 uv = sourceClip.xy / sourceClip.w * 0.5 + 0.5;
           if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0) discard;
           #if WATER_SURFACE == 1
+            // Side and back proxies use the fixed projector. Meet their exact
+            // source sample at the shared floor edge, then restore stabilized
+            // moving water over a bounded interior band. This is a color blend,
+            // not a change to pier geometry or to the source photograph.
+            vec2 fixedUV = fixedSourceClip.xy / fixedSourceClip.w * .5 + .5;
+            float distanceToEdge = min(waterBounds.x - abs(waterWorld.x),
+              min(-waterWorld.z, waterWorld.z + waterBounds.y));
+            // Hold a useful feather width at shallow viewing angles, without
+            // taking more than two metres from the foreground-water interior.
+            float edgeFeather = clamp(fwidth(distanceToEdge) * 16.0, .65, 2.0);
+            float interiorBlend = smoothstep(0.0, edgeFeather, max(0.0, distanceToEdge));
+            vec3 fixedColor = texture2D(sourcePhoto, fixedUV).rgb;
             // Source-image Y > .895 is foreground water, below all solid pier
             // feet. Feather to full motion at Y=.935 so no photographed timber
             // or sky wobbles. The photograph remains the water's color source.
-            float waterMask = (1.0 - smoothstep(.065, .105, uv.y)) * waterMotion;
+            float waterMask = (1.0 - smoothstep(.065, .105, uv.y))
+              * waterMotion * interiorBlend;
             float swell = sin(waterWorld.z * 4.8 + waterWorld.x * 2.2 + waterPhase);
             float crossWave = sin(waterWorld.z * 7.2 - waterWorld.x * 1.4 + waterPhase * .73 + 1.7);
             vec2 displacement = vec2(.00145 * swell + .00055 * crossWave,
@@ -164,7 +184,7 @@ export function createPhotographicEnvironment({
               * (.55 + .45 * crossWave);
             color *= 1.0 + waterMask * swell * .015;
             color += vec3(.70, .86, 1.0) * crest * waterMask * .045;
-            gl_FragColor = vec4(color, 1.0);
+            gl_FragColor = vec4(mix(fixedColor, color, interiorBlend), 1.0);
           #else
             gl_FragColor = vec4(texture2D(sourcePhoto, uv).rgb, 1.0);
           #endif

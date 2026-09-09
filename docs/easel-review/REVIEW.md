@@ -35,7 +35,7 @@ The asset review at `/aisle/assets/review.html` shows the actual runtime model f
 
 ## Validation
 
-Browser acceptance: **661/661 checks passed**, no failed assertions, no missing test diagnostics and no console/asset failures. Both desktop and phone emulation sampled all 121 video frames in both directions, real print geometry/UVs and source ratios, native wheel and emulated touch gestures, explicit Still behavior, system reduced motion, idle water differences, menu/category/detail and focus return, final Coke/panorama visibility and click targets. Runtime source hashes stayed unchanged during the run. A separate 60-frame HUD probe found one stable layout; a reload probe preserved exact normalized progress and view mode.
+Checkpoint browser acceptance at commit `6eda83b`: **661/661 checks passed**, no failed assertions, no missing test diagnostics and no console/asset failures. Both desktop and phone emulation sampled all 121 video frames in both directions, real print geometry/UVs and source ratios, native wheel and emulated touch gestures, explicit Still behavior, system reduced motion, idle water differences, menu/category/detail and focus return, final Coke/panorama visibility and click targets. Runtime source hashes stayed unchanged during the run. A separate 60-frame HUD probe found one stable layout; a reload probe preserved exact normalized progress and view mode.
 
 The bundled `npm run check` also passes: all 92 existing photograph hashes match, 69 category entries and ten slots remain present, all 121 video-frame hashes match, and server private-path/write-method probes pass.
 
@@ -54,6 +54,20 @@ The bundled `npm run check` also passes: all 92 existing photograph hashes match
 Automated checks establish behavior and source identity; they do not certify photorealism or real-device performance.
 
 [Browser check summary](BROWSER-CHECKS.md) · [Continuous 17.8-second forward/reverse recording](continuous-forward-reverse.webm). The recording included one approximately one-second animation-frame delay; smooth performance on physical mobile hardware remains unverified.
+
+## Water boundary follow-up
+
+The floor and side walls sampled different projections of the photograph, creating a color discontinuity at their shared edge. The floor now returns to the side wall's exact sample along the boundary, then blends into the stabilized water within a bounded band. The entrance remains pixel-identical in the isolated comparison, and the foreground continues to move while the upper pier stays still. Reduced-motion frames remain identical.
+
+| Isolated environment before | Bounded color blend |
+| --- | --- |
+| ![Original water boundary](water-seam-before.png) | ![Softer boundary with remaining depth band](water-seam-after.png) |
+
+This modestly softens the join. It does not recover the photographed posts' actual depth or remove the flattened band around their feet. The gallery screenshots and recording above show the first checkpoint; this comparison documents the subsequent shader-only correction.
+
+Follow-up verification: 16 rendered samples across desktop/phone, entrance/end and normal/reduced motion had no browser errors or exposed source bounds. All four normal-motion pairs changed in the water region with zero upper-pier changes; all four reduced-motion pairs were pixel-identical. Both texture projectors remained in bounds across 4,200 sampled rays. The tested source hash matches the final shader, and the bundled asset/server checks pass.
+
+![Gallery after the bounded water blend](after-boundary-blend.png)
 
 ## Remaining release limits
 
