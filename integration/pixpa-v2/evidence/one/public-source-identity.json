@@ -1,0 +1,81 @@
+{
+  "verifiedAt": "2026-09-10T20:44:27.875Z",
+  "source": "12b0c9447d5d67e028ae539e28e287561a29e036",
+  "version": 13,
+  "deployment": {
+    "id": "appgdep_6aa3163bb1788191b51752d4581d109d",
+    "project_id": "appgprj_6a9f3ee5ee348191b59455c3ba49c21e",
+    "title": "Kiyono Coastal Gallery",
+    "version_id": "appgprj_6a9f3ee5ee348191b59455c3ba49c21e~appgver_e846cdd73d108191be9a1c97750cb255",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": null,
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-09-10T20:42:50.074775+00:00"
+  },
+  "pixpaWrapper": {
+    "status": 200,
+    "expectedChildURLPresent": true
+  },
+  "files": [
+    {
+      "path": "categories.json",
+      "status": 200,
+      "bytes": 44283,
+      "sha256": "ab8a868f3aec0ab6d6d45c146ac786f23c78b149b3c150bb47419d6e4fb4c242",
+      "exactSource": true
+    },
+    {
+      "path": "main-v2.js",
+      "status": 200,
+      "bytes": 7421,
+      "sha256": "67651d17d4754bb571dc91b7766a556122804f9ec748486c8f7ece19404bf637",
+      "exactSource": true
+    },
+    {
+      "path": "collections.js",
+      "status": 200,
+      "bytes": 8324,
+      "sha256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43",
+      "exactSource": true
+    },
+    {
+      "path": "collections.css",
+      "status": 200,
+      "bytes": 9537,
+      "sha256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927",
+      "exactSource": true
+    },
+    {
+      "path": "glass-sheen.js",
+      "status": 200,
+      "bytes": 8280,
+      "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+      "exactSource": true
+    },
+    {
+      "path": "glass-sheen.css",
+      "status": 200,
+      "bytes": 1706,
+      "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612",
+      "exactSource": true
+    },
+    {
+      "path": "slots.json",
+      "status": 200,
+      "bytes": 7323,
+      "sha256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21",
+      "exactSource": true
+    }
+  ],
+  "renderedAcceptance": {
+    "status": "PASS",
+    "finalizedAt": "2026-09-10T21:09:18.725292+00:00",
+    "reportOriginalSHA256": "10076d9faeeaf52623ab39493adf089a72d918e50b771e741123b293a338f9a1",
+    "repositoryReport": "REVIEW.md",
+    "distinction": "Independent rendered receipt added after the publisher source/network snapshot."
+  }
+}

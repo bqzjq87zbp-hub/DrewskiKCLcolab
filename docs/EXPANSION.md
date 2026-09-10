@@ -1,6 +1,16 @@
 # Reviewed gallery expansion
 
-## Current isolated seven-photo candidate
+## Current isolated one-photo candidate after 101
+
+One approved supporting Family photograph brings this isolated candidate to 102 entries: Branding 25, Family 27, Headshots 36, Coastal 14. The existing importer completed its standard dry run and apply with one accepted record and no holds. The complete private ledger advanced from 32 to 33 imports. Reconstructing categories from that ledger reproduces the actual candidate. Removing only `families-wrapped-in-evening-light` reproduces the entire prior 101-entry category document exactly, including every item, URL string, category metadata field and relative order.
+
+**Wrapped in evening light** retains its accepted Family Supporting 79 role and complete landscape towel portrait. The literal title and alt text remain unchanged. Family positions 25 through 27 are **Pink-ball laughter**, **Walking together**, then **Wrapped in evening light**. The intervening grass scene separates the two beach portraits. The soft face detail, slightly sloped sea line and broad right-hand sky remain part of the accepted supporting frame. This import changes no pixels and introduces no identity, specific location, commission, hero, category lead, easel or print claim.
+
+`expansion-next1-assets.json` lists the exact two full-hash-named JPEGs added against donor `26ffff0304b95c0ca36b9f568318cabbd34da434`: full 3200 x 2133, 659,143 bytes; thumbnail 960 x 640, 53,733 bytes; total 712,876 bytes. The photo delta is exactly three paths: those two files plus `public/categories.json`. Cumulative review and allowlist metadata are separate: `public/expansion-review.json` covers 33 imports, and `expansion-assets.json` covers 66 JPEGs totaling 46,806,408 bytes. The full private ledger remains outside the repository and delivery packet. All earlier imported JPEG hashes, runtime files, glass and sheen behavior, ten slots, camera, water and scene assets remain identical to the accepted 101 donor.
+
+This local category document contains local image paths. Later publication must merge only this one new record into the separately accepted 101 host, preserving all existing public URL strings, records and relative order. Its two native Files URLs are ordinary collection and full-viewer images. Preserve the host adapters, runtime and centered full-file footer; no photo enters the WebGL slots. Local viewport and touch emulation does not establish physical-phone or Safari behavior or live publication.
+
+## Preserved round04 seven-photo checkpoint (26ffff0)
 
 Seven approved photographs bring this local candidate to 101 entries: Branding 25, Family 26, Headshots 36, Coastal 14. The existing importer applied the accepted packets in order, each after its own successful dry run. The same complete private ledger advanced from 25 to 28, 29, 30 and 32 imports. Reconstructing categories from that ledger reproduces the actual candidate. Filtering the seven new IDs reproduces the entire prior 94-entry category document exactly, including metadata and relative order.
 

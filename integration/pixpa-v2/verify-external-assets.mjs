@@ -5,10 +5,10 @@ const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const map=read(path.join(here,'external-collection-assets.json'));
 const hosted=read(path.join(here,'runtime/categories.json')),standalone=read(path.join(root,'public/categories.json'));
 const assets=read(path.join(here,'asset-map.json')),slots=read(path.join(here,'runtime/slots.json'));
-assert.equal(map.files.length,38);assert.equal(map.corsTextureUse,false);
-assert.equal(new Set(map.files.map(x=>x.url)).size,38);
+assert.equal(map.files.length,40);assert.equal(map.corsTextureUse,false);
+assert.equal(new Set(map.files.map(x=>x.url)).size,40);
 const hostedItems=hosted.categories.flatMap(c=>c.items),sourceItems=standalone.categories.flatMap(c=>c.items);
-assert.equal(hostedItems.length,101);assert.deepEqual(hosted.categories.map(c=>c.items.length),[25,26,36,14]);
+assert.equal(hostedItems.length,102);assert.deepEqual(hosted.categories.map(c=>c.items.length),[25,27,36,14]);
 for(const row of map.files){
   assert.match(row.path,/^public\/media\/expansion\/[a-f0-9]{64}\.jpg$/);
   assert.match(row.url,/^https:\/\/px-files\.pixpa\.com\/848127\/\d+-\d+\.jpg$/);
@@ -18,4 +18,4 @@ for(const row of map.files){
   for(const role of ['src','full'])if(matches[0][role]===sourceURL)assert.equal(item[role],row.url);
   assert(!JSON.stringify(slots).includes(row.url));assert(!assets.some(x=>x.accepted===row.path.slice('public/'.length)));
 }
-console.log(JSON.stringify({status:'PASS',externalDerivatives:38,bytes:map.files.reduce((n,x)=>n+x.bytes,0),photoEntries:101,hostedOutputFiles:assets.length,easelBindingsUnchanged:true}));
+console.log(JSON.stringify({status:'PASS',externalDerivatives:40,bytes:map.files.reduce((n,x)=>n+x.bytes,0),photoEntries:102,hostedOutputFiles:assets.length,easelBindingsUnchanged:true}));

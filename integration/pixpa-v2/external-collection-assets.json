@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "26ffff0304b95c0ca36b9f568318cabbd34da434",
+  "sourceCommit": "48bbcffa420bbcaf37022ab42bb52e9e2ee16769",
   "role": "ordinary-collection-and-full-viewer-only",
   "corsTextureUse": false,
   "hostingPolicy": "Keep these files external in the Pixpa adapter; source originals remain in public/media/expansion for standalone rebuilding.",
@@ -232,6 +232,18 @@
       "bytes": 97185,
       "sha256": "a0d2e215cc044474ecafbfd6f169296479261b1e4a184806b7181e0d36390e1e",
       "url": "https://px-files.pixpa.com/848127/1789067651516-6780.jpg"
+    },
+    {
+      "path": "public/media/expansion/3f47d1ada5922f3e81783a6bcfea233d92193805f410d87726f0c43519c96b83.jpg",
+      "bytes": 659143,
+      "sha256": "3f47d1ada5922f3e81783a6bcfea233d92193805f410d87726f0c43519c96b83",
+      "url": "https://px-files.pixpa.com/848127/1789071432288-5974.jpg"
+    },
+    {
+      "path": "public/media/expansion/7def7dff1221c89934c925d5227bc5ded02a15f9a336fda00764bfb5693f6fc0.jpg",
+      "bytes": 53733,
+      "sha256": "7def7dff1221c89934c925d5227bc5ded02a15f9a336fda00764bfb5693f6fc0",
+      "url": "https://px-files.pixpa.com/848127/1789071449681-2448.jpg"
     }
   ]
 }

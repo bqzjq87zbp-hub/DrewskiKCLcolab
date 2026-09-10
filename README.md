@@ -1,10 +1,10 @@
 # Drewski KCL collaboration
 
-A self-contained Newport Pier photography portfolio, exported for collaboration. The current gallery contains **101 entries: 25 Branding, 26 Family, 36 Headshot and 14 Coastal**, including the original ten NWPRT photographs within Branding. The seven latest additions preserve every previous 94 entry, photograph and URL, plus the ten easel slots and walking runtime.
+A self-contained Newport Pier photography portfolio, exported for collaboration. The current gallery contains **102 entries: 25 Branding, 27 Family, 36 Headshot and 14 Coastal**, including the original ten NWPRT photographs within Branding. The latest addition is Wrapped in evening light, appended as Family item 27. Every previous 101 entry, photograph and URL, plus the ten easel slots and walking runtime, is preserved.
 
 ## Start here: reproduce the published Pixpa integration
 
-The published source is `c5e5ff358302b70021cd7ce214bf52a8e1285142`, **Sites version 12**, deployed at 19:38:51 UTC on September 10, 2026. It adds seven approved photographs while retaining the previous expansions, directional glass sheen and centered full-viewer footer. Independent exact-adapter and actual-public desktop/phone reviews passed; physical-phone/Safari testing remains unperformed. [Open the Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=seven101-live-20260910) or use these commands with Node.js 20 or newer:
+The published source is `12b0c9447d5d67e028ae539e28e287561a29e036`, **Sites version 13**, deployed at 20:42:50 UTC on September 10, 2026. It adds one accepted Family photograph while retaining the previous expansions, directional glass sheen and centered full-viewer footer. Independent exact-adapter and [actual-public 102-photo reviews](integration/pixpa-v2/evidence/one/REVIEW.md) passed, including desktop, phone/landscape emulation and exact native return to the aisle. Physical-phone/Safari testing remains unperformed. [Open the Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=one102-live-20260910) or use these commands with Node.js 20 or newer:
 
 ```sh
 npm run check
@@ -14,11 +14,11 @@ node integration/pixpa-v2/build.mjs --output /absolute/path/to/new-gallery-build
 python3 -m http.server 4330 --bind 127.0.0.1 --directory /absolute/path/to/new-gallery-build
 ```
 
-Open `http://127.0.0.1:4330/pier-v2-20260910/`. Replace the example output path with a new absolute directory and choose an unused port. The builder verifies **279 gallery files** from this repository. The 38 externally mapped derivatives use native Pixpa Files URLs in the hosted adapter; their exact local copies are included for the standalone build. [Integration README](integration/pixpa-v2/README.md) explains the delivery split, public-verification state, preserved V1 photo URLs, unchanged Pixpa wrapper, rollback and capacity limit.
+Open `http://127.0.0.1:4330/pier-v2-20260910/`. Replace the example output path with a new absolute directory and choose an unused port. The builder verifies **279 gallery files** from this repository. The 40 externally mapped derivatives use native Pixpa Files URLs in the hosted adapter; their exact local copies are included for the standalone build. [Integration README](integration/pixpa-v2/README.md) explains the delivery split, public-verification state, preserved V1 photo URLs, unchanged Pixpa wrapper, rollback and capacity limit.
 
-The plain `npm start` option below serves all 101 entries with local root-relative images. The integration build reproduces the hosted V1/V2 prefixes, ordinary external-image bindings and native Pixpa navigation adapter. Neither command saves or publishes a site, and no private hosting-repository access is required.
+The plain `npm start` option below serves all 102 entries with local root-relative images. The integration build reproduces the hosted V1/V2 prefixes, ordinary external-image bindings and native Pixpa navigation adapter. Neither command saves or publishes a site, and no private hosting-repository access is required.
 
-[Seven-photo release](integration/pixpa-v2/SEVEN-RELEASE.md) records the current release. [Earlier public acceptance](integration/pixpa-v2/PUBLIC-ACCEPTANCE.md) and the [twelve-photo release](integration/pixpa-v2/NEXT12-RELEASE.md) remain historical evidence. These distinguish source checks, actual live behavior and physical-device limits. Sheen is retained from version 10. Later curation batches and the unrelated external Inquiry legal-link issue are outside this release.
+[One-photo release](integration/pixpa-v2/ONE-RELEASE.md) records the current release. [Seven-photo release](integration/pixpa-v2/SEVEN-RELEASE.md) preserves its preceding 101-photo acceptance. [Earlier public acceptance](integration/pixpa-v2/PUBLIC-ACCEPTANCE.md) and the [twelve-photo release](integration/pixpa-v2/NEXT12-RELEASE.md) remain historical evidence. These distinguish source checks, actual live behavior and physical-device limits. Sheen is retained from version 10. Later curation batches and the unrelated external Inquiry legal-link issue are outside this release.
 
 ## Run locally
 
@@ -65,7 +65,7 @@ The app uses root-relative URLs. A static host must serve `public/` at the origi
 
 Photography and branding remain the property of their respective rights holders. This repository grants no new stock-photo, model, trademark or template redistribution license. Included photographs are the existing selected website assets; no archive, camera originals, private user records or source-machine paths are included. Export copies retain their color profiles while other embedded capture/edit metadata is removed.
 
-Three purchased room backgrounds and their six artwork overlays were deliberately excluded because template redistribution rights were not verified. Families now uses its 26-image gallery. See [optional licensed rooms](docs/OPTIONAL-LICENSED-ROOMS.md).
+Three purchased room backgrounds and their six artwork overlays were deliberately excluded because template redistribution rights were not verified. Families now uses its 27-image gallery. See [optional licensed rooms](docs/OPTIONAL-LICENSED-ROOMS.md).
 
 ## Handoff route
 

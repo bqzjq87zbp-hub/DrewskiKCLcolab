@@ -1,10 +1,12 @@
-# Pixpa V2 integration: 101 photographs and optical-glass sheen
+# Pixpa V2 integration: 102 photographs and optical-glass sheen
 
-This is the reproducible source handoff for the current 101-entry photographic pier gallery. Sites version 12 adds seven approved photographs through ordinary native Pixpa Files image URLs. All previous 94 entries retain their exact metadata, URLs and relative order. The accepted walking runtime, ten easels, glass sheen, two outer exit links and centered full-image footer remain unchanged. No later photo batch is included. See [SEVEN-RELEASE.md](SEVEN-RELEASE.md) for this release; [NEXT12-RELEASE.md](NEXT12-RELEASE.md) preserves the preceding release history.
+This is the reproducible source handoff for the current 102-entry photographic pier gallery. Sites version 13 adds one accepted Family photograph through ordinary native Pixpa Files image URLs. All previous 101 entries retain their exact metadata, URLs and relative order. The accepted walking runtime, ten easels, glass sheen, two outer exit links and centered full-image footer remain unchanged. No later photo batch is included. See [ONE-RELEASE.md](ONE-RELEASE.md) for this addition; [SEVEN-RELEASE.md](SEVEN-RELEASE.md) and [NEXT12-RELEASE.md](NEXT12-RELEASE.md) preserve prior releases.
 
-- [Public Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=seven101-live-20260910)
-- [Direct gallery](https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/?release=seven101-live-20260910)
-- Current hosting source: `c5e5ff358302b70021cd7ce214bf52a8e1285142`, **Sites version 12**, deployment `SUCCEEDED` at `2026-09-10T19:38:51.062919Z`. Exact-adapter and [actual-public acceptance](evidence/seven/REVIEW.md) passed; physical-device limits remain explicit.
+- [Public Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=one102-live-20260910)
+- [Direct gallery](https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/?release=one102-live-20260910)
+- Current hosting source: `12b0c9447d5d67e028ae539e28e287561a29e036`, **Sites version 13**, deployment `SUCCEEDED` at `2026-09-10T20:42:50.074775Z`. Exact-adapter and [actual-public 102-photo acceptance](evidence/one/REVIEW.md) passed. The terminal live review finalized at `2026-09-10T21:09:18.725292+00:00`; physical phones and Safari remain untested.
+- One-photo donor: `48bbcffa420bbcaf37022ab42bb52e9e2ee16769`. Previous shared handoff: `cb8acef30d3dc98c0e807eecd84ef851616d07e9`.
+- Previous hosting source: `c5e5ff358302b70021cd7ce214bf52a8e1285142`, Sites version 12. Its [actual-public 101-photo acceptance](evidence/seven/REVIEW.md) remains historical.
 - Seven-photo donor: `26ffff0304b95c0ca36b9f568318cabbd34da434`. Previous shared handoff: `d747321e7adc45fdf2b284f75f8d3a26dce789ef`.
 - Previous hosting source: `874050f23a65d4adc4f1734572f7b6de9ef6bcaf`, Sites version 11, deployed at `2026-09-10T18:10:12.341447Z`.
 - Twelve-photo donor: `7918fa7cc24cd6ba978e012980c64c9805141564`. Previous shared handoff: `8f7530a446fb1e94b513b47f26c01d0d051d62fd`.
@@ -23,9 +25,9 @@ The mobile Home masthead now retains its document-scroll reference. A 213-byte C
 
 ## Current photo delivery and preservation boundaries
 
-The four categories now contain **25 Branding, 26 Families, 36 Headshots and 14 Coastal** entries. The standalone source includes the 14 exact newest JPEG derivatives alongside the prior24; hosted collections instead use their saved native Pixpa Files URLs. `external-collection-assets.json` records all38 ordinary-image bindings and exact source hashes. They are deliberately absent from the ten easel slots and WebGL texture path; do not add anonymous-CORS loading to these URLs.
+The four categories now contain **25 Branding, 27 Families, 36 Headshots and 14 Coastal** entries. The standalone source includes the two exact newest JPEG derivatives alongside the prior 38; hosted collections instead use their saved native Pixpa Files URLs. `external-collection-assets.json` records all 40 ordinary-image bindings and exact source hashes. They are deliberately absent from the ten easel slots and WebGL texture path; do not add anonymous-CORS loading to these URLs.
 
-Run `node integration/pixpa-v2/verify-external-assets.mjs` to verify local derivative bytes, category bindings and the protected easel boundary. No new binary is bundled into the nearly-full hosting archive. The 279-path gallery build remains the existing set, with only its category JSON row changed: **193,367,421 bytes**. Native Files responses were independently checked as 200 JPEG with exact hashes, dimensions and sRGB profiles; no deletion headers were observed. This is verified delivery, not a promise of perpetual hosting.
+Run `node integration/pixpa-v2/verify-external-assets.mjs` to verify local derivative bytes, category bindings and the protected easel boundary. No new binary is bundled into the nearly-full hosting archive. The 279-path gallery build remains the existing set, with only its category JSON row changed: **193,367,878 bytes**. Native Files responses were independently checked as 200 JPEG with exact hashes, dimensions and sRGB profiles; no deletion headers were observed. This is verified delivery, not a promise of perpetual hosting.
 
 ## Retained sheen change and preservation boundaries
 
@@ -61,7 +63,7 @@ python3 -m http.server 4330 --bind 127.0.0.1 --directory /absolute/path/to/new-g
 
 Then open `http://127.0.0.1:4330/pier-v2-20260910/`. Choose an unused port. `CHECK_PORT` selects an unused temporary port for `npm run check`. The builder refuses an existing output directory and checks every source and copied output hash. It never publishes, changes the standalone files or starts a server automatically.
 
-`asset-map.json` maps **279 unique URLs totaling 193,367,421 file bytes**: the version 10 set with only the category JSON row updated. The set contains 149 accepted non-photo files, 12 hosting overlays, 26 first-expansion JPEGs and 92 reused original photographs. The 38 native Files URLs are separately mapped and are not copied into the hosting bundle. All previous URLs remain. The historical first-expansion transition preserved 248 old rows, updated three text rows and added 26 JPEG rows; those figures describe version 9, not version 12.
+`asset-map.json` maps **279 unique URLs totaling 193,367,878 file bytes**: the version 10 set with only the category JSON row updated. The set contains 149 accepted non-photo files, 12 hosting overlays, 26 first-expansion JPEGs and 92 reused original photographs. The 40 native Files URLs are separately mapped and are not copied into the hosting bundle. All previous URLs remain. The historical first-expansion transition preserved 248 old rows, updated three text rows and added 26 JPEG rows; those figures describe version 9, not version 13.
 
 The 92 reused photographs intentionally remain under `/pier-v1-20260909/media/`; the 187 other files are under `/pier-v2-20260910/`. A fresh host needs both generated directories. V1 here means byte-verified reuse of photographs, not an old runtime or an expiring upload. Do not delete those paths or blindly replace every V1 prefix. This builder reproduces the current gallery and its dependencies, not unrelated historical pages on the same hosting account. It does not apply the Pixpa wrapper or native Shared Body patch.
 
@@ -96,13 +98,15 @@ The existing external Inquiry form's `example.com` legal links remain an unrelat
 
 For any future Pixpa edit, read and preserve the **current** field first. This checked-in wrapper and exact-baseline helpers are evidence, not continuing permission to overwrite a changed page. The historical native sheen patch is bounded to its existing optical runtime; the subsequent sticky-header repair changes only the existing Home style owner. Home page code, other page-code fields and collaborator PR2 are not changed by these patches.
 
-Sheen is retained from version 10. The twelve-photo batch and newest seven-photo batch are included in this version 12 handoff: the cumulative standalone manifest has 64 JPEG derivatives; the hosting bundle still has 279 paths because 38 derivatives use ordinary native Files delivery. Later curation batches remain excluded.
+Sheen is retained from version 10. This version 13 handoff includes the single accepted Family addition after the preceding seven-photo release: the cumulative standalone manifest has 66 JPEG derivatives; the hosting bundle still has 279 paths because 40 derivatives use ordinary native Files delivery. Later curation batches remain excluded.
 
 ## Rollback and capacity
 
-Current category-only rollback is version 11 at `874050f23a65d4adc4f1734572f7b6de9ef6bcaf`. Do not roll back the Pixpa fields or remove uploaded originals to undo this category change. Version 12's archive is **261,256,681 compressed / 268,037,632 unpacked bytes**, leaving **397,824 bytes** below 256 MiB; SHA-256 `88befab1fdcc643a520a4832b5cd3c9b24852caf697166f31c9ee83c9f592892`. The native save's normalized stored archive has separate size/hash values and is not the local gzip byte identity.
+Current category-only rollback is version 12 at `c5e5ff358302b70021cd7ce214bf52a8e1285142`. Do not roll back the Pixpa fields or remove uploaded originals to undo this category change. Version 13 archive: 261,256,744 compressed / 268,038,144 unpacked bytes, 397,312 bytes headroom; SHA256 `87886342862708942757f03fd7e5242f31801815da79016185967b71b08b3365`. The native stored archive has a separately recorded normalized identity.
 
-Historical version 11 archive: **261,255,913 compressed / 268,034,560 unpacked bytes**, headroom400,896bytes; SHA-256 `49a4a573b919c05377d0be54a1266ef8177f78dd10534c2f2b54d48cb9f1383d`. Its category-only rollback was version10.
+Historical version 12 archive is **261,256,681 compressed / 268,037,632 unpacked bytes**, leaving **397,824 bytes** below 256 MiB; SHA-256 `88befab1fdcc643a520a4832b5cd3c9b24852caf697166f31c9ee83c9f592892`. The native save's normalized stored archive has separate size/hash values and is not the local gzip byte identity.
+
+Historical version 11 archive: **261,255,913 compressed / 268,034,560 unpacked bytes**, headroom400,896bytes; SHA-256 `49a4a573b919c05377d0be54a1266ef8177f78dd10534c2f2b54d48cb9f1383d`. Its category-only rollback was version 10.
 
 For the historical sheen release, host rollback was version 9 at `4c8bd39a65c7ebb29213d14d63f144ff62d318b3`; the gallery wrapper and native Shared Body have distinct recorded baseline hashes. See [SHEEN-RELEASE.md](SHEEN-RELEASE.md) before any separately authorized field rollback.
 
