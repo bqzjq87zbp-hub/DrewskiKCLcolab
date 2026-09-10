@@ -192,6 +192,42 @@
           "height": 1867,
           "src": "/media/08bfbe519671b2a3ec187588.jpg",
           "full": "/media/08bfbe519671b2a3ec187588.jpg"
+        },
+        {
+          "id": "coke-stacked-chilled-cans",
+          "title": "Stacked chilled cans",
+          "alt": "Three chilled red Coca-Cola cans form a pyramid on a pale stand, with two smiling faces partly visible at the side edges against a blue-gray backdrop.",
+          "width": 2134,
+          "height": 3200,
+          "src": "/media/expansion/b5d7620823316495b55e604cc3497867f3388d4ab3a2bc17628070ba6ddb9712.jpg",
+          "full": "/media/expansion/9a0bd601ebc88000295b46f65fdcc156df74a01fc0f40358f84d0c4c925dc904.jpg"
+        },
+        {
+          "id": "coke-a-close-sip",
+          "title": "A close sip",
+          "alt": "A person drinks from a silver-and-red can in close profile, with a second person softly out of focus behind.",
+          "width": 3200,
+          "height": 2134,
+          "src": "/media/expansion/6666cded7d560a368ce2d320dfbde87f66d3b8eec14cddb39b4926f36c6dc59d.jpg",
+          "full": "/media/expansion/c3354d311f7c19b936d29fda454325160829779bb46ce406f21685fe9f6bb9fa.jpg"
+        },
+        {
+          "id": "coke-bottle-in-the-surf",
+          "title": "Bottle in the surf",
+          "alt": "A capped glass Coca-Cola bottle rests diagonally in shallow seawater, with small bubbles, a partial reflection and breaking surf behind.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/media/expansion/9ff99f0910c6c0e232a3b862ce366134c0f6acff95e8cc4721a66c10bd491be4.jpg",
+          "full": "/media/expansion/39f2bcfd329d0e3dd1ea4eadf05bea7d273837d12dceb3f04aadfb53e571ae76.jpg"
+        },
+        {
+          "id": "lacie-service-team-beside-truck",
+          "title": "Team beside the truck",
+          "alt": "Two adults in work shirts stand beside a white Allied Pest Control service truck with a ladder on its roof rack.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/media/expansion/5a9eaad071394a68458eb98996ff978c39e5dd4a9bf9d0bffe766e8c8bcf94cc.jpg",
+          "full": "/media/expansion/5111393ba659b1edcdce5096256af3bcbd5a9b56ad5c4c1e93069d64fb6f5107.jpg"
         }
       ],
       "rooms": []
@@ -730,6 +766,15 @@
           "full": "/media/f08a52e4e0b7e4c9f4df4d0c.jpg"
         },
         {
+          "id": "lacie-portrait-light-gray-jacket",
+          "title": "Portrait in a light gray jacket",
+          "alt": "A person in a light gray jacket and black shirt looks toward the camera while holding the front of the jacket against a pale wall.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/media/expansion/acc7fecbd581db6d6657b44dda1cb15c53d5ca6a85ccfbe049419247922bd3f0.jpg",
+          "full": "/media/expansion/bf5025b5739b21b74c68198fd822c50242c50eebeb6737fea9c4341c39eed764.jpg"
+        },
+        {
           "id": "headshots-lacie-cream-knit",
           "title": "Portrait in a cream knit shirt",
           "alt": "A portrait with curly hair, a cream knit shirt and a beaded necklace against a warm red background.",
@@ -746,6 +791,15 @@
           "height": 1400,
           "src": "/media/fe23574feaffede554dd289a.jpg",
           "full": "/media/228b1d52f8f29c8495fb44b1.jpg"
+        },
+        {
+          "id": "lacie-portrait-beneath-awning",
+          "title": "Portrait beneath an awning",
+          "alt": "A person with a gray beard and event lanyards looks toward the camera beneath a dark red awning.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/media/expansion/a0d2e215cc044474ecafbfd6f169296479261b1e4a184806b7181e0d36390e1e.jpg",
+          "full": "/media/expansion/0f88c7c3419ac241f263ea2cfd9e9339bdae7f22515d6e13ce5560203333251b.jpg"
         }
       ],
       "rooms": []
@@ -870,6 +924,15 @@
           "height": 1674,
           "src": "/media/expansion/86144568d70b2018fdb047c72636a211cb66fc682ae4951ab6cc6d0e110df47e.jpg",
           "full": "/media/expansion/ce95e569fb3e83a6dbf7640c32fb404373133a4a89b800c269168ead0ab489f4.jpg"
+        },
+        {
+          "id": "coastal-ball-toss-beneath-pier",
+          "title": "Ball toss beneath the pier",
+          "alt": "Two children in yellow shirts raise their arms toward an airborne orange ball beneath timber pier beams, with their bare feet and reflections in shallow water.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/media/expansion/12dd81175f407c32323b57768cc09a1766f14a4fccbf6fd77dc32cfdadc538b7.jpg",
+          "full": "/media/expansion/be7f0f71584b9cc43b4735dde5af20c6a010f651de18268611b0a920cb58e76f.jpg"
         }
       ],
       "rooms": []

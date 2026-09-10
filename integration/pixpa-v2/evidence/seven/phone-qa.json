@@ -1,0 +1,1571 @@
+{
+  "wrapper": "https://kiyonocreativelab.com/pier-gallery?release=seven101-live-20260910",
+  "host": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "source": "c5e5ff358302b70021cd7ce214bf52a8e1285142",
+  "sourceAuthority": "coordinator supplied Sites version12 deployment receipt",
+  "startedAt": "2026-09-10T19:45:32.294Z",
+  "phone": [
+    {
+      "id": "lacie-portrait-light-gray-jacket",
+      "title": "Portrait in a light gray jacket",
+      "url": "https://px-files.pixpa.com/848127/1789067639518-5388.jpg",
+      "alt": "A person in a light gray jacket and black shirt looks toward the camera while holding the front of the jacket against a pale wall.",
+      "complete": true,
+      "width": 2133,
+      "height": 3200,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "imageRect": {
+        "x": 32,
+        "y": 99.78125,
+        "width": 326,
+        "height": 677.8359375,
+        "right": 358,
+        "bottom": 777.6171875
+      },
+      "viewerRect": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "right": 372,
+        "bottom": 827.1171875
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "viewerOverflow": 0,
+      "fullFile": {
+        "href": "https://px-files.pixpa.com/848127/1789067639518-5388.jpg",
+        "target": "_blank",
+        "rect": {
+          "x": 119.625,
+          "y": 787.6171875,
+          "width": 150.7421875,
+          "height": 15,
+          "right": 270.3671875,
+          "bottom": 802.6171875
+        },
+        "footerRect": {
+          "x": 32,
+          "y": 785.6171875,
+          "width": 326,
+          "height": 19.5,
+          "right": 358,
+          "bottom": 805.1171875
+        },
+        "textAlign": "center",
+        "centerDelta": 0.00390625
+      },
+      "controls": [
+        {
+          "name": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 55.78125,
+            "width": 103.328125,
+            "height": 44,
+            "right": 135.328125,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Next",
+          "rect": {
+            "x": 143.328125,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 246.6640625,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 254.6640625,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 358,
+            "bottom": 99.78125
+          }
+        }
+      ],
+      "closePassed": true
+    },
+    {
+      "id": "coke-a-close-sip",
+      "title": "A close sip",
+      "url": "https://px-files.pixpa.com/848127/1789067562204-3132.jpg",
+      "alt": "A person drinks from a silver-and-red can in close profile, with a second person softly out of focus behind.",
+      "complete": true,
+      "width": 3200,
+      "height": 2134,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "imageRect": {
+        "x": 32,
+        "y": 99.78125,
+        "width": 326,
+        "height": 677.8359375,
+        "right": 358,
+        "bottom": 777.6171875
+      },
+      "viewerRect": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "right": 372,
+        "bottom": 827.1171875
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "viewerOverflow": 0,
+      "fullFile": {
+        "href": "https://px-files.pixpa.com/848127/1789067562204-3132.jpg",
+        "target": "_blank",
+        "rect": {
+          "x": 119.625,
+          "y": 787.6171875,
+          "width": 150.7421875,
+          "height": 15,
+          "right": 270.3671875,
+          "bottom": 802.6171875
+        },
+        "footerRect": {
+          "x": 32,
+          "y": 785.6171875,
+          "width": 326,
+          "height": 19.5,
+          "right": 358,
+          "bottom": 805.1171875
+        },
+        "textAlign": "center",
+        "centerDelta": 0.00390625
+      },
+      "controls": [
+        {
+          "name": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 55.78125,
+            "width": 103.328125,
+            "height": 44,
+            "right": 135.328125,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Next",
+          "rect": {
+            "x": 143.328125,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 246.6640625,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 254.6640625,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 358,
+            "bottom": 99.78125
+          }
+        }
+      ],
+      "closePassed": true,
+      "nativePoint": {
+        "x": 103.25,
+        "y": 498.87890625,
+        "height": 113.6640625,
+        "top": 442.046875,
+        "vh": 844,
+        "hit": "Enlarge photograph: A close sip"
+      }
+    },
+    {
+      "id": "coastal-ball-toss-beneath-pier",
+      "title": "Ball toss beneath the pier",
+      "url": "https://px-files.pixpa.com/848127/1789067631937-2317.jpg",
+      "alt": "Two children in yellow shirts raise their arms toward an airborne orange ball beneath timber pier beams, with their bare feet and reflections in shallow water.",
+      "complete": true,
+      "width": 3200,
+      "height": 2133,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "imageRect": {
+        "x": 32,
+        "y": 99.78125,
+        "width": 326,
+        "height": 677.8359375,
+        "right": 358,
+        "bottom": 777.6171875
+      },
+      "viewerRect": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "right": 372,
+        "bottom": 827.1171875
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "viewerOverflow": 0,
+      "fullFile": {
+        "href": "https://px-files.pixpa.com/848127/1789067631937-2317.jpg",
+        "target": "_blank",
+        "rect": {
+          "x": 119.625,
+          "y": 787.6171875,
+          "width": 150.7421875,
+          "height": 15,
+          "right": 270.3671875,
+          "bottom": 802.6171875
+        },
+        "footerRect": {
+          "x": 32,
+          "y": 785.6171875,
+          "width": 326,
+          "height": 19.5,
+          "right": 358,
+          "bottom": 805.1171875
+        },
+        "textAlign": "center",
+        "centerDelta": 0.00390625
+      },
+      "controls": [
+        {
+          "name": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 55.78125,
+            "width": 103.328125,
+            "height": 44,
+            "right": 135.328125,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Next",
+          "rect": {
+            "x": 143.328125,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 246.6640625,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 254.6640625,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 358,
+            "bottom": 99.78125
+          }
+        }
+      ],
+      "closePassed": true,
+      "nativePoint": {
+        "x": 286.75,
+        "y": 618.38671875,
+        "height": 113.6640625,
+        "top": 561.5546875,
+        "vh": 844,
+        "hit": "Enlarge photograph: Ball toss beneath the pier"
+      }
+    },
+    {
+      "id": "lacie-portrait-beneath-awning",
+      "title": "Portrait beneath an awning",
+      "url": "https://px-files.pixpa.com/848127/1789067647420-7582.jpg",
+      "alt": "A person with a gray beard and event lanyards looks toward the camera beneath a dark red awning.",
+      "complete": true,
+      "width": 2133,
+      "height": 3200,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "imageRect": {
+        "x": 32,
+        "y": 99.78125,
+        "width": 326,
+        "height": 677.8359375,
+        "right": 358,
+        "bottom": 777.6171875
+      },
+      "viewerRect": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "right": 372,
+        "bottom": 827.1171875
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "viewerOverflow": 0,
+      "fullFile": {
+        "href": "https://px-files.pixpa.com/848127/1789067647420-7582.jpg",
+        "target": "_blank",
+        "rect": {
+          "x": 119.625,
+          "y": 787.6171875,
+          "width": 150.7421875,
+          "height": 15,
+          "right": 270.3671875,
+          "bottom": 802.6171875
+        },
+        "footerRect": {
+          "x": 32,
+          "y": 785.6171875,
+          "width": 326,
+          "height": 19.5,
+          "right": 358,
+          "bottom": 805.1171875
+        },
+        "textAlign": "center",
+        "centerDelta": 0.00390625
+      },
+      "controls": [
+        {
+          "name": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 55.78125,
+            "width": 103.328125,
+            "height": 44,
+            "right": 135.328125,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Next",
+          "rect": {
+            "x": 143.328125,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 246.6640625,
+            "bottom": 99.78125
+          }
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 254.6640625,
+            "y": 55.78125,
+            "width": 103.3359375,
+            "height": 44,
+            "right": 358,
+            "bottom": 99.78125
+          }
+        }
+      ],
+      "closePassed": true,
+      "nativePoint": {
+        "x": 286.75,
+        "y": 549.671875,
+        "height": 255.75,
+        "top": 421.796875,
+        "vh": 844,
+        "hit": "Enlarge photograph: Portrait beneath an awning"
+      }
+    }
+  ],
+  "landscape": [
+    {
+      "id": "lacie-portrait-beneath-awning",
+      "title": "Portrait beneath an awning",
+      "url": "https://px-files.pixpa.com/848127/1789067647420-7582.jpg",
+      "alt": "A person with a gray beard and event lanyards looks toward the camera beneath a dark red awning.",
+      "complete": true,
+      "width": 2133,
+      "height": 3200,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "imageRect": {
+        "x": 32,
+        "y": 65.796875,
+        "width": 780,
+        "height": 266.8984375,
+        "right": 812,
+        "bottom": 332.6953125
+      },
+      "viewerRect": {
+        "x": 18,
+        "y": 7.796875,
+        "width": 808,
+        "height": 374.3984375,
+        "right": 826,
+        "bottom": 382.1953125
+      },
+      "viewport": [
+        844,
+        390
+      ],
+      "overflow": 0,
+      "viewerOverflow": 0,
+      "fullFile": {
+        "href": "https://px-files.pixpa.com/848127/1789067647420-7582.jpg",
+        "target": "_blank",
+        "rect": {
+          "x": 346.625,
+          "y": 342.6953125,
+          "width": 150.7421875,
+          "height": 15,
+          "right": 497.3671875,
+          "bottom": 357.6953125
+        },
+        "footerRect": {
+          "x": 32,
+          "y": 340.6953125,
+          "width": 780,
+          "height": 19.5,
+          "right": 812,
+          "bottom": 360.1953125
+        },
+        "textAlign": "center",
+        "centerDelta": 0.00390625
+      },
+      "controls": [
+        {
+          "name": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 21.796875,
+            "width": 84.875,
+            "height": 44,
+            "right": 116.875,
+            "bottom": 65.796875
+          }
+        },
+        {
+          "name": "Next",
+          "rect": {
+            "x": 564.4765625,
+            "y": 21.796875,
+            "width": 57.7890625,
+            "height": 44,
+            "right": 622.265625,
+            "bottom": 65.796875
+          }
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 747.3515625,
+            "y": 21.796875,
+            "width": 64.6484375,
+            "height": 44,
+            "right": 812,
+            "bottom": 65.796875
+          }
+        }
+      ],
+      "closePassed": true
+    }
+  ],
+  "embeddedIdentity": {
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+    "topLevel": false,
+    "status": 200,
+    "bytes": 43826,
+    "sha256": "eb36fbca4ba112a61d76049be2f9afb7dfe89c552adf74e1c86b25a6ce571c82",
+    "counts": {
+      "branding": 25,
+      "families": 26,
+      "headshots": 36,
+      "coastal": 14
+    },
+    "hasT028": false
+  },
+  "outerInitial": {
+    "url": "https://kiyonocreativelab.com/pier-gallery?release=seven101-live-20260910",
+    "iframes": [
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+        "title": "Newport Pier gallery: scroll to walk, or use the gallery menu"
+      }
+    ],
+    "controls": [
+      {
+        "label": "Return to main site",
+        "background": "rgb(16, 44, 64)",
+        "backdrop": "none",
+        "classes": "kcl-pier-exit",
+        "dataset": {}
+      },
+      {
+        "label": "Open gallery directly in a new tab",
+        "background": "rgb(16, 44, 64)",
+        "backdrop": "none",
+        "classes": "kcl-pier-exit",
+        "dataset": {}
+      }
+    ],
+    "bodyData": {}
+  },
+  "normalBefore": {
+    "frame": {
+      "y": 0,
+      "progress": 0,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "down",
+        "phase": -120,
+        "opacity": 0.07,
+        "surfaces": 36,
+        "visible": 11,
+        "scheduled": false,
+        "frames": 3
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "touchForward": {
+    "frame": {
+      "y": 455,
+      "progress": 0.05989994734070563,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "down",
+        "phase": -65.40698398708096,
+        "opacity": 0.3535724386264856,
+        "surfaces": 36,
+        "visible": 3,
+        "scheduled": true,
+        "frames": 62
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "touchReverse": {
+    "frame": {
+      "y": 110,
+      "progress": 0.014481305950500263,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -100.41408581858548,
+        "opacity": 0.35988092196206994,
+        "surfaces": 36,
+        "visible": 3,
+        "scheduled": true,
+        "frames": 125
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "returnBefore": {
+    "frame": {
+      "y": 110,
+      "progress": 0.014481305950500263,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -105.3333318285241,
+        "opacity": 0.0719550722998058,
+        "surfaces": 36,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 223
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "canvasHit": {
+    "frame": {
+      "tag": "A",
+      "label": "Explore Family portraits",
+      "href": "#collection/families"
+    },
+    "outer": {
+      "tag": "IFRAME"
+    },
+    "point": [
+      185,
+      420
+    ]
+  },
+  "canvasOpened": {
+    "title": "Family portraits",
+    "count": 26
+  },
+  "zoomBefore": {
+    "frame": {
+      "y": 0,
+      "progress": 0.014481305950500263,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -119.99998197072011,
+        "opacity": 0.07199250794964357,
+        "surfaces": 40,
+        "visible": 2,
+        "scheduled": false,
+        "frames": 293
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "zoomOpen": {
+    "frame": {
+      "y": 4316,
+      "progress": 0.014481305950500263,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "down",
+        "phase": 34.39622054056227,
+        "opacity": 0.16787322652329675,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": true,
+        "frames": 333
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "zoomClosed": {
+    "frame": {
+      "y": 4316,
+      "progress": 0.014481305950500263,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -24.079304756983575,
+        "opacity": 0.1575012201417732,
+        "surfaces": 40,
+        "visible": 0,
+        "scheduled": true,
+        "frames": 386
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "returnAfter": {
+    "frame": {
+      "y": 110,
+      "progress": 0.014481305950500263,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "down",
+        "phase": -105.33328425122104,
+        "opacity": 0.07194155435915539,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 487
+      }
+    },
+    "outer": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "right": 376,
+            "bottom": 766
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "idleFirst": {
+    "frame": {
+      "y": 0,
+      "progress": 0,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -119.99788156584407,
+        "opacity": 0.07196430087647022,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 1280
+      }
+    },
+    "outer": {
+      "viewport": [
+        844,
+        390
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 374
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 782,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "right": 830,
+            "bottom": 374
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "idleSecond": {
+    "frame": {
+      "y": 0,
+      "progress": 0,
+      "appearance": "clear",
+      "travel": "system",
+      "motion": false,
+      "transparency": false,
+      "coarse": true,
+      "visibility": "visible",
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -119.99788156584407,
+        "opacity": 0.07196430087647022,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 1280
+      }
+    },
+    "outer": {
+      "viewport": [
+        844,
+        390
+      ],
+      "scrollY": 0,
+      "overflow": 0,
+      "motion": false,
+      "transparency": false,
+      "controls": [
+        {
+          "label": "Return to main site",
+          "rect": {
+            "x": 14,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "right": 62,
+            "bottom": 374
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "rect": {
+            "x": 782,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "right": 830,
+            "bottom": 374
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "backdrop": "blur(3px) saturate(1.06)",
+          "layer": {
+            "style": "",
+            "display": "block",
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ]
+    }
+  },
+  "events": {
+    "cursor": 123,
+    "events": [],
+    "hasMore": false,
+    "truncated": false
+  },
+  "bridgeBefore": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -119.99788156584407,
+      "opacity": 0.07196430087647022,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": false,
+      "frames": 1280
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-119.996%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0726383,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-119.996%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0726383,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeScrollDown": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -119.99914650338177,
+      "opacity": 0.07137436737840812,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": false,
+      "frames": 1281
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-119.999%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0713744,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-119.999%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0713744,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeScrollUp": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -119.99914650338177,
+      "opacity": 0.07137436737840812,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": false,
+      "frames": 1281
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-119.999%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0713744,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-119.999%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0713744,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeZoom": {
+    "frame": {
+      "enabled": true,
+      "direction": "down",
+      "phase": 7.238911631868177,
+      "opacity": 0.24631202694587562,
+      "surfaces": 40,
+      "visible": 5,
+      "scheduled": true,
+      "frames": 1339
+    },
+    "outer": [
+      {
+        "transform": "translate3d(14.699%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.253771,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(14.699%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.253771,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeUnzoom": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -5.437384922776573,
+      "opacity": 0.17952457665780971,
+      "surfaces": 40,
+      "visible": 2,
+      "scheduled": true,
+      "frames": 1380
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-5.437%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.179525,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-5.437%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.179525,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeIdleFirst": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -5.733322992274708,
+      "opacity": 0.07194394691196913,
+      "surfaces": 40,
+      "visible": 2,
+      "scheduled": false,
+      "frames": 1447
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-5.733%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0719439,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-5.733%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0719439,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeIdleSecond": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -5.733322992274708,
+      "opacity": 0.07194394691196913,
+      "surfaces": 40,
+      "visible": 2,
+      "scheduled": false,
+      "frames": 1447
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-5.733%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0719439,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-5.733%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0719439,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeTouchDown": {
+    "frame": {
+      "enabled": true,
+      "direction": "down",
+      "phase": -90.22965636967896,
+      "opacity": 0.35038088017398117,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": true,
+      "frames": 1536
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-93.574%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.347043,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-93.574%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.347043,
+        "visible": true
+      }
+    ],
+    "position": {
+      "y": 255,
+      "progress": 0.033570300157977885
+    }
+  },
+  "bridgeTouchUp": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -104.5414686966569,
+      "opacity": 0.35988854165847906,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": true,
+      "frames": 1608
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-105.121%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.359902,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-105.121%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.359902,
+        "visible": true
+      }
+    ],
+    "position": {
+      "y": 100,
+      "progress": 0.013164823591363875
+    }
+  },
+  "bridgeFinalIdleFirst": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -106.6666660153806,
+      "opacity": 0.07196489459096758,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": false,
+      "frames": 1704
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-106.667%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0724943,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-106.667%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0724943,
+        "visible": true
+      }
+    ]
+  },
+  "bridgeFinalIdleSecond": {
+    "frame": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -106.6666660153806,
+      "opacity": 0.07196489459096758,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": false,
+      "frames": 1704
+    },
+    "outer": [
+      {
+        "transform": "translate3d(-106.667%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0724943,
+        "visible": true
+      },
+      {
+        "transform": "translate3d(-106.667%, 0px, 0px) skewX(-12deg)",
+        "opacity": 0.0724943,
+        "visible": true
+      }
+    ]
+  },
+  "finalEvents": {
+    "cursor": 141,
+    "events": [],
+    "hasMore": false,
+    "truncated": false
+  },
+  "preferencesBeforeCleanup": {
+    "appearance": "clear",
+    "travel": "system"
+  },
+  "cleanup": {
+    "iframeMediaCleared": true,
+    "iframeTouchCleared": true,
+    "parentMediaCleared": true,
+    "parentTouchCleared": true,
+    "parentViewportCleared": true,
+    "styleRepairsInjected": false,
+    "ownedReviewTabClosed": true
+  },
+  "completedAt": "2026-09-10T19:57:45.348Z"
+}

@@ -1,10 +1,10 @@
 # Drewski KCL collaboration
 
-A self-contained Newport Pier photography portfolio, exported for collaboration. The current gallery contains **94 entries: 21 Branding, 26 Family, 34 Headshot and 13 Coastal**, including the original ten NWPRT photographs within Branding. The twelve latest additions preserve every previous 82 entry, photograph and URL, plus the ten easel slots and walking runtime.
+A self-contained Newport Pier photography portfolio, exported for collaboration. The current gallery contains **101 entries: 25 Branding, 26 Family, 36 Headshot and 14 Coastal**, including the original ten NWPRT photographs within Branding. The seven latest additions preserve every previous 94 entry, photograph and URL, plus the ten easel slots and walking runtime.
 
 ## Start here: reproduce the published Pixpa integration
 
-The published source is `874050f23a65d4adc4f1734572f7b6de9ef6bcaf`, **Sites version 11**. It adds twelve approved photographs while retaining the first expansion, directional glass sheen and centered full-viewer footer. [Open the Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=next12-live-20260910) or use these commands with Node.js 20 or newer:
+The published source is `c5e5ff358302b70021cd7ce214bf52a8e1285142`, **Sites version 12**, deployed at 19:38:51 UTC on September 10, 2026. It adds seven approved photographs while retaining the previous expansions, directional glass sheen and centered full-viewer footer. Independent exact-adapter and actual-public desktop/phone reviews passed; physical-phone/Safari testing remains unperformed. [Open the Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=seven101-live-20260910) or use these commands with Node.js 20 or newer:
 
 ```sh
 npm run check
@@ -14,11 +14,11 @@ node integration/pixpa-v2/build.mjs --output /absolute/path/to/new-gallery-build
 python3 -m http.server 4330 --bind 127.0.0.1 --directory /absolute/path/to/new-gallery-build
 ```
 
-Open `http://127.0.0.1:4330/pier-v2-20260910/`. Replace the example output path with a new absolute directory and choose an unused port. The builder verifies **279 gallery files** from this repository. The 24 latest derivatives use separately mapped native Pixpa Files URLs in the hosted adapter; their exact local copies are included for the standalone build. [Integration README](integration/pixpa-v2/README.md) explains the delivery split, public-verification state, preserved V1 photo URLs, unchanged Pixpa wrapper, rollback and capacity limit.
+Open `http://127.0.0.1:4330/pier-v2-20260910/`. Replace the example output path with a new absolute directory and choose an unused port. The builder verifies **279 gallery files** from this repository. The 38 externally mapped derivatives use native Pixpa Files URLs in the hosted adapter; their exact local copies are included for the standalone build. [Integration README](integration/pixpa-v2/README.md) explains the delivery split, public-verification state, preserved V1 photo URLs, unchanged Pixpa wrapper, rollback and capacity limit.
 
-The plain `npm start` option below serves all 94 entries with local root-relative images. The integration build reproduces the hosted V1/V2 prefixes, ordinary external-image bindings and native Pixpa navigation adapter. Neither command saves or publishes a site, and no private hosting-repository access is required.
+The plain `npm start` option below serves all 101 entries with local root-relative images. The integration build reproduces the hosted V1/V2 prefixes, ordinary external-image bindings and native Pixpa navigation adapter. Neither command saves or publishes a site, and no private hosting-repository access is required.
 
-[Public acceptance](integration/pixpa-v2/PUBLIC-ACCEPTANCE.md) and the [twelve-photo release](integration/pixpa-v2/NEXT12-RELEASE.md) distinguish source checks, actual live behavior and physical-device limits. Sheen is retained from version 10. Later curation batches and the unrelated external Inquiry legal-link issue are outside this release.
+[Seven-photo release](integration/pixpa-v2/SEVEN-RELEASE.md) records the current release. [Earlier public acceptance](integration/pixpa-v2/PUBLIC-ACCEPTANCE.md) and the [twelve-photo release](integration/pixpa-v2/NEXT12-RELEASE.md) remain historical evidence. These distinguish source checks, actual live behavior and physical-device limits. Sheen is retained from version 10. Later curation batches and the unrelated external Inquiry legal-link issue are outside this release.
 
 ## Run locally
 

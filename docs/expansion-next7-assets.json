@@ -1,0 +1,160 @@
+{
+  "schema": "kcl-expansion-assets-v1",
+  "base": "7918fa7cc24cd6ba978e012980c64c9805141564",
+  "assets": [
+    {
+      "path": "public/media/expansion/9a0bd601ebc88000295b46f65fdcc156df74a01fc0f40358f84d0c4c925dc904.jpg",
+      "sha256": "9a0bd601ebc88000295b46f65fdcc156df74a01fc0f40358f84d0c4c925dc904",
+      "bytes": 1511067,
+      "width": 2134,
+      "height": 3200,
+      "category": "branding",
+      "photo_id": "coke-stacked-chilled-cans",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/b5d7620823316495b55e604cc3497867f3388d4ab3a2bc17628070ba6ddb9712.jpg",
+      "sha256": "b5d7620823316495b55e604cc3497867f3388d4ab3a2bc17628070ba6ddb9712",
+      "bytes": 118583,
+      "width": 640,
+      "height": 960,
+      "category": "branding",
+      "photo_id": "coke-stacked-chilled-cans",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/c3354d311f7c19b936d29fda454325160829779bb46ce406f21685fe9f6bb9fa.jpg",
+      "sha256": "c3354d311f7c19b936d29fda454325160829779bb46ce406f21685fe9f6bb9fa",
+      "bytes": 1610767,
+      "width": 3200,
+      "height": 2134,
+      "category": "branding",
+      "photo_id": "coke-a-close-sip",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/6666cded7d560a368ce2d320dfbde87f66d3b8eec14cddb39b4926f36c6dc59d.jpg",
+      "sha256": "6666cded7d560a368ce2d320dfbde87f66d3b8eec14cddb39b4926f36c6dc59d",
+      "bytes": 68312,
+      "width": 960,
+      "height": 640,
+      "category": "branding",
+      "photo_id": "coke-a-close-sip",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/39f2bcfd329d0e3dd1ea4eadf05bea7d273837d12dceb3f04aadfb53e571ae76.jpg",
+      "sha256": "39f2bcfd329d0e3dd1ea4eadf05bea7d273837d12dceb3f04aadfb53e571ae76",
+      "bytes": 511171,
+      "width": 3200,
+      "height": 2133,
+      "category": "branding",
+      "photo_id": "coke-bottle-in-the-surf",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/9ff99f0910c6c0e232a3b862ce366134c0f6acff95e8cc4721a66c10bd491be4.jpg",
+      "sha256": "9ff99f0910c6c0e232a3b862ce366134c0f6acff95e8cc4721a66c10bd491be4",
+      "bytes": 46175,
+      "width": 960,
+      "height": 640,
+      "category": "branding",
+      "photo_id": "coke-bottle-in-the-surf",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/5111393ba659b1edcdce5096256af3bcbd5a9b56ad5c4c1e93069d64fb6f5107.jpg",
+      "sha256": "5111393ba659b1edcdce5096256af3bcbd5a9b56ad5c4c1e93069d64fb6f5107",
+      "bytes": 2005666,
+      "width": 3200,
+      "height": 2133,
+      "category": "branding",
+      "photo_id": "lacie-service-team-beside-truck",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/5a9eaad071394a68458eb98996ff978c39e5dd4a9bf9d0bffe766e8c8bcf94cc.jpg",
+      "sha256": "5a9eaad071394a68458eb98996ff978c39e5dd4a9bf9d0bffe766e8c8bcf94cc",
+      "bytes": 132224,
+      "width": 960,
+      "height": 640,
+      "category": "branding",
+      "photo_id": "lacie-service-team-beside-truck",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/be7f0f71584b9cc43b4735dde5af20c6a010f651de18268611b0a920cb58e76f.jpg",
+      "sha256": "be7f0f71584b9cc43b4735dde5af20c6a010f651de18268611b0a920cb58e76f",
+      "bytes": 1057497,
+      "width": 3200,
+      "height": 2133,
+      "category": "coastal",
+      "photo_id": "coastal-ball-toss-beneath-pier",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/12dd81175f407c32323b57768cc09a1766f14a4fccbf6fd77dc32cfdadc538b7.jpg",
+      "sha256": "12dd81175f407c32323b57768cc09a1766f14a4fccbf6fd77dc32cfdadc538b7",
+      "bytes": 103412,
+      "width": 960,
+      "height": 640,
+      "category": "coastal",
+      "photo_id": "coastal-ball-toss-beneath-pier",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/bf5025b5739b21b74c68198fd822c50242c50eebeb6737fea9c4341c39eed764.jpg",
+      "sha256": "bf5025b5739b21b74c68198fd822c50242c50eebeb6737fea9c4341c39eed764",
+      "bytes": 1307273,
+      "width": 2133,
+      "height": 3200,
+      "category": "headshots",
+      "photo_id": "lacie-portrait-light-gray-jacket",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/acc7fecbd581db6d6657b44dda1cb15c53d5ca6a85ccfbe049419247922bd3f0.jpg",
+      "sha256": "acc7fecbd581db6d6657b44dda1cb15c53d5ca6a85ccfbe049419247922bd3f0",
+      "bytes": 68011,
+      "width": 640,
+      "height": 960,
+      "category": "headshots",
+      "photo_id": "lacie-portrait-light-gray-jacket",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/0f88c7c3419ac241f263ea2cfd9e9339bdae7f22515d6e13ce5560203333251b.jpg",
+      "sha256": "0f88c7c3419ac241f263ea2cfd9e9339bdae7f22515d6e13ce5560203333251b",
+      "bytes": 1252263,
+      "width": 2133,
+      "height": 3200,
+      "category": "headshots",
+      "photo_id": "lacie-portrait-beneath-awning",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/a0d2e215cc044474ecafbfd6f169296479261b1e4a184806b7181e0d36390e1e.jpg",
+      "sha256": "a0d2e215cc044474ecafbfd6f169296479261b1e4a184806b7181e0d36390e1e",
+      "bytes": 97185,
+      "width": 640,
+      "height": 960,
+      "category": "headshots",
+      "photo_id": "lacie-portrait-beneath-awning",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    }
+  ]
+}
