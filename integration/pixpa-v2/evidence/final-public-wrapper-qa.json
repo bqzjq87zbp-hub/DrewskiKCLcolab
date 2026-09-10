@@ -1,0 +1,45 @@
+{
+  "scope": "Independent bounded live-wrapper QA through a fresh CUA Chrome tab; no source, Site, Pixpa, GitHub, or OS-preference mutations.",
+  "publicURL": "https://kiyonocreativelab.com/pier-gallery?release=glass-walk-restored-20260910",
+  "iframeURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "browserTabId": "138375051",
+  "desktop": {
+    "viewport": {"width": 1440, "height": 900},
+    "iframeRect": {"x": 0, "y": 0, "width": 1440, "height": 900},
+    "bothWrapperIcons": {"width": 48, "height": 48},
+    "input": "Native CUA scroll at [720,450]",
+    "initialProgress": 0,
+    "afterDownTwoPages": 0.3636363744735718,
+    "afterUpOnePage": 0.1818181872367859,
+    "visualCameraChangeObserved": true,
+    "screenshot": "independent-desktop-reverse-20260910.png",
+    "pass": true
+  },
+  "narrow": {
+    "viewport": {"width": 390, "height": 844},
+    "iframeRect": {"x": 0, "y": 0, "width": 390, "height": 844},
+    "bothWrapperIcons": {"width": 48, "height": 48},
+    "parentPointerCoarse": false,
+    "input": "Native CUA scroll at [195,422]",
+    "initialProgress": 0,
+    "afterDownTwoPages": 0.2222222238779068,
+    "afterUpOnePage": 0.1111111119389534,
+    "visualCameraChangeObserved": true,
+    "screenshot": "independent-390-forward-20260910.png",
+    "pass": true,
+    "limitation": "Narrow mouse/fine-pointer viewport test, not physical-phone or touch certification. Child cross-origin coarse-pointer emulation was not attempted or asserted. Fine-pointer scene is visibly letterboxed within the full-height iframe."
+  },
+  "returnAndBack": {
+    "action": "Clicked the visible wrapper Return to main site link, then used browser Back.",
+    "returnURL": "https://kiyonocreativelab.com/",
+    "returnTitle": "Southern California Heirloom Portrait Studio | Kiyono Creative Lab",
+    "backURL": "https://kiyonocreativelab.com/pier-gallery?release=glass-walk-restored-20260910",
+    "restoredProgress": 0.1111111119389534,
+    "screenshot": "independent-browser-back-390-20260910.png",
+    "pass": true,
+    "toolNote": "The Back command timed out after navigation. Reacquiring the same known tab verified the correct gallery URL, rendered gallery, focus on Return link, and exact pre-exit progress. No second Back action was issued."
+  },
+  "measurement": "Progress values are the cross-origin child accessibility tree's Aisle progress indicator, corroborated by normal screenshots; no injected scroll or app-state manipulation.",
+  "temporaryViewportReset": true,
+  "screenshotsSaved": 3
+}

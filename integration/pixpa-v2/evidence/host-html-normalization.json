@@ -1,0 +1,20 @@
+[
+  {
+    "file": "index.html",
+    "status": 200,
+    "injectedCloudflareBlocks": 1,
+    "expiration": null,
+    "expectedSha": "f3e4b75a792ef85edf41802bb959189b75831a5f550b56a7614baec6061d2299",
+    "normalizedSha": "f3e4b75a792ef85edf41802bb959189b75831a5f550b56a7614baec6061d2299",
+    "pass": true
+  },
+  {
+    "file": "aisle/assets/review.html",
+    "status": 200,
+    "injectedCloudflareBlocks": 1,
+    "expiration": null,
+    "expectedSha": "1e4de925e0c1a1775a79977b27d55dab099104b3cfa16248fca6c3eeff93500f",
+    "normalizedSha": "1e4de925e0c1a1775a79977b27d55dab099104b3cfa16248fca6c3eeff93500f",
+    "pass": true
+  }
+]

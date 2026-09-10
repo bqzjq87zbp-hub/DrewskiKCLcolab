@@ -1,0 +1,653 @@
+{
+  "categories": [
+    {
+      "id": "branding",
+      "title": "Branding",
+      "items": [
+        {
+          "id": "branding-12",
+          "title": "Brand photograph 12",
+          "alt": "White-gloved hands present a Coca-Cola bottle beside a wine glass in a reflective product composition.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/c4236e1c13029c8bfe85db2d.jpg",
+          "full": "/pier-v1-20260909/media/c4236e1c13029c8bfe85db2d.jpg"
+        },
+        {
+          "id": "branding-13",
+          "title": "Brand photograph 13",
+          "alt": "Coca-Cola bottles in a red ice bucket with beach volleyball players behind them.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/pier-v1-20260909/media/335e2ea0847bd07fec38d935.jpg",
+          "full": "/pier-v1-20260909/media/335e2ea0847bd07fec38d935.jpg"
+        },
+        {
+          "id": "branding-14",
+          "title": "Brand photograph 14",
+          "alt": "Four red Coca-Cola bottle caps on a pale surface covered with water droplets.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/pier-v1-20260909/media/aa854f83427a78814a8c9330.jpg",
+          "full": "/pier-v1-20260909/media/aa854f83427a78814a8c9330.jpg"
+        },
+        {
+          "id": "nwprt-apparel-display",
+          "title": "NWPRT · Apparel",
+          "alt": "An orange NWPRT shirt, blue tie-dye hoodie, burgundy cap and orange sunglasses on a wooden clothing rack beside a window.",
+          "width": 1318,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/42f851b10b91c7fb7c671b0f.jpg",
+          "full": "/pier-v1-20260909/media/1f21b9be45767539b18e85ed.jpg"
+        },
+        {
+          "id": "nwprt-cap-portrait",
+          "title": "NWPRT · Cap portrait",
+          "alt": "A man in sunglasses tips a white NWPRT cap beside a dark doorway.",
+          "width": 979,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/6c2a2315ad94452845e533d8.jpg",
+          "full": "/pier-v1-20260909/media/70f12efe1e861d2356d7e266.jpg"
+        },
+        {
+          "id": "nwprt-hat-lager",
+          "title": "NWPRT · Hat & lager",
+          "alt": "A blue-and-red NWPRT Lager hat sits beside a glass of golden beer under yellow patio umbrellas.",
+          "width": 2800,
+          "height": 1866,
+          "src": "/pier-v1-20260909/media/0d730119329ad4799756e2bd.jpg",
+          "full": "/pier-v1-20260909/media/0d730119329ad4799756e2bd.jpg"
+        },
+        {
+          "id": "nwprt-lager-charlies",
+          "title": "NWPRT · Lager at Charlie’s",
+          "alt": "A blue-and-red NWPRT Lager cap and a golden beer sit in front of a Charlie’s Chili menu beneath yellow umbrellas.",
+          "width": 942,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/ad462df1d55a206a67b2fc81.jpg",
+          "full": "/pier-v1-20260909/media/3ebbfe1b2269fd0af95899d0.jpg"
+        },
+        {
+          "id": "nwprt-yellow-patio",
+          "title": "NWPRT · Yellow umbrellas",
+          "alt": "Yellow patio umbrellas and orange chairs line a beachside walkway beneath palms and a white streetlamp.",
+          "width": 1400,
+          "height": 1336,
+          "src": "/pier-v1-20260909/media/b52f709139bc3c03536ae335.jpg",
+          "full": "/pier-v1-20260909/media/1f5b70025a38abaf25c5ef97.jpg"
+        },
+        {
+          "id": "nwprt-lifeguard-campaign",
+          "title": "NWPRT · Lifeguard",
+          "alt": "A lifeguard climbs a wooden beach tower beneath yellow flags and the existing NWPRT graphic against a blue sky.",
+          "width": 1000,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/d6fd42eb8fd212cf18552d2a.jpg",
+          "full": "/pier-v1-20260909/media/7e59da520784cdd298b72877.jpg"
+        },
+        {
+          "id": "nwprt-bodyboard-wind",
+          "title": "NWPRT · Bodyboard afternoon",
+          "alt": "Two children hold bodyboards in the beach breeze beside a lifeguard tower.",
+          "width": 1400,
+          "height": 933,
+          "src": "/pier-v1-20260909/media/f4abdf1af9c237de58680c77.jpg",
+          "full": "/pier-v1-20260909/media/11b5d5f94bb2846f435a0384.jpg"
+        },
+        {
+          "id": "nwprt-gulls-beachfront",
+          "title": "NWPRT · Beachfront gulls",
+          "alt": "One gull spreads its wings beside another above a busy beachfront lined with palms.",
+          "width": 1400,
+          "height": 796,
+          "src": "/pier-v1-20260909/media/e897dd444b4def376669c088.jpg",
+          "full": "/pier-v1-20260909/media/9bda6fe011490e01763750e4.jpg"
+        },
+        {
+          "id": "nwprt-pier-shore-activity",
+          "title": "NWPRT · At the waterline",
+          "alt": "Two children and their boards meet the surf beside Newport Pier, reflected in the wet sand.",
+          "width": 1400,
+          "height": 737,
+          "src": "/pier-v1-20260909/media/76c190762ceeff63c494f2c9.jpg",
+          "full": "/pier-v1-20260909/media/15e20340ffa0cc99b0e6464c.jpg"
+        },
+        {
+          "id": "nwprt-underpier-branded",
+          "title": "NWPRT · Under the pier",
+          "alt": "Waves pass beneath a timber pier, with an existing NWPRT Supply Co badge at the bottom of the photograph.",
+          "width": 2800,
+          "height": 1867,
+          "src": "/pier-v1-20260909/media/08bfbe519671b2a3ec187588.jpg",
+          "full": "/pier-v1-20260909/media/08bfbe519671b2a3ec187588.jpg"
+        }
+      ],
+      "rooms": []
+    },
+    {
+      "id": "families",
+      "title": "Family portraits",
+      "items": [
+        {
+          "id": "families-01",
+          "title": "Family portrait 01",
+          "alt": "A family of four sits together in the Southern California hills.",
+          "width": 3840,
+          "height": 2560,
+          "src": "/pier-v1-20260909/media/363dc893eff2ab2c7ff0724e.jpg",
+          "full": "/pier-v1-20260909/media/363dc893eff2ab2c7ff0724e.jpg"
+        },
+        {
+          "id": "families-02",
+          "title": "Family portrait 02",
+          "alt": "Two children kiss their mother while she cradles a newborn beneath a tree.",
+          "width": 3000,
+          "height": 4500,
+          "src": "/pier-v1-20260909/media/a602589870049a3f0fb24c83.jpg",
+          "full": "/pier-v1-20260909/media/a602589870049a3f0fb24c83.jpg"
+        },
+        {
+          "id": "families-03",
+          "title": "Family portrait 03",
+          "alt": "A couple sits together beneath a broad tree, smiling at one another.",
+          "width": 2400,
+          "height": 1540,
+          "src": "/pier-v1-20260909/media/86be855645440b5a914c953a.jpg",
+          "full": "/pier-v1-20260909/media/86be855645440b5a914c953a.jpg"
+        },
+        {
+          "id": "families-04",
+          "title": "Family portrait 04",
+          "alt": "A newborn looks toward the camera while resting against their mother's shoulder.",
+          "width": 2600,
+          "height": 3900,
+          "src": "/pier-v1-20260909/media/8601f013a9a902169521c8b0.jpg",
+          "full": "/pier-v1-20260909/media/8601f013a9a902169521c8b0.jpg"
+        },
+        {
+          "id": "families-05",
+          "title": "Family portrait 05",
+          "alt": "Two parents laugh while holding their young child beneath a leafy tree.",
+          "width": 1733,
+          "height": 2600,
+          "src": "/pier-v1-20260909/media/f40563af947ec69c20021507.jpg",
+          "full": "/pier-v1-20260909/media/f40563af947ec69c20021507.jpg"
+        },
+        {
+          "id": "families-06",
+          "title": "Family portrait 06",
+          "alt": "Two children play with colorful balls along the shoreline beneath an open sky.",
+          "width": 3840,
+          "height": 2160,
+          "src": "/pier-v1-20260909/media/4d393268061adceca4155add.jpg",
+          "full": "/pier-v1-20260909/media/4d393268061adceca4155add.jpg"
+        },
+        {
+          "id": "families-07",
+          "title": "Family portrait 07",
+          "alt": "A father lifts his son high against an open blue sky in the Southern California hills.",
+          "width": 2560,
+          "height": 3840,
+          "src": "/pier-v1-20260909/media/955f53a8e6570b9373c299c2.jpg",
+          "full": "/pier-v1-20260909/media/955f53a8e6570b9373c299c2.jpg"
+        },
+        {
+          "id": "families-08",
+          "title": "Family portrait 08",
+          "alt": "Two siblings smile toward one another beneath a pier while holding illuminated balls.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/pier-v1-20260909/media/a5837627b4f676209118e0e7.jpg",
+          "full": "/pier-v1-20260909/media/a5837627b4f676209118e0e7.jpg"
+        },
+        {
+          "id": "families-09",
+          "title": "Family portrait 09",
+          "alt": "A father dances with his daughter outdoors while another child watches.",
+          "width": 2800,
+          "height": 4200,
+          "src": "/pier-v1-20260909/media/f06ec1bfba96659fe6b9da2f.jpg",
+          "full": "/pier-v1-20260909/media/f06ec1bfba96659fe6b9da2f.jpg"
+        },
+        {
+          "id": "families-10",
+          "title": "Family portrait 10",
+          "alt": "Black-and-white close portrait of an older woman looking directly into the camera.",
+          "width": 2057,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/2d96f735ba18201980dee971.jpg",
+          "full": "/pier-v1-20260909/media/2d96f735ba18201980dee971.jpg"
+        },
+        {
+          "id": "families-11",
+          "title": "Family portrait 11",
+          "alt": "A father holds a baby in the foreground while the rest of the family gathers behind them.",
+          "width": 2800,
+          "height": 4200,
+          "src": "/pier-v1-20260909/media/c58e8ca633d94a87765e2d6a.jpg",
+          "full": "/pier-v1-20260909/media/c58e8ca633d94a87765e2d6a.jpg"
+        },
+        {
+          "id": "families-12",
+          "title": "Family portrait 12",
+          "alt": "A family of five gathers beneath a tree in a relaxed portrait.",
+          "width": 2800,
+          "height": 4200,
+          "src": "/pier-v1-20260909/media/bea67300da7b0a77dcfa3653.jpg",
+          "full": "/pier-v1-20260909/media/bea67300da7b0a77dcfa3653.jpg"
+        },
+        {
+          "id": "families-13",
+          "title": "Family portrait 13",
+          "alt": "Two sisters hold hands while moving through tall grass.",
+          "width": 2800,
+          "height": 1867,
+          "src": "/pier-v1-20260909/media/d7ad3b51e4c774c87d7a425b.jpg",
+          "full": "/pier-v1-20260909/media/d7ad3b51e4c774c87d7a425b.jpg"
+        },
+        {
+          "id": "families-14",
+          "title": "Color & play",
+          "alt": "Two children stand back-to-back by the beach, holding pink and blue balls.",
+          "width": 1440,
+          "height": 960,
+          "src": "/pier-v1-20260909/media/c4a641f3b456ab59149913ea.jpg",
+          "full": "/pier-v1-20260909/media/363fdb503e956d0273863e50.jpg"
+        },
+        {
+          "id": "families-15",
+          "title": "Toward the water",
+          "alt": "Two children seen from behind hold hands and carry pink and blue balls while facing the ocean.",
+          "width": 1440,
+          "height": 960,
+          "src": "/pier-v1-20260909/media/c6231e82c5d10dbda7f1220d.jpg",
+          "full": "/pier-v1-20260909/media/0a7d2faec6cf918c625f0619.jpg"
+        },
+        {
+          "id": "families-16",
+          "title": "Layered family portrait",
+          "alt": "A father holds a baby in the foreground while the mother and children gather beneath a tree behind them.",
+          "width": 3840,
+          "height": 2160,
+          "src": "/pier-v1-20260909/media/1d1679620b5eb5e9b334276c.jpg",
+          "full": "/pier-v1-20260909/media/1d1679620b5eb5e9b334276c.jpg"
+        },
+        {
+          "id": "families-lacie-001",
+          "title": "Father and child",
+          "alt": "A smiling father cradles his laughing child in a close outdoor portrait.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/fb8e63035c205a3251dcd602.jpg",
+          "full": "/pier-v1-20260909/media/4967ef26446203f5514ff4da.jpg"
+        },
+        {
+          "id": "families-lacie-002",
+          "title": "Child under an open sky",
+          "alt": "A child in a pink dress balances on one leg with an arm outstretched beneath a pale evening sky.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/5d3ba0d0278a7287633624d7.jpg",
+          "full": "/pier-v1-20260909/media/f3d91ee5078d8a3102569310.jpg"
+        },
+        {
+          "id": "families-lacie-003",
+          "title": "Child portrait in black and white",
+          "alt": "A young child looks directly into the camera in a close black-and-white portrait.",
+          "width": 929,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/391d2e976f93016c1fc8a53e.jpg",
+          "full": "/pier-v1-20260909/media/806acd3e487f0b0fc646973b.jpg"
+        },
+        {
+          "id": "families-lacie-004",
+          "title": "Sisters together",
+          "alt": "An older sister embraces her younger sister as they stand together in tall grass.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/0339e7ad66e61d910bea5c59.jpg",
+          "full": "/pier-v1-20260909/media/5dbcccb90432fd253c75600a.jpg"
+        },
+        {
+          "id": "families-lacie-005",
+          "title": "Family at dusk",
+          "alt": "A father carries two children while a mother holds a baby, their figures silhouetted against an evening sky.",
+          "width": 1400,
+          "height": 933,
+          "src": "/pier-v1-20260909/media/61f6169f4002044fe1d07e9c.jpg",
+          "full": "/pier-v1-20260909/media/044ce4a7ec48b6d0528efce5.jpg"
+        }
+      ],
+      "rooms": []
+    },
+    {
+      "id": "headshots",
+      "title": "Professional headshots",
+      "items": [
+        {
+          "id": "headshots-01",
+          "title": "Professional portrait 01",
+          "alt": "An angled, smiling portrait in a light gray blazer against a warm red studio background.",
+          "width": 1600,
+          "height": 2400,
+          "src": "/pier-v1-20260909/media/34b32ab8408f756277f44d70.jpg",
+          "full": "/pier-v1-20260909/media/34b32ab8408f756277f44d70.jpg"
+        },
+        {
+          "id": "headshots-02",
+          "title": "Professional portrait 02",
+          "alt": "A professional faces the camera in a clean portrait against a quiet background.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/0163dea99efa5683d470b7ad.jpg",
+          "full": "/pier-v1-20260909/media/0163dea99efa5683d470b7ad.jpg"
+        },
+        {
+          "id": "headshots-03",
+          "title": "Professional portrait 03",
+          "alt": "A business professional smiles in a warm three-quarter portrait against a clean graphic wall.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/8f676584c9da2513a27baa4f.jpg",
+          "full": "/pier-v1-20260909/media/8f676584c9da2513a27baa4f.jpg"
+        },
+        {
+          "id": "headshots-04",
+          "title": "Professional portrait 04",
+          "alt": "A business professional in glasses smiles in a patterned blouse against a quiet pale backdrop.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/ff8c5d0a7cc3a358674e851b.jpg",
+          "full": "/pier-v1-20260909/media/ff8c5d0a7cc3a358674e851b.jpg"
+        },
+        {
+          "id": "headshots-05",
+          "title": "Professional portrait 05",
+          "alt": "A medical professional in scrubs holds a stethoscope during a portrait.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/3304a50e7a7a0d5e264947d8.jpg",
+          "full": "/pier-v1-20260909/media/3304a50e7a7a0d5e264947d8.jpg"
+        },
+        {
+          "id": "headshots-06",
+          "title": "Professional portrait 06",
+          "alt": "A hospitality professional holds a branded tea while seated against a botanical wall.",
+          "width": 2560,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/60cdc9a37a20ee409045b5eb.jpg",
+          "full": "/pier-v1-20260909/media/60cdc9a37a20ee409045b5eb.jpg"
+        },
+        {
+          "id": "headshots-07",
+          "title": "Professional portrait 07",
+          "alt": "A smiling portrait with long braids, hoop earrings and a navy blazer against a warm red background.",
+          "width": 1599,
+          "height": 2400,
+          "src": "/pier-v1-20260909/media/090c3caad475229f7e9d0695.jpg",
+          "full": "/pier-v1-20260909/media/090c3caad475229f7e9d0695.jpg"
+        },
+        {
+          "id": "headshots-08",
+          "title": "Professional portrait 08",
+          "alt": "A hospitality professional smiles against a lush botanical wall in an environmental brand portrait.",
+          "width": 2400,
+          "height": 3600,
+          "src": "/pier-v1-20260909/media/24c88a7a537770a0290b8162.jpg",
+          "full": "/pier-v1-20260909/media/24c88a7a537770a0290b8162.jpg"
+        },
+        {
+          "id": "headshots-09",
+          "title": "Professional portrait 09",
+          "alt": "A person in a neutral top faces the camera in a clean editorial headshot.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/cce0d215323ba81520913403.jpg",
+          "full": "/pier-v1-20260909/media/cce0d215323ba81520913403.jpg"
+        },
+        {
+          "id": "headshots-10",
+          "title": "Professional portrait 10",
+          "alt": "A business professional smiles in formal attire against a bright clean background.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/e720e468c4e335f1f5698eb9.jpg",
+          "full": "/pier-v1-20260909/media/e720e468c4e335f1f5698eb9.jpg"
+        },
+        {
+          "id": "headshots-11",
+          "title": "Professional portrait 11",
+          "alt": "A woman in a white dress sits beside a reflective city wall in an environmental personal-brand portrait.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/94a456843863c6aa31137f6c.jpg",
+          "full": "/pier-v1-20260909/media/94a456843863c6aa31137f6c.jpg"
+        },
+        {
+          "id": "headshots-12",
+          "title": "Professional portrait 12",
+          "alt": "A woman in a white dress smiles in a close professional portrait against green foliage.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/0faa7eb4c0ad1135866f4c46.jpg",
+          "full": "/pier-v1-20260909/media/0faa7eb4c0ad1135866f4c46.jpg"
+        },
+        {
+          "id": "headshots-13",
+          "title": "Professional portrait 13",
+          "alt": "A direct portrait in a light blazer and green shirt against a warm red studio background.",
+          "width": 1600,
+          "height": 2400,
+          "src": "/pier-v1-20260909/media/96ba6788e8d76e01457ef787.jpg",
+          "full": "/pier-v1-20260909/media/96ba6788e8d76e01457ef787.jpg"
+        },
+        {
+          "id": "headshots-14",
+          "title": "Professional portrait 14",
+          "alt": "A professional with voluminous curls smiles in a close portrait against a graphic white wall.",
+          "width": 2243,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/577eb43287f3ea5d9fedf5fd.jpg",
+          "full": "/pier-v1-20260909/media/577eb43287f3ea5d9fedf5fd.jpg"
+        },
+        {
+          "id": "headshots-15",
+          "title": "Professional portrait 15",
+          "alt": "A woman in a white dress faces the camera in a polished elevator portrait.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/5bf0345b84335e96d827b1a3.jpg",
+          "full": "/pier-v1-20260909/media/5bf0345b84335e96d827b1a3.jpg"
+        },
+        {
+          "id": "headshots-16",
+          "title": "Professional portrait 16",
+          "alt": "A business professional with a short beard meets the camera in a crisp close headshot against a clean neutral background.",
+          "width": 2533,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/63f2317fb79e5600be818060.jpg",
+          "full": "/pier-v1-20260909/media/63f2317fb79e5600be818060.jpg"
+        },
+        {
+          "id": "headshots-17",
+          "title": "Professional portrait 17",
+          "alt": "A creative professional meets the camera in a crisp headshot against a quiet neutral background.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/13a47c55385a48222c5a0efd.jpg",
+          "full": "/pier-v1-20260909/media/13a47c55385a48222c5a0efd.jpg"
+        },
+        {
+          "id": "headshots-18",
+          "title": "Professional portrait 18",
+          "alt": "A business professional smiles in a patterned red blazer against a clean white brick wall.",
+          "width": 2118,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/b81afdc474c67116e06a96c9.jpg",
+          "full": "/pier-v1-20260909/media/b81afdc474c67116e06a96c9.jpg"
+        },
+        {
+          "id": "headshots-19",
+          "title": "Professional portrait 19",
+          "alt": "A smiling portrait with black glasses and a black jacket against a warm red background.",
+          "width": 1600,
+          "height": 2400,
+          "src": "/pier-v1-20260909/media/44246db8df167276d79b1654.jpg",
+          "full": "/pier-v1-20260909/media/44246db8df167276d79b1654.jpg"
+        },
+        {
+          "id": "headshots-20",
+          "title": "Professional portrait 20",
+          "alt": "A creative professional smiles in a polished event portrait framed by colorful neon light.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+          "full": "/pier-v1-20260909/media/6c64e7f9a63f9ce01ebd8e7c.jpg"
+        },
+        {
+          "id": "headshots-21",
+          "title": "Professional portrait 21",
+          "alt": "A bearded community leader holds a flag in an environmental personal-brand portrait.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/e3985b3a4ca015b66a441fc2.jpg",
+          "full": "/pier-v1-20260909/media/e3985b3a4ca015b66a441fc2.jpg"
+        },
+        {
+          "id": "headshots-22",
+          "title": "Professional portrait 22",
+          "alt": "A creative professional laughs in a contemporary event portrait with restrained neon light.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/pier-v1-20260909/media/cfcde45e923ea4fff4ce2dac.jpg",
+          "full": "/pier-v1-20260909/media/cfcde45e923ea4fff4ce2dac.jpg"
+        },
+        {
+          "id": "headshots-23",
+          "title": "Professional portrait 23",
+          "alt": "A creative professional in a cap smiles in a lively environmental portrait.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/pier-v1-20260909/media/e31e239fe8b11431dabc7faf.jpg",
+          "full": "/pier-v1-20260909/media/e31e239fe8b11431dabc7faf.jpg"
+        },
+        {
+          "id": "headshots-24",
+          "title": "Professional portrait 24",
+          "alt": "A composed portrait in a patterned top with a silver necklace against a warm red background.",
+          "width": 1600,
+          "height": 2400,
+          "src": "/pier-v1-20260909/media/1864f27f41aa5333c9d38dde.jpg",
+          "full": "/pier-v1-20260909/media/1864f27f41aa5333c9d38dde.jpg"
+        },
+        {
+          "id": "headshots-25",
+          "title": "Professional portrait 25",
+          "alt": "A business professional in a green blazer smiles in a polished event portrait.",
+          "width": 2000,
+          "height": 3000,
+          "src": "/pier-v1-20260909/media/ccec0cde43cb3cd3b23afcf7.jpg",
+          "full": "/pier-v1-20260909/media/ccec0cde43cb3cd3b23afcf7.jpg"
+        },
+        {
+          "id": "headshots-26",
+          "title": "Professional portrait 26",
+          "alt": "A retail professional smiles in a workplace portrait with the shop environment visible.",
+          "width": 3000,
+          "height": 2000,
+          "src": "/pier-v1-20260909/media/acc1ad30cbd73725d0ac6ed6.jpg",
+          "full": "/pier-v1-20260909/media/acc1ad30cbd73725d0ac6ed6.jpg"
+        },
+        {
+          "id": "headshots-lacie-garrett-studio",
+          "title": "Studio portrait in a tan jacket",
+          "alt": "A smiling portrait in a tan jacket and white shirt against vertical timber panels.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/c393e8d7757ba486a8bbdfd1.jpg",
+          "full": "/pier-v1-20260909/media/606c39c46a788eabd7cad94a.jpg"
+        },
+        {
+          "id": "headshots-lacie-twist-portrait",
+          "title": "Portrait with side-swept twists",
+          "alt": "A composed portrait with side-swept twists and a dark sweater against a warm red background.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/6f692d68168b6f54116b5d13.jpg",
+          "full": "/pier-v1-20260909/media/1825de7e0853fbdff388bf7c.jpg"
+        },
+        {
+          "id": "headshots-lacie-flat-cap",
+          "title": "Portrait in a gray flat cap",
+          "alt": "A bearded person in a gray flat cap and patterned shirt looks toward the camera against a pale brick wall.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+          "full": "/pier-v1-20260909/media/f08a52e4e0b7e4c9f4df4d0c.jpg"
+        },
+        {
+          "id": "headshots-lacie-cream-knit",
+          "title": "Portrait in a cream knit shirt",
+          "alt": "A portrait with curly hair, a cream knit shirt and a beaded necklace against a warm red background.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/69baa9ffe7a88fbc3916c1f2.jpg",
+          "full": "/pier-v1-20260909/media/09920ffdef0dccd54b6dfc01.jpg"
+        },
+        {
+          "id": "headshots-lacie-burgundy-jacket",
+          "title": "Portrait in a burgundy jacket",
+          "alt": "A person with long dark hair smiles in a burgundy jacket with black lapels against a warm red background.",
+          "width": 933,
+          "height": 1400,
+          "src": "/pier-v1-20260909/media/fe23574feaffede554dd289a.jpg",
+          "full": "/pier-v1-20260909/media/228b1d52f8f29c8495fb44b1.jpg"
+        }
+      ],
+      "rooms": []
+    },
+    {
+      "id": "coastal",
+      "title": "Coastal photographs",
+      "items": [
+        {
+          "id": "color-balls",
+          "title": "Color & play",
+          "alt": "Two children stand back-to-back by the beach, holding pink and blue balls.",
+          "width": 1440,
+          "height": 960,
+          "src": "/pier-v1-20260909/media/c4a641f3b456ab59149913ea.jpg",
+          "full": "/pier-v1-20260909/media/363fdb503e956d0273863e50.jpg"
+        },
+        {
+          "id": "shared-glance",
+          "title": "A shared glance",
+          "alt": "Two children in yellow shirts look toward each other beneath a timber pier while holding colored balls.",
+          "width": 1440,
+          "height": 960,
+          "src": "/pier-v1-20260909/media/1e7f972e651c8e41c91168b6.jpg",
+          "full": "/pier-v1-20260909/media/481288d072d928eac1b8b2c6.jpg"
+        },
+        {
+          "id": "toward-the-water",
+          "title": "Toward the water",
+          "alt": "Two children seen from behind hold hands and carry pink and blue balls while facing the ocean.",
+          "width": 1440,
+          "height": 960,
+          "src": "/pier-v1-20260909/media/c6231e82c5d10dbda7f1220d.jpg",
+          "full": "/pier-v1-20260909/media/0a7d2faec6cf918c625f0619.jpg"
+        },
+        {
+          "id": "coastal-poise",
+          "title": "Coastal poise",
+          "alt": "A person seen from behind holds their hair while standing in shallow surf.",
+          "width": 2000,
+          "height": 2800,
+          "src": "/pier-v1-20260909/media/07f59839133492f58ad8884a.jpg",
+          "full": "/pier-v1-20260909/media/07f59839133492f58ad8884a.jpg"
+        }
+      ],
+      "rooms": []
+    }
+  ]
+}

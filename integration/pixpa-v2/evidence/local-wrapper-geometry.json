@@ -1,0 +1,281 @@
+[
+  {
+    "w": 320,
+    "h": 740,
+    "touch": true,
+    "links": [
+      {
+        "x": 14,
+        "y": 614,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 258,
+        "y": 614,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 740,
+    "viewHeight": 740
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "touch": true,
+    "links": [
+      {
+        "x": 14,
+        "y": 718,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 328,
+        "y": 718,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 844,
+    "viewHeight": 844
+  },
+  {
+    "w": 430,
+    "h": 932,
+    "touch": true,
+    "links": [
+      {
+        "x": 14,
+        "y": 806,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 368,
+        "y": 806,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 932,
+    "viewHeight": 932
+  },
+  {
+    "w": 844,
+    "h": 390,
+    "touch": true,
+    "links": [
+      {
+        "x": 14,
+        "y": 326,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 782,
+        "y": 326,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 390,
+    "viewHeight": 390
+  },
+  {
+    "w": 768,
+    "h": 1024,
+    "touch": true,
+    "links": [
+      {
+        "x": 14,
+        "y": 960,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 706,
+        "y": 960,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 1024,
+    "viewHeight": 1024
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "touch": false,
+    "links": [
+      {
+        "x": 14,
+        "y": 661.3828125,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 962,
+        "y": 661.3828125,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 768,
+    "viewHeight": 768
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "touch": false,
+    "links": [
+      {
+        "x": 59.078125,
+        "y": 836,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 1332.921875,
+        "y": 836,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 900,
+    "viewHeight": 900
+  },
+  {
+    "w": 1728,
+    "h": 1117,
+    "touch": false,
+    "links": [
+      {
+        "x": 40.3515625,
+        "y": 1053,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 1639.6484375,
+        "y": 1053,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 1117,
+    "viewHeight": 1117
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "touch": false,
+    "links": [
+      {
+        "x": 14,
+        "y": 426.0234375,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      },
+      {
+        "x": 328,
+        "y": 426.0234375,
+        "w": 48,
+        "h": 48,
+        "fill": "rgba(255, 255, 255, 0.067)",
+        "blur": "blur(3px) saturate(1.06)",
+        "onPhoto": true,
+        "hudOverlap": false
+      }
+    ],
+    "overflow": 0,
+    "innerOverflow": 0,
+    "frameHeight": 844,
+    "viewHeight": 844
+  }
+]
