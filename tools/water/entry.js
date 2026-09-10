@@ -35,7 +35,12 @@ export async function mountWaterLayer(viewport) {
   try {
     gpu = await init();
     const coarse = matchMedia("(pointer: coarse)").matches;
-    canvasSurface = surface(gpu, canvas, { dpr: coarse ? [1, 1.5] : [1, 2] });
+    canvasSurface = surface(gpu, canvas, {
+      dpr: coarse ? [1, 1.5] : [1, 2],
+      // The overlay composites over the photograph instead of replacing it.
+      alphaMode: "premultiplied",
+      clearColor: [0, 0, 0, 0],
+    });
     tex = gpu.device.createTexture({
       size: [FRAME_W, FRAME_H], format: "rgba8unorm",
       // copyExternalImageToTexture REQUIRES render_attachment on the destination.
@@ -44,7 +49,7 @@ export async function mountWaterLayer(viewport) {
     plane = effect(gpu, wgsl, {
       set: {
         params: {
-          time: 0, travel: 0, strength: 0.006, shimmer: 0.8,
+          time: 0, travel: 0, intensity: 0.22, strength: 0.006, shimmer: 0.55,
           waterline: 0.835, feather: 0.06,
           coverScale: [1, 1], coverOffset: [0, 0],
         },

@@ -7,6 +7,7 @@ import { simplex2d } from "@vgpu/wgsl-std/noise/simplex";
 struct Params {
   time: f32,
   travel: f32,   // smoothed camera walk time (s); scroll streams the water past
+  intensity: f32,// overall opacity of the effect; this is a small accent, not a layer
   strength: f32,     // ripple refraction amplitude, frame-uv units
   shimmer: f32,      // sparkle gain
   waterline: f32,    // frame-uv y where water begins (top-origin: water is high y)
@@ -28,11 +29,11 @@ fn rippleField(p: vec2f, t: f32) -> f32 {
   let fuv = uv * params.coverScale + params.coverOffset;
   let depth = fuv.y - params.waterline;           // >0 inside the water
 
-  // ~83% of fragments are above the waterline and provably passthrough; skip all
-  // noise work there. Explicit-LOD sampling keeps WGSL uniformity rules satisfied
-  // inside and after this non-uniform branch (one mip level, so output is identical).
+  // This is a transparent overlay: it draws ONLY the water. Everything above the
+  // waterline returns zero alpha, so the photograph underneath is untouched
+  // rather than resampled, and the effect can never disturb the pier or easels.
   if (depth <= 0.0) {
-    return vec4f(textureSampleLevel(frameTex, frameSamp, saturate(fuv), 0.0).rgb, 1.0);
+    return vec4f(0.0, 0.0, 0.0, 0.0);
   }
 
   // Water mask, eased so the nearest water moves the most.
@@ -43,14 +44,18 @@ fn rippleField(p: vec2f, t: f32) -> f32 {
   // Perspective: features get finer toward the waterline, coarser near the camera.
   let persp = mix(3.2, 1.0, smoothstep(0.0, 0.18, depth));
 
-  // Refraction: central-difference gradient of the ripple field bends the sample.
-  let e = 0.012;
   // Monotone perspective y: the exact integral of persp over depth (slope == persp
   // everywhere, so it can never fold), with the linear tail past the 0.18 ramp.
   let pt = saturate(depth / 0.18);
   let rpY = 3.2 * min(depth, 0.18) - 0.396 * (pt * pt * pt - 0.5 * pt * pt * pt * pt) + max(depth - 0.18, 0.0);
-  let flow = vec2f(0.0, params.travel * 0.18);
+
+  // Advection is deliberately slow. Scrubbing used to race the noise field fast
+  // enough to strobe; the water should drift with the walk, not sprint with it.
+  let flow = vec2f(0.0, params.travel * 0.05);
   let rp = vec2f(fuv.x * persp, rpY * 4.0) - flow;
+
+  // Refraction: central-difference gradient of the ripple field bends the sample.
+  let e = 0.012;
   let gx = rippleField(rp + vec2f(e, 0.0), params.time) - rippleField(rp - vec2f(e, 0.0), params.time);
   let gy = rippleField(rp + vec2f(0.0, e), params.time) - rippleField(rp - vec2f(0.0, e), params.time);
   let edgeGuard = saturate(min(fuv, vec2f(1.0) - fuv) / 0.02);
@@ -58,15 +63,19 @@ fn rippleField(p: vec2f, t: f32) -> f32 {
 
   var color = textureSampleLevel(frameTex, frameSamp, saturate(fuv + offset), 0.0).rgb;
 
-  // Sparkle rides the photograph's own bright crests instead of painting over it:
-  // weight by sampled luminance, keep it sparse with a high power.
+  // Sparkle rides the photograph's own bright crests. Frequencies are held well
+  // under the texture's Nyquist limit: the old 46/120 and 73/190 bands, times a
+  // perspective factor up to 3.2, aliased into visible noise on a 1280px source.
   let luma = dot(color, vec3f(0.299, 0.587, 0.114));
   let crest = smoothstep(0.42, 0.75, luma);
-  let sp = vec2f(fuv.x * persp, rpY * 4.0) - flow * 1.35;   // slightly faster: near-surface parallax
-  let s1 = simplex2d(sp * vec2f(46.0, 120.0) + vec2f(params.time * 0.42, -params.time * 0.23));
-  let s2 = simplex2d(sp * vec2f(73.0, 190.0) - vec2f(params.time * 0.27, params.time * 0.36));
+  let sp = vec2f(fuv.x * persp, rpY * 4.0) - flow * 1.35;
+  let s1 = simplex2d(sp * vec2f(18.0, 44.0) + vec2f(params.time * 0.30, -params.time * 0.17));
+  let s2 = simplex2d(sp * vec2f(26.0, 60.0) - vec2f(params.time * 0.19, params.time * 0.25));
   let sparkle = pow(saturate(s1 * s2 * 2.4), 5.0) * params.shimmer * mask * (0.25 + 0.75 * crest);
   color += vec3f(1.0, 0.97, 0.88) * sparkle;
 
-  return vec4f(color, 1.0);
+  // Premultiplied output. Alpha carries the accent strength, so turning the
+  // effect down is one number rather than a retune of every term.
+  let alpha = saturate(mask * params.intensity);
+  return vec4f(color * alpha, alpha);
 }
