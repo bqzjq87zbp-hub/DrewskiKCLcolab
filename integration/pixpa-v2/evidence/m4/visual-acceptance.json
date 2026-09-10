@@ -1,0 +1,52 @@
+{
+  "status": "PASS_ROOT_VISUAL_INSPECTION",
+  "time": "2026-09-10T22:08:45.423816+00:00",
+  "personallyInspectedScreenshots": 8,
+  "observations": [
+    "Both complete approved frames are visible at desktop1440x1000, phone390x844 and landscape844x390 with readable titles and centered full-file links.",
+    "Both outer exit controls remain clear of the photograph, title, viewer controls and full-file link.",
+    "Normal clear controls show the aisle photograph underneath; the phone before/after return captures are visually consistent."
+  ],
+  "files": [
+    {
+      "path": "phone-native-entry.png",
+      "bytes": 472373,
+      "sha256": "329a3b51cfd7ac12309737d8a2299043f9c2970bd7797afcaf945cacfc3dbdac"
+    },
+    {
+      "path": "phone-coastal-bodyboard-through-breaking-surf.png",
+      "bytes": 274031,
+      "sha256": "2299bb73811b95645a11bccd46a4e914f6ee6858df18145310461691c52fa450"
+    },
+    {
+      "path": "phone-coastal-feet-fins-and-bottle.png",
+      "bytes": 128940,
+      "sha256": "bba5e83bf40fea87055af3f3cdae2b226b5e7ace3478f178046cc91efdc241ae"
+    },
+    {
+      "path": "phone-native-return.png",
+      "bytes": 472565,
+      "sha256": "b5efc2621cc7d5513bcc9acd3646da7c0601c6cc8c0dfc06793a1259f5730f08"
+    },
+    {
+      "path": "landscape-coastal-bodyboard-through-breaking-surf.png",
+      "bytes": 116562,
+      "sha256": "3830d515fc73ad3e39529ef00ed0a8306c623875e5edcc8add8fc61e76a96d72"
+    },
+    {
+      "path": "landscape-coastal-feet-fins-and-bottle.png",
+      "bytes": 149711,
+      "sha256": "88a55414f058f044112d1831abeb7c8124838575cf8522459b2b030eeaf516f5"
+    },
+    {
+      "path": "desktop/coastal-bodyboard-through-breaking-surf.png",
+      "bytes": 797211,
+      "sha256": "1aeec6191e78a54526dc487edaa11bde47ba5a006261c64a784565b383047659"
+    },
+    {
+      "path": "desktop/coastal-feet-fins-and-bottle.png",
+      "bytes": 937819,
+      "sha256": "f368eb5e7e3102fee335c2a59659739a80e57ea8784d0195f11b52e2b9a338c2"
+    }
+  ]
+}

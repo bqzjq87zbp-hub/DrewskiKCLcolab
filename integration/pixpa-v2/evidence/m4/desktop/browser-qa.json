@@ -1,0 +1,1036 @@
+{
+  "schema": "kcl-public104-desktop-review-v1",
+  "startedAt": "2026-09-10T22:06:31.142Z",
+  "wrapperURL": "https://kiyonocreativelab.com/pier-gallery?release=two104-live-20260910",
+  "expectedIframeURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "deployment": {
+    "sitesVersion": 14,
+    "source": "0e8e58237a7a8ab6875944c8d1da5bfc26015be1",
+    "id": "appgdep_6aa327bbcc888191858d9c631c0ccbdb",
+    "succeededAt": "2026-09-10T21:58:40.305718Z",
+    "provenance": "Publisher handoff; category identity independently verified below"
+  },
+  "scope": "Actual public wrapper and iframe, two-photo desktop acceptance only",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "screenshots": [
+    "coastal-bodyboard-through-breaking-surf.png",
+    "coastal-feet-fins-and-bottle.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "protocolErrors": [],
+  "browser": {
+    "engine": "Installed Chrome through isolated Playwright",
+    "version": "152.0.7977.83",
+    "headless": true,
+    "retainedUserTabsTouched": false
+  },
+  "actualIframeURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "media": {
+    "outer": {
+      "reducedMotion": false,
+      "reducedTransparency": false,
+      "moreContrast": false,
+      "forcedColors": false,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "iframe": {
+      "reducedMotion": false,
+      "reducedTransparency": false,
+      "moreContrast": false,
+      "forcedColors": false,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "preferences": {
+      "appearance": "clear",
+      "travel": "system"
+    }
+  },
+  "categories": {
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/categories.json",
+    "status": 200,
+    "bytes": 45170,
+    "sha256": "f839b9716516405ae360933431650a348e44a330687c15af6d887768e8f67980",
+    "counts": {
+      "branding": 25,
+      "families": 27,
+      "headshots": 36,
+      "coastal": 16
+    },
+    "total": 104,
+    "records": [
+      {
+        "position": 8,
+        "id": "coastal-bodyboard-through-breaking-surf",
+        "title": "Through breaking surf",
+        "alt": "A backlit child rides a bodyboard through breaking surf, with glittering water and a distant beach behind.",
+        "width": 2133,
+        "height": 3200,
+        "src": "https://px-files.pixpa.com/848127/1789075338734-6805.jpg",
+        "full": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg"
+      },
+      {
+        "position": 15,
+        "id": "coastal-feet-fins-and-bottle",
+        "title": "Feet, fins and sea",
+        "alt": "Bare feet hang above magenta swim fins beside a capped Coca-Cola bottle, with the ocean behind.",
+        "width": 3200,
+        "height": 2133,
+        "src": "https://px-files.pixpa.com/848127/1789075377112-9950.jpg",
+        "full": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg"
+      }
+    ]
+  },
+  "ordinaryDecodes": [
+    {
+      "id": "coastal-bodyboard-through-breaking-surf",
+      "role": "thumbnail",
+      "url": "https://px-files.pixpa.com/848127/1789075338734-6805.jpg",
+      "width": 640,
+      "height": 960,
+      "actualWidth": 640,
+      "actualHeight": 960,
+      "complete": true,
+      "crossOrigin": null,
+      "currentSrc": "https://px-files.pixpa.com/848127/1789075338734-6805.jpg"
+    },
+    {
+      "id": "coastal-bodyboard-through-breaking-surf",
+      "role": "full",
+      "url": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+      "width": 2133,
+      "height": 3200,
+      "actualWidth": 2133,
+      "actualHeight": 3200,
+      "complete": true,
+      "crossOrigin": null,
+      "currentSrc": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg"
+    },
+    {
+      "id": "coastal-feet-fins-and-bottle",
+      "role": "thumbnail",
+      "url": "https://px-files.pixpa.com/848127/1789075377112-9950.jpg",
+      "width": 960,
+      "height": 640,
+      "actualWidth": 960,
+      "actualHeight": 640,
+      "complete": true,
+      "crossOrigin": null,
+      "currentSrc": "https://px-files.pixpa.com/848127/1789075377112-9950.jpg"
+    },
+    {
+      "id": "coastal-feet-fins-and-bottle",
+      "role": "full",
+      "url": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+      "width": 3200,
+      "height": 2133,
+      "actualWidth": 3200,
+      "actualHeight": 2133,
+      "complete": true,
+      "crossOrigin": null,
+      "currentSrc": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg"
+    }
+  ],
+  "coastalDOM": {
+    "count": 16,
+    "order": [
+      {
+        "position": 1,
+        "id": "color-balls",
+        "title": "Color & play",
+        "label": "Enlarge photograph: Color & play",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v1-20260909/media/363fdb503e956d0273863e50.jpg"
+      },
+      {
+        "position": 2,
+        "id": "coastal-sunglasses-on-sand",
+        "title": "Left on the sand",
+        "label": "Enlarge photograph: Left on the sand",
+        "href": "https://px-files.pixpa.com/848127/1789062554382-2566.jpg"
+      },
+      {
+        "position": 3,
+        "id": "coastal-sand-patterns",
+        "title": "Patterns in the sand",
+        "label": "Enlarge photograph: Patterns in the sand",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/expansion/6b57a244dc284e9b16e608a51d48209d77d768b7ced46083db6a84a8927e567a.jpg"
+      },
+      {
+        "position": 4,
+        "id": "shared-glance",
+        "title": "A shared glance",
+        "label": "Enlarge photograph: A shared glance",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v1-20260909/media/481288d072d928eac1b8b2c6.jpg"
+      },
+      {
+        "position": 5,
+        "id": "coastal-timber-and-surf",
+        "title": "Timber and surf",
+        "label": "Enlarge photograph: Timber and surf",
+        "href": "https://px-files.pixpa.com/848127/1789062521548-6067.jpg"
+      },
+      {
+        "position": 6,
+        "id": "coastal-airborne-color",
+        "title": "Airborne color",
+        "label": "Enlarge photograph: Airborne color",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/expansion/221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82.jpg"
+      },
+      {
+        "position": 7,
+        "id": "coastal-decorated-bicycles",
+        "title": "Bicycles at the beach",
+        "label": "Enlarge photograph: Bicycles at the beach",
+        "href": "https://px-files.pixpa.com/848127/1789062513736-6220.jpg"
+      },
+      {
+        "position": 8,
+        "id": "coastal-bodyboard-through-breaking-surf",
+        "title": "Through breaking surf",
+        "label": "Enlarge photograph: Through breaking surf",
+        "href": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg"
+      },
+      {
+        "position": 9,
+        "id": "toward-the-water",
+        "title": "Toward the water",
+        "label": "Enlarge photograph: Toward the water",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v1-20260909/media/0a7d2faec6cf918c625f0619.jpg"
+      },
+      {
+        "position": 10,
+        "id": "coastal-toward-the-tower",
+        "title": "Toward the tower",
+        "label": "Enlarge photograph: Toward the tower",
+        "href": "https://px-files.pixpa.com/848127/1789062562153-6604.jpg"
+      },
+      {
+        "position": 11,
+        "id": "coastal-quiet-pink-ball",
+        "title": "A quiet moment",
+        "label": "Enlarge photograph: A quiet moment",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/expansion/29845977f9849499b3bded99ac21f0ecfea3965ee76ca6794bffececeb38d120.jpg"
+      },
+      {
+        "position": 12,
+        "id": "coastal-poise",
+        "title": "Coastal poise",
+        "label": "Enlarge photograph: Coastal poise",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v1-20260909/media/07f59839133492f58ad8884a.jpg"
+      },
+      {
+        "position": 13,
+        "id": "coastal-incoming-wave",
+        "title": "An incoming wave",
+        "label": "Enlarge photograph: An incoming wave",
+        "href": "https://px-files.pixpa.com/848127/1789062546626-7704.jpg"
+      },
+      {
+        "position": 14,
+        "id": "coastal-waterside-walk",
+        "title": "Waterside walk",
+        "label": "Enlarge photograph: Waterside walk",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/expansion/ce95e569fb3e83a6dbf7640c32fb404373133a4a89b800c269168ead0ab489f4.jpg"
+      },
+      {
+        "position": 15,
+        "id": "coastal-feet-fins-and-bottle",
+        "title": "Feet, fins and sea",
+        "label": "Enlarge photograph: Feet, fins and sea",
+        "href": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg"
+      },
+      {
+        "position": 16,
+        "id": "coastal-ball-toss-beneath-pier",
+        "title": "Ball toss beneath the pier",
+        "label": "Enlarge photograph: Ball toss beneath the pier",
+        "href": "https://px-files.pixpa.com/848127/1789067631937-2317.jpg"
+      }
+    ]
+  },
+  "result": "PASS",
+  "completedAt": "2026-09-10T22:08:17.877Z",
+  "viewers": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dialog": {
+        "open": true,
+        "rect": {
+          "x": 95,
+          "y": 20,
+          "width": 1250,
+          "height": 960,
+          "top": 20,
+          "right": 1345,
+          "bottom": 980,
+          "left": 95
+        }
+      },
+      "title": "Through breaking surf",
+      "titleRect": {
+        "x": 477.53125,
+        "y": 44.75,
+        "width": 163.71875,
+        "height": 22.5,
+        "top": 44.75,
+        "right": 641.25,
+        "bottom": 67.25,
+        "left": 477.53125
+      },
+      "image": {
+        "src": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+        "alt": "A backlit child rides a bodyboard through breaking surf, with glittering water and a distant beach behind.",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "complete": true,
+        "fit": "contain",
+        "objectPosition": "50% 50%",
+        "opacity": "1",
+        "filter": "none",
+        "rect": {
+          "x": 109,
+          "y": 78,
+          "width": 1222,
+          "height": 852.5,
+          "top": 78,
+          "right": 1331,
+          "bottom": 930.5,
+          "left": 109
+        },
+        "paintedRect": {
+          "x": 435.877734375,
+          "y": 78,
+          "width": 568.24453125,
+          "height": 852.5
+        }
+      },
+      "footer": {
+        "text": "Open full photograph file",
+        "href": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+        "target": "_blank",
+        "rect": {
+          "x": 644.625,
+          "y": 939.5,
+          "width": 150.75,
+          "height": 16,
+          "top": 939.5,
+          "right": 795.375,
+          "bottom": 955.5,
+          "left": 644.625
+        },
+        "parentRect": {
+          "x": 109,
+          "y": 938.5,
+          "width": 1222,
+          "height": 19.5,
+          "top": 938.5,
+          "right": 1331,
+          "bottom": 958,
+          "left": 109
+        },
+        "textAlign": "center",
+        "centerDelta": 0
+      },
+      "controls": [
+        {
+          "text": "Previous",
+          "rect": {
+            "x": 109,
+            "y": 34,
+            "width": 84.875,
+            "height": 44,
+            "top": 34,
+            "right": 193.875,
+            "bottom": 78,
+            "left": 109
+          }
+        },
+        {
+          "text": "Next",
+          "rect": {
+            "x": 924.890625,
+            "y": 34,
+            "width": 57.796875,
+            "height": 44,
+            "top": 34,
+            "right": 982.6875,
+            "bottom": 78,
+            "left": 924.890625
+          }
+        },
+        {
+          "text": "Close",
+          "rect": {
+            "x": 1266.34375,
+            "y": 34,
+            "width": 64.65625,
+            "height": 44,
+            "top": 34,
+            "right": 1331,
+            "bottom": 78,
+            "left": 1266.34375
+          }
+        }
+      ],
+      "overflow": {
+        "documentHorizontal": 0,
+        "viewerHorizontal": 0,
+        "viewerVertical": 0
+      },
+      "id": "coastal-bodyboard-through-breaking-surf",
+      "outer": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "documentHorizontalOverflow": 0,
+        "exits": [
+          {
+            "label": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "rect": {
+              "x": 14,
+              "y": 916.0625,
+              "width": 48,
+              "height": 48,
+              "top": 916.0625,
+              "right": 62,
+              "bottom": 964.0625,
+              "left": 14
+            },
+            "visibility": "visible",
+            "display": "flex"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "rect": {
+              "x": 1378,
+              "y": 916.0625,
+              "width": 48,
+              "height": 48,
+              "top": 916.0625,
+              "right": 1426,
+              "bottom": 964.0625,
+              "left": 1378
+            },
+            "visibility": "visible",
+            "display": "flex"
+          }
+        ],
+        "reflectionCount": 2
+      },
+      "geometry": {
+        "coordinateMethod": "Child viewport rectangles translated by measured iframe x/y into outer viewport coordinates",
+        "iframeOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "outerOverlapAreas": [
+          {
+            "exit": "Return to main site",
+            "target": "painted photograph",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "title",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "full-file link",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "Previous",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "Next",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "Close",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "painted photograph",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "title",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "full-file link",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "Previous",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "Next",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "Close",
+            "area": 0
+          }
+        ],
+        "internalOverlapAreas": [
+          {
+            "a": "painted photograph",
+            "b": "title",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "full-file link",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "Previous",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "full-file link",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "Previous",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "full-file link",
+            "b": "Previous",
+            "area": 0
+          },
+          {
+            "a": "full-file link",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "full-file link",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "Previous",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "Previous",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "Next",
+            "b": "Close",
+            "area": 0
+          }
+        ],
+        "allTargetsInsideChildViewport": true,
+        "paintedImageWithinImageElement": true
+      },
+      "popup": {
+        "url": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+        "contentType": "image/jpeg",
+        "image": {
+          "complete": true,
+          "width": 2133,
+          "height": 3200
+        },
+        "closed": true
+      },
+      "closeReturnedToCollection": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dialog": {
+        "open": true,
+        "rect": {
+          "x": 95,
+          "y": 20,
+          "width": 1250,
+          "height": 960,
+          "top": 20,
+          "right": 1345,
+          "bottom": 980,
+          "left": 95
+        }
+      },
+      "title": "Feet, fins and sea",
+      "titleRect": {
+        "x": 489.265625,
+        "y": 44.75,
+        "width": 128.515625,
+        "height": 22.5,
+        "top": 44.75,
+        "right": 617.78125,
+        "bottom": 67.25,
+        "left": 489.265625
+      },
+      "image": {
+        "src": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+        "alt": "Bare feet hang above magenta swim fins beside a capped Coca-Cola bottle, with the ocean behind.",
+        "naturalWidth": 3200,
+        "naturalHeight": 2133,
+        "complete": true,
+        "fit": "contain",
+        "objectPosition": "50% 50%",
+        "opacity": "1",
+        "filter": "none",
+        "rect": {
+          "x": 109,
+          "y": 78,
+          "width": 1222,
+          "height": 852.5,
+          "top": 78,
+          "right": 1331,
+          "bottom": 930.5,
+          "left": 109
+        },
+        "paintedRect": {
+          "x": 109,
+          "y": 96.98031249999997,
+          "width": 1222,
+          "height": 814.5393750000001
+        }
+      },
+      "footer": {
+        "text": "Open full photograph file",
+        "href": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+        "target": "_blank",
+        "rect": {
+          "x": 644.625,
+          "y": 939.5,
+          "width": 150.75,
+          "height": 16,
+          "top": 939.5,
+          "right": 795.375,
+          "bottom": 955.5,
+          "left": 644.625
+        },
+        "parentRect": {
+          "x": 109,
+          "y": 938.5,
+          "width": 1222,
+          "height": 19.5,
+          "top": 938.5,
+          "right": 1331,
+          "bottom": 958,
+          "left": 109
+        },
+        "textAlign": "center",
+        "centerDelta": 0
+      },
+      "controls": [
+        {
+          "text": "Previous",
+          "rect": {
+            "x": 109,
+            "y": 34,
+            "width": 84.875,
+            "height": 44,
+            "top": 34,
+            "right": 193.875,
+            "bottom": 78,
+            "left": 109
+          }
+        },
+        {
+          "text": "Next",
+          "rect": {
+            "x": 913.15625,
+            "y": 34,
+            "width": 57.796875,
+            "height": 44,
+            "top": 34,
+            "right": 970.953125,
+            "bottom": 78,
+            "left": 913.15625
+          }
+        },
+        {
+          "text": "Close",
+          "rect": {
+            "x": 1266.34375,
+            "y": 34,
+            "width": 64.65625,
+            "height": 44,
+            "top": 34,
+            "right": 1331,
+            "bottom": 78,
+            "left": 1266.34375
+          }
+        }
+      ],
+      "overflow": {
+        "documentHorizontal": 0,
+        "viewerHorizontal": 0,
+        "viewerVertical": 0
+      },
+      "id": "coastal-feet-fins-and-bottle",
+      "outer": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "documentHorizontalOverflow": 0,
+        "exits": [
+          {
+            "label": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "rect": {
+              "x": 14,
+              "y": 916.0625,
+              "width": 48,
+              "height": 48,
+              "top": 916.0625,
+              "right": 62,
+              "bottom": 964.0625,
+              "left": 14
+            },
+            "visibility": "visible",
+            "display": "flex"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "rect": {
+              "x": 1378,
+              "y": 916.0625,
+              "width": 48,
+              "height": 48,
+              "top": 916.0625,
+              "right": 1426,
+              "bottom": 964.0625,
+              "left": 1378
+            },
+            "visibility": "visible",
+            "display": "flex"
+          }
+        ],
+        "reflectionCount": 2
+      },
+      "geometry": {
+        "coordinateMethod": "Child viewport rectangles translated by measured iframe x/y into outer viewport coordinates",
+        "iframeOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "outerOverlapAreas": [
+          {
+            "exit": "Return to main site",
+            "target": "painted photograph",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "title",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "full-file link",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "Previous",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "Next",
+            "area": 0
+          },
+          {
+            "exit": "Return to main site",
+            "target": "Close",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "painted photograph",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "title",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "full-file link",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "Previous",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "Next",
+            "area": 0
+          },
+          {
+            "exit": "Open gallery directly in a new tab",
+            "target": "Close",
+            "area": 0
+          }
+        ],
+        "internalOverlapAreas": [
+          {
+            "a": "painted photograph",
+            "b": "title",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "full-file link",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "Previous",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "painted photograph",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "full-file link",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "Previous",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "title",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "full-file link",
+            "b": "Previous",
+            "area": 0
+          },
+          {
+            "a": "full-file link",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "full-file link",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "Previous",
+            "b": "Next",
+            "area": 0
+          },
+          {
+            "a": "Previous",
+            "b": "Close",
+            "area": 0
+          },
+          {
+            "a": "Next",
+            "b": "Close",
+            "area": 0
+          }
+        ],
+        "allTargetsInsideChildViewport": true,
+        "paintedImageWithinImageElement": true
+      },
+      "popup": {
+        "url": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+        "contentType": "image/jpeg",
+        "image": {
+          "complete": true,
+          "width": 3200,
+          "height": 2133
+        },
+        "closed": true
+      },
+      "closeReturnedToCollection": true
+    }
+  ],
+  "observations": [
+    {
+      "kind": "initial-popup-event-timeout",
+      "photo": "coastal-feet-fins-and-bottle",
+      "observed": "TimeoutError: browserContext.waitForEvent: Timeout 30000ms exceeded while waiting for event \"page\"",
+      "resolution": "A targeted fresh isolated session opened the actual second full-file link, decoded the expected native JPEG and closed it. No additional screenshots or broader matrix were taken. The timeout cause is not attributed."
+    }
+  ],
+  "sessions": [
+    {
+      "purpose": "Main desktop review",
+      "startedAt": "2026-09-10T22:06:31.142Z",
+      "completedAt": "2026-09-10T22:07:08.932Z",
+      "cleanup": {
+        "iframeMediaOverridesCleared": true,
+        "outerMediaOverridesCleared": true,
+        "ownedPagesBeforeBrowserClose": 1,
+        "ownedIsolatedBrowserClosed": true
+      },
+      "applicationErrors": {
+        "console": 0,
+        "page": 0,
+        "protocol": 0
+      }
+    },
+    {
+      "purpose": "Targeted second full-file link recheck",
+      "startedAt": "2026-09-10T22:08:12.362Z",
+      "completedAt": "2026-09-10T22:08:17.877Z",
+      "media": {
+        "outer": {
+          "reducedMotion": false,
+          "reducedTransparency": false,
+          "moreContrast": false,
+          "forcedColors": false,
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "iframe": {
+          "reducedMotion": false,
+          "reducedTransparency": false,
+          "moreContrast": false,
+          "forcedColors": false,
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "preferences": {
+          "appearance": "clear",
+          "travel": "system"
+        }
+      },
+      "cleanup": {
+        "iframeMediaOverridesCleared": true,
+        "outerMediaOverridesCleared": true,
+        "ownedPagesBeforeBrowserClose": 1,
+        "ownedIsolatedBrowserClosed": true
+      },
+      "applicationErrors": {
+        "console": 0,
+        "page": 0,
+        "protocol": 0
+      }
+    }
+  ],
+  "visualInspection": {
+    "personallyInspected": true,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "screenshots": [
+      "coastal-bodyboard-through-breaking-surf.png",
+      "coastal-feet-fins-and-bottle.png"
+    ],
+    "conclusion": "Both complete accepted frames are visible without stretching or cropping. Titles, navigation buttons, centered full-file links and both outer exit controls are legible and separated. The portrait retains the full backlit surf scene; the landscape retains both feet, fins and capped bottle.",
+    "reviewedAt": "2026-09-10T22:09:40.989317+00:00"
+  },
+  "cleanup": {
+    "allOwnedBrowsersClosed": true,
+    "allParentAndIframeMediaOverridesCleared": true,
+    "bothFullFilePopupsClosed": true,
+    "retainedUserTabsTouched": false,
+    "sourceOrPublicMutations": false
+  }
+}

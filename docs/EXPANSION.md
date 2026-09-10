@@ -1,6 +1,16 @@
 # Reviewed gallery expansion
 
-## Current isolated one-photo candidate after 101
+## Current isolated M4 pair after 102
+
+Two approved Supporting Coastal photographs bring this isolated source candidate to 104 entries: Branding 25, Family 27, Headshots 36, Coastal 16. The unchanged importer completed its default dry run and apply with two accepted records and no holds. The complete external ledger advanced from 33 to 35 imports. Ledger reconstruction equals the actual category document; removing only these two additions reproduces every prior 102 record, metadata field, URL and relative order.
+
+**Through breaking surf**, Supporting 76, is Coastal position 8 after Bicycles at the beach and before Toward the water. Its complete portrait silhouette, board, bright surf, broad sky, visible sky spots and distant shoreline remain. **Feet, fins and sea**, Supporting 78, is Coastal position 15 after Waterside walk and before Ball toss beneath the pier. It retains the full landscape, partial legs, complete feet, dark tones, worn magenta fins and bottle; the fin crosses the lower bottle below the readable red label. No crop, exposure lift, retouch or sharpening was applied. These are contained collection/viewer roles without hero, category-lead, easel, print, location, identity, client or endorsement claims.
+
+`expansion-m4-assets.json` lists the exact four added JPEGs totaling 1,863,109 bytes. The photograph delta consists of those four binaries plus `public/categories.json`. Cumulative `expansion-assets.json` preserves all 70 JPEGs totaling 48,669,517 bytes, and cumulative review metadata preserves all 35 imported IDs. The complete private provenance ledger stays outside source and sanitized delivery. All prior source/runtime/glass/sheen/Home-related assets and ten slots remain unchanged.
+
+Later host integration must use only the two new records and rebind only their four approved ordinary image URLs onto the accepted public102 adapter. Preserve all existing public records/URLs/order and the host's centered full-file footer. This complete local category document is not a wholesale replacement for the hosted adapter.
+
+## Preserved round05 one-photo checkpoint (48bbcffa)
 
 One approved supporting Family photograph brings this isolated candidate to 102 entries: Branding 25, Family 27, Headshots 36, Coastal 14. The existing importer completed its standard dry run and apply with one accepted record and no holds. The complete private ledger advanced from 32 to 33 imports. Reconstructing categories from that ledger reproduces the actual candidate. Removing only `families-wrapped-in-evening-light` reproduces the entire prior 101-entry category document exactly, including every item, URL string, category metadata field and relative order.
 

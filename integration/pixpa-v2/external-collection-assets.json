@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "48bbcffa420bbcaf37022ab42bb52e9e2ee16769",
+  "sourceCommit": "76b451b4aee978c50762be40c0ff43a71032d5d4",
   "role": "ordinary-collection-and-full-viewer-only",
   "corsTextureUse": false,
   "hostingPolicy": "Keep these files external in the Pixpa adapter; source originals remain in public/media/expansion for standalone rebuilding.",
@@ -244,6 +244,30 @@
       "bytes": 53733,
       "sha256": "7def7dff1221c89934c925d5227bc5ded02a15f9a336fda00764bfb5693f6fc0",
       "url": "https://px-files.pixpa.com/848127/1789071449681-2448.jpg"
+    },
+    {
+      "path": "public/media/expansion/ed268e74f4bf42645ecf1db2a5d57e6d289d1d6789d636736aa0a24d58983855.jpg",
+      "bytes": 1188305,
+      "sha256": "ed268e74f4bf42645ecf1db2a5d57e6d289d1d6789d636736aa0a24d58983855",
+      "url": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg"
+    },
+    {
+      "path": "public/media/expansion/70a8a87c49bc7e51e72cf155b99dffd2264eca3a5fc577b01df39787aed79af0.jpg",
+      "bytes": 102642,
+      "sha256": "70a8a87c49bc7e51e72cf155b99dffd2264eca3a5fc577b01df39787aed79af0",
+      "url": "https://px-files.pixpa.com/848127/1789075338734-6805.jpg"
+    },
+    {
+      "path": "public/media/expansion/48fbea22f50f8f57155364a5db41e2ca01c47749f2079b7d4a5bfa0e764a3a65.jpg",
+      "bytes": 527925,
+      "sha256": "48fbea22f50f8f57155364a5db41e2ca01c47749f2079b7d4a5bfa0e764a3a65",
+      "url": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg"
+    },
+    {
+      "path": "public/media/expansion/73886220ba53a607395ff3babbe0c7829f4a314ae66988fd9b01a0840e9d918d.jpg",
+      "bytes": 44237,
+      "sha256": "73886220ba53a607395ff3babbe0c7829f4a314ae66988fd9b01a0840e9d918d",
+      "url": "https://px-files.pixpa.com/848127/1789075377112-9950.jpg"
     }
   ]
 }

@@ -1,4 +1,15 @@
-# Pixpa V2 integration: 102 photographs and optical-glass sheen
+# Pixpa V2 integration: 104 photographs and optical-glass sheen
+
+The current source contains **25 Branding /27 Family /36 Headshots /16 Coastal** photographs. Sites14 adds only Through breaking surf and Feet, fins and sea to Coastal, preserving every prior102 record and the accepted walking, water, easels, centered viewer footer, glass and Home behavior. Current hosting source is `0e8e58237a7a8ab6875944c8d1da5bfc26015be1`, published2026-09-10T21:58:40.305718Z. Exact-adapter and [actual-public browser acceptance](evidence/m4/REVIEW.md) passed. The existing user tab was refreshed and returned to the aisle; this source/evidence handoff retains separate publication and GitHub verification boundaries.
+
+[Current104 release and rollback](M4-RELEASE.md) · [Public Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=two104-live-20260910)
+
+Current rebuild checks: `npm run check` (use an unused CHECK_PORT), `node integration/pixpa-v2/build.mjs --check`, and `node integration/pixpa-v2/verify-external-assets.mjs`. Results:104photos,70cumulative derivatives/48,669,517bytes,279hosted paths/193,368,765bytes,44ordinary native Files mappings/28,603,915bytes. Four new JPEGs remain in the standalone source but are not added to the near-capacity hosting archive or WebGL texture slots. The external verifier's expected counts are updated; validation behavior is unchanged.
+
+<details>
+<summary>Preserved102 release documentation and earlier history (historical, not current104 status)</summary>
+
+## Prior102 README
 
 This is the reproducible source handoff for the current 102-entry photographic pier gallery. Sites version 13 adds one accepted Family photograph through ordinary native Pixpa Files image URLs. All previous 101 entries retain their exact metadata, URLs and relative order. The accepted walking runtime, ten easels, glass sheen, two outer exit links and centered full-image footer remain unchanged. No later photo batch is included. See [ONE-RELEASE.md](ONE-RELEASE.md) for this addition; [SEVEN-RELEASE.md](SEVEN-RELEASE.md) and [NEXT12-RELEASE.md](NEXT12-RELEASE.md) preserve prior releases.
 
@@ -113,3 +124,5 @@ For the historical sheen release, host rollback was version 9 at `4c8bd39a65c7eb
 Historically, the bounded first-expansion rollback was version 7 at source `a3e11d42389229d67913934f9e82a845e605620d`; that expansion used the same V2 URL and unchanged wrapper. Keep existing photo paths in any rollback.
 
 The release owner measured the version 9 package at **261,251,340 compressed bytes / 268,013,056 unpacked archive bytes**, leaving **422,400 bytes** below the 256 MiB unpacked limit. Archive SHA-256: `539dbaa689accc2f603be472ea925a84b51c1124ca2d1a714a5a205a70cdcf16`. This is not room for an unmeasured second photo batch. Gallery-only rebuild output is smaller than the complete hosting archive; do not confuse their sizes or treat a successful local build as publication proof.
+
+</details>

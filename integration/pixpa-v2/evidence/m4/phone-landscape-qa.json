@@ -1,0 +1,2125 @@
+{
+  "started": "2026-09-10T22:04:23.417Z",
+  "publicURL": "https://kiyonocreativelab.com/pier-gallery?release=two104-live-20260910",
+  "galleryURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "scope": "Actual-public104 phone, landscape, both native returns and paired outer reflection",
+  "screenshots": [
+    "phone-native-entry.png",
+    "phone-coastal-bodyboard-through-breaking-surf.png",
+    "phone-coastal-feet-fins-and-bottle.png",
+    "phone-native-return.png",
+    "landscape-coastal-bodyboard-through-breaking-surf.png",
+    "landscape-coastal-feet-fins-and-bottle.png"
+  ],
+  "views": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Through breaking surf",
+      "titleRect": {
+        "x": 32,
+        "y": 30.875,
+        "width": 326,
+        "height": 16.890625,
+        "top": 30.875,
+        "right": 358,
+        "bottom": 47.765625,
+        "left": 32
+      },
+      "image": {
+        "src": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+        "alt": "A backlit child rides a bodyboard through breaking surf, with glittering water and a distant beach behind.",
+        "width": 2133,
+        "height": 3200,
+        "complete": true,
+        "fit": "contain",
+        "opacity": "1",
+        "filter": "none",
+        "paintedRect": {
+          "x": 32,
+          "y": 194.1492909048289,
+          "width": 326,
+          "height": 489.0764181903422
+        }
+      },
+      "footer": {
+        "href": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+        "rect": {
+          "x": 119.625,
+          "y": 786.609375,
+          "width": 150.75,
+          "height": 16,
+          "top": 786.609375,
+          "right": 270.375,
+          "bottom": 802.609375,
+          "left": 119.625
+        },
+        "textAlign": "center",
+        "centerDelta": 0,
+        "viewportCenterDelta": 0
+      },
+      "controls": [
+        {
+          "text": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 55.765625,
+            "width": 103.328125,
+            "height": 44,
+            "top": 55.765625,
+            "right": 135.328125,
+            "bottom": 99.765625,
+            "left": 32
+          }
+        },
+        {
+          "text": "Next",
+          "rect": {
+            "x": 143.328125,
+            "y": 55.765625,
+            "width": 103.328125,
+            "height": 44,
+            "top": 55.765625,
+            "right": 246.65625,
+            "bottom": 99.765625,
+            "left": 143.328125
+          }
+        },
+        {
+          "text": "Close",
+          "rect": {
+            "x": 254.65625,
+            "y": 55.765625,
+            "width": 103.34375,
+            "height": 44,
+            "top": 55.765625,
+            "right": 358,
+            "bottom": 99.765625,
+            "left": 254.65625
+          }
+        }
+      ],
+      "overflow": {
+        "document": false,
+        "viewer": false
+      },
+      "appearance": "clear",
+      "travel": "system",
+      "outer": {
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "overflow": false,
+        "exits": [
+          {
+            "label": "Return to main site",
+            "rect": {
+              "x": 14,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 62,
+              "bottom": 766,
+              "left": 14
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "rect": {
+              "x": 328,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 376,
+              "bottom": 766,
+              "left": 328
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          }
+        ]
+      },
+      "controlImageOverlap": [
+        {
+          "name": "title",
+          "area": 0
+        },
+        {
+          "name": "full-file",
+          "area": 0
+        },
+        {
+          "name": "Previous",
+          "area": 0
+        },
+        {
+          "name": "Next",
+          "area": 0
+        },
+        {
+          "name": "Close",
+          "area": 0
+        }
+      ],
+      "controlsWithinViewport": true,
+      "outerOverlaps": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Feet, fins and sea",
+      "titleRect": {
+        "x": 32,
+        "y": 30.875,
+        "width": 326,
+        "height": 16.890625,
+        "top": 30.875,
+        "right": 358,
+        "bottom": 47.765625,
+        "left": 32
+      },
+      "image": {
+        "src": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+        "alt": "Bare feet hang above magenta swim fins beside a capped Coca-Cola bottle, with the ocean behind.",
+        "width": 3200,
+        "height": 2133,
+        "complete": true,
+        "fit": "contain",
+        "opacity": "1",
+        "filter": "none",
+        "paintedRect": {
+          "x": 32,
+          "y": 330.0378125,
+          "width": 326,
+          "height": 217.299375
+        }
+      },
+      "footer": {
+        "href": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+        "rect": {
+          "x": 119.625,
+          "y": 786.609375,
+          "width": 150.75,
+          "height": 16,
+          "top": 786.609375,
+          "right": 270.375,
+          "bottom": 802.609375,
+          "left": 119.625
+        },
+        "textAlign": "center",
+        "centerDelta": 0,
+        "viewportCenterDelta": 0
+      },
+      "controls": [
+        {
+          "text": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 55.765625,
+            "width": 103.328125,
+            "height": 44,
+            "top": 55.765625,
+            "right": 135.328125,
+            "bottom": 99.765625,
+            "left": 32
+          }
+        },
+        {
+          "text": "Next",
+          "rect": {
+            "x": 143.328125,
+            "y": 55.765625,
+            "width": 103.328125,
+            "height": 44,
+            "top": 55.765625,
+            "right": 246.65625,
+            "bottom": 99.765625,
+            "left": 143.328125
+          }
+        },
+        {
+          "text": "Close",
+          "rect": {
+            "x": 254.65625,
+            "y": 55.765625,
+            "width": 103.34375,
+            "height": 44,
+            "top": 55.765625,
+            "right": 358,
+            "bottom": 99.765625,
+            "left": 254.65625
+          }
+        }
+      ],
+      "overflow": {
+        "document": false,
+        "viewer": false
+      },
+      "appearance": "clear",
+      "travel": "system",
+      "outer": {
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "overflow": false,
+        "exits": [
+          {
+            "label": "Return to main site",
+            "rect": {
+              "x": 14,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 62,
+              "bottom": 766,
+              "left": 14
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "rect": {
+              "x": 328,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 376,
+              "bottom": 766,
+              "left": 328
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          }
+        ]
+      },
+      "controlImageOverlap": [
+        {
+          "name": "title",
+          "area": 0
+        },
+        {
+          "name": "full-file",
+          "area": 0
+        },
+        {
+          "name": "Previous",
+          "area": 0
+        },
+        {
+          "name": "Next",
+          "area": 0
+        },
+        {
+          "name": "Close",
+          "area": 0
+        }
+      ],
+      "controlsWithinViewport": true,
+      "outerOverlaps": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "title": "Through breaking surf",
+      "titleRect": {
+        "x": 253.1875,
+        "y": 32.546875,
+        "width": 163.71875,
+        "height": 22.5,
+        "top": 32.546875,
+        "right": 416.90625,
+        "bottom": 55.046875,
+        "left": 253.1875
+      },
+      "image": {
+        "src": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+        "alt": "A backlit child rides a bodyboard through breaking surf, with glittering water and a distant beach behind.",
+        "width": 2133,
+        "height": 3200,
+        "complete": true,
+        "fit": "contain",
+        "opacity": "1",
+        "filter": "none",
+        "paintedRect": {
+          "x": 333.05035888671875,
+          "y": 65.796875,
+          "width": 177.8992822265625,
+          "height": 266.890625
+        }
+      },
+      "footer": {
+        "href": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg",
+        "rect": {
+          "x": 346.625,
+          "y": 341.6875,
+          "width": 150.75,
+          "height": 16,
+          "top": 341.6875,
+          "right": 497.375,
+          "bottom": 357.6875,
+          "left": 346.625
+        },
+        "textAlign": "center",
+        "centerDelta": 0,
+        "viewportCenterDelta": 0
+      },
+      "controls": [
+        {
+          "text": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 21.796875,
+            "width": 84.875,
+            "height": 44,
+            "top": 21.796875,
+            "right": 116.875,
+            "bottom": 65.796875,
+            "left": 32
+          }
+        },
+        {
+          "text": "Next",
+          "rect": {
+            "x": 553.234375,
+            "y": 21.796875,
+            "width": 57.796875,
+            "height": 44,
+            "top": 21.796875,
+            "right": 611.03125,
+            "bottom": 65.796875,
+            "left": 553.234375
+          }
+        },
+        {
+          "text": "Close",
+          "rect": {
+            "x": 747.34375,
+            "y": 21.796875,
+            "width": 64.65625,
+            "height": 44,
+            "top": 21.796875,
+            "right": 812,
+            "bottom": 65.796875,
+            "left": 747.34375
+          }
+        }
+      ],
+      "overflow": {
+        "document": false,
+        "viewer": false
+      },
+      "appearance": "clear",
+      "travel": "system",
+      "outer": {
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "top": 0,
+          "right": 844,
+          "bottom": 390,
+          "left": 0
+        },
+        "overflow": false,
+        "exits": [
+          {
+            "label": "Return to main site",
+            "rect": {
+              "x": 14,
+              "y": 326,
+              "width": 48,
+              "height": 48,
+              "top": 326,
+              "right": 62,
+              "bottom": 374,
+              "left": 14
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "rect": {
+              "x": 782,
+              "y": 326,
+              "width": 48,
+              "height": 48,
+              "top": 326,
+              "right": 830,
+              "bottom": 374,
+              "left": 782
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          }
+        ]
+      },
+      "controlImageOverlap": [
+        {
+          "name": "title",
+          "area": 0
+        },
+        {
+          "name": "full-file",
+          "area": 0
+        },
+        {
+          "name": "Previous",
+          "area": 0
+        },
+        {
+          "name": "Next",
+          "area": 0
+        },
+        {
+          "name": "Close",
+          "area": 0
+        }
+      ],
+      "controlsWithinViewport": true,
+      "outerOverlaps": []
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "title": "Feet, fins and sea",
+      "titleRect": {
+        "x": 264.921875,
+        "y": 32.546875,
+        "width": 128.515625,
+        "height": 22.5,
+        "top": 32.546875,
+        "right": 393.4375,
+        "bottom": 55.046875,
+        "left": 264.921875
+      },
+      "image": {
+        "src": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+        "alt": "Bare feet hang above magenta swim fins beside a capped Coca-Cola bottle, with the ocean behind.",
+        "width": 3200,
+        "height": 2133,
+        "complete": true,
+        "fit": "contain",
+        "opacity": "1",
+        "filter": "none",
+        "paintedRect": {
+          "x": 221.80075011720578,
+          "y": 65.796875,
+          "width": 400.39849976558844,
+          "height": 266.890625
+        }
+      },
+      "footer": {
+        "href": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg",
+        "rect": {
+          "x": 346.625,
+          "y": 341.6875,
+          "width": 150.75,
+          "height": 16,
+          "top": 341.6875,
+          "right": 497.375,
+          "bottom": 357.6875,
+          "left": 346.625
+        },
+        "textAlign": "center",
+        "centerDelta": 0,
+        "viewportCenterDelta": 0
+      },
+      "controls": [
+        {
+          "text": "Previous",
+          "rect": {
+            "x": 32,
+            "y": 21.796875,
+            "width": 84.875,
+            "height": 44,
+            "top": 21.796875,
+            "right": 116.875,
+            "bottom": 65.796875,
+            "left": 32
+          }
+        },
+        {
+          "text": "Next",
+          "rect": {
+            "x": 541.5,
+            "y": 21.796875,
+            "width": 57.796875,
+            "height": 44,
+            "top": 21.796875,
+            "right": 599.296875,
+            "bottom": 65.796875,
+            "left": 541.5
+          }
+        },
+        {
+          "text": "Close",
+          "rect": {
+            "x": 747.34375,
+            "y": 21.796875,
+            "width": 64.65625,
+            "height": 44,
+            "top": 21.796875,
+            "right": 812,
+            "bottom": 65.796875,
+            "left": 747.34375
+          }
+        }
+      ],
+      "overflow": {
+        "document": false,
+        "viewer": false
+      },
+      "appearance": "clear",
+      "travel": "system",
+      "outer": {
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "top": 0,
+          "right": 844,
+          "bottom": 390,
+          "left": 0
+        },
+        "overflow": false,
+        "exits": [
+          {
+            "label": "Return to main site",
+            "rect": {
+              "x": 14,
+              "y": 326,
+              "width": 48,
+              "height": 48,
+              "top": 326,
+              "right": 62,
+              "bottom": 374,
+              "left": 14
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "rect": {
+              "x": 782,
+              "y": 326,
+              "width": 48,
+              "height": 48,
+              "top": 326,
+              "right": 830,
+              "bottom": 374,
+              "left": 782
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)"
+          }
+        ]
+      },
+      "controlImageOverlap": [
+        {
+          "name": "title",
+          "area": 0
+        },
+        {
+          "name": "full-file",
+          "area": 0
+        },
+        {
+          "name": "Previous",
+          "area": 0
+        },
+        {
+          "name": "Next",
+          "area": 0
+        },
+        {
+          "name": "Close",
+          "area": 0
+        }
+      ],
+      "controlsWithinViewport": true,
+      "outerOverlaps": []
+    }
+  ],
+  "native": [
+    {
+      "id": "coastal-bodyboard-through-breaking-surf",
+      "entry": {
+        "y": 110,
+        "progress": 0.014481305950500263,
+        "point": {
+          "x": 195,
+          "y": 420
+        },
+        "hit": "print canvas-wrap-front",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/#collection/families",
+        "label": "Explore Family portraits"
+      },
+      "coastalTap": {
+        "rect": {
+          "x": 199.0625,
+          "y": 155,
+          "width": 130.734375,
+          "height": 48
+        },
+        "mainPoint": {
+          "x": 264.4296875,
+          "y": 179
+        },
+        "hit": {
+          "tag": "A",
+          "targetTag": "A",
+          "text": "Coastal photographs",
+          "label": null,
+          "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/#collection/coastal"
+        }
+      },
+      "photoTap": {
+        "rect": {
+          "x": 201.5,
+          "y": 588.359375,
+          "width": 170.5,
+          "height": 255.75
+        },
+        "mainPoint": {
+          "x": 286.75,
+          "y": 716.234375
+        },
+        "hit": {
+          "tag": "IMG",
+          "targetTag": "A",
+          "text": "",
+          "label": "Enlarge photograph: Through breaking surf",
+          "href": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg"
+        }
+      },
+      "closeTap": {
+        "rect": {
+          "x": 254.65625,
+          "y": 55.765625,
+          "width": 103.34375,
+          "height": 44
+        },
+        "mainPoint": {
+          "x": 306.328125,
+          "y": 77.765625
+        },
+        "hit": {
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "text": "Close",
+          "label": null
+        }
+      },
+      "backTap": {
+        "rect": {
+          "x": 179.953125,
+          "y": 745.921875,
+          "width": 139.953125,
+          "height": 48
+        },
+        "mainPoint": {
+          "x": 249.9296875,
+          "y": 769.921875
+        },
+        "hit": {
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "text": "Back to the aisle",
+          "label": null
+        }
+      },
+      "returned": {
+        "y": 110,
+        "progress": 0.014481305950500263,
+        "view": "aisle"
+      },
+      "exact": true
+    },
+    {
+      "id": "coastal-feet-fins-and-bottle",
+      "entry": {
+        "y": 110,
+        "progress": 0.014481305950500263,
+        "point": {
+          "x": 195,
+          "y": 420
+        },
+        "hit": "print canvas-wrap-front",
+        "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/#collection/families",
+        "label": "Explore Family portraits"
+      },
+      "coastalTap": {
+        "rect": {
+          "x": 199.0625,
+          "y": 155,
+          "width": 130.734375,
+          "height": 48
+        },
+        "mainPoint": {
+          "x": 264.4296875,
+          "y": 179
+        },
+        "hit": {
+          "tag": "A",
+          "targetTag": "A",
+          "text": "Coastal photographs",
+          "label": null,
+          "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/#collection/coastal"
+        }
+      },
+      "photoTap": {
+        "rect": {
+          "x": 18,
+          "y": 561.265625,
+          "width": 170.5,
+          "height": 113.65625
+        },
+        "mainPoint": {
+          "x": 103.25,
+          "y": 618.09375
+        },
+        "hit": {
+          "tag": "IMG",
+          "targetTag": "A",
+          "text": "",
+          "label": "Enlarge photograph: Feet, fins and sea",
+          "href": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg"
+        }
+      },
+      "closeTap": {
+        "rect": {
+          "x": 254.65625,
+          "y": 55.765625,
+          "width": 103.34375,
+          "height": 44
+        },
+        "mainPoint": {
+          "x": 306.328125,
+          "y": 77.765625
+        },
+        "hit": {
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "text": "Close",
+          "label": null
+        }
+      },
+      "backTap": {
+        "rect": {
+          "x": 179.953125,
+          "y": 745.921875,
+          "width": 139.953125,
+          "height": 48
+        },
+        "mainPoint": {
+          "x": 249.9296875,
+          "y": 769.921875
+        },
+        "hit": {
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "text": "Back to the aisle",
+          "label": null
+        }
+      },
+      "returned": {
+        "y": 110,
+        "progress": 0.014481305950500263,
+        "view": "aisle"
+      },
+      "exact": true
+    }
+  ],
+  "zooms": [
+    {
+      "id": "coastal-bodyboard-through-breaking-surf",
+      "before": {
+        "inner": {
+          "y": 99,
+          "progress": 0.014481305950500263,
+          "sheen": {
+            "enabled": true,
+            "direction": "down",
+            "phase": -106.83075811620054,
+            "opacity": 0.15511900350238744,
+            "surfaces": 40,
+            "visible": 1,
+            "scheduled": true,
+            "frames": 204
+          },
+          "reflections": [
+            {
+              "surface": "collection-header kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, -373.909, 0)",
+              "opacity": "0.155",
+              "inline": "transform: translate3d(-106.831%, 0px, 0px) skewX(-12deg); opacity: 0.155;"
+            }
+          ]
+        },
+        "outer": {
+          "reflections": [
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, -47.0166, 0)",
+              "opacity": "0.177976",
+              "inline": "transform: translate3d(-106.856%, 0px, 0px) skewX(-12deg); opacity: 0.177976;",
+              "rect": {
+                "x": -38.49763488769531,
+                "y": 706.8125,
+                "width": 58.96199035644531,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 20.46435546875,
+                "bottom": 777.203125,
+                "left": -38.49763488769531
+              }
+            },
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, -47.0166, 0)",
+              "opacity": "0.177976",
+              "inline": "transform: translate3d(-106.856%, 0px, 0px) skewX(-12deg); opacity: 0.177976;",
+              "rect": {
+                "x": 275.50238037109375,
+                "y": 706.8125,
+                "width": 58.96197509765625,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 334.46435546875,
+                "bottom": 777.203125,
+                "left": 275.50238037109375
+              }
+            }
+          ],
+          "exits": [
+            {
+              "label": "Return to main site",
+              "href": "https://kiyonocreativelab.com/",
+              "rect": {
+                "x": 14,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 62,
+                "bottom": 766,
+                "left": 14
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            },
+            {
+              "label": "Open gallery directly in a new tab",
+              "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+              "rect": {
+                "x": 328,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 376,
+                "bottom": 766,
+                "left": 328
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            }
+          ]
+        }
+      },
+      "enlarged": {
+        "inner": {
+          "y": 99,
+          "progress": 0.014481305950500263,
+          "sheen": {
+            "enabled": true,
+            "direction": "down",
+            "phase": -46.80002891617795,
+            "opacity": 0.07185865488115024,
+            "surfaces": 40,
+            "visible": 4,
+            "scheduled": false,
+            "frames": 274
+          },
+          "reflections": [
+            {
+              "surface": "collection-header kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, -163.8, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(-46.8%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            },
+            {
+              "surface": "previous",
+              "transform": "matrix(1, 0, -0.212557, 1, -46.4856, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(-46.8%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            },
+            {
+              "surface": "next",
+              "transform": "matrix(1, 0, -0.212557, 1, -46.4856, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(-46.8%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            },
+            {
+              "surface": "close",
+              "transform": "matrix(1, 0, -0.212557, 1, -46.4929, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(-46.8%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            }
+          ]
+        },
+        "outer": {
+          "reflections": [
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, -20.592, 0)",
+              "opacity": "0.0720926",
+              "inline": "transform: translate3d(-46.8%, 0px, 0px) skewX(-12deg); opacity: 0.0720926;",
+              "rect": {
+                "x": -12.072994232177734,
+                "y": 706.8125,
+                "width": 58.96199035644531,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 46.88899612426758,
+                "bottom": 777.203125,
+                "left": -12.072994232177734
+              }
+            },
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, -20.592, 0)",
+              "opacity": "0.0720926",
+              "inline": "transform: translate3d(-46.8%, 0px, 0px) skewX(-12deg); opacity: 0.0720926;",
+              "rect": {
+                "x": 301.927001953125,
+                "y": 706.8125,
+                "width": 58.962005615234375,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 360.8890075683594,
+                "bottom": 777.203125,
+                "left": 301.927001953125
+              }
+            }
+          ],
+          "exits": [
+            {
+              "label": "Return to main site",
+              "href": "https://kiyonocreativelab.com/",
+              "rect": {
+                "x": 14,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 62,
+                "bottom": 766,
+                "left": 14
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            },
+            {
+              "label": "Open gallery directly in a new tab",
+              "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+              "rect": {
+                "x": 328,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 376,
+                "bottom": 766,
+                "left": 328
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            }
+          ]
+        }
+      },
+      "closed": {
+        "inner": {
+          "y": 99,
+          "progress": 0.014481305950500263,
+          "sheen": {
+            "enabled": true,
+            "direction": "up",
+            "phase": -106.7999281420681,
+            "opacity": 0.07434169398474227,
+            "surfaces": 40,
+            "visible": 1,
+            "scheduled": true,
+            "frames": 317
+          },
+          "reflections": [
+            {
+              "surface": "collection-header kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, -373.8, 0)",
+              "opacity": "0.074",
+              "inline": "transform: translate3d(-106.8%, 0px, 0px) skewX(-12deg); opacity: 0.074;"
+            }
+          ]
+        },
+        "outer": {
+          "reflections": [
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, -46.992, 0)",
+              "opacity": "0.0755115",
+              "inline": "transform: translate3d(-106.8%, 0px, 0px) skewX(-12deg); opacity: 0.0755115;",
+              "rect": {
+                "x": -38.47299575805664,
+                "y": 706.8125,
+                "width": 58.96199035644531,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 20.488994598388672,
+                "bottom": 777.203125,
+                "left": -38.47299575805664
+              }
+            },
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, -46.992, 0)",
+              "opacity": "0.0755115",
+              "inline": "transform: translate3d(-106.8%, 0px, 0px) skewX(-12deg); opacity: 0.0755115;",
+              "rect": {
+                "x": 275.5270080566406,
+                "y": 706.8125,
+                "width": 58.96197509765625,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 334.4889831542969,
+                "bottom": 777.203125,
+                "left": 275.5270080566406
+              }
+            }
+          ],
+          "exits": [
+            {
+              "label": "Return to main site",
+              "href": "https://kiyonocreativelab.com/",
+              "rect": {
+                "x": 14,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 62,
+                "bottom": 766,
+                "left": 14
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            },
+            {
+              "label": "Open gallery directly in a new tab",
+              "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+              "rect": {
+                "x": 328,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 376,
+                "bottom": 766,
+                "left": 328
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            }
+          ]
+        }
+      },
+      "outerEnlargeChanged": true,
+      "outerCloseChanged": true
+    },
+    {
+      "id": "coastal-feet-fins-and-bottle",
+      "before": {
+        "inner": {
+          "y": 1059,
+          "progress": 0.014481305950500263,
+          "sheen": {
+            "enabled": true,
+            "direction": "down",
+            "phase": 20.870981356021332,
+            "opacity": 0.15514202321690232,
+            "surfaces": 40,
+            "visible": 2,
+            "scheduled": true,
+            "frames": 459
+          },
+          "reflections": [
+            {
+              "surface": "glass-control kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, 29.8357, 0)",
+              "opacity": "0.155",
+              "inline": "transform: translate3d(20.871%, 0px, 0px) skewX(-12deg); opacity: 0.155;"
+            },
+            {
+              "surface": "glass-control kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, 28.3748, 0)",
+              "opacity": "0.155",
+              "inline": "transform: translate3d(20.871%, 0px, 0px) skewX(-12deg); opacity: 0.155;"
+            }
+          ]
+        },
+        "outer": {
+          "reflections": [
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, 9.06224, 0)",
+              "opacity": "0.178082",
+              "inline": "transform: translate3d(20.596%, 0px, 0px) skewX(-12deg); opacity: 0.178082;",
+              "rect": {
+                "x": 17.58124542236328,
+                "y": 706.8125,
+                "width": 58.96199035644531,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 76.5432357788086,
+                "bottom": 777.203125,
+                "left": 17.58124542236328
+              }
+            },
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, 9.06224, 0)",
+              "opacity": "0.178082",
+              "inline": "transform: translate3d(20.596%, 0px, 0px) skewX(-12deg); opacity: 0.178082;",
+              "rect": {
+                "x": 331.58123779296875,
+                "y": 706.8125,
+                "width": 58.962005615234375,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 390.5432434082031,
+                "bottom": 777.203125,
+                "left": 331.58123779296875
+              }
+            }
+          ],
+          "exits": [
+            {
+              "label": "Return to main site",
+              "href": "https://kiyonocreativelab.com/",
+              "rect": {
+                "x": 14,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 62,
+                "bottom": 766,
+                "left": 14
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            },
+            {
+              "label": "Open gallery directly in a new tab",
+              "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+              "rect": {
+                "x": 328,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 376,
+                "bottom": 766,
+                "left": 328
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            }
+          ]
+        }
+      },
+      "enlarged": {
+        "inner": {
+          "y": 1059,
+          "progress": 0.014481305950500263,
+          "sheen": {
+            "enabled": true,
+            "direction": "down",
+            "phase": 81.19997108363893,
+            "opacity": 0.07185665026248428,
+            "surfaces": 40,
+            "visible": 5,
+            "scheduled": false,
+            "frames": 529
+          },
+          "reflections": [
+            {
+              "surface": "glass-control kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, 116.078, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(81.2%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            },
+            {
+              "surface": "glass-control kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, 110.394, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(81.2%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            },
+            {
+              "surface": "previous",
+              "transform": "matrix(1, 0, -0.212557, 1, 80.6544, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(81.2%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            },
+            {
+              "surface": "next",
+              "transform": "matrix(1, 0, -0.212557, 1, 80.6544, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(81.2%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            },
+            {
+              "surface": "close",
+              "transform": "matrix(1, 0, -0.212557, 1, 80.6671, 0)",
+              "opacity": "0.072",
+              "inline": "transform: translate3d(81.2%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+            }
+          ]
+        },
+        "outer": {
+          "reflections": [
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, 35.728, 0)",
+              "opacity": "0.0723552",
+              "inline": "transform: translate3d(81.2%, 0px, 0px) skewX(-12deg); opacity: 0.0723552;",
+              "rect": {
+                "x": 44.24700164794922,
+                "y": 706.8125,
+                "width": 58.96199035644531,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 103.20899200439453,
+                "bottom": 777.203125,
+                "left": 44.24700164794922
+              }
+            },
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, 35.728, 0)",
+              "opacity": "0.0723552",
+              "inline": "transform: translate3d(81.2%, 0px, 0px) skewX(-12deg); opacity: 0.0723552;",
+              "rect": {
+                "x": 358.24700927734375,
+                "y": 706.8125,
+                "width": 58.96197509765625,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 417.208984375,
+                "bottom": 777.203125,
+                "left": 358.24700927734375
+              }
+            }
+          ],
+          "exits": [
+            {
+              "label": "Return to main site",
+              "href": "https://kiyonocreativelab.com/",
+              "rect": {
+                "x": 14,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 62,
+                "bottom": 766,
+                "left": 14
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            },
+            {
+              "label": "Open gallery directly in a new tab",
+              "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+              "rect": {
+                "x": 328,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 376,
+                "bottom": 766,
+                "left": 328
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            }
+          ]
+        }
+      },
+      "closed": {
+        "inner": {
+          "y": 1059,
+          "progress": 0.014481305950500263,
+          "sheen": {
+            "enabled": true,
+            "direction": "up",
+            "phase": 21.20007185793193,
+            "opacity": 0.07434983425756195,
+            "surfaces": 40,
+            "visible": 2,
+            "scheduled": true,
+            "frames": 572
+          },
+          "reflections": [
+            {
+              "surface": "glass-control kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, 30.3061, 0)",
+              "opacity": "0.074",
+              "inline": "transform: translate3d(21.2%, 0px, 0px) skewX(-12deg); opacity: 0.074;"
+            },
+            {
+              "surface": "glass-control kcl-sheen-position",
+              "transform": "matrix(1, 0, -0.212557, 1, 28.8221, 0)",
+              "opacity": "0.074",
+              "inline": "transform: translate3d(21.2%, 0px, 0px) skewX(-12deg); opacity: 0.074;"
+            }
+          ]
+        },
+        "outer": {
+          "reflections": [
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, 9.328, 0)",
+              "opacity": "0.0743498",
+              "inline": "transform: translate3d(21.2%, 0px, 0px) skewX(-12deg); opacity: 0.0743498;",
+              "rect": {
+                "x": 17.847003936767578,
+                "y": 706.8125,
+                "width": 58.96198654174805,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 76.80899047851562,
+                "bottom": 777.203125,
+                "left": 17.847003936767578
+              }
+            },
+            {
+              "transform": "matrix(1, 0, -0.212557, 1, 9.328, 0)",
+              "opacity": "0.0743498",
+              "inline": "transform: translate3d(21.2%, 0px, 0px) skewX(-12deg); opacity: 0.0743498;",
+              "rect": {
+                "x": 331.8470153808594,
+                "y": 706.8125,
+                "width": 58.96197509765625,
+                "height": 70.390625,
+                "top": 706.8125,
+                "right": 390.8089904785156,
+                "bottom": 777.203125,
+                "left": 331.8470153808594
+              }
+            }
+          ],
+          "exits": [
+            {
+              "label": "Return to main site",
+              "href": "https://kiyonocreativelab.com/",
+              "rect": {
+                "x": 14,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 62,
+                "bottom": 766,
+                "left": 14
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            },
+            {
+              "label": "Open gallery directly in a new tab",
+              "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+              "rect": {
+                "x": 328,
+                "y": 718,
+                "width": 48,
+                "height": 48,
+                "top": 718,
+                "right": 376,
+                "bottom": 766,
+                "left": 328
+              },
+              "background": "rgba(255, 255, 255, 0.067)",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1"
+            }
+          ]
+        }
+      },
+      "outerEnlargeChanged": true,
+      "outerCloseChanged": true
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "protocolErrors": [],
+  "browser": {
+    "version": "152.0.7977.83",
+    "engine": "Installed Chrome through isolated Playwright",
+    "headless": true
+  },
+  "iframeURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "media": {
+    "outer": {
+      "rm": false,
+      "rt": false
+    },
+    "inner": {
+      "rm": false,
+      "rt": false,
+      "appearance": "clear",
+      "travel": "system"
+    }
+  },
+  "categories": {
+    "status": 200,
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/categories.json",
+    "bytes": 45170,
+    "sha256": "f839b9716516405ae360933431650a348e44a330687c15af6d887768e8f67980",
+    "counts": {
+      "branding": 25,
+      "families": 27,
+      "headshots": 36,
+      "coastal": 16
+    },
+    "additions": [
+      {
+        "position": 8,
+        "item": {
+          "id": "coastal-bodyboard-through-breaking-surf",
+          "title": "Through breaking surf",
+          "alt": "A backlit child rides a bodyboard through breaking surf, with glittering water and a distant beach behind.",
+          "width": 2133,
+          "height": 3200,
+          "src": "https://px-files.pixpa.com/848127/1789075338734-6805.jpg",
+          "full": "https://px-files.pixpa.com/848127/1789075316571-3647.jpg"
+        },
+        "previous": "coastal-decorated-bicycles",
+        "next": "toward-the-water"
+      },
+      {
+        "position": 15,
+        "item": {
+          "id": "coastal-feet-fins-and-bottle",
+          "title": "Feet, fins and sea",
+          "alt": "Bare feet hang above magenta swim fins beside a capped Coca-Cola bottle, with the ocean behind.",
+          "width": 3200,
+          "height": 2133,
+          "src": "https://px-files.pixpa.com/848127/1789075377112-9950.jpg",
+          "full": "https://px-files.pixpa.com/848127/1789075360319-3785.jpg"
+        },
+        "previous": "coastal-waterside-walk",
+        "next": "coastal-ball-toss-beneath-pier"
+      }
+    ]
+  },
+  "phoneMedia": {
+    "coarse": true,
+    "rm": false,
+    "rt": false
+  },
+  "motion": {
+    "before": {
+      "inner": {
+        "y": 0,
+        "progress": 0,
+        "sheen": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -120,
+          "opacity": 0.07,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": false,
+          "frames": 4
+        },
+        "reflections": [
+          {
+            "surface": "aisle-progress kcl-sheen-position",
+            "transform": "matrix(1, 0, -0.212557, 1, -174, 0)",
+            "opacity": "0.07",
+            "inline": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0.07;"
+          },
+          {
+            "surface": "menu-toggle",
+            "transform": "matrix(1, 0, -0.212557, 1, -85.65, 0)",
+            "opacity": "0.07",
+            "inline": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0.07;"
+          },
+          {
+            "surface": "category-sign aisle-category-sign",
+            "transform": "matrix(1, 0, -0.212557, 1, -130.406, 0)",
+            "opacity": "0.07",
+            "inline": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0.07;"
+          }
+        ]
+      },
+      "outer": {
+        "reflections": [
+          {
+            "transform": "matrix(1, 0, -0.212557, 1, -52.8, 0)",
+            "opacity": "0.07",
+            "inline": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0.07;",
+            "rect": {
+              "x": -44.2809944152832,
+              "y": 706.8125,
+              "width": 58.96199035644531,
+              "height": 70.390625,
+              "top": 706.8125,
+              "right": 14.68099594116211,
+              "bottom": 777.203125,
+              "left": -44.2809944152832
+            }
+          },
+          {
+            "transform": "matrix(1, 0, -0.212557, 1, -52.8, 0)",
+            "opacity": "0.07",
+            "inline": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0.07;",
+            "rect": {
+              "x": 269.718994140625,
+              "y": 706.8125,
+              "width": 58.962005615234375,
+              "height": 70.390625,
+              "top": 706.8125,
+              "right": 328.6809997558594,
+              "bottom": 777.203125,
+              "left": 269.718994140625
+            }
+          }
+        ],
+        "exits": [
+          {
+            "label": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "rect": {
+              "x": 14,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 62,
+              "bottom": 766,
+              "left": 14
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "rect": {
+              "x": 328,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 376,
+              "bottom": 766,
+              "left": 328
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          }
+        ]
+      }
+    },
+    "down": {
+      "inner": {
+        "y": 435,
+        "progress": 0.057266982622432856,
+        "sheen": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -62.0000425514996,
+          "opacity": 0.07797269707026205,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 59
+        },
+        "reflections": [
+          {
+            "surface": "aisle-progress kcl-sheen-position",
+            "transform": "matrix(1, 0, -0.212557, 1, -89.9, 0)",
+            "opacity": "0.078",
+            "inline": "transform: translate3d(-62%, 0px, 0px) skewX(-12deg); opacity: 0.078;"
+          },
+          {
+            "surface": "menu-toggle",
+            "transform": "matrix(1, 0, -0.212557, 1, -44.2525, 0)",
+            "opacity": "0.078",
+            "inline": "transform: translate3d(-62%, 0px, 0px) skewX(-12deg); opacity: 0.078;"
+          },
+          {
+            "surface": "category-sign aisle-category-sign",
+            "transform": "matrix(1, 0, -0.212557, 1, -67.3766, 0)",
+            "opacity": "0.078",
+            "inline": "transform: translate3d(-62%, 0px, 0px) skewX(-12deg); opacity: 0.078;"
+          }
+        ]
+      },
+      "outer": {
+        "reflections": [
+          {
+            "transform": "matrix(1, 0, -0.212557, 1, -27.28, 0)",
+            "opacity": "0.0789764",
+            "inline": "transform: translate3d(-62%, 0px, 0px) skewX(-12deg); opacity: 0.0789764;",
+            "rect": {
+              "x": -18.76099395751953,
+              "y": 706.8125,
+              "width": 58.96199035644531,
+              "height": 70.390625,
+              "top": 706.8125,
+              "right": 40.20099639892578,
+              "bottom": 777.203125,
+              "left": -18.76099395751953
+            }
+          },
+          {
+            "transform": "matrix(1, 0, -0.212557, 1, -27.28, 0)",
+            "opacity": "0.0789764",
+            "inline": "transform: translate3d(-62%, 0px, 0px) skewX(-12deg); opacity: 0.0789764;",
+            "rect": {
+              "x": 295.239013671875,
+              "y": 706.8125,
+              "width": 58.96197509765625,
+              "height": 70.390625,
+              "top": 706.8125,
+              "right": 354.20098876953125,
+              "bottom": 777.203125,
+              "left": 295.239013671875
+            }
+          }
+        ],
+        "exits": [
+          {
+            "label": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "rect": {
+              "x": 14,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 62,
+              "bottom": 766,
+              "left": 14
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "rect": {
+              "x": 328,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 376,
+              "bottom": 766,
+              "left": 328
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          }
+        ]
+      }
+    },
+    "up": {
+      "inner": {
+        "y": 110,
+        "progress": 0.014481305950500263,
+        "sheen": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -105.33331241045283,
+          "opacity": 0.07555157605876897,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 125
+        },
+        "reflections": [
+          {
+            "surface": "aisle-progress kcl-sheen-position",
+            "transform": "matrix(1, 0, -0.212557, 1, -152.733, 0)",
+            "opacity": "0.076",
+            "inline": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.076;"
+          },
+          {
+            "surface": "menu-toggle",
+            "transform": "matrix(1, 0, -0.212557, 1, -75.1814, 0)",
+            "opacity": "0.076",
+            "inline": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.076;"
+          },
+          {
+            "surface": "category-sign aisle-category-sign",
+            "transform": "matrix(1, 0, -0.212557, 1, -114.467, 0)",
+            "opacity": "0.076",
+            "inline": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.076;"
+          }
+        ]
+      },
+      "outer": {
+        "reflections": [
+          {
+            "transform": "matrix(1, 0, -0.212557, 1, -46.3465, 0)",
+            "opacity": "0.0779345",
+            "inline": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.0779345;",
+            "rect": {
+              "x": -37.8275146484375,
+              "y": 706.8125,
+              "width": 58.96199035644531,
+              "height": 70.390625,
+              "top": 706.8125,
+              "right": 21.134475708007812,
+              "bottom": 777.203125,
+              "left": -37.8275146484375
+            }
+          },
+          {
+            "transform": "matrix(1, 0, -0.212557, 1, -46.3465, 0)",
+            "opacity": "0.0779345",
+            "inline": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.0779345;",
+            "rect": {
+              "x": 276.1724853515625,
+              "y": 706.8125,
+              "width": 58.96197509765625,
+              "height": 70.390625,
+              "top": 706.8125,
+              "right": 335.13446044921875,
+              "bottom": 777.203125,
+              "left": 276.1724853515625
+            }
+          }
+        ],
+        "exits": [
+          {
+            "label": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "rect": {
+              "x": 14,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 62,
+              "bottom": 766,
+              "left": 14
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "label": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "rect": {
+              "x": 328,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 376,
+              "bottom": 766,
+              "left": 328
+            },
+            "background": "rgba(255, 255, 255, 0.067)",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          }
+        ]
+      }
+    }
+  },
+  "idleFirst": {
+    "inner": {
+      "y": 31,
+      "progress": 0.014452214452214453,
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -115.85747586263187,
+        "opacity": 0.07199510323378196,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 900
+      },
+      "reflections": [
+        {
+          "surface": "aisle-progress kcl-sheen-position",
+          "transform": "matrix(1, 0, -0.212557, 1, -167.993, 0)",
+          "opacity": "0.072",
+          "inline": "transform: translate3d(-115.857%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+        },
+        {
+          "surface": "menu-toggle",
+          "transform": "matrix(1, 0, -0.212557, 1, -87.3272, 0)",
+          "opacity": "0.072",
+          "inline": "transform: translate3d(-115.857%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+        },
+        {
+          "surface": "category-sign aisle-category-sign",
+          "transform": "matrix(1, 0, -0.212557, 1, -151.972, 0)",
+          "opacity": "0.072",
+          "inline": "transform: translate3d(-115.857%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+        }
+      ]
+    },
+    "outer": {
+      "reflections": [
+        {
+          "transform": "matrix(1, 0, -0.212557, 1, -50.9758, 0)",
+          "opacity": "0.0722479",
+          "inline": "transform: translate3d(-115.854%, 0px, 0px) skewX(-12deg); opacity: 0.0722479;",
+          "rect": {
+            "x": -42.45675277709961,
+            "y": 314.8125,
+            "width": 58.96199035644531,
+            "height": 70.390625,
+            "top": 314.8125,
+            "right": 16.505237579345703,
+            "bottom": 385.203125,
+            "left": -42.45675277709961
+          }
+        },
+        {
+          "transform": "matrix(1, 0, -0.212557, 1, -50.9758, 0)",
+          "opacity": "0.0722479",
+          "inline": "transform: translate3d(-115.854%, 0px, 0px) skewX(-12deg); opacity: 0.0722479;",
+          "rect": {
+            "x": 725.5432739257812,
+            "y": 314.8125,
+            "width": 58.96197509765625,
+            "height": 70.390625,
+            "top": 314.8125,
+            "right": 784.5052490234375,
+            "bottom": 385.203125,
+            "left": 725.5432739257812
+          }
+        }
+      ],
+      "exits": [
+        {
+          "label": "Return to main site",
+          "href": "https://kiyonocreativelab.com/",
+          "rect": {
+            "x": 14,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "top": 326,
+            "right": 62,
+            "bottom": 374,
+            "left": 14
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+          "rect": {
+            "x": 782,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "top": 326,
+            "right": 830,
+            "bottom": 374,
+            "left": 782
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        }
+      ]
+    }
+  },
+  "idleSecond": {
+    "inner": {
+      "y": 31,
+      "progress": 0.014452214452214453,
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -115.85747586263187,
+        "opacity": 0.07199510323378196,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 900
+      },
+      "reflections": [
+        {
+          "surface": "aisle-progress kcl-sheen-position",
+          "transform": "matrix(1, 0, -0.212557, 1, -167.993, 0)",
+          "opacity": "0.072",
+          "inline": "transform: translate3d(-115.857%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+        },
+        {
+          "surface": "menu-toggle",
+          "transform": "matrix(1, 0, -0.212557, 1, -87.3272, 0)",
+          "opacity": "0.072",
+          "inline": "transform: translate3d(-115.857%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+        },
+        {
+          "surface": "category-sign aisle-category-sign",
+          "transform": "matrix(1, 0, -0.212557, 1, -151.972, 0)",
+          "opacity": "0.072",
+          "inline": "transform: translate3d(-115.857%, 0px, 0px) skewX(-12deg); opacity: 0.072;"
+        }
+      ]
+    },
+    "outer": {
+      "reflections": [
+        {
+          "transform": "matrix(1, 0, -0.212557, 1, -50.9758, 0)",
+          "opacity": "0.0722479",
+          "inline": "transform: translate3d(-115.854%, 0px, 0px) skewX(-12deg); opacity: 0.0722479;",
+          "rect": {
+            "x": -42.45675277709961,
+            "y": 314.8125,
+            "width": 58.96199035644531,
+            "height": 70.390625,
+            "top": 314.8125,
+            "right": 16.505237579345703,
+            "bottom": 385.203125,
+            "left": -42.45675277709961
+          }
+        },
+        {
+          "transform": "matrix(1, 0, -0.212557, 1, -50.9758, 0)",
+          "opacity": "0.0722479",
+          "inline": "transform: translate3d(-115.854%, 0px, 0px) skewX(-12deg); opacity: 0.0722479;",
+          "rect": {
+            "x": 725.5432739257812,
+            "y": 314.8125,
+            "width": 58.96197509765625,
+            "height": 70.390625,
+            "top": 314.8125,
+            "right": 784.5052490234375,
+            "bottom": 385.203125,
+            "left": 725.5432739257812
+          }
+        }
+      ],
+      "exits": [
+        {
+          "label": "Return to main site",
+          "href": "https://kiyonocreativelab.com/",
+          "rect": {
+            "x": 14,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "top": 326,
+            "right": 62,
+            "bottom": 374,
+            "left": 14
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+          "rect": {
+            "x": 782,
+            "y": 326,
+            "width": 48,
+            "height": 48,
+            "top": 326,
+            "right": 830,
+            "bottom": 374,
+            "left": 782
+          },
+          "background": "rgba(255, 255, 255, 0.067)",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        }
+      ]
+    }
+  },
+  "bridge": {
+    "outerPairPresent": true,
+    "innerDownChanged": true,
+    "innerUpChanged": true,
+    "outerDownChanged": true,
+    "outerUpChanged": true,
+    "bothEnlargeChanged": true,
+    "bothCloseChanged": true,
+    "idleOuterStable": true,
+    "idleInnerStable": true,
+    "idleStateStable": true,
+    "idleNotScheduled": true
+  },
+  "result": "CHECKS_PASS_AWAITING_VISUAL_REVIEW",
+  "finished": "2026-09-10T22:04:54.660Z",
+  "cleanup": {
+    "innerOverridesCleared": true,
+    "outerOverridesCleared": true,
+    "isolatedBrowserClosed": true
+  },
+  "acceptance": {
+    "status": "PASS_ROOT_VISUALLY_REVIEWED",
+    "time": "2026-09-10T22:06:47.354162+00:00",
+    "personallyInspectedScreenshots": 6,
+    "rawProofSHA256": "9b2f03f57ce825ead93dea933746afe65e937831830cfc4d684c720699f3a8ec",
+    "retainedUserTabsTouched": false,
+    "physicalDeviceTested": false,
+    "SafariTested": false
+  }
+}

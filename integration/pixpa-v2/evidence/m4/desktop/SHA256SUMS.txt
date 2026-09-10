@@ -1,0 +1,4 @@
+5f55cc66d0f2d51df116e1dd0b05331b7dbd6a69e179021abd5c5f183b2d5a47  DESKTOP-REVIEW.md
+c366b4687d5fed9b2a85143403398b8b40da4d75b0ef99f773c4dd3f6e4c8a25  browser-qa.json
+1aeec6191e78a54526dc487edaa11bde47ba5a006261c64a784565b383047659  coastal-bodyboard-through-breaking-surf.png
+f368eb5e7e3102fee335c2a59659739a80e57ea8784d0195f11b52e2b9a338c2  coastal-feet-fins-and-bottle.png

@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-09-10T22:16:16.013Z",
+  "surface": "existing user in-app browser tab",
+  "action": "reload, open Menu, visit each category, return to aisle",
+  "counts": {"branding":25,"families":27,"headshots":36,"coastal":16},
+  "newCoastalTitles": ["Through breaking surf","Feet, fins and sea"],
+  "newFullURLs": ["https://px-files.pixpa.com/848127/1789075316571-3647.jpg","https://px-files.pixpa.com/848127/1789075360319-3785.jpg"],
+  "returnedToAisle": true,
+  "markedDeliverable": true,
+  "newTabsCreated": 0,
+  "otherUserTabsChanged": false,
+  "scope": "retained-view refresh and observed category navigation; independent actual-public review is separate"
+}
