@@ -58,6 +58,8 @@ body[data-appearance=clear] .aisle-viewport #menu option{background:#163346}
 
 /* Fit the complete shared scene in tall mouse-driven browser panels. Touch
    phones retain the guided portrait walk. The camera and photo keep one ratio. */
+/* Give each native portrait swipe more room to inspect the alternating prints. */
+@media(max-width:600px){.aisle-journey:not([data-reduced=true]){height:1000svh}}
 @media (hover:hover) and (pointer:fine){
  .aisle-journey:not([data-reduced=true]) .aisle-viewport{
   width:min(100%,calc(100svh * 4000 / 2667));
@@ -73,3 +75,5 @@ body[data-appearance=clear] .aisle-viewport #menu option{background:#163346}
 }
 .aisle-viewport #menu[data-side-look=false] .aisle-look-controls{display:none}
 .aisle-viewport #menu[data-side-look=true] .aisle-look-controls{display:flex}
+/* Keep text beneath the clear menu legible in short framed scenes. */
+.aisle-viewport:has(#menu-toggle[aria-expanded=true]) .aisle-progress{visibility:hidden}

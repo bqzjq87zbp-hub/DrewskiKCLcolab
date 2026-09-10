@@ -15,11 +15,11 @@ Open `http://127.0.0.1:4260/`. The runtime vendors Three.js, so no API key or ac
 
 ## Current experience
 
-The entrance uses Blender-authored dimensional wooden easels and full-source-ratio stretched canvases in a shared perspective scene. The actual pier photograph is projected onto a small corridor approximation; it is not a 3D scan. The supported forward/reverse path is 7.5 metres, with five pairs of artworks. Source photograph files remain unchanged.
+The entrance uses Blender-authored dimensional wooden easels and full-source-ratio stretched canvases in a shared perspective scene. The original pier photograph stays on one continuous backdrop at an authored 80m depth, preserving its timber, barnacle and surf contours. Five pairs of artworks share a 7m guided forward/reverse path, with slower reading spans and eased transitions. The backdrop provides shallow whole-image parallax; it is not reconstructed pier geometry. Source photograph files remain unchanged.
 
 Scroll vertically with a mouse/trackpad, or swipe vertically on a phone, to walk immediately. Portrait view looks across the pairs as a deterministic function of scroll position; it does not autoplay. System reduced motion stops ambient water animation and keeps direct scrolling available. **Still** remains an explicit Menu choice. The menu also contains optional previous/next pair controls and phone viewing overrides. Clear glass is the default; Solid and System appearance remain available.
 
-Each canvas opens its category. Galleries retain full-image enlargement, keyboard dismissal and focus return. Canvas construction includes a 38 mm wrapped shell, fine woven surface, rear stretcher, folds and staples. Neutral fill brightens the actual printed surfaces; it does not brighten the pier or timber. The water uses the original photograph with restrained water-only motion, a shared y=0 contact surface, attenuated immersed legs and a reflection of actual easel geometry.
+Each canvas opens its category. Galleries retain full-image enlargement, keyboard dismissal and focus return. Returning to the walk preserves its normalized position even if the window resized while the collection was open. Canvas construction includes a 38 mm wrapped shell, fine woven surface, rear stretcher, folds and staples. Neutral fill brightens the actual printed surfaces; it does not brighten the pier or timber. The foreground water uses restrained motion within the original photograph. Real easel contacts, attenuated immersed legs and reflected geometry share a y=0 surface and the same wave phases. The photograph remains scenery rather than recovered structural depth.
 
 **An optional generated-video preview remains in Menu and is not registered 3D footage.** It lazily loads the included video frames on a shared decode/commit clock, using the same bounded authored travel range as the photographic view. The stored 2D tracking data is retained for research and the legacy fallback; its shear is not applied to the dimensional canvases. No video frames load before opt-in. System reduced motion and Still suppress this secondary preview. Camera registration and physical occlusion remain release limitations.
 
@@ -32,7 +32,7 @@ The generation used the requested 4K provider setting and the original no-logo p
 - `public/index.html`: page shell and no-JavaScript photograph links.
 - `public/main-v2.js`: canvas/category integration, menu and enlargement.
 - `public/collections.js`, `public/collections.css`: category galleries.
-- `public/aisle/`: shared camera, photographic proxy environment, physical displays and retained fallback masks.
+- `public/aisle/`: shared camera, continuous photographic scenery, physical displays and retained fallback masks.
 - `public/aisle/assets/`: Blender-exported geometry, CC0 material maps, portable authoring scripts and asset inspection page.
 - `public/canvas-wrap.js`, `public/slots.json`: image-to-canvas geometry.
 - `public/categories.json`: browser-safe gallery data with site-relative media URLs.

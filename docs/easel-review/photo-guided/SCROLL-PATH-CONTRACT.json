@@ -1,0 +1,649 @@
+{
+  "scope": "Independent expected path and CPU evidence. No GPU, label, timber silhouette or visual acceptance claim.",
+  "version": "B7m-moving-reads-v1",
+  "travel": 7,
+  "depths": [
+    0,
+    3.2,
+    4.95,
+    6.7,
+    8.45,
+    10.2
+  ],
+  "rowX": [
+    [
+      0,
+      0
+    ],
+    [
+      -1.3,
+      1.3
+    ],
+    [
+      -1.3,
+      1.3
+    ],
+    [
+      -1.3,
+      1.3
+    ],
+    [
+      -1.3,
+      1.3
+    ],
+    [
+      -0.9,
+      0.9
+    ]
+  ],
+  "rowYaw": 0.1,
+  "phonePitchRadians": -0.13962634015954636,
+  "focusStops": [
+    0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "keys": [
+    {
+      "progress": 0,
+      "distance": 0,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.035,
+      "distance": 0.045,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.1,
+      "distance": 0.09,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.14,
+      "distance": 0.135,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.2,
+      "distance": 1.75,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.235,
+      "distance": 1.795,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.3,
+      "distance": 1.84,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.34,
+      "distance": 1.885,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.4,
+      "distance": 3.5,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.435,
+      "distance": 3.545,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.5,
+      "distance": 3.59,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.54,
+      "distance": 3.635,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.6,
+      "distance": 5.25,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.635,
+      "distance": 5.295,
+      "phoneYaw": 0.39
+    },
+    {
+      "progress": 0.7,
+      "distance": 5.34,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.74,
+      "distance": 5.385,
+      "phoneYaw": -0.39
+    },
+    {
+      "progress": 0.8,
+      "distance": 6.85,
+      "phoneYaw": 0.27
+    },
+    {
+      "progress": 0.835,
+      "distance": 6.895,
+      "phoneYaw": 0.27
+    },
+    {
+      "progress": 0.9,
+      "distance": 6.94,
+      "phoneYaw": -0.25
+    },
+    {
+      "progress": 0.94,
+      "distance": 6.985,
+      "phoneYaw": -0.25
+    },
+    {
+      "progress": 1,
+      "distance": 7,
+      "phoneYaw": -0.25
+    }
+  ],
+  "interpolation": "Clamp progress to [0,1]. Between consecutive keys use t=(p-pa)/(pb-pa), s=3*t*t-2*t*t*t; distance=Da+(Db-Da)*s; phoneYaw=Ya+(Yb-Ya)*s. Desktop yaw=0. Every consecutive distance key increases; no constant-distance spans or elapsed-time input.",
+  "manualLook": "Current pair stays targeted through each chunk local progress0..0.14; interpolate target X/depth during local0.14..0.20 with smoothstep, subtract actual galleryDistance, yaw=clamp(atan2(-X,depth-distance),±.39)*abs(look). Look≥0 selects left; look<0 right.",
+  "readIntervals": [
+    {
+      "id": "color-balls",
+      "row": 1,
+      "side": "left",
+      "startProgress": 0,
+      "endProgress": 0.035
+    },
+    {
+      "id": "shared-glance",
+      "row": 1,
+      "side": "right",
+      "startProgress": 0.1,
+      "endProgress": 0.14
+    },
+    {
+      "id": "toward-the-water",
+      "row": 2,
+      "side": "left",
+      "startProgress": 0.2,
+      "endProgress": 0.235
+    },
+    {
+      "id": "coastal-poise",
+      "row": 2,
+      "side": "right",
+      "startProgress": 0.3,
+      "endProgress": 0.34
+    },
+    {
+      "id": "nwprt-hat-lager",
+      "row": 3,
+      "side": "left",
+      "startProgress": 0.4,
+      "endProgress": 0.435
+    },
+    {
+      "id": "nwprt-underpier-branded",
+      "row": 3,
+      "side": "right",
+      "startProgress": 0.5,
+      "endProgress": 0.54
+    },
+    {
+      "id": "beach-culture",
+      "row": 4,
+      "side": "left",
+      "startProgress": 0.6,
+      "endProgress": 0.635
+    },
+    {
+      "id": "coke-beach-campaign",
+      "row": 4,
+      "side": "right",
+      "startProgress": 0.7,
+      "endProgress": 0.74
+    },
+    {
+      "id": "coke-beach-cold-detail",
+      "row": 5,
+      "side": "left",
+      "startProgress": 0.8,
+      "endProgress": 0.835
+    },
+    {
+      "id": "coastal-panorama",
+      "row": 5,
+      "side": "right",
+      "startProgress": 0.9,
+      "endProgress": 1
+    }
+  ],
+  "profiles": [
+    {
+      "id": "desktop",
+      "w": 1350,
+      "h": 900,
+      "pitch": 0,
+      "maxYaw": 0,
+      "zoom": 1.0050351483917237
+    },
+    {
+      "id": "phone",
+      "w": 390,
+      "h": 844,
+      "pitch": -0.13962634015954636,
+      "maxYaw": 0.39,
+      "zoom": 1.498992846736908
+    }
+  ],
+  "cameraHeight": 0.26589691659382725,
+  "calibration": {
+    "focalRatio": 0.5088978156800842,
+    "principalX": 0.5,
+    "principalY": 0.5,
+    "objectPositionX": 0.52,
+    "objectPositionY": 0.86,
+    "cameraHeight": 0.26589691659382725,
+    "farDepth": 120,
+    "maximumTravel": 7,
+    "pierScale": 1.772646110625515,
+    "authoredPierScale": 1.772646110625515
+  },
+  "expectedIds": [
+    "color-balls",
+    "shared-glance",
+    "toward-the-water",
+    "coastal-poise",
+    "nwprt-hat-lager",
+    "nwprt-underpier-branded",
+    "beach-culture",
+    "coke-beach-campaign",
+    "coke-beach-cold-detail",
+    "coastal-panorama"
+  ],
+  "physicalPrints": [
+    {
+      "id": "color-balls",
+      "row": 1,
+      "side": "left",
+      "position": [
+        -1.3,
+        0,
+        -3.2
+      ],
+      "yaw": 0.1,
+      "width": 1.05,
+      "height": 0.7000000000000001,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          -1.8152890141890388,
+          1.6,
+          -3.0769421605256757
+        ],
+        [
+          -0.7705346406471116,
+          1.6,
+          -3.1817672480048453
+        ],
+        [
+          -0.7705346406471116,
+          0.9,
+          -3.1817672480048453
+        ],
+        [
+          -1.8152890141890388,
+          0.9,
+          -3.0769421605256757
+        ]
+      ]
+    },
+    {
+      "id": "shared-glance",
+      "row": 1,
+      "side": "right",
+      "position": [
+        1.3,
+        0,
+        -3.2
+      ],
+      "yaw": -0.1,
+      "width": 1.05,
+      "height": 0.7000000000000001,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          0.7705346406471116,
+          1.6,
+          -3.1817672480048453
+        ],
+        [
+          1.8152890141890388,
+          1.6,
+          -3.0769421605256757
+        ],
+        [
+          1.8152890141890388,
+          0.9,
+          -3.0769421605256757
+        ],
+        [
+          0.7705346406471116,
+          0.9,
+          -3.1817672480048453
+        ]
+      ]
+    },
+    {
+      "id": "toward-the-water",
+      "row": 2,
+      "side": "left",
+      "position": [
+        -1.3,
+        0,
+        -4.95
+      ],
+      "yaw": 0.1,
+      "width": 1.05,
+      "height": 0.7000000000000001,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          -1.8152890141890388,
+          1.6,
+          -4.826942160525675
+        ],
+        [
+          -0.7705346406471116,
+          1.6,
+          -4.931767248004845
+        ],
+        [
+          -0.7705346406471116,
+          0.9,
+          -4.931767248004845
+        ],
+        [
+          -1.8152890141890388,
+          0.9,
+          -4.826942160525675
+        ]
+      ]
+    },
+    {
+      "id": "coastal-poise",
+      "row": 2,
+      "side": "right",
+      "position": [
+        1.3,
+        0,
+        -4.95
+      ],
+      "yaw": -0.1,
+      "width": 0.7000000000000001,
+      "height": 1.05,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          0.9446603695707663,
+          1.9500000000000002,
+          -4.91429640009165
+        ],
+        [
+          1.6411632852653844,
+          1.9500000000000002,
+          -4.84441300843887
+        ],
+        [
+          1.6411632852653844,
+          0.9,
+          -4.84441300843887
+        ],
+        [
+          0.9446603695707663,
+          0.9,
+          -4.91429640009165
+        ]
+      ]
+    },
+    {
+      "id": "nwprt-hat-lager",
+      "row": 3,
+      "side": "left",
+      "position": [
+        -1.3,
+        0,
+        -6.7
+      ],
+      "yaw": 0.1,
+      "width": 1.05,
+      "height": 0.69975,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          -1.8152890141890388,
+          1.59975,
+          -6.576942160525675
+        ],
+        [
+          -0.7705346406471116,
+          1.59975,
+          -6.681767248004845
+        ],
+        [
+          -0.7705346406471116,
+          0.9,
+          -6.681767248004845
+        ],
+        [
+          -1.8152890141890388,
+          0.9,
+          -6.576942160525675
+        ]
+      ]
+    },
+    {
+      "id": "nwprt-underpier-branded",
+      "row": 3,
+      "side": "right",
+      "position": [
+        1.3,
+        0,
+        -6.7
+      ],
+      "yaw": -0.1,
+      "width": 1.05,
+      "height": 0.700125,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          0.7705346406471116,
+          1.600125,
+          -6.681767248004845
+        ],
+        [
+          1.8152890141890388,
+          1.600125,
+          -6.576942160525675
+        ],
+        [
+          1.8152890141890388,
+          0.9,
+          -6.576942160525675
+        ],
+        [
+          0.7705346406471116,
+          0.9,
+          -6.681767248004845
+        ]
+      ]
+    },
+    {
+      "id": "beach-culture",
+      "row": 4,
+      "side": "left",
+      "position": [
+        -1.3,
+        0,
+        -8.45
+      ],
+      "yaw": 0.1,
+      "width": 1.05,
+      "height": 0.699890625,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          -1.8152890141890388,
+          1.599890625,
+          -8.326942160525675
+        ],
+        [
+          -0.7705346406471116,
+          1.599890625,
+          -8.431767248004844
+        ],
+        [
+          -0.7705346406471116,
+          0.9,
+          -8.431767248004844
+        ],
+        [
+          -1.8152890141890388,
+          0.9,
+          -8.326942160525675
+        ]
+      ]
+    },
+    {
+      "id": "coke-beach-campaign",
+      "row": 4,
+      "side": "right",
+      "position": [
+        1.3,
+        0,
+        -8.45
+      ],
+      "yaw": -0.1,
+      "width": 1.05,
+      "height": 0.699890625,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          0.7705346406471116,
+          1.599890625,
+          -8.431767248004844
+        ],
+        [
+          1.8152890141890388,
+          1.599890625,
+          -8.326942160525675
+        ],
+        [
+          1.8152890141890388,
+          0.9,
+          -8.326942160525675
+        ],
+        [
+          0.7705346406471116,
+          0.9,
+          -8.431767248004844
+        ]
+      ]
+    },
+    {
+      "id": "coke-beach-cold-detail",
+      "row": 5,
+      "side": "left",
+      "position": [
+        -0.9,
+        0,
+        -10.2
+      ],
+      "yaw": 0.1,
+      "width": 1.05,
+      "height": 0.699890625,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          -1.4152890141890389,
+          1.599890625,
+          -10.076942160525675
+        ],
+        [
+          -0.3705346406471116,
+          1.599890625,
+          -10.181767248004844
+        ],
+        [
+          -0.3705346406471116,
+          0.9,
+          -10.181767248004844
+        ],
+        [
+          -1.4152890141890389,
+          0.9,
+          -10.076942160525675
+        ]
+      ]
+    },
+    {
+      "id": "coastal-panorama",
+      "row": 5,
+      "side": "right",
+      "position": [
+        0.9,
+        0,
+        -10.2
+      ],
+      "yaw": -0.1,
+      "width": 1.05,
+      "height": 0.3508203125,
+      "printBottom": 0.9,
+      "printFrontZ": 0.07100000000000001,
+      "worldFrontCorners": [
+        [
+          0.3705346406471116,
+          1.2508203125000001,
+          -10.181767248004844
+        ],
+        [
+          1.4152890141890389,
+          1.2508203125000001,
+          -10.076942160525675
+        ],
+        [
+          1.4152890141890389,
+          0.9,
+          -10.076942160525675
+        ],
+        [
+          0.3705346406471116,
+          0.9,
+          -10.181767248004844
+        ]
+      ]
+    }
+  ],
+  "hashes": {
+    "gallery-layout.js": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+    "photographic-environment.js": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+    "water-surface.js": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5"
+  }
+}

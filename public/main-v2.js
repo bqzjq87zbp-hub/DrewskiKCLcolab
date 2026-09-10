@@ -13,7 +13,8 @@ function display(items,index,trigger,original=false){
   full.decode().then(()=>{if(version!==request)return;$('#viewer-status').textContent='';full.style.opacity='1';full.setAttribute('aria-busy','false');}).catch(()=>{if(version!==request)return;$('#viewer-status').textContent='The image could not load. Open the photograph file or try another image.';full.setAttribute('aria-busy','false');});
   if(!viewer.open)viewer.showModal();
 }
-const collections=await createCollections({onEnlarge:(items,index,trigger)=>display(items,index,trigger)});
+let aisle=null;
+const collections=await createCollections({onEnlarge:(items,index,trigger)=>display(items,index,trigger),captureReturn:()=>aisle?.captureReturnPosition()??null,restoreReturn:position=>aisle?.restore(position)??false});
 const categoryMap=['families','families','families','headshots','branding','branding','coastal','branding','branding','coastal'];
 const slots=sourceSlots.map((s,i)=>({...s,category:categoryMap[i]}));
 // This easel introduces the actual professional-client collection, never Kyle's About portraits.
@@ -49,4 +50,4 @@ $('#appearance').onchange=e=>{menu.dataset.appearance=e.target.value;document.bo
 let appearance='clear';try{const saved=sessionStorage.getItem('kcl-preview-appearance-v2');if(['clear','solid','system'].includes(saved))appearance=saved;}catch{}
 document.body.dataset.appearance=appearance;menu.dataset.appearance=appearance;$('#appearance').value=appearance;
 window.PhotographicCollections={slots,collections,display,enterCategory,menu,signLayer};
-window.PhotographicAisle=attachAisle(window.PhotographicCollections);
+window.PhotographicAisle=aisle=attachAisle(window.PhotographicCollections);

@@ -1,13 +1,14 @@
 import * as THREE from '/vendor/three.module.js';
 import {createPhysicalEasel} from './physical-easel.js';
 import {createPhotographicEnvironment} from './photographic-environment.js';
-import {DEPTHS,TRAVEL,ROW_OFFSET,LOOK_ANGLE} from './gallery-layout.js';
+import {WATER_WAVES_GLSL} from './water-surface.js';
+import {DEPTHS,TRAVEL,ROW_YAW,PHONE_PITCH,PIER_SCENE_SCALE,galleryRowX,galleryLookYaw,galleryDistance} from './gallery-layout.js';
 
 // Metres, one camera, one water plane. No per-print image-space stretching.
-const clamp = (x,a,b) => Math.max(a,Math.min(b,x));
 const image = async src => {const im=new Image();im.src=src;await im.decode();return im;};
 
 export function createPhysicalDisplay({viewport,slots,onReady}) {
+  const portraitPitch=PHONE_PITCH;
   let renderer;
   try {renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'});}
   catch {return {ready:false,error:'WebGL unavailable; photographic fallback retained',render:()=>null,destroy:()=>{}};}
@@ -73,10 +74,9 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       gl_Position=projectionMatrix*viewMatrix*w;}`,
     fragmentShader:`uniform sampler2D reflectionMap;uniform mat4 textureMatrix;uniform float waterPhase;
       uniform vec2 reflectionContacts[CONTACT_COUNT];uniform vec2 reflectionTexel;
+      uniform vec3 photoCameraPosition,photoPlaneCenter,photoPlaneNormal;uniform mat4 photoSourceProjection;
       varying vec4 reflectedUV;varying vec3 worldPoint;
-      float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
-      float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);
-        return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);}
+      ${WATER_WAVES_GLSL}
       void main(){
       vec2 p=worldPoint.xz;
       float contactDistance2=1e6;
@@ -86,10 +86,8 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       // Hold the reflection at the measured water crossings, then let the
       // same broad wave directions as the photographic water move its body.
       float freedom=smoothstep(.0081,.09,contactDistance2);
-      float broad=noise(p*1.8+vec2(waterPhase*.035,-waterPhase*.055));
-      float detail=noise(p*vec2(3.2,7.5)+vec2(-waterPhase*.06,waterPhase*.08));
-      float wave=sin(p.y*4.8+p.x*2.2+waterPhase+(broad-.5)*1.4);
-      float crossWave=sin(p.y*7.2-p.x*1.4+waterPhase*.73+1.7+(detail-.5)*1.1);
+      vec4 waves=waterWaves(p,waterPhase);
+      float wave=waves.x,crossWave=waves.y,broad=waves.z,detail=waves.w;
       vec2 displacement=vec2(wave*.025+crossWave*.012+(detail-.5)*.016,
         crossWave*.011+(broad-.5)*.014)*freedom;
       vec4 projected=textureMatrix*vec4(worldPoint+vec3(displacement.x,0.0,displacement.y),1.0);
@@ -110,7 +108,16 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
         texture2D(reflectionMap,uv-vec2(0.0,footprint.y*.5)))*.09;
       float crest=wave*.6+crossWave*.4+(detail-.5)*.75;
       float breakup=mix(1.0,mix(.12,1.0,smoothstep(-.55,.55,crest)),freedom);
-      gl_FragColor=vec4(reflected.rgb*vec3(.68,.80,.84),reflected.a*mix(.34,.26,freedom)*breakup);
+      // Reflections belong only over photographed water. Use the same viewing
+      // ray and continuous photo plane, so no reflected easel paints a pier foot.
+      vec3 ray=worldPoint-photoCameraPosition;
+      float denominator=dot(ray,photoPlaneNormal);
+      if(denominator<=0.0)discard;
+      vec3 photoHit=photoCameraPosition+ray*dot(photoPlaneCenter-photoCameraPosition,photoPlaneNormal)/denominator;
+      vec4 sourceClip=photoSourceProjection*vec4(photoHit,1.0);
+      float sourceY=sourceClip.y/sourceClip.w*.5+.5;
+      float sourceWater=1.0-smoothstep(.065,.105,sourceY);
+      gl_FragColor=vec4(reflected.rgb*vec3(.68,.80,.84),reflected.a*mix(.34,.26,freedom)*breakup*sourceWater);
       #include <colorspace_fragment>
       }`
   }));
@@ -174,12 +181,13 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
   }
   Promise.all([image('/media/underpier-photograph.jpg'),image('/media/easel-composition-reference.jpg'),...slots.map(s=>image(s.src))]).then(([source,wood,...images])=>{
     if(disposed)return;
-    environment=createPhotographicEnvironment({THREE,scene,sourceImage:source});
+    environment=createPhotographicEnvironment({THREE,scene,sourceImage:source,calibration:{pierScale:PIER_SCENE_SCALE,maximumTravel:TRAVEL}});
+    Object.assign(water.material.uniforms,environment.reflectionMaskUniforms);
     slots.forEach((slot,index)=>{
       const m=createPhysicalEasel({THREE,slot,image:images[index],woodImage:wood,index});
-      m.group.position.set(slot.side==='left'?-ROW_OFFSET:ROW_OFFSET,0,-DEPTHS[slot.depth]);
-      m.group.rotation.y=slot.side==='left'?.22:-.22;
-      m.group.traverse(o=>{if(o.isMesh){for(const material of Array.isArray(o.material)?o.material:[o.material]){material.clippingPlanes=[surface];wetTimber(material);if(/canvas|photographic/i.test(material.name))o.layers.enable(1);}}});
+      m.group.position.set(galleryRowX(slot),0,-DEPTHS[slot.depth]);
+      m.group.rotation.y=slot.side==='left'?ROW_YAW:-ROW_YAW;
+      m.group.traverse(o=>{if(o.isMesh){for(const material of Array.isArray(o.material)?o.material:[o.material]){material.clippingPlanes=[surface];wetTimber(material);if(/canvas|photographic/i.test(material.name)){o.layers.enable(1);}}}});
       scene.add(m.group);m.group.updateMatrixWorld(true);
       m.waterContacts.forEach((point,contactIndex)=>{
         const world=point.clone().applyMatrix4(m.group.matrixWorld);
@@ -188,20 +196,21 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       const submerged=waterCopy(m.group,false),ripples=contactRipples(m);
       models.push({...m,slot,submerged,ripples,imageSize:[images[index].naturalWidth,images[index].naturalHeight]});
     });
-    Promise.all(models.map(m=>m.ready)).then(()=>{if(!disposed){diagnostics.ready=true;onReady?.();}}).catch(e=>{diagnostics.error=e.message;renderer.domElement.hidden=true;onReady?.();});
+    Promise.all([environment.ready,...models.map(m=>m.ready)]).then(()=>{if(!disposed){diagnostics.ready=true;onReady?.();}}).catch(e=>{diagnostics.error=e.message;renderer.domElement.hidden=true;onReady?.();});
   }).catch(e=>{diagnostics.error=e.message;renderer.domElement.hidden=true;onReady?.();});
 
   // The generated video has no validated 3D camera solve. Its measured 2D
   // groups contain severe shear and discontinuities; do not drive a camera
   // from those per-frame fits. A bounded authored dolly is deterministic in
   // both directions, while this separate mode remains explicitly approximate.
-  const videoDistance=committed=>committed.progress*TRAVEL;
-  function render({width,height,progress,committed,reduced,time=0,look=0}) {
+  const videoDistance=committed=>galleryDistance(committed.progress);
+  function render({width,height,progress,committed,reduced,time=0,look=0,autoYaw=null}) {
     if(!diagnostics.ready)return null;
     const key=width+'x'+height;
     if(key!==size){size=key;renderer.setPixelRatio(Math.min(devicePixelRatio||1,width<600?1.5:2));renderer.setSize(width,height,false);reflectionTarget.setSize(Math.min(1024,width),Math.round(Math.min(1024,width)*height/width));water.material.uniforms.reflectionTexel.value.set(1/reflectionTarget.width,1/reflectionTarget.height);}
-    cameraDistance=committed?videoDistance(committed):progress*TRAVEL;
-    environment.update({camera,width,height,distance:cameraDistance,enabled:!committed,time,reduced,lookYaw:look*LOOK_ANGLE});
+    cameraDistance=committed?videoDistance(committed):galleryDistance(progress);
+    const viewPitchOffset=width<600&&width<height?portraitPitch:0;
+    environment.update({camera,width,height,distance:cameraDistance,enabled:!committed,time,reduced,lookYaw:autoYaw??galleryLookYaw(progress,look),viewPitchOffset});
     uniforms.phase.value=reduced?0:time*.8;
     const projected=models.map(m=>{
       const distance=DEPTHS[m.slot.depth]-cameraDistance;
@@ -216,7 +225,7 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       const vertices=m.printMesh.geometry.attributes.position;
       const frontVertices=Array.from({length:4},(_,i)=>[vertices.getX(16+i),vertices.getY(16+i),vertices.getZ(16+i)]);
       return {id:m.slot.id,quad,passed,distance,physical:m.dimensions,source:m.imageSize,
-        frontUV,frontVertices,meshScale:m.printMesh.scale.toArray(),groupScale:m.group.scale.toArray(),waterPlaneY:0};
+        frontUV,frontVertices,meshScale:m.printMesh.scale.toArray(),groupScale:m.group.scale.toArray(),worldPosition:m.group.position.toArray(),worldRotation:m.group.rotation.toArray().slice(0,3),worldFrontCorners:m.localCorners.map(v=>m.group.localToWorld(Array.isArray(v)?new THREE.Vector3(...v):v.clone()).toArray()),waterPlaneY:0};
     });
     reflectionCamera.copy(camera);reflectionCamera.position.y=-camera.position.y;
     const direction=camera.getWorldDirection(new THREE.Vector3());direction.y*=-1;
@@ -224,10 +233,10 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
     reflectionCamera.updateMatrixWorld(true);
     textureMatrix.set(.5,0,0,.5,0,.5,0,.5,0,0,.5,.5,0,0,0,1);
     textureMatrix.multiply(reflectionCamera.projectionMatrix).multiply(reflectionCamera.matrixWorldInverse);
-    water.visible=false;environment.group.visible=false;models.forEach(m=>{m.submerged.visible=false;m.ripples.visible=false;});
+    water.visible=false;environment.setReflectionPass(true);models.forEach(m=>{m.submerged.visible=false;m.ripples.visible=false;});
     renderer.setRenderTarget(reflectionTarget);renderer.clear();const reflectedStats=renderLitScene(reflectionCamera);
     const reflectionCalls=reflectedStats.calls;
-    water.visible=true;environment.group.visible=!committed;models.forEach(m=>{m.submerged.visible=m.group.visible;m.ripples.visible=m.group.visible;});
+    water.visible=true;environment.setReflectionPass(false);environment.group.visible=!committed;models.forEach(m=>{m.submerged.visible=m.group.visible;m.ripples.visible=m.group.visible;});
     renderer.setRenderTarget(null);const frameStats=renderLitScene(camera);
     diagnostics.calls=frameStats.calls;diagnostics.triangles=frameStats.triangles;
     diagnostics.reflectionCalls=reflectionCalls;diagnostics.water='single y=0 projective planar reflection with wave distortion; submerged timber pass';
@@ -235,6 +244,7 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
     diagnostics.videoCamera=committed?'authored preview dolly; unregistered generated footage':null;
     diagnostics.lookYaw=camera.rotation.y;diagnostics.waterPhase=uniforms.phase.value;
     diagnostics.environment=environment.getState();
+    diagnostics.galleryPlacement=projected.map(({id,worldPosition,worldRotation,worldFrontCorners})=>({id,worldPosition,worldRotation,worldFrontCorners}));
     diagnostics.printInvariants=projected.map(({id,physical,source,frontUV,frontVertices,meshScale,groupScale})=>({id,physical,source,frontUV,frontVertices,meshScale,groupScale}));
     return projected;
   }

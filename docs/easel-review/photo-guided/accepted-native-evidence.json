@@ -1,0 +1,76 @@
+{
+  "checkpoint": "004c282b0de025fe92e3a4b614057cccac7abad9",
+  "status": "TECHNICAL PASS; MOTION REVIEW REQUIRED",
+  "runtimeStable": true,
+  "errors": [],
+  "sourceFingerprints": [
+    {
+      "url": "/main-v2.js",
+      "status": 200,
+      "sha256": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d"
+    },
+    {
+      "url": "/collections.js",
+      "status": 200,
+      "sha256": "fc5839be42c6d9ccf5ffb777972cd28c31f4e32b198564fbc7a42721ad79711c"
+    },
+    {
+      "url": "/aisle/photographic-environment.js",
+      "status": 200,
+      "sha256": "fda35aca98b47b39cc27e4d46cd6ef465bbe7bd613ba97d56c98c714d398d3cf"
+    },
+    {
+      "url": "/aisle/physical-display.js",
+      "status": 200,
+      "sha256": "6d1600be25caf132ef32c1ab2fca68627d6e332af75c6880809702c8946385a6"
+    },
+    {
+      "url": "/aisle/gallery-layout.js",
+      "status": 200,
+      "sha256": "091d8000f0809a585004008437190cc582da4ce40f9353fd1b755284df3907f0"
+    },
+    {
+      "url": "/aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "bc1efccc05290fe146e3182f249bfe4c169de749535c111e2a01db76f5df7345"
+    },
+    {
+      "url": "/aisle-integration.js",
+      "status": 200,
+      "sha256": "f39c03df335dbc94019644b7c1e542280fc9efd4df82953a4ded5b642d9e45a4"
+    },
+    {
+      "url": "/aisle/aisle.css",
+      "status": 200,
+      "sha256": "2feb0a1cb87d2ccf6b9b6f2ca105700607dfa73bbd301113a4d74ff242833876"
+    }
+  ],
+  "rawReportSHA256": "9e323d1586225a4eb64ef72a958b806d1f9df2d9be289e9f0e839918c89a2a70",
+  "cases": [
+    {
+      "device": "desktop",
+      "samples": 604,
+      "startProgress": 0,
+      "endProgress": 0,
+      "maxProgress": 1,
+      "maxDistance": 7.5,
+      "scrollRange": 4950,
+      "durationSeconds": 36.42410000014305,
+      "video": "accepted-desktop-native.webm",
+      "videoSHA256": "d1904fdc40250624fbe2e4467762404a78a39f819fb248f980f5edb70f67f046"
+    },
+    {
+      "device": "phone",
+      "samples": 396,
+      "startProgress": 0,
+      "endProgress": 0,
+      "maxProgress": 1,
+      "maxDistance": 7.5,
+      "scrollRange": 4642,
+      "durationSeconds": 23.9995,
+      "video": "accepted-phone-native.webm",
+      "videoSHA256": "2e4825a269d82e54cfc317ae78ed06afb7cc82bba08dcf1434ebb3373ba88d99"
+    }
+  ],
+  "comparisonScope": "Same native gesture recorder and viewport sizes, separately recorded. Camera/path/layout differ; not matched-camera frames or a hardware benchmark."
+}

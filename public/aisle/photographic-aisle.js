@@ -2,7 +2,7 @@ import {createWrappedCanvas,homography} from '/canvas-wrap.js';
 import {easelMask} from './easel-masks.js';
 import {createVideoFrameSeam} from './video-frame-seam.js';
 import {createPhysicalDisplay} from './physical-display.js';
-import {DEPTHS as depths,TRAVEL as travel} from './gallery-layout.js';
+import {DEPTHS as depths,TRAVEL as travel,galleryAutoYaw,galleryDistance} from './gallery-layout.js';
 
 const W=2528,H=1684,VP={x:1327,y:1416};
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
@@ -46,18 +46,37 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
   // Scroll across the full viewing area even when the photograph is framed
   // in a smaller stage. This reaches the last pair before sticky exit begins.
   const getScrollRange=()=>Math.max(1,journey.offsetHeight-innerHeight);
-  function measure(){dimensions={width:viewport.clientWidth,height:viewport.clientHeight};}
+  let measurement=null,scrollPosition=null;
+  function rememberScrollPosition(){
+    // A resize can clamp scrollY before its callback. Do not record that clamp
+    // against the old range, or replace a hidden collection's return position.
+    if(!measurement?.active||innerWidth!==measurement.windowWidth||innerHeight!==measurement.windowHeight||viewport.clientWidth!==measurement.width||viewport.clientHeight!==measurement.height)return;
+    const offset=scrollY-measurement.top;
+    scrollPosition={progress:clamp(offset/measurement.range,0,1),inJourney:offset>=-.5&&offset<=measurement.range+.5};
+  }
+  function measure(preserveProgress=false){
+    const width=viewport.clientWidth,height=viewport.clientHeight;
+    const next={width,height,windowWidth:innerWidth,windowHeight:innerHeight,top:journey.getBoundingClientRect().top+scrollY,range:getScrollRange(),active:width>0&&height>0&&!isReduced()&&journey.dataset.reduced!=='true'};
+    const resized=measurement&&(width!==measurement.width||height!==measurement.height||innerWidth!==measurement.windowWidth||innerHeight!==measurement.windowHeight);
+    const preserved=preserveProgress&&resized&&measurement.active&&next.active&&scrollPosition?.inJourney?scrollPosition.progress:null;
+    dimensions={width,height};measurement=next;
+    if(preserved!==null)scrollTo({top:next.top+preserved*next.range,behavior:'instant'});
+    scrollPosition=null;rememberScrollPosition();
+  }
   function render(now=performance.now()){
     frame=0;if(destroyed||!dimensions.width||!dimensions.height)return;frameCount++;
     if(now-lastPaint<30){schedule();return;}lastPaint=now;
     const reducedMode=isReduced(),top=journey.getBoundingClientRect().top+scrollY,range=getScrollRange(),requestedProgress=reducedMode?0:clamp((scrollY-top)/range,0,1);
+    rememberScrollPosition();
     video.setSuppressed(reducedMode||reduced.matches);video.request(requestedProgress);
     const committed=video.commit();p=committed?committed.progress:requestedProgress;
-    z=committed?null:p*travel;
+    z=committed?null:galleryDistance(p);
     // In portrait, vertical scrolling gently looks across each pair so every
     // artwork is visible without tapping another control. No timed autoplay.
-    const aimedLook=look==='auto'?(dimensions.width<600?Math.cos(p*Math.PI*10):0):look==='left'?1:look==='right'?-1:0;
-    const physicalFrames=physical.render({width:dimensions.width,height:dimensions.height,progress:p,committed,reduced:reducedMode||reduced.matches,time:now/1000,look:aimedLook});
+    const portrait=dimensions.width<600&&dimensions.width<dimensions.height;
+    const aimedLook=look==='left'?1:look==='right'?-1:0;
+    const autoYaw=look==='auto'&&portrait?galleryAutoYaw(p):null;
+    const physicalFrames=physical.render({width:dimensions.width,height:dimensions.height,progress:p,committed,reduced:reducedMode||reduced.matches,time:now/1000,look:aimedLook,autoYaw});
     viewport.dataset.dimensional=String(Boolean(physicalFrames));
     const fit=dimensions.width/W,vpx=dimensions.width*(VP.x/W),vpy=dimensions.height*.846;
     let cover=null;
@@ -112,15 +131,28 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
     if(!reducedMode&&!reduced.matches&&!document.hidden&&bounds.bottom>0&&bounds.top<innerHeight&&viewport.getClientRects().length)schedule();
   }
   function schedule(){if(!frame&&!destroyed)frame=requestAnimationFrame(render);}
-  function resize(){measure();schedule();}
-  function preference(){journey.dataset.reduced=String(isReduced());resize();}
+  function onScroll(){rememberScrollPosition();schedule();}
+  function resize(){measure(true);schedule();}
+  function preference(){journey.dataset.reduced=String(isReduced());measure();schedule();}
   function setMotionPreference(mode){if(!['system','guided','still'].includes(mode))throw new TypeError('Motion preference must be system, guided or still');motionPreference=mode;preference();return mode;}
   function setLook(direction){look=['left','right','ahead','auto'].includes(direction)?direction:'auto';schedule();}
   document.addEventListener('visibilitychange',schedule);
-  const observer=new ResizeObserver(resize);observer.observe(viewport);window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',resize,{passive:true});reduced.addEventListener('change',preference);preference();
+  const observer=new ResizeObserver(resize);observer.observe(viewport);window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',resize,{passive:true});reduced.addEventListener('change',preference);preference();
   Promise.all([original.decode(),...records.map(r=>r.wood.decode())]).then(resize).catch(()=>{const error=document.createElement('p');error.className='aisle-source-failure';error.textContent='A source photograph could not load. The ordinary photograph list remains available below.';viewport.append(error);journey.dataset.reduced='true';resize();});
-  const getState=()=>({kind:physical.ready?'dimensional easels with shared-camera photographic proxies; depth approximate':video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',physical:physical.getState?.(),scrollY,scrollRange:getScrollRange(),cameraZ:z,progress:p,motionPreference,lookDirection:look,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,physical:r.physical,source:r.source,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
-  const restore=state=>{if(!state||!Number.isFinite(state.scrollY))return;scrollTo({top:state.scrollY,behavior:'instant'});schedule();};
-  const destroy=()=>{destroyed=true;if(frame)cancelAnimationFrame(frame);physical.destroy();video.destroy();observer.disconnect();document.removeEventListener('visibilitychange',schedule);window.removeEventListener('scroll',schedule);window.removeEventListener('resize',resize);reduced.removeEventListener('change',preference);journey.remove();ownedStyle.remove();};
-  return{viewport,journey,getState,getScrollRange,restore,destroy,setMotionPreference,setLook,setVideoPreview:video.setEnabled,slotAnchors:records.map(({slot,anchor,group})=>({slot,anchor,group})),homography};
+  const getState=()=>({kind:physical.ready?'dimensional easels with continuous photographic scenery; background depth approximate':video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',physical:physical.getState?.(),scrollY,scrollRange:getScrollRange(),cameraZ:z,progress:p,motionPreference,lookDirection:look,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,physical:r.physical,source:r.source,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
+  const captureReturnPosition=()=>{
+    const top=journey.getBoundingClientRect().top+scrollY,range=getScrollRange(),offset=scrollY-top;
+    return{scrollY,progress:!isReduced()&&viewport.clientWidth>0&&offset>=0&&offset<=range?offset/range:null};
+  };
+  const restore=state=>{
+    if(!state||!Number.isFinite(state.scrollY))return false;
+    // Collections can resize while this scene is hidden. Restore the saved
+    // walk fraction against its new range before the next rendered frame.
+    measure();
+    const top=journey.getBoundingClientRect().top+scrollY;
+    const y=!isReduced()&&Number.isFinite(state.progress)?top+clamp(state.progress,0,1)*getScrollRange():state.scrollY;
+    scrollTo({top:y,behavior:'instant'});rememberScrollPosition();schedule();return true;
+  };
+  const destroy=()=>{destroyed=true;if(frame)cancelAnimationFrame(frame);physical.destroy();video.destroy();observer.disconnect();document.removeEventListener('visibilitychange',schedule);window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',resize);reduced.removeEventListener('change',preference);journey.remove();ownedStyle.remove();};
+  return{viewport,journey,getState,getScrollRange,captureReturnPosition,restore,destroy,setMotionPreference,setLook,setVideoPreview:video.setEnabled,slotAnchors:records.map(({slot,anchor,group})=>({slot,anchor,group})),homography};
 }

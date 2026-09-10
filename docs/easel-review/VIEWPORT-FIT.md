@@ -1,3 +1,5 @@
+> Historical checkpoint evidence. Preserve these results with their stated source versions; they do not certify the current photograph-guided implementation. See [current review](REVIEW.md) for the active method and verification. Proposed next steps below describe that earlier stage.
+
 # Full scene in constrained desktop panels
 
 The landing scene now fits both dimensions of a desktop browser panel. The source photograph and physical artwork retain their proportions. Tall panels have space above and below; wide, short panels have space at the sides. Touch phones retain the guided portrait walk and side views.

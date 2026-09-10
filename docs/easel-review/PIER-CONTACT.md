@@ -1,3 +1,5 @@
+> Historical checkpoint evidence. Preserve these results with their stated source versions; they do not certify the current photograph-guided implementation. See [current review](REVIEW.md) for the active method and verification. Proposed next steps below describe that earlier stage.
+
 # Pier-contact experiment and retained scene
 
 Six rendered variants of lower-foot continuations and water-contact masks did not establish a net visual improvement. The runtime is restored to the accepted `8b0c073` checkpoint. The comparisons below show why the last candidate was rejected; it is not included in the running scene.

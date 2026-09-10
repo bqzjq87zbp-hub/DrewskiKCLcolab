@@ -1,3 +1,5 @@
+> Historical checkpoint evidence. Preserve these results with their stated source versions; they do not certify the current photograph-guided implementation. See [current review](REVIEW.md) for the active method and verification. Proposed next steps below describe that earlier stage.
+
 # Pier registration and complete-frame prototypes
 
 **V1 and V2 were both rejected for integration.** [Certain] V2 improves the entry silhouette, but its full walk still looks less convincing and obstructs more artwork than the accepted gallery. This registration stage leaves the accepted pier runtime unchanged; neither experimental geometry nor its fitted camera is included. The earlier [pier-contact review](PIER-CONTACT.md) records the retained scene.

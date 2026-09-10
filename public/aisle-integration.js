@@ -33,7 +33,8 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   const progress=engine.viewport.querySelector('.aisle-progress');
   const prev=document.createElement('button'),next=document.createElement('button');prev.type=next.type='button';prev.textContent='← Previous pair';next.textContent='Next pair →';prev.setAttribute('aria-label','Walk back to the previous pair of canvases');next.setAttribute('aria-label','Walk forward to the next pair of canvases');prev.className=next.className='walk-step';const stepTools=document.createElement('div');stepTools.className='aisle-step-controls';stepTools.append(prev,next);menu.querySelector('nav').append(stepTools);progress.setAttribute('aria-label','Scroll or swipe to walk; arrow buttons advance one pair');
   const stops=FOCUS_STOPS,reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  function step(direction){const state=engine.getState(),target=direction>0?stops.find(v=>v>state.progress+.015):[...stops].reverse().find(v=>v<state.progress-.015);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*engine.getScrollRange();scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
+  const stepTarget=(progress,direction)=>direction>0?stops.find(v=>v>progress+.015):[...stops].reverse().find(v=>v<progress-.015);
+  function step(direction){const target=stepTarget(engine.getState().progress,direction);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*engine.getScrollRange();scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
   prev.onclick=()=>step(-1);next.onclick=()=>step(1);
   let frame=0;
   function layout(){frame=0;if(collections.active||mount.hidden)return;const state=engine.getState();if(!state.viewport.width||!state.viewport.height)return;
@@ -44,18 +45,24 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
     const invitationOpacity=state.reducedMotion?1:Math.max(0,1-state.progress/.045);
     invitation.style.opacity=String(invitationOpacity);invitation.setAttribute('aria-hidden',String(invitationOpacity===0));
     invitationCue.textContent=state.reducedMotion?'Choose a collection below to explore.':'Scroll or swipe to explore.';
-    const labeledSides=new Set();
+    const labeledSides=new Set(),reserved=[menu.getBoundingClientRect(),progress.getBoundingClientRect()];
+    const openPanel=menu.querySelector('nav:not([hidden])');
+    if(openPanel)reserved.push(openPanel.getBoundingClientRect());
+    if(invitationOpacity>.05)reserved.push(invitation.getBoundingClientRect());
+    const overlaps=(a,b)=>a.left<b.right+8&&a.right>b.left-8&&a.top<b.bottom+8&&a.bottom>b.top-8;
     for(let i=0;i<signs.length;i++){const{a,slot}=signs[i],r=state.slots[i],q=r.projectedQuad;if(!q.length){a.hidden=true;continue;}const x=(q[0].x+q[1].x)/2,y=Math.min(q[0].y,q[1].y)-12,w=Math.max(...q.map(p=>p.x))-Math.min(...q.map(p=>p.x));
       a.hidden=state.reducedMotion||!r.interactive||w<Math.min(105,state.viewport.width*.15)||x<30||x>state.viewport.width-30||y<65||y>state.viewport.height-100;
-      if(state.physical?.ready){if(labeledSides.has(slot.side))a.hidden=true;else if(!a.hidden)labeledSides.add(slot.side);}
       a.style.left=Math.max(66,Math.min(state.viewport.width-66,x))+'px';a.style.top=y+'px';
+      if(!a.hidden&&reserved.some(rect=>overlaps(a.getBoundingClientRect(),rect)))a.hidden=true;
+      if(state.physical?.ready){if(labeledSides.has(slot.side))a.hidden=true;else if(!a.hidden)labeledSides.add(slot.side);}
     }
-    prev.disabled=state.progress<.01;next.disabled=state.progress>.985;
+    prev.disabled=stepTarget(state.progress,-1)===undefined;next.disabled=stepTarget(state.progress,1)===undefined;
     progress.querySelector('span').textContent=state.progress>.985?'Scroll back to return':matchMedia('(pointer:coarse)').matches?'Swipe up to walk forward':'Scroll to walk forward';
   }
   function schedule(){if(!frame)frame=requestAnimationFrame(layout);}
   addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});addEventListener('popstate',()=>requestAnimationFrame(schedule));reduced.addEventListener('change',schedule);
   engine.viewport.addEventListener('kclaisleframe',schedule);
+  const menuObserver=new MutationObserver(schedule);menuObserver.observe(menu.querySelector('nav'),{attributes:true,attributeFilter:['hidden']});
   const observer=new ResizeObserver(()=>requestAnimationFrame(schedule));observer.observe(engine.viewport);requestAnimationFrame(schedule);
   if(collections.active)mount.hidden=true;
   return{...engine,mount,signs};

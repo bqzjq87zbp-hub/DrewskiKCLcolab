@@ -1,3 +1,5 @@
+> Historical checkpoint evidence. Preserve these results with their stated source versions; they do not certify the current photograph-guided implementation. See [current review](REVIEW.md) for the active method and verification. Proposed next steps below describe that earlier stage.
+
 # Browser acceptance evidence
 
 Initial checkpoint status: PASS
