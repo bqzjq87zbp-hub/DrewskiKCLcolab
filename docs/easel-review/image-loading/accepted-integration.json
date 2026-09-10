@@ -1,0 +1,135 @@
+{
+  "head": "30e0bf3b31e25b284c698055ecb633069d2df9d3",
+  "checkedUTC": "2026-09-10T03:23:16.626363+00:00",
+  "restartedOwnedServer": true,
+  "runtime": [
+    {
+      "path": "main-v2.js",
+      "status": 200,
+      "servedSHA": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5",
+      "acceptedSHA": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5",
+      "candidateSHA": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "path": "collections.js",
+      "status": 200,
+      "servedSHA": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2",
+      "acceptedSHA": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2",
+      "candidateSHA": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "path": "collections.css",
+      "status": 200,
+      "servedSHA": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+      "acceptedSHA": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+      "candidateSHA": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26"
+    },
+    {
+      "path": "canvas-wrap.js",
+      "status": 200,
+      "servedSHA": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+      "acceptedSHA": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+      "candidateSHA": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb"
+    },
+    {
+      "path": "aisle-integration.js",
+      "status": 200,
+      "servedSHA": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2",
+      "acceptedSHA": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2",
+      "candidateSHA": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2"
+    },
+    {
+      "path": "aisle/aisle.css",
+      "status": 200,
+      "servedSHA": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+      "acceptedSHA": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+      "candidateSHA": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e"
+    },
+    {
+      "path": "aisle/photographic-aisle.js",
+      "status": 200,
+      "servedSHA": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be",
+      "acceptedSHA": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be",
+      "candidateSHA": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    },
+    {
+      "path": "aisle/physical-display.js",
+      "status": 200,
+      "servedSHA": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+      "acceptedSHA": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+      "candidateSHA": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa"
+    },
+    {
+      "path": "aisle/physical-easel.js",
+      "status": 200,
+      "servedSHA": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+      "acceptedSHA": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+      "candidateSHA": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3"
+    },
+    {
+      "path": "aisle/photographic-environment.js",
+      "status": 200,
+      "servedSHA": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+      "acceptedSHA": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+      "candidateSHA": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a"
+    },
+    {
+      "path": "aisle/gallery-layout.js",
+      "status": 200,
+      "servedSHA": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+      "acceptedSHA": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+      "candidateSHA": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67"
+    },
+    {
+      "path": "aisle/video-frame-seam.js",
+      "status": 200,
+      "servedSHA": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+      "acceptedSHA": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+      "candidateSHA": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b"
+    },
+    {
+      "path": "aisle/water-surface.js",
+      "status": 200,
+      "servedSHA": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+      "acceptedSHA": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+      "candidateSHA": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5"
+    },
+    {
+      "path": "aisle/easel-masks.js",
+      "status": 200,
+      "servedSHA": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+      "acceptedSHA": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+      "candidateSHA": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2"
+    },
+    {
+      "path": "aisle/assets/easel-geometry.js",
+      "status": 200,
+      "servedSHA": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+      "acceptedSHA": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+      "candidateSHA": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "status": 200,
+      "servedSHA": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+      "acceptedSHA": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+      "candidateSHA": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6"
+    },
+    {
+      "path": "vendor/three.core.min.js",
+      "status": 200,
+      "servedSHA": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de",
+      "acceptedSHA": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de",
+      "candidateSHA": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+    }
+  ],
+  "status": "PASS",
+  "processLifetimeEvidence": {
+    "detached": true,
+    "parentPID": 1,
+    "ownsProcessGroup": true,
+    "noSystemDaemonInstalled": true,
+    "originalExitCause": "unlogged",
+    "restartBeforeFreshBrowser": true
+  }
+}
