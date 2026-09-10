@@ -1,0 +1,14 @@
+{
+  "name": "kcl-water-build",
+  "private": true,
+  "type": "module",
+  "description": "Build tooling for the WebGPU water layer. Emits public/aisle/water-layer.js.",
+  "scripts": { "build": "node build.mjs" },
+  "devDependencies": {
+    "vgpu": "0.4.1",
+    "@vgpu/wgsl": "0.4.1",
+    "@vgpu/wgsl-std": "0.4.1",
+    "@webgpu/types": "^0.1.64",
+    "esbuild": "^0.25.0"
+  }
+}
