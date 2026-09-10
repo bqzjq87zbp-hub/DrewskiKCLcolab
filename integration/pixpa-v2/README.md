@@ -6,7 +6,7 @@ This is the reproducible source handoff for the current 94-entry photographic pi
 - [Direct gallery](https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/?release=next12-live-20260910)
 - Current hosting source: `874050f23a65d4adc4f1734572f7b6de9ef6bcaf`, **Sites version 11**, deployment `SUCCEEDED` at `2026-09-10T18:10:12.341447Z`.
 - Twelve-photo donor: `7918fa7cc24cd6ba978e012980c64c9805141564`. Previous shared handoff: `8f7530a446fb1e94b513b47f26c01d0d051d62fd`.
-- Previous hosting source: `5ad8f30538858534937cbaa1a2249db63dc3fcd6`, Sites version 10. [Sheen release](SHEEN-RELEASE.md) preserves that historical acceptance and the still-current Pixpa field hashes.
+- Previous hosting source: `5ad8f30538858534937cbaa1a2249db63dc3fcd6`, Sites version 10. [Sheen release](SHEEN-RELEASE.md) preserves that historical acceptance and its field hashes; the separate [Home sticky-header repair](HOME-HEADER-RELEASE.md) supersedes only the Shared Body hash.
 - Previous 82-photo shared handoff: `e9bc20bdd2f55c070070111a6128be214fc812ef`.
 - Previous shared handoff: `0569af6934e89acafcfc12b3bdf337c6bcacf4ee`.
 - Accepted original standalone source: `78b36c1f5c4f0eadac850d4f00ab9761d4e05e3b`.
@@ -14,6 +14,10 @@ This is the reproducible source handoff for the current 94-entry photographic pi
 - Historical hosting source: `4c8bd39a65c7ebb29213d14d63f144ff62d318b3`, Sites version 9, deployed at `2026-09-10T16:05:32.388978Z`. The first expansion was version 8 at `843390d75c8bb10c6d6ff9981099acc1ec05908e`; version 9 added only the footer-centering correction. [Public acceptance](PUBLIC-ACCEPTANCE.md) distinguishes the current sheen checks from the historical image/walk and footer checks.
 
 You do not need access to the private hosting repository to rebuild these gallery files. Public deployment and GitHub source delivery are distinct verification steps; the owner verifies the final commit, push and remote branch separately. Nothing here merges the separate collaborator PR.
+
+## Separate native Home header repair
+
+The mobile Home masthead now retains its document-scroll reference. A 213-byte CSS insertion inside the existing Home-only style owner overrides a vendor wrapper's `overflow:hidden` below 768px. No gallery file, image, menu handler, glass material, or sheen changed. `patch-home-sticky-ancestor.mjs` reproduces the exact protected Shared Body candidate offline and refuses drift or a second application. Full private Pixpa fields are deliberately excluded. See [HOME-HEADER-RELEASE.md](HOME-HEADER-RELEASE.md) for saved/public identities and the bounded rendered acceptance.
 
 ## Current photo delivery and preservation boundaries
 
@@ -88,7 +92,7 @@ The IAB did not reliably forward automated wheel input into the cross-origin chi
 
 The existing external Inquiry form's `example.com` legal links remain an unrelated, unresolved limitation. A successful Plan Your Portrait navigation or field-focus check does not mean that the entire Inquiry service or its legal links have been repaired. No form submission is part of this expansion's test.
 
-For any future Pixpa edit, read and preserve the **current** field first. This checked-in wrapper and exact-baseline helper are evidence, not continuing permission to overwrite a changed page. The separate native Shared Body patch is bounded to its existing optical runtime; Home page code, other page-code fields and collaborator PR2 are not changed by this source package.
+For any future Pixpa edit, read and preserve the **current** field first. This checked-in wrapper and exact-baseline helpers are evidence, not continuing permission to overwrite a changed page. The historical native sheen patch is bounded to its existing optical runtime; the subsequent sticky-header repair changes only the existing Home style owner. Home page code, other page-code fields and collaborator PR2 are not changed by these patches.
 
 Sheen is retained from version 10. The approved twelve-photo batch is included in this version 11 handoff: the cumulative standalone manifest has 50 JPEG derivatives; the hosting bundle still has 279 paths because the new 24 derivatives use ordinary native Files delivery. Later curation batches remain excluded.
 
