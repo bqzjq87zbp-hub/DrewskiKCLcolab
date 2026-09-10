@@ -1,27 +1,37 @@
-# Pixpa V2 integration and first 13-photo expansion
+# Pixpa V2 integration: 82 photographs and optical-glass sheen
 
-This is the reproducible source handoff for the photographic pier gallery. The accepted aisle, ten easels, original photographs and full-height clear-glass Pixpa wrapper are retained. The first expansion adds 13 reviewed photographs to the collections; it does not add or rearrange the ten scene slots.
+This is the reproducible source handoff for the current 82-entry photographic pier gallery. Sites version 10 adds scroll-responsive optical-glass sheen to the existing controls and two Pixpa exit links. The accepted aisle, ten easels, photograph bytes, category order and centered full-image footer are unchanged from version 9. The first expansion's 13 reviewed photographs remain included; the separate 12-photo/94-entry candidate is excluded.
 
-- [Public Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=first13-final-20260910)
-- [Direct gallery](https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/?release=first13-final-20260910)
+- [Public Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=sheen-live-20260910)
+- [Direct gallery](https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/?release=sheen-live-20260910)
+- Current hosting source: `5ad8f30538858534937cbaa1a2249db63dc3fcd6`, **Sites version 10**, deployment `SUCCEEDED` at `2026-09-10T16:55:59.161188Z`. [Sheen release](SHEEN-RELEASE.md) records source hashes, actual live checks, persisted Pixpa fields and rollback boundaries.
+- Previous 82-photo shared handoff: `e9bc20bdd2f55c070070111a6128be214fc812ef`.
 - Previous shared handoff: `0569af6934e89acafcfc12b3bdf337c6bcacf4ee`.
 - Accepted original standalone source: `78b36c1f5c4f0eadac850d4f00ab9761d4e05e3b`.
 - Tested expansion donor: `09ce87a0e41630865b8c94550b2cd1d1c70923d3`.
-- Published hosting source: `4c8bd39a65c7ebb29213d14d63f144ff62d318b3`, **Sites version 9**, deployed at `2026-09-10T16:05:32.388978Z`. The first expansion was version 8 at `843390d75c8bb10c6d6ff9981099acc1ec05908e`; version 9 adds only the footer-centering correction. [Public acceptance](PUBLIC-ACCEPTANCE.md) records the independent image/walk pass and version 9 clearance checks.
+- Historical hosting source: `4c8bd39a65c7ebb29213d14d63f144ff62d318b3`, Sites version 9, deployed at `2026-09-10T16:05:32.388978Z`. The first expansion was version 8 at `843390d75c8bb10c6d6ff9981099acc1ec05908e`; version 9 added only the footer-centering correction. [Public acceptance](PUBLIC-ACCEPTANCE.md) distinguishes the current sheen checks from the historical image/walk and footer checks.
 
 You do not need access to the private hosting repository to rebuild these gallery files. Public deployment and GitHub source delivery are distinct verification steps; the owner verifies the final commit, push and remote branch separately. Nothing here merges the separate collaborator PR.
 
-## Exact change and preservation boundaries
+## Current sheen change and preservation boundaries
 
-The standalone `public/` tree carries the tested expansion's 29 release paths: `categories.json`, `collections.css`, `main-v2.js`, and 26 hash-named JPEG derivatives. Twenty-eight match the exact donor bytes. The CSS is the donor plus the owner's one-declaration follow-up: `#viewer>p:last-child{grid-row:4;text-align:center}`. It centers the full-file link away from the Pixpa Exit controls, verified independently at 844×390, 320×568, 390×844 and 1440×1000. The image-loading change sets lazy loading before the image source. The preceding CSS change fits the enlarged photograph and its controls inside short viewports without nested viewer scrolling.
+The version 10 gallery change consists of `glass-sheen.js`, `glass-sheen.css`, and one import/install pair in `main-v2.js`, with the existing hosted-path adapter retained. It adds **10,080 source bytes and two asset paths**. Reflection layers are confined to controls; no photograph or printed canvas receives a sheen overlay. The live independent pass covers desktop and emulated-phone forward/reverse input, idle stability, full-image viewing and exact return, footer clearance, exits and accessibility preferences. See [SHEEN-RELEASE.md](SHEEN-RELEASE.md) for the exact tested scope.
+
+`pixpa-page-code.html` is now the exact persisted **6,805-byte** gallery wrapper, SHA-256 `f9774d3dfbfd0f99f366a065538d83580b959b846ca4834cef0f78daeef5b17d`. It retains the full-height gallery and two clear 48px exit links, adding their bounded reflection bridge. Pixpa removed only the staged fragment's terminal newline.
+
+The separate native optical-runtime patch has been saved and its Shared Body field reread after reload with the exact accepted hash. **Independent live acceptance passed on Home and Families at 1440×900 and 390×844**, and fresh source checks found the exact unique script on seven public routes. The native and gallery appearance contracts remain distinct; this is not full material parity. `patch-native-menu-sheen.mjs` provides a local, exact-baseline-only reproduction helper; the full Shared Body is intentionally not included. It cannot contact or save to Pixpa. Read the exact scope and limitations in [SHEEN-RELEASE.md](SHEEN-RELEASE.md) before use.
+
+## First-expansion source history retained in this release
+
+At version 9 the standalone `public/` tree received the tested expansion's 29 release paths: `categories.json`, `collections.css`, `main-v2.js`, and 26 hash-named JPEG derivatives. Twenty-eight matched the exact donor bytes. The CSS was the donor plus the owner's one-declaration follow-up: `#viewer>p:last-child{grid-row:4;text-align:center}`. It centers the full-file link away from the Pixpa Exit controls, verified independently at 844×390, 320×568, 390×844 and 1440×1000. The image-loading change sets lazy loading before the image source. The preceding CSS change fits the enlarged photograph and its controls inside short viewports without nested viewer scrolling. Version 10 retains these changes and adds the sheen import/install pair to the main script.
 
 The four categories contain **82 entries: 17 Branding, 24 Families, 33 Headshots and 8 Coastal**. All 69 old entries retain complete metadata, category membership and relative order. All old photographs and URLs remain; no original is overwritten, removed or recompressed. The 26 new files are 13 full photographs plus 13 thumbnails, totaling **20,065,602 bytes**.
 
 The exact sanitized `docs/expansion-assets.json`, `docs/expansion-baseline.json`, `scripts/verify.mjs`, and `public/expansion-review.json` accompany the source so `npm run check` can verify the reviewed identities and old baseline. These four files are **not in the hosted asset map**. `expansion-review.json` retains the donor's historical "Private local review only" label; it is a test fixture, not the current publication record. Review UI, import tooling and private provenance are not included.
 
-`runtime/` still contains 12 hosting overlays. Only `categories.json`, `collections.css` and `main-v2.js` change in this expansion. All three match exact version 9 browser-fetched public bytes; categories and main are unchanged from version 8. Path adapters preserve the existing V1 media URLs and use V2 only for the new expansion files. The other nine overlays are untouched. The full original pier photograph and 121 accepted video frames remain unchanged.
+`runtime/` still contains 12 hosting overlays. The first expansion changed only `categories.json`, `collections.css` and `main-v2.js` in that directory. They matched version 9 browser-fetched bytes at that release; version 10 subsequently adds only the sheen import/install pair to `main-v2.js`. Categories and the centered collections CSS remain byte-identical to version 9. Path adapters preserve the existing V1 media URLs and use V2 for expansion and sheen assets. The other nine overlays, original pier photograph and 121 accepted video frames remain unchanged.
 
-`pixpa-page-code.html` remains the exact persisted 3,900-byte wrapper, SHA-256 `3618931079d93eed39867d54ae242c1808390a9bafbaf95a8b57fd51c40e6ab9`. It embeds the full-height gallery with two clear 48px exit links. The expansion does not require a new Pixpa Page Code or Shared Body save. Solid reduced-transparency, increased-contrast and forced-colors fallbacks are intentional accessibility behavior.
+The first expansion used the historical 3,900-byte wrapper, SHA-256 `3618931079d93eed39867d54ae242c1808390a9bafbaf95a8b57fd51c40e6ab9`, without a new Pixpa Page Code or Shared Body save. Version 10's separate saves are recorded above and in the sheen release. Solid reduced-transparency, increased-contrast and forced-colors fallbacks remain intentional accessibility behavior.
 
 ## Rebuild and review locally
 
@@ -36,11 +46,11 @@ python3 -m http.server 4330 --bind 127.0.0.1 --directory /absolute/path/to/new-g
 
 Then open `http://127.0.0.1:4330/pier-v2-20260910/`. Choose an unused port. `CHECK_PORT` selects an unused temporary port for `npm run check`. The builder refuses an existing output directory and checks every source and copied output hash. It never publishes, changes the standalone files or starts a server automatically.
 
-`asset-map.json` maps **277 unique URLs**: 147 unchanged accepted non-photo files, 12 hosting overlays, 26 new expansion JPEGs, and 92 reused original photographs. Exactly 248 old rows are unchanged, three old text-file rows have updated hashes and byte counts, and 26 rows are new. All 251 previous URLs remain.
+`asset-map.json` maps **279 unique URLs totaling 193,358,841 file bytes**: the version 9 set of 277 paths plus two sheen resources, with the existing main-script row updated. The set contains 149 accepted non-photo files, 12 hosting overlays, 26 expansion JPEGs and 92 reused original photographs. All previous URLs remain. The historical first-expansion transition preserved 248 old rows, updated three text rows and added 26 JPEG rows; those figures describe version 9, not the subsequent sheen change.
 
-The 92 reused photographs intentionally remain under `/pier-v1-20260909/media/`; the 185 other files are under `/pier-v2-20260910/`. A fresh host needs both generated directories. V1 here means byte-verified reuse of photographs, not an old runtime or an expiring upload. Do not delete those paths or blindly replace every V1 prefix. This builder reproduces the current gallery and its dependencies, not unrelated historical pages on the same hosting account.
+The 92 reused photographs intentionally remain under `/pier-v1-20260909/media/`; the 187 other files are under `/pier-v2-20260910/`. A fresh host needs both generated directories. V1 here means byte-verified reuse of photographs, not an old runtime or an expiring upload. Do not delete those paths or blindly replace every V1 prefix. This builder reproduces the current gallery and its dependencies, not unrelated historical pages on the same hosting account. It does not apply the Pixpa wrapper or native Shared Body patch.
 
-## First-expansion evidence
+## Historical first-expansion evidence
 
 `evidence/first13/` separates local preparation from actual public evidence. See [PUBLIC-ACCEPTANCE.md](PUBLIC-ACCEPTANCE.md) for the release decision. Local preparation records follow:
 
@@ -69,12 +79,14 @@ The IAB did not reliably forward automated wheel input into the cross-origin chi
 
 The existing external Inquiry form's `example.com` legal links remain an unrelated, unresolved limitation. A successful Plan Your Portrait navigation or field-focus check does not mean that the entire Inquiry service or its legal links have been repaired. No form submission is part of this expansion's test.
 
-For any future Pixpa edit, read and preserve the **current** field first. This checked-in wrapper is evidence, not continuing permission to overwrite a changed page. Home, Shared Body, other routes and collaborator PR2 remain outside this expansion.
+For any future Pixpa edit, read and preserve the **current** field first. This checked-in wrapper and exact-baseline helper are evidence, not continuing permission to overwrite a changed page. The separate native Shared Body patch is bounded to its existing optical runtime; Home page code, other page-code fields and collaborator PR2 are not changed by this source package.
 
-New sheen work and the future 12-photo batch remain separate, unshipped work. They are absent from this source handoff, derivative manifest and 277-file integration build.
+Sheen is included in this version 10 handoff. The future 12-photo/94-entry batch remains separate and absent from the derivative manifest and 279-file integration build.
 
 ## Rollback and capacity
 
-The bounded host rollback is version 7 at source `a3e11d42389229d67913934f9e82a845e605620d`; keep its existing photo paths. The expansion uses the same V2 URL and unchanged Pixpa wrapper.
+For the current sheen release, host rollback is version 9 at `4c8bd39a65c7ebb29213d14d63f144ff62d318b3`; the gallery wrapper and native Shared Body have distinct recorded baseline hashes. See [SHEEN-RELEASE.md](SHEEN-RELEASE.md) before any authorized rollback. The version 10 hosting archive is **261,255,113 compressed / 268,028,928 unpacked bytes**, leaving **406,528 bytes** below 256 MiB. Its SHA-256 is `d540e308a003b9e583cd5b5def22000a983d20919957014fb5e45b8ba8cd50e7`.
+
+Historically, the bounded first-expansion rollback was version 7 at source `a3e11d42389229d67913934f9e82a845e605620d`; that expansion used the same V2 URL and unchanged wrapper. Keep existing photo paths in any rollback.
 
 The release owner measured the version 9 package at **261,251,340 compressed bytes / 268,013,056 unpacked archive bytes**, leaving **422,400 bytes** below the 256 MiB unpacked limit. Archive SHA-256: `539dbaa689accc2f603be472ea925a84b51c1124ca2d1a714a5a205a70cdcf16`. This is not room for an unmeasured second photo batch. Gallery-only rebuild output is smaller than the complete hosting archive; do not confuse their sizes or treat a successful local build as publication proof.

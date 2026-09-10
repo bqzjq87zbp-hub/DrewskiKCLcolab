@@ -1,6 +1,7 @@
 import {createWrappedCanvas} from './canvas-wrap.js';
 import {createCollections} from './collections.js';
 import {attachAisle} from './aisle-integration.js';
+import {installGlassSheen} from './glass-sheen.js';
 
 const $=s=>document.querySelector(s),sourceSlots=await(await fetch('/slots.json')).json();
 const layers=$('#layers'),composition=$('#composition'),viewer=$('#viewer'),full=$('#full-photo');
@@ -57,3 +58,4 @@ let appearance='clear';try{const saved=sessionStorage.getItem('kcl-preview-appea
 document.body.dataset.appearance=appearance;menu.dataset.appearance=appearance;$('#appearance').value=appearance;
 window.PhotographicCollections={slots,collections,display,enterCategory,menu,signLayer};
 window.PhotographicAisle=aisle=attachAisle(window.PhotographicCollections);
+window.KCLGlassSheen=installGlassSheen();

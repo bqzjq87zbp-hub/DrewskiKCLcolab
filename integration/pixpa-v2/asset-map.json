@@ -1,5 +1,19 @@
 [
   {
+    "accepted": "glass-sheen.js",
+    "url": "/pier-v2-20260910/glass-sheen.js",
+    "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+    "bytes": 8280,
+    "reused": false
+  },
+  {
+    "accepted": "glass-sheen.css",
+    "url": "/pier-v2-20260910/glass-sheen.css",
+    "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612",
+    "bytes": 1706,
+    "reused": false
+  },
+  {
     "accepted": "aisle/aisle.css",
     "url": "/pier-v2-20260910/aisle/aisle.css",
     "sha256": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
@@ -177,8 +191,8 @@
   {
     "accepted": "main-v2.js",
     "url": "/pier-v2-20260910/main-v2.js",
-    "sha256": "30d1f979270e6eaa16e79a4e9d4c2a9a8ae5ddd60ca76258aa1ccef09eec85b5",
-    "bytes": 7327,
+    "sha256": "67651d17d4754bb571dc91b7766a556122804f9ec748486c8f7ece19404bf637",
+    "bytes": 7421,
     "reused": false
   },
   {

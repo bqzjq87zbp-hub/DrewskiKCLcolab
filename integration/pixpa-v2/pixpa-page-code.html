@@ -25,3 +25,48 @@ body:has(> #kcl-pier-native)>:not(#kcl-pier-native):not(script):not(style){displ
 <script id="kcl-pier-native-mount-20260909">
 (function(){'use strict';var root=document.getElementById('kcl-pier-native');if(root&&root.parentNode!==document.body)document.body.appendChild(root);})();
 </script>
+
+<style id="kcl-pier-exit-sheen-style-20260910">
+#kcl-pier-native .kcl-pier-exit-sheen{position:absolute;inset:1px;overflow:hidden;border-radius:inherit;pointer-events:none;contain:paint}
+#kcl-pier-native .kcl-pier-exit-reflection{position:absolute;inset:-30% 0;width:100%;height:160%;pointer-events:none;opacity:0;background:linear-gradient(112deg,transparent 19%,rgb(255 255 255 / .08) 35%,rgb(255 255 255 / .42) 47%,rgb(255 255 255 / .1) 55%,transparent 70%)}
+@media(prefers-reduced-motion:reduce),(prefers-reduced-transparency:reduce),(prefers-contrast:more),(forced-colors:active){#kcl-pier-native .kcl-pier-exit-sheen{display:none!important}}
+</style>
+<script id="kcl-pier-exit-sheen-20260910">
+(function(){
+ 'use strict';
+ var root=document.getElementById('kcl-pier-native');
+ if(!root||root.dataset.exitSheen==='v1')return;
+ var iframe=root.querySelector('iframe');
+ var trustedOrigin='https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site';
+ if(!iframe||new URL(iframe.src,location.href).origin!==trustedOrigin)return;
+ root.dataset.exitSheen='v1';
+ var preferences=['(prefers-reduced-motion: reduce)','(prefers-reduced-transparency: reduce)','(prefers-contrast: more)','(forced-colors: active)'].map(function(q){return matchMedia(q)});
+ var layers=Array.from(root.querySelectorAll('.kcl-pier-exit')).map(function(exit){
+  var clip=document.createElement('span');clip.className='kcl-pier-exit-sheen';clip.setAttribute('aria-hidden','true');
+  var light=document.createElement('span');light.className='kcl-pier-exit-reflection';
+  clip.appendChild(light);exit.appendChild(clip);return{clip:clip,light:light};
+ });
+ var last={enabled:false,x:-120,opacity:0};
+ function paint(){
+  var enabled=last.enabled&&!document.hidden&&!preferences.some(function(p){return p.matches})&&document.body.dataset.appearance!=='solid';
+  layers.forEach(function(layer){
+   layer.clip.style.display=enabled?'':'none';
+   layer.light.style.transform='translate3d('+last.x+'%,0,0) skewX(-12deg)';
+   layer.light.style.opacity=String(enabled?last.opacity:0);
+  });
+ }
+ function receive(event){
+  if(event.source!==iframe.contentWindow||event.origin!==trustedOrigin)return;
+  var data=event.data;
+  if(!data||data.type!=='kcl-glass-sheen-v1'||typeof data.enabled!=='boolean'||!Number.isFinite(data.x)||!Number.isFinite(data.opacity)||['up','down'].indexOf(data.direction)<0)return;
+  last={enabled:data.enabled,x:Math.min(120,Math.max(-120,data.x)),opacity:Math.min(.36,Math.max(0,data.opacity))};paint();
+ }
+ var appearance=new MutationObserver(paint);
+ appearance.observe(document.body,{attributes:true,attributeFilter:['data-appearance']});
+ window.addEventListener('message',receive);
+ document.addEventListener('visibilitychange',paint);
+ preferences.forEach(function(p){p.addEventListener('change',paint)});
+ iframe.addEventListener('load',function(){last.enabled=false;paint()});
+ paint();
+})();
+</script>
