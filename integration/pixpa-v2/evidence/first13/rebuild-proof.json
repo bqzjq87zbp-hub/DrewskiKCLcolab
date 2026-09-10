@@ -1,0 +1,49 @@
+{
+  "scope": "Local source and fresh-output rebuild; not public acceptance",
+  "sourceBase": "0569af6934e89acafcfc12b3bdf337c6bcacf4ee",
+  "testedExpansionDonor": "09ce87a0e41630865b8c94550b2cd1d1c70923d3",
+  "hostSource": "4c8bd39a65c7ebb29213d14d63f144ff62d318b3",
+  "ownerFooterCorrection": {
+    "basis": "First-expansion source plus the owner's exact text-align:center footer correction",
+    "publication": "Published version 9; separate public records provided",
+    "standaloneCSSSHA256": "bf450e97eed3e83ddd4de2dbe437a4d82ab64a6dd85279a03c39afd13796b4ba",
+    "hostCSSSHA256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927",
+    "previousBuildBytes": 193348743,
+    "additionalBytes": 18
+  },
+  "npmRunCheck": {
+    "status": "PASS",
+    "photoEntries": 82,
+    "easelSlots": 10,
+    "purchasedRooms": 0,
+    "baselineImageFiles": 92,
+    "addedPhotographs": 13,
+    "addedDerivativeBytes": 20065602,
+    "videoFrames": 121,
+    "videoReviewStatus": "preview-only",
+    "assetHashes": "all match",
+    "privatePathOrSecretPatternMatches": 0,
+    "symlinks": 0,
+    "serverRuntimeRoutes": "PASS",
+    "privateServerRoutes": "404",
+    "writeMethods": "405"
+  },
+  "integrationCheck": {
+    "verified": 277,
+    "reusedPhotographs": 92,
+    "bytes": 193348761
+  },
+  "freshOutputBuild": {
+    "verified": 277,
+    "reusedPhotographs": 92,
+    "bytes": 193348761,
+    "all26NewJPEGsIncluded": true,
+    "privateSourceRepositoryRequired": false
+  },
+  "scopeBoundaries": [
+    "No commit or push by preparation worker",
+    "No Sites or Pixpa mutation by preparation worker",
+    "No changed original asset or accepted old category metadata/order",
+    "No change to collaborator PR2 or accepted preview worktrees"
+  ]
+}

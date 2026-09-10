@@ -1,0 +1,121 @@
+{
+  "deployment": 8,
+  "desktopWheel": {
+    "before": 0,
+    "forward": 650,
+    "reverse": 400,
+    "progress": [
+      0,
+      0.13131313131313133,
+      0.08080808080808081
+    ],
+    "overflow": 0
+  },
+  "limits": [
+    "Chrome desktop and compositor-touch emulation; not physical-device certification"
+  ],
+  "desktopPhoto": {
+    "complete": true,
+    "fit": "contain",
+    "height": 2133,
+    "rect": {
+      "bottom": 832.5,
+      "height": 756.5,
+      "left": 109,
+      "right": 1331,
+      "top": 76,
+      "width": 1222,
+      "x": 109,
+      "y": 76
+    },
+    "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/expansion/d21b91e190788fc51394cdc248d48f9f2ea91ab7cb6b839362e7c79b114ad1ea.jpg",
+    "width": 3200
+  },
+  "desktopFocusReturn": {
+    "active": "Enlarge photograph: At the entry"
+  },
+  "inquiry": {
+    "activeFrame": "IFRAME",
+    "activeTitle": "Inquiry Form  - V2",
+    "overflow": 0,
+    "url": "https://kiyonocreativelab.com/inquiry-form",
+    "knownUnchangedLimitation": "Embedded GHL Privacy and Terms links still point to example.com; no form data entered or submitted."
+  },
+  "inquiryBack": {
+    "parent": "https://kiyonocreativelab.com/pier-gallery?release=first13-20260910",
+    "collection": "Branding"
+  },
+  "aisleAfterInquiryBack": {
+    "progress": "",
+    "y": 400
+  },
+  "returnMain": {
+    "url": "https://kiyonocreativelab.com/"
+  },
+  "phoneBefore": {
+    "y": 1628.5,
+    "p": 0.21438915218536073,
+    "width": 390,
+    "height": 844,
+    "coarse": true,
+    "nohover": true,
+    "overflow": 0
+  },
+  "phoneForward": {
+    "y": 3408,
+    "p": 0.4486571879936809,
+    "width": 390,
+    "height": 844,
+    "coarse": true,
+    "nohover": true,
+    "overflow": 0
+  },
+  "phoneReverse": {
+    "y": 2485.5,
+    "p": 0.32721169036334913,
+    "width": 390,
+    "height": 844,
+    "coarse": true,
+    "nohover": true,
+    "overflow": 0
+  },
+  "phoneGlass": {
+    "background": "rgba(0, 0, 0, 0)",
+    "blur": "saturate(1.08)",
+    "rect": {
+      "bottom": 64,
+      "height": 48,
+      "left": 298.6328125,
+      "right": 374,
+      "top": 16,
+      "width": 75.3671875,
+      "x": 298.6328125,
+      "y": 16
+    }
+  },
+  "phonePhoto": {
+    "complete": true,
+    "fit": "contain",
+    "height": 3200,
+    "rect": {
+      "bottom": 777.6171875,
+      "height": 677.8359375,
+      "left": 32,
+      "right": 358,
+      "top": 99.78125,
+      "width": 326,
+      "x": 32,
+      "y": 99.78125
+    },
+    "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/expansion/7f59d19e33d5fbcffc3568e8b3565178dc9440797aa4cf28e2286bd45ade3df0.jpg",
+    "width": 2133
+  },
+  "phoneFocusReturn": "Enlarge photograph: Portrait in a gray quarter-zip",
+  "fallback": {
+    "rm": true,
+    "rt": true,
+    "bg": "rgb(16, 44, 64)",
+    "blur": "none",
+    "overflow": 0
+  }
+}

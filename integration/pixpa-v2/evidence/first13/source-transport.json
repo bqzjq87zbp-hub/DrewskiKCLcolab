@@ -1,0 +1,207 @@
+{
+  "schema": "kcl-first13-handoff-transport-v1",
+  "base": "0569af6934e89acafcfc12b3bdf337c6bcacf4ee",
+  "tested": "09ce87a0e41630865b8c94550b2cd1d1c70923d3",
+  "hostSource": "843390d75c8bb10c6d6ff9981099acc1ec05908e",
+  "releasePaths": 29,
+  "nonDeployedTestPaths": [
+    "docs/expansion-assets.json",
+    "docs/expansion-baseline.json",
+    "scripts/verify.mjs",
+    "public/expansion-review.json"
+  ],
+  "originalCategoryEntriesPreserved": 69,
+  "newCategoryEntries": 13,
+  "counts": {
+    "branding": 17,
+    "families": 24,
+    "headshots": 33,
+    "coastal": 8
+  },
+  "newDerivatives": 26,
+  "newDerivativeBytes": 20065602,
+  "oldMapRowsUnchanged": 248,
+  "oldMapRowsUpdated": 3,
+  "newMapRows": 26,
+  "totalMapRows": 277,
+  "oldURLsPreserved": 251,
+  "wrapperSHA256": "3618931079d93eed39867d54ae242c1808390a9bafbaf95a8b57fd51c40e6ab9",
+  "copiedSource": [
+    {
+      "path": "public/categories.json",
+      "sha256": "e2e9e328c61d154c18acfdaa335a31b3b96bdeee5c2a741bfb2e4ef719540c1e",
+      "bytes": 32458
+    },
+    {
+      "path": "public/collections.css",
+      "sha256": "97afb0a5cc46e0d32cd5bd725856993d7f5446fbc3412afdce1c273d22b106dc",
+      "bytes": 9502
+    },
+    {
+      "path": "public/main-v2.js",
+      "sha256": "2c98cfb0188b31cfeb8ff63fb97b1d6b8dba81658446afb7146af2df03273a37",
+      "bytes": 7293
+    },
+    {
+      "path": "public/media/expansion/060d6ac3041db63dc31faddee4e2feccf5c78ab53c8b21280f86ef51072573c9.jpg",
+      "sha256": "060d6ac3041db63dc31faddee4e2feccf5c78ab53c8b21280f86ef51072573c9",
+      "bytes": 907478
+    },
+    {
+      "path": "public/media/expansion/4ff186bc7d9dcd996c90594bd2eff372ee4da37860cdcaed67abb7dc9314ac4f.jpg",
+      "sha256": "4ff186bc7d9dcd996c90594bd2eff372ee4da37860cdcaed67abb7dc9314ac4f",
+      "bytes": 82647
+    },
+    {
+      "path": "public/media/expansion/6b57a244dc284e9b16e608a51d48209d77d768b7ced46083db6a84a8927e567a.jpg",
+      "sha256": "6b57a244dc284e9b16e608a51d48209d77d768b7ced46083db6a84a8927e567a",
+      "bytes": 2489376
+    },
+    {
+      "path": "public/media/expansion/5ec0788a23457720b3dc8c0c97cf3867111c910a6873c1b69fc820ad2f3367cb.jpg",
+      "sha256": "5ec0788a23457720b3dc8c0c97cf3867111c910a6873c1b69fc820ad2f3367cb",
+      "bytes": 182116
+    },
+    {
+      "path": "public/media/expansion/221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82.jpg",
+      "sha256": "221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82",
+      "bytes": 708658
+    },
+    {
+      "path": "public/media/expansion/f779e04fc2a6dec79afaa243f060bf4e5a3084669c2c75188cef6b8f81899539.jpg",
+      "sha256": "f779e04fc2a6dec79afaa243f060bf4e5a3084669c2c75188cef6b8f81899539",
+      "bytes": 74313
+    },
+    {
+      "path": "public/media/expansion/29845977f9849499b3bded99ac21f0ecfea3965ee76ca6794bffececeb38d120.jpg",
+      "sha256": "29845977f9849499b3bded99ac21f0ecfea3965ee76ca6794bffececeb38d120",
+      "bytes": 1099847
+    },
+    {
+      "path": "public/media/expansion/c9b2347322d46e6f200f04db5840207d7b208472f240d27c63d2b593f75c975c.jpg",
+      "sha256": "c9b2347322d46e6f200f04db5840207d7b208472f240d27c63d2b593f75c975c",
+      "bytes": 109588
+    },
+    {
+      "path": "public/media/expansion/ce95e569fb3e83a6dbf7640c32fb404373133a4a89b800c269168ead0ab489f4.jpg",
+      "sha256": "ce95e569fb3e83a6dbf7640c32fb404373133a4a89b800c269168ead0ab489f4",
+      "bytes": 1088254
+    },
+    {
+      "path": "public/media/expansion/86144568d70b2018fdb047c72636a211cb66fc682ae4951ab6cc6d0e110df47e.jpg",
+      "sha256": "86144568d70b2018fdb047c72636a211cb66fc682ae4951ab6cc6d0e110df47e",
+      "bytes": 119003
+    },
+    {
+      "path": "public/media/expansion/d21b91e190788fc51394cdc248d48f9f2ea91ab7cb6b839362e7c79b114ad1ea.jpg",
+      "sha256": "d21b91e190788fc51394cdc248d48f9f2ea91ab7cb6b839362e7c79b114ad1ea",
+      "bytes": 1539604
+    },
+    {
+      "path": "public/media/expansion/aff8ce60a3fa5c177e788a7808de0df20ccb1d553c4ad27d25f6a19d7cfc5c49.jpg",
+      "sha256": "aff8ce60a3fa5c177e788a7808de0df20ccb1d553c4ad27d25f6a19d7cfc5c49",
+      "bytes": 143944
+    },
+    {
+      "path": "public/media/expansion/0117c6da97e9085d07f8f1edfd39f8b5e9fb9249721009d9fc2d7397921296ee.jpg",
+      "sha256": "0117c6da97e9085d07f8f1edfd39f8b5e9fb9249721009d9fc2d7397921296ee",
+      "bytes": 1514718
+    },
+    {
+      "path": "public/media/expansion/bab338b450a17934b8588451c2fa9fe8163beb5099c748afe0957834c58da77b.jpg",
+      "sha256": "bab338b450a17934b8588451c2fa9fe8163beb5099c748afe0957834c58da77b",
+      "bytes": 111637
+    },
+    {
+      "path": "public/media/expansion/effc01d8e3b836781cba2e83f8aec3b674c069a5817ca35a8c540b5577827d68.jpg",
+      "sha256": "effc01d8e3b836781cba2e83f8aec3b674c069a5817ca35a8c540b5577827d68",
+      "bytes": 1442950
+    },
+    {
+      "path": "public/media/expansion/c19145e5eeca81f825e56c997a751bb3b9f66986ca4efe14cc3d3f4f818a7ed5.jpg",
+      "sha256": "c19145e5eeca81f825e56c997a751bb3b9f66986ca4efe14cc3d3f4f818a7ed5",
+      "bytes": 109448
+    },
+    {
+      "path": "public/media/expansion/d78e1b91e5dd9038bd5118716ac18a720274f79f8d36c50dbffb4b56384603aa.jpg",
+      "sha256": "d78e1b91e5dd9038bd5118716ac18a720274f79f8d36c50dbffb4b56384603aa",
+      "bytes": 1717387
+    },
+    {
+      "path": "public/media/expansion/2f09d961580d456f1084ec9c79e4369fdc6560cff536e19a47824560ba5c3361.jpg",
+      "sha256": "2f09d961580d456f1084ec9c79e4369fdc6560cff536e19a47824560ba5c3361",
+      "bytes": 103214
+    },
+    {
+      "path": "public/media/expansion/7f59d19e33d5fbcffc3568e8b3565178dc9440797aa4cf28e2286bd45ade3df0.jpg",
+      "sha256": "7f59d19e33d5fbcffc3568e8b3565178dc9440797aa4cf28e2286bd45ade3df0",
+      "bytes": 1664573
+    },
+    {
+      "path": "public/media/expansion/6ba778953cd93fc869b7e28c9b9f5cadf041e8a7caadad17fb8a296270eb42c4.jpg",
+      "sha256": "6ba778953cd93fc869b7e28c9b9f5cadf041e8a7caadad17fb8a296270eb42c4",
+      "bytes": 91523
+    },
+    {
+      "path": "public/media/expansion/7f81e8952b7870623542d6641036dd227790cf4ab6b70592d8f91637fe02f504.jpg",
+      "sha256": "7f81e8952b7870623542d6641036dd227790cf4ab6b70592d8f91637fe02f504",
+      "bytes": 1287026
+    },
+    {
+      "path": "public/media/expansion/4685106f0e96a28d7cf19eba733a75fe6f159500b30ca67f39231a6e17affafa.jpg",
+      "sha256": "4685106f0e96a28d7cf19eba733a75fe6f159500b30ca67f39231a6e17affafa",
+      "bytes": 57868
+    },
+    {
+      "path": "public/media/expansion/6df27290fbd0404a4ae3f2303d0b4c5eed23209a7066f28be61e4d99928265a1.jpg",
+      "sha256": "6df27290fbd0404a4ae3f2303d0b4c5eed23209a7066f28be61e4d99928265a1",
+      "bytes": 1551299
+    },
+    {
+      "path": "public/media/expansion/a15477287d9bee65b3a920599fc1af24b322497515c59a8593aca40a1402def6.jpg",
+      "sha256": "a15477287d9bee65b3a920599fc1af24b322497515c59a8593aca40a1402def6",
+      "bytes": 97355
+    },
+    {
+      "path": "public/media/expansion/e0196e591e5836a0189e7b7a250708a30770012077d2a7beb1582cefccc641b5.jpg",
+      "sha256": "e0196e591e5836a0189e7b7a250708a30770012077d2a7beb1582cefccc641b5",
+      "bytes": 1647389
+    },
+    {
+      "path": "public/media/expansion/a2866a62c7432190dd7e46f93621e9496875d172798783133877b6a120802ec5.jpg",
+      "sha256": "a2866a62c7432190dd7e46f93621e9496875d172798783133877b6a120802ec5",
+      "bytes": 124387
+    },
+    {
+      "path": "docs/expansion-assets.json",
+      "sha256": "2df95c1b99d42bce1e628483e00777b1dec3bffc5701e3f6e9459bae13857df0",
+      "bytes": 10918
+    },
+    {
+      "path": "docs/expansion-baseline.json",
+      "sha256": "6eb94e96d67f8a6103b1414ab8b72aef4d265d9ed0ec346802395a7892a2134c",
+      "bytes": 26118
+    },
+    {
+      "path": "scripts/verify.mjs",
+      "sha256": "d493d340236c737b2327acbd8bc07dba2372783dcfb4cdb7d3db5910b6820c57",
+      "bytes": 7806
+    },
+    {
+      "path": "public/expansion-review.json",
+      "sha256": "0d733790fbf9a70a734bacf2b946053b94607e60dc6e71c853e4eeb70c61a677",
+      "bytes": 676
+    }
+  ],
+  "ownerFooterCorrection": {
+    "selector": "#viewer>p:last-child",
+    "addedDeclaration": "text-align:center",
+    "standaloneDonorSHA256": "97afb0a5cc46e0d32cd5bd725856993d7f5446fbc3412afdce1c273d22b106dc",
+    "standaloneCandidateSHA256": "bf450e97eed3e83ddd4de2dbe437a4d82ab64a6dd85279a03c39afd13796b4ba",
+    "hostCandidateSHA256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927",
+    "reason": "Clear the Pixpa Exit control at 844x390",
+    "publication": "Published version 9; independent footer acceptance passed"
+  },
+  "publishedHostSource": "4c8bd39a65c7ebb29213d14d63f144ff62d318b3",
+  "publishedVersion": 9
+}

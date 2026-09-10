@@ -1,0 +1,283 @@
+{
+  "scope": "Same-origin local host candidate browser QA; not public verification or physical-device certification.",
+  "hostSource": "843390d75c8bb10c6d6ff9981099acc1ec05908e",
+  "testedSource": "09ce87a0e41630865b8c94550b2cd1d1c70923d3",
+  "landscape": {
+    "coarse": true,
+    "height": 390,
+    "overflow": 0,
+    "photo": {
+      "bottom": 332.6953125,
+      "fit": "contain",
+      "height": 266.8984375,
+      "natural": [
+        2133,
+        3200
+      ],
+      "top": 65.796875,
+      "width": 780
+    },
+    "viewer": {
+      "bottom": 382.1953125,
+      "client": 372,
+      "height": 374.3984375,
+      "scroll": 372,
+      "top": 7.796875
+    },
+    "width": 844
+  },
+  "desktop": [
+    {
+      "id": "lacie-technician-at-the-entry",
+      "category": "branding",
+      "fit": "contain",
+      "height": 2133,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/d21b91e190788fc51394cdc248d48f9f2ea91ab7cb6b839362e7c79b114ad1ea.jpg",
+      "viewerScroll": 0,
+      "width": 3200,
+      "focus": "Enlarge photograph: At the entry"
+    },
+    {
+      "id": "lacie-service-truck-and-architecture",
+      "category": "branding",
+      "fit": "contain",
+      "height": 2133,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/0117c6da97e9085d07f8f1edfd39f8b5e9fb9249721009d9fc2d7397921296ee.jpg",
+      "viewerScroll": 0,
+      "width": 3200,
+      "focus": "Enlarge photograph: Service truck and architecture"
+    },
+    {
+      "id": "lacie-conversation-at-the-microphone",
+      "category": "branding",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/effc01d8e3b836781cba2e83f8aec3b674c069a5817ca35a8c540b5577827d68.jpg",
+      "viewerScroll": 0,
+      "width": 2133,
+      "focus": "Enlarge photograph: At the microphone"
+    },
+    {
+      "id": "lacie-service-team-at-the-desk",
+      "category": "branding",
+      "fit": "contain",
+      "height": 2145,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/d78e1b91e5dd9038bd5118716ac18a720274f79f8d36c50dbffb4b56384603aa.jpg",
+      "viewerScroll": 0,
+      "width": 3200,
+      "focus": "Enlarge photograph: Team at the desk"
+    },
+    {
+      "id": "lacie-parents-and-newborn-in-the-grove",
+      "category": "families",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/6df27290fbd0404a4ae3f2303d0b4c5eed23209a7066f28be61e4d99928265a1.jpg",
+      "viewerScroll": 0,
+      "width": 2133,
+      "focus": "Enlarge photograph: Together with a newborn"
+    },
+    {
+      "id": "families-pink-ball-laughter",
+      "category": "families",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/060d6ac3041db63dc31faddee4e2feccf5c78ab53c8b21280f86ef51072573c9.jpg",
+      "viewerScroll": 0,
+      "width": 2133,
+      "focus": "Enlarge photograph: Pink-ball laughter"
+    },
+    {
+      "id": "lacie-walking-together-through-grass",
+      "category": "families",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/e0196e591e5836a0189e7b7a250708a30770012077d2a7beb1582cefccc641b5.jpg",
+      "viewerScroll": 0,
+      "width": 2133,
+      "focus": "Enlarge photograph: Walking together"
+    },
+    {
+      "id": "lacie-professional-portrait-gray-quarterzip",
+      "category": "headshots",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/7f59d19e33d5fbcffc3568e8b3565178dc9440797aa4cf28e2286bd45ade3df0.jpg",
+      "viewerScroll": 0,
+      "width": 2133,
+      "focus": "Enlarge photograph: Portrait in a gray quarter-zip"
+    },
+    {
+      "id": "lacie-professional-portrait-white-polo",
+      "category": "headshots",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/7f81e8952b7870623542d6641036dd227790cf4ab6b70592d8f91637fe02f504.jpg",
+      "viewerScroll": 0,
+      "width": 2133,
+      "focus": "Enlarge photograph: Portrait in a white polo"
+    },
+    {
+      "id": "coastal-sand-patterns",
+      "category": "coastal",
+      "fit": "contain",
+      "height": 2000,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/6b57a244dc284e9b16e608a51d48209d77d768b7ced46083db6a84a8927e567a.jpg",
+      "viewerScroll": 0,
+      "width": 3000,
+      "focus": "Enlarge photograph: Patterns in the sand"
+    },
+    {
+      "id": "coastal-airborne-color",
+      "category": "coastal",
+      "fit": "contain",
+      "height": 2000,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82.jpg",
+      "viewerScroll": 0,
+      "width": 3000,
+      "focus": "Enlarge photograph: Airborne color"
+    },
+    {
+      "id": "coastal-quiet-pink-ball",
+      "category": "coastal",
+      "fit": "contain",
+      "height": 3000,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/29845977f9849499b3bded99ac21f0ecfea3965ee76ca6794bffececeb38d120.jpg",
+      "viewerScroll": 0,
+      "width": 2000,
+      "focus": "Enlarge photograph: A quiet moment"
+    },
+    {
+      "id": "coastal-waterside-walk",
+      "category": "coastal",
+      "fit": "contain",
+      "height": 1674,
+      "opacity": "1",
+      "open": true,
+      "overflow": 0,
+      "url": "http://127.0.0.1:4291/pier-v2-20260910/media/expansion/ce95e569fb3e83a6dbf7640c32fb404373133a4a89b800c269168ead0ab489f4.jpg",
+      "viewerScroll": 0,
+      "width": 3000,
+      "focus": "Enlarge photograph: Waterside walk"
+    }
+  ],
+  "phone": [
+    {
+      "id": "lacie-technician-at-the-entry",
+      "category": "branding",
+      "coarse": true,
+      "fit": "contain",
+      "height": 844,
+      "image": [
+        3200,
+        2133
+      ],
+      "overflow": 0,
+      "viewerScroll": 0,
+      "width": 390,
+      "focused": "Enlarge photograph: At the entry"
+    },
+    {
+      "id": "lacie-parents-and-newborn-in-the-grove",
+      "category": "families",
+      "coarse": true,
+      "fit": "contain",
+      "height": 844,
+      "image": [
+        2133,
+        3200
+      ],
+      "overflow": 0,
+      "viewerScroll": 0,
+      "width": 390,
+      "focused": "Enlarge photograph: Together with a newborn"
+    },
+    {
+      "id": "lacie-professional-portrait-gray-quarterzip",
+      "category": "headshots",
+      "coarse": true,
+      "fit": "contain",
+      "height": 844,
+      "image": [
+        2133,
+        3200
+      ],
+      "overflow": 0,
+      "viewerScroll": 0,
+      "width": 390,
+      "focused": "Enlarge photograph: Portrait in a gray quarter-zip"
+    },
+    {
+      "id": "coastal-sand-patterns",
+      "category": "coastal",
+      "coarse": true,
+      "fit": "contain",
+      "height": 844,
+      "image": [
+        3000,
+        2000
+      ],
+      "overflow": 0,
+      "viewerScroll": 0,
+      "width": 390,
+      "focused": "Enlarge photograph: Patterns in the sand"
+    }
+  ],
+  "touch": {
+    "before": {
+      "p": "0",
+      "y": 0
+    },
+    "after": {
+      "overflow": 0,
+      "p": "0.062269615587151134",
+      "y": 473
+    }
+  },
+  "fallback": {
+    "background": "rgb(16, 44, 64)",
+    "blur": "none",
+    "reduceMotion": true,
+    "reduceTransparency": true
+  },
+  "normal": {
+    "background": "rgba(0, 0, 0, 0)",
+    "blur": "saturate(1.08)"
+  }
+}

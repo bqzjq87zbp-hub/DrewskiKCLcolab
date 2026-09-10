@@ -11,6 +11,15 @@
 .collection-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,26px);align-items:start}.collection-grid figure{margin:0}.collection-photo{display:block;overflow:hidden;border-radius:3px;background:#0c2635}.collection-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain}.collection-photo:focus-visible{outline:3px solid #bdefff;outline-offset:5px}.collection-footer{display:flex;gap:15px;flex-wrap:wrap;margin-top:45px;padding-top:25px;border-top:1px solid #ffffff2b}
 .room-sequence{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:0 0 50px}.room-vignette{margin:0;min-width:0}.room-vignette:first-child{grid-column:1/-1}.room-scene{position:relative;overflow:hidden;background:#0c2635;isolation:isolate}.room-scene>img{width:100%;height:100%;display:block;object-fit:contain}.room-art-layer{position:absolute;top:0;left:0;transform-origin:0 0;pointer-events:none}.room-art{position:absolute;left:0;top:0;transform-origin:0 0;width:1000px;height:1000px;border-radius:0;pointer-events:auto;background:transparent}.room-art img{width:100%;height:100%;object-fit:cover;aspect-ratio:auto}.room-vignette figcaption{font:12px/1.5 system-ui;color:#b6cbd7;padding:10px 0}
 body[data-view=collection] #viewer{z-index:90}
+/* Reserve real space for controls so short screens show the complete frame. */
+#viewer[open]{display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;height:min(960px,96svh);max-height:none;overflow:hidden}
+#viewer>nav{grid-row:1;min-width:0}
+#viewer>nav strong{min-width:0;overflow-wrap:anywhere}
+#viewer>#viewer-status{grid-row:2;min-height:0;margin:6px 0;line-height:1.25}
+#viewer>#viewer-status:empty{display:none}
+#viewer>#full-photo{grid-row:3;width:100%;height:100%;min-height:0;object-fit:contain}
+#viewer>p:last-child{grid-row:4;text-align:center}
+@media(max-width:480px){#viewer>nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}#viewer>nav strong{grid-row:1;grid-column:1/-1;overflow-wrap:normal;line-height:1.3}#viewer>nav button{grid-row:2}}
 .room-art{background:#f4f1ea}.room-art img{object-fit:contain}
 body[data-view=collection]{background-image:url('/media/underpier-photograph.jpg');background-position:center;background-size:cover;background-attachment:fixed}
 .collection-view{background:transparent;text-shadow:0 1px 3px #001018}.collection-header{padding:16px;border:1px solid #ffffff55;border-radius:18px;background:#ffffff08;backdrop-filter:blur(9px);box-shadow:inset 0 1px 0 #ffffff50,0 4px 20px #00111f22}.collection-switcher a{color:#fff;text-shadow:0 1px 3px #000,0 0 6px #000}.collection-view h1{color:#fff;text-shadow:0 2px 10px #0009}.collection-photo{background:transparent}.collection-photo img{aspect-ratio:auto}.room-vignette figcaption{color:#fff;text-shadow:0 1px 4px #000}.collection-footer{border-top-color:#ffffff70}

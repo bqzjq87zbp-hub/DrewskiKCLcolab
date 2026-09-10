@@ -1,6 +1,23 @@
 # Drewski KCL collaboration
 
-A self-contained Newport Pier photography portfolio, exported for collaboration. It has 13 Branding, 21 Family, 31 Headshot and 4 Coastal gallery entries, including ten NWPRT photographs within Branding.
+A self-contained Newport Pier photography portfolio, exported for collaboration. The current first expansion contains **82 entries: 17 Branding, 24 Family, 33 Headshot and 8 Coastal**, including the original ten NWPRT photographs within Branding. All 69 original entries, photographs and ten easel slots are preserved.
+
+## Start here: reproduce the published Pixpa integration
+
+The published source is `4c8bd39a65c7ebb29213d14d63f144ff62d318b3`, **Sites version 9**. It includes the 13-photo expansion and the verified centered-footer correction that clears the Pixpa Exit controls. [Open the Pixpa gallery](https://kiyonocreativelab.com/pier-gallery?release=first13-final-20260910) or use these exact commands with Node.js 20 or newer:
+
+```sh
+npm run check
+node integration/pixpa-v2/build.mjs --check
+node integration/pixpa-v2/build.mjs --output /absolute/path/to/new-gallery-build
+python3 -m http.server 4330 --bind 127.0.0.1 --directory /absolute/path/to/new-gallery-build
+```
+
+Open `http://127.0.0.1:4330/pier-v2-20260910/`. Replace the example output path with a new absolute directory and choose an unused port. The builder verifies all **277 gallery files**, including all 26 new image derivatives, from this repository alone. [Integration README](integration/pixpa-v2/README.md) explains the exact host source, public-verification state, preserved V1 photo URLs, unchanged Pixpa wrapper, rollback and capacity limit.
+
+The plain `npm start` option below also serves all 82 entries, but uses standalone root-relative URLs. The integration build additionally reproduces the hosted V1/V2 prefixes and native Pixpa navigation adapter. Neither command saves or publishes a site, and no private hosting-repository access is required.
+
+[Public acceptance](integration/pixpa-v2/PUBLIC-ACCEPTANCE.md) separates the completed image/walking/navigation checks from physical-device limits and the unrelated external Inquiry legal-link issue. New sheen work and the future 12-photo batch are not part of this release or handoff.
 
 ## Run locally
 
@@ -47,7 +64,7 @@ The app uses root-relative URLs. A static host must serve `public/` at the origi
 
 Photography and branding remain the property of their respective rights holders. This repository grants no new stock-photo, model, trademark or template redistribution license. Included photographs are the existing selected website assets; no archive, camera originals, private user records or source-machine paths are included. Export copies retain their color profiles while other embedded capture/edit metadata is removed.
 
-Three purchased room backgrounds and their six artwork overlays were deliberately excluded because template redistribution rights were not verified. Families falls back to its complete 21-image gallery. See [optional licensed rooms](docs/OPTIONAL-LICENSED-ROOMS.md).
+Three purchased room backgrounds and their six artwork overlays were deliberately excluded because template redistribution rights were not verified. Families uses its complete 24-image gallery. See [optional licensed rooms](docs/OPTIONAL-LICENSED-ROOMS.md).
 
 ## Handoff route
 

@@ -1,0 +1,1002 @@
+{
+  "scope": "Independent actual public version 8 image and walking acceptance; categories/main/image bytes retained by version 9, whose CSS clearance has separate public proof",
+  "sourceRecords": [
+    {
+      "name": "live-assets-proof.json",
+      "sha256": "1071e590d6b8132f1a8e21dc521a13791d9a28816d3f01b83308d9f4f6ba4bdb"
+    },
+    {
+      "name": "browser-qa.json",
+      "sha256": "bb1b344cdfef40343fcceb4f93688e526977c7ea2cef12b765dd371dccd54912"
+    },
+    {
+      "name": "REVIEW.md",
+      "sha256": "42bd004a6d0736bd1d053acd4ca49b9c960ebc9384b46cba528a1bd8e6419bb1"
+    }
+  ],
+  "status": 200,
+  "categoriesSHA256": "3a8ea3a46ee82f143aecd8e9f253939f2c70b759b2827b392286299f18108ba9",
+  "counts": {
+    "branding": 17,
+    "families": 24,
+    "headshots": 33,
+    "coastal": 8
+  },
+  "decodedURLs": [
+    {
+      "url": "/pier-v1-20260909/media/c4236e1c13029c8bfe85db2d.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/335e2ea0847bd07fec38d935.jpg",
+      "width": 3200,
+      "height": 2133,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/aa854f83427a78814a8c9330.jpg",
+      "width": 3200,
+      "height": 2133,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/aff8ce60a3fa5c177e788a7808de0df20ccb1d553c4ad27d25f6a19d7cfc5c49.jpg",
+      "width": 960,
+      "height": 640,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/d21b91e190788fc51394cdc248d48f9f2ea91ab7cb6b839362e7c79b114ad1ea.jpg",
+      "width": 3200,
+      "height": 2133,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/bab338b450a17934b8588451c2fa9fe8163beb5099c748afe0957834c58da77b.jpg",
+      "width": 960,
+      "height": 640,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/0117c6da97e9085d07f8f1edfd39f8b5e9fb9249721009d9fc2d7397921296ee.jpg",
+      "width": 3200,
+      "height": 2133,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/c19145e5eeca81f825e56c997a751bb3b9f66986ca4efe14cc3d3f4f818a7ed5.jpg",
+      "width": 640,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/effc01d8e3b836781cba2e83f8aec3b674c069a5817ca35a8c540b5577827d68.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/2f09d961580d456f1084ec9c79e4369fdc6560cff536e19a47824560ba5c3361.jpg",
+      "width": 960,
+      "height": 643,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/d78e1b91e5dd9038bd5118716ac18a720274f79f8d36c50dbffb4b56384603aa.jpg",
+      "width": 3200,
+      "height": 2145,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/42f851b10b91c7fb7c671b0f.jpg",
+      "width": 1318,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/1f21b9be45767539b18e85ed.jpg",
+      "width": 3013,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/6c2a2315ad94452845e533d8.jpg",
+      "width": 979,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/70f12efe1e861d2356d7e266.jpg",
+      "width": 2237,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/0d730119329ad4799756e2bd.jpg",
+      "width": 2800,
+      "height": 1866,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/ad462df1d55a206a67b2fc81.jpg",
+      "width": 942,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/3ebbfe1b2269fd0af95899d0.jpg",
+      "width": 2153,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/b52f709139bc3c03536ae335.jpg",
+      "width": 1400,
+      "height": 1336,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/1f5b70025a38abaf25c5ef97.jpg",
+      "width": 3200,
+      "height": 3054,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/d6fd42eb8fd212cf18552d2a.jpg",
+      "width": 1000,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/7e59da520784cdd298b72877.jpg",
+      "width": 2286,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/f4abdf1af9c237de58680c77.jpg",
+      "width": 1400,
+      "height": 933,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/11b5d5f94bb2846f435a0384.jpg",
+      "width": 3200,
+      "height": 2133,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/e897dd444b4def376669c088.jpg",
+      "width": 1400,
+      "height": 796,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/9bda6fe011490e01763750e4.jpg",
+      "width": 3200,
+      "height": 1819,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/76c190762ceeff63c494f2c9.jpg",
+      "width": 1400,
+      "height": 737,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/15e20340ffa0cc99b0e6464c.jpg",
+      "width": 3200,
+      "height": 1685,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/08bfbe519671b2a3ec187588.jpg",
+      "width": 2800,
+      "height": 1867,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/363dc893eff2ab2c7ff0724e.jpg",
+      "width": 3840,
+      "height": 2560,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/a602589870049a3f0fb24c83.jpg",
+      "width": 3000,
+      "height": 4500,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/86be855645440b5a914c953a.jpg",
+      "width": 2400,
+      "height": 1540,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/8601f013a9a902169521c8b0.jpg",
+      "width": 2600,
+      "height": 3900,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/f40563af947ec69c20021507.jpg",
+      "width": 1733,
+      "height": 2600,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/4d393268061adceca4155add.jpg",
+      "width": 3840,
+      "height": 2160,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/955f53a8e6570b9373c299c2.jpg",
+      "width": 2560,
+      "height": 3840,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/a15477287d9bee65b3a920599fc1af24b322497515c59a8593aca40a1402def6.jpg",
+      "width": 640,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/6df27290fbd0404a4ae3f2303d0b4c5eed23209a7066f28be61e4d99928265a1.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/a5837627b4f676209118e0e7.jpg",
+      "width": 3200,
+      "height": 2133,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/f06ec1bfba96659fe6b9da2f.jpg",
+      "width": 2800,
+      "height": 4200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/2d96f735ba18201980dee971.jpg",
+      "width": 2057,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/c58e8ca633d94a87765e2d6a.jpg",
+      "width": 2800,
+      "height": 4200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/bea67300da7b0a77dcfa3653.jpg",
+      "width": 2800,
+      "height": 4200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/d7ad3b51e4c774c87d7a425b.jpg",
+      "width": 2800,
+      "height": 1867,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/c4a641f3b456ab59149913ea.jpg",
+      "width": 1440,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/363fdb503e956d0273863e50.jpg",
+      "width": 2400,
+      "height": 1600,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/c6231e82c5d10dbda7f1220d.jpg",
+      "width": 1440,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/0a7d2faec6cf918c625f0619.jpg",
+      "width": 2400,
+      "height": 1600,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/1d1679620b5eb5e9b334276c.jpg",
+      "width": 3840,
+      "height": 2160,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/fb8e63035c205a3251dcd602.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/4967ef26446203f5514ff4da.jpg",
+      "width": 1867,
+      "height": 2800,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/5d3ba0d0278a7287633624d7.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/f3d91ee5078d8a3102569310.jpg",
+      "width": 1867,
+      "height": 2800,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/391d2e976f93016c1fc8a53e.jpg",
+      "width": 929,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/806acd3e487f0b0fc646973b.jpg",
+      "width": 1859,
+      "height": 2800,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/0339e7ad66e61d910bea5c59.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/5dbcccb90432fd253c75600a.jpg",
+      "width": 1867,
+      "height": 2800,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/61f6169f4002044fe1d07e9c.jpg",
+      "width": 1400,
+      "height": 933,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/044ce4a7ec48b6d0528efce5.jpg",
+      "width": 2800,
+      "height": 1867,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/4ff186bc7d9dcd996c90594bd2eff372ee4da37860cdcaed67abb7dc9314ac4f.jpg",
+      "width": 800,
+      "height": 1200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/060d6ac3041db63dc31faddee4e2feccf5c78ab53c8b21280f86ef51072573c9.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/a2866a62c7432190dd7e46f93621e9496875d172798783133877b6a120802ec5.jpg",
+      "width": 640,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/e0196e591e5836a0189e7b7a250708a30770012077d2a7beb1582cefccc641b5.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/34b32ab8408f756277f44d70.jpg",
+      "width": 1600,
+      "height": 2400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/0163dea99efa5683d470b7ad.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/8f676584c9da2513a27baa4f.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/ff8c5d0a7cc3a358674e851b.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/3304a50e7a7a0d5e264947d8.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/60cdc9a37a20ee409045b5eb.jpg",
+      "width": 2560,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/090c3caad475229f7e9d0695.jpg",
+      "width": 1599,
+      "height": 2400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/24c88a7a537770a0290b8162.jpg",
+      "width": 2400,
+      "height": 3600,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/6ba778953cd93fc869b7e28c9b9f5cadf041e8a7caadad17fb8a296270eb42c4.jpg",
+      "width": 640,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/7f59d19e33d5fbcffc3568e8b3565178dc9440797aa4cf28e2286bd45ade3df0.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/cce0d215323ba81520913403.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/e720e468c4e335f1f5698eb9.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/94a456843863c6aa31137f6c.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/0faa7eb4c0ad1135866f4c46.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/96ba6788e8d76e01457ef787.jpg",
+      "width": 1600,
+      "height": 2400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/577eb43287f3ea5d9fedf5fd.jpg",
+      "width": 2243,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/5bf0345b84335e96d827b1a3.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/63f2317fb79e5600be818060.jpg",
+      "width": 2533,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/13a47c55385a48222c5a0efd.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/4685106f0e96a28d7cf19eba733a75fe6f159500b30ca67f39231a6e17affafa.jpg",
+      "width": 640,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/7f81e8952b7870623542d6641036dd227790cf4ab6b70592d8f91637fe02f504.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/b81afdc474c67116e06a96c9.jpg",
+      "width": 2118,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/44246db8df167276d79b1654.jpg",
+      "width": 1600,
+      "height": 2400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/e3985b3a4ca015b66a441fc2.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/cfcde45e923ea4fff4ce2dac.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/e31e239fe8b11431dabc7faf.jpg",
+      "width": 3200,
+      "height": 2133,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/1864f27f41aa5333c9d38dde.jpg",
+      "width": 1600,
+      "height": 2400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/ccec0cde43cb3cd3b23afcf7.jpg",
+      "width": 2000,
+      "height": 3000,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/acc1ad30cbd73725d0ac6ed6.jpg",
+      "width": 3000,
+      "height": 2000,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/c393e8d7757ba486a8bbdfd1.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/606c39c46a788eabd7cad94a.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/6f692d68168b6f54116b5d13.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/1825de7e0853fbdff388bf7c.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/f08a52e4e0b7e4c9f4df4d0c.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/69baa9ffe7a88fbc3916c1f2.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/09920ffdef0dccd54b6dfc01.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/fe23574feaffede554dd289a.jpg",
+      "width": 933,
+      "height": 1400,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/228b1d52f8f29c8495fb44b1.jpg",
+      "width": 2133,
+      "height": 3200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/5ec0788a23457720b3dc8c0c97cf3867111c910a6873c1b69fc820ad2f3367cb.jpg",
+      "width": 1200,
+      "height": 800,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/6b57a244dc284e9b16e608a51d48209d77d768b7ced46083db6a84a8927e567a.jpg",
+      "width": 3000,
+      "height": 2000,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/1e7f972e651c8e41c91168b6.jpg",
+      "width": 1440,
+      "height": 960,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/481288d072d928eac1b8b2c6.jpg",
+      "width": 2400,
+      "height": 1599,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/f779e04fc2a6dec79afaa243f060bf4e5a3084669c2c75188cef6b8f81899539.jpg",
+      "width": 1200,
+      "height": 800,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82.jpg",
+      "width": 3000,
+      "height": 2000,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/c9b2347322d46e6f200f04db5840207d7b208472f240d27c63d2b593f75c975c.jpg",
+      "width": 800,
+      "height": 1200,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/29845977f9849499b3bded99ac21f0ecfea3965ee76ca6794bffececeb38d120.jpg",
+      "width": 2000,
+      "height": 3000,
+      "ok": true
+    },
+    {
+      "url": "/pier-v1-20260909/media/07f59839133492f58ad8884a.jpg",
+      "width": 2000,
+      "height": 2800,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/86144568d70b2018fdb047c72636a211cb66fc682ae4951ab6cc6d0e110df47e.jpg",
+      "width": 1200,
+      "height": 670,
+      "ok": true
+    },
+    {
+      "url": "/pier-v2-20260910/media/expansion/ce95e569fb3e83a6dbf7640c32fb404373133a4a89b800c269168ead0ab489f4.jpg",
+      "width": 3000,
+      "height": 1674,
+      "ok": true
+    }
+  ],
+  "openedNew13": [
+    {
+      "category": "branding",
+      "title": "At the entry",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 2133,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/d21b91e190788fc51394cdc248d48f9f2ea91ab7cb6b839362e7c79b114ad1ea.jpg",
+      "width": 3200
+    },
+    {
+      "category": "branding",
+      "title": "Service truck and architecture",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 2133,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/0117c6da97e9085d07f8f1edfd39f8b5e9fb9249721009d9fc2d7397921296ee.jpg",
+      "width": 3200
+    },
+    {
+      "category": "branding",
+      "title": "At the microphone",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/effc01d8e3b836781cba2e83f8aec3b674c069a5817ca35a8c540b5577827d68.jpg",
+      "width": 2133
+    },
+    {
+      "category": "branding",
+      "title": "Team at the desk",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 2145,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/d78e1b91e5dd9038bd5118716ac18a720274f79f8d36c50dbffb4b56384603aa.jpg",
+      "width": 3200
+    },
+    {
+      "category": "families",
+      "title": "Together with a newborn",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/6df27290fbd0404a4ae3f2303d0b4c5eed23209a7066f28be61e4d99928265a1.jpg",
+      "width": 2133
+    },
+    {
+      "category": "families",
+      "title": "Pink-ball laughter",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/060d6ac3041db63dc31faddee4e2feccf5c78ab53c8b21280f86ef51072573c9.jpg",
+      "width": 2133
+    },
+    {
+      "category": "families",
+      "title": "Walking together",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/e0196e591e5836a0189e7b7a250708a30770012077d2a7beb1582cefccc641b5.jpg",
+      "width": 2133
+    },
+    {
+      "category": "headshots",
+      "title": "Portrait in a gray quarter-zip",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/7f59d19e33d5fbcffc3568e8b3565178dc9440797aa4cf28e2286bd45ade3df0.jpg",
+      "width": 2133
+    },
+    {
+      "category": "headshots",
+      "title": "Portrait in a white polo",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 3200,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/7f81e8952b7870623542d6641036dd227790cf4ab6b70592d8f91637fe02f504.jpg",
+      "width": 2133
+    },
+    {
+      "category": "coastal",
+      "title": "Patterns in the sand",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 2000,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/6b57a244dc284e9b16e608a51d48209d77d768b7ced46083db6a84a8927e567a.jpg",
+      "width": 3000
+    },
+    {
+      "category": "coastal",
+      "title": "Airborne color",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 2000,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82.jpg",
+      "width": 3000
+    },
+    {
+      "category": "coastal",
+      "title": "A quiet moment",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 3000,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/29845977f9849499b3bded99ac21f0ecfea3965ee76ca6794bffececeb38d120.jpg",
+      "width": 2000
+    },
+    {
+      "category": "coastal",
+      "title": "Waterside walk",
+      "box": {
+        "bottom": 930.5,
+        "height": 852.5,
+        "left": 109,
+        "right": 1331,
+        "top": 78,
+        "width": 1222,
+        "x": 109,
+        "y": 78
+      },
+      "complete": true,
+      "filter": "none",
+      "fit": "contain",
+      "height": 1674,
+      "opacity": "1",
+      "src": "/pier-v2-20260910/media/expansion/ce95e569fb3e83a6dbf7640c32fb404373133a4a89b800c269168ead0ab489f4.jpg",
+      "width": 3000
+    }
+  ],
+  "wheelDown": {
+    "scrollWidth": 1440,
+    "width": 1440,
+    "y": 650
+  },
+  "wheelUp": {
+    "scrollWidth": 1440,
+    "width": 1440,
+    "y": 400
+  },
+  "returnToAisle": {
+    "scrollWidth": 1440,
+    "width": 1440,
+    "y": 400
+  },
+  "excludedSamples": "Earlier mixed-pointer phone-menu samples and stale publisher landscape screenshot are not acceptance evidence."
+}

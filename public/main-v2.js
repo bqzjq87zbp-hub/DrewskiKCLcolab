@@ -36,7 +36,7 @@ const observer=new ResizeObserver(resize);observer.observe(composition);resize()
 
 // The accessible list is grouped by destination, not a duplicate wall of enlargement links.
 const list=$('#photo-list');list.replaceChildren();
-for(const c of collections.data.values()){const li=document.createElement('li'),a=document.createElement('a'),img=document.createElement('img');a.href='#collection/'+c.id;a.className='category-card';img.src=c.items[0].src;img.alt=c.items[0].alt;img.loading='lazy';a.append(img,document.createTextNode(c.title));a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();collections.open(c.id,a);};li.append(a);list.append(li);}
+for(const c of collections.data.values()){const li=document.createElement('li'),a=document.createElement('a'),img=document.createElement('img');a.href='#collection/'+c.id;a.className='category-card';img.loading='lazy';img.decoding='async';img.src=c.items[0].src;img.alt=c.items[0].alt;a.append(img,document.createTextNode(c.title));a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();collections.open(c.id,a);};li.append(a);list.append(li);}
 $('#photographs h1').textContent='Explore the collections';
 
 $('#close').onclick=()=>viewer.close();$('#previous').onclick=()=>display(photos,(current-1+photos.length)%photos.length);$('#next').onclick=()=>display(photos,(current+1)%photos.length);
