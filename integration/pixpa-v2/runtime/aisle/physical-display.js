@@ -1,4 +1,5 @@
 import * as THREE from '/pier-v2-20260910/vendor/three.module.js';
+import {mobileScene, sceneImage, sceneSourceSize} from '../scene-images.js';
 import {createPhysicalEasel} from './physical-easel.js';
 import {createPhotographicEnvironment} from './photographic-environment.js';
 import {WATER_WAVES_GLSL} from './water-surface.js';
@@ -10,8 +11,8 @@ const image = async src => {const im=new Image();im.src=src;await im.decode();re
 export function createPhysicalDisplay({viewport,slots,onReady}) {
   const portraitPitch=PHONE_PITCH;
   let renderer;
-  try {renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'});}
-  catch {return {ready:false,error:'WebGL unavailable; photographic fallback retained',render:()=>null,destroy:()=>{}};}
+  try {renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:mobileScene?'default':'high-performance'});}
+  catch {return {ready:false,getState:()=>({ready:false,painted:false,error:'webgl-unavailable'}),render:()=>null,destroy:()=>{}};}
   renderer.setClearColor(0,0);
   renderer.outputColorSpace=THREE.SRGBColorSpace;
   renderer.toneMapping=THREE.NoToneMapping;
@@ -40,8 +41,16 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
   const surface=new THREE.Plane(new THREE.Vector3(0,1,0),.022);
   const below=new THREE.Plane(new THREE.Vector3(0,-1,0),0);
   const contactGeometries=new Set();
-  const models=[],effects=[],uniforms={phase:{value:0}},diagnostics={ready:false,error:null};
+  const models=[],effects=[],uniforms={phase:{value:0}},diagnostics={ready:false,painted:false,error:null,mobile:mobileScene};
   let size='',cameraDistance=0,disposed=false,environment=null;
+  function fail(reason){
+    if(disposed||diagnostics.error)return;
+    diagnostics.error=reason;diagnostics.ready=false;diagnostics.painted=false;
+    renderer.domElement.hidden=true;onReady?.();
+  }
+  const lost=event=>{event.preventDefault();fail('webgl-context-lost');};
+  renderer.domElement.addEventListener('webglcontextlost',lost);
+  renderer.debug.onShaderError=()=>fail('shader-unavailable');
   function wetTimber(material) {
     if(material.userData.waterContact)return;
     material.userData.waterContact=true;
@@ -179,12 +188,12 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
     }
     group.position.copy(model.group.position);group.rotation.copy(model.group.rotation);scene.add(group);effects.push(group);return group;
   }
-  Promise.all([image('/pier-v1-20260909/media/underpier-photograph.jpg'),image('/pier-v1-20260909/media/easel-composition-reference.jpg'),...slots.map(s=>image(s.src))]).then(([source,wood,...images])=>{
+  Promise.all([image(sceneImage('/pier-v1-20260909/media/underpier-photograph.jpg')),...slots.map(s=>image(sceneImage(s.src)))]).then(([source,...images])=>{
     if(disposed)return;
-    environment=createPhotographicEnvironment({THREE,scene,sourceImage:source,calibration:{pierScale:PIER_SCENE_SCALE,maximumTravel:TRAVEL}});
+    environment=createPhotographicEnvironment({THREE,scene,sourceImage:source,sourceDimensions:sceneSourceSize('/pier-v1-20260909/media/underpier-photograph.jpg'),calibration:{pierScale:PIER_SCENE_SCALE,maximumTravel:TRAVEL}});
     Object.assign(water.material.uniforms,environment.reflectionMaskUniforms);
     slots.forEach((slot,index)=>{
-      const m=createPhysicalEasel({THREE,slot,image:images[index],woodImage:wood,index});
+      const m=createPhysicalEasel({THREE,slot,image:images[index],sourceSize:sceneSourceSize(slot.src),index});
       m.group.position.set(galleryRowX(slot),0,-DEPTHS[slot.depth]);
       m.group.rotation.y=slot.side==='left'?ROW_YAW:-ROW_YAW;
       m.group.traverse(o=>{if(o.isMesh){for(const material of Array.isArray(o.material)?o.material:[o.material]){material.clippingPlanes=[surface];wetTimber(material);if(/canvas|photographic/i.test(material.name)){o.layers.enable(1);}}}});
@@ -194,10 +203,11 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
         reflectionContacts[index*3+contactIndex].set(world.x,world.z);
       });
       const submerged=waterCopy(m.group,false),ripples=contactRipples(m);
-      models.push({...m,slot,submerged,ripples,imageSize:[images[index].naturalWidth,images[index].naturalHeight]});
+      const native=sceneSourceSize(slot.src);
+      models.push({...m,slot,submerged,ripples,imageSize:[native?.width||images[index].naturalWidth,native?.height||images[index].naturalHeight],textureSize:[images[index].naturalWidth,images[index].naturalHeight]});
     });
-    Promise.all([environment.ready,...models.map(m=>m.ready)]).then(()=>{if(!disposed){diagnostics.ready=true;onReady?.();}}).catch(e=>{diagnostics.error=e.message;renderer.domElement.hidden=true;onReady?.();});
-  }).catch(e=>{diagnostics.error=e.message;renderer.domElement.hidden=true;onReady?.();});
+    Promise.all([environment.ready,...models.map(m=>m.ready)]).then(()=>{if(!disposed&&!diagnostics.error){diagnostics.ready=true;onReady?.();}}).catch(()=>fail('scene-assets-unavailable'));
+  }).catch(()=>fail('scene-images-unavailable'));
 
   // The generated video has no validated 3D camera solve. Its measured 2D
   // groups contain severe shear and discontinuities; do not drive a camera
@@ -205,9 +215,11 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
   // both directions, while this separate mode remains explicitly approximate.
   const videoDistance=committed=>galleryDistance(committed.progress);
   function render({width,height,progress,committed,reduced,time=0,look=0,autoYaw=null}) {
-    if(!diagnostics.ready)return null;
+    if(disposed||!diagnostics.ready)return null;
+    const gl=renderer.getContext();
+    if(gl.isContextLost()){fail('webgl-context-lost');return null;}
     const key=width+'x'+height;
-    if(key!==size){size=key;renderer.setPixelRatio(Math.min(devicePixelRatio||1,width<600?1.5:2));renderer.setSize(width,height,false);reflectionTarget.setSize(Math.min(1024,width),Math.round(Math.min(1024,width)*height/width));water.material.uniforms.reflectionTexel.value.set(1/reflectionTarget.width,1/reflectionTarget.height);}
+    if(key!==size){size=key;renderer.setPixelRatio(Math.min(devicePixelRatio||1,mobileScene?1.5:2));renderer.setSize(width,height,false);const reflectionWidth=Math.min(mobileScene?480:1024,width);reflectionTarget.setSize(reflectionWidth,Math.min(mobileScene?1024:4096,Math.round(reflectionWidth*height/width)));water.material.uniforms.reflectionTexel.value.set(1/reflectionTarget.width,1/reflectionTarget.height);}
     cameraDistance=committed?videoDistance(committed):galleryDistance(progress);
     const viewPitchOffset=width<600&&width<height?portraitPitch:0;
     environment.update({camera,width,height,distance:cameraDistance,enabled:!committed,time,reduced,lookYaw:autoYaw??galleryLookYaw(progress,look),viewPitchOffset});
@@ -238,6 +250,11 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
     const reflectionCalls=reflectedStats.calls;
     water.visible=true;environment.setReflectionPass(false);environment.group.visible=!committed;models.forEach(m=>{m.submerged.visible=m.group.visible;m.ripples.visible=m.group.visible;});
     renderer.setRenderTarget(null);const frameStats=renderLitScene(camera);
+    if(gl.isContextLost()||diagnostics.error){fail('webgl-context-lost');return null;}
+    if(!diagnostics.painted&&gl.getError()!==gl.NO_ERROR){fail('graphics-unavailable');return null;}
+    diagnostics.painted=true;
+    diagnostics.textureSizes=models.map(m=>({id:m.slot.id,size:m.textureSize}));
+    diagnostics.gpu={textures:renderer.info.memory.textures,geometries:renderer.info.memory.geometries,pixelRatio:renderer.getPixelRatio()};
     diagnostics.calls=frameStats.calls;diagnostics.triangles=frameStats.triangles;
     diagnostics.reflectionCalls=reflectionCalls;diagnostics.water='single y=0 projective planar reflection with wave distortion; submerged timber pass';
     diagnostics.cameraDistance=cameraDistance;diagnostics.projection='fixed physical geometry, single perspective camera';
@@ -248,6 +265,6 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
     diagnostics.printInvariants=projected.map(({id,physical,source,frontUV,frontVertices,meshScale,groupScale})=>({id,physical,source,frontUV,frontVertices,meshScale,groupScale}));
     return projected;
   }
-  function destroy(){disposed=true;environment?.dispose();models.forEach(m=>m.dispose?.());effects.forEach(g=>g.traverse(o=>{if(o.isMesh)for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}));contactGeometries.forEach(g=>g.dispose());reflectionTarget.dispose();water.geometry.dispose();water.material.dispose();renderer.dispose();renderer.domElement.remove();}
-  return {get ready(){return diagnostics.ready;},getState:()=>({...diagnostics}),render,destroy};
+  function destroy(){if(disposed)return;disposed=true;renderer.domElement.removeEventListener('webglcontextlost',lost);environment?.dispose();models.forEach(m=>m.dispose?.());effects.forEach(g=>g.traverse(o=>{if(o.isMesh)for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}));contactGeometries.forEach(g=>g.dispose());reflectionTarget.dispose();water.geometry.dispose();water.material.dispose();renderer.dispose();renderer.domElement.remove();}
+  return {get ready(){return diagnostics.ready&&diagnostics.painted;},getState:()=>({...diagnostics,assetsReady:diagnostics.ready,ready:diagnostics.ready&&diagnostics.painted}),render,destroy,fail};
 }

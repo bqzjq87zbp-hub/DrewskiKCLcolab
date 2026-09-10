@@ -1,0 +1,161 @@
+{
+  "schema": "kcl-scene-previews-v1",
+  "purpose": "Scene display only; original gallery identities, URLs and full files are unchanged.",
+  "processing": "Orientation normalized, ICC to sRGB, proportional Lanczos resize, JPEG84; no crop or retouch.",
+  "assets": [
+    {
+      "source": "/media/07f59839133492f58ad8884a.jpg",
+      "source_sha256": "07f59839133492f58ad8884a94202bd88c0c8d0b8a4b9cdb0f31fd07cc870759",
+      "source_width": 2000,
+      "source_height": 2800,
+      "path": "/media/scene-mobile/07f59839133492f58ad8884a.jpg",
+      "width": 731,
+      "height": 1024,
+      "bytes": 80712,
+      "sha256": "73dc8c959dc049ce4a35d285bd663f0928dd7a084ef3fccb2e9a293be12930e2"
+    },
+    {
+      "source": "/media/08bfbe519671b2a3ec187588.jpg",
+      "source_sha256": "08bfbe519671b2a3ec18758809917c2a53e74a565743dabeef15463bbad5f3dd",
+      "source_width": 2800,
+      "source_height": 1867,
+      "path": "/media/scene-mobile/08bfbe519671b2a3ec187588.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 119335,
+      "sha256": "3368e82e0a262571b523dce5a607b6f2db7d43dcaf4b20b607b9f51bb54683b7"
+    },
+    {
+      "source": "/media/0d730119329ad4799756e2bd.jpg",
+      "source_sha256": "0d730119329ad4799756e2bdb171d2c0ea7c4f84035ec568015df9a2247112a3",
+      "source_width": 2800,
+      "source_height": 1866,
+      "path": "/media/scene-mobile/0d730119329ad4799756e2bd.jpg",
+      "width": 1024,
+      "height": 682,
+      "bytes": 99157,
+      "sha256": "0f194761cee3a6128480d075e3c9a7cf6b1f707049a215c2cfb9fad84b37467c"
+    },
+    {
+      "source": "/media/1e7f972e651c8e41c91168b6.jpg",
+      "source_sha256": "47bcd9fda2dce10d0683d25b88225c14bd453c0d24ba80b68ecfee69a3973360",
+      "source_width": 1440,
+      "source_height": 960,
+      "path": "/media/scene-mobile/1e7f972e651c8e41c91168b6.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 86797,
+      "sha256": "50a6b6f2603420305a0be045cbd18cc3478042da814b9b2f5fc346845ed3b3da"
+    },
+    {
+      "source": "/media/335e2ea0847bd07fec38d935.jpg",
+      "source_sha256": "335e2ea0847bd07fec38d935c5b76d9b128f499da6c6e91dad136cc2522cb0a7",
+      "source_width": 3200,
+      "source_height": 2133,
+      "path": "/media/scene-mobile/335e2ea0847bd07fec38d935.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 81669,
+      "sha256": "23e0f91da48823073c154c9b5b380e64842dfade64ef38408bf324c3cc6d0522"
+    },
+    {
+      "source": "/media/34b32ab8408f756277f44d70.jpg",
+      "source_sha256": "34b32ab8408f756277f44d7019f0253e826994f674e83c9f53edbac998461e80",
+      "source_width": 1600,
+      "source_height": 2400,
+      "path": "/media/scene-mobile/34b32ab8408f756277f44d70.jpg",
+      "width": 683,
+      "height": 1024,
+      "bytes": 90267,
+      "sha256": "e25e4b64dabcc7d3989317fbf2ff203ce009730a24d45b79a6fd9ac59140e891"
+    },
+    {
+      "source": "/media/363dc893eff2ab2c7ff0724e.jpg",
+      "source_sha256": "e4c27d5205b28a51d455b339904bf3360faa5aefd90cae87c643be05d749cb6c",
+      "source_width": 3840,
+      "source_height": 2560,
+      "path": "/media/scene-mobile/363dc893eff2ab2c7ff0724e.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 125420,
+      "sha256": "fb493cedf070c235acb3fd1420daca3216413eae343cfc707811e909509028cf"
+    },
+    {
+      "source": "/media/459d0941c6b06f06023017bd.jpg",
+      "source_sha256": "459d0941c6b06f06023017bdf3c48ac9676a863b6c49ce23339bc9b5d294811d",
+      "source_width": 3840,
+      "source_height": 1283,
+      "path": "/media/scene-mobile/459d0941c6b06f06023017bd.jpg",
+      "width": 1024,
+      "height": 342,
+      "bytes": 34745,
+      "sha256": "9001e79c3bf2a9af05dc794e0b2974d4b0e482fcb5b8a530335d36c238265bbf"
+    },
+    {
+      "source": "/media/6c2bcb595c230d3249389708.jpg",
+      "source_sha256": "6c2bcb595c230d32493897080d2f37be56a51b736ef7b2ab41a9c5d74e46caf5",
+      "source_width": 3200,
+      "source_height": 2133,
+      "path": "/media/scene-mobile/6c2bcb595c230d3249389708.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 75032,
+      "sha256": "32a5f4b47b94f4b51c78d7610c8c274f7e22ef3d44a51838f3bc13f7862d9138"
+    },
+    {
+      "source": "/media/aa854f83427a78814a8c9330.jpg",
+      "source_sha256": "aa854f83427a78814a8c93308a7927f1f6604d0bf4fc8a236855c3d42f4e6001",
+      "source_width": 3200,
+      "source_height": 2133,
+      "path": "/media/scene-mobile/aa854f83427a78814a8c9330.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 143974,
+      "sha256": "2a4dfdb499d26e293e51058a02dfc94cc4989c1a1602aa00fecf207809093a42"
+    },
+    {
+      "source": "/media/c4236e1c13029c8bfe85db2d.jpg",
+      "source_sha256": "3ab2f75c6919fc368a161dfc0a442f8369c47da5e9e489f6d9616e290690f89a",
+      "source_width": 2133,
+      "source_height": 3200,
+      "path": "/media/scene-mobile/c4236e1c13029c8bfe85db2d.jpg",
+      "width": 683,
+      "height": 1024,
+      "bytes": 97287,
+      "sha256": "90d47a08023b624be8326a24d8ce1a5f8954ab2c6614eb6951e511385434c88f"
+    },
+    {
+      "source": "/media/c4a641f3b456ab59149913ea.jpg",
+      "source_sha256": "4bd9a3b7d6245f3bd7c5e0ac99121155080b93e9c36b593a50ce663dd693f41f",
+      "source_width": 1440,
+      "source_height": 960,
+      "path": "/media/scene-mobile/c4a641f3b456ab59149913ea.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 75116,
+      "sha256": "d7b545b9a4870cda5284df79b1dee505c0fdbf9b6d4c156308581bf99d16f7ec"
+    },
+    {
+      "source": "/media/c6231e82c5d10dbda7f1220d.jpg",
+      "source_sha256": "f1f2d4b9cf194542ac486669272a5d9407c8c2de2f155bf086de64cbf3500c3b",
+      "source_width": 1440,
+      "source_height": 960,
+      "path": "/media/scene-mobile/c6231e82c5d10dbda7f1220d.jpg",
+      "width": 1024,
+      "height": 683,
+      "bytes": 81259,
+      "sha256": "3124f0b8487fdbc410c166915706ce700ca5feee89deaa8c847ee66452896f8f"
+    },
+    {
+      "source": "/media/underpier-photograph.jpg",
+      "source_sha256": "cfa91375ee89923fdd0230a95aba042f1d4a8e698e70735de94f69fe20569ee3",
+      "source_width": 4000,
+      "source_height": 2667,
+      "path": "/media/scene-mobile/underpier-photograph.jpg",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 241803,
+      "sha256": "5a8f4b682f792e7e713d42e3a30e2c9154848aa4be15d4d571582f6cc8e78b87"
+    }
+  ]
+}

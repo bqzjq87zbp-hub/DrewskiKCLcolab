@@ -77,3 +77,16 @@ body[data-appearance=clear] .aisle-viewport #menu option{background:#163346}
 .aisle-viewport #menu[data-side-look=true] .aisle-look-controls{display:flex}
 /* Keep text beneath the clear menu legible in short framed scenes. */
 .aisle-viewport:has(#menu-toggle[aria-expanded=true]) .aisle-progress{visibility:hidden}
+
+/* A real photograph remains visible until the first healthy 3D frame. */
+.aisle-slot{will-change:auto}
+.aisle-loading{position:absolute;z-index:101;left:50%;bottom:100px;transform:translateX(-50%);display:grid;gap:10px;width:min(360px,calc(100% - 40px));padding:16px;border:1px solid #ffffff88;border-radius:14px;background:rgba(255,255,255,.06);color:white;text-shadow:0 1px 4px #000;box-shadow:inset 0 1px 0 #ffffff88,0 6px 20px #0003}
+.aisle-loading a,.aisle-loading button{min-height:44px;display:flex;align-items:center;justify-content:center;color:inherit;background:transparent;border:1px solid #ffffff66;border-radius:8px;padding:8px 12px;font:inherit}
+.aisle-viewport[data-loading=true] .aisle-progress,.aisle-journey[data-failed=true] .aisle-progress{display:none}
+.aisle-journey[data-failed=true]{height:auto}
+.aisle-journey[data-failed=true] .aisle-viewport{position:relative;height:max(520px,80svh)}
+.aisle-journey[data-failed=true] .aisle-fallback{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;padding:24px;list-style:none;margin:0}
+@media(max-width:600px){.aisle-journey[data-failed=true] .aisle-fallback{grid-template-columns:repeat(2,minmax(0,1fr));padding:18px}}
+
+.aisle-loading:active{transform:translateX(-50%)}
+.aisle-viewport[data-loading=true] .aisle-start-walk,.aisle-journey[data-failed=true] :is(.aisle-start-walk,.aisle-category-sign){display:none!important}

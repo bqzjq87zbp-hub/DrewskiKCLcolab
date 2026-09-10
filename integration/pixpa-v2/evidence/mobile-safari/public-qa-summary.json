@@ -1,0 +1,542 @@
+{
+  "scope": "Actual public Home-to-iframe checks; desktop engine emulation, not physical iPhone",
+  "siteVersion": 16,
+  "hostingCommit": "b352db8e50f3d62a8efb053b594d753fc9c33c08",
+  "cases": [
+    {
+      "engine": "chromium",
+      "browserVersion": "152.0.7977.83",
+      "width": 390,
+      "url": "https://kiyonocreativelab.com/?release=walk-repaired-v16-20260910",
+      "result": "PASS_INTERACTIVE_READY_WALK_MENU_COLLECTION_RETURN",
+      "walkInput": "Chrome compositor touch scroll through actual public iframe; emulated device, not physical iPhone",
+      "finishedAt": "2026-09-10T23:21:39.495Z",
+      "menu": [
+        {
+          "text": "Branding",
+          "href": "#collection/branding",
+          "height": 48
+        },
+        {
+          "text": "Family portraits",
+          "href": "#collection/families",
+          "height": 48
+        },
+        {
+          "text": "Professional headshots",
+          "href": "#collection/headshots",
+          "height": 48
+        },
+        {
+          "text": "Coastal photographs",
+          "href": "#collection/coastal",
+          "height": 48
+        },
+        {
+          "text": "All collections",
+          "href": "#photographs",
+          "height": 48
+        },
+        {
+          "text": "Return to main site",
+          "href": "https://kiyonocreativelab.com/",
+          "height": 48
+        },
+        {
+          "text": "Plan Your Portrait",
+          "href": "https://kiyonocreativelab.com/inquiry-form",
+          "height": 48
+        }
+      ],
+      "states": [
+        {
+          "name": "interactive-ready",
+          "progress": 0,
+          "ready": true,
+          "drawCalls": 102,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "after-wheel",
+          "progress": 0.07253817798841496,
+          "ready": true,
+          "drawCalls": 182,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "coastal-collection",
+          "progress": 0,
+          "ready": true,
+          "drawCalls": 102,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "returned-to-walk",
+          "progress": 0.07253817798841496,
+          "ready": true,
+          "drawCalls": 182,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        }
+      ],
+      "childHttpErrors": [],
+      "applicationErrors": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.4",
+      "width": 390,
+      "url": "https://kiyonocreativelab.com/?release=walk-repaired-v16-20260910",
+      "result": "PASS_INTERACTIVE_READY_WALK_MENU_COLLECTION_RETURN",
+      "walkInput": "Native PageDown with the child iframe control focused; WebKit wheel unsupported, not a touch claim",
+      "finishedAt": "2026-09-10T23:21:38.641Z",
+      "menu": [
+        {
+          "text": "Branding",
+          "href": "#collection/branding",
+          "height": 48
+        },
+        {
+          "text": "Family portraits",
+          "href": "#collection/families",
+          "height": 48
+        },
+        {
+          "text": "Professional headshots",
+          "href": "#collection/headshots",
+          "height": 48
+        },
+        {
+          "text": "Coastal photographs",
+          "href": "#collection/coastal",
+          "height": 48
+        },
+        {
+          "text": "All collections",
+          "href": "#photographs",
+          "height": 48
+        },
+        {
+          "text": "Return to main site",
+          "href": "https://kiyonocreativelab.com/",
+          "height": 48
+        },
+        {
+          "text": "Plan Your Portrait",
+          "href": "https://kiyonocreativelab.com/inquiry-form",
+          "height": 48
+        }
+      ],
+      "states": [
+        {
+          "name": "interactive-ready",
+          "progress": 0,
+          "ready": true,
+          "drawCalls": 102,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "after-wheel",
+          "progress": 0.10584518167456557,
+          "ready": true,
+          "drawCalls": 94,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "coastal-collection",
+          "progress": 0,
+          "ready": true,
+          "drawCalls": 102,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "returned-to-walk",
+          "progress": 0.10584518167456557,
+          "ready": true,
+          "drawCalls": 94,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        }
+      ],
+      "childHttpErrors": [],
+      "applicationErrors": []
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "152.0.7977.83",
+      "width": 1440,
+      "url": "https://kiyonocreativelab.com/?release=walk-repaired-v16-20260910",
+      "result": "PASS_INTERACTIVE_READY_WALK_MENU_COLLECTION_RETURN",
+      "walkInput": "Native wheel in isolated browser",
+      "finishedAt": "2026-09-10T23:21:41.698Z",
+      "menu": [
+        {
+          "text": "Branding",
+          "href": "#collection/branding",
+          "height": 48
+        },
+        {
+          "text": "Family portraits",
+          "href": "#collection/families",
+          "height": 48
+        },
+        {
+          "text": "Professional headshots",
+          "href": "#collection/headshots",
+          "height": 48
+        },
+        {
+          "text": "Coastal photographs",
+          "href": "#collection/coastal",
+          "height": 48
+        },
+        {
+          "text": "All collections",
+          "href": "#photographs",
+          "height": 48
+        },
+        {
+          "text": "Return to main site",
+          "href": "https://kiyonocreativelab.com/",
+          "height": 48
+        },
+        {
+          "text": "Plan Your Portrait",
+          "href": "https://kiyonocreativelab.com/inquiry-form",
+          "height": 48
+        }
+      ],
+      "states": [
+        {
+          "name": "interactive-ready",
+          "progress": 0,
+          "ready": true,
+          "drawCalls": 262,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "after-wheel",
+          "progress": 0.16565656565656567,
+          "ready": true,
+          "drawCalls": 262,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "coastal-collection",
+          "progress": 0,
+          "ready": true,
+          "drawCalls": 262,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "returned-to-walk",
+          "progress": 0.16565656565656567,
+          "ready": true,
+          "drawCalls": 262,
+          "error": null,
+          "overflow": 0,
+          "categories": [
+            {
+              "id": "branding",
+              "count": 25
+            },
+            {
+              "id": "families",
+              "count": 27
+            },
+            {
+              "id": "headshots",
+              "count": 36
+            },
+            {
+              "id": "coastal",
+              "count": 16
+            }
+          ]
+        }
+      ],
+      "childHttpErrors": [],
+      "applicationErrors": []
+    }
+  ],
+  "noJavaScript": {
+    "result": "PASS_11_STATIC_IMAGES_DECODE_NO_HTTP_ERRORS",
+    "overflow": 0,
+    "images": [
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/underpier-photograph.jpg",
+        "width": 1600,
+        "height": 1067,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/c4a641f3b456ab59149913ea.jpg",
+        "width": 1024,
+        "height": 683,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/1e7f972e651c8e41c91168b6.jpg",
+        "width": 1024,
+        "height": 683,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/c6231e82c5d10dbda7f1220d.jpg",
+        "width": 1024,
+        "height": 683,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/07f59839133492f58ad8884a.jpg",
+        "width": 731,
+        "height": 1024,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/0d730119329ad4799756e2bd.jpg",
+        "width": 1024,
+        "height": 682,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/08bfbe519671b2a3ec187588.jpg",
+        "width": 1024,
+        "height": 683,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/6c2bcb595c230d3249389708.jpg",
+        "width": 1024,
+        "height": 683,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/335e2ea0847bd07fec38d935.jpg",
+        "width": 1024,
+        "height": 683,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/aa854f83427a78814a8c9330.jpg",
+        "width": 1024,
+        "height": 683,
+        "complete": true
+      },
+      {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/scene-mobile/459d0941c6b06f06023017bd.jpg",
+        "width": 1024,
+        "height": 342,
+        "complete": true
+      }
+    ],
+    "finishedAt": "2026-09-10T23:21:32.345Z"
+  }
+}

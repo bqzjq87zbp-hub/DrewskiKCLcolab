@@ -1,4 +1,10 @@
-# Pixpa V2 integration: 104 photographs and optical-glass sheen
+# Pixpa V2 integration: 104 photographs with mobile loading recovery
+
+**Current public release: Sites16**, hosting source `b352db8e50f3d62a8efb053b594d753fc9c33c08`, published2026-09-10T23:21:09Z. The bounded mobile-loading/recovery repair preserves all104 photographs, original full files, easel geometry and clear glass. Actual public Home-to-iframe desktop wheel, phone-profile compositor touch and WebKit keyboard walking/collection-return checks pass. Physical iPhone Safari remains unverified. [Repair, rollback and evidence](MOBILE-RELEASE.md).
+
+Current rebuild checks pass295 hosted paths/194,806,033bytes,104 entries and44 native external derivatives. A fresh295-file rebuild matches the published host source byte-for-byte. No native Pixpa field changed. The following category-release text is retained as **historical Sites14 evidence**, superseded only by the bounded repair above.
+
+## Historical 104-photo category release — Sites14
 
 The current source contains **25 Branding /27 Family /36 Headshots /16 Coastal** photographs. Sites14 adds only Through breaking surf and Feet, fins and sea to Coastal, preserving every prior102 record and the accepted walking, water, easels, centered viewer footer, glass and Home behavior. Current hosting source is `0e8e58237a7a8ab6875944c8d1da5bfc26015be1`, published2026-09-10T21:58:40.305718Z. Exact-adapter and [actual-public browser acceptance](evidence/m4/REVIEW.md) passed. The existing user tab was refreshed and returned to the aisle; this source/evidence handoff retains separate publication and GitHub verification boundaries.
 

@@ -59,7 +59,7 @@ export function configurePhotographicCamera({
 }
 
 export function createPhotographicEnvironment({
-  THREE, scene, sourceImage, calibration: overrides = {},
+  THREE, scene, sourceImage, sourceDimensions, calibration: overrides = {},
 }) {
   if (!sourceImage?.naturalWidth || !sourceImage?.naturalHeight) {
     throw new TypeError('Photographic environment requires a decoded original image');
@@ -68,7 +68,7 @@ export function createPhotographicEnvironment({
   const backdropDepth=80;
   const calibration=Object.freeze({...PHOTO_CALIBRATION,...overrides,
     cameraHeight:PHOTO_CALIBRATION.cameraHeight*scale,authoredPierScale:scale});
-  const sourceWidth = sourceImage.naturalWidth, sourceHeight = sourceImage.naturalHeight;
+  const sourceWidth = sourceDimensions?.width || sourceImage.naturalWidth, sourceHeight = sourceDimensions?.height || sourceImage.naturalHeight;
   const referenceCamera = new THREE.PerspectiveCamera();
   configurePhotographicCamera({ THREE, camera: referenceCamera,
     width: sourceWidth, height: sourceHeight, sourceWidth, sourceHeight, calibration });

@@ -1,4 +1,4 @@
-import {createWrappedCanvas} from './canvas-wrap.js';
+import {sceneImage} from './scene-images.js';
 import {createCollections} from './collections.js';
 import {attachAisle} from './aisle-integration.js';
 import {installGlassSheen} from './glass-sheen.js';
@@ -28,7 +28,6 @@ const slots=sourceSlots.map((s,i)=>({...s,category:categoryMap[i]}));
 const headshot=collections.data.get('headshots')?.items[0];
 if(headshot)Object.assign(slots[3],{src:headshot.src,full:headshot.full,title:headshot.title,alt:headshot.alt,objectPosition:headshot.objectPosition||'50% 40%'});
 function enterCategory(slot,trigger){const category=collections.data.get(slot.category);if(category)collections.open(category.id,trigger);}
-for(const[index,slot]of slots.entries()){const canvas=createWrappedCanvas(slot,index,{onSelect:(i,a)=>enterCategory(slots[i],a)});canvas.querySelector('a').setAttribute('aria-label','Explore '+collections.data.get(slot.category).title);canvas.querySelector('a').href='#collection/'+slot.category;layers.append(canvas);}
 const signLayer=document.createElement('div');signLayer.className='category-signs';composition.append(signLayer);
 const signs=[];
 for(const slot of slots){const category=collections.data.get(slot.category);if(!category)continue;const a=document.createElement('a');a.className='category-sign';a.href='#collection/'+slot.category;a.textContent=category.title;a.dataset.slot=slot.id;a.setAttribute('aria-label','Explore '+category.title);a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();enterCategory(slot,a);};signLayer.append(a);signs.push({slot,a});}
@@ -37,7 +36,7 @@ const observer=new ResizeObserver(resize);observer.observe(composition);resize()
 
 // The accessible list is grouped by destination, not a duplicate wall of enlargement links.
 const list=$('#photo-list');list.replaceChildren();
-for(const c of collections.data.values()){const li=document.createElement('li'),a=document.createElement('a'),img=document.createElement('img');a.href='#collection/'+c.id;a.className='category-card';img.loading='lazy';img.decoding='async';img.src=c.items[0].src;img.alt=c.items[0].alt;a.append(img,document.createTextNode(c.title));a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();collections.open(c.id,a);};li.append(a);list.append(li);}
+for(const c of collections.data.values()){const li=document.createElement('li'),a=document.createElement('a'),img=document.createElement('img');a.href='#collection/'+c.id;a.className='category-card';img.loading='lazy';img.decoding='async';img.src=sceneImage(c.items[0].src);img.alt=c.items[0].alt;a.append(img,document.createTextNode(c.title));a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();collections.open(c.id,a);};li.append(a);list.append(li);}
 $('#photographs h1').textContent='Explore the collections';
 
 $('#close').onclick=()=>viewer.close();$('#previous').onclick=()=>display(photos,(current-1+photos.length)%photos.length);$('#next').onclick=()=>display(photos,(current+1)%photos.length);
@@ -46,7 +45,7 @@ viewer.addEventListener('close',()=>{if(viewer.open)return;++request;full.setAtt
 const menu=$('#menu'),panel=$('#menu-panel'),toggle=$('#menu-toggle');
 panel.setAttribute('aria-label','Portfolio collections');$('#show-plate').hidden=true;$('#show-original').hidden=true;
 function closeMenu(focus=false){panel.hidden=true;toggle.setAttribute('aria-expanded','false');if(focus)toggle.focus({preventScroll:true});}
-toggle.onclick=()=>{panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden));};
+toggle.onclick=()=>{panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden));};toggle.disabled=false;
 document.addEventListener('pointerdown',e=>{if(!menu.contains(e.target))closeMenu();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)closeMenu(true);});
 panel.querySelector('a').textContent='All collections';panel.querySelector('a').onclick=()=>closeMenu();

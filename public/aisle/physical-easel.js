@@ -63,7 +63,7 @@ function canvasWeave(THREE,width,height) {
   return texture;
 }
 
-export function createPhysicalEasel({ THREE, slot = {}, image, woodImage, index = 0 }) {
+export function createPhysicalEasel({ THREE, slot = {}, image, woodImage, sourceSize, index = 0 }) {
   if (!THREE?.Mesh || !image?.naturalWidth || !image?.naturalHeight) {
     throw new TypeError('createPhysicalEasel requires THREE and a decoded print image');
   }
@@ -88,7 +88,7 @@ export function createPhysicalEasel({ THREE, slot = {}, image, woodImage, index 
     name:'Recessed joint details',color:0x202423,roughness:.76,metalness:.20
   }));
   const materialMap={timber:timberFront,hardware,brass,dark_details:dark};
-  const nativeWidth=image.naturalWidth,nativeHeight=image.naturalHeight;
+  const nativeWidth=sourceSize?.width||image.naturalWidth,nativeHeight=sourceSize?.height||image.naturalHeight;
   const metrePerPixel=1.05/Math.max(nativeWidth,nativeHeight);
   const printWidth=nativeWidth*metrePerPixel,printHeight=nativeHeight*metrePerPixel;
   const printBottom=.90,printTop=printBottom+printHeight,canvasDepth=.038;

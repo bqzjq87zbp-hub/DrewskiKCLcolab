@@ -24,7 +24,7 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   for(const[direction,label]of[['left','Look left'],['auto','Auto'],['right','Look right']]){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',String(direction==='auto'));b.onclick=()=>{engine.setLook(direction);for(const other of looks.children)other.setAttribute('aria-pressed',String(other===b));};looks.append(b);}menu.querySelector('nav').append(looks);
   const note=document.querySelector('.note');note.textContent='Your original pier photograph, with dimensional wooden easels and printed canvas. The photographic walk and experimental video are still in visual review.';
   for(const{slot,anchor}of engine.slotAnchors){anchor.href='#collection/'+slot.category;anchor.setAttribute('aria-label','Explore '+slot.categoryLabel);}
-  engine.journey.querySelectorAll('.aisle-fallback a').forEach((a,i)=>a.href='#collection/'+enriched[i].category);
+  engine.journey.querySelectorAll('.aisle-fallback a').forEach(a=>a.href='#collection/'+a.dataset.category);
   const signs=engine.slotAnchors.map(({slot,anchor})=>{
     const a=document.createElement('a');a.className='category-sign aisle-category-sign';a.href='#collection/'+slot.category;a.textContent=slot.categoryLabel;a.dataset.forCanvas=slot.id;
     a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();enterCategory(slot,a);};
