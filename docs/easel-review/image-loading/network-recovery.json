@@ -1,0 +1,161 @@
+{
+  "created": "2026-09-10T03:10:34.017Z",
+  "before": "9114b28935e50f624050966032e1747a8e3128f47eec3cda66d47b588d048d6a",
+  "scope": "Explicit fixture abort of one uncached full JPEG, followed by same-photo Close/reopen after route removal; accepted origin remains live",
+  "item": {
+    "id": "families-14",
+    "title": "Color & play",
+    "alt": "Two children stand back-to-back by the beach, holding pink and blue balls.",
+    "width": 1440,
+    "height": 960,
+    "src": "/media/c4a641f3b456ab59149913ea.jpg",
+    "full": "/media/363fdb503e956d0273863e50.jpg"
+  },
+  "cases": [
+    {
+      "profile": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900,
+        "mobile": false
+      },
+      "thumbnail": {
+        "currentSrc": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+        "naturalWidth": 1440,
+        "naturalHeight": 960
+      },
+      "failed": {
+        "url": "http://127.0.0.1:4274/#collection/families",
+        "dialog": true,
+        "status": "The image could not load. Open the photograph file or try another image.",
+        "src": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "complete": true,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "decode": {
+          "ok": false,
+          "name": "EncodingError",
+          "message": "The source image cannot be decoded."
+        },
+        "opacity": "0",
+        "rect": {
+          "x": 109,
+          "y": 134.75,
+          "width": 1222,
+          "height": 675
+        }
+      },
+      "recovered": {
+        "url": "http://127.0.0.1:4274/#collection/families",
+        "dialog": true,
+        "status": "",
+        "src": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "complete": true,
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "decode": {
+          "ok": true
+        },
+        "opacity": "1",
+        "rect": {
+          "x": 109,
+          "y": 134.75,
+          "width": 1222,
+          "height": 675
+        }
+      },
+      "pass": true
+    },
+    {
+      "profile": {
+        "id": "phone",
+        "width": 390,
+        "height": 844,
+        "mobile": true
+      },
+      "thumbnail": {
+        "currentSrc": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+        "naturalWidth": 1440,
+        "naturalHeight": 960
+      },
+      "failed": {
+        "url": "http://127.0.0.1:4274/#collection/families",
+        "dialog": true,
+        "status": "The image could not load. Open the photograph file or try another image.",
+        "src": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "complete": true,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "decode": {
+          "ok": false,
+          "name": "EncodingError",
+          "message": "The source image cannot be decoded."
+        },
+        "opacity": "0",
+        "rect": {
+          "x": 32,
+          "y": 137.25,
+          "width": 326,
+          "height": 633
+        }
+      },
+      "recovered": {
+        "url": "http://127.0.0.1:4274/#collection/families",
+        "dialog": true,
+        "status": "",
+        "src": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "complete": true,
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "decode": {
+          "ok": true
+        },
+        "opacity": "1",
+        "rect": {
+          "x": 32,
+          "y": 127.75,
+          "width": 326,
+          "height": 633
+        }
+      },
+      "pass": true
+    }
+  ],
+  "failures": [
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "failure": {
+        "errorText": "net::ERR_CONNECTION_REFUSED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "failure": {
+        "errorText": "net::ERR_CONNECTION_REFUSED"
+      }
+    }
+  ],
+  "responses": [
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    }
+  ],
+  "after": "9114b28935e50f624050966032e1747a8e3128f47eec3cda66d47b588d048d6a",
+  "runtimeStable": true,
+  "status": "PASS"
+}

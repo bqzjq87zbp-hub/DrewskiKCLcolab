@@ -1,0 +1,760 @@
+{
+  "created": "2026-09-10T03:18:53.706Z",
+  "scope": "No-JavaScript fallback; added short-menu/Still control observation; focused video metadata and external navigation fixture retries",
+  "checks": [
+    {
+      "profile": "desktop",
+      "name": "no-JS-initial-plate",
+      "pass": true,
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/easel-composition-reference.jpg",
+        "width": 2528,
+        "height": 1684,
+        "opacity": "1",
+        "rect": {
+          "width": 1298.515625,
+          "height": 864.984375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-1",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+      "actual": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "width": 2400,
+        "height": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 1350,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-2",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+      "actual": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+        "width": 2400,
+        "height": 1599,
+        "opacity": "1",
+        "rect": {
+          "width": 1350,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-3",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/0a7d2faec6cf918c625f0619.jpg",
+      "actual": "http://127.0.0.1:4280/media/0a7d2faec6cf918c625f0619.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/0a7d2faec6cf918c625f0619.jpg",
+        "width": 2400,
+        "height": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 1350,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-4",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/07f59839133492f58ad8884a.jpg",
+      "actual": "http://127.0.0.1:4280/media/07f59839133492f58ad8884a.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/07f59839133492f58ad8884a.jpg",
+        "width": 2000,
+        "height": 2800,
+        "opacity": "1",
+        "rect": {
+          "width": 642,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-5",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/0d730119329ad4799756e2bd.jpg",
+      "actual": "http://127.0.0.1:4280/media/0d730119329ad4799756e2bd.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/0d730119329ad4799756e2bd.jpg",
+        "width": 2800,
+        "height": 1866,
+        "opacity": "1",
+        "rect": {
+          "width": 1350,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-6",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/08bfbe519671b2a3ec187588.jpg",
+      "actual": "http://127.0.0.1:4280/media/08bfbe519671b2a3ec187588.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/08bfbe519671b2a3ec187588.jpg",
+        "width": 2800,
+        "height": 1867,
+        "opacity": "1",
+        "rect": {
+          "width": 1349,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-7",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/6c2bcb595c230d3249389708.jpg",
+      "actual": "http://127.0.0.1:4280/media/6c2bcb595c230d3249389708.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/6c2bcb595c230d3249389708.jpg",
+        "width": 3200,
+        "height": 2133,
+        "opacity": "1",
+        "rect": {
+          "width": 1350,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-8",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/335e2ea0847bd07fec38d935.jpg",
+      "actual": "http://127.0.0.1:4280/media/335e2ea0847bd07fec38d935.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/335e2ea0847bd07fec38d935.jpg",
+        "width": 3200,
+        "height": 2133,
+        "opacity": "1",
+        "rect": {
+          "width": 1350,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-9",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/aa854f83427a78814a8c9330.jpg",
+      "actual": "http://127.0.0.1:4280/media/aa854f83427a78814a8c9330.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/aa854f83427a78814a8c9330.jpg",
+        "width": 3200,
+        "height": 2133,
+        "opacity": "1",
+        "rect": {
+          "width": 1350,
+          "height": 900
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no-JS-raw-photo-10",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/459d0941c6b06f06023017bd.jpg",
+      "actual": "http://127.0.0.1:4280/media/459d0941c6b06f06023017bd.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/459d0941c6b06f06023017bd.jpg",
+        "width": 3840,
+        "height": 1283,
+        "opacity": "1",
+        "rect": {
+          "width": 1440,
+          "height": 481
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "video-correct-source-frame-metadata",
+      "pass": true,
+      "expected": {
+        "index": 120,
+        "time": 5,
+        "mediaTime": 5,
+        "file": "frame-0060.jpg",
+        "width": 1280,
+        "height": 960,
+        "sha256": "66c499d21ed12b65817b5f218c6c06c3dba51cba9dd49990a175e33e1b9ec852",
+        "nativeScale": [
+          0.3848466626578473,
+          0.38492381716118684
+        ]
+      },
+      "on": {
+        "p": 0.5,
+        "video": {
+          "enabled": true,
+          "active": true,
+          "suppressed": false,
+          "failed": false,
+          "status": "ready",
+          "requestedFrame": 120,
+          "committedFrame": 120,
+          "committedTime": 5,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 4,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": "http://127.0.0.1:4280/video/frame-0060.jpg"
+        }
+      },
+      "off": {
+        "p": 0.5,
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": null
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "appearance-session-reload-solid",
+      "pass": true,
+      "actual": {
+        "body": "solid",
+        "select": "solid"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "appearance-session-reload-system",
+      "pass": true,
+      "actual": {
+        "body": "system",
+        "select": "system"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "appearance-session-reload-clear",
+      "pass": true,
+      "actual": {
+        "body": "clear",
+        "select": "clear"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "short-menu-last-control-reachable",
+      "pass": true,
+      "before": {
+        "y": 0,
+        "progress": 0,
+        "panel": {
+          "x": 485.953125,
+          "y": 78,
+          "width": 390,
+          "height": 251,
+          "top": 78,
+          "right": 875.953125,
+          "bottom": 329,
+          "left": 485.953125
+        }
+      },
+      "after": {
+        "y": 0,
+        "progress": 0,
+        "panel": {
+          "top": 78,
+          "bottom": 329,
+          "scrollTop": 0,
+          "scrollHeight": 249,
+          "clientHeight": 249
+        },
+        "last": {
+          "top": 270,
+          "bottom": 321
+        },
+        "overflow": false
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "external-inquiry-actual-same-tab",
+      "pass": true,
+      "expected": "https://kiyonocreativelab.com/inquiry-form",
+      "url": "https://kiyonocreativelab.com/inquiry-form",
+      "title": "Begin Your Inquiry | Kiyono Creative Lab",
+      "text": "Skip to main content\n\u6e05\u91ce\nKIYONO\nCREATIVE LAB\nMenu\n\nSTART A CONVERSATION\n\nTell me what you want these photographs to hold.\n\nYou do not need a finished plan before you write. Tell me who or what is being photographed, what matters about this season or purpose, and anything that would help the experience feel considered from the beginning.\n\nContent Creation\nTerms & Conditions\nPrivacy Policy\n\n \n \n \n\nKyle\n\nMade with \nPixpa"
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-initial-plate",
+      "pass": true,
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/easel-composition-reference.jpg",
+        "width": 2528,
+        "height": 1684,
+        "opacity": "1",
+        "rect": {
+          "width": 390,
+          "height": 259.78125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-1",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+      "actual": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "width": 2400,
+        "height": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 2400,
+          "height": 1600
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-2",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+      "actual": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+        "width": 2400,
+        "height": 1599,
+        "opacity": "1",
+        "rect": {
+          "width": 2400,
+          "height": 1599
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-3",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/0a7d2faec6cf918c625f0619.jpg",
+      "actual": "http://127.0.0.1:4280/media/0a7d2faec6cf918c625f0619.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/0a7d2faec6cf918c625f0619.jpg",
+        "width": 2400,
+        "height": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 2400,
+          "height": 1600
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-4",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/07f59839133492f58ad8884a.jpg",
+      "actual": "http://127.0.0.1:4280/media/07f59839133492f58ad8884a.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/07f59839133492f58ad8884a.jpg",
+        "width": 2000,
+        "height": 2800,
+        "opacity": "1",
+        "rect": {
+          "width": 2000,
+          "height": 2800
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-5",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/0d730119329ad4799756e2bd.jpg",
+      "actual": "http://127.0.0.1:4280/media/0d730119329ad4799756e2bd.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/0d730119329ad4799756e2bd.jpg",
+        "width": 2800,
+        "height": 1866,
+        "opacity": "1",
+        "rect": {
+          "width": 2800,
+          "height": 1866
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-6",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/08bfbe519671b2a3ec187588.jpg",
+      "actual": "http://127.0.0.1:4280/media/08bfbe519671b2a3ec187588.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/08bfbe519671b2a3ec187588.jpg",
+        "width": 2800,
+        "height": 1867,
+        "opacity": "1",
+        "rect": {
+          "width": 2800,
+          "height": 1867
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-7",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/6c2bcb595c230d3249389708.jpg",
+      "actual": "http://127.0.0.1:4280/media/6c2bcb595c230d3249389708.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/6c2bcb595c230d3249389708.jpg",
+        "width": 3200,
+        "height": 2133,
+        "opacity": "1",
+        "rect": {
+          "width": 3200,
+          "height": 2133
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-8",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/335e2ea0847bd07fec38d935.jpg",
+      "actual": "http://127.0.0.1:4280/media/335e2ea0847bd07fec38d935.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/335e2ea0847bd07fec38d935.jpg",
+        "width": 3200,
+        "height": 2133,
+        "opacity": "1",
+        "rect": {
+          "width": 3200,
+          "height": 2133
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-9",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/aa854f83427a78814a8c9330.jpg",
+      "actual": "http://127.0.0.1:4280/media/aa854f83427a78814a8c9330.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/aa854f83427a78814a8c9330.jpg",
+        "width": 3200,
+        "height": 2133,
+        "opacity": "1",
+        "rect": {
+          "width": 3200,
+          "height": 2133
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "no-JS-raw-photo-10",
+      "pass": true,
+      "expected": "http://127.0.0.1:4280/media/459d0941c6b06f06023017bd.jpg",
+      "actual": "http://127.0.0.1:4280/media/459d0941c6b06f06023017bd.jpg",
+      "image": {
+        "decode": true,
+        "src": "http://127.0.0.1:4280/media/459d0941c6b06f06023017bd.jpg",
+        "width": 3840,
+        "height": 1283,
+        "opacity": "1",
+        "rect": {
+          "width": 3840,
+          "height": 1283
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "video-correct-source-frame-metadata",
+      "pass": true,
+      "expected": {
+        "index": 120,
+        "time": 5,
+        "mediaTime": 5,
+        "file": "frame-0060.jpg",
+        "width": 1280,
+        "height": 960,
+        "sha256": "66c499d21ed12b65817b5f218c6c06c3dba51cba9dd49990a175e33e1b9ec852",
+        "nativeScale": [
+          0.3848466626578473,
+          0.38492381716118684
+        ]
+      },
+      "on": {
+        "p": 0.5,
+        "video": {
+          "enabled": true,
+          "active": true,
+          "suppressed": false,
+          "failed": false,
+          "status": "ready",
+          "requestedFrame": 120,
+          "committedFrame": 120,
+          "committedTime": 5,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 4,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": "http://127.0.0.1:4280/video/frame-0060.jpg"
+        }
+      },
+      "off": {
+        "p": 0.5,
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": null
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "appearance-session-reload-solid",
+      "pass": true,
+      "actual": {
+        "body": "solid",
+        "select": "solid"
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "appearance-session-reload-system",
+      "pass": true,
+      "actual": {
+        "body": "system",
+        "select": "system"
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "appearance-session-reload-clear",
+      "pass": true,
+      "actual": {
+        "body": "clear",
+        "select": "clear"
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "short-menu-last-control-reachable",
+      "pass": true,
+      "before": {
+        "y": 0,
+        "progress": 0,
+        "panel": {
+          "x": 14,
+          "y": 72,
+          "width": 360,
+          "height": 307,
+          "top": 72,
+          "right": 374,
+          "bottom": 379,
+          "left": 14
+        }
+      },
+      "after": {
+        "y": 0,
+        "progress": 0,
+        "panel": {
+          "top": 72,
+          "bottom": 379,
+          "scrollTop": 0,
+          "scrollHeight": 305,
+          "clientHeight": 305
+        },
+        "last": {
+          "top": 323,
+          "bottom": 371
+        },
+        "overflow": false
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "external-inquiry-actual-same-tab",
+      "pass": true,
+      "expected": "https://kiyonocreativelab.com/inquiry-form",
+      "url": "https://kiyonocreativelab.com/inquiry-form",
+      "title": "Begin Your Inquiry | Kiyono Creative Lab",
+      "text": "Skip to main content\n\u6e05\u91ce\nKIYONO\nCREATIVE LAB\nMenu\n\nSTART A CONVERSATION\n\nTell me what you want these photographs to hold.\n\nYou do not need a finished plan before you write. Tell me who or what is being photographed, what matters about this season or purpose, and anything that would help the experience feel considered from the beginning.\n\nContent Creation\nTerms & Conditions\nPrivacy Policy\n\n \n \n \n\nKyle\n\nMade with \nPixpa"
+    }
+  ],
+  "observations": [
+    {
+      "profile": "desktop",
+      "name": "Still-Next-control",
+      "visible": true,
+      "disabled": false,
+      "before": {
+        "y": 0,
+        "p": 0,
+        "range": 471
+      },
+      "after": {
+        "y": 94,
+        "p": 0,
+        "range": 471
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "Still-Next-control",
+      "visible": true,
+      "disabled": false,
+      "before": {
+        "y": 0,
+        "p": 0,
+        "range": 205
+      },
+      "after": {
+        "y": 41,
+        "p": 0,
+        "range": 205
+      }
+    }
+  ],
+  "errors": [],
+  "fixtureCorrection": "Earlier optional-video assertion confused extracted frame file0060 with original frame index120; external desktop popup was sampled before navigation. Negative89/92 report preserved.",
+  "before": [
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "index.html",
+      "status": 200,
+      "sha256": "60a3c88088e4dc269a90454f769a01a7ba3bfd961edce0e24e643ac7f7fb6150"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8"
+    },
+    {
+      "url": "aisle/aisle.css",
+      "status": 200,
+      "sha256": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e"
+    }
+  ],
+  "after": [
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "index.html",
+      "status": 200,
+      "sha256": "60a3c88088e4dc269a90454f769a01a7ba3bfd961edce0e24e643ac7f7fb6150"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8"
+    },
+    {
+      "url": "aisle/aisle.css",
+      "status": 200,
+      "sha256": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e"
+    }
+  ],
+  "runtimeStable": true,
+  "status": "PASS"
+}

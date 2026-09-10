@@ -8,7 +8,8 @@ This draft preserves the original under-pier photograph while moving through ten
 - A deterministic 7m path moves through five pairs. Reading spans advance slowly; connecting spans do most of the travel. Portrait Auto viewing turns between the prints according to native scroll position, and reverse input retraces the same path. No elapsed-time camera motion or required Start action is introduced. Portrait scroll length gives each swipe more inspection room.
 - One continuous original photograph sits at an authored 80m scenic depth. A bounded source envelope reserves the supported travel/look range without dynamically scaling the physical prints. Photographed feet and surf stay on the same surface.
 - Foreground photographic water and actual y=0 reflections use shared world-space wave phases. The reflection mask follows the same original photograph and keeps reflected easels off its timber. These are compositing and planar-reflection approximations.
-- Native wheel/touch navigation, clear glass controls, collection enlargement/return, explicit Still and system reduced-motion behavior remain available. Desktop panels fit the whole scene proportionally. Actual viewport resizes preserve normalized travel progress, including a resize while a collection is open. Pair buttons use the same target calculation for their enabled state and action.
+- Native wheel/touch navigation, clear glass controls, collection enlargement/return, explicit Still and system reduced-motion behavior remain available. Desktop panels fit the whole scene proportionally. Actual viewport resizes preserve normalized travel progress, including a resize while a collection is open. Pair buttons use the same target calculation for their enabled state and action, and remain hidden in explicit Still view until Start walk resumes the camera.
+- Direct collection links retain their local history ownership when switching categories. Browser Back dismisses an open photograph and lets the destination restore scroll/focus, so a delayed modal close cannot move the aisle to old collection pixels.
 - The existing generated-video preview remains optional and unregistered. Its committed frames use the same authored distance mapping; it is not a recovered camera solve. Original photographs and video frames are unchanged.
 
 ## Rendered evidence
@@ -19,12 +20,22 @@ That coverage run preceded the final portrait scroll-length increase and optiona
 
 Current motion, interaction and bundle results are recorded with their own source fingerprints in [verification](photo-guided/VERIFICATION.md). Earlier 661-check, reflection and viewport test counts are historical and are not represented as current full-suite passes.
 
+The later [photograph-loading and visitor-path review](image-loading/VERIFICATION.md) records the stopped-preview diagnosis, every collection image decoded on desktop and phone, interrupted-request recovery, and the reproduced Back/return regressions.
+
 ## Reproduce
 
 ```sh
 npm run check
 LIVE_RELOAD=1 PORT=4274 npm start
 ```
+
+The foreground preview ends with its owning process. Keep it independent of short-lived audits. On macOS or Linux, a separately detached local preview can be started from the repository root with:
+
+```sh
+nohup env LIVE_RELOAD=1 PORT=4274 node server.mjs > "${TMPDIR:-/tmp}/drewski-preview-4274.log" 2>&1 < /dev/null &
+```
+
+Use one listener per port and inspect that log if startup fails. This installs no daemon and does not promise persistence across computer sleep, shutdown, or restart. `node scripts/qa-gallery-navigation.mjs` exercises the direct-entry and modal-Back regressions against the independently running preview; `--prepare` launches no browser.
 
 For separate-profile browser checks, install Playwright separately or set `PLAYWRIGHT_MODULE` to an existing installation. `QA_URL` selects the local preview and `QA_OUTPUT` selects a temporary evidence directory. Run `node scripts/qa-photograph-coverage.mjs` for the ten-photo coverage audit, or `node scripts/record-photograph-walk.mjs` for native wheel/emulated-touch forward and reverse recordings. Recordings need visual review; they are not performance benchmarks. The older `qa-easel.mjs` is the earlier checkpoint suite, and `record-easel.mjs` uses programmatic scrolling.
 

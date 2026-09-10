@@ -34,11 +34,11 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   const prev=document.createElement('button'),next=document.createElement('button');prev.type=next.type='button';prev.textContent='← Previous pair';next.textContent='Next pair →';prev.setAttribute('aria-label','Walk back to the previous pair of canvases');next.setAttribute('aria-label','Walk forward to the next pair of canvases');prev.className=next.className='walk-step';const stepTools=document.createElement('div');stepTools.className='aisle-step-controls';stepTools.append(prev,next);menu.querySelector('nav').append(stepTools);progress.setAttribute('aria-label','Scroll or swipe to walk; arrow buttons advance one pair');
   const stops=FOCUS_STOPS,reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const stepTarget=(progress,direction)=>direction>0?stops.find(v=>v>progress+.015):[...stops].reverse().find(v=>v<progress-.015);
-  function step(direction){const target=stepTarget(engine.getState().progress,direction);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*engine.getScrollRange();scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
+  function step(direction){const state=engine.getState();if(state.reducedMotion)return;const target=stepTarget(state.progress,direction);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*engine.getScrollRange();scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
   prev.onclick=()=>step(-1);next.onclick=()=>step(1);
   let frame=0;
   function layout(){frame=0;if(collections.active||mount.hidden)return;const state=engine.getState();if(!state.viewport.width||!state.viewport.height)return;
-    start.hidden=!state.reducedMotion;looks.hidden=state.reducedMotion;
+    start.hidden=!state.reducedMotion;looks.hidden=state.reducedMotion;stepTools.hidden=state.reducedMotion;
     // Respect the rendered scene size, which can be shorter than the window.
     menu.style.setProperty('--aisle-menu-height',Math.max(48,state.viewport.height-96)+'px');
     menu.dataset.sideLook=String(Boolean(state.physical?.environment?.camera?.sideLookSupported));

@@ -4,17 +4,23 @@ import {attachAisle} from './aisle-integration.js';
 
 const $=s=>document.querySelector(s),sourceSlots=await(await fetch('/slots.json')).json();
 const layers=$('#layers'),composition=$('#composition'),viewer=$('#viewer'),full=$('#full-photo');
-let current=0,photos=sourceSlots,returnFocus=null,returnY=0,request=0,sourceMode=false;
+let current=0,photos=sourceSlots,returnFocus=null,returnY=0,request=0,sourceMode=false,restoreViewerReturn=true;
 function display(items,index,trigger,original=false){
-  if(!viewer.open){returnFocus=trigger||document.activeElement;returnY=scrollY;}
+  if(!viewer.open){returnFocus=trigger||document.activeElement;returnY=scrollY;restoreViewerReturn=true;}
   photos=items;current=index;sourceMode=original;
   const photo=original?{title:"Kyle's original photograph",full:'/media/underpier-photograph.jpg',alt:'The original photograph beneath the Newport Beach pier.'}:items[index];
   const version=++request;$('#viewer-title').textContent=photo.title;$('#viewer-status').textContent='Loading full photograph…';full.style.opacity='0';full.setAttribute('aria-busy','true');full.alt=photo.alt;full.src=photo.full||photo.src;$('#full-link').href=photo.full||photo.src;$('#previous').disabled=$('#next').disabled=original;
   full.decode().then(()=>{if(version!==request)return;$('#viewer-status').textContent='';full.style.opacity='1';full.setAttribute('aria-busy','false');}).catch(()=>{if(version!==request)return;$('#viewer-status').textContent='The image could not load. Open the photograph file or try another image.';full.setAttribute('aria-busy','false');});
   if(!viewer.open)viewer.showModal();
 }
+function dismissViewerForNavigation(){
+  // The destination owns scroll and focus after a route change, including
+  // when a dialog close event is still queued from the previous view.
+  restoreViewerReturn=false;++request;
+  if(viewer.open)viewer.close();
+}
 let aisle=null;
-const collections=await createCollections({onEnlarge:(items,index,trigger)=>display(items,index,trigger),captureReturn:()=>aisle?.captureReturnPosition()??null,restoreReturn:position=>aisle?.restore(position)??false});
+const collections=await createCollections({onEnlarge:(items,index,trigger)=>display(items,index,trigger),onNavigate:dismissViewerForNavigation,captureReturn:()=>aisle?.captureReturnPosition()??null,restoreReturn:position=>aisle?.restore(position)??false});
 const categoryMap=['families','families','families','headshots','branding','branding','coastal','branding','branding','coastal'];
 const slots=sourceSlots.map((s,i)=>({...s,category:categoryMap[i]}));
 // This easel introduces the actual professional-client collection, never Kyle's About portraits.
@@ -35,7 +41,7 @@ $('#photographs h1').textContent='Explore the collections';
 
 $('#close').onclick=()=>viewer.close();$('#previous').onclick=()=>display(photos,(current-1+photos.length)%photos.length);$('#next').onclick=()=>display(photos,(current+1)%photos.length);
 viewer.addEventListener('keydown',e=>{if(sourceMode)return;if(e.key==='ArrowLeft'){e.preventDefault();$('#previous').click();}if(e.key==='ArrowRight'){e.preventDefault();$('#next').click();}});
-viewer.addEventListener('close',()=>{scrollTo({top:returnY,behavior:'instant'});returnFocus?.focus({preventScroll:true});});
+viewer.addEventListener('close',()=>{if(viewer.open)return;++request;full.setAttribute('aria-busy','false');if(!restoreViewerReturn)return;scrollTo({top:returnY,behavior:'instant'});returnFocus?.isConnected&&returnFocus.focus({preventScroll:true});});
 const menu=$('#menu'),panel=$('#menu-panel'),toggle=$('#menu-toggle');
 panel.setAttribute('aria-label','Portfolio collections');$('#show-plate').hidden=true;$('#show-original').hidden=true;
 function closeMenu(focus=false){panel.hidden=true;toggle.setAttribute('aria-expanded','false');if(focus)toggle.focus({preventScroll:true});}

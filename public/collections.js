@@ -1,6 +1,6 @@
 const el=(tag,attrs={},text)=>{const node=document.createElement(tag);for(const[k,v]of Object.entries(attrs))node.setAttribute(k,v);if(text)node.textContent=text;return node;};
 
-export async function createCollections({onEnlarge,captureReturn=()=>null,restoreReturn=()=>false}){
+export async function createCollections({onEnlarge,onNavigate=()=>{},captureReturn=()=>null,restoreReturn=()=>false}){
   const response=await fetch('/categories.json');
   if(!response.ok)throw new Error('The collection manifest is unavailable.');
   const manifest=await response.json();
@@ -51,6 +51,7 @@ export async function createCollections({onEnlarge,captureReturn=()=>null,restor
     return true;
   }
   function show(id,{focus=true}={}){
+    if(!data.has(id))return;onNavigate();
     if(!render(id))return;
     for(const node of document.querySelector('main').children)if(node!==section)node.hidden=true;
     section.hidden=false;document.body.dataset.view='collection';scrollTo({top:0,behavior:'instant'});if(focus)section.focus({preventScroll:true});
@@ -58,9 +59,13 @@ export async function createCollections({onEnlarge,captureReturn=()=>null,restor
   function open(id,trigger){
     if(!data.has(id))return;
     if(!active){returnY=scrollY;returnPosition=captureReturn();returnFocus=trigger||document.activeElement;history.replaceState({...history.state,aisleY:returnY,aislePosition:returnPosition},'',location.href);}
-    const method=active?'replaceState':'pushState';history[method]({localCollection:true,aisleY:returnY,aislePosition:returnPosition},'','#collection/'+id);show(id);
+    // A direct collection entry has no local aisle entry behind it. Replacing
+    // its category must preserve that fact so Back stays inside the gallery.
+    const localCollection=!active||history.state?.localCollection===true;
+    const method=active?'replaceState':'pushState';history[method]({localCollection,aisleY:returnY,aislePosition:returnPosition},'','#collection/'+id);show(id);
   }
   function restore(){
+    onNavigate();
     active=null;section.hidden=true;for(const o of section._roomObservers||[])o.disconnect();section._roomObservers=[];
     for(const node of document.querySelector('main').children)if(node!==section&&node.dataset.keepHidden!=='true')node.hidden=false;
     document.body.dataset.view='aisle';if(!restoreReturn(returnPosition))scrollTo({top:returnY,behavior:'instant'});returnFocus?.isConnected&&returnFocus.focus({preventScroll:true});
