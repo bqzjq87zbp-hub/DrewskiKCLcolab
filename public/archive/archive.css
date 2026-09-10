@@ -70,6 +70,19 @@ body[data-hero-on] .aisle-category-sign{opacity:0;pointer-events:none;transition
   .hero-cta-ghost:hover{background:rgba(255,255,255,.24);border-color:#fff}
 }
 .hero-cta:focus-visible{outline:3px solid #bdefff;outline-offset:4px}
+/* Kyle added a short-landscape fix so the invitation clears the footer
+   controls; .aisle-invitation.hero outranks his .aisle-invitation selector, so
+   it has to be restated here at matching specificity or his fix is silently
+   lost and the actions land on top of the video toggle. */
+@media(max-height:430px) and (min-width:650px){
+  .aisle-invitation.hero{top:64px;width:min(760px,calc(100% - 44px))}
+  .aisle-invitation.hero .invitation-title{font-size:clamp(30px,4.6vw,44px)}
+  .aisle-invitation.hero .invitation-body{font-size:14px;margin-top:6px}
+  .aisle-invitation.hero .hero-actions{margin-top:12px;gap:8px}
+  .aisle-invitation.hero .hero-cta{min-height:42px;padding:11px 18px;font-size:13px}
+  .aisle-invitation.hero .invitation-cue{margin-top:8px;font-size:10px}
+  .aisle-invitation.hero::before{height:180%}
+}
 @media(max-width:650px){
   .aisle-invitation.hero{width:calc(100% - 32px)}
   .aisle-invitation.hero .invitation-body{font-size:14px;margin-top:10px}
