@@ -1,0 +1,1635 @@
+{
+  "release": {
+    "wrapper": "https://kiyonocreativelab.com/pier-gallery?release=next12-live-20260910",
+    "source": "874050f23a65d4adc4f1734572f7b6de9ef6bcaf",
+    "version": 11
+  },
+  "images": [
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062609357-2316.jpg",
+      "ok": true,
+      "w": 640,
+      "h": 960,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062605419-2339.jpg",
+      "ok": true,
+      "w": 2133,
+      "h": 3200,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062578554-2141.jpg",
+      "ok": true,
+      "w": 960,
+      "h": 640,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062574646-4885.jpg",
+      "ok": true,
+      "w": 3200,
+      "h": 2133,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062617158-4702.jpg",
+      "ok": true,
+      "w": 960,
+      "h": 640,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062613243-9442.jpg",
+      "ok": true,
+      "w": 3200,
+      "h": 2133,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062586478-2148.jpg",
+      "ok": true,
+      "w": 960,
+      "h": 829,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+      "ok": true,
+      "w": 3200,
+      "h": 2763,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062480467-7019.jpg",
+      "ok": true,
+      "w": 640,
+      "h": 960,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062433187-8927.jpg",
+      "ok": true,
+      "w": 2133,
+      "h": 3200,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062509822-8657.jpg",
+      "ok": true,
+      "w": 960,
+      "h": 640,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062483868-8009.jpg",
+      "ok": true,
+      "w": 3200,
+      "h": 2133,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062388434-4555.jpg",
+      "ok": true,
+      "w": 640,
+      "h": 960,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062241838-9027.jpg",
+      "ok": true,
+      "w": 2133,
+      "h": 3200,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062558278-4913.jpg",
+      "ok": true,
+      "w": 1200,
+      "h": 800,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062554382-2566.jpg",
+      "ok": true,
+      "w": 3000,
+      "h": 2000,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062525428-5962.jpg",
+      "ok": true,
+      "w": 1200,
+      "h": 800,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062521548-6067.jpg",
+      "ok": true,
+      "w": 3000,
+      "h": 2000,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062517639-5063.jpg",
+      "ok": true,
+      "w": 1200,
+      "h": 800,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062513736-6220.jpg",
+      "ok": true,
+      "w": 3000,
+      "h": 2000,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062570763-7185.jpg",
+      "ok": true,
+      "w": 1200,
+      "h": 800,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062562153-6604.jpg",
+      "ok": true,
+      "w": 3000,
+      "h": 2000,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062550486-9748.jpg",
+      "ok": true,
+      "w": 800,
+      "h": 1200,
+      "crossOrigin": null
+    },
+    {
+      "url": "https://px-files.pixpa.com/848127/1789062546626-7704.jpg",
+      "ok": true,
+      "w": 2000,
+      "h": 3000,
+      "crossOrigin": null
+    }
+  ],
+  "desktop": [
+    {
+      "id": "lacie-seated-laptop-portrait",
+      "title": "Seated with a laptop",
+      "src": "https://px-files.pixpa.com/848127/1789062605419-2339.jpg",
+      "w": 2133,
+      "h": 3200,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062605419-2339.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "lacie-coffee-sign-and-trailer",
+      "title": "The coffee sign",
+      "src": "https://px-files.pixpa.com/848127/1789062574646-4885.jpg",
+      "w": 3200,
+      "h": 2133,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062574646-4885.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "lacie-portrait-in-the-sewing-workshop",
+      "title": "A pause in the sewing workshop",
+      "src": "https://px-files.pixpa.com/848127/1789062613243-9442.jpg",
+      "w": 3200,
+      "h": 2133,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062613243-9442.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "lacie-coffee-trailer-team",
+      "title": "Together at the coffee trailer",
+      "src": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+      "w": 3200,
+      "h": 2763,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "lacie-mother-and-child-by-the-trees",
+      "title": "Close together by the trees",
+      "src": "https://px-files.pixpa.com/848127/1789062433187-8927.jpg",
+      "w": 2133,
+      "h": 3200,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062433187-8927.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "lacie-children-sharing-a-glance-by-a-post",
+      "title": "A shared glance on the hillside",
+      "src": "https://px-files.pixpa.com/848127/1789062483868-8009.jpg",
+      "w": 3200,
+      "h": 2133,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062483868-8009.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "lacie-white-coat-studio-portrait",
+      "title": "Portrait in a white coat",
+      "src": "https://px-files.pixpa.com/848127/1789062241838-9027.jpg",
+      "w": 2133,
+      "h": 3200,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062241838-9027.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "coastal-sunglasses-on-sand",
+      "title": "Left on the sand",
+      "src": "https://px-files.pixpa.com/848127/1789062554382-2566.jpg",
+      "w": 3000,
+      "h": 2000,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062554382-2566.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "coastal-timber-and-surf",
+      "title": "Timber and surf",
+      "src": "https://px-files.pixpa.com/848127/1789062521548-6067.jpg",
+      "w": 3000,
+      "h": 2000,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062521548-6067.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "coastal-decorated-bicycles",
+      "title": "Bicycles at the beach",
+      "src": "https://px-files.pixpa.com/848127/1789062513736-6220.jpg",
+      "w": 3000,
+      "h": 2000,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062513736-6220.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "coastal-toward-the-tower",
+      "title": "Toward the tower",
+      "src": "https://px-files.pixpa.com/848127/1789062562153-6604.jpg",
+      "w": 3000,
+      "h": 2000,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062562153-6604.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    },
+    {
+      "id": "coastal-incoming-wave",
+      "title": "An incoming wave",
+      "src": "https://px-files.pixpa.com/848127/1789062546626-7704.jpg",
+      "w": 2000,
+      "h": 3000,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062546626-7704.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dialog": {
+        "x": 95,
+        "y": 20,
+        "width": 1250,
+        "height": 960,
+        "top": 20,
+        "right": 1345,
+        "bottom": 980,
+        "left": 95
+      },
+      "footer": {
+        "x": 644.625,
+        "y": 940.5,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 940.5,
+        "right": 795.3671875,
+        "bottom": 955.5,
+        "left": 644.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": false
+    }
+  ],
+  "phone": [
+    {
+      "id": "coastal-incoming-wave",
+      "title": "An incoming wave",
+      "src": "https://px-files.pixpa.com/848127/1789062546626-7704.jpg",
+      "w": 2000,
+      "h": 3000,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062546626-7704.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        390,
+        844
+      ],
+      "dialog": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "top": 16.8828125,
+        "right": 372,
+        "bottom": 827.1171875,
+        "left": 18
+      },
+      "footer": {
+        "x": 119.625,
+        "y": 787.6171875,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 787.6171875,
+        "right": 270.3671875,
+        "bottom": 802.6171875,
+        "left": 119.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": true
+    },
+    {
+      "id": "lacie-white-coat-studio-portrait",
+      "title": "Portrait in a white coat",
+      "src": "https://px-files.pixpa.com/848127/1789062241838-9027.jpg",
+      "w": 2133,
+      "h": 3200,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062241838-9027.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        390,
+        844
+      ],
+      "dialog": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "top": 16.8828125,
+        "right": 372,
+        "bottom": 827.1171875,
+        "left": 18
+      },
+      "footer": {
+        "x": 119.625,
+        "y": 787.6171875,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 787.6171875,
+        "right": 270.3671875,
+        "bottom": 802.6171875,
+        "left": 119.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": true
+    },
+    {
+      "id": "lacie-seated-laptop-portrait",
+      "title": "Seated with a laptop",
+      "src": "https://px-files.pixpa.com/848127/1789062605419-2339.jpg",
+      "w": 2133,
+      "h": 3200,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062605419-2339.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        390,
+        844
+      ],
+      "dialog": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "top": 16.8828125,
+        "right": 372,
+        "bottom": 827.1171875,
+        "left": 18
+      },
+      "footer": {
+        "x": 119.625,
+        "y": 787.6171875,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 787.6171875,
+        "right": 270.3671875,
+        "bottom": 802.6171875,
+        "left": 119.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": true
+    },
+    {
+      "id": "lacie-coffee-trailer-team",
+      "title": "Together at the coffee trailer",
+      "src": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+      "w": 3200,
+      "h": 2763,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        390,
+        844
+      ],
+      "dialog": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "top": 16.8828125,
+        "right": 372,
+        "bottom": 827.1171875,
+        "left": 18
+      },
+      "footer": {
+        "x": 119.625,
+        "y": 787.6171875,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 787.6171875,
+        "right": 270.3671875,
+        "bottom": 802.6171875,
+        "left": 119.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": true
+    },
+    {
+      "id": "lacie-mother-and-child-by-the-trees",
+      "title": "Close together by the trees",
+      "src": "https://px-files.pixpa.com/848127/1789062433187-8927.jpg",
+      "w": 2133,
+      "h": 3200,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062433187-8927.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        390,
+        844
+      ],
+      "dialog": {
+        "x": 18,
+        "y": 16.8828125,
+        "width": 354,
+        "height": 810.234375,
+        "top": 16.8828125,
+        "right": 372,
+        "bottom": 827.1171875,
+        "left": 18
+      },
+      "footer": {
+        "x": 119.625,
+        "y": 787.6171875,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 787.6171875,
+        "right": 270.3671875,
+        "bottom": 802.6171875,
+        "left": 119.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": true
+    }
+  ],
+  "landscape": [
+    {
+      "id": "lacie-coffee-trailer-team",
+      "title": "Together at the coffee trailer",
+      "src": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+      "w": 3200,
+      "h": 2763,
+      "complete": true,
+      "fit": "contain",
+      "opacity": "1",
+      "filter": "none",
+      "crossOrigin": null,
+      "link": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+      "linkTarget": "_blank",
+      "viewport": [
+        844,
+        390
+      ],
+      "dialog": {
+        "x": 18,
+        "y": 7.796875,
+        "width": 808,
+        "height": 374.3984375,
+        "top": 7.796875,
+        "right": 826,
+        "bottom": 382.1953125,
+        "left": 18
+      },
+      "footer": {
+        "x": 346.625,
+        "y": 342.6953125,
+        "width": 150.7421875,
+        "height": 15,
+        "top": 342.6953125,
+        "right": 497.3671875,
+        "bottom": 357.6953125,
+        "left": 346.625
+      },
+      "viewerOverflow": 0,
+      "pageOverflow": 0,
+      "photoSheen": false,
+      "coarse": true
+    }
+  ],
+  "nextPrevious": {
+    "next": {
+      "title": "NWPRT \u00b7 Apparel",
+      "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v1-20260909/media/1f21b9be45767539b18e85ed.jpg"
+    },
+    "previous": {
+      "title": "Together at the coffee trailer",
+      "src": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg"
+    }
+  },
+  "fullFileNavigation": {
+    "url": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg",
+    "complete": true,
+    "w": 3200,
+    "h": 2763
+  },
+  "touchBefore": {
+    "child": {
+      "y": 0,
+      "progress": 0,
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -119.9998852597191,
+        "opacity": 0.07134122881155573,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 2235
+      },
+      "coarse": true,
+      "overflow": 0
+    },
+    "parent": {
+      "y": 0,
+      "rootStyle": null,
+      "links": [
+        {
+          "label": "Return to main site",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        }
+      ]
+    }
+  },
+  "touchForward": {
+    "child": {
+      "y": 455,
+      "progress": 0.05989994734070563,
+      "sheen": {
+        "enabled": true,
+        "direction": "down",
+        "phase": -63.55918630298653,
+        "opacity": 0.3551001864574795,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": true,
+        "frames": 2295
+      },
+      "coarse": true,
+      "overflow": 0
+    },
+    "parent": {
+      "y": 0,
+      "rootStyle": null,
+      "links": [
+        {
+          "label": "Return to main site",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        }
+      ]
+    }
+  },
+  "touchReverseBefore": {
+    "child": {
+      "y": 455,
+      "progress": 0.05989994734070563,
+      "sheen": {
+        "enabled": true,
+        "direction": "down",
+        "phase": -59.33333530793771,
+        "opacity": 0.07193943384963686,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": false,
+        "frames": 2391
+      },
+      "coarse": true,
+      "overflow": 0
+    },
+    "parent": {
+      "y": 0,
+      "rootStyle": null,
+      "links": [
+        {
+          "label": "Return to main site",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        }
+      ]
+    }
+  },
+  "touchReverse": {
+    "child": {
+      "y": 110,
+      "progress": 0.014481305950500263,
+      "sheen": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -102.12875910891513,
+        "opacity": 0.35707745015025455,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": true,
+        "frames": 2459
+      },
+      "coarse": true,
+      "overflow": 0
+    },
+    "parent": {
+      "y": 0,
+      "rootStyle": null,
+      "links": [
+        {
+          "label": "Return to main site",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        },
+        {
+          "label": "Open gallery directly in a new tab",
+          "before": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "after": {
+            "transform": "none",
+            "opacity": "1"
+          },
+          "background": "rgba(255, 255, 255, 0.067)"
+        }
+      ]
+    }
+  },
+  "returnBefore": {
+    "y": 110,
+    "progress": 0.014481305950500263,
+    "sheen": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -105.33333195106458,
+      "opacity": 0.0719885254246222,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": false,
+      "frames": 2556
+    },
+    "target": [
+      {
+        "label": "Explore Family portraits",
+        "r": {
+          "x": 42.44575500488281,
+          "y": 320.40301513671875,
+          "width": 285.07049560546875,
+          "height": 205.861328125,
+          "top": 320.40301513671875,
+          "right": 327.51625061035156,
+          "bottom": 526.2643432617188,
+          "left": 42.44575500488281
+        }
+      },
+      {
+        "label": "Explore Family portraits",
+        "r": {
+          "x": 823.9625244140625,
+          "y": 161.0461883544922,
+          "width": 597.659912109375,
+          "height": 315.36529541015625,
+          "top": 161.0461883544922,
+          "right": 1421.6224365234375,
+          "bottom": 476.41148376464844,
+          "left": 823.9625244140625
+        }
+      },
+      {
+        "label": "Explore Family portraits",
+        "r": {
+          "x": 210.13613891601562,
+          "y": 440.990478515625,
+          "width": 203.64810180664062,
+          "height": 141.21051025390625,
+          "top": 440.990478515625,
+          "right": 413.78424072265625,
+          "bottom": 582.2009887695312,
+          "left": 210.13613891601562
+        }
+      },
+      {
+        "label": "Explore Family portraits",
+        "r": {
+          "x": 129.58984375,
+          "y": 260.3984375,
+          "width": 112.6640625,
+          "height": 48,
+          "top": 260.3984375,
+          "right": 242.25390625,
+          "bottom": 308.3984375,
+          "left": 129.58984375
+        }
+      }
+    ]
+  },
+  "returnAfter": {
+    "y": 110,
+    "progress": 0.014481305950500263
+  },
+  "outerIdleBefore": {
+    "y": 0,
+    "reflections": [
+      {
+        "style": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.0719885;",
+        "transform": "matrix(1, 0, -0.212557, 1, -46.3465, 0)",
+        "opacity": "0.0719885",
+        "layerDisplay": "block"
+      },
+      {
+        "style": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.0719885;",
+        "transform": "matrix(1, 0, -0.212557, 1, -46.3465, 0)",
+        "opacity": "0.0719885",
+        "layerDisplay": "block"
+      }
+    ],
+    "overflow": 0
+  },
+  "idleAfter": {
+    "child": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -105.33333195106458,
+      "opacity": 0.0719885254246222,
+      "surfaces": 40,
+      "visible": 3,
+      "scheduled": false,
+      "frames": 2556
+    },
+    "parent": {
+      "y": 0,
+      "reflections": [
+        {
+          "style": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.0719885;",
+          "transform": "matrix(1, 0, -0.212557, 1, -46.3465, 0)",
+          "opacity": "0.0719885",
+          "layerDisplay": "block"
+        },
+        {
+          "style": "transform: translate3d(-105.333%, 0px, 0px) skewX(-12deg); opacity: 0.0719885;",
+          "transform": "matrix(1, 0, -0.212557, 1, -46.3465, 0)",
+          "opacity": "0.0719885",
+          "layerDisplay": "block"
+        }
+      ],
+      "overflow": 0
+    }
+  },
+  "still": {
+    "travel": "still",
+    "reduced": "true",
+    "listPresent": true,
+    "fullImage": {
+      "src": "https://px-files.pixpa.com/848127/1789062433187-8927.jpg",
+      "w": 2133,
+      "h": 3200
+    }
+  },
+  "preferences": {
+    "solid": {
+      "child": {
+        "appearance": "solid",
+        "travel": "still",
+        "rm": false,
+        "rt": false,
+        "contrast": false,
+        "forced": false,
+        "sheen": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -120,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 3,
+          "scheduled": false,
+          "frames": 2934
+        },
+        "layerDisplays": [
+          "none"
+        ],
+        "menuBackground": "rgba(0, 0, 0, 0)"
+      },
+      "parent": {
+        "y": 0,
+        "reflections": [
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          },
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          }
+        ],
+        "overflow": 0
+      }
+    },
+    "reducedTransparency": {
+      "child": {
+        "appearance": "system",
+        "travel": "still",
+        "rm": false,
+        "rt": true,
+        "contrast": false,
+        "forced": false,
+        "sheen": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -120,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 3,
+          "scheduled": false,
+          "frames": 2935
+        },
+        "layerDisplays": [
+          "none"
+        ],
+        "menuBackground": "rgba(0, 0, 0, 0)",
+        "menuPanelBackground": "rgb(16, 44, 64)"
+      },
+      "parent": {
+        "y": 0,
+        "reflections": [
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          },
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          }
+        ],
+        "overflow": 0
+      }
+    },
+    "reducedMotion": {
+      "child": {
+        "appearance": "clear",
+        "travel": "system",
+        "rm": true,
+        "rt": false,
+        "contrast": false,
+        "forced": false,
+        "sheen": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -120,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 11,
+          "scheduled": false,
+          "frames": 2935
+        },
+        "layerDisplays": [
+          "none"
+        ],
+        "menuBackground": "rgba(0, 0, 0, 0)"
+      },
+      "parent": {
+        "y": 0,
+        "reflections": [
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          },
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          }
+        ],
+        "overflow": 0
+      }
+    },
+    "increasedContrast": {
+      "child": {
+        "appearance": "clear",
+        "travel": "system",
+        "rm": false,
+        "rt": false,
+        "contrast": true,
+        "forced": false,
+        "sheen": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -120,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 12,
+          "scheduled": false,
+          "frames": 2935
+        },
+        "layerDisplays": [
+          "none"
+        ],
+        "menuBackground": "rgba(0, 0, 0, 0)"
+      },
+      "parent": {
+        "y": 0,
+        "reflections": [
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          },
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          }
+        ],
+        "overflow": 0
+      }
+    },
+    "forcedColors": {
+      "child": {
+        "appearance": "clear",
+        "travel": "system",
+        "rm": false,
+        "rt": false,
+        "contrast": false,
+        "forced": true,
+        "sheen": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -120,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 11,
+          "scheduled": false,
+          "frames": 2935
+        },
+        "layerDisplays": [
+          "none"
+        ],
+        "menuBackground": "rgba(0, 0, 0, 0)"
+      },
+      "parent": {
+        "y": 0,
+        "reflections": [
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          },
+          {
+            "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0;",
+            "transform": "none",
+            "opacity": "0",
+            "layerDisplay": "none"
+          }
+        ],
+        "overflow": 0
+      }
+    }
+  },
+  "errors": [],
+  "sheenIdleFinal": {
+    "child": {
+      "enabled": true,
+      "direction": "up",
+      "phase": -120,
+      "opacity": 0.07,
+      "surfaces": 40,
+      "visible": 4,
+      "scheduled": false,
+      "frames": 2940
+    },
+    "parent": {
+      "y": 0,
+      "reflections": [
+        {
+          "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0.07;",
+          "transform": "matrix(1, 0, -0.212557, 1, -52.8, 0)",
+          "opacity": "0.07",
+          "layerDisplay": "block"
+        },
+        {
+          "style": "transform: translate3d(-120%, 0px, 0px) skewX(-12deg); opacity: 0.07;",
+          "transform": "matrix(1, 0, -0.212557, 1, -52.8, 0)",
+          "opacity": "0.07",
+          "layerDisplay": "block"
+        }
+      ],
+      "overflow": 0
+    }
+  },
+  "identity": {
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+    "files": [
+      {
+        "name": "categories.json",
+        "status": 200,
+        "bytes": 40566,
+        "sha256": "4806f5f9c2f9b7d15958c24ea293f7c5d4d218c664903c65ab80e156209ddb18"
+      },
+      {
+        "name": "main-v2.js",
+        "status": 200,
+        "bytes": 7421,
+        "sha256": "67651d17d4754bb571dc91b7766a556122804f9ec748486c8f7ece19404bf637"
+      },
+      {
+        "name": "collections.css",
+        "status": 200,
+        "bytes": 9537,
+        "sha256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927"
+      },
+      {
+        "name": "glass-sheen.js",
+        "status": 200,
+        "bytes": 8280,
+        "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8"
+      },
+      {
+        "name": "glass-sheen.css",
+        "status": 200,
+        "bytes": 1706,
+        "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612"
+      }
+    ],
+    "counts": {
+      "branding": 21,
+      "families": 26,
+      "headshots": 34,
+      "coastal": 13
+    },
+    "orderExact": true,
+    "new12": [
+      {
+        "id": "lacie-seated-laptop-portrait",
+        "exact": true
+      },
+      {
+        "id": "lacie-coffee-sign-and-trailer",
+        "exact": true
+      },
+      {
+        "id": "lacie-portrait-in-the-sewing-workshop",
+        "exact": true
+      },
+      {
+        "id": "lacie-coffee-trailer-team",
+        "exact": true
+      },
+      {
+        "id": "lacie-mother-and-child-by-the-trees",
+        "exact": true
+      },
+      {
+        "id": "lacie-children-sharing-a-glance-by-a-post",
+        "exact": true
+      },
+      {
+        "id": "lacie-white-coat-studio-portrait",
+        "exact": true
+      },
+      {
+        "id": "coastal-sunglasses-on-sand",
+        "exact": true
+      },
+      {
+        "id": "coastal-timber-and-surf",
+        "exact": true
+      },
+      {
+        "id": "coastal-decorated-bicycles",
+        "exact": true
+      },
+      {
+        "id": "coastal-toward-the-tower",
+        "exact": true
+      },
+      {
+        "id": "coastal-incoming-wave",
+        "exact": true
+      }
+    ]
+  },
+  "environment": "Chrome desktop browser; 1440x1000 desktop, 390x844 touch emulation, 844x390 landscape. No physical-device claim.",
+  "cleanup": {
+    "mediaOverridesCleared": true,
+    "touchEmulationDisabled": true,
+    "deviceMetricsCleared": true,
+    "ownedReviewTabsClosed": true,
+    "appearanceRestored": "clear",
+    "travelRestored": "system"
+  },
+  "visualCaptureInventory": {
+    "desktopCount": 12,
+    "phoneCount": 5,
+    "landscapeCount": 1,
+    "representativeFiles": [
+      "desktop-full-photo.png",
+      "phone-full-photo.png",
+      "landscape-full-photo.png",
+      "phone-clear-glass.png",
+      "desktop-clear-glass.png",
+      "reduced-transparency-still.png"
+    ]
+  }
+}

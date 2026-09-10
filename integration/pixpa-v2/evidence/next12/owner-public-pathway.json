@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-09-10T18:14:10.762Z",
+  "url": "https://kiyonocreativelab.com/pier-gallery?release=next12-live-20260910",
+  "scope": "Owner public Pixpa iframe real menu, native wheel, full headshot and focus return",
+  "fullImage": {
+    "src": "https://px-files.pixpa.com/848127/1789062241838-9027.jpg",
+    "width": 2133,
+    "height": 3200,
+    "fit": "contain",
+    "opacity": 1
+  },
+  "before": {
+    "y": 0
+  },
+  "forward": {
+    "overflow": 0,
+    "y": 620
+  },
+  "reverse": {
+    "overflow": 0,
+    "progress": "",
+    "y": 360
+  },
+  "closeFocusReturned": true,
+  "notes": [
+    "Semantic offscreen click timed out before activation; native wheel brought the exact link into view, then the actual click passed.",
+    "Missing aria-valuenow is not treated as numerical progress evidence."
+  ],
+  "screenshots": [
+    "owner-public-headshot.png",
+    "owner-public-walk.png"
+  ]
+}

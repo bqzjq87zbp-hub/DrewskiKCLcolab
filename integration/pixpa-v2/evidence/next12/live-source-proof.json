@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-09-10T18:11:06.828Z",
+  "source": "874050f23a65d4adc4f1734572f7b6de9ef6bcaf",
+  "version": 11,
+  "files": [
+    {
+      "path": "/pier-v2-20260910/categories.json",
+      "status": 200,
+      "bytes": 40566,
+      "sha256": "4806f5f9c2f9b7d15958c24ea293f7c5d4d218c664903c65ab80e156209ddb18",
+      "contentType": "application/json"
+    },
+    {
+      "path": "/pier-v2-20260910/main-v2.js",
+      "status": 200,
+      "bytes": 7421,
+      "sha256": "67651d17d4754bb571dc91b7766a556122804f9ec748486c8f7ece19404bf637",
+      "contentType": "text/javascript"
+    },
+    {
+      "path": "/pier-v2-20260910/collections.js",
+      "status": 200,
+      "bytes": 8324,
+      "sha256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43",
+      "contentType": "text/javascript"
+    },
+    {
+      "path": "/pier-v2-20260910/collections.css",
+      "status": 200,
+      "bytes": 9537,
+      "sha256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927",
+      "contentType": "text/css"
+    },
+    {
+      "path": "/pier-v2-20260910/glass-sheen.js",
+      "status": 200,
+      "bytes": 8280,
+      "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+      "contentType": "text/javascript"
+    },
+    {
+      "path": "/pier-v2-20260910/glass-sheen.css",
+      "status": 200,
+      "bytes": 1706,
+      "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612",
+      "contentType": "text/css"
+    },
+    {
+      "path": "/pier-v2-20260910/slots.json",
+      "status": 200,
+      "bytes": 7323,
+      "sha256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21",
+      "contentType": "application/json"
+    }
+  ],
+  "counts": {
+    "branding": 21,
+    "families": 26,
+    "headshots": 34,
+    "coastal": 13
+  },
+  "wrapper": {
+    "url": "https://kiyonocreativelab.com/pier-gallery?verify=next12-1789063866188",
+    "status": 200,
+    "expectedChild": true,
+    "exitsPresent": true,
+    "temporaryDirectHostAbsent": true
+  },
+  "scope": "Fresh HTTP byte/source checks; rendered and input acceptance is separate."
+}

@@ -41,6 +41,15 @@
           "full": "/media/expansion/d21b91e190788fc51394cdc248d48f9f2ea91ab7cb6b839362e7c79b114ad1ea.jpg"
         },
         {
+          "id": "lacie-seated-laptop-portrait",
+          "title": "Seated with a laptop",
+          "alt": "A smiling man sits cross-legged with an open laptop on his lap against a gray studio background.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/media/expansion/54708825bccd15bde5299b9bf92b09cb362bb4302de12c5fcb39312691ebfcbb.jpg",
+          "full": "/media/expansion/cc6196af98ad0b2247a8d5cf5c4e01ba4f0a5439973e51219e132ca990088973.jpg"
+        },
+        {
           "id": "lacie-service-truck-and-architecture",
           "title": "Service truck and architecture",
           "alt": "A white Allied Pest Control pickup stands in front of a stone-and-stucco building.",
@@ -48,6 +57,15 @@
           "height": 2133,
           "src": "/media/expansion/bab338b450a17934b8588451c2fa9fe8163beb5099c748afe0957834c58da77b.jpg",
           "full": "/media/expansion/0117c6da97e9085d07f8f1edfd39f8b5e9fb9249721009d9fc2d7397921296ee.jpg"
+        },
+        {
+          "id": "lacie-coffee-sign-and-trailer",
+          "title": "The coffee sign",
+          "alt": "A sunlit Good Roots Coffee arrow sign stands beside a street, with a reflective coffee trailer softly out of focus behind it.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/media/expansion/06bdb9858f530be3868d144be502f814ac0b5b7be169a101f4cb5cf90dca1772.jpg",
+          "full": "/media/expansion/190477910a6cc6177c6e0a13a8f438bc309ddb1dbe834c5f1369cab9435dcc66.jpg"
         },
         {
           "id": "lacie-conversation-at-the-microphone",
@@ -59,6 +77,15 @@
           "full": "/media/expansion/effc01d8e3b836781cba2e83f8aec3b674c069a5817ca35a8c540b5577827d68.jpg"
         },
         {
+          "id": "lacie-portrait-in-the-sewing-workshop",
+          "title": "A pause in the sewing workshop",
+          "alt": "A woman rests her chin on folded hands beside a sewing machine, with colorful thread spools arranged on the wall behind her.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/media/expansion/4ffed187cec3e0e2c1419ad7e5241c77b8b10b12b5ff71d0ff5f7a0aaa125ca2.jpg",
+          "full": "/media/expansion/33e740651c164e36ecea5e57b243786610c051f9d85fc4c032cce2f34756a68a.jpg"
+        },
+        {
           "id": "lacie-service-team-at-the-desk",
           "title": "Team at the desk",
           "alt": "Three adults in branded work shirts smile together behind an office desk.",
@@ -66,6 +93,15 @@
           "height": 2145,
           "src": "/media/expansion/2f09d961580d456f1084ec9c79e4369fdc6560cff536e19a47824560ba5c3361.jpg",
           "full": "/media/expansion/d78e1b91e5dd9038bd5118716ac18a720274f79f8d36c50dbffb4b56384603aa.jpg"
+        },
+        {
+          "id": "lacie-coffee-trailer-team",
+          "title": "Together at the coffee trailer",
+          "alt": "Three women hold takeaway drinks and smile in front of a reflective trailer with a large COFFEE BAR sign.",
+          "width": 3200,
+          "height": 2763,
+          "src": "/media/expansion/35bb7592e1faf7f8b74094583094406e965021bd33629822df6b1b5faf37758d.jpg",
+          "full": "/media/expansion/cd01e25b7f1d21947bae7873d90aff509d33730c58574eaf4866fea05516922b.jpg"
         },
         {
           "id": "nwprt-apparel-display",
@@ -219,6 +255,15 @@
           "full": "/media/4d393268061adceca4155add.jpg"
         },
         {
+          "id": "lacie-mother-and-child-by-the-trees",
+          "title": "Close together by the trees",
+          "alt": "A smiling woman in a green dress holds a young child in a floral outfit beside leafy trees.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/media/expansion/3eb61bb0288d4496f54ebd99939e0ec366b391c78cda26f58a2a486485b6f72f.jpg",
+          "full": "/media/expansion/3fda1a5d92c11171e919d41d36731a988c8bfa7a220a4455f49fc915fc783485.jpg"
+        },
+        {
           "id": "families-07",
           "title": "Family portrait 07",
           "alt": "A father lifts his son high against an open blue sky in the Southern California hills.",
@@ -262,6 +307,15 @@
           "height": 3200,
           "src": "/media/2d96f735ba18201980dee971.jpg",
           "full": "/media/2d96f735ba18201980dee971.jpg"
+        },
+        {
+          "id": "lacie-children-sharing-a-glance-by-a-post",
+          "title": "A shared glance on the hillside",
+          "alt": "Two children stand on either side of a weathered wooden post and smile toward one another on a grassy hillside.",
+          "width": 3200,
+          "height": 2133,
+          "src": "/media/expansion/3dd3ddbc5705cc98e9a761d206e3659015dc9ba9a25efc45703844f9623df306.jpg",
+          "full": "/media/expansion/bf116ce8f4a557a7d72973c8ed54608ea085efa47a8406d0d0f968a3068495f1.jpg"
         },
         {
           "id": "families-11",
@@ -577,6 +631,15 @@
           "full": "/media/44246db8df167276d79b1654.jpg"
         },
         {
+          "id": "lacie-white-coat-studio-portrait",
+          "title": "Portrait in a white coat",
+          "alt": "A smiling woman wearing a white coat over navy scrubs crosses her arms, with a stethoscope around her neck, against a dark studio background.",
+          "width": 2133,
+          "height": 3200,
+          "src": "/media/expansion/cc9e0d08eedc13ae63544e74e3a57a13131141978768f391cceed506aec95041.jpg",
+          "full": "/media/expansion/443e76ea27e067ee02ef9f8cdf8d51013902a65276ff4239f938edab5febed08.jpg"
+        },
+        {
           "id": "headshots-20",
           "title": "Professional portrait 20",
           "alt": "A creative professional smiles in a polished event portrait framed by colorful neon light.",
@@ -701,6 +764,15 @@
           "full": "/media/363fdb503e956d0273863e50.jpg"
         },
         {
+          "id": "coastal-sunglasses-on-sand",
+          "title": "Left on the sand",
+          "alt": "Round dark sunglasses stand in beach sand beneath a blue sky and softly blurred umbrellas.",
+          "width": 3000,
+          "height": 2000,
+          "src": "/media/expansion/919cfd201e649a478032f4113921e83235c16703c84598fd73005bc28559201b.jpg",
+          "full": "/media/expansion/2d35d0983add20ba4e9f9c3265a1ea82d8be38601e3fcfe8bccfbc03b45a0100.jpg"
+        },
+        {
           "id": "coastal-sand-patterns",
           "title": "Patterns in the sand",
           "alt": "Two children in yellow shirts shape wet sand beside shallow pools, seen from above.",
@@ -719,6 +791,15 @@
           "full": "/media/481288d072d928eac1b8b2c6.jpg"
         },
         {
+          "id": "coastal-timber-and-surf",
+          "title": "Timber and surf",
+          "alt": "Waves wash around barnacled timber pier posts that recede beside a broad blue sky.",
+          "width": 3000,
+          "height": 2000,
+          "src": "/media/expansion/865f212752030c8c3de91b517bafaa75d70a5b5669d645f58ab50de080dc1d45.jpg",
+          "full": "/media/expansion/51c11a0f58321a801265734143daf0ac25e66068f9a2088185c22f2ffbbf5966.jpg"
+        },
+        {
           "id": "coastal-airborne-color",
           "title": "Airborne color",
           "alt": "A child holds an orange ball overhead while a purple ball hangs in the air beside the ocean.",
@@ -728,6 +809,15 @@
           "full": "/media/expansion/221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82.jpg"
         },
         {
+          "id": "coastal-decorated-bicycles",
+          "title": "Bicycles at the beach",
+          "alt": "Decorated cargo baskets and thick bicycle tires stand beside a white hydrant at the beach.",
+          "width": 3000,
+          "height": 2000,
+          "src": "/media/expansion/8cda21bad3db7c69bc40dc70d82b7f6e1590c1f0a6fa3eaf8bb289c7ea4ab22c.jpg",
+          "full": "/media/expansion/e075ec3e4b31bfd2538690334f941df24e228e61c2e26da6c725f0bca1a34c61.jpg"
+        },
+        {
           "id": "toward-the-water",
           "title": "Toward the water",
           "alt": "Two children seen from behind hold hands and carry pink and blue balls while facing the ocean.",
@@ -735,6 +825,15 @@
           "height": 960,
           "src": "/media/c6231e82c5d10dbda7f1220d.jpg",
           "full": "/media/0a7d2faec6cf918c625f0619.jpg"
+        },
+        {
+          "id": "coastal-toward-the-tower",
+          "title": "Toward the tower",
+          "alt": "A lifeguard carrying yellow rescue gear runs toward a wooden beach tower beneath yellow flags.",
+          "width": 3000,
+          "height": 2000,
+          "src": "/media/expansion/fb41f7c4a75329c2f5b0fecde55d17c238ab727f06a7db68a5a1cf7d219a36cc.jpg",
+          "full": "/media/expansion/0355fd9ab2f5c38e0a83b4823c42bd322a3994413003cf4a378ec87276d1ea4b.jpg"
         },
         {
           "id": "coastal-quiet-pink-ball",
@@ -753,6 +852,15 @@
           "height": 2800,
           "src": "/media/07f59839133492f58ad8884a.jpg",
           "full": "/media/07f59839133492f58ad8884a.jpg"
+        },
+        {
+          "id": "coastal-incoming-wave",
+          "title": "An incoming wave",
+          "alt": "An incoming wave fills the foreground beneath receding timber pier beams and posts.",
+          "width": 2000,
+          "height": 3000,
+          "src": "/media/expansion/f557951a0b35a3ee4c75c5ae9ee04f99d1f3720554dda088f9439888124c4ba9.jpg",
+          "full": "/media/expansion/255515aa0d6a10642423b97dc6e875218a7d0115b17803daedb3919bb57339ba.jpg"
         },
         {
           "id": "coastal-waterside-walk",

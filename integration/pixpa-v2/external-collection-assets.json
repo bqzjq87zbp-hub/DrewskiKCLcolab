@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "7918fa7cc24cd6ba978e012980c64c9805141564",
+  "role": "ordinary-collection-and-full-viewer-only",
+  "corsTextureUse": false,
+  "hostingPolicy": "Keep these files external in the Pixpa adapter; source originals remain in public/media/expansion for standalone rebuilding.",
+  "files": [
+    {
+      "path": "public/media/expansion/443e76ea27e067ee02ef9f8cdf8d51013902a65276ff4239f938edab5febed08.jpg",
+      "bytes": 876018,
+      "sha256": "443e76ea27e067ee02ef9f8cdf8d51013902a65276ff4239f938edab5febed08",
+      "url": "https://px-files.pixpa.com/848127/1789062241838-9027.jpg"
+    },
+    {
+      "path": "public/media/expansion/cc9e0d08eedc13ae63544e74e3a57a13131141978768f391cceed506aec95041.jpg",
+      "bytes": 54181,
+      "sha256": "cc9e0d08eedc13ae63544e74e3a57a13131141978768f391cceed506aec95041",
+      "url": "https://px-files.pixpa.com/848127/1789062388434-4555.jpg"
+    },
+    {
+      "path": "public/media/expansion/3fda1a5d92c11171e919d41d36731a988c8bfa7a220a4455f49fc915fc783485.jpg",
+      "bytes": 1793629,
+      "sha256": "3fda1a5d92c11171e919d41d36731a988c8bfa7a220a4455f49fc915fc783485",
+      "url": "https://px-files.pixpa.com/848127/1789062433187-8927.jpg"
+    },
+    {
+      "path": "public/media/expansion/3eb61bb0288d4496f54ebd99939e0ec366b391c78cda26f58a2a486485b6f72f.jpg",
+      "bytes": 93315,
+      "sha256": "3eb61bb0288d4496f54ebd99939e0ec366b391c78cda26f58a2a486485b6f72f",
+      "url": "https://px-files.pixpa.com/848127/1789062480467-7019.jpg"
+    },
+    {
+      "path": "public/media/expansion/bf116ce8f4a557a7d72973c8ed54608ea085efa47a8406d0d0f968a3068495f1.jpg",
+      "bytes": 1679253,
+      "sha256": "bf116ce8f4a557a7d72973c8ed54608ea085efa47a8406d0d0f968a3068495f1",
+      "url": "https://px-files.pixpa.com/848127/1789062483868-8009.jpg"
+    },
+    {
+      "path": "public/media/expansion/3dd3ddbc5705cc98e9a761d206e3659015dc9ba9a25efc45703844f9623df306.jpg",
+      "bytes": 134985,
+      "sha256": "3dd3ddbc5705cc98e9a761d206e3659015dc9ba9a25efc45703844f9623df306",
+      "url": "https://px-files.pixpa.com/848127/1789062509822-8657.jpg"
+    },
+    {
+      "path": "public/media/expansion/e075ec3e4b31bfd2538690334f941df24e228e61c2e26da6c725f0bca1a34c61.jpg",
+      "bytes": 1311828,
+      "sha256": "e075ec3e4b31bfd2538690334f941df24e228e61c2e26da6c725f0bca1a34c61",
+      "url": "https://px-files.pixpa.com/848127/1789062513736-6220.jpg"
+    },
+    {
+      "path": "public/media/expansion/8cda21bad3db7c69bc40dc70d82b7f6e1590c1f0a6fa3eaf8bb289c7ea4ab22c.jpg",
+      "bytes": 135435,
+      "sha256": "8cda21bad3db7c69bc40dc70d82b7f6e1590c1f0a6fa3eaf8bb289c7ea4ab22c",
+      "url": "https://px-files.pixpa.com/848127/1789062517639-5063.jpg"
+    },
+    {
+      "path": "public/media/expansion/51c11a0f58321a801265734143daf0ac25e66068f9a2088185c22f2ffbbf5966.jpg",
+      "bytes": 949159,
+      "sha256": "51c11a0f58321a801265734143daf0ac25e66068f9a2088185c22f2ffbbf5966",
+      "url": "https://px-files.pixpa.com/848127/1789062521548-6067.jpg"
+    },
+    {
+      "path": "public/media/expansion/865f212752030c8c3de91b517bafaa75d70a5b5669d645f58ab50de080dc1d45.jpg",
+      "bytes": 100123,
+      "sha256": "865f212752030c8c3de91b517bafaa75d70a5b5669d645f58ab50de080dc1d45",
+      "url": "https://px-files.pixpa.com/848127/1789062525428-5962.jpg"
+    },
+    {
+      "path": "public/media/expansion/255515aa0d6a10642423b97dc6e875218a7d0115b17803daedb3919bb57339ba.jpg",
+      "bytes": 1296268,
+      "sha256": "255515aa0d6a10642423b97dc6e875218a7d0115b17803daedb3919bb57339ba",
+      "url": "https://px-files.pixpa.com/848127/1789062546626-7704.jpg"
+    },
+    {
+      "path": "public/media/expansion/f557951a0b35a3ee4c75c5ae9ee04f99d1f3720554dda088f9439888124c4ba9.jpg",
+      "bytes": 150598,
+      "sha256": "f557951a0b35a3ee4c75c5ae9ee04f99d1f3720554dda088f9439888124c4ba9",
+      "url": "https://px-files.pixpa.com/848127/1789062550486-9748.jpg"
+    },
+    {
+      "path": "public/media/expansion/2d35d0983add20ba4e9f9c3265a1ea82d8be38601e3fcfe8bccfbc03b45a0100.jpg",
+      "bytes": 676168,
+      "sha256": "2d35d0983add20ba4e9f9c3265a1ea82d8be38601e3fcfe8bccfbc03b45a0100",
+      "url": "https://px-files.pixpa.com/848127/1789062554382-2566.jpg"
+    },
+    {
+      "path": "public/media/expansion/919cfd201e649a478032f4113921e83235c16703c84598fd73005bc28559201b.jpg",
+      "bytes": 68818,
+      "sha256": "919cfd201e649a478032f4113921e83235c16703c84598fd73005bc28559201b",
+      "url": "https://px-files.pixpa.com/848127/1789062558278-4913.jpg"
+    },
+    {
+      "path": "public/media/expansion/0355fd9ab2f5c38e0a83b4823c42bd322a3994413003cf4a378ec87276d1ea4b.jpg",
+      "bytes": 892374,
+      "sha256": "0355fd9ab2f5c38e0a83b4823c42bd322a3994413003cf4a378ec87276d1ea4b",
+      "url": "https://px-files.pixpa.com/848127/1789062562153-6604.jpg"
+    },
+    {
+      "path": "public/media/expansion/fb41f7c4a75329c2f5b0fecde55d17c238ab727f06a7db68a5a1cf7d219a36cc.jpg",
+      "bytes": 82634,
+      "sha256": "fb41f7c4a75329c2f5b0fecde55d17c238ab727f06a7db68a5a1cf7d219a36cc",
+      "url": "https://px-files.pixpa.com/848127/1789062570763-7185.jpg"
+    },
+    {
+      "path": "public/media/expansion/190477910a6cc6177c6e0a13a8f438bc309ddb1dbe834c5f1369cab9435dcc66.jpg",
+      "bytes": 1404448,
+      "sha256": "190477910a6cc6177c6e0a13a8f438bc309ddb1dbe834c5f1369cab9435dcc66",
+      "url": "https://px-files.pixpa.com/848127/1789062574646-4885.jpg"
+    },
+    {
+      "path": "public/media/expansion/06bdb9858f530be3868d144be502f814ac0b5b7be169a101f4cb5cf90dca1772.jpg",
+      "bytes": 104508,
+      "sha256": "06bdb9858f530be3868d144be502f814ac0b5b7be169a101f4cb5cf90dca1772",
+      "url": "https://px-files.pixpa.com/848127/1789062578554-2141.jpg"
+    },
+    {
+      "path": "public/media/expansion/cd01e25b7f1d21947bae7873d90aff509d33730c58574eaf4866fea05516922b.jpg",
+      "bytes": 1838043,
+      "sha256": "cd01e25b7f1d21947bae7873d90aff509d33730c58574eaf4866fea05516922b",
+      "url": "https://px-files.pixpa.com/848127/1789062582446-5553.jpg"
+    },
+    {
+      "path": "public/media/expansion/35bb7592e1faf7f8b74094583094406e965021bd33629822df6b1b5faf37758d.jpg",
+      "bytes": 170400,
+      "sha256": "35bb7592e1faf7f8b74094583094406e965021bd33629822df6b1b5faf37758d",
+      "url": "https://px-files.pixpa.com/848127/1789062586478-2148.jpg"
+    },
+    {
+      "path": "public/media/expansion/cc6196af98ad0b2247a8d5cf5c4e01ba4f0a5439973e51219e132ca990088973.jpg",
+      "bytes": 868491,
+      "sha256": "cc6196af98ad0b2247a8d5cf5c4e01ba4f0a5439973e51219e132ca990088973",
+      "url": "https://px-files.pixpa.com/848127/1789062605419-2339.jpg"
+    },
+    {
+      "path": "public/media/expansion/54708825bccd15bde5299b9bf92b09cb362bb4302de12c5fcb39312691ebfcbb.jpg",
+      "bytes": 52369,
+      "sha256": "54708825bccd15bde5299b9bf92b09cb362bb4302de12c5fcb39312691ebfcbb",
+      "url": "https://px-files.pixpa.com/848127/1789062609357-2316.jpg"
+    },
+    {
+      "path": "public/media/expansion/33e740651c164e36ecea5e57b243786610c051f9d85fc4c032cce2f34756a68a.jpg",
+      "bytes": 1275795,
+      "sha256": "33e740651c164e36ecea5e57b243786610c051f9d85fc4c032cce2f34756a68a",
+      "url": "https://px-files.pixpa.com/848127/1789062613243-9442.jpg"
+    },
+    {
+      "path": "public/media/expansion/4ffed187cec3e0e2c1419ad7e5241c77b8b10b12b5ff71d0ff5f7a0aaa125ca2.jpg",
+      "bytes": 129484,
+      "sha256": "4ffed187cec3e0e2c1419ad7e5241c77b8b10b12b5ff71d0ff5f7a0aaa125ca2",
+      "url": "https://px-files.pixpa.com/848127/1789062617158-4702.jpg"
+    }
+  ]
+}
