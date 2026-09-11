@@ -37,6 +37,7 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   function step(direction){const state=engine.getState();if(state.reducedMotion)return;const target=stepTarget(state.progress,direction);if(target===undefined)return;const y=engine.journey.getBoundingClientRect().top+scrollY+target*engine.getScrollRange();scrollTo({top:y,behavior:reduced.matches?'instant':'smooth'});}
   prev.onclick=()=>step(-1);next.onclick=()=>step(1);
   let frame=0;
+  const setText=(element,text)=>{if(element.textContent!==text)element.textContent=text;};
   function layout(){frame=0;if(collections.active||mount.hidden)return;const state=engine.getState();if(!state.viewport.width||!state.viewport.height)return;
     start.hidden=!state.reducedMotion;looks.hidden=state.reducedMotion||!state.physical?.environment?.camera?.sideLookSupported;stepTools.hidden=state.reducedMotion;
     // Respect the rendered scene size, which can be shorter than the window.
@@ -44,21 +45,28 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
     menu.dataset.sideLook=String(Boolean(state.physical?.environment?.camera?.sideLookSupported));
     const invitationOpacity=state.reducedMotion?1:Math.max(0,1-state.progress/.045);
     invitation.style.opacity=String(invitationOpacity);invitation.setAttribute('aria-hidden',String(invitationOpacity===0));
-    invitationCue.textContent=state.reducedMotion?'Choose a collection below to explore.':'Scroll or swipe to explore.';
+    setText(invitationCue,state.reducedMotion?'Choose a collection below to explore.':'Scroll or swipe to explore.');
     const labeledSides=new Set(),reserved=[menu.getBoundingClientRect(),progress.getBoundingClientRect()];
     if(!looks.hidden)reserved.push(looks.getBoundingClientRect());
     const openPanel=menu.querySelector('nav:not([hidden])');
     if(openPanel)reserved.push(openPanel.getBoundingClientRect());
     if(invitationOpacity>.05)reserved.push(invitation.getBoundingClientRect());
     const overlaps=(a,b)=>a.left<b.right+8&&a.right>b.left-8&&a.top<b.bottom+8&&a.bottom>b.top-8;
+    const visibleSigns=[];
     for(let i=0;i<signs.length;i++){const{a,slot}=signs[i],r=state.slots[i],q=r.projectedQuad;if(!q.length){a.hidden=true;continue;}const x=(q[0].x+q[1].x)/2,y=Math.min(q[0].y,q[1].y)-12,w=Math.max(...q.map(p=>p.x))-Math.min(...q.map(p=>p.x));
       a.hidden=state.reducedMotion||!r.interactive||w<Math.min(105,state.viewport.width*.15)||x<30||x>state.viewport.width-30||y<65||y>state.viewport.height-100;
       a.style.left=Math.max(66,Math.min(state.viewport.width-66,x))+'px';a.style.top=y+'px';
-      if(!a.hidden&&reserved.some(rect=>overlaps(a.getBoundingClientRect(),rect)))a.hidden=true;
+      if(!a.hidden)visibleSigns.push({a,slot});
+    }
+    // Finish position writes before reading bounds: one layout flush, not
+    // alternating a write/read for every canvas as the visitor walks.
+    const measuredSigns=visibleSigns.map(sign=>({...sign,rect:sign.a.getBoundingClientRect()}));
+    for(const{a,slot,rect}of measuredSigns){
+      if(reserved.some(reservedRect=>overlaps(rect,reservedRect)))a.hidden=true;
       if(state.physical?.ready){if(labeledSides.has(slot.side))a.hidden=true;else if(!a.hidden)labeledSides.add(slot.side);}
     }
     prev.disabled=stepTarget(state.progress,-1)===undefined;next.disabled=stepTarget(state.progress,1)===undefined;
-    progress.querySelector('span').textContent=state.progress>.985?'Scroll back to return':matchMedia('(pointer:coarse)').matches?'Swipe up to walk forward':'Scroll to walk forward';
+    setText(progress.querySelector('span'),state.progress>.985?'Scroll back to return':matchMedia('(pointer:coarse)').matches?'Swipe up to walk forward':'Scroll to walk forward');
   }
   function schedule(){if(!frame)frame=requestAnimationFrame(layout);}
   addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});addEventListener('popstate',()=>requestAnimationFrame(schedule));reduced.addEventListener('change',schedule);

@@ -31,7 +31,7 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
     return{slot,group,anchor,depth:depths[slot.depth],scale:1,projectedQuad:[]};
   });
   journey.append(viewport,fallback);container.append(journey);
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let motionPreference='system',frame=0,destroyed=false,p=0,z=0,look='ahead',lastPaint=0,dimensions={width:0,height:0},frameCount=0;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let motionPreference='system',frame=0,destroyed=false,p=0,z=0,look='ahead',dimensions={width:0,height:0},frameCount=0;
   const video=createVideoFrameSeam({viewport,poster:original,onReady:schedule});
   let physical={ready:false,getState:()=>({ready:false,painted:false,error:null}),render:()=>null,destroy:()=>{}};
   let failed=false,lastInteraction=performance.now();
@@ -80,7 +80,8 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
   }
   function render(now=performance.now()){
     frame=0;if(destroyed||!dimensions.width||!dimensions.height)return;frameCount++;
-    if(now-lastPaint<30){schedule();return;}lastPaint=now;
+    // Commit native scrolling on the next display frame. A fixed 30 ms gate
+    // discarded every other 60 Hz frame, even when rendering was inexpensive.
     const reducedMode=isReduced(),top=journey.getBoundingClientRect().top+scrollY,range=getScrollRange(),requestedProgress=reducedMode?0:clamp((scrollY-top)/range,0,1);
     rememberScrollPosition();
     video.setSuppressed(reducedMode||reduced.matches);video.request(requestedProgress);

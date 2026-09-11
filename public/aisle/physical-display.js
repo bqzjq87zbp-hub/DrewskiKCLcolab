@@ -196,7 +196,7 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       const m=createPhysicalEasel({THREE,slot,image:images[index],sourceSize:sceneSourceSize(slot.src),index});
       m.group.position.set(galleryRowX(slot),0,-DEPTHS[slot.depth]);
       m.group.rotation.y=slot.side==='left'?ROW_YAW:-ROW_YAW;
-      m.group.traverse(o=>{if(o.isMesh){for(const material of Array.isArray(o.material)?o.material:[o.material]){material.clippingPlanes=[surface];wetTimber(material);if(/canvas|photographic/i.test(material.name)){o.layers.enable(1);}}}});
+      m.group.traverse(o=>{if(o.isMesh){for(const material of Array.isArray(o.material)?o.material:[o.material]){material.clippingPlanes=[surface];wetTimber(material);if(/canvas|photographic/i.test(material.name)){o.layers.set(1);}}}});
       scene.add(m.group);m.group.updateMatrixWorld(true);
       m.waterContacts.forEach((point,contactIndex)=>{
         const world=point.clone().applyMatrix4(m.group.matrixWorld);
@@ -204,8 +204,18 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       });
       const submerged=waterCopy(m.group,false),ripples=contactRipples(m);
       const native=sceneSourceSize(slot.src);
-      models.push({...m,slot,submerged,ripples,imageSize:[native?.width||images[index].naturalWidth,native?.height||images[index].naturalHeight],textureSize:[images[index].naturalWidth,images[index].naturalHeight]});
+      const imageSize=[native?.width||images[index].naturalWidth,native?.height||images[index].naturalHeight];
+      const uv=m.printMesh.geometry.attributes.uv,vertices=m.printMesh.geometry.attributes.position;
+      const worldCorners=m.localCorners.map(v=>m.group.localToWorld(v.clone()));
+      const fixed={physical:m.dimensions,source:imageSize,
+        frontUV:Array.from({length:4},(_,i)=>[uv.getX(16+i),uv.getY(16+i)]),
+        frontVertices:Array.from({length:4},(_,i)=>[vertices.getX(16+i),vertices.getY(16+i),vertices.getZ(16+i)]),
+        meshScale:m.printMesh.scale.toArray(),groupScale:m.group.scale.toArray(),worldPosition:m.group.position.toArray(),worldRotation:m.group.rotation.toArray().slice(0,3),worldFrontCorners:worldCorners.map(v=>v.toArray()),waterPlaneY:0};
+      models.push({...m,slot,submerged,ripples,imageSize,worldCorners,fixed,textureSize:[images[index].naturalWidth,images[index].naturalHeight]});
     });
+    diagnostics.textureSizes=models.map(m=>({id:m.slot.id,size:m.textureSize}));
+    diagnostics.galleryPlacement=models.map(({slot,fixed:{worldPosition,worldRotation,worldFrontCorners}})=>({id:slot.id,worldPosition,worldRotation,worldFrontCorners}));
+    diagnostics.printInvariants=models.map(({slot,fixed:{physical,source,frontUV,frontVertices,meshScale,groupScale}})=>({id:slot.id,physical,source,frontUV,frontVertices,meshScale,groupScale}));
     Promise.all([environment.ready,...models.map(m=>m.ready)]).then(()=>{if(!disposed&&!diagnostics.error){diagnostics.ready=true;onReady?.();}}).catch(()=>fail('scene-assets-unavailable'));
   }).catch(()=>fail('scene-images-unavailable'));
 
@@ -228,16 +238,11 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
       const distance=DEPTHS[m.slot.depth]-cameraDistance;
       const passed=distance<.55;
       m.group.visible=!passed;m.submerged.visible=!passed;m.ripples.visible=!passed;
-      const quad=m.localCorners.map(v=>{
-        const p=Array.isArray(v)?new THREE.Vector3(...v):v.clone();m.group.localToWorld(p);p.project(camera);
+      const quad=m.worldCorners.map(v=>{
+        const p=v.clone().project(camera);
         return {x:(p.x+1)*width/2,y:(1-p.y)*height/2};
       });
-      const uv=m.printMesh.geometry.attributes.uv;
-      const frontUV=Array.from({length:4},(_,i)=>[uv.getX(16+i),uv.getY(16+i)]);
-      const vertices=m.printMesh.geometry.attributes.position;
-      const frontVertices=Array.from({length:4},(_,i)=>[vertices.getX(16+i),vertices.getY(16+i),vertices.getZ(16+i)]);
-      return {id:m.slot.id,quad,passed,distance,physical:m.dimensions,source:m.imageSize,
-        frontUV,frontVertices,meshScale:m.printMesh.scale.toArray(),groupScale:m.group.scale.toArray(),worldPosition:m.group.position.toArray(),worldRotation:m.group.rotation.toArray().slice(0,3),worldFrontCorners:m.localCorners.map(v=>m.group.localToWorld(Array.isArray(v)?new THREE.Vector3(...v):v.clone()).toArray()),waterPlaneY:0};
+      return {id:m.slot.id,quad,passed,distance,...m.fixed};
     });
     reflectionCamera.copy(camera);reflectionCamera.position.y=-camera.position.y;
     const direction=camera.getWorldDirection(new THREE.Vector3());direction.y*=-1;
@@ -253,7 +258,6 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
     if(gl.isContextLost()||diagnostics.error){fail('webgl-context-lost');return null;}
     if(!diagnostics.painted&&gl.getError()!==gl.NO_ERROR){fail('graphics-unavailable');return null;}
     diagnostics.painted=true;
-    diagnostics.textureSizes=models.map(m=>({id:m.slot.id,size:m.textureSize}));
     diagnostics.gpu={textures:renderer.info.memory.textures,geometries:renderer.info.memory.geometries,pixelRatio:renderer.getPixelRatio()};
     diagnostics.calls=frameStats.calls;diagnostics.triangles=frameStats.triangles;
     diagnostics.reflectionCalls=reflectionCalls;diagnostics.water='single y=0 projective planar reflection with wave distortion; submerged timber pass';
@@ -261,8 +265,6 @@ export function createPhysicalDisplay({viewport,slots,onReady}) {
     diagnostics.videoCamera=committed?'authored preview dolly; unregistered generated footage':null;
     diagnostics.lookYaw=camera.rotation.y;diagnostics.waterPhase=uniforms.phase.value;
     diagnostics.environment=environment.getState();
-    diagnostics.galleryPlacement=projected.map(({id,worldPosition,worldRotation,worldFrontCorners})=>({id,worldPosition,worldRotation,worldFrontCorners}));
-    diagnostics.printInvariants=projected.map(({id,physical,source,frontUV,frontVertices,meshScale,groupScale})=>({id,physical,source,frontUV,frontVertices,meshScale,groupScale}));
     return projected;
   }
   function destroy(){if(disposed)return;disposed=true;renderer.domElement.removeEventListener('webglcontextlost',lost);environment?.dispose();models.forEach(m=>m.dispose?.());effects.forEach(g=>g.traverse(o=>{if(o.isMesh)for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}));contactGeometries.forEach(g=>g.dispose());reflectionTarget.dispose();water.geometry.dispose();water.material.dispose();renderer.dispose();renderer.domElement.remove();}

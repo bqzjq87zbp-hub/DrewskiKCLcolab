@@ -16,8 +16,8 @@
   {
     "accepted": "aisle/aisle.css",
     "url": "/pier-v2-20260910/aisle/aisle.css",
-    "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd",
-    "bytes": 11375,
+    "sha256": "f4985cf676d2bad8471d1cb7e40e12eabab2f6eb9b8e5ff0a7f17ad6191ea465",
+    "bytes": 11457,
     "reused": false
   },
   {
@@ -107,8 +107,8 @@
   {
     "accepted": "aisle/photographic-aisle.js",
     "url": "/pier-v2-20260910/aisle/photographic-aisle.js",
-    "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4",
-    "bytes": 14737,
+    "sha256": "017cff701cd80838683c93adff68cba00bda8801721f7068c111a213b24f4256",
+    "bytes": 14822,
     "reused": false
   },
   {
@@ -121,15 +121,15 @@
   {
     "accepted": "aisle/physical-display.js",
     "url": "/pier-v2-20260910/aisle/physical-display.js",
-    "sha256": "857c347051d3d44f3887159e0fdbd044dab75073cc21792ca8d5b40698ff396a",
-    "bytes": 19845,
+    "sha256": "97c87ad8dff713b2a090ac6efce203cb119c1243410d810332aa0377906143e3",
+    "bytes": 19842,
     "reused": false
   },
   {
     "accepted": "aisle/physical-easel.js",
     "url": "/pier-v2-20260910/aisle/physical-easel.js",
-    "sha256": "cd52b437c3c5ccc4d10c62f38cb0dd2576b6e1a637de0808249293b2e62bca8d",
-    "bytes": 14767,
+    "sha256": "80483996980b29da20d4eebfb2559657238a7b04bffee2eb6f6bcf7f8783cbfc",
+    "bytes": 16883,
     "reused": false
   },
   {
@@ -149,8 +149,8 @@
   {
     "accepted": "aisle-integration.js",
     "url": "/pier-v2-20260910/aisle-integration.js",
-    "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6",
-    "bytes": 8841,
+    "sha256": "941f9dcd89e78948e8881e670ef46b5b913d923c51af302ae13f4d16eab11c60",
+    "bytes": 9279,
     "reused": false
   },
   {
