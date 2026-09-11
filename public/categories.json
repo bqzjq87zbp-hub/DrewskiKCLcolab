@@ -381,6 +381,15 @@
           "full": "/media/d7ad3b51e4c774c87d7a425b.jpg"
         },
         {
+          "id": "families-a-pause-for-fruit",
+          "title": "A pause for fruit",
+          "alt": "A child with wet hair holds a piece of fruit near their mouth in warm beach light, with a second child softly blurred behind.",
+          "width": 2400,
+          "height": 3200,
+          "src": "/media/expansion/72c4b6782df29805a74ffd639b60311f2054355e8bc79917843be9bb70617880.jpg",
+          "full": "/media/expansion/2024b2e56cdb0e0a86f9f0b50d3da93def38c81a96642b3cd92ef4af41a515b9.jpg"
+        },
+        {
           "id": "families-14",
           "title": "Color & play",
           "alt": "Two children stand back-to-back by the beach, holding pink and blue balls.",
@@ -854,6 +863,15 @@
           "full": "/media/481288d072d928eac1b8b2c6.jpg"
         },
         {
+          "id": "coastal-gull-beneath-glowing-clouds",
+          "title": "Beneath glowing clouds",
+          "alt": "A gull lifts its wings beside a small beach tower beneath broad layers of glowing clouds.",
+          "width": 2400,
+          "height": 3200,
+          "src": "/media/expansion/da113e5d313ae43e4b35be6977bfdc6fb34437aa10deda418befa19266530f70.jpg",
+          "full": "/media/expansion/a599d178b0f024dcfd4ac3fde1ff43c41fb9d9c5b19794931da0da4ca86ae564.jpg"
+        },
+        {
           "id": "coastal-timber-and-surf",
           "title": "Timber and surf",
           "alt": "Waves wash around barnacled timber pier posts that recede beside a broad blue sky.",
@@ -863,6 +881,15 @@
           "full": "/media/expansion/51c11a0f58321a801265734143daf0ac25e66068f9a2088185c22f2ffbbf5966.jpg"
         },
         {
+          "id": "coastal-footprints-toward-breaking-water",
+          "title": "Footprints toward the water",
+          "alt": "Footprints lead across sloping sand toward a towel-wrapped figure, with two other figures beside breaking waves.",
+          "width": 2400,
+          "height": 3200,
+          "src": "/media/expansion/4330cea4d5738c984b12ce16430c98fc3bb864a2cb8a518bbe9dd9ed38b23a7f.jpg",
+          "full": "/media/expansion/394075e67d9601133721c9a9358e649d646c0bf99e165d37bfe9b5a74727c157.jpg"
+        },
+        {
           "id": "coastal-airborne-color",
           "title": "Airborne color",
           "alt": "A child holds an orange ball overhead while a purple ball hangs in the air beside the ocean.",
@@ -870,6 +897,15 @@
           "height": 2000,
           "src": "/media/expansion/f779e04fc2a6dec79afaa243f060bf4e5a3084669c2c75188cef6b8f81899539.jpg",
           "full": "/media/expansion/221dc915ab266d904012c8bb19b75a89dda5d57cb2e1a73b4b0b0ec4c1b75a82.jpg"
+        },
+        {
+          "id": "coastal-overhead-board-and-foam",
+          "title": "Among the foam",
+          "alt": "An overhead view of a child in shallow foamy water beside a brightly colored bodyboard.",
+          "width": 2400,
+          "height": 3200,
+          "src": "/media/expansion/cd5a5d34cbf3e8b00e30ac6d427c3b2d53e2f2ae165dfe097ec574be0de62aea.jpg",
+          "full": "/media/expansion/7f3072fa1af08f6e58a4a2c3413f8d69037b8304199492a0d6009e0c79f83d09.jpg"
         },
         {
           "id": "coastal-decorated-bicycles",
@@ -917,6 +953,15 @@
           "full": "/media/expansion/29845977f9849499b3bded99ac21f0ecfea3965ee76ca6794bffececeb38d120.jpg"
         },
         {
+          "id": "coastal-bicycle-above-the-sand",
+          "title": "Bicycle above the sand",
+          "alt": "A bicycle stands on a sand ridge beneath a blue sky, with a distant head and small American flag near the water.",
+          "width": 2400,
+          "height": 3200,
+          "src": "/media/expansion/2535cd19c421b84f8f2d512d56c9bf5dddce9db34013c0692b992eb83f4b3e3c.jpg",
+          "full": "/media/expansion/9e80314584b7dd32913adcd3d4e0f68f3f5c8b72b3a0781974b482a4a238aa59.jpg"
+        },
+        {
           "id": "coastal-poise",
           "title": "Coastal poise",
           "alt": "A person seen from behind holds their hair while standing in shallow surf.",
@@ -935,6 +980,15 @@
           "full": "/media/expansion/255515aa0d6a10642423b97dc6e875218a7d0115b17803daedb3919bb57339ba.jpg"
         },
         {
+          "id": "coastal-a-rest-beside-the-boards",
+          "title": "A rest beside the boards",
+          "alt": "A barefoot child sits on a beach wagon loaded with towels and two colorful bodyboards beneath a blue sky.",
+          "width": 2400,
+          "height": 3200,
+          "src": "/media/expansion/4f9bf51c04dbee8f02d8bfa0e8827ba17092fec3b802819db1978894ea2388f9.jpg",
+          "full": "/media/expansion/53fd3137a6056f55c826ab2763bdbfad245d4f532f6b6282224ef33caa575ee7.jpg"
+        },
+        {
           "id": "coastal-waterside-walk",
           "title": "Waterside walk",
           "alt": "Two people walk a dog along a waterside path between homes and a concrete seawall under a blue sky.",
@@ -951,6 +1005,15 @@
           "height": 2133,
           "src": "/media/expansion/73886220ba53a607395ff3babbe0c7829f4a314ae66988fd9b01a0840e9d918d.jpg",
           "full": "/media/expansion/48fbea22f50f8f57155364a5db41e2ca01c47749f2079b7d4a5bfa0e764a3a65.jpg"
+        },
+        {
+          "id": "coastal-sail-above-breaking-surf",
+          "title": "Sail above breaking surf",
+          "alt": "A small white sail rises beyond a teal breaking wave beneath soft clouds.",
+          "width": 2399,
+          "height": 3200,
+          "src": "/media/expansion/84d8463438a2ef4224acd4a7720c6e541008db6eaaf423b42f20e77beb76bf40.jpg",
+          "full": "/media/expansion/fdc7b331ecfddec090ac04a865780d7bb7f17a06f42a4a86d778374ff43a32c1.jpg"
         },
         {
           "id": "coastal-ball-toss-beneath-pier",

@@ -1,4 +1,10 @@
-# Pixpa V2 integration: 104 photographs with mobile loading recovery
+# Pixpa V2 integration: 111 photographs with straight scroll travel
+
+**Current public release: Sites18**, hosting source `eabd8589db7be166352f84b4899090fe913b8dc3`, published2026-09-11T16:39:50Z. Vertical scroll now moves steadily forward/back without automatic sideways turns. Explicit Look left / Look ahead / Look right controls are visible on supported portrait phones. All **25 Branding /28 Family /36 Headshots /22 Coastal** photographs, full image files, fourteen mobile scene previews, ten easels, clear glass and sheen remain unchanged. [Movement repair and evidence](STRAIGHT-WALK-RELEASE.md) · [Seven-photo release](GOOGLE7-RELEASE.md).
+
+Current checks:111 entries,58 external derivatives/38,294,003bytes,295 hosted paths/194,808,089bytes. Nine actual-public browser profiles passed682 focused movement/interaction checks, including Chrome compositor touch and Mac WebKit focused keyboard. Source preview also passed390/1440. Seven-photo public opening/closing review is complete separately. The retained Sites16/Sites14 text below is historical evidence, not the current photograph count. Physical iPhone Safari acceptance remains separate; no physical-device performance claim is made.
+
+## Historical mobile-loading repair — Sites16
 
 **Current public release: Sites16**, hosting source `b352db8e50f3d62a8efb053b594d753fc9c33c08`, published2026-09-10T23:21:09Z. The bounded mobile-loading/recovery repair preserves all104 photographs, original full files, easel geometry and clear glass. Actual public Home-to-iframe desktop wheel, phone-profile compositor touch and WebKit keyboard walking/collection-return checks pass. Physical iPhone Safari remains unverified. [Repair, rollback and evidence](MOBILE-RELEASE.md).
 

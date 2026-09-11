@@ -770,6 +770,160 @@
       "photo_id": "coastal-feet-fins-and-bottle",
       "role": "thumbnail",
       "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/a599d178b0f024dcfd4ac3fde1ff43c41fb9d9c5b19794931da0da4ca86ae564.jpg",
+      "sha256": "a599d178b0f024dcfd4ac3fde1ff43c41fb9d9c5b19794931da0da4ca86ae564",
+      "bytes": 575747,
+      "width": 2400,
+      "height": 3200,
+      "category": "coastal",
+      "photo_id": "coastal-gull-beneath-glowing-clouds",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/da113e5d313ae43e4b35be6977bfdc6fb34437aa10deda418befa19266530f70.jpg",
+      "sha256": "da113e5d313ae43e4b35be6977bfdc6fb34437aa10deda418befa19266530f70",
+      "bytes": 54404,
+      "width": 720,
+      "height": 960,
+      "category": "coastal",
+      "photo_id": "coastal-gull-beneath-glowing-clouds",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/fdc7b331ecfddec090ac04a865780d7bb7f17a06f42a4a86d778374ff43a32c1.jpg",
+      "sha256": "fdc7b331ecfddec090ac04a865780d7bb7f17a06f42a4a86d778374ff43a32c1",
+      "bytes": 868557,
+      "width": 2399,
+      "height": 3200,
+      "category": "coastal",
+      "photo_id": "coastal-sail-above-breaking-surf",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/84d8463438a2ef4224acd4a7720c6e541008db6eaaf423b42f20e77beb76bf40.jpg",
+      "sha256": "84d8463438a2ef4224acd4a7720c6e541008db6eaaf423b42f20e77beb76bf40",
+      "bytes": 67300,
+      "width": 720,
+      "height": 960,
+      "category": "coastal",
+      "photo_id": "coastal-sail-above-breaking-surf",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/394075e67d9601133721c9a9358e649d646c0bf99e165d37bfe9b5a74727c157.jpg",
+      "sha256": "394075e67d9601133721c9a9358e649d646c0bf99e165d37bfe9b5a74727c157",
+      "bytes": 1757042,
+      "width": 2400,
+      "height": 3200,
+      "category": "coastal",
+      "photo_id": "coastal-footprints-toward-breaking-water",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/4330cea4d5738c984b12ce16430c98fc3bb864a2cb8a518bbe9dd9ed38b23a7f.jpg",
+      "sha256": "4330cea4d5738c984b12ce16430c98fc3bb864a2cb8a518bbe9dd9ed38b23a7f",
+      "bytes": 117927,
+      "width": 720,
+      "height": 960,
+      "category": "coastal",
+      "photo_id": "coastal-footprints-toward-breaking-water",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/9e80314584b7dd32913adcd3d4e0f68f3f5c8b72b3a0781974b482a4a238aa59.jpg",
+      "sha256": "9e80314584b7dd32913adcd3d4e0f68f3f5c8b72b3a0781974b482a4a238aa59",
+      "bytes": 660797,
+      "width": 2400,
+      "height": 3200,
+      "category": "coastal",
+      "photo_id": "coastal-bicycle-above-the-sand",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/2535cd19c421b84f8f2d512d56c9bf5dddce9db34013c0692b992eb83f4b3e3c.jpg",
+      "sha256": "2535cd19c421b84f8f2d512d56c9bf5dddce9db34013c0692b992eb83f4b3e3c",
+      "bytes": 58000,
+      "width": 720,
+      "height": 960,
+      "category": "coastal",
+      "photo_id": "coastal-bicycle-above-the-sand",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/7f3072fa1af08f6e58a4a2c3413f8d69037b8304199492a0d6009e0c79f83d09.jpg",
+      "sha256": "7f3072fa1af08f6e58a4a2c3413f8d69037b8304199492a0d6009e0c79f83d09",
+      "bytes": 2552861,
+      "width": 2400,
+      "height": 3200,
+      "category": "coastal",
+      "photo_id": "coastal-overhead-board-and-foam",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/cd5a5d34cbf3e8b00e30ac6d427c3b2d53e2f2ae165dfe097ec574be0de62aea.jpg",
+      "sha256": "cd5a5d34cbf3e8b00e30ac6d427c3b2d53e2f2ae165dfe097ec574be0de62aea",
+      "bytes": 199767,
+      "width": 720,
+      "height": 960,
+      "category": "coastal",
+      "photo_id": "coastal-overhead-board-and-foam",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/2024b2e56cdb0e0a86f9f0b50d3da93def38c81a96642b3cd92ef4af41a515b9.jpg",
+      "sha256": "2024b2e56cdb0e0a86f9f0b50d3da93def38c81a96642b3cd92ef4af41a515b9",
+      "bytes": 900534,
+      "width": 2400,
+      "height": 3200,
+      "category": "families",
+      "photo_id": "families-a-pause-for-fruit",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/72c4b6782df29805a74ffd639b60311f2054355e8bc79917843be9bb70617880.jpg",
+      "sha256": "72c4b6782df29805a74ffd639b60311f2054355e8bc79917843be9bb70617880",
+      "bytes": 84392,
+      "width": 720,
+      "height": 960,
+      "category": "families",
+      "photo_id": "families-a-pause-for-fruit",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/53fd3137a6056f55c826ab2763bdbfad245d4f532f6b6282224ef33caa575ee7.jpg",
+      "sha256": "53fd3137a6056f55c826ab2763bdbfad245d4f532f6b6282224ef33caa575ee7",
+      "bytes": 1663314,
+      "width": 2400,
+      "height": 3200,
+      "category": "coastal",
+      "photo_id": "coastal-a-rest-beside-the-boards",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/4f9bf51c04dbee8f02d8bfa0e8827ba17092fec3b802819db1978894ea2388f9.jpg",
+      "sha256": "4f9bf51c04dbee8f02d8bfa0e8827ba17092fec3b802819db1978894ea2388f9",
+      "bytes": 129446,
+      "width": 720,
+      "height": 960,
+      "category": "coastal",
+      "photo_id": "coastal-a-rest-beside-the-boards",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
     }
   ]
 }

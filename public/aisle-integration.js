@@ -21,7 +21,7 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   const start=document.createElement('button');start.type='button';start.className='aisle-start-walk';start.textContent='Start walk';
   start.onclick=()=>{travelChoice.value='guided';engine.setMotionPreference('guided');try{sessionStorage.setItem('kcl-preview-travel-v2','guided');}catch{}schedule();};engine.viewport.append(start);
   const looks=document.createElement('div');looks.className='aisle-look-controls';looks.setAttribute('aria-label','Look toward the artworks');
-  for(const[direction,label]of[['left','Look left'],['auto','Auto'],['right','Look right']]){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',String(direction==='auto'));b.onclick=()=>{engine.setLook(direction);for(const other of looks.children)other.setAttribute('aria-pressed',String(other===b));};looks.append(b);}menu.querySelector('nav').append(looks);
+  for(const[direction,label]of[['left','Look left'],['ahead','Look ahead'],['right','Look right']]){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',String(direction==='ahead'));b.onclick=()=>{engine.setLook(direction);for(const other of looks.children)other.setAttribute('aria-pressed',String(other===b));};looks.append(b);}engine.viewport.append(looks);
   const note=document.querySelector('.note');note.textContent='Your original pier photograph, with dimensional wooden easels and printed canvas. The photographic walk and experimental video are still in visual review.';
   for(const{slot,anchor}of engine.slotAnchors){anchor.href='#collection/'+slot.category;anchor.setAttribute('aria-label','Explore '+slot.categoryLabel);}
   engine.journey.querySelectorAll('.aisle-fallback a').forEach(a=>a.href='#collection/'+a.dataset.category);
@@ -38,7 +38,7 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
   prev.onclick=()=>step(-1);next.onclick=()=>step(1);
   let frame=0;
   function layout(){frame=0;if(collections.active||mount.hidden)return;const state=engine.getState();if(!state.viewport.width||!state.viewport.height)return;
-    start.hidden=!state.reducedMotion;looks.hidden=state.reducedMotion;stepTools.hidden=state.reducedMotion;
+    start.hidden=!state.reducedMotion;looks.hidden=state.reducedMotion||!state.physical?.environment?.camera?.sideLookSupported;stepTools.hidden=state.reducedMotion;
     // Respect the rendered scene size, which can be shorter than the window.
     menu.style.setProperty('--aisle-menu-height',Math.max(48,state.viewport.height-96)+'px');
     menu.dataset.sideLook=String(Boolean(state.physical?.environment?.camera?.sideLookSupported));
@@ -46,6 +46,7 @@ export function attachAisle({slots,collections,enterCategory,menu,signLayer}){
     invitation.style.opacity=String(invitationOpacity);invitation.setAttribute('aria-hidden',String(invitationOpacity===0));
     invitationCue.textContent=state.reducedMotion?'Choose a collection below to explore.':'Scroll or swipe to explore.';
     const labeledSides=new Set(),reserved=[menu.getBoundingClientRect(),progress.getBoundingClientRect()];
+    if(!looks.hidden)reserved.push(looks.getBoundingClientRect());
     const openPanel=menu.querySelector('nav:not([hidden])');
     if(openPanel)reserved.push(openPanel.getBoundingClientRect());
     if(invitationOpacity>.05)reserved.push(invitation.getBoundingClientRect());

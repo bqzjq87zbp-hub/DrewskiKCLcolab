@@ -1,7 +1,7 @@
 import {homography} from '/canvas-wrap.js';
 import {sceneImage} from '../scene-images.js';
 import {createVideoFrameSeam} from './video-frame-seam.js';
-import {DEPTHS as depths,TRAVEL as travel,galleryAutoYaw,galleryDistance} from './gallery-layout.js';
+import {DEPTHS as depths,galleryDistance} from './gallery-layout.js';
 
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 /** A physical photographic forward/back walk with an ordinary-photo fallback. No wheel or touch interception.
@@ -31,7 +31,7 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
     return{slot,group,anchor,depth:depths[slot.depth],scale:1,projectedQuad:[]};
   });
   journey.append(viewport,fallback);container.append(journey);
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let motionPreference='system',frame=0,destroyed=false,p=0,z=0,look='auto',lastPaint=0,dimensions={width:0,height:0},frameCount=0;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let motionPreference='system',frame=0,destroyed=false,p=0,z=0,look='ahead',lastPaint=0,dimensions={width:0,height:0},frameCount=0;
   const video=createVideoFrameSeam({viewport,poster:original,onReady:schedule});
   let physical={ready:false,getState:()=>({ready:false,painted:false,error:null}),render:()=>null,destroy:()=>{}};
   let failed=false,lastInteraction=performance.now();
@@ -86,13 +86,11 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
     video.setSuppressed(reducedMode||reduced.matches);video.request(requestedProgress);
     const committed=video.commit();p=committed?committed.progress:requestedProgress;
     z=committed?null:galleryDistance(p);
-    // In portrait, vertical scrolling gently looks across each pair so every
-    // artwork is visible without tapping another control. No timed autoplay.
-    const portrait=dimensions.width<600&&dimensions.width<dimensions.height;
+    // Scrolling moves along the aisle. Only an explicit look control changes
+    // heading, on phones as well as desktop; it never oscillates with progress.
     const aimedLook=look==='left'?1:look==='right'?-1:0;
-    const autoYaw=look==='auto'&&portrait?galleryAutoYaw(p):null;
     let physicalFrames=null;
-    try{physicalFrames=physical.render({width:dimensions.width,height:dimensions.height,progress:p,committed,reduced:reducedMode||reduced.matches,time:now/1000,look:aimedLook,autoYaw});}
+    try{physicalFrames=physical.render({width:dimensions.width,height:dimensions.height,progress:p,committed,reduced:reducedMode||reduced.matches,time:now/1000,look:aimedLook});}
     catch{fail('scene-render-failed');}
     if(physical.getState()?.error&&!failed)fail(physical.getState().error);
     if(physicalFrames){clearTimeout(deadline);loading.hidden=true;viewport.dataset.loading='false';}
@@ -127,7 +125,7 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
   function resize(){lastInteraction=performance.now();measure(true);schedule();}
   function preference(){journey.dataset.reduced=String(isReduced());measure();schedule();}
   function setMotionPreference(mode){if(!['system','guided','still'].includes(mode))throw new TypeError('Motion preference must be system, guided or still');motionPreference=mode;preference();return mode;}
-  function setLook(direction){look=['left','right','ahead','auto'].includes(direction)?direction:'auto';schedule();}
+  function setLook(direction){look=['left','right','ahead'].includes(direction)?direction:'ahead';schedule();}
   document.addEventListener('visibilitychange',schedule);
   const observer=new ResizeObserver(resize);observer.observe(viewport);window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',resize,{passive:true});reduced.addEventListener('change',preference);preference();
   original.decode().then(resize).catch(()=>fail('poster-unavailable'));

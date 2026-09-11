@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "viewport": "WebKit26.4 mobile390x844",
+  "observedFrom": "2026-09-11T00:06:02.505Z",
+  "observedUntil": "2026-09-11T00:06:13.978Z",
+  "items": [
+    {
+      "id": "coastal-gull-beneath-glowing-clouds",
+      "title": "Beneath glowing clouds",
+      "category": "coastal",
+      "position": 5,
+      "fullURL": "https://px-files.pixpa.com/848127/1789083748068-3885.jpg",
+      "decodedWidth": 2400,
+      "decodedHeight": 3200,
+      "fit": "contain",
+      "opened": true,
+      "closed": true,
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-sail-above-breaking-surf",
+      "title": "Sail above breaking surf",
+      "category": "coastal",
+      "position": 21,
+      "fullURL": "https://px-files.pixpa.com/848127/1789083825928-9903.jpg",
+      "decodedWidth": 2399,
+      "decodedHeight": 3200,
+      "fit": "contain",
+      "opened": true,
+      "closed": true,
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-footprints-toward-breaking-water",
+      "title": "Footprints toward the water",
+      "category": "coastal",
+      "position": 7,
+      "fullURL": "https://px-files.pixpa.com/848127/1789083879201-5445.jpg",
+      "decodedWidth": 2400,
+      "decodedHeight": 3200,
+      "fit": "contain",
+      "opened": true,
+      "closed": true,
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-bicycle-above-the-sand",
+      "title": "Bicycle above the sand",
+      "category": "coastal",
+      "position": 15,
+      "fullURL": "https://px-files.pixpa.com/848127/1789083911474-7733.jpg",
+      "decodedWidth": 2400,
+      "decodedHeight": 3200,
+      "fit": "contain",
+      "opened": true,
+      "closed": true,
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-overhead-board-and-foam",
+      "title": "Among the foam",
+      "category": "coastal",
+      "position": 9,
+      "fullURL": "https://px-files.pixpa.com/848127/1789083955341-2276.jpg",
+      "decodedWidth": 2400,
+      "decodedHeight": 3200,
+      "fit": "contain",
+      "opened": true,
+      "closed": true,
+      "categoryPreserved": true
+    },
+    {
+      "id": "families-a-pause-for-fruit",
+      "title": "A pause for fruit",
+      "category": "families",
+      "position": 17,
+      "fullURL": "https://px-files.pixpa.com/848127/1789083995056-8313.jpg",
+      "decodedWidth": 2400,
+      "decodedHeight": 3200,
+      "fit": "contain",
+      "opened": true,
+      "closed": true,
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-a-rest-beside-the-boards",
+      "title": "A rest beside the boards",
+      "category": "coastal",
+      "position": 18,
+      "fullURL": "https://px-files.pixpa.com/848127/1789084029599-1332.jpg",
+      "decodedWidth": 2400,
+      "decodedHeight": 3200,
+      "fit": "contain",
+      "opened": true,
+      "closed": true,
+      "categoryPreserved": true
+    }
+  ],
+  "exactAisleReturnDifference": 0
+}

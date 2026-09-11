@@ -1,0 +1,54 @@
+{
+  "id": "straight-walk-2026-09-11",
+  "scope": "Source handoff and direct unrewritten preview; does not certify the live Pixpa wrapper or visual realism.",
+  "travelMetres": 7,
+  "focusStops": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "defaultLook": "ahead",
+  "requestedLookRadians": 0.39,
+  "photographicSourceGuard": "The renderer may bound explicit requested look to the original photograph; scrolling may not request yaw.",
+  "photographs": 111,
+  "categories": [
+    {
+      "id": "branding",
+      "count": 25
+    },
+    {
+      "id": "families",
+      "count": 28
+    },
+    {
+      "id": "headshots",
+      "count": 36
+    },
+    {
+      "id": "coastal",
+      "count": 22
+    }
+  ],
+  "browserProfiles": [
+    {
+      "width": 390,
+      "height": 844,
+      "touch": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "touch": false
+    }
+  ],
+  "sourceSha256": {
+    "public/aisle/gallery-layout.js": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7",
+    "public/aisle/photographic-aisle.js": "6c4a072e58f1de20a8211f7c2895a1619fddcebbe3576799eb059883edd37a55",
+    "public/aisle-integration.js": "caa23f37401bc5e516d75f4707e98d1edfccb6510c903f1f9fd0ec655efe320e",
+    "public/aisle/aisle.css": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd",
+    "public/categories.json": "2a8a7067f1b3b0cc3e8809a1f5e02d6c344c0b903e74fa938ce3de63c989776d"
+  },
+  "historicalContract": "scripts/qa-photograph-interaction.mjs and B7m auto-yaw/reading-pause evidence remain historical and are not acceptance tests for this linear-walk contract."
+}

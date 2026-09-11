@@ -1,0 +1,71 @@
+{
+  "engine": "chromium",
+  "profile": "desktop-1440x900",
+  "physicalDevice": false,
+  "scope": "Actual public wrapper and embedded111 gallery; all7 additions opened/closed on mobile, other viewport/full-file checks representative",
+  "errors": [],
+  "pageErrors": [],
+  "console": [
+    {
+      "type": "warning",
+      "message": "Unrecognized feature: 'webgpu'.",
+      "url": "https://kiyonocreativelab.com/pier-gallery?release=google111-live-20260910",
+      "scope": "wrapper-or-third-party"
+    }
+  ],
+  "assets": [],
+  "metadata": [],
+  "viewers": [],
+  "screenshots": [
+    "chromium-failure.png"
+  ],
+  "started": "2026-09-11T00:06:02.507Z",
+  "browserVersion": "152.0.7977.83",
+  "publicManifest": {
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/categories.json",
+    "status": 200,
+    "bytes": 48279,
+    "sha256": "825e08e10d64116a0b18ed65ce7c9072135a5c3bff0d4288a03bc8d6afdced25"
+  },
+  "wrapper": {
+    "url": "https://kiyonocreativelab.com/pier-gallery?release=google111-live-20260910",
+    "title": "Pier Gallery | Kiyono Creative Lab",
+    "childURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+    "layout": {
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
+      "documentWidth": 1440,
+      "root": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "iframe": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      }
+    }
+  },
+  "entry": {
+    "progress": 0,
+    "scrollY": 0,
+    "frameCount": 5,
+    "physical": {
+      "ready": true,
+      "painted": true,
+      "error": null,
+      "mobile": false,
+      "cameraDistance": 0
+    }
+  },
+  "preferences": {
+    "motion": false,
+    "transparency": true
+  },
+  "pass": false,
+  "failure": "Normal visual preferences required",
+  "finished": "2026-09-11T00:06:08.400Z"
+}
