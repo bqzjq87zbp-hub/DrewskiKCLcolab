@@ -29,12 +29,12 @@ export function createVideoFrameSeam({viewport, poster, onReady, manifestURL='/v
   function updateControl() {
     button.disabled=suppressed;
     button.setAttribute('aria-pressed',String(enabled&&!suppressed));
-    button.textContent=enabled&&!suppressed?'Return to still photo':'Preview video walk';
+    button.textContent=enabled&&!suppressed?'Return to photographic walk':'Preview video walk';
     if(suppressed)announce('Video preview is off in Still or reduced motion.');
     else if(failed)announce('Video preview unavailable. The still photograph remains available.');
     else if(!enabled)announce('');
     else if(!manifest||committed<0)announce('Loading video frame…');
-    else announce('Video preview · 2D tracked alignment; depth is approximate.');
+    else announce('Experimental video preview · alignment still in review.');
   }
   function release(entry) {
     if(!entry)return;

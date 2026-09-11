@@ -1,0 +1,519 @@
+{
+  "engine": "webkit",
+  "profile": "mobile-390x844",
+  "physicalDevice": false,
+  "scope": "Actual public wrapper and embedded111 gallery; all7 additions opened/closed on mobile, other viewport/full-file checks representative",
+  "errors": [],
+  "pageErrors": [],
+  "console": [
+    {
+      "type": "warning",
+      "message": "window.styleMedia is a deprecated draft version of window.matchMedia API, and it will be removed in the future.",
+      "url": "",
+      "scope": "unknown"
+    }
+  ],
+  "assets": [
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083748068-3885.jpg",
+      "status": 200,
+      "bytes": 575747,
+      "sha256": "a599d178b0f024dcfd4ac3fde1ff43c41fb9d9c5b19794931da0da4ca86ae564",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083787534-3108.jpg",
+      "status": 200,
+      "bytes": 54404,
+      "sha256": "da113e5d313ae43e4b35be6977bfdc6fb34437aa10deda418befa19266530f70",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083825928-9903.jpg",
+      "status": 200,
+      "bytes": 868557,
+      "sha256": "fdc7b331ecfddec090ac04a865780d7bb7f17a06f42a4a86d778374ff43a32c1",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083853335-4128.jpg",
+      "status": 200,
+      "bytes": 67300,
+      "sha256": "84d8463438a2ef4224acd4a7720c6e541008db6eaaf423b42f20e77beb76bf40",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083879201-5445.jpg",
+      "status": 200,
+      "bytes": 1757042,
+      "sha256": "394075e67d9601133721c9a9358e649d646c0bf99e165d37bfe9b5a74727c157",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083892332-2072.jpg",
+      "status": 200,
+      "bytes": 117927,
+      "sha256": "4330cea4d5738c984b12ce16430c98fc3bb864a2cb8a518bbe9dd9ed38b23a7f",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083911474-7733.jpg",
+      "status": 200,
+      "bytes": 660797,
+      "sha256": "9e80314584b7dd32913adcd3d4e0f68f3f5c8b72b3a0781974b482a4a238aa59",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083937804-2360.jpg",
+      "status": 200,
+      "bytes": 58000,
+      "sha256": "2535cd19c421b84f8f2d512d56c9bf5dddce9db34013c0692b992eb83f4b3e3c",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083955341-2276.jpg",
+      "status": 200,
+      "bytes": 2552861,
+      "sha256": "7f3072fa1af08f6e58a4a2c3413f8d69037b8304199492a0d6009e0c79f83d09",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083981517-5276.jpg",
+      "status": 200,
+      "bytes": 199767,
+      "sha256": "cd5a5d34cbf3e8b00e30ac6d427c3b2d53e2f2ae165dfe097ec574be0de62aea",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789083995056-8313.jpg",
+      "status": 200,
+      "bytes": 900534,
+      "sha256": "2024b2e56cdb0e0a86f9f0b50d3da93def38c81a96642b3cd92ef4af41a515b9",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789084017715-2164.jpg",
+      "status": 200,
+      "bytes": 84392,
+      "sha256": "72c4b6782df29805a74ffd639b60311f2054355e8bc79917843be9bb70617880",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789084029599-1332.jpg",
+      "status": 200,
+      "bytes": 1663314,
+      "sha256": "53fd3137a6056f55c826ab2763bdbfad245d4f532f6b6282224ef33caa575ee7",
+      "pass": true
+    },
+    {
+      "path": "https://px-files.pixpa.com/848127/1789084041991-4031.jpg",
+      "status": 200,
+      "bytes": 129446,
+      "sha256": "4f9bf51c04dbee8f02d8bfa0e8827ba17092fec3b802819db1978894ea2388f9",
+      "pass": true
+    }
+  ],
+  "metadata": [
+    {
+      "id": "families-a-pause-for-fruit",
+      "category": "families",
+      "position": 17,
+      "pass": true,
+      "label": "Enlarge photograph: A pause for fruit",
+      "href": "https://px-files.pixpa.com/848127/1789083995056-8313.jpg",
+      "src": "https://px-files.pixpa.com/848127/1789084017715-2164.jpg",
+      "alt": "A child with wet hair holds a piece of fruit near their mouth in warm beach light, with a second child softly blurred behind.",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain"
+    },
+    {
+      "id": "coastal-gull-beneath-glowing-clouds",
+      "category": "coastal",
+      "position": 5,
+      "pass": true,
+      "label": "Enlarge photograph: Beneath glowing clouds",
+      "href": "https://px-files.pixpa.com/848127/1789083748068-3885.jpg",
+      "src": "https://px-files.pixpa.com/848127/1789083787534-3108.jpg",
+      "alt": "A gull lifts its wings beside a small beach tower beneath broad layers of glowing clouds.",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain"
+    },
+    {
+      "id": "coastal-sail-above-breaking-surf",
+      "category": "coastal",
+      "position": 21,
+      "pass": true,
+      "label": "Enlarge photograph: Sail above breaking surf",
+      "href": "https://px-files.pixpa.com/848127/1789083825928-9903.jpg",
+      "src": "https://px-files.pixpa.com/848127/1789083853335-4128.jpg",
+      "alt": "A small white sail rises beyond a teal breaking wave beneath soft clouds.",
+      "width": 2399,
+      "height": 3200,
+      "fit": "contain"
+    },
+    {
+      "id": "coastal-footprints-toward-breaking-water",
+      "category": "coastal",
+      "position": 7,
+      "pass": true,
+      "label": "Enlarge photograph: Footprints toward the water",
+      "href": "https://px-files.pixpa.com/848127/1789083879201-5445.jpg",
+      "src": "https://px-files.pixpa.com/848127/1789083892332-2072.jpg",
+      "alt": "Footprints lead across sloping sand toward a towel-wrapped figure, with two other figures beside breaking waves.",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain"
+    },
+    {
+      "id": "coastal-bicycle-above-the-sand",
+      "category": "coastal",
+      "position": 15,
+      "pass": true,
+      "label": "Enlarge photograph: Bicycle above the sand",
+      "href": "https://px-files.pixpa.com/848127/1789083911474-7733.jpg",
+      "src": "https://px-files.pixpa.com/848127/1789083937804-2360.jpg",
+      "alt": "A bicycle stands on a sand ridge beneath a blue sky, with a distant head and small American flag near the water.",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain"
+    },
+    {
+      "id": "coastal-overhead-board-and-foam",
+      "category": "coastal",
+      "position": 9,
+      "pass": true,
+      "label": "Enlarge photograph: Among the foam",
+      "href": "https://px-files.pixpa.com/848127/1789083955341-2276.jpg",
+      "src": "https://px-files.pixpa.com/848127/1789083981517-5276.jpg",
+      "alt": "An overhead view of a child in shallow foamy water beside a brightly colored bodyboard.",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain"
+    },
+    {
+      "id": "coastal-a-rest-beside-the-boards",
+      "category": "coastal",
+      "position": 18,
+      "pass": true,
+      "label": "Enlarge photograph: A rest beside the boards",
+      "href": "https://px-files.pixpa.com/848127/1789084029599-1332.jpg",
+      "src": "https://px-files.pixpa.com/848127/1789084041991-4031.jpg",
+      "alt": "A barefoot child sits on a beach wagon loaded with towels and two colorful bodyboards beneath a blue sky.",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain"
+    }
+  ],
+  "viewers": [
+    {
+      "id": "families-a-pause-for-fruit",
+      "src": "https://px-files.pixpa.com/848127/1789083995056-8313.jpg",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain",
+      "x": 32,
+      "y": 99.765625,
+      "displayWidth": 326,
+      "displayHeight": 677.84375,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "fullHref": "https://px-files.pixpa.com/848127/1789083995056-8313.jpg",
+      "pass": true,
+      "closed": true,
+      "categoryAfterClose": "families",
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-gull-beneath-glowing-clouds",
+      "src": "https://px-files.pixpa.com/848127/1789083748068-3885.jpg",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain",
+      "x": 32,
+      "y": 99.765625,
+      "displayWidth": 326,
+      "displayHeight": 677.84375,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "fullHref": "https://px-files.pixpa.com/848127/1789083748068-3885.jpg",
+      "pass": true,
+      "closed": true,
+      "categoryAfterClose": "coastal",
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-sail-above-breaking-surf",
+      "src": "https://px-files.pixpa.com/848127/1789083825928-9903.jpg",
+      "width": 2399,
+      "height": 3200,
+      "fit": "contain",
+      "x": 32,
+      "y": 99.765625,
+      "displayWidth": 326,
+      "displayHeight": 677.84375,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "fullHref": "https://px-files.pixpa.com/848127/1789083825928-9903.jpg",
+      "pass": true,
+      "closed": true,
+      "categoryAfterClose": "coastal",
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-footprints-toward-breaking-water",
+      "src": "https://px-files.pixpa.com/848127/1789083879201-5445.jpg",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain",
+      "x": 32,
+      "y": 99.765625,
+      "displayWidth": 326,
+      "displayHeight": 677.84375,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "fullHref": "https://px-files.pixpa.com/848127/1789083879201-5445.jpg",
+      "pass": true,
+      "closed": true,
+      "categoryAfterClose": "coastal",
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-bicycle-above-the-sand",
+      "src": "https://px-files.pixpa.com/848127/1789083911474-7733.jpg",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain",
+      "x": 32,
+      "y": 99.765625,
+      "displayWidth": 326,
+      "displayHeight": 677.84375,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "fullHref": "https://px-files.pixpa.com/848127/1789083911474-7733.jpg",
+      "pass": true,
+      "closed": true,
+      "categoryAfterClose": "coastal",
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-overhead-board-and-foam",
+      "src": "https://px-files.pixpa.com/848127/1789083955341-2276.jpg",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain",
+      "x": 32,
+      "y": 99.765625,
+      "displayWidth": 326,
+      "displayHeight": 677.84375,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "fullHref": "https://px-files.pixpa.com/848127/1789083955341-2276.jpg",
+      "pass": true,
+      "closed": true,
+      "categoryAfterClose": "coastal",
+      "categoryPreserved": true
+    },
+    {
+      "id": "coastal-a-rest-beside-the-boards",
+      "src": "https://px-files.pixpa.com/848127/1789084029599-1332.jpg",
+      "width": 2400,
+      "height": 3200,
+      "fit": "contain",
+      "x": 32,
+      "y": 99.765625,
+      "displayWidth": 326,
+      "displayHeight": 677.84375,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "fullHref": "https://px-files.pixpa.com/848127/1789084029599-1332.jpg",
+      "pass": true,
+      "closed": true,
+      "categoryAfterClose": "coastal",
+      "categoryPreserved": true
+    }
+  ],
+  "screenshots": [
+    "webkit-ready.png",
+    "webkit-walk-forward.png",
+    "webkit-families-a-pause-for-fruit-grid.png",
+    "webkit-families-a-pause-for-fruit-full.png",
+    "webkit-coastal-sail-above-breaking-surf-grid.png",
+    "webkit-coastal-sail-above-breaking-surf-full.png",
+    "webkit-returned.png",
+    "webkit-failure.png"
+  ],
+  "started": "2026-09-11T00:06:02.505Z",
+  "browserVersion": "26.4",
+  "publicManifest": {
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/categories.json",
+    "status": 200,
+    "bytes": 48279,
+    "sha256": "825e08e10d64116a0b18ed65ce7c9072135a5c3bff0d4288a03bc8d6afdced25"
+  },
+  "wrapper": {
+    "url": "https://kiyonocreativelab.com/pier-gallery?release=google111-live-20260910",
+    "title": "Pier Gallery | Kiyono Creative Lab",
+    "childURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+    "layout": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "documentWidth": 390,
+      "root": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 843.984375
+      },
+      "iframe": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 843.984375
+      }
+    }
+  },
+  "entry": {
+    "progress": 0,
+    "scrollY": 0,
+    "frameCount": 4,
+    "physical": {
+      "ready": true,
+      "painted": true,
+      "error": null,
+      "mobile": true,
+      "cameraDistance": 0
+    }
+  },
+  "preferences": {
+    "motion": false,
+    "transparency": false
+  },
+  "walkStart": {
+    "progress": 0,
+    "scrollY": 0,
+    "frameCount": 4,
+    "physical": {
+      "ready": true,
+      "painted": true,
+      "error": null,
+      "mobile": true,
+      "cameraDistance": 0
+    }
+  },
+  "walkForward": {
+    "progress": 0.11190100052659295,
+    "scrollY": 850,
+    "frameCount": 13,
+    "physical": {
+      "ready": true,
+      "painted": true,
+      "error": null,
+      "mobile": true,
+      "cameraDistance": 0.09958000039113775
+    }
+  },
+  "walkBackward": {
+    "progress": 0.03291205897840969,
+    "scrollY": 250,
+    "frameCount": 28,
+    "physical": {
+      "ready": true,
+      "painted": true,
+      "error": null,
+      "mobile": true,
+      "cameraDistance": 0.04453867258288249
+    }
+  },
+  "walkInput": "Programmatic child scroll; native browser taps for gallery actions",
+  "anchor": {
+    "progress": 0.014481305950500263,
+    "scrollY": 110,
+    "frameCount": 42,
+    "physical": {
+      "ready": true,
+      "painted": true,
+      "error": null,
+      "mobile": true,
+      "cameraDistance": 0.01673597541641762
+    }
+  },
+  "familiesLayout": {
+    "viewport": 390,
+    "documentWidth": 390,
+    "visibleHeader": [
+      {
+        "x": 35,
+        "width": 163.25
+      },
+      {
+        "x": 35,
+        "width": 320
+      }
+    ]
+  },
+  "coastalLayout": {
+    "viewport": 390,
+    "documentWidth": 390,
+    "visibleHeader": [
+      {
+        "x": 35,
+        "width": 163.25
+      },
+      {
+        "x": 35,
+        "width": 320
+      }
+    ]
+  },
+  "fullFile": {
+    "id": "coastal-sail-above-breaking-surf",
+    "url": "https://px-files.pixpa.com/848127/1789083825928-9903.jpg",
+    "width": 2399,
+    "height": 3200,
+    "pass": true
+  },
+  "returned": {
+    "progress": 0.014481305950500263,
+    "scrollY": 110,
+    "frameCount": 58,
+    "physical": {
+      "ready": true,
+      "painted": true,
+      "error": null,
+      "mobile": true,
+      "cameraDistance": 0.01673597541641762
+    }
+  },
+  "returnProgressDifference": 0,
+  "wrapperAfterReturn": {
+    "viewportWidth": 390,
+    "viewportHeight": 844,
+    "documentWidth": 390,
+    "root": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 843.984375
+    },
+    "iframe": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 843.984375
+    }
+  },
+  "wrapperErrors": [],
+  "scopedConsole": [
+    {
+      "type": "warning",
+      "message": "window.styleMedia is a deprecated draft version of window.matchMedia API, and it will be removed in the future.",
+      "url": "",
+      "scope": "unknown"
+    }
+  ],
+  "pass": false,
+  "failure": "Unexpected gallery error or warning",
+  "finished": "2026-09-11T00:06:13.978Z"
+}

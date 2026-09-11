@@ -1,13 +1,16 @@
 const el=(tag,attrs={},text)=>{const node=document.createElement(tag);for(const[k,v]of Object.entries(attrs))node.setAttribute(k,v);if(text)node.textContent=text;return node;};
 
-export async function createCollections({onEnlarge}){
+export async function createCollections({onEnlarge,onNavigate=()=>{},captureReturn=()=>null,restoreReturn=()=>false}){
   const response=await fetch('/categories.json');
   if(!response.ok)throw new Error('The collection manifest is unavailable.');
   const manifest=await response.json();
   const data=new Map(manifest.categories.map(c=>[c.id,c]));
   const section=el('section',{id:'collection-view',class:'collection-view',hidden:'',tabindex:'-1','aria-labelledby':'collection-title'});
   document.querySelector('main').append(section);
-  let returnY=0,returnFocus=null,active=null;
+  let returnY=0,returnPosition=null,returnFocus=null,active=null;
+  // This view restores its own return position. Native history restoration
+  // would overwrite the resized walk fraction with the entry's old pixel Y.
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
 
   const itemUrl=(item,full=false)=>full?(item.full||item.src):item.src;
   function makePhoto(item,items,index){
@@ -48,19 +51,24 @@ export async function createCollections({onEnlarge}){
     return true;
   }
   function show(id,{focus=true}={}){
+    if(!data.has(id))return;onNavigate();
     if(!render(id))return;
     for(const node of document.querySelector('main').children)if(node!==section)node.hidden=true;
     section.hidden=false;document.body.dataset.view='collection';scrollTo({top:0,behavior:'instant'});if(focus)section.focus({preventScroll:true});
   }
   function open(id,trigger){
     if(!data.has(id))return;
-    if(!active){returnY=scrollY;returnFocus=trigger||document.activeElement;history.replaceState({...history.state,aisleY:returnY},'',location.href);}
-    const method=active?'replaceState':'pushState';history[method]({localCollection:true,aisleY:returnY},'','#collection/'+id);show(id);
+    if(!active){returnY=scrollY;returnPosition=captureReturn();returnFocus=trigger||document.activeElement;history.replaceState({...history.state,aisleY:returnY,aislePosition:returnPosition},'',location.href);}
+    // A direct collection entry has no local aisle entry behind it. Replacing
+    // its category must preserve that fact so Back stays inside the gallery.
+    const localCollection=!active||history.state?.localCollection===true;
+    const method=active?'replaceState':'pushState';history[method]({localCollection,aisleY:returnY,aislePosition:returnPosition},'','#collection/'+id);show(id);
   }
   function restore(){
+    onNavigate();
     active=null;section.hidden=true;for(const o of section._roomObservers||[])o.disconnect();section._roomObservers=[];
     for(const node of document.querySelector('main').children)if(node!==section&&node.dataset.keepHidden!=='true')node.hidden=false;
-    document.body.dataset.view='aisle';scrollTo({top:returnY,behavior:'instant'});returnFocus?.isConnected&&returnFocus.focus({preventScroll:true});
+    document.body.dataset.view='aisle';if(!restoreReturn(returnPosition))scrollTo({top:returnY,behavior:'instant'});returnFocus?.isConnected&&returnFocus.focus({preventScroll:true});
     // The photographic camera remeasures after its hidden parent reopens.
     // Keep focus restoration bounded and wait out its transient hidden frame;
     // never take focus back if the visitor has moved to another control.
@@ -74,7 +82,7 @@ export async function createCollections({onEnlarge}){
     if(history.state?.localCollection){history.back();return;}
     history.replaceState(null,'',location.pathname+location.search);restore();
   }
-  addEventListener('popstate',()=>{const id=decodeURIComponent(location.hash.replace(/^#collection\//,''));if(data.has(id)){show(id);}else if(active){if(Number.isFinite(history.state?.aisleY))returnY=history.state.aisleY;restore();}});
+  addEventListener('popstate',()=>{const id=decodeURIComponent(location.hash.replace(/^#collection\//,''));if(data.has(id)){show(id);}else if(active){if(Number.isFinite(history.state?.aisleY)){returnY=history.state.aisleY;returnPosition=history.state.aislePosition??null;}restore();}});
   addEventListener('keydown',e=>{if(e.key==='Escape'&&active&&!document.querySelector('dialog[open]')){e.preventDefault();close();}});
   const initial=decodeURIComponent(location.hash.replace(/^#collection\//,''));if(data.has(initial))show(initial,{focus:false});
   return{open,close,data,get active(){return active;},section};

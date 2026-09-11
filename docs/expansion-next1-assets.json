@@ -1,0 +1,28 @@
+{
+  "schema": "kcl-expansion-assets-v1",
+  "baseCommit": "26ffff0304b95c0ca36b9f568318cabbd34da434",
+  "assets": [
+    {
+      "path": "public/media/expansion/3f47d1ada5922f3e81783a6bcfea233d92193805f410d87726f0c43519c96b83.jpg",
+      "sha256": "3f47d1ada5922f3e81783a6bcfea233d92193805f410d87726f0c43519c96b83",
+      "bytes": 659143,
+      "width": 3200,
+      "height": 2133,
+      "category": "families",
+      "photo_id": "families-wrapped-in-evening-light",
+      "role": "full",
+      "public_eligibility": "eligible"
+    },
+    {
+      "path": "public/media/expansion/7def7dff1221c89934c925d5227bc5ded02a15f9a336fda00764bfb5693f6fc0.jpg",
+      "sha256": "7def7dff1221c89934c925d5227bc5ded02a15f9a336fda00764bfb5693f6fc0",
+      "bytes": 53733,
+      "width": 960,
+      "height": 640,
+      "category": "families",
+      "photo_id": "families-wrapped-in-evening-light",
+      "role": "thumbnail",
+      "public_eligibility": "eligible"
+    }
+  ]
+}

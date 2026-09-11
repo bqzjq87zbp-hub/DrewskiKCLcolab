@@ -1,0 +1,1733 @@
+{
+  "created": "2026-09-10T03:25:09.344Z",
+  "scope": "Fresh browser after parent accepted-server restart and previous audit-browser closure; actual four-category easel/photo clicks and decode, then browser closure and origin health",
+  "before": [
+    {
+      "url": "",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "a8ca63e180c8c3650dccfcb7b79fcce71345377812a4992ba1e65ba47be4fd47"
+    },
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2"
+    },
+    {
+      "url": "categories.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "6eb94e96d67f8a6103b1414ab8b72aef4d265d9ed0ec346802395a7892a2134c"
+    }
+  ],
+  "checks": [
+    {
+      "profile": "desktop",
+      "id": "color-balls",
+      "category": "families",
+      "target": {
+        "x": 348.98879936429785,
+        "y": 454.95804991273826,
+        "hitId": "color-balls",
+        "progress": 0.1701010101010101
+      },
+      "hash": "#collection/families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "expected": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.1701010101010101,
+        "open": false
+      },
+      "screenshot": "desktop-color-balls-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "shared-glance",
+      "category": "families",
+      "target": {
+        "x": 1103.822800855077,
+        "y": 460.0876697373368,
+        "hitId": "shared-glance",
+        "progress": 0.1701010101010101
+      },
+      "hash": "#collection/families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "expected": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.1701010101010101,
+        "open": false
+      },
+      "screenshot": "desktop-shared-glance-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "toward-the-water",
+      "category": "families",
+      "target": {
+        "x": 348.98879936429785,
+        "y": 454.9580499127384,
+        "hitId": "toward-the-water",
+        "progress": 0.3701010101010101
+      },
+      "hash": "#collection/families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "expected": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.3701010101010101,
+        "open": false
+      },
+      "screenshot": "desktop-toward-the-water-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "coastal-poise",
+      "category": "headshots",
+      "target": {
+        "x": 1121.7902728323506,
+        "y": 395.47617113722225,
+        "hitId": "coastal-poise",
+        "progress": 0.374949494949495
+      },
+      "hash": "#collection/headshots",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "expected": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.374949494949495,
+        "open": false
+      },
+      "screenshot": "desktop-coastal-poise-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "nwprt-hat-lager",
+      "category": "branding",
+      "target": {
+        "x": 350.150583719999,
+        "y": 455.92542032337417,
+        "hitId": "nwprt-hat-lager",
+        "progress": 0.5698989898989899
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.5698989898989899,
+        "open": false
+      },
+      "screenshot": "desktop-nwprt-hat-lager-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "nwprt-underpier-branded",
+      "category": "branding",
+      "target": {
+        "x": 1102.6165219589768,
+        "y": 461.00207462428267,
+        "hitId": "nwprt-underpier-branded",
+        "progress": 0.5698989898989899
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.5698989898989899,
+        "open": false
+      },
+      "screenshot": "desktop-nwprt-underpier-branded-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "beach-culture",
+      "category": "coastal",
+      "target": {
+        "x": 333.9423974128129,
+        "y": 442.9130637144481,
+        "hitId": "beach-culture",
+        "progress": 0.7749494949494949
+      },
+      "hash": "#collection/coastal",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+        "naturalWidth": 1440,
+        "naturalHeight": 960
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "expected": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.7749494949494949,
+        "open": false
+      },
+      "screenshot": "desktop-beach-culture-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "coke-beach-campaign",
+      "category": "branding",
+      "target": {
+        "x": 1092.993551080444,
+        "y": 468.474245864628,
+        "hitId": "coke-beach-campaign",
+        "progress": 0.7701010101010101
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.7701010101010101,
+        "open": false
+      },
+      "screenshot": "desktop-coke-beach-campaign-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "coke-beach-cold-detail",
+      "category": "branding",
+      "target": {
+        "x": 533.2960508204758,
+        "y": 536.2409921656819,
+        "hitId": "coke-beach-cold-detail",
+        "progress": 1
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 1,
+        "open": false
+      },
+      "screenshot": "desktop-coke-beach-cold-detail-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "id": "coastal-panorama",
+      "category": "coastal",
+      "target": {
+        "x": 919.9796980352642,
+        "y": 573.2888204461742,
+        "hitId": "coastal-panorama",
+        "progress": 1
+      },
+      "hash": "#collection/coastal",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+        "naturalWidth": 1440,
+        "naturalHeight": 960
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "expected": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 1,
+        "open": false
+      },
+      "screenshot": "desktop-coastal-panorama-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "color-balls",
+      "category": "families",
+      "target": {
+        "x": 187.1613445490921,
+        "y": 428.11123292388737,
+        "hitId": "color-balls",
+        "progress": 0
+      },
+      "hash": "#collection/families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "expected": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0,
+        "open": false
+      },
+      "screenshot": "phone-color-balls-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "shared-glance",
+      "category": "families",
+      "target": {
+        "x": 193.52585392261278,
+        "y": 418.42622155766696,
+        "hitId": "shared-glance",
+        "progress": 0.139942074776198
+      },
+      "hash": "#collection/families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "expected": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.139942074776198,
+        "open": false
+      },
+      "screenshot": "phone-shared-glance-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "toward-the-water",
+      "category": "families",
+      "target": {
+        "x": 186.91077179370046,
+        "y": 427.93677871753977,
+        "hitId": "toward-the-water",
+        "progress": 0.20497630331753555
+      },
+      "hash": "#collection/families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "expected": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.20497630331753555,
+        "open": false
+      },
+      "screenshot": "phone-toward-the-water-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "coastal-poise",
+      "category": "headshots",
+      "target": {
+        "x": 196.98820115565638,
+        "y": 375.08337090767395,
+        "hitId": "coastal-poise",
+        "progress": 0.3400473933649289
+      },
+      "hash": "#collection/headshots",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "expected": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.3400473933649289,
+        "open": false
+      },
+      "screenshot": "phone-coastal-poise-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "nwprt-hat-lager",
+      "category": "branding",
+      "target": {
+        "x": 186.91313268929994,
+        "y": 427.9696824333893,
+        "hitId": "nwprt-hat-lager",
+        "progress": 0.4049499736703528
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.4049499736703528,
+        "open": false
+      },
+      "screenshot": "phone-nwprt-hat-lager-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "nwprt-underpier-branded",
+      "category": "branding",
+      "target": {
+        "x": 193.5263209107041,
+        "y": 418.41011959799323,
+        "hitId": "nwprt-underpier-branded",
+        "progress": 0.5400210637177462
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.5400210637177462,
+        "open": false
+      },
+      "screenshot": "phone-nwprt-underpier-branded-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "beach-culture",
+      "category": "coastal",
+      "target": {
+        "x": 186.9031142555059,
+        "y": 427.9451237738756,
+        "hitId": "beach-culture",
+        "progress": 0.6050552922590837
+      },
+      "hash": "#collection/coastal",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+        "naturalWidth": 1440,
+        "naturalHeight": 960
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "expected": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.6050552922590837,
+        "open": false
+      },
+      "screenshot": "phone-beach-culture-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "coke-beach-campaign",
+      "category": "branding",
+      "target": {
+        "x": 193.52579916723028,
+        "y": 418.4402348622541,
+        "hitId": "coke-beach-campaign",
+        "progress": 0.7399947340705635
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.7399947340705635,
+        "open": false
+      },
+      "screenshot": "phone-coke-beach-campaign-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "coke-beach-cold-detail",
+      "category": "branding",
+      "target": {
+        "x": 190.45384939501392,
+        "y": 429.4103227878469,
+        "hitId": "coke-beach-cold-detail",
+        "progress": 0.8000263296471827
+      },
+      "hash": "#collection/branding",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "expected": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+        "naturalWidth": 2133,
+        "naturalHeight": 3200,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.8000263296471827,
+        "open": false
+      },
+      "screenshot": "phone-coke-beach-cold-detail-actual-enlargement.png",
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "id": "coastal-panorama",
+      "category": "coastal",
+      "target": {
+        "x": 201.23482575986776,
+        "y": 468.32413194896577,
+        "hitId": "coastal-panorama",
+        "progress": 0.8999473407056345
+      },
+      "hash": "#collection/coastal",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+        "naturalWidth": 1440,
+        "naturalHeight": 960
+      },
+      "image": {
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "expected": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "opacity": "1",
+        "rect": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "after": {
+        "p": 0.8999473407056345,
+        "open": false
+      },
+      "screenshot": "phone-coastal-panorama-actual-enlargement.png",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requestFailures": [],
+  "imageResponses": [
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c6231e82c5d10dbda7f1220d.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/1e7f972e651c8e41c91168b6.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/easel-composition-reference.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0d730119329ad4799756e2bd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/08bfbe519671b2a3ec187588.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/6c2bcb595c230d3249389708.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/335e2ea0847bd07fec38d935.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/aa854f83427a78814a8c9330.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/459d0941c6b06f06023017bd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/underpier-photograph.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_rough_1k.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_diff_1k.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_nor_gl_1k.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/86be855645440b5a914c953a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/4d393268061adceca4155add.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/f40563af947ec69c20021507.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/955f53a8e6570b9373c299c2.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/8601f013a9a902169521c8b0.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/a602589870049a3f0fb24c83.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/a5837627b4f676209118e0e7.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/f06ec1bfba96659fe6b9da2f.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/2d96f735ba18201980dee971.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c58e8ca633d94a87765e2d6a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/bea67300da7b0a77dcfa3653.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/d7ad3b51e4c774c87d7a425b.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/1d1679620b5eb5e9b334276c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/fb8e63035c205a3251dcd602.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/391d2e976f93016c1fc8a53e.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/5d3ba0d0278a7287633624d7.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0339e7ad66e61d910bea5c59.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/61f6169f4002044fe1d07e9c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0163dea99efa5683d470b7ad.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/3304a50e7a7a0d5e264947d8.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/090c3caad475229f7e9d0695.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/60cdc9a37a20ee409045b5eb.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/ff8c5d0a7cc3a358674e851b.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/8f676584c9da2513a27baa4f.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/cce0d215323ba81520913403.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/94a456843863c6aa31137f6c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/e720e468c4e335f1f5698eb9.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0faa7eb4c0ad1135866f4c46.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/96ba6788e8d76e01457ef787.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/577eb43287f3ea5d9fedf5fd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/5bf0345b84335e96d827b1a3.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/63f2317fb79e5600be818060.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/b81afdc474c67116e06a96c9.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/13a47c55385a48222c5a0efd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/24c88a7a537770a0290b8162.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/44246db8df167276d79b1654.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/e3985b3a4ca015b66a441fc2.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/e31e239fe8b11431dabc7faf.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/cfcde45e923ea4fff4ce2dac.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/1864f27f41aa5333c9d38dde.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/ccec0cde43cb3cd3b23afcf7.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c393e8d7757ba486a8bbdfd1.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/6f692d68168b6f54116b5d13.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/acc1ad30cbd73725d0ac6ed6.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/69baa9ffe7a88fbc3916c1f2.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/fe23574feaffede554dd289a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/ad462df1d55a206a67b2fc81.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/42f851b10b91c7fb7c671b0f.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/f4abdf1af9c237de58680c77.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/6c2a2315ad94452845e533d8.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/d6fd42eb8fd212cf18552d2a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/b52f709139bc3c03536ae335.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/e897dd444b4def376669c088.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/76c190762ceeff63c494f2c9.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/1e7f972e651c8e41c91168b6.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c6231e82c5d10dbda7f1220d.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/easel-composition-reference.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0d730119329ad4799756e2bd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/6c2bcb595c230d3249389708.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/08bfbe519671b2a3ec187588.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/335e2ea0847bd07fec38d935.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/aa854f83427a78814a8c9330.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/459d0941c6b06f06023017bd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/underpier-photograph.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_nor_gl_1k.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_rough_1k.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_diff_1k.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/86be855645440b5a914c953a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/a602589870049a3f0fb24c83.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/f40563af947ec69c20021507.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/4d393268061adceca4155add.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/8601f013a9a902169521c8b0.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/a5837627b4f676209118e0e7.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/955f53a8e6570b9373c299c2.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/391d2e976f93016c1fc8a53e.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/f06ec1bfba96659fe6b9da2f.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c58e8ca633d94a87765e2d6a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/d7ad3b51e4c774c87d7a425b.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/fb8e63035c205a3251dcd602.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0339e7ad66e61d910bea5c59.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/61f6169f4002044fe1d07e9c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/5d3ba0d0278a7287633624d7.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/2d96f735ba18201980dee971.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/1d1679620b5eb5e9b334276c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/bea67300da7b0a77dcfa3653.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/090c3caad475229f7e9d0695.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/ff8c5d0a7cc3a358674e851b.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/3304a50e7a7a0d5e264947d8.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0163dea99efa5683d470b7ad.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/60cdc9a37a20ee409045b5eb.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/8f676584c9da2513a27baa4f.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/24c88a7a537770a0290b8162.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/cce0d215323ba81520913403.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/e720e468c4e335f1f5698eb9.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/94a456843863c6aa31137f6c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0faa7eb4c0ad1135866f4c46.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/96ba6788e8d76e01457ef787.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/13a47c55385a48222c5a0efd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/5bf0345b84335e96d827b1a3.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/63f2317fb79e5600be818060.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/577eb43287f3ea5d9fedf5fd.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/44246db8df167276d79b1654.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/b81afdc474c67116e06a96c9.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/e3985b3a4ca015b66a441fc2.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/1864f27f41aa5333c9d38dde.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/e31e239fe8b11431dabc7faf.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/cfcde45e923ea4fff4ce2dac.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/ccec0cde43cb3cd3b23afcf7.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/acc1ad30cbd73725d0ac6ed6.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c393e8d7757ba486a8bbdfd1.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/6f692d68168b6f54116b5d13.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/69baa9ffe7a88fbc3916c1f2.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/fe23574feaffede554dd289a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c4236e1c13029c8bfe85db2d.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/ad462df1d55a206a67b2fc81.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/6c2a2315ad94452845e533d8.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/42f851b10b91c7fb7c671b0f.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/f4abdf1af9c237de58680c77.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/d6fd42eb8fd212cf18552d2a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/b52f709139bc3c03536ae335.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/76c190762ceeff63c494f2c9.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/e897dd444b4def376669c088.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/363fdb503e956d0273863e50.jpg",
+      "status": 200,
+      "contentType": "image/jpeg"
+    }
+  ],
+  "browserClosedAt": "2026-09-10T03:25:49.691Z",
+  "afterBrowserClose": [
+    {
+      "url": "",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "a8ca63e180c8c3650dccfcb7b79fcce71345377812a4992ba1e65ba47be4fd47"
+    },
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2"
+    },
+    {
+      "url": "categories.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "6eb94e96d67f8a6103b1414ab8b72aef4d265d9ed0ec346802395a7892a2134c"
+    }
+  ],
+  "runtimeStable": true,
+  "status": "PASS"
+}

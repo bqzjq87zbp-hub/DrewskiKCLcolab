@@ -1,0 +1,274 @@
+{
+  "source": "4c8bd39a65c7ebb29213d14d63f144ff62d318b3",
+  "version": 9,
+  "exactFiles": {
+    "localOverride": false,
+    "rows": [
+      {
+        "bytes": 9537,
+        "path": "collections.css",
+        "sha256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927",
+        "status": 200
+      },
+      {
+        "bytes": 35246,
+        "path": "categories.json",
+        "sha256": "3a8ea3a46ee82f143aecd8e9f253939f2c70b759b2827b392286299f18108ba9",
+        "status": 200
+      },
+      {
+        "bytes": 7327,
+        "path": "main-v2.js",
+        "sha256": "30d1f979270e6eaa16e79a4e9d4c2a9a8ae5ddd60ca76258aa1ccef09eec85b5",
+        "status": 200
+      }
+    ]
+  },
+  "probes": [
+    {
+      "size": [
+        844,
+        390
+      ],
+      "inner": {
+        "width": 844,
+        "height": 390,
+        "link": {
+          "x": 346.625,
+          "y": 342.6953125,
+          "width": 150.7421875,
+          "height": 15,
+          "top": 342.6953125,
+          "right": 497.3671875,
+          "bottom": 357.6953125,
+          "left": 346.625
+        },
+        "photo": {
+          "x": 32,
+          "y": 65.796875,
+          "width": 780,
+          "height": 266.8984375,
+          "top": 65.796875,
+          "right": 812,
+          "bottom": 332.6953125,
+          "left": 32
+        },
+        "complete": true,
+        "innerOverflow": 0
+      },
+      "outer": {
+        "width": 844,
+        "height": 390,
+        "overflow": 0,
+        "exits": [
+          {
+            "x": 14,
+            "y": 308.6484375,
+            "width": 48,
+            "height": 48,
+            "top": 308.6484375,
+            "right": 62,
+            "bottom": 356.6484375,
+            "left": 14
+          },
+          {
+            "x": 782,
+            "y": 308.6484375,
+            "width": 48,
+            "height": 48,
+            "top": 308.6484375,
+            "right": 830,
+            "bottom": 356.6484375,
+            "left": 782
+          }
+        ]
+      },
+      "overlap": false,
+      "pass": true
+    },
+    {
+      "size": [
+        320,
+        568
+      ],
+      "inner": {
+        "width": 320,
+        "height": 568,
+        "link": {
+          "x": 84.625,
+          "y": 517.1328125,
+          "width": 150.7421875,
+          "height": 15,
+          "top": 517.1328125,
+          "right": 235.3671875,
+          "bottom": 532.1328125,
+          "left": 84.625
+        },
+        "photo": {
+          "x": 32,
+          "y": 94.2578125,
+          "width": 256,
+          "height": 412.875,
+          "top": 94.2578125,
+          "right": 288,
+          "bottom": 507.1328125,
+          "left": 32
+        },
+        "complete": true,
+        "innerOverflow": 0
+      },
+      "outer": {
+        "width": 320,
+        "height": 568,
+        "overflow": 0,
+        "exits": [
+          {
+            "x": 14,
+            "y": 457.9375,
+            "width": 48,
+            "height": 48,
+            "top": 457.9375,
+            "right": 62,
+            "bottom": 505.9375,
+            "left": 14
+          },
+          {
+            "x": 258,
+            "y": 457.9375,
+            "width": 48,
+            "height": 48,
+            "top": 457.9375,
+            "right": 306,
+            "bottom": 505.9375,
+            "left": 258
+          }
+        ]
+      },
+      "overlap": false,
+      "pass": true
+    },
+    {
+      "size": [
+        390,
+        844
+      ],
+      "inner": {
+        "width": 390,
+        "height": 844,
+        "link": {
+          "x": 119.625,
+          "y": 787.6171875,
+          "width": 150.7421875,
+          "height": 15,
+          "top": 787.6171875,
+          "right": 270.3671875,
+          "bottom": 802.6171875,
+          "left": 119.625
+        },
+        "photo": {
+          "x": 32,
+          "y": 99.78125,
+          "width": 326,
+          "height": 677.8359375,
+          "top": 99.78125,
+          "right": 358,
+          "bottom": 777.6171875,
+          "left": 32
+        },
+        "complete": true,
+        "innerOverflow": 0
+      },
+      "outer": {
+        "width": 390,
+        "height": 844,
+        "overflow": 0,
+        "exits": [
+          {
+            "x": 14,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "top": 718,
+            "right": 62,
+            "bottom": 766,
+            "left": 14
+          },
+          {
+            "x": 328,
+            "y": 718,
+            "width": 48,
+            "height": 48,
+            "top": 718,
+            "right": 376,
+            "bottom": 766,
+            "left": 328
+          }
+        ]
+      },
+      "overlap": false,
+      "pass": true
+    },
+    {
+      "size": [
+        1440,
+        900
+      ],
+      "inner": {
+        "width": 1440,
+        "height": 900,
+        "link": {
+          "x": 644.625,
+          "y": 842.5,
+          "width": 150.7421875,
+          "height": 15,
+          "top": 842.5,
+          "right": 795.3671875,
+          "bottom": 857.5,
+          "left": 644.625
+        },
+        "photo": {
+          "x": 109,
+          "y": 76,
+          "width": 1222,
+          "height": 756.5,
+          "top": 76,
+          "right": 1331,
+          "bottom": 832.5,
+          "left": 109
+        },
+        "complete": true,
+        "innerOverflow": 0
+      },
+      "outer": {
+        "width": 1440,
+        "height": 900,
+        "overflow": 0,
+        "exits": [
+          {
+            "x": 14,
+            "y": 815.390625,
+            "width": 48,
+            "height": 48,
+            "top": 815.390625,
+            "right": 62,
+            "bottom": 863.390625,
+            "left": 14
+          },
+          {
+            "x": 1378,
+            "y": 815.390625,
+            "width": 48,
+            "height": 48,
+            "top": 815.390625,
+            "right": 1426,
+            "bottom": 863.390625,
+            "left": 1378
+          }
+        ]
+      },
+      "overlap": false,
+      "pass": true
+    }
+  ],
+  "note": "Viewport measurements taken after compositor frames; earlier immediate-resize probe observed stale previous viewport and was discarded."
+}

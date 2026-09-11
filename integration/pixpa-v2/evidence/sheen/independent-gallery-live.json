@@ -1,0 +1,1883 @@
+{
+  "assets": [
+    {
+      "name": "glass-sheen.js",
+      "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/glass-sheen.js",
+      "status": 200,
+      "bytes": 8280,
+      "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8"
+    },
+    {
+      "name": "glass-sheen.css",
+      "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/glass-sheen.css",
+      "status": 200,
+      "bytes": 1706,
+      "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612"
+    },
+    {
+      "name": "main-v2.js",
+      "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/main-v2.js",
+      "status": 200,
+      "bytes": 7421,
+      "sha256": "67651d17d4754bb571dc91b7766a556122804f9ec748486c8f7ece19404bf637"
+    },
+    {
+      "name": "collections.css",
+      "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/collections.css",
+      "status": 200,
+      "bytes": 9537,
+      "sha256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927"
+    },
+    {
+      "name": "categories.json",
+      "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/categories.json",
+      "status": 200,
+      "bytes": 35246,
+      "sha256": "3a8ea3a46ee82f143aecd8e9f253939f2c70b759b2827b392286299f18108ba9",
+      "counts": [
+        {
+          "id": "branding",
+          "count": 17
+        },
+        {
+          "id": "families",
+          "count": 24
+        },
+        {
+          "id": "headshots",
+          "count": 33
+        },
+        {
+          "id": "coastal",
+          "count": 8
+        }
+      ]
+    }
+  ],
+  "desktopFrames": [
+    {
+      "name": "frame-000.png",
+      "time": 1789059666428,
+      "inner": {
+        "y": 80,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -113.63083009631077,
+          "opacity": 0.1570949641612122,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 3
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-113.631%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.157095",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-113.631%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.157095",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-001.png",
+      "time": 1789059666656,
+      "inner": {
+        "y": 160,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -100.72037204161383,
+          "opacity": 0.2580369195724166,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 12
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-100.185%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.269438",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-100.185%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.269438",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-002.png",
+      "time": 1789059666879,
+      "inner": {
+        "y": 240,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -90.07554207893357,
+          "opacity": 0.3325079600761928,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 17
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-90.076%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.332508",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-90.076%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.332508",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-003.png",
+      "time": 1789059666982,
+      "inner": {
+        "y": 240,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -88.18624603165787,
+          "opacity": 0.3493372789054915,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 21
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-84.185%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.3511",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-84.185%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.3511",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-004.png",
+      "time": 1789059667186,
+      "inner": {
+        "y": 400,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -69.08032757443127,
+          "opacity": 0.3569537951466188,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 29
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-70.476%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.356356",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-70.476%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.356356",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-005.png",
+      "time": 1789059667417,
+      "inner": {
+        "y": 480,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -57.52683155896706,
+          "opacity": 0.3074595018265852,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 40
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-57.779%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.304211",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-57.779%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.304211",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-006.png",
+      "time": 1789059667629,
+      "inner": {
+        "y": 560,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -46.614271774746044,
+          "opacity": 0.3137699912121285,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 52
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-47.078%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.307801",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-47.078%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.307801",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-007.png",
+      "time": 1789059667832,
+      "inner": {
+        "y": 640,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -36.176457578681095,
+          "opacity": 0.3475884296773327,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 65
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-36.716%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.346006",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-36.716%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.346006",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-008.png",
+      "time": 1789059668078,
+      "inner": {
+        "y": 720,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -25.480287061443434,
+          "opacity": 0.32404390405099487,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 73
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-26.807%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.313765",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-26.807%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.313765",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-009.png",
+      "time": 1789059668314,
+      "inner": {
+        "y": 800,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -15.02170419022417,
+          "opacity": 0.30194858974579714,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 83
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-15.022%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.301949",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-15.022%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.301949",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-010.png",
+      "time": 1789059668486,
+      "inner": {
+        "y": 800,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -13.403673115824574,
+          "opacity": 0.19531129677895218,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 90
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-13.462%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.228961",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-13.462%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.228961",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-011.png",
+      "time": 1789059668710,
+      "inner": {
+        "y": 960,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": 5.728579191788413,
+          "opacity": 0.3228040493470806,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 95
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(5.729%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.322804",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(5.729%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.322804",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-012.png",
+      "time": 1789059668945,
+      "inner": {
+        "y": 1040,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": 16.59097167559318,
+          "opacity": 0.3521108719438376,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 100
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(16.591%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.352111",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(16.591%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.352111",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-013.png",
+      "time": 1789059669239,
+      "inner": {
+        "y": 1120,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": 27.251868123869315,
+          "opacity": 0.312920882346294,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 105
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(27.252%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.312921",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(27.252%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.312921",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-014.png",
+      "time": 1789059669677,
+      "inner": {
+        "y": 1040,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": 23.000756820015283,
+          "opacity": 0.24637376720961443,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 110
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(29.25%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.198641",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(29.25%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.198641",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-015.png",
+      "time": 1789059669879,
+      "inner": {
+        "y": 1040,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": 19.486263405877565,
+          "opacity": 0.21384061730764378,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 112
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(19.486%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.213841",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(19.486%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.213841",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-016.png",
+      "time": 1789059670079,
+      "inner": {
+        "y": 880,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -0.7785729424108325,
+          "opacity": 0.332328251741167,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 118
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-0.779%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.332328",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-0.779%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.332328",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-017.png",
+      "time": 1789059670308,
+      "inner": {
+        "y": 800,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -10.944789739631418,
+          "opacity": 0.3057073787814111,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 123
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-8.949%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.291079",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-8.949%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.291079",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-018.png",
+      "time": 1789059670528,
+      "inner": {
+        "y": 720,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -22.70734866759362,
+          "opacity": 0.3491165262234342,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 130
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-20.786%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.344434",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-20.786%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.344434",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-019.png",
+      "time": 1789059670752,
+      "inner": {
+        "y": 640,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -32.59663403459683,
+          "opacity": 0.3180883044846277,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 137
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-32.597%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.318088",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-32.597%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.318088",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-020.png",
+      "time": 1789059670972,
+      "inner": {
+        "y": 560,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -42.61000712432039,
+          "opacity": 0.2807600188140175,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 143
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-42.61%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.28076",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-42.61%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.28076",
+            "pointer": "none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-021.png",
+      "time": 1789059671176,
+      "inner": {
+        "y": 480,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -53.92588997587053,
+          "opacity": 0.29868852645425664,
+          "surfaces": 36,
+          "visible": 10,
+          "scheduled": true,
+          "frames": 148
+        }
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "display": "block",
+            "transform": "translate3d(-51.451%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.276526",
+            "pointer": "none"
+          },
+          {
+            "display": "block",
+            "transform": "translate3d(-51.451%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.276526",
+            "pointer": "none"
+          }
+        ]
+      }
+    }
+  ],
+  "idle": [
+    {
+      "time": 1789059694428,
+      "inner": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -55.99999914042819,
+        "opacity": 0.07154492917289025,
+        "surfaces": 36,
+        "visible": 10,
+        "scheduled": false,
+        "frames": 169
+      },
+      "outer": [
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        },
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        }
+      ]
+    },
+    {
+      "time": 1789059694500,
+      "inner": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -55.99999914042819,
+        "opacity": 0.07154492917289025,
+        "surfaces": 36,
+        "visible": 10,
+        "scheduled": false,
+        "frames": 169
+      },
+      "outer": [
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        },
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        }
+      ]
+    },
+    {
+      "time": 1789059694561,
+      "inner": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -55.99999914042819,
+        "opacity": 0.07154492917289025,
+        "surfaces": 36,
+        "visible": 10,
+        "scheduled": false,
+        "frames": 169
+      },
+      "outer": [
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        },
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        }
+      ]
+    },
+    {
+      "time": 1789059694622,
+      "inner": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -55.99999914042819,
+        "opacity": 0.07154492917289025,
+        "surfaces": 36,
+        "visible": 10,
+        "scheduled": false,
+        "frames": 169
+      },
+      "outer": [
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        },
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        }
+      ]
+    },
+    {
+      "time": 1789059694683,
+      "inner": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -55.99999914042819,
+        "opacity": 0.07154492917289025,
+        "surfaces": 36,
+        "visible": 10,
+        "scheduled": false,
+        "frames": 169
+      },
+      "outer": [
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        },
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        }
+      ]
+    },
+    {
+      "time": 1789059694754,
+      "inner": {
+        "enabled": true,
+        "direction": "up",
+        "phase": -55.99999914042819,
+        "opacity": 0.07154492917289025,
+        "surfaces": 36,
+        "visible": 10,
+        "scheduled": false,
+        "frames": 169
+      },
+      "outer": [
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        },
+        {
+          "transform": "translate3d(-56%, 0px, 0px) skewX(-12deg)",
+          "opacity": "0.0715449"
+        }
+      ]
+    }
+  ],
+  "phoneFrames": [
+    {
+      "name": "frame-000.png",
+      "time": 1789059744241,
+      "inner": {
+        "y": 2349.5,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -49.150675295130654,
+          "opacity": 0.158458947763864,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 393
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-49.151%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.158459"
+          },
+          {
+            "transform": "translate3d(-49.151%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.158459"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-001.png",
+      "time": 1789059744318,
+      "inner": {
+        "y": 2409.5,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -44.04054255528112,
+          "opacity": 0.2730547327941843,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 402
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-47.438%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.235823"
+          },
+          {
+            "transform": "translate3d(-47.438%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.235823"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-002.png",
+      "time": 1789059744403,
+      "inner": {
+        "y": 2469.5,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -38.360663076677014,
+          "opacity": 0.30538662543792444,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 408
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-42.774%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.281889"
+          },
+          {
+            "transform": "translate3d(-42.774%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.281889"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-003.png",
+      "time": 1789059744502,
+      "inner": {
+        "y": 2529.5,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -28.30689943009034,
+          "opacity": 0.3335305008717536,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 416
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-30.298%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.330156"
+          },
+          {
+            "transform": "translate3d(-30.298%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.330156"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-004.png",
+      "time": 1789059744594,
+      "inner": {
+        "y": 2589.5,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -20.04782139394476,
+          "opacity": 0.347023552922546,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 425
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-24.979%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.34148"
+          },
+          {
+            "transform": "translate3d(-24.979%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.34148"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-005.png",
+      "time": 1789059744664,
+      "inner": {
+        "y": 2649.5,
+        "state": {
+          "enabled": true,
+          "direction": "down",
+          "phase": -13.94016577804301,
+          "opacity": 0.35236745252860624,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 433
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-13.94%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.352367"
+          },
+          {
+            "transform": "translate3d(-13.94%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.352367"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-006.png",
+      "time": 1789059744794,
+      "inner": {
+        "y": 2604.5,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -8.507062420410563,
+          "opacity": 0.3566907969846614,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 445
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-7.747%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.356469"
+          },
+          {
+            "transform": "translate3d(-7.747%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.356469"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-007.png",
+      "time": 1789059744875,
+      "inner": {
+        "y": 2604.5,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -11.451113589776583,
+          "opacity": 0.3579287838414588,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 452
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-10.422%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.357389"
+          },
+          {
+            "transform": "translate3d(-10.422%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.357389"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-008.png",
+      "time": 1789059744943,
+      "inner": {
+        "y": 2484.5,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -21.202269086043714,
+          "opacity": 0.3589889462601007,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 460
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-22.443%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359058"
+          },
+          {
+            "transform": "translate3d(-22.443%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359058"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-009.png",
+      "time": 1789059745020,
+      "inner": {
+        "y": 2424.5,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -28.78143366670882,
+          "opacity": 0.3593770522427597,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 468
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-27.57%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359341"
+          },
+          {
+            "transform": "translate3d(-27.57%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359341"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-010.png",
+      "time": 1789059745083,
+      "inner": {
+        "y": 2364.5,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -36.60521607440309,
+          "opacity": 0.359632805665413,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 477
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-33.494%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359562"
+          },
+          {
+            "transform": "translate3d(-33.494%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359562"
+          }
+        ]
+      }
+    },
+    {
+      "name": "frame-011.png",
+      "time": 1789059745169,
+      "inner": {
+        "y": 2304.5,
+        "state": {
+          "enabled": true,
+          "direction": "up",
+          "phase": -44.29401422001109,
+          "opacity": 0.3597724614211513,
+          "surfaces": 36,
+          "visible": 3,
+          "scheduled": true,
+          "frames": 484
+        },
+        "coarse": true,
+        "overflow": 0
+      },
+      "outer": {
+        "y": 0,
+        "exits": [
+          {
+            "transform": "translate3d(-39.685%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359695"
+          },
+          {
+            "transform": "translate3d(-39.685%, 0px, 0px) skewX(-12deg)",
+            "opacity": "0.359695"
+          }
+        ]
+      }
+    }
+  ],
+  "returnBefore": {
+    "y": 2304.5,
+    "progress": 0.3033833596629805,
+    "target": [
+      {
+        "name": "Explore Professional headshots",
+        "r": {
+          "x": 127.9609375,
+          "y": 168.4765625,
+          "width": 130,
+          "height": 48,
+          "top": 168.4765625,
+          "right": 257.9609375,
+          "bottom": 216.4765625,
+          "left": 127.9609375
+        }
+      }
+    ]
+  },
+  "zoom": {
+    "state": {
+      "enabled": true,
+      "direction": "down",
+      "phase": 60.97163041056348,
+      "opacity": 0.16989400145987676,
+      "surfaces": 40,
+      "visible": 5,
+      "scheduled": true,
+      "frames": 673
+    },
+    "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/media/expansion/060d6ac3041db63dc31faddee4e2feccf5c78ab53c8b21280f86ef51072573c9.jpg",
+    "w": 2133,
+    "h": 3200,
+    "fit": "contain",
+    "opacity": "1",
+    "filter": "none",
+    "photoLayers": 0
+  },
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "inner": {
+        "viewport": [
+          390,
+          844
+        ],
+        "dialog": {
+          "x": 18,
+          "y": 16.8828125,
+          "width": 354,
+          "height": 810.234375,
+          "top": 16.8828125,
+          "right": 372,
+          "bottom": 827.1171875,
+          "left": 18
+        },
+        "footer": {
+          "x": 119.625,
+          "y": 787.6171875,
+          "width": 150.7421875,
+          "height": 15,
+          "top": 787.6171875,
+          "right": 270.3671875,
+          "bottom": 802.6171875,
+          "left": 119.625
+        },
+        "overflow": 0,
+        "pageOverflow": 0,
+        "footerAlign": "center",
+        "fit": "contain"
+      },
+      "outer": {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": 0,
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "exits": [
+          {
+            "r": {
+              "x": 14,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 62,
+              "bottom": 766,
+              "left": 14
+            },
+            "aria": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "layerHidden": "true",
+            "pointer": "none"
+          },
+          {
+            "r": {
+              "x": 328,
+              "y": 718,
+              "width": 48,
+              "height": 48,
+              "top": 718,
+              "right": 376,
+              "bottom": 766,
+              "left": 328
+            },
+            "aria": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "layerHidden": "true",
+            "pointer": "none"
+          }
+        ]
+      },
+      "footerExitOverlap": [
+        0,
+        0
+      ],
+      "file": "live-viewer-390x844.png"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "inner": {
+        "viewport": [
+          844,
+          390
+        ],
+        "dialog": {
+          "x": 18,
+          "y": 7.796875,
+          "width": 808,
+          "height": 374.3984375,
+          "top": 7.796875,
+          "right": 826,
+          "bottom": 382.1953125,
+          "left": 18
+        },
+        "footer": {
+          "x": 346.625,
+          "y": 342.6953125,
+          "width": 150.7421875,
+          "height": 15,
+          "top": 342.6953125,
+          "right": 497.3671875,
+          "bottom": 357.6953125,
+          "left": 346.625
+        },
+        "overflow": 0,
+        "pageOverflow": 0,
+        "footerAlign": "center",
+        "fit": "contain"
+      },
+      "outer": {
+        "viewport": [
+          844,
+          390
+        ],
+        "overflow": 0,
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "top": 0,
+          "right": 844,
+          "bottom": 390,
+          "left": 0
+        },
+        "exits": [
+          {
+            "r": {
+              "x": 14,
+              "y": 325.40625,
+              "width": 48,
+              "height": 48,
+              "top": 325.40625,
+              "right": 62,
+              "bottom": 373.40625,
+              "left": 14
+            },
+            "aria": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "layerHidden": "true",
+            "pointer": "none"
+          },
+          {
+            "r": {
+              "x": 782,
+              "y": 325.40625,
+              "width": 48,
+              "height": 48,
+              "top": 325.40625,
+              "right": 830,
+              "bottom": 373.40625,
+              "left": 782
+            },
+            "aria": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "layerHidden": "true",
+            "pointer": "none"
+          }
+        ]
+      },
+      "footerExitOverlap": [
+        0,
+        0
+      ],
+      "file": "live-viewer-844x390.png"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "inner": {
+        "viewport": [
+          1440,
+          1000
+        ],
+        "dialog": {
+          "x": 95,
+          "y": 20,
+          "width": 1250,
+          "height": 960,
+          "top": 20,
+          "right": 1345,
+          "bottom": 980,
+          "left": 95
+        },
+        "footer": {
+          "x": 644.625,
+          "y": 940.5,
+          "width": 150.7421875,
+          "height": 15,
+          "top": 940.5,
+          "right": 795.3671875,
+          "bottom": 955.5,
+          "left": 644.625
+        },
+        "overflow": 0,
+        "pageOverflow": 0,
+        "footerAlign": "center",
+        "fit": "contain"
+      },
+      "outer": {
+        "viewport": [
+          1440,
+          1000
+        ],
+        "overflow": 0,
+        "iframe": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "exits": [
+          {
+            "r": {
+              "x": 14,
+              "y": 916.0625,
+              "width": 48,
+              "height": 48,
+              "top": 916.0625,
+              "right": 62,
+              "bottom": 964.0625,
+              "left": 14
+            },
+            "aria": "Return to main site",
+            "href": "https://kiyonocreativelab.com/",
+            "layerHidden": "true",
+            "pointer": "none"
+          },
+          {
+            "r": {
+              "x": 1378,
+              "y": 916.0625,
+              "width": 48,
+              "height": 48,
+              "top": 916.0625,
+              "right": 1426,
+              "bottom": 964.0625,
+              "left": 1378
+            },
+            "aria": "Open gallery directly in a new tab",
+            "href": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+            "layerHidden": "true",
+            "pointer": "none"
+          }
+        ]
+      },
+      "footerExitOverlap": [
+        0,
+        0
+      ],
+      "file": "live-viewer-1440x1000.png"
+    }
+  ],
+  "returnAfter": {
+    "y": 2304.5,
+    "progress": 0.3033833596629805
+  },
+  "preferences": [
+    {
+      "label": "Solid",
+      "inner": {
+        "state": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -103.66666666666667,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 11,
+          "scheduled": false,
+          "frames": 807
+        },
+        "appearance": "solid",
+        "layer": "none",
+        "menuBackground": "rgb(16, 44, 64)"
+      },
+      "outer": [
+        {
+          "display": "none",
+          "opacity": "0"
+        },
+        {
+          "display": "none",
+          "opacity": "0"
+        }
+      ]
+    },
+    {
+      "label": "prefers-reduced-motion",
+      "inner": {
+        "state": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -103.66666666666667,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 12,
+          "scheduled": false,
+          "frames": 808
+        },
+        "appearance": "system",
+        "layer": "none",
+        "menuBackground": "rgba(255, 255, 255, 0.055)"
+      },
+      "outer": [
+        {
+          "display": "none",
+          "opacity": "0"
+        },
+        {
+          "display": "none",
+          "opacity": "0"
+        }
+      ]
+    },
+    {
+      "label": "prefers-reduced-transparency",
+      "inner": {
+        "state": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -103.66666666666667,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 11,
+          "scheduled": false,
+          "frames": 808
+        },
+        "appearance": "system",
+        "layer": "none",
+        "menuBackground": "rgb(16, 44, 64)"
+      },
+      "outer": [
+        {
+          "display": "none",
+          "opacity": "0"
+        },
+        {
+          "display": "none",
+          "opacity": "0"
+        }
+      ]
+    },
+    {
+      "label": "prefers-contrast",
+      "inner": {
+        "state": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -103.66666666666667,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 11,
+          "scheduled": false,
+          "frames": 808
+        },
+        "appearance": "system",
+        "layer": "none",
+        "menuBackground": "rgba(255, 255, 255, 0.055)"
+      },
+      "outer": [
+        {
+          "display": "none",
+          "opacity": "0"
+        },
+        {
+          "display": "none",
+          "opacity": "0"
+        }
+      ]
+    },
+    {
+      "label": "forced-colors",
+      "inner": {
+        "state": {
+          "enabled": false,
+          "direction": "up",
+          "phase": -103.66666666666667,
+          "opacity": 0.07,
+          "surfaces": 40,
+          "visible": 11,
+          "scheduled": false,
+          "frames": 808
+        },
+        "appearance": "system",
+        "layer": "none",
+        "menuBackground": "rgb(0, 0, 0)"
+      },
+      "outer": [
+        {
+          "display": "none",
+          "opacity": "0"
+        },
+        {
+          "display": "none",
+          "opacity": "0"
+        }
+      ]
+    }
+  ],
+  "disabledBefore": {
+    "label": "before disabled scroll",
+    "inner": {
+      "state": {
+        "enabled": false,
+        "direction": "up",
+        "phase": -103.66666666666667,
+        "opacity": 0.07,
+        "surfaces": 40,
+        "visible": 11,
+        "scheduled": false,
+        "frames": 808
+      },
+      "appearance": "system",
+      "layer": "none",
+      "menuBackground": "rgb(0, 0, 0)"
+    },
+    "outer": [
+      {
+        "display": "none",
+        "opacity": "0"
+      },
+      {
+        "display": "none",
+        "opacity": "0"
+      }
+    ]
+  },
+  "disabledAfter": {
+    "label": "after disabled scroll",
+    "inner": {
+      "state": {
+        "enabled": false,
+        "direction": "up",
+        "phase": -103.66666666666667,
+        "opacity": 0.07,
+        "surfaces": 40,
+        "visible": 11,
+        "scheduled": false,
+        "frames": 808
+      },
+      "appearance": "system",
+      "layer": "none",
+      "menuBackground": "rgb(0, 0, 0)"
+    },
+    "outer": [
+      {
+        "display": "none",
+        "opacity": "0"
+      },
+      {
+        "display": "none",
+        "opacity": "0"
+      }
+    ]
+  },
+  "restored": {
+    "label": "restored Clear",
+    "inner": {
+      "state": {
+        "enabled": true,
+        "direction": "up",
+        "phase": 107.8971278953797,
+        "opacity": 0.12384051527129779,
+        "surfaces": 40,
+        "visible": 3,
+        "scheduled": true,
+        "frames": 846
+      },
+      "appearance": "clear",
+      "layer": "block",
+      "menuBackground": "rgba(0, 0, 0, 0)"
+    },
+    "outer": [
+      {
+        "display": "block",
+        "opacity": "0.130748"
+      },
+      {
+        "display": "block",
+        "opacity": "0.130748"
+      }
+    ]
+  },
+  "errors": [],
+  "directExit": {
+    "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+    "title": "Drewski KCL · Newport Pier Gallery",
+    "aisleVisible": true
+  },
+  "mainExit": {
+    "url": "https://kiyonocreativelab.com/",
+    "title": "Southern California Heirloom Portrait Studio | Kiyono Creative Lab"
+  }
+}

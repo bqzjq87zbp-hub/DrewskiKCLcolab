@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-09-10T19:40:51.750Z",
+  "source": "c5e5ff358302b70021cd7ce214bf52a8e1285142",
+  "version": 12,
+  "files": [
+    {
+      "path": "categories.json",
+      "status": 200,
+      "bytes": 43826,
+      "sha256": "eb36fbca4ba112a61d76049be2f9afb7dfe89c552adf74e1c86b25a6ce571c82",
+      "exact": true
+    },
+    {
+      "path": "main-v2.js",
+      "status": 200,
+      "bytes": 7421,
+      "sha256": "67651d17d4754bb571dc91b7766a556122804f9ec748486c8f7ece19404bf637",
+      "exact": true
+    },
+    {
+      "path": "collections.js",
+      "status": 200,
+      "bytes": 8324,
+      "sha256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43",
+      "exact": true
+    },
+    {
+      "path": "collections.css",
+      "status": 200,
+      "bytes": 9537,
+      "sha256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927",
+      "exact": true
+    },
+    {
+      "path": "glass-sheen.js",
+      "status": 200,
+      "bytes": 8280,
+      "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+      "exact": true
+    },
+    {
+      "path": "glass-sheen.css",
+      "status": 200,
+      "bytes": 1706,
+      "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612",
+      "exact": true
+    },
+    {
+      "path": "slots.json",
+      "status": 200,
+      "bytes": 7323,
+      "sha256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21",
+      "exact": true
+    }
+  ],
+  "wrapper": {
+    "status": 200,
+    "expectedChild": true,
+    "bytes": 166425
+  }
+}

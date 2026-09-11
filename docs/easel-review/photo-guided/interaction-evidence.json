@@ -1,0 +1,842 @@
+{
+  "scope": "Independent interaction evidence for the photograph-guided candidate. Technical/UI evidence, not an overall visual approval or physical-phone performance claim.",
+  "decision": "Final focused cleanup PASS 81/81. Combine with the earlier 304/306 full run and 28/28 corrected Still retry; no broad final repetition was performed.",
+  "runs": [
+    {
+      "id": "photo-guided-input-v1",
+      "fullReportSHA256": "8b53de29da725b03af5161a1ba9b5cc79dca26e67e942e2ee7bc0ea093ba457a",
+      "fullReportLocation": "Retained outside the repository in the local QA output directory.",
+      "status": "FAIL",
+      "checks": 306,
+      "passedChecks": 304,
+      "failedChecks": [
+        "390x844-normal: explicit Still exposes all correct source links",
+        "390x844-normal: saved Still preference restores"
+      ],
+      "runtimeErrors": 0,
+      "httpErrors": 0,
+      "consoleErrors": 0,
+      "originalCount": 216,
+      "originalSetSHA256": "4e10ec2f048482d4f9ffa4ac2044ed8aaf497b9d913303412df10d04f1b2c175",
+      "originalsUnchanged": true,
+      "modulesStable": true,
+      "moduleFingerprints": {
+        "/main-v2.js": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d",
+        "/collections.js": "fc5839be42c6d9ccf5ffb777972cd28c31f4e32b198564fbc7a42721ad79711c",
+        "/collections.css": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+        "/canvas-wrap.js": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+        "/aisle-integration.js": "bb2662cb151280bb853e08568407f6b349210a90573bf290df3d065493e4b0fd",
+        "/aisle/aisle.css": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+        "/aisle/photographic-aisle.js": "ba69e15a778e2eda68e2fbe008da3e1b554f9c5f55241a868cb9b689b8b35838",
+        "/aisle/physical-display.js": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+        "/aisle/physical-easel.js": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+        "/aisle/photographic-environment.js": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+        "/aisle/gallery-layout.js": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+        "/aisle/video-frame-seam.js": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+        "/aisle/water-surface.js": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+        "/aisle/easel-masks.js": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+        "/aisle/assets/easel-geometry.js": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+        "/vendor/three.module.js": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+        "/vendor/three.core.min.js": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+      }
+    },
+    {
+      "id": "photo-guided-still-retry-v1",
+      "fullReportSHA256": "b0dc9263e07568f47a3ab08b97b3871da2f124a551d4ba785da86a4194e78377",
+      "fullReportLocation": "Retained outside the repository in the local QA output directory.",
+      "status": "PASS",
+      "checks": 28,
+      "passedChecks": 28,
+      "failedChecks": [],
+      "runtimeErrors": 0,
+      "httpErrors": 0,
+      "consoleErrors": 0,
+      "originalCount": 216,
+      "originalSetSHA256": "4e10ec2f048482d4f9ffa4ac2044ed8aaf497b9d913303412df10d04f1b2c175",
+      "originalsUnchanged": true,
+      "modulesStable": true,
+      "moduleFingerprints": {
+        "/main-v2.js": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d",
+        "/collections.js": "fc5839be42c6d9ccf5ffb777972cd28c31f4e32b198564fbc7a42721ad79711c",
+        "/collections.css": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+        "/canvas-wrap.js": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+        "/aisle-integration.js": "bb2662cb151280bb853e08568407f6b349210a90573bf290df3d065493e4b0fd",
+        "/aisle/aisle.css": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+        "/aisle/photographic-aisle.js": "ba69e15a778e2eda68e2fbe008da3e1b554f9c5f55241a868cb9b689b8b35838",
+        "/aisle/physical-display.js": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+        "/aisle/physical-easel.js": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+        "/aisle/photographic-environment.js": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+        "/aisle/gallery-layout.js": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+        "/aisle/video-frame-seam.js": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+        "/aisle/water-surface.js": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+        "/aisle/easel-masks.js": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+        "/aisle/assets/easel-geometry.js": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+        "/vendor/three.module.js": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+        "/vendor/three.core.min.js": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+      }
+    },
+    {
+      "id": "photo-guided-collection-resize-v1",
+      "fullReportSHA256": "ceef43c40f368d2e7c734b90c378b77fca64e17d669d046ca931da147bc7a5f6",
+      "fullReportLocation": "Retained outside the repository in the local QA output directory.",
+      "status": "FAIL",
+      "checks": null,
+      "passedChecks": null,
+      "failedChecks": [],
+      "runtimeErrors": 0,
+      "httpErrors": 0,
+      "consoleErrors": 0,
+      "originalCount": 216,
+      "originalSetSHA256": "4e10ec2f048482d4f9ffa4ac2044ed8aaf497b9d913303412df10d04f1b2c175",
+      "originalsUnchanged": true,
+      "modulesStable": true,
+      "moduleFingerprints": {
+        "/main-v2.js": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d",
+        "/collections.js": "fc5839be42c6d9ccf5ffb777972cd28c31f4e32b198564fbc7a42721ad79711c",
+        "/collections.css": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+        "/canvas-wrap.js": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+        "/aisle-integration.js": "bb2662cb151280bb853e08568407f6b349210a90573bf290df3d065493e4b0fd",
+        "/aisle/aisle.css": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+        "/aisle/photographic-aisle.js": "ba69e15a778e2eda68e2fbe008da3e1b554f9c5f55241a868cb9b689b8b35838",
+        "/aisle/physical-display.js": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+        "/aisle/physical-easel.js": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+        "/aisle/photographic-environment.js": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+        "/aisle/gallery-layout.js": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+        "/aisle/video-frame-seam.js": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+        "/aisle/water-surface.js": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+        "/aisle/easel-masks.js": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+        "/aisle/assets/easel-geometry.js": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+        "/vendor/three.module.js": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+        "/vendor/three.core.min.js": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+      }
+    },
+    {
+      "id": "photo-guided-cleanup-v1",
+      "fullReportSHA256": "198ab73476e873f28bb192efcf0270c714c29de9c56772c3c5f4bd3cc8de9b64",
+      "fullReportLocation": "Retained outside the repository in the local QA output directory.",
+      "status": "FAIL",
+      "checks": 43,
+      "passedChecks": 42,
+      "failedChecks": [
+        "800x900-normal: collection return preserves fraction 800 to 390"
+      ],
+      "runtimeErrors": 1,
+      "httpErrors": 0,
+      "consoleErrors": 0,
+      "originalCount": 216,
+      "originalSetSHA256": "4e10ec2f048482d4f9ffa4ac2044ed8aaf497b9d913303412df10d04f1b2c175",
+      "originalsUnchanged": true,
+      "modulesStable": true,
+      "moduleFingerprints": {
+        "/main-v2.js": "9114b28935e50f624050966032e1747a8e3128f47eec3cda66d47b588d048d6a",
+        "/collections.js": "84375621384f70f45d06faec5235bfb6e75a011590a60f8e5fe30006041d81ce",
+        "/collections.css": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+        "/canvas-wrap.js": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+        "/aisle-integration.js": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8",
+        "/aisle/aisle.css": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+        "/aisle/photographic-aisle.js": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be",
+        "/aisle/physical-display.js": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+        "/aisle/physical-easel.js": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+        "/aisle/photographic-environment.js": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+        "/aisle/gallery-layout.js": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+        "/aisle/video-frame-seam.js": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+        "/aisle/water-surface.js": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+        "/aisle/easel-masks.js": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+        "/aisle/assets/easel-geometry.js": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+        "/vendor/three.module.js": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+        "/vendor/three.core.min.js": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+      }
+    },
+    {
+      "id": "photo-guided-cleanup-v2",
+      "fullReportSHA256": "851f9930bb7a731bd6aaa41bb19728f1b7d248546da4f9d8b9665acba186bc9f",
+      "fullReportLocation": "Retained outside the repository in the local QA output directory.",
+      "status": "PASS",
+      "checks": 81,
+      "passedChecks": 81,
+      "failedChecks": [],
+      "runtimeErrors": 0,
+      "httpErrors": 0,
+      "consoleErrors": 0,
+      "originalCount": 216,
+      "originalSetSHA256": "4e10ec2f048482d4f9ffa4ac2044ed8aaf497b9d913303412df10d04f1b2c175",
+      "originalsUnchanged": true,
+      "modulesStable": true,
+      "moduleFingerprints": {
+        "/main-v2.js": "9114b28935e50f624050966032e1747a8e3128f47eec3cda66d47b588d048d6a",
+        "/collections.js": "f67a920331b8619fd75716e80a4effe3e9d5558261a5448823b43142e0b14681",
+        "/collections.css": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+        "/canvas-wrap.js": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+        "/aisle-integration.js": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8",
+        "/aisle/aisle.css": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+        "/aisle/photographic-aisle.js": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be",
+        "/aisle/physical-display.js": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+        "/aisle/physical-easel.js": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+        "/aisle/photographic-environment.js": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+        "/aisle/gallery-layout.js": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+        "/aisle/video-frame-seam.js": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+        "/aisle/water-surface.js": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+        "/aisle/easel-masks.js": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+        "/aisle/assets/easel-geometry.js": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+        "/vendor/three.module.js": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+        "/vendor/three.core.min.js": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+      }
+    }
+  ],
+  "sourceInventoryMeaning": {
+    "totalImageFiles": 216,
+    "photographicAllowlistImages": 92,
+    "preservedVideoFrames": 121,
+    "easelTextureMaps": 3,
+    "note": "The legacy report field originals refers to all of these source image files, not 216 distinct photographs."
+  },
+  "failureHistory": [
+    {
+      "run": "photo-guided-input-v1",
+      "kind": "fixture expectations",
+      "explanation": "Two Still assertions used raw geometry slots, which lack category routing and the approved professional-client headshot substitution. The actual ten curated sources/routes were correct. No application change was made to resolve those two failures.",
+      "correctionRun": "photo-guided-still-retry-v1"
+    },
+    {
+      "run": "photo-guided-collection-resize-v1",
+      "kind": "actual application regression",
+      "beforeProgress": 0.6,
+      "afterProgress": 0.3909952606635071,
+      "beforeScrollY": 2970,
+      "afterScrollY": 2970,
+      "explanation": "Collection return reused raw pixels after viewport height changed the journey range."
+    },
+    {
+      "run": "photo-guided-cleanup-v1",
+      "kind": "actual application regression plus incomplete fixture attempt",
+      "explanation": "Normalized position was saved correctly, but automatic browser history restoration reapplied raw 2970 px. All 20 post-return observations stayed at progress 0.3909952606635071. The reverse attempt then stopped because its fixture required a fully contained interactive photograph in a 390 px fine-pointer stage; the later retry uses the rendered Menu link for that route. Remaining cleanup checks were not executed in this attempt."
+    },
+    {
+      "run": "photo-guided-cleanup-v2",
+      "kind": "focused verification after application correction",
+      "explanation": "Application owns history scroll restoration manually; normalized capture/restore uses the fresh range, Still uses raw pixels, and shared step-target logic governs both disabled state and clicks. Both resize directions and all remaining focused paths passed."
+    }
+  ],
+  "finalModuleFingerprints": {
+    "/main-v2.js": "9114b28935e50f624050966032e1747a8e3128f47eec3cda66d47b588d048d6a",
+    "/collections.js": "f67a920331b8619fd75716e80a4effe3e9d5558261a5448823b43142e0b14681",
+    "/collections.css": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26",
+    "/canvas-wrap.js": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb",
+    "/aisle-integration.js": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8",
+    "/aisle/aisle.css": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e",
+    "/aisle/photographic-aisle.js": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be",
+    "/aisle/physical-display.js": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa",
+    "/aisle/physical-easel.js": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3",
+    "/aisle/photographic-environment.js": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a",
+    "/aisle/gallery-layout.js": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+    "/aisle/video-frame-seam.js": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b",
+    "/aisle/water-surface.js": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5",
+    "/aisle/easel-masks.js": "a70e9c5fe18e49d837d90bfc940e48b9874cfdf7851c39b0d407c0adb2882df2",
+    "/aisle/assets/easel-geometry.js": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17",
+    "/vendor/three.module.js": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+    "/vendor/three.core.min.js": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+  },
+  "modulesChangedSinceFullRun": [
+    "/main-v2.js",
+    "/collections.js",
+    "/aisle-integration.js",
+    "/aisle/photographic-aisle.js"
+  ],
+  "versionLimits": [
+    "Full native/motion/visible-resize/video checks used the first recorded module set. Only collection/history/step integration changed before the final focused run; its exact hashes are listed.",
+    "Original photograph/layout/camera/water/CSS identity is preserved across those interaction cleanups; inspect the listed hashes for exact boundaries.",
+    "Ten-photo inspectable intervals and real easel/print occlusion are established separately by the coverage audit, not by this interaction script.",
+    "Screenshots from 390 px fine-pointer resize tests are deliberately framed stages; they are not the touch-phone camera profile."
+  ],
+  "phoneScrollRanges": [
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "reduced": false,
+      "range": 7596
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "reduced": false,
+      "range": 8388
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "reduced": true,
+      "range": 7596
+    }
+  ],
+  "normalIdle": {
+    "waitMs": 700,
+    "beforePNG_SHA256": "7680ef96f052b5f2ec075da0119613891877cd3174ab53ee333fa80b7e843569",
+    "afterPNG_SHA256": "ea3969416520392d4ec7a282f7037c59a99be108eae62b1920648da6c1c8d515",
+    "exactPose": true,
+    "waterPhaseBefore": 4.9893600000000005,
+    "waterPhaseAfter": 5.656000000000001,
+    "foregroundWaterPixelComparison": {
+      "region": [
+        0,
+        755,
+        75,
+        840
+      ],
+      "changedPixels": 5390,
+      "pixels": 6375,
+      "identicalPixels": false
+    }
+  },
+  "reducedIdle": {
+    "waitMs": 2000,
+    "beforePNG_SHA256": "e8882d96773f0da9afb5c6cb60fe3a2bfb0f28eadf824bccee4c4206b0620b38",
+    "afterPNG_SHA256": "e8882d96773f0da9afb5c6cb60fe3a2bfb0f28eadf824bccee4c4206b0620b38",
+    "identicalPNGBytes": true,
+    "exactPose": true,
+    "waterPhases": [
+      0,
+      0
+    ],
+    "pixelComparison": {
+      "region": "entire PNG",
+      "changedPixels": 0,
+      "pixels": 329160,
+      "identicalPixels": true
+    }
+  },
+  "optionalVideoHalfway": {
+    "progresses": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "distances": [
+      3.59,
+      3.59,
+      3.59
+    ],
+    "committedFrame": 120,
+    "exactPhotographicPoseAfterOff": true,
+    "limitation": "Single opt-in toggle at half progress; generated-video alignment remains experimental, with no 121-frame quality rerun."
+  },
+  "collectionResizeReturns": [
+    {
+      "fromViewport": {
+        "width": 800,
+        "height": 900
+      },
+      "toViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "beforeProgress": 0.6,
+      "afterProgress": 0.6000526592943655,
+      "beforeScrollY": 2970,
+      "afterScrollY": 4558,
+      "beforeRange": 4950,
+      "afterRange": 7596,
+      "observationCount": 20,
+      "observationSpanMs": 1956.6000001430511,
+      "lastFiveProgress": [
+        0.6000526592943655,
+        0.6000526592943655,
+        0.6000526592943655,
+        0.6000526592943655,
+        0.6000526592943655
+      ],
+      "trigger": "coke-beach-campaign",
+      "finalFocusedSlot": "coke-beach-campaign"
+    },
+    {
+      "fromViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "toViewport": {
+        "width": 800,
+        "height": 900
+      },
+      "beforeProgress": 0.6000526592943655,
+      "afterProgress": 0.6,
+      "beforeScrollY": 4558,
+      "afterScrollY": 2970,
+      "beforeRange": 7596,
+      "afterRange": 4950,
+      "observationCount": 20,
+      "observationSpanMs": 1971.0999999046326,
+      "lastFiveProgress": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "trigger": "menu-toggle",
+      "finalFocusedSlot": null
+    }
+  ],
+  "stillRawReturn": {
+    "saved": {
+      "scrollY": 450,
+      "progress": null
+    },
+    "afterScrollY": 450,
+    "lastFiveScrollY": [
+      450,
+      450,
+      450,
+      450,
+      450
+    ]
+  },
+  "finalFocusedChecks": [
+    {
+      "name": "all required runtime modules load",
+      "pass": true
+    },
+    {
+      "name": "served runtime matches current local files",
+      "pass": true
+    },
+    {
+      "name": "gallery layout matches independently frozen contract",
+      "pass": true
+    },
+    {
+      "name": "original source identity matches accepted manifest",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/entry: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/entry: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/entry: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/entry: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/entry: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/entry: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: actual scroll range reflects current journey height",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: native entry requires no Start button",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: correct system motion preference",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: optional video stays disabled",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: exact ten expected source photographs present",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: frozen guided placement is actually active",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: actual print sizes match independent physical source dimensions",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: phone pitch follows actual portrait capability",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: continuous80m photograph environment is active",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-before: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-before: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-before: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-before: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-before: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-before: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-to-390: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-to-390: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-to-390: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-to-390: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-to-390: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-800-to-390: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: collection return preserves fraction 800 to 390",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: resized collection return restores selected focus 800 to 390",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-before: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-before: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-before: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-before: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-before: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-before: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-to-800: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-to-800: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-to-800: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-to-800: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-to-800: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-resize-390-to-800: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: collection return preserves fraction 390 to 800",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: resized collection return restores selected focus 390 to 800",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: featured photo hit target matches canvas",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: photo dialog returns to collection position",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-return: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-return: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-return: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-return: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-return: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/collection-return: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: collection return restores exact camera and quads",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: collection return restores canvas focus",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: Still capture uses nonzero raw scroll only",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/still-raw-return: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/still-raw-return: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: Still collection resize return retains raw scroll",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: disabled pair control matches target availability near start",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-start: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-start: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-start: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-start: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-start: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-start: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: valid neighboring pair click reaches target near start",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: disabled pair control matches target availability near last stop",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-last-stop: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-last-stop: labels clear of Menu and HUD",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-last-stop: stage remains inside viewport",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-last-stop: distance follows frozen guided map",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-last-stop: source remains guarded",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal/step-near-last-stop: Auto yaw matches independent guided contract",
+      "pass": true
+    },
+    {
+      "name": "800x900-normal: valid neighboring pair click reaches target near last stop",
+      "pass": true
+    },
+    {
+      "name": "original photographs unchanged",
+      "pass": true
+    },
+    {
+      "name": "served runtime remains frozen during audit",
+      "pass": true
+    },
+    {
+      "name": "no unexpected console errors",
+      "pass": true
+    },
+    {
+      "name": "no failed network requests outside intentional navigation cancellation",
+      "pass": true
+    }
+  ],
+  "harness": {
+    "file": "scripts/qa-photograph-interaction.mjs",
+    "executedCleanupSHA256": "201540c7905bd023d41b066d93bf888b10e3a6b2ec79d30d0a85bfd3890d958e",
+    "packagedSHA256": "ce485b87db185e8df31fbac20e609239ca6f407efbd3689fe86d0ae6c535cf02",
+    "postRunWrapperChanges": [
+      "Corrected --prepare comment and removed trailing header whitespace.",
+      "Added the helper own-source hash to future reports.",
+      "After saving final evidence, FAIL now sets process.exitCode=1."
+    ],
+    "postRunBrowserRerun": false,
+    "postRunValidation": "node --check, --prepare execution gate and git diff --check passed."
+  },
+  "screenshots": [
+    {
+      "file": "interaction-phone-entry.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "390x844-normal-entry.png",
+      "sha256": "23f880d43ce3d4c26cdfbf7179f8ae0de38852d87da1024063b524d82633bc4f",
+      "bytes": 472417,
+      "caption": "Normal touch entry; full featured canvas and easel."
+    },
+    {
+      "file": "interaction-phone-menu.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "390x844-normal-menu.png",
+      "sha256": "b701182f8fdec1ab64b84040d4d2c2541aca2cc6e61df013843ad2cf957c436c",
+      "bytes": 489558,
+      "caption": "Normal touch Menu controls."
+    },
+    {
+      "file": "interaction-short-menu.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "650x700-normal-short-menu.png",
+      "sha256": "d37a62c5fe2611e1984871618223b8a3c99cea26475c1742592bf36faa3f692a",
+      "bytes": 406930,
+      "caption": "1200x400 fine-pointer stage with bounded Menu."
+    },
+    {
+      "file": "interaction-normal-idle-a.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "390x844-normal-idle-mid-a.png",
+      "sha256": "7680ef96f052b5f2ec075da0119613891877cd3174ab53ee333fa80b7e843569",
+      "bytes": 510310,
+      "caption": "Normal fixed pose before water-motion interval."
+    },
+    {
+      "file": "interaction-normal-idle-b.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "390x844-normal-idle-mid-b.png",
+      "sha256": "ea3969416520392d4ec7a282f7037c59a99be108eae62b1920648da6c1c8d515",
+      "bytes": 510157,
+      "caption": "Same normal pose after 700 ms."
+    },
+    {
+      "file": "interaction-reduced-idle-a.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "390x844-reduced-idle-mid-a.png",
+      "sha256": "e8882d96773f0da9afb5c6cb60fe3a2bfb0f28eadf824bccee4c4206b0620b38",
+      "bytes": 509977,
+      "caption": "Reduced-motion fixed pose first lossless PNG."
+    },
+    {
+      "file": "interaction-reduced-idle-b.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "390x844-reduced-idle-mid-b.png",
+      "sha256": "e8882d96773f0da9afb5c6cb60fe3a2bfb0f28eadf824bccee4c4206b0620b38",
+      "bytes": 509977,
+      "caption": "Same reduced pose after 2000 ms; identical pixels/bytes."
+    },
+    {
+      "file": "interaction-return-before-history-fix.png",
+      "run": "photo-guided-cleanup-v1",
+      "sourceFile": "800x900-normal-collection-resize-800-to-390.png",
+      "sha256": "1015cccb270ec3a5a97b8ccd52ecb31524d159dd25a4de9283117b0b571decd1",
+      "bytes": 178549,
+      "caption": "Negative history-restoration evidence at incorrect progress 0.390995."
+    },
+    {
+      "file": "interaction-return-after-history-fix.png",
+      "run": "photo-guided-cleanup-v2",
+      "sourceFile": "800x900-normal-collection-resize-800-to-390.png",
+      "sha256": "f5a38ce9b55dcbdcc3d950358217a9926e46ff8c204d41e616a7d41d109164f8",
+      "bytes": 181913,
+      "caption": "Final resize return at progress 0.600053 within native-pixel rounding."
+    },
+    {
+      "file": "interaction-reverse-resize-return.png",
+      "run": "photo-guided-cleanup-v2",
+      "sourceFile": "800x900-normal-collection-resize-390-to-800.png",
+      "sha256": "5af36ea2b0d3ca046572f6fbd4dac63e068fe62ca3ee14226b61389bb8997601",
+      "bytes": 638462,
+      "caption": "Reverse resize return at progress 0.6."
+    },
+    {
+      "file": "interaction-still-raw-return.png",
+      "run": "photo-guided-cleanup-v2",
+      "sourceFile": "800x900-normal-still-raw-return.png",
+      "sha256": "4b53f40869e5de66dab5378c6d5563dbc66c45b6f5fbd601e81a448b017be188",
+      "bytes": 297010,
+      "caption": "Still return preserves nonzero raw 450 px after resize."
+    },
+    {
+      "file": "interaction-video-half-enabled.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "650x700-normal-video-half-enabled.png",
+      "sha256": "be80f74cb3a8f28077a96d56a36abeb2d9ee2928f3aeb4af3679f4f15e4f9070",
+      "bytes": 470789,
+      "caption": "Optional approximate video at half progress; distance 3.59 m."
+    },
+    {
+      "file": "interaction-video-half-return.png",
+      "run": "photo-guided-input-v1",
+      "sourceFile": "650x700-normal-video-half-return.png",
+      "sha256": "a2deed3bbda59360463e31eb998554c6e5fa7c53ba1309a9a8c452c4fa566c8c",
+      "bytes": 434829,
+      "caption": "Photographic mode restored at the same half-progress pose."
+    }
+  ]
+}

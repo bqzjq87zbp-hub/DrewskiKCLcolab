@@ -1,0 +1,53 @@
+{
+  "schema": "kcl-public111-photo-pathways-v1",
+  "status": "PASS",
+  "scope": "Published photograph and collection acceptance only",
+  "wrapperURL": "https://kiyonocreativelab.com/pier-gallery?release=google111-live-20260910",
+  "childURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "sourceCommit": "810ad386756babf2a16e0fb5a3432a284668fce1",
+  "acceptedCategorySHA256": "825e08e10d64116a0b18ed65ce7c9072135a5c3bff0d4288a03bc8d6afdced25",
+  "categoryBytes": 48279,
+  "totalPhotographs": 111,
+  "categoryTotals": {
+    "branding": 25,
+    "families": 28,
+    "headshots": 36,
+    "coastal": 22
+  },
+  "allSevenPublicOpenClosePathsPassed": true,
+  "mobileOpenCloseCount": 7,
+  "desktopRepresentativeOpenCloseCount": 2,
+  "verifiedNativeURLs": 14,
+  "verifiedNativeBytes": 9690088,
+  "mobileExactReturnDifference": 0,
+  "desktopExactReturnDifference": 0,
+  "mobileEvidenceReusedWithoutRerun": true,
+  "mobileRawReportSHA256": "05bcee11e1923ff6478fe261caf36706f547880005c991238941ae4baf968604",
+  "desktopCompletionReportSHA256": "571d4afbfca8668e0a84b478b673799fc720021f8de52756229c8aa83cbe3586",
+  "galleryRuntimeErrorsObserved": 0,
+  "physicalIPhoneVerified": false,
+  "cameraInputVerified": false,
+  "cameraRepairOwner": "Publisher task019ffc27-b499-7de0-b98c-0582682b639c",
+  "workContinues": false,
+  "diagnostics": [
+    {
+      "type": "mobile-browser-deprecation",
+      "message": "window.styleMedia is a deprecated draft version of window.matchMedia API, and it will be removed in the future.",
+      "disposition": "Retained. The original aggregate flag was false because it rejected this warning; all seven photo paths, native identities, layout and exact-return assertions had completed successfully. No application runtime error occurred."
+    },
+    {
+      "type": "original-desktop-test-preferences",
+      "disposition": "Original desktop attempt stopped before photo checks. Per-frame media emulation in a new isolated browser completed the representative paths; user/global settings were not changed."
+    },
+    {
+      "type": "iframe-initialization",
+      "disposition": "One resumed initialization attempt reached no photo paths before its URL assertion. The test then awaited iframe navigation normally; diagnostic retained."
+    },
+    {
+      "type": "wrapper-feature-warning",
+      "message": "Unrecognized feature: 'webgpu'.",
+      "disposition": "Wrapper warning retained; no gallery runtime error or failed photograph path."
+    }
+  ],
+  "finalizedUTC": "2026-09-11T16:35:19.021298+00:00"
+}

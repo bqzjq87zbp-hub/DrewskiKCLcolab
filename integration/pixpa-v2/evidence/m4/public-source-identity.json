@@ -1,0 +1,64 @@
+{
+  "verifiedAt": "2026-09-10T21:59:16.814Z",
+  "publicURL": "https://kiyonocreativelab.com/pier-gallery?release=two104-live-20260910",
+  "iframe": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "counts": {
+    "branding": 25,
+    "families": 27,
+    "headshots": 36,
+    "coastal": 16
+  },
+  "old102Preserved": true,
+  "files": [
+    {
+      "path": "categories.json",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 45170,
+      "sha256": "f839b9716516405ae360933431650a348e44a330687c15af6d887768e8f67980"
+    },
+    {
+      "path": "main-v2.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 7421,
+      "sha256": "67651d17d4754bb571dc91b7766a556122804f9ec748486c8f7ece19404bf637"
+    },
+    {
+      "path": "collections.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 8324,
+      "sha256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43"
+    },
+    {
+      "path": "collections.css",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 9537,
+      "sha256": "a38976fef5b5e845c014cd8c977272b61600a08b99b86e9a69262ed39c10e927"
+    },
+    {
+      "path": "glass-sheen.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 8280,
+      "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8"
+    },
+    {
+      "path": "glass-sheen.css",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 1706,
+      "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612"
+    },
+    {
+      "path": "slots.json",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 7323,
+      "sha256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21"
+    }
+  ],
+  "renderedAcceptance": "separate pending reviewer proof"
+}

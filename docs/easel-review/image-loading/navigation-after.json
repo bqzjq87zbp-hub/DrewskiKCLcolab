@@ -1,0 +1,307 @@
+{
+  "created": "2026-09-10T03:12:01.304Z",
+  "before": [
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    }
+  ],
+  "cases": [
+    {
+      "name": "direct-category-switch-return",
+      "profile": {
+        "id": "desktop",
+        "width": 800,
+        "height": 900,
+        "mobile": false
+      },
+      "before": {
+        "url": "http://127.0.0.1:4280/#collection/families",
+        "hash": "#collection/families",
+        "length": 2,
+        "state": null,
+        "view": "collection",
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 0,
+        "progress": 0,
+        "range": 1,
+        "collectionTitle": "Family portraits"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:4280/#collection/headshots",
+        "hash": "#collection/headshots",
+        "length": 2,
+        "state": {
+          "localCollection": false,
+          "aisleY": 0,
+          "aislePosition": null
+        },
+        "view": "collection",
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 0,
+        "progress": 0,
+        "range": 1,
+        "collectionTitle": "Professional headshots"
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 2,
+        "state": null,
+        "view": "aisle",
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 0,
+        "progress": 0,
+        "range": 4950,
+        "collectionTitle": "Professional headshots"
+      },
+      "pass": true
+    },
+    {
+      "name": "browser-back-while-viewer-open",
+      "profile": {
+        "id": "desktop",
+        "width": 800,
+        "height": 900,
+        "mobile": false
+      },
+      "aisle": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 2,
+        "state": null,
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 2970,
+        "progress": 0.6,
+        "range": 4950
+      },
+      "opened": {
+        "url": "http://127.0.0.1:4280/#collection/headshots",
+        "hash": "#collection/headshots",
+        "length": 3,
+        "state": {
+          "localCollection": true,
+          "aisleY": 2970,
+          "aislePosition": {
+            "scrollY": 2970,
+            "progress": 0.6
+          }
+        },
+        "view": "collection",
+        "viewerOpen": true,
+        "viewerSrc": "http://127.0.0.1:4280/media/e3985b3a4ca015b66a441fc2.jpg",
+        "scrollY": 2251,
+        "progress": 0.6,
+        "range": 1,
+        "collectionTitle": "Professional headshots"
+      },
+      "afterBack": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 3,
+        "state": {
+          "aisleY": 2970,
+          "aislePosition": {
+            "scrollY": 2970,
+            "progress": 0.6
+          }
+        },
+        "view": "aisle",
+        "viewerOpen": false,
+        "viewerSrc": "http://127.0.0.1:4280/media/e3985b3a4ca015b66a441fc2.jpg",
+        "scrollY": 2970,
+        "progress": 0.6,
+        "range": 4950,
+        "collectionTitle": "Professional headshots"
+      },
+      "afterClose": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 3,
+        "state": {
+          "aisleY": 2970,
+          "aislePosition": {
+            "scrollY": 2970,
+            "progress": 0.6
+          }
+        },
+        "view": "aisle",
+        "viewerOpen": false,
+        "viewerSrc": "http://127.0.0.1:4280/media/e3985b3a4ca015b66a441fc2.jpg",
+        "scrollY": 2970,
+        "progress": 0.6,
+        "range": 4950,
+        "collectionTitle": "Professional headshots"
+      },
+      "pass": true
+    },
+    {
+      "name": "direct-category-switch-return",
+      "profile": {
+        "id": "phone",
+        "width": 390,
+        "height": 844,
+        "mobile": true
+      },
+      "before": {
+        "url": "http://127.0.0.1:4280/#collection/families",
+        "hash": "#collection/families",
+        "length": 2,
+        "state": null,
+        "view": "collection",
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 0,
+        "progress": 0,
+        "range": 1,
+        "collectionTitle": "Family portraits"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:4280/#collection/headshots",
+        "hash": "#collection/headshots",
+        "length": 2,
+        "state": {
+          "localCollection": false,
+          "aisleY": 0,
+          "aislePosition": null
+        },
+        "view": "collection",
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 0,
+        "progress": 0,
+        "range": 1,
+        "collectionTitle": "Professional headshots"
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 2,
+        "state": null,
+        "view": "aisle",
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 0,
+        "progress": 0,
+        "range": 7596,
+        "collectionTitle": "Professional headshots"
+      },
+      "pass": true
+    },
+    {
+      "name": "browser-back-while-viewer-open",
+      "profile": {
+        "id": "phone",
+        "width": 390,
+        "height": 844,
+        "mobile": true
+      },
+      "aisle": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 2,
+        "state": null,
+        "viewerOpen": false,
+        "viewerSrc": "",
+        "scrollY": 4558,
+        "progress": 0.6000526592943655,
+        "range": 7596
+      },
+      "opened": {
+        "url": "http://127.0.0.1:4280/#collection/headshots",
+        "hash": "#collection/headshots",
+        "length": 3,
+        "state": {
+          "localCollection": true,
+          "aisleY": 4558,
+          "aislePosition": {
+            "scrollY": 4558,
+            "progress": 0.6000526592943655
+          }
+        },
+        "view": "collection",
+        "viewerOpen": true,
+        "viewerSrc": "http://127.0.0.1:4280/media/e3985b3a4ca015b66a441fc2.jpg",
+        "scrollY": 2703,
+        "progress": 0,
+        "range": 1,
+        "collectionTitle": "Professional headshots"
+      },
+      "afterBack": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 3,
+        "state": {
+          "aisleY": 4558,
+          "aislePosition": {
+            "scrollY": 4558,
+            "progress": 0.6000526592943655
+          }
+        },
+        "view": "aisle",
+        "viewerOpen": false,
+        "viewerSrc": "http://127.0.0.1:4280/media/e3985b3a4ca015b66a441fc2.jpg",
+        "scrollY": 4558,
+        "progress": 0.6000526592943655,
+        "range": 7596,
+        "collectionTitle": "Professional headshots"
+      },
+      "afterClose": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "length": 3,
+        "state": {
+          "aisleY": 4558,
+          "aislePosition": {
+            "scrollY": 4558,
+            "progress": 0.6000526592943655
+          }
+        },
+        "view": "aisle",
+        "viewerOpen": false,
+        "viewerSrc": "http://127.0.0.1:4280/media/e3985b3a4ca015b66a441fc2.jpg",
+        "scrollY": 4558,
+        "progress": 0.6000526592943655,
+        "range": 7596,
+        "collectionTitle": "Professional headshots"
+      },
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "scope": "Two independently hypothesized real history routes, actual browser clicks; no application mutations",
+  "after": [
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    }
+  ],
+  "runtimeStable": true,
+  "status": "PASS"
+}

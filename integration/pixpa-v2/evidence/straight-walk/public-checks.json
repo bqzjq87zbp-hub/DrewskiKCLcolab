@@ -1,0 +1,2861 @@
+{
+  "result": "PASS",
+  "physicalDevice": false,
+  "checks": 682,
+  "sourceCommit": "eabd8589db7be166352f84b4899090fe913b8dc3",
+  "cases": [
+    {
+      "id": "chrome-390-844-normal",
+      "result": "PASS",
+      "checks": 82,
+      "input": "Chrome compositor touch",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "categoryReturn": true,
+      "lookTargets": [
+        {
+          "label": "Look left",
+          "x": 54.2109375,
+          "y": 652,
+          "width": 88,
+          "height": 48,
+          "top": 652,
+          "right": 142.2109375,
+          "bottom": 700,
+          "left": 54.2109375
+        },
+        {
+          "label": "Look ahead",
+          "x": 148.2109375,
+          "y": 652,
+          "width": 93.578125,
+          "height": 48,
+          "top": 652,
+          "right": 241.7890625,
+          "bottom": 700,
+          "left": 148.2109375
+        },
+        {
+          "label": "Look right",
+          "x": 247.7890625,
+          "y": 652,
+          "width": 88,
+          "height": 48,
+          "top": 652,
+          "right": 335.7890625,
+          "bottom": 700,
+          "left": 247.7890625
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3993638944469124,
+              "maxU": 0.6205008189162307,
+              "minV": 0.03032775006224292,
+              "maxV": 0.7131950133555925,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.07780410742496051,
+          "z": 0.5446287519747236,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.5446287519747236,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3999995576433593,
+              "maxU": 0.6197659276110421,
+              "minV": 0.03108877463002019,
+              "maxV": 0.709723787683062,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.03317535545023697,
+          "z": 0.23222748815165878,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.23222748815165878,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.39963493865250393,
+              "maxU": 0.6201874642480285,
+              "minV": 0.0306522478474881,
+              "maxV": 0.7117148968251734,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3993638944469124,
+              "maxU": 0.6205008189162307,
+              "minV": 0.03032775006224292,
+              "maxV": 0.7131950133555925,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.10005265929436545,
+          "z": 0.7003686150605581,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.7003686150605581,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4001813293526648,
+              "maxU": 0.6195557810280018,
+              "minV": 0.031306394176474295,
+              "maxV": 0.708731169851154,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.25,
+          "z": 1.75,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 1.75,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4014064061390491,
+              "maxU": 0.6181394676665641,
+              "minV": 0.03277307265819729,
+              "maxV": 0.7020412780727918,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40344891783118586,
+              "maxU": 0.6157781164168975,
+              "minV": 0.035218395254151824,
+              "maxV": 0.6908875427899909,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75,
+          "z": 5.25,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 5.25,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4054914295233226,
+              "maxU": 0.6134167651672312,
+              "minV": 0.03766371785010619,
+              "maxV": 0.6797338075071899,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 7,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4075339412154594,
+              "maxU": 0.6110554139175647,
+              "minV": 0.04010904044606045,
+              "maxV": 0.6685800722243889,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40344891783118586,
+              "maxU": 0.6157781164168975,
+              "minV": 0.035218395254151824,
+              "maxV": 0.6908875427899909,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "chrome-320-740-normal",
+      "result": "PASS",
+      "checks": 77,
+      "input": "Chrome compositor touch",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "lookTargets": [
+        {
+          "label": "Look left",
+          "x": 19.2109375,
+          "y": 548,
+          "width": 88,
+          "height": 48,
+          "top": 548,
+          "right": 107.2109375,
+          "bottom": 596,
+          "left": 19.2109375
+        },
+        {
+          "label": "Look ahead",
+          "x": 113.2109375,
+          "y": 548,
+          "width": 93.578125,
+          "height": 48,
+          "top": 548,
+          "right": 206.7890625,
+          "bottom": 596,
+          "left": 113.2109375
+        },
+        {
+          "label": "Look right",
+          "x": 212.7890625,
+          "y": 548,
+          "width": 88,
+          "height": 48,
+          "top": 548,
+          "right": 300.7890625,
+          "bottom": 596,
+          "left": 212.7890625
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 0,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4065723386826422,
+              "maxU": 0.6138974175062737,
+              "minV": 0.02966417974218455,
+              "maxV": 0.713713770483202,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.07792792792792792,
+          "z": 0.5454954954954955,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 0.5454954954954955,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4071642661616499,
+              "maxU": 0.6132023481225373,
+              "minV": 0.030430534631630313,
+              "maxV": 0.7102338003152047,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.03333333333333333,
+          "z": 0.23333333333333334,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 0.23333333333333334,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4068255330956281,
+              "maxU": 0.613600104590687,
+              "minV": 0.029991984723797105,
+              "maxV": 0.712225228330417,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 0,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4065723386826422,
+              "maxU": 0.6138974175062737,
+              "minV": 0.02966417974218455,
+              "maxV": 0.713713770483202,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.1,
+          "z": 0.7000000000000001,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 0.7000000000000001,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40733192192160006,
+              "maxU": 0.6130054787595136,
+              "minV": 0.030647594687022273,
+              "maxV": 0.709248144024847,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.25,
+          "z": 1.75,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 1.75,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40847129678003674,
+              "maxU": 0.6116675706393734,
+              "minV": 0.032122717104279,
+              "maxV": 0.7025497043373148,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 3.5,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4103702548774315,
+              "maxU": 0.6094377237724732,
+              "minV": 0.0345812544663735,
+              "maxV": 0.6913856381914272,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75,
+          "z": 5.25,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 5.25,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.41226921297482594,
+              "maxU": 0.6072078769055728,
+              "minV": 0.037039791828467894,
+              "maxV": 0.6802215720455396,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 7,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.41416817107222054,
+              "maxU": 0.6049780300386725,
+              "minV": 0.0394983291905624,
+              "maxV": 0.6690575058996521,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 845.1877714753933,
+            "principalX": 144.20277465316832,
+            "principalY": 370.00000000000006,
+            "cover": 0.27746531683539555,
+            "offsetX": -410.72785901762273,
+            "offsetY": 9.777068044058978e-14,
+            "distance": 3.5,
+            "focalZoom": 1.496421442756653,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4103702548774315,
+              "maxU": 0.6094377237724732,
+              "minV": 0.0345812544663735,
+              "maxV": 0.6913856381914272,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "chrome-430-932-normal",
+      "result": "PASS",
+      "checks": 77,
+      "input": "Chrome compositor touch",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "lookTargets": [
+        {
+          "label": "Look left",
+          "x": 74.2109375,
+          "y": 740,
+          "width": 88,
+          "height": 48,
+          "top": 740,
+          "right": 162.2109375,
+          "bottom": 788,
+          "left": 74.2109375
+        },
+        {
+          "label": "Look ahead",
+          "x": 168.2109375,
+          "y": 740,
+          "width": 93.578125,
+          "height": 48,
+          "top": 740,
+          "right": 261.7890625,
+          "bottom": 788,
+          "left": 168.2109375
+        },
+        {
+          "label": "Look right",
+          "x": 267.7890625,
+          "y": 740,
+          "width": 88,
+          "height": 48,
+          "top": 740,
+          "right": 355.7890625,
+          "bottom": 788,
+          "left": 267.7890625
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.39953664770760144,
+              "maxU": 0.6203425660550728,
+              "minV": 0.030311843325759646,
+              "maxV": 0.7132074512831796,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.07784930853600382,
+          "z": 0.5449451597520267,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 0.5449451597520267,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40017160889324954,
+              "maxU": 0.6196082291908069,
+              "minV": 0.031073408662205593,
+              "maxV": 0.7097341318336147,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.03338102050548403,
+          "z": 0.2336671435383882,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 0.2336671435383882,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3998089128408043,
+              "maxU": 0.6200276896048516,
+              "minV": 0.030638395077987657,
+              "maxV": 0.7117181259449281,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.39953664770760144,
+              "maxU": 0.6203425660550728,
+              "minV": 0.030311843325759646,
+              "maxV": 0.7132074512831796,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.10002384358607534,
+          "z": 0.7001669051025274,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 0.7001669051025274,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4003524707317343,
+              "maxU": 0.61939906126316,
+              "minV": 0.03129033232618561,
+              "maxV": 0.7087447942874905,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.25,
+          "z": 1.75,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 1.75,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4015757190801957,
+              "maxU": 0.6179843663546662,
+              "minV": 0.03275748269869527,
+              "maxV": 0.7020534683034891,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40361479045278975,
+              "maxU": 0.61562616665426,
+              "minV": 0.03520312207163051,
+              "maxV": 0.6908994853237984,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75,
+          "z": 5.25,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 5.25,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40565386182538427,
+              "maxU": 0.6132679669538532,
+              "minV": 0.03764876144456619,
+              "maxV": 0.6797455023441066,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 7,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4076929331979785,
+              "maxU": 0.6109097672534466,
+              "minV": 0.04009440081750176,
+              "maxV": 0.668591519364416,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 1066.264976440984,
+            "principalX": 195.64349456317962,
+            "principalY": 466,
+            "cover": 0.34945631796025495,
+            "offsetX": -503.2691413573302,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.4989310963249207,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40361479045278975,
+              "maxU": 0.61562616665426,
+              "minV": 0.03520312207163051,
+              "maxV": 0.6908994853237984,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "chrome-844-390-normal",
+      "result": "PASS",
+      "checks": 69,
+      "input": "Chrome compositor touch",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.0025049613437801987,
+              "maxU": 0.9974950386562199,
+              "minV": 0.04526387738779469,
+              "maxV": 0.7348331258144158,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.12773892773892773,
+          "z": 0.8941724941724941,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 0.8941724941724941,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.007586832692378476,
+              "maxU": 0.992452387818715,
+              "minV": 0.04636134635990191,
+              "maxV": 0.7289138824456246,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.05501165501165501,
+          "z": 0.3850815850815851,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 0.3850815850815851,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.004693504479308053,
+              "maxU": 0.9953233861057613,
+              "minV": 0.04573651001081902,
+              "maxV": 0.7322839626117975,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.0025049613437801987,
+              "maxU": 0.9974950386562199,
+              "minV": 0.04526387738779469,
+              "maxV": 0.7348331258144158,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.10023310023310024,
+          "z": 0.7016317016317016,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 0.7016317016317016,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.006492561124614937,
+              "maxU": 0.9935382140939437,
+              "minV": 0.04612503004838975,
+              "maxV": 0.7301884640469334,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.24988344988344988,
+          "z": 1.749184149184149,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 1.749184149184149,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.012446140332279199,
+              "maxU": 0.9876305830032901,
+              "minV": 0.04741075099746428,
+              "maxV": 0.7232538760126921,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5002331002331002,
+          "z": 3.5016317016317013,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 3.5016317016317013,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.022405866296503152,
+              "maxU": 0.9777477235151871,
+              "minV": 0.049561629968345955,
+              "maxV": 0.71165302313298,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.7501165501165501,
+          "z": 5.250815850815851,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 5.250815850815851,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.03234704528500154,
+              "maxU": 0.9678832678622571,
+              "minV": 0.05170850357801571,
+              "maxV": 0.7000737733312575,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 7,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.04228822427350082,
+              "maxU": 0.9580188122093272,
+              "minV": 0.053855377187685294,
+              "maxV": 0.6884945235295337,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5002331002331002,
+          "z": 3.5016317016317013,
+          "look": "ahead",
+          "camera": {
+            "focal": 431.6724017933293,
+            "principalX": 422,
+            "principalY": 132.81468,
+            "cover": 0.211,
+            "offsetX": 0,
+            "offsetY": -148.55381999999997,
+            "distance": 3.5016317016317013,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.022405866296503152,
+              "maxU": 0.9777477235151871,
+              "minV": 0.049561629968345955,
+              "maxV": 0.71165302313298,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "chrome-768-1024-normal",
+      "result": "PASS",
+      "checks": 69,
+      "input": "Chrome compositor touch",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2611700442675019,
+              "maxU": 0.7587272698035537,
+              "minV": 0.0025049613437802543,
+              "maxV": 0.9974950386562196,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.12428977272727272,
+          "z": 0.8700284090909091,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 0.8700284090909091,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.26355371971807795,
+              "maxU": 0.7561847575970853,
+              "minV": 0.003996142063688701,
+              "maxV": 0.9891350754550288,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.05308948863636364,
+          "z": 0.37162642045454547,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 0.37162642045454547,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.26218821420996224,
+              "maxU": 0.7576412538753622,
+              "minV": 0.0031419085369982502,
+              "maxV": 0.9939241400888539,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2611700442675019,
+              "maxU": 0.7587272698035537,
+              "minV": 0.0025049613437802543,
+              "maxV": 0.9974950386562196,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.09996448863636363,
+          "z": 0.6997514204545454,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 0.6997514204545454,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2630872003798938,
+              "maxU": 0.756682363557494,
+              "minV": 0.0037042966942208433,
+              "maxV": 0.9907712396815473,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.25,
+          "z": 1.75,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 1.75,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2659646371738035,
+              "maxU": 0.7536131881082572,
+              "minV": 0.00550436484896738,
+              "maxV": 0.9806795698172535,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2707592300801053,
+              "maxU": 0.7484991064129605,
+              "minV": 0.008503768354154395,
+              "maxV": 0.9638641009782871,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75,
+          "z": 5.25,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 5.25,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2755538229864065,
+              "maxU": 0.7433850247176643,
+              "minV": 0.011503171859341133,
+              "maxV": 0.9470486321393183,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 7,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2803484158927083,
+              "maxU": 0.7382709430223677,
+              "minV": 0.014502575364528147,
+              "maxV": 0.930233163300352,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 785.5046663652279,
+            "principalX": 368.64383952006,
+            "principalY": 512,
+            "cover": 0.3839520059992501,
+            "offsetX": -399.2601724784402,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.2707592300801053,
+              "maxU": 0.7484991064129605,
+              "minV": 0.008503768354154395,
+              "maxV": 0.9638641009782871,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "chrome-1024-768-normal",
+      "result": "PASS",
+      "checks": 69,
+      "input": "Native browser wheel",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.0026928294555961796,
+              "maxU": 0.9973216219376204,
+              "minV": 0.0025049613437802543,
+              "maxV": 0.9974950386562197,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.16571969696969696,
+          "z": 1.1600378787878787,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 1.1600378787878787,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.009283219686859967,
+              "maxU": 0.9907819229264868,
+              "minV": 0.004493202303658128,
+              "maxV": 0.9863484210546324,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.07102272727272728,
+          "z": 0.49715909090909094,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 0.49715909090909094,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.005517282411852342,
+              "maxU": 0.9945188937899914,
+              "minV": 0.003357064612299343,
+              "maxV": 0.9927179168269678,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.0026928294555961796,
+              "maxU": 0.9973216219376204,
+              "minV": 0.0025049613437802543,
+              "maxV": 0.9974950386562197,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.09990530303030302,
+          "z": 0.6993371212121212,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 0.6993371212121212,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.006665893280729751,
+              "maxU": 0.9933791176766225,
+              "minV": 0.003703586608163778,
+              "maxV": 0.9907752206164054,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.25,
+          "z": 1.75,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 1.75,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.012634903861617086,
+              "maxU": 0.9874560188579675,
+              "minV": 0.005504364848967214,
+              "maxV": 0.9806795698172537,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.02257697826763838,
+              "maxU": 0.9775904157783144,
+              "minV": 0.008503768354154395,
+              "maxV": 0.9638641009782861,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75,
+          "z": 5.25,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 5.25,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.032519052673659066,
+              "maxU": 0.9677248126986608,
+              "minV": 0.011503171859341466,
+              "maxV": 0.9470486321393214,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 7,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.042461127079680194,
+              "maxU": 0.9578592096190077,
+              "minV": 0.01450257536452848,
+              "maxV": 0.930233163300355,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 523.9254757104011,
+            "principalX": 511.9925609298838,
+            "principalY": 341.5,
+            "cover": 0.25609298837645295,
+            "offsetX": -0.19341582302207827,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.02257697826763838,
+              "maxU": 0.9775904157783144,
+              "minV": 0.008503768354154395,
+              "maxV": 0.9638641009782861,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "chrome-1440-900-normal",
+      "result": "PASS",
+      "checks": 74,
+      "input": "Native browser wheel",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "categoryReturn": true,
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.0025049613437803653,
+              "maxU": 0.9974950386562198,
+              "minV": 0.002522371493864528,
+              "maxV": 0.9973880905914168,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.1414141414141414,
+          "z": 0.9898989898989898,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 0.9898989898989898,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.00813087731364004,
+              "maxU": 0.9919125419869625,
+              "minV": 0.004218807656921064,
+              "maxV": 0.9878775149918262,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.06060606060606061,
+          "z": 0.42424242424242425,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 0.42424242424242425,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.00491606818800594,
+              "maxU": 0.9951025400836808,
+              "minV": 0.0032494155637458055,
+              "maxV": 0.9933121296201637,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 0,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.0025049613437803653,
+              "maxU": 0.9974950386562198,
+              "minV": 0.002522371493864528,
+              "maxV": 0.9973880905914168,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.1,
+          "z": 0.7000000000000001,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 0.7000000000000001,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.006483287636752599,
+              "maxU": 0.9935474160115305,
+              "minV": 0.003721994209168855,
+              "maxV": 0.9906627549888494,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.2501010101010101,
+          "z": 1.7507070707070707,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 1.7507070707070707,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.012454795587617695,
+              "maxU": 0.9876219945468758,
+              "minV": 0.0055226400222416205,
+              "maxV": 0.9805679583167123,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 3.5,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.022396592808641202,
+              "maxU": 0.9777569254327736,
+              "minV": 0.00852048507038572,
+              "maxV": 0.9637614125785794,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75010101010101,
+          "z": 5.250707070707071,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 5.250707070707071,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.03234642705247759,
+              "maxU": 0.9678838813234292,
+              "minV": 0.011520753598762978,
+              "maxV": 0.9469412803038773,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 7,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.04228822427350121,
+              "maxU": 0.9580188122093269,
+              "minV": 0.014518598646907133,
+              "maxV": 0.9301347345657438,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 690.4712587926476,
+            "principalX": 675,
+            "principalY": 449.9595,
+            "cover": 0.3375,
+            "offsetX": 0,
+            "offsetY": -0.09675000000005866,
+            "distance": 3.5,
+            "focalZoom": 1.0050351483917237,
+            "lookYaw": 0,
+            "viewPitchOffset": 0,
+            "sideLookSupported": false,
+            "sourceEnvelope": {
+              "minU": 0.022396592808641202,
+              "maxU": 0.9777569254327736,
+              "minV": 0.00852048507038572,
+              "maxV": 0.9637614125785794,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "webkit-390-844-normal",
+      "result": "PASS",
+      "checks": 82,
+      "input": "WebKit real keyboard PageDown/PageUp focused inside child iframe, not touch swipe",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "categoryReturn": true,
+      "lookTargets": [
+        {
+          "label": "Look left",
+          "x": 54,
+          "y": 651.984375,
+          "width": 88,
+          "height": 48,
+          "top": 651.984375,
+          "right": 142,
+          "bottom": 699.984375,
+          "left": 54
+        },
+        {
+          "label": "Look ahead",
+          "x": 148,
+          "y": 651.984375,
+          "width": 93.578125,
+          "height": 48,
+          "top": 651.984375,
+          "right": 241.578125,
+          "bottom": 699.984375,
+          "left": 148
+        },
+        {
+          "label": "Look right",
+          "x": 247.578125,
+          "y": 651.984375,
+          "width": 88,
+          "height": 48,
+          "top": 651.984375,
+          "right": 335.578125,
+          "bottom": 699.984375,
+          "left": 247.578125
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3993638944469124,
+              "maxU": 0.6205008189162307,
+              "minV": 0.03032775006224303,
+              "maxV": 0.7131950133555924,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.10584518167456557,
+          "z": 0.740916271721959,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.740916271721959,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.400228654531419,
+              "maxU": 0.619501068308157,
+              "minV": 0.03136305251992988,
+              "maxV": 0.7084727368061602,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3993638944469124,
+              "maxU": 0.6205008189162307,
+              "minV": 0.03032775006224303,
+              "maxV": 0.7131950133555924,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3993638944469124,
+              "maxU": 0.6205008189162307,
+              "minV": 0.03032775006224303,
+              "maxV": 0.7131950133555924,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.09992101105845182,
+          "z": 0.6994470774091627,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.6994470774091627,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40018025378042044,
+              "maxU": 0.6195570244989073,
+              "minV": 0.031305106486850476,
+              "maxV": 0.7087370433294493,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.25,
+          "z": 1.75,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 1.75,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40140640613904915,
+              "maxU": 0.618139467666564,
+              "minV": 0.032773072658197455,
+              "maxV": 0.7020412780727918,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40344891783118586,
+              "maxU": 0.6157781164168975,
+              "minV": 0.03521839525415199,
+              "maxV": 0.6908875427899909,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75,
+          "z": 5.25,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 5.25,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4054914295233226,
+              "maxU": 0.6134167651672312,
+              "minV": 0.03766371785010625,
+              "maxV": 0.6797338075071899,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 7,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4075339412154594,
+              "maxU": 0.6110554139175646,
+              "minV": 0.04010904044606062,
+              "maxV": 0.6685800722243889,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40344891783118586,
+              "maxU": 0.6157781164168975,
+              "minV": 0.03521839525415199,
+              "maxV": 0.6908875427899909,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "chrome-390-844-reduce",
+      "result": "PASS",
+      "checks": 83,
+      "input": "Chrome compositor touch",
+      "source": [
+        {
+          "path": "aisle/gallery-layout.js",
+          "sha256": "a0229da64247ad2af905efd7f4d958223f5800e2a43d357deddb1dab229e30e7"
+        },
+        {
+          "path": "aisle/photographic-aisle.js",
+          "sha256": "a22068757e5e4dfb3ed14c5c7c86c38cdfcc3a510cfe8ccc645602eb1540e5b4"
+        },
+        {
+          "path": "aisle-integration.js",
+          "sha256": "278642e4f0504da1c147a2b12217b22744ac1980e365017eca7448dea60c93e6"
+        },
+        {
+          "path": "aisle/aisle.css",
+          "sha256": "a5c5ea6a18db1c324c843f57bcd7f365029ff840a49cea5f25f867571f6698cd"
+        }
+      ],
+      "categoryReturn": true,
+      "lookTargets": [
+        {
+          "label": "Look left",
+          "x": 54.2109375,
+          "y": 652,
+          "width": 88,
+          "height": 48,
+          "top": 652,
+          "right": 142.2109375,
+          "bottom": 700,
+          "left": 54.2109375
+        },
+        {
+          "label": "Look ahead",
+          "x": 148.2109375,
+          "y": 652,
+          "width": 93.578125,
+          "height": 48,
+          "top": 652,
+          "right": 241.7890625,
+          "bottom": 700,
+          "left": 148.2109375
+        },
+        {
+          "label": "Look right",
+          "x": 247.7890625,
+          "y": 652,
+          "width": 88,
+          "height": 48,
+          "top": 652,
+          "right": 335.7890625,
+          "bottom": 700,
+          "left": 247.7890625
+        }
+      ],
+      "samples": [
+        {
+          "label": "entry",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3993638944469124,
+              "maxU": 0.6205008189162307,
+              "minV": 0.03032775006224292,
+              "maxV": 0.7131950133555925,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "forward",
+          "p": 0.07793575566087414,
+          "z": 0.545550289626119,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.545550289626119,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40000063321560375,
+              "maxU": 0.6197646841401365,
+              "minV": 0.03109006231964423,
+              "maxV": 0.7097179142047667,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "reverse",
+          "p": 0.0333070036861506,
+          "z": 0.23314902580305422,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.23314902580305422,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.39963601422474837,
+              "maxU": 0.6201862207771229,
+              "minV": 0.03065353553711203,
+              "maxV": 0.7117090233468784,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0",
+          "p": 0,
+          "z": 0,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.3993638944469124,
+              "maxU": 0.6205008189162307,
+              "minV": 0.03032775006224292,
+              "maxV": 0.7131950133555925,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.1",
+          "p": 0.10005265929436545,
+          "z": 0.7003686150605581,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 0.7003686150605581,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4001813293526648,
+              "maxU": 0.6195557810280018,
+              "minV": 0.031306394176474295,
+              "maxV": 0.708731169851154,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.25",
+          "p": 0.25,
+          "z": 1.75,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 1.75,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4014064061390491,
+              "maxU": 0.6181394676665641,
+              "minV": 0.03277307265819729,
+              "maxV": 0.7020412780727918,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40344891783118586,
+              "maxU": 0.6157781164168975,
+              "minV": 0.035218395254151824,
+              "maxV": 0.6908875427899909,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.75",
+          "p": 0.75,
+          "z": 5.25,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 5.25,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4054914295233226,
+              "maxU": 0.6134167651672312,
+              "minV": 0.03766371785010619,
+              "maxV": 0.6797338075071899,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p1",
+          "p": 1,
+          "z": 7,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 7,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.4075339412154594,
+              "maxU": 0.6110554139175647,
+              "minV": 0.04010904044606045,
+              "maxV": 0.6685800722243889,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        },
+        {
+          "label": "p0.5",
+          "p": 0.5,
+          "z": 3.5,
+          "look": "ahead",
+          "camera": {
+            "focal": 965.6273753254807,
+            "principalX": 177.48316460442442,
+            "principalY": 422,
+            "cover": 0.3164604424446944,
+            "offsetX": -455.4377202849644,
+            "offsetY": 0,
+            "distance": 3.5,
+            "focalZoom": 1.498992846736908,
+            "lookYaw": 0,
+            "viewPitchOffset": -0.13962634015954636,
+            "sideLookSupported": true,
+            "sourceEnvelope": {
+              "minU": 0.40344891783118586,
+              "maxU": 0.6157781164168975,
+              "minV": 0.035218395254151824,
+              "maxV": 0.6908875427899909,
+              "inside": true
+            }
+          },
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "scope": "Actual public Pixpa wrapper, no local routing or substituted assets"
+}

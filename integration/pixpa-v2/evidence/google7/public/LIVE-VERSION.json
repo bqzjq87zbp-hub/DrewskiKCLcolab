@@ -1,0 +1,134 @@
+{
+  "scope": "Observed public file identities; deployment number supplied by publisher",
+  "publisherReportedRelease": "Sites17",
+  "publisherReportedHostCommit": "d9763848c59dfe8d1bfdd05de1a5ef3b2eb2ef90",
+  "mobileObservedFrom": "2026-09-11T00:06:02.505Z",
+  "mobileObservedUntil": "2026-09-11T00:06:13.978Z",
+  "desktopObservedFrom": "2026-09-11T16:31:22.011Z",
+  "desktopObservedUntil": "2026-09-11T16:31:26.855Z",
+  "categorySHA256": "825e08e10d64116a0b18ed65ce7c9072135a5c3bff0d4288a03bc8d6afdced25",
+  "categoryBytes": 48279,
+  "samePhotoManifestAcrossBothObservations": true,
+  "applicationRuntimeFilesCompared": 14,
+  "nonHTMLFilesExactAgainstAccepted17": 13,
+  "servedHTMLRawSHA256": "0d42724e67ad9f82237f0d83565325cd8696dba814ed18bd08533ba4607db66f",
+  "servedHTMLNormalizedSHA256": "b98cd11e3f6490e88182f32b019722913de33b7b85cbf244909fcb96fd5538df",
+  "HTMLDifference": "Exactly one938-byte Cloudflare-injected script. Ignoring that addition in the evidence comparison restores the exact accepted host HTML; no file or live content was edited.",
+  "concurrentApplicationRevisionChangeObserved": false,
+  "runtime": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 10172,
+      "sha256": "0d42724e67ad9f82237f0d83565325cd8696dba814ed18bd08533ba4607db66f",
+      "accepted17SHA256": "b98cd11e3f6490e88182f32b019722913de33b7b85cbf244909fcb96fd5538df",
+      "matchesAccepted17": false
+    },
+    {
+      "path": "aisle/aisle.css",
+      "status": 200,
+      "bytes": 11190,
+      "sha256": "8ebabe99629f4b892addc249ffe3930fd7643d38dad270a5d43470a9a51615a8",
+      "accepted17SHA256": "8ebabe99629f4b892addc249ffe3930fd7643d38dad270a5d43470a9a51615a8",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "startup.js",
+      "status": 200,
+      "bytes": 955,
+      "sha256": "e27861295f2d6a73a9e20a579a35948f0d2be3e00b3a4d629e902c899d0ac147",
+      "accepted17SHA256": "e27861295f2d6a73a9e20a579a35948f0d2be3e00b3a4d629e902c899d0ac147",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "main-v2.js",
+      "status": 200,
+      "bytes": 7127,
+      "sha256": "1c8933738945538bea0c392ab83f95b34df5eb70efa86ea71d13a1264c1b466a",
+      "accepted17SHA256": "1c8933738945538bea0c392ab83f95b34df5eb70efa86ea71d13a1264c1b466a",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "aisle-integration.js",
+      "status": 200,
+      "bytes": 8719,
+      "sha256": "27ed7980d68d73bddeb773a7b01b4fdd435678b77d8b19b22e1327916071e134",
+      "accepted17SHA256": "27ed7980d68d73bddeb773a7b01b4fdd435678b77d8b19b22e1327916071e134",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "scene-images.js",
+      "status": 200,
+      "bytes": 2245,
+      "sha256": "4d2a89aede1d255ea24cb58da423ddc428204a2b06817bfdc3775debd41d245f",
+      "accepted17SHA256": "4d2a89aede1d255ea24cb58da423ddc428204a2b06817bfdc3775debd41d245f",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "collections.js",
+      "status": 200,
+      "bytes": 8324,
+      "sha256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43",
+      "accepted17SHA256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "glass-sheen.js",
+      "status": 200,
+      "bytes": 8280,
+      "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+      "accepted17SHA256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "aisle/photographic-aisle.js",
+      "status": 200,
+      "bytes": 14922,
+      "sha256": "6f462a072e2179061247a0b38a825fbacf452c2710d2b298c45929dd720db0c3",
+      "accepted17SHA256": "6f462a072e2179061247a0b38a825fbacf452c2710d2b298c45929dd720db0c3",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "slots.json",
+      "status": 200,
+      "bytes": 7323,
+      "sha256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21",
+      "accepted17SHA256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "glass-sheen.css",
+      "status": 200,
+      "bytes": 1706,
+      "sha256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612",
+      "accepted17SHA256": "acb356d387b6896cfc71602b4d89813854f99246ffa6361fc98d0a3ab83d0612",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "aisle/physical-display.js",
+      "status": 200,
+      "bytes": 19845,
+      "sha256": "857c347051d3d44f3887159e0fdbd044dab75073cc21792ca8d5b40698ff396a",
+      "accepted17SHA256": "857c347051d3d44f3887159e0fdbd044dab75073cc21792ca8d5b40698ff396a",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "aisle/physical-easel.js",
+      "status": 200,
+      "bytes": 14767,
+      "sha256": "cd52b437c3c5ccc4d10c62f38cb0dd2576b6e1a637de0808249293b2e62bca8d",
+      "accepted17SHA256": "cd52b437c3c5ccc4d10c62f38cb0dd2576b6e1a637de0808249293b2e62bca8d",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "aisle/photographic-environment.js",
+      "status": 200,
+      "bytes": 12503,
+      "sha256": "1485e8fd9bb5e59eb2240ce368a9ad033375a91981f02e2909f64048d9b248c3",
+      "accepted17SHA256": "1485e8fd9bb5e59eb2240ce368a9ad033375a91981f02e2909f64048d9b248c3",
+      "matchesAccepted17": true
+    }
+  ],
+  "cameraInputAcceptance": false,
+  "physicalIPhoneAcceptance": false
+}

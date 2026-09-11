@@ -1,0 +1,88 @@
+{
+  "base": "5ad8f30538858534937cbaa1a2249db63dc3fcd6",
+  "changedFiles": [
+    "dist/pier-v2-20260910/categories.json"
+  ],
+  "categoriesBytes": 40566,
+  "categoriesSha256": "4806f5f9c2f9b7d15958c24ea293f7c5d4d218c664903c65ab80e156209ddb18",
+  "preserved82": [
+    {
+      "category": "branding",
+      "count": 17,
+      "metadataUrlsOrderExact": true
+    },
+    {
+      "category": "families",
+      "count": 24,
+      "metadataUrlsOrderExact": true
+    },
+    {
+      "category": "headshots",
+      "count": 33,
+      "metadataUrlsOrderExact": true
+    },
+    {
+      "category": "coastal",
+      "count": 8,
+      "metadataUrlsOrderExact": true
+    }
+  ],
+  "new12": [
+    {
+      "id": "lacie-seated-laptop-portrait",
+      "urlMapExact": true
+    },
+    {
+      "id": "lacie-coffee-sign-and-trailer",
+      "urlMapExact": true
+    },
+    {
+      "id": "lacie-portrait-in-the-sewing-workshop",
+      "urlMapExact": true
+    },
+    {
+      "id": "lacie-coffee-trailer-team",
+      "urlMapExact": true
+    },
+    {
+      "id": "lacie-mother-and-child-by-the-trees",
+      "urlMapExact": true
+    },
+    {
+      "id": "lacie-children-sharing-a-glance-by-a-post",
+      "urlMapExact": true
+    },
+    {
+      "id": "lacie-white-coat-studio-portrait",
+      "urlMapExact": true
+    },
+    {
+      "id": "coastal-sunglasses-on-sand",
+      "urlMapExact": true
+    },
+    {
+      "id": "coastal-timber-and-surf",
+      "urlMapExact": true
+    },
+    {
+      "id": "coastal-decorated-bicycles",
+      "urlMapExact": true
+    },
+    {
+      "id": "coastal-toward-the-tower",
+      "urlMapExact": true
+    },
+    {
+      "id": "coastal-incoming-wave",
+      "urlMapExact": true
+    }
+  ],
+  "counts": {
+    "branding": 21,
+    "families": 26,
+    "headshots": 34,
+    "coastal": 13
+  },
+  "unchangedTrackedPaths": 591,
+  "workingTreeStatus": "M dist/pier-v2-20260910/categories.json"
+}

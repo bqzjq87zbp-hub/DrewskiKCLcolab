@@ -1,0 +1,26 @@
+[
+  {
+    "map": "Diffuse",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coated_pine/coated_pine_diff_1k.jpg",
+    "file": "coated_pine_diff_1k.jpg",
+    "bytes": 710600,
+    "md5": "9a7ae992985ad56fd22ed26196a9b405",
+    "sha256": "afee7cfb2ec1716edc712f929cdb3d3dfbac5a0ba290e25943b4472a8144bbaf"
+  },
+  {
+    "map": "nor_gl",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coated_pine/coated_pine_nor_gl_1k.jpg",
+    "file": "coated_pine_nor_gl_1k.jpg",
+    "bytes": 443383,
+    "md5": "2148b0edde5af6b16fbd08a9724feafc",
+    "sha256": "91eb707d7b0dd44133502878f37ede93e6be23c2019e64df72dffe46f6985b3a"
+  },
+  {
+    "map": "Rough",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coated_pine/coated_pine_rough_1k.jpg",
+    "file": "coated_pine_rough_1k.jpg",
+    "bytes": 491513,
+    "md5": "0ce8476bf398e47b0655648b3d38d4ae",
+    "sha256": "6ecebef8ffde1833ee9656d3bf7cf863694ad99ac041cacf2fc5432b2f5383e1"
+  }
+]

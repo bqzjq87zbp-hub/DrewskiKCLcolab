@@ -1,0 +1,11 @@
+{
+  "dateUTC": "2026-09-10",
+  "acceptedBaseline": "78b36c1f5c4f0eadac850d4f00ab9761d4e05e3b",
+  "publishedSource": "a3e11d42389229d67913934f9e82a845e605620d",
+  "sourceFilesHashVerified": 251,
+  "outputFilesHashVerified": 251,
+  "reusedPhotographs": 92,
+  "outputBytes": 173275575,
+  "mode": "actual fresh-directory build; no deployment",
+  "publicTreeModified": false
+}

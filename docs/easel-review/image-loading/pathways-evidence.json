@@ -1,0 +1,6874 @@
+{
+  "created": "2026-09-10T03:15:21.383Z",
+  "base": "http://127.0.0.1:4280/",
+  "before": [
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "categories.json",
+      "status": 200,
+      "sha256": "6eb94e96d67f8a6103b1414ab8b72aef4d265d9ed0ec346802395a7892a2134c"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8"
+    },
+    {
+      "url": "aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    },
+    {
+      "url": "aisle/aisle.css",
+      "status": 200,
+      "sha256": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e"
+    }
+  ],
+  "checks": [
+    {
+      "profile": "desktop",
+      "name": "menu-toggle-Escape-outside",
+      "pass": true,
+      "esc": true,
+      "outside": true
+    },
+    {
+      "profile": "desktop",
+      "name": "appearance-solid",
+      "pass": true,
+      "actual": {
+        "body": "solid",
+        "menu": "solid",
+        "saved": "solid"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "appearance-system",
+      "pass": true,
+      "actual": {
+        "body": "system",
+        "menu": "system",
+        "saved": "system"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "appearance-clear",
+      "pass": true,
+      "actual": {
+        "body": "clear",
+        "menu": "clear",
+        "saved": "clear"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "menu-category-switch-return-branding",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 1980,
+          "aislePosition": {
+            "scrollY": 1980,
+            "progress": 0.4
+          }
+        },
+        "scrollY": 1980,
+        "p": 0.4,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.4,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 3905,
+          "bottom": 4194.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "menu-category-switch-return-families",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 1980,
+          "aislePosition": {
+            "scrollY": 1980,
+            "progress": 0.4
+          }
+        },
+        "scrollY": 1980,
+        "p": 0.4,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.4,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 3905,
+          "bottom": 4194.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "menu-category-switch-return-headshots",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 1980,
+          "aislePosition": {
+            "scrollY": 1980,
+            "progress": 0.4
+          }
+        },
+        "scrollY": 1980,
+        "p": 0.4,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.4,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 3905,
+          "bottom": 4194.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "menu-category-switch-return-coastal",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 1980,
+          "aislePosition": {
+            "scrollY": 1980,
+            "progress": 0.4
+          }
+        },
+        "scrollY": 1980,
+        "p": 0.4,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.4,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 3905,
+          "bottom": 4194.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "all-collections-card-branding",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 5275,
+          "aislePosition": {
+            "scrollY": 5275,
+            "progress": null
+          }
+        },
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "all-collections-card-families",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 5275,
+          "aislePosition": {
+            "scrollY": 5275,
+            "progress": null
+          }
+        },
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 5275,
+          "aislePosition": {
+            "scrollY": 5275,
+            "progress": null
+          }
+        },
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "all-collections-card-headshots",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 5275,
+          "aislePosition": {
+            "scrollY": 5275,
+            "progress": null
+          }
+        },
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 5275,
+          "aislePosition": {
+            "scrollY": 5275,
+            "progress": null
+          }
+        },
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "all-collections-card-coastal",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 5275,
+          "aislePosition": {
+            "scrollY": 5275,
+            "progress": null
+          }
+        },
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 5275,
+          "aislePosition": {
+            "scrollY": 5275,
+            "progress": null
+          }
+        },
+        "scrollY": 5275,
+        "p": 1,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 610,
+          "bottom": 899.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-color-balls",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/families"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-shared-glance",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/families"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-toward-the-water",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/families"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-coastal-poise",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/headshots"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-nwprt-hat-lager",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/branding"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-nwprt-underpier-branded",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/branding"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-beach-culture",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/coastal"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-coke-beach-campaign",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/branding"
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-coke-beach-cold-detail",
+      "pass": true,
+      "visible": false,
+      "note": "Not a rendered visitor control at independently covered best-photo pose; no click claimed."
+    },
+    {
+      "profile": "desktop",
+      "name": "category-sign-coastal-panorama",
+      "pass": true,
+      "visible": false,
+      "note": "Not a rendered visitor control at independently covered best-photo pose; no click claimed."
+    },
+    {
+      "profile": "desktop",
+      "name": "visible-sign-destination-coverage",
+      "pass": true,
+      "categories": [
+        "families",
+        "headshots",
+        "branding",
+        "coastal"
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-color-balls",
+      "pass": true,
+      "actual": "#collection/families",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 3812,
+          "aislePosition": {
+            "scrollY": 3812,
+            "progress": 0.7701010101010101
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-shared-glance",
+      "pass": true,
+      "actual": "#collection/families",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-toward-the-water",
+      "pass": true,
+      "actual": "#collection/families",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-coastal-poise",
+      "pass": true,
+      "actual": "#collection/headshots",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-nwprt-hat-lager",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-nwprt-underpier-branded",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-beach-culture",
+      "pass": true,
+      "actual": "#collection/coastal",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-coke-beach-campaign",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-coke-beach-cold-detail",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "still-fallback-coastal-panorama",
+      "pass": true,
+      "actual": "#collection/coastal",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 576,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 830.375,
+          "bottom": 1119.96875
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "saved-Still-reload-Start-walk",
+      "pass": true,
+      "saved": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 471,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1406.375,
+          "bottom": 1695.96875
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 400,
+        "p": 0.08080808080808081,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.08080808080808081,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5485,
+          "bottom": 5774.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "system-guided-travel-options",
+      "pass": true,
+      "system": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 400,
+        "p": 0.08080808080808081,
+        "range": 4950,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.08080808080808081,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5485,
+          "bottom": 5774.59375
+        }
+      },
+      "guided": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 400,
+        "p": 0.08080808080808081,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.08080808080808081,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5485,
+          "bottom": 5774.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "previous-next-pair-endpoints",
+      "pass": true,
+      "startDisabled": true,
+      "endDisabled": true,
+      "forward": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 990,
+        "p": 0.2,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.2,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "walk-step",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 4895,
+          "bottom": 5184.59375
+        }
+      },
+      "reverse": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5885,
+          "bottom": 6174.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "look-directions-when-rendered",
+      "pass": true,
+      "visible": false
+    },
+    {
+      "profile": "desktop",
+      "name": "optional-video-on-off",
+      "pass": false,
+      "on": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 2475,
+        "p": 0.5,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": true,
+          "active": true,
+          "suppressed": false,
+          "failed": false,
+          "status": "ready",
+          "requestedFrame": 120,
+          "committedFrame": 120,
+          "committedTime": 5,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 3,
+          "inFlight": 1,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": "http://127.0.0.1:4280/video/frame-0060.jpg"
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "aisle-video-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 3410,
+          "bottom": 3699.59375
+        }
+      },
+      "off": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 2475,
+        "p": 0.5,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "aisle-video-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 3410,
+          "bottom": 3699.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "collection-viewer-resize-return",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 576,
+          "aislePosition": {
+            "scrollY": 576,
+            "progress": null
+          }
+        },
+        "scrollY": 2970,
+        "p": 0.6,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.6,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 2915,
+          "bottom": 3204.59375
+        }
+      },
+      "decode": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/96ba6788e8d76e01457ef787.jpg",
+        "expected": "http://127.0.0.1:4280/media/96ba6788e8d76e01457ef787.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1"
+      },
+      "samples": [
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 2970,
+            "aislePosition": {
+              "scrollY": 2970,
+              "progress": 0.6
+            }
+          },
+          "scrollY": 4558,
+          "p": 0.6000526592943655,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6000526592943655,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 3947.5,
+            "bottom": 4352.703125
+          }
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "direct-reload-switch-return-branding",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/branding",
+        "hash": "#collection/branding",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5885,
+          "bottom": 6174.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "direct-reload-switch-return-families",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/families",
+        "hash": "#collection/families",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5885,
+          "bottom": 6174.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "direct-reload-switch-return-headshots",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/headshots",
+        "hash": "#collection/headshots",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "glass-control",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5885,
+          "bottom": 6174.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "direct-reload-switch-return-coastal",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/coastal",
+        "hash": "#collection/coastal",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5885,
+          "bottom": 6174.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "viewer-keyboard-full-file-link",
+      "pass": true,
+      "next": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+        "expected": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1599,
+        "opacity": "1"
+      },
+      "previous": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "expected": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "opacity": "1"
+      },
+      "full": {
+        "src": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "width": 2400,
+        "height": 1600
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#collection/coastal",
+        "hash": "#collection/coastal",
+        "view": "collection",
+        "history": {
+          "localCollection": true,
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": 0
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "collection-photo",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "delayed-decode-close-reopen-and-route",
+      "pass": true,
+      "newer": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "expected": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "naturalWidth": 3000,
+        "naturalHeight": 4500,
+        "opacity": "1"
+      },
+      "after": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "expected": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "naturalWidth": 3000,
+        "naturalHeight": 4500,
+        "opacity": "1"
+      },
+      "routed": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": 0
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 4950,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5885,
+          "bottom": 6174.59375
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "external-inquiry-destination",
+      "pass": false,
+      "expected": "https://kiyonocreativelab.com/inquiry-form",
+      "url": "",
+      "title": "",
+      "body": ""
+    },
+    {
+      "profile": "phone",
+      "name": "menu-toggle-Escape-outside",
+      "pass": true,
+      "esc": true,
+      "outside": true
+    },
+    {
+      "profile": "phone",
+      "name": "appearance-solid",
+      "pass": true,
+      "actual": {
+        "body": "solid",
+        "menu": "solid",
+        "saved": "solid"
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "appearance-system",
+      "pass": true,
+      "actual": {
+        "body": "system",
+        "menu": "system",
+        "saved": "system"
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "appearance-clear",
+      "pass": true,
+      "actual": {
+        "body": "clear",
+        "menu": "clear",
+        "saved": "clear"
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "menu-category-switch-return-branding",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 3038,
+          "aislePosition": {
+            "scrollY": 3038,
+            "progress": 0.39994734070563454
+          }
+        },
+        "scrollY": 3038,
+        "p": 0.39994734070563454,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.39994734070563454,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5467.5,
+          "bottom": 5872.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "menu-category-switch-return-families",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 3038,
+          "aislePosition": {
+            "scrollY": 3038,
+            "progress": 0.39994734070563454
+          }
+        },
+        "scrollY": 3038,
+        "p": 0.39994734070563454,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.39994734070563454,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5467.5,
+          "bottom": 5872.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "menu-category-switch-return-headshots",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 3038,
+          "aislePosition": {
+            "scrollY": 3038,
+            "progress": 0.39994734070563454
+          }
+        },
+        "scrollY": 3038,
+        "p": 0.39994734070563454,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.39994734070563454,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5467.5,
+          "bottom": 5872.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "menu-category-switch-return-coastal",
+      "pass": true,
+      "destinations": [
+        {
+          "expected": "branding",
+          "actual": "#collection/branding"
+        },
+        {
+          "expected": "families",
+          "actual": "#collection/families"
+        },
+        {
+          "expected": "headshots",
+          "actual": "#collection/headshots"
+        },
+        {
+          "expected": "coastal",
+          "actual": "#collection/coastal"
+        }
+      ],
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 3038,
+          "aislePosition": {
+            "scrollY": 3038,
+            "progress": 0.39994734070563454
+          }
+        },
+        "scrollY": 3038,
+        "p": 0.39994734070563454,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.39994734070563454,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 5467.5,
+          "bottom": 5872.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "all-collections-card-branding",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 8067,
+          "aislePosition": {
+            "scrollY": 8067,
+            "progress": null
+          }
+        },
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "all-collections-card-families",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 8067,
+          "aislePosition": {
+            "scrollY": 8067,
+            "progress": null
+          }
+        },
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 8067,
+          "aislePosition": {
+            "scrollY": 8067,
+            "progress": null
+          }
+        },
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "all-collections-card-headshots",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 8067,
+          "aislePosition": {
+            "scrollY": 8067,
+            "progress": null
+          }
+        },
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 8067,
+          "aislePosition": {
+            "scrollY": 8067,
+            "progress": null
+          }
+        },
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "all-collections-card-coastal",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 8067,
+          "aislePosition": {
+            "scrollY": 8067,
+            "progress": null
+          }
+        },
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#photographs",
+        "hash": "#photographs",
+        "view": "aisle",
+        "history": {
+          "aisleY": 8067,
+          "aislePosition": {
+            "scrollY": 8067,
+            "progress": null
+          }
+        },
+        "scrollY": 8067,
+        "p": 1,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 1,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "category-card",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 438.5,
+          "bottom": 843.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-color-balls",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/families"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-shared-glance",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/families"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-toward-the-water",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/families"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-coastal-poise",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/headshots"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-nwprt-hat-lager",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/branding"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-nwprt-underpier-branded",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/branding"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-beach-culture",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/coastal"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-coke-beach-campaign",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/branding"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-coke-beach-cold-detail",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/branding"
+    },
+    {
+      "profile": "phone",
+      "name": "category-sign-coastal-panorama",
+      "pass": true,
+      "visible": true,
+      "actual": "#collection/coastal"
+    },
+    {
+      "profile": "phone",
+      "name": "visible-sign-destination-coverage",
+      "pass": true,
+      "categories": [
+        "families",
+        "headshots",
+        "branding",
+        "coastal"
+      ]
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-color-balls",
+      "pass": true,
+      "actual": "#collection/families",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 6836,
+          "aislePosition": {
+            "scrollY": 6836,
+            "progress": 0.8999473407056345
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-shared-glance",
+      "pass": true,
+      "actual": "#collection/families",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-toward-the-water",
+      "pass": true,
+      "actual": "#collection/families",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-coastal-poise",
+      "pass": true,
+      "actual": "#collection/headshots",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-nwprt-hat-lager",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-nwprt-underpier-branded",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-beach-culture",
+      "pass": true,
+      "actual": "#collection/coastal",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": null
+          }
+        },
+        "scrollY": 36,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1078.28125,
+          "bottom": 1483.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 36,
+          "aislePosition": {
+            "scrollY": 36,
+            "progress": null
+          }
+        },
+        "scrollY": 36,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1078.28125,
+          "bottom": 1483.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-coke-beach-campaign",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 36,
+          "aislePosition": {
+            "scrollY": 36,
+            "progress": null
+          }
+        },
+        "scrollY": 36,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1078.28125,
+          "bottom": 1483.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 36,
+          "aislePosition": {
+            "scrollY": 36,
+            "progress": null
+          }
+        },
+        "scrollY": 36,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1078.28125,
+          "bottom": 1483.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-coke-beach-cold-detail",
+      "pass": true,
+      "actual": "#collection/branding",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 36,
+          "aislePosition": {
+            "scrollY": 36,
+            "progress": null
+          }
+        },
+        "scrollY": 541,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 573.28125,
+          "bottom": 978.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 541,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 573.28125,
+          "bottom": 978.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "still-fallback-coastal-panorama",
+      "pass": true,
+      "actual": "#collection/coastal",
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 541,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 573.28125,
+          "bottom": 978.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 541,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 573.28125,
+          "bottom": 978.484375
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "saved-Still-reload-Start-walk",
+      "pass": true,
+      "saved": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 205,
+        "motion": "still",
+        "reduced": true,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": true,
+          "failed": false,
+          "status": "suppressed",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 1114.28125,
+          "bottom": 1519.484375
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 400,
+        "p": 0.0526592943654555,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.0526592943654555,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8105.5,
+          "bottom": 8510.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "system-guided-travel-options",
+      "pass": true,
+      "system": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 400,
+        "p": 0.0526592943654555,
+        "range": 7596,
+        "motion": "system",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.0526592943654555,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8105.5,
+          "bottom": 8510.703125
+        }
+      },
+      "guided": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 400,
+        "p": 0.0526592943654555,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.0526592943654555,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8105.5,
+          "bottom": 8510.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "previous-next-pair-endpoints",
+      "pass": true,
+      "startDisabled": true,
+      "endDisabled": true,
+      "forward": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 1519,
+        "p": 0.19997367035281727,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.19997367035281727,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "walk-step",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 6986.5,
+          "bottom": 7391.703125
+        }
+      },
+      "reverse": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8505.5,
+          "bottom": 8910.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "look-directions-when-rendered",
+      "pass": true,
+      "visible": true,
+      "values": [
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 541,
+            "aislePosition": {
+              "scrollY": 541,
+              "progress": null
+            }
+          },
+          "scrollY": 3798,
+          "p": 0.5,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "left",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.5,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 0,
+            "videoSHA256": null,
+            "tracking": "not loaded",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 4707.5,
+            "bottom": 5112.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 541,
+            "aislePosition": {
+              "scrollY": 541,
+              "progress": null
+            }
+          },
+          "scrollY": 3798,
+          "p": 0.5,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "right",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.5,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 0,
+            "videoSHA256": null,
+            "tracking": "not loaded",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 4707.5,
+            "bottom": 5112.703125
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 541,
+            "aislePosition": {
+              "scrollY": 541,
+              "progress": null
+            }
+          },
+          "scrollY": 3798,
+          "p": 0.5,
+          "range": 7596,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.5,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 0,
+            "videoSHA256": null,
+            "tracking": "not loaded",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 4707.5,
+            "bottom": 5112.703125
+          }
+        }
+      ]
+    },
+    {
+      "profile": "phone",
+      "name": "optional-video-on-off",
+      "pass": false,
+      "on": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 3798,
+        "p": 0.5,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": true,
+          "active": true,
+          "suppressed": false,
+          "failed": false,
+          "status": "ready",
+          "requestedFrame": 120,
+          "committedFrame": 120,
+          "committedTime": 5,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 3,
+          "inFlight": 1,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": "http://127.0.0.1:4280/video/frame-0060.jpg"
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "aisle-video-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 4707.5,
+          "bottom": 5112.703125
+        }
+      },
+      "off": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 3798,
+        "p": 0.5,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.5,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "aisle-video-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 4707.5,
+          "bottom": 5112.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "collection-viewer-resize-return",
+      "pass": true,
+      "before": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 541,
+          "aislePosition": {
+            "scrollY": 541,
+            "progress": null
+          }
+        },
+        "scrollY": 4558,
+        "p": 0.6000526592943655,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0.6000526592943655,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 1,
+          "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+          "tracking": "measured-2d-flow",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 3947.5,
+          "bottom": 4352.703125
+        }
+      },
+      "decode": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/96ba6788e8d76e01457ef787.jpg",
+        "expected": "http://127.0.0.1:4280/media/96ba6788e8d76e01457ef787.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1"
+      },
+      "samples": [
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4280/",
+          "hash": "",
+          "view": "aisle",
+          "history": {
+            "aisleY": 4558,
+            "aislePosition": {
+              "scrollY": 4558,
+              "progress": 0.6000526592943655
+            }
+          },
+          "scrollY": 2970,
+          "p": 0.6,
+          "range": 4950,
+          "motion": "guided",
+          "reduced": false,
+          "look": "auto",
+          "video": {
+            "enabled": false,
+            "active": false,
+            "suppressed": false,
+            "failed": false,
+            "status": "off",
+            "requestedFrame": null,
+            "committedFrame": null,
+            "committedTime": null,
+            "requestedProgress": 0.6,
+            "decodedCacheSize": 0,
+            "inFlight": 0,
+            "maxDecodedCache": 5,
+            "maxInFlight": 2,
+            "commits": 1,
+            "videoSHA256": "4d8fa4dbf444ebbcdde91ed6ac91859463f387b16f0b7a30ff6497b31948dd8a",
+            "tracking": "measured-2d-flow",
+            "invalidDepths": [],
+            "frameURL": null
+          },
+          "viewer": false,
+          "viewerStatus": "",
+          "active": "menu-toggle",
+          "horizontalOverflow": false,
+          "photographs": {
+            "top": 2930,
+            "bottom": 3199.09375
+          }
+        }
+      ]
+    },
+    {
+      "profile": "phone",
+      "name": "direct-reload-switch-return-branding",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/branding",
+        "hash": "#collection/branding",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "glass-control",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8505.5,
+          "bottom": 8910.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "direct-reload-switch-return-families",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/families",
+        "hash": "#collection/families",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8505.5,
+          "bottom": 8910.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "direct-reload-switch-return-headshots",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/headshots",
+        "hash": "#collection/headshots",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8505.5,
+          "bottom": 8910.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "direct-reload-switch-return-coastal",
+      "pass": true,
+      "loaded": {
+        "url": "http://127.0.0.1:4280/#collection/coastal",
+        "hash": "#collection/coastal",
+        "view": "collection",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": null,
+        "scrollY": 0,
+        "p": 0,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8505.5,
+          "bottom": 8910.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "viewer-keyboard-full-file-link",
+      "pass": true,
+      "next": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+        "expected": "http://127.0.0.1:4280/media/481288d072d928eac1b8b2c6.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1599,
+        "opacity": "1"
+      },
+      "previous": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "expected": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "naturalWidth": 2400,
+        "naturalHeight": 1600,
+        "opacity": "1"
+      },
+      "full": {
+        "src": "http://127.0.0.1:4280/media/363fdb503e956d0273863e50.jpg",
+        "width": 2400,
+        "height": 1600
+      },
+      "after": {
+        "url": "http://127.0.0.1:4280/#collection/coastal",
+        "hash": "#collection/coastal",
+        "view": "collection",
+        "history": {
+          "localCollection": true,
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": 0
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 1,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "collection-photo",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 0,
+          "bottom": 0
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "delayed-decode-close-reopen-and-route",
+      "pass": true,
+      "newer": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "expected": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "naturalWidth": 3000,
+        "naturalHeight": 4500,
+        "opacity": "1"
+      },
+      "after": {
+        "pass": true,
+        "decode": true,
+        "currentSrc": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "expected": "http://127.0.0.1:4280/media/a602589870049a3f0fb24c83.jpg",
+        "naturalWidth": 3000,
+        "naturalHeight": 4500,
+        "opacity": "1"
+      },
+      "routed": {
+        "url": "http://127.0.0.1:4280/",
+        "hash": "",
+        "view": "aisle",
+        "history": {
+          "aisleY": 0,
+          "aislePosition": {
+            "scrollY": 0,
+            "progress": 0
+          }
+        },
+        "scrollY": 0,
+        "p": 0,
+        "range": 7596,
+        "motion": "guided",
+        "reduced": false,
+        "look": "auto",
+        "video": {
+          "enabled": false,
+          "active": false,
+          "suppressed": false,
+          "failed": false,
+          "status": "off",
+          "requestedFrame": null,
+          "committedFrame": null,
+          "committedTime": null,
+          "requestedProgress": 0,
+          "decodedCacheSize": 0,
+          "inFlight": 0,
+          "maxDecodedCache": 5,
+          "maxInFlight": 2,
+          "commits": 0,
+          "videoSHA256": null,
+          "tracking": "not loaded",
+          "invalidDepths": [],
+          "frameURL": null
+        },
+        "viewer": false,
+        "viewerStatus": "",
+        "active": "menu-toggle",
+        "horizontalOverflow": false,
+        "photographs": {
+          "top": 8505.5,
+          "bottom": 8910.703125
+        }
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "external-inquiry-destination",
+      "pass": true,
+      "expected": "https://kiyonocreativelab.com/inquiry-form",
+      "url": "https://kiyonocreativelab.com/inquiry-form",
+      "title": "Begin Your Inquiry | Kiyono Creative Lab",
+      "body": "Skip to main content\n\u6e05\u91ce\nKIYONO\nCREATIVE LAB\nMenu\n\nSTART A CONVERSATION\n\nTell me what you want these photographs to hold.\n\nYou do not need a finished plan before you write. Tell me who or what is being photographed, what matters about this season or purpose, and anything that would help the experience feel considered from the beginning.\n\nContent Creation\nTerms & Conditions\nPrivacy Policy\n\n \n \n \n\nKyle\n\nMade with \nPixpa"
+    }
+  ],
+  "errors": [],
+  "requestFailures": [
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/6c2a2315ad94452845e533d8.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/e897dd444b4def376669c088.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/b52f709139bc3c03536ae335.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/ad462df1d55a206a67b2fc81.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/f4abdf1af9c237de58680c77.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/42f851b10b91c7fb7c671b0f.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/d6fd42eb8fd212cf18552d2a.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4280/media/76c190762ceeff63c494f2c9.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/d6fd42eb8fd212cf18552d2a.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/b52f709139bc3c03536ae335.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/6c2a2315ad94452845e533d8.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/f4abdf1af9c237de58680c77.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/e897dd444b4def376669c088.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/ad462df1d55a206a67b2fc81.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/42f851b10b91c7fb7c671b0f.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/76c190762ceeff63c494f2c9.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4280/media/c4236e1c13029c8bfe85db2d.jpg",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    }
+  ],
+  "console": [],
+  "external": [
+    {
+      "profile": "desktop",
+      "expected": "https://kiyonocreativelab.com/inquiry-form",
+      "url": "",
+      "title": "",
+      "body": ""
+    },
+    {
+      "profile": "phone",
+      "expected": "https://kiyonocreativelab.com/inquiry-form",
+      "url": "https://kiyonocreativelab.com/inquiry-form",
+      "title": "Begin Your Inquiry | Kiyono Creative Lab",
+      "body": "Skip to main content\n\u6e05\u91ce\nKIYONO\nCREATIVE LAB\nMenu\n\nSTART A CONVERSATION\n\nTell me what you want these photographs to hold.\n\nYou do not need a finished plan before you write. Tell me who or what is being photographed, what matters about this season or purpose, and anything that would help the experience feel considered from the beginning.\n\nContent Creation\nTerms & Conditions\nPrivacy Policy\n\n \n \n \n\nKyle\n\nMade with \nPixpa"
+    }
+  ],
+  "limitations": [
+    "Generated valid visitor paths only; hidden legacy/debug controls and malformed manually-entered hashes excluded.",
+    "External inquiry page read only, no form input/submission.",
+    "Emulated input/viewport, not physical-device performance."
+  ],
+  "after": [
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "categories.json",
+      "status": 200,
+      "sha256": "6eb94e96d67f8a6103b1414ab8b72aef4d265d9ed0ec346802395a7892a2134c"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8"
+    },
+    {
+      "url": "aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    },
+    {
+      "url": "aisle/aisle.css",
+      "status": 200,
+      "sha256": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e"
+    }
+  ],
+  "runtimeStable": true,
+  "status": "FAIL"
+}

@@ -1,0 +1,329 @@
+{
+  "checkedAt": "2026-09-10T18:53:51.375Z",
+  "scope": "Native Home mobile sticky ancestor; public94 gallery unchanged",
+  "rollback": {
+    "bytes": 286466,
+    "sha256": "3b538d6cbbdf38d037143bac07bf6b80daabd60db42b9b3452b43cc4e2bc76d9"
+  },
+  "persisted": {
+    "bytes": 286679,
+    "sha256": "820a22a5b99477027456fb76daa3d4f7f984b31319e39c46f1dfb5269de836bc"
+  },
+  "patch": {
+    "bytes": 213,
+    "sha256": "054b7b670d4cea6688aba923a7d5c9445e26236b601900a4bea9a1da57305b86",
+    "exactInverse": true
+  },
+  "publicSharedNodes": [
+    {
+      "id": "kcl-premium-page-overrides",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "82fb3a2b08f1c902e445791769b5e26be4621a628e08463d688217dba2e23528"
+    },
+    {
+      "id": "kcl-sitewide-glass-legibility-closure-20260901",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "27ef13d3fa9f132bc5641bce0f62f5df5b615bfe9971d8b7df0a720d1dacb86f"
+    },
+    {
+      "id": "kcl-viewing-room-upgrade",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "2af077ede1e70b77a6f0803ff0d5501779cca984779cc895e8b72967f098a4ed"
+    },
+    {
+      "id": "kcl-native-lightbox-keyboard-runtime-rc25",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "5db0c3fc94cc50cee81e3e6772b8584c7a80752ebb36b15f3d309f2a26e7fc1e"
+    },
+    {
+      "id": "kcl-global-mobile-nav-rc22",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "4f531b16679232446ea7d858a8f8efabde4cd94f906f3697030fee596dde5602"
+    },
+    {
+      "id": "kcl-global-mobile-nav-runtime-rc22",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "42afbecbc5643c252f63095bf78fb8e429f3c74127e60976268bdb9a42fcb6f4"
+    },
+    {
+      "id": "kcl-scroll-sheen-rc18",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "87550bf6e840cd1b814873466ac81cb9e56508d0db5a07119ab85b6ebe15220a"
+    },
+    {
+      "id": "kcl-global-photo-lightbox-rc19",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "d4a2448a1265e6c2343dfe8adccd8cefb8cdcab29ca52305ac030da628a979bc"
+    },
+    {
+      "id": "kcl-global-photo-lightbox-runtime-rc19",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "ce094133e313fd159c320d46cf1bc3e2f199ba3325bb47a8860e4a33207e55f5"
+    },
+    {
+      "id": "kcl-home-mobile-primary-nav-rc23",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "53a574229536b06b57a46d5408e7a42b5d62dffa46b1bd802f70cf558b628784"
+    },
+    {
+      "id": "kcl-home-southern-california-language-rc20",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "57816e1a7ae63b8025ffd1bff5e14338cb1599f78de4245ed69cd52b5c72ed60"
+    },
+    {
+      "id": "kcl-inquiry-glass-rc19",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "c19358a4b3e2b2cdfaebcb3cc176596bbf7be3da44d38fca89ab1c56eeb07dd9"
+    },
+    {
+      "id": "kcl-inquiry-glass-runtime-rc19",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "7646cd3b821f4b7813029b0ed277f32a8892613ef567c230d2fd30b17defab3a"
+    },
+    {
+      "id": "kcl-live-translucent-tiles-rc29",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "4d0db696ee67ac584f79b1b5765bb563b2cebd8d7874840f748b4abafcc96afc"
+    },
+    {
+      "id": "kcl-history-dialog-reset-rc32",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "e4dc414c9f8045eba989605977f6c23bb663e53fceb2b6efb6dda9a51d055cb6"
+    },
+    {
+      "id": "kcl-native-pathway-translucent-surfaces-rc30",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "df0daa14048df7a8cbdb96325fc9d43a0176983a5bd62bc3fd7508cc7659c3cb"
+    },
+    {
+      "id": "kcl-premium-elevation-rc36",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "3f85a51eab43f8dd6ea1dd61365ec8d22125a3c00446bd015a974d586448fbb6"
+    },
+    {
+      "id": "kcl-home-authority-parity-non-menu-rc39",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "671c3157542a532d0e8c2e4deb71058fcc2dc6c2c00f956873d2a59da3d7d8a7"
+    },
+    {
+      "id": "kcl-portfolio-backdrop-center-rc38",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "b68299ed36672e26b563b000db01fc0065b1de4bae0ac867ff61650fc8d35c6d"
+    },
+    {
+      "id": "kcl-premium-navigation-rc44",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "5bd269f31fe77583a3955dbec95172aba53d9da2cf51df473857e4152dcfdef5"
+    },
+    {
+      "id": "kcl-premium-navigation-runtime-rc44",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "db404361684e63a4bbbccb147f815aa756c3c836b9f0c8838e7d8673cb29b8d7"
+    },
+    {
+      "id": "kcl-reduced-transparency-release-closure-20260831",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "b4dc85d4daf70ad858e5d664c74bd6b03deb7c392774fc8ccbc9774dc8b4e842"
+    },
+    {
+      "id": "kcl-quiet-visible-numerals-20260901",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "04fef1ec8708ea7ebb0c17464f50ace972915b77f765a59f2cffe5e31857d940"
+    },
+    {
+      "id": "kcl-mobile-home-reload-top-20260901",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "d77bfd760c6baaeb47598530c465ce8b28f4059a08f4ebc9889327c34eb69259"
+    },
+    {
+      "id": "kcl-home-spacing-and-gallery-wall-20260901",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "ad80426b0d6836c4b0b6d8694ffb9a2e881bfd64ef9be1bec06da390ed1bce20"
+    },
+    {
+      "id": "kcl-home-gallery-wall-20260901",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "3c7c17da4650f4d0659fce11acfdc206b2e4e2370744dfde6f68be61d0623cc4"
+    },
+    {
+      "id": "kcl-sitewide-home-parity-glass-20260901",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "4bddbe8f73a449d355edee7001293dd045ff79be28a4503a27f7b635d95bdbf3"
+    },
+    {
+      "id": "kcl-b-optical-glass-system-20260904",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "93710a787cad207cbd91ee4e072bab38cac1e32d6456493fb6e21bda9b8e2481"
+    },
+    {
+      "id": "kcl-explicit-glass-appearance-20260908",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "5ef0972e45df1dabb4a941b9ab69bb56950e8a0e6d54d65128237fe69ac8df81"
+    },
+    {
+      "id": "kcl-explicit-glass-appearance-runtime-20260908",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "3d91bf2a5b69b43c205181c1ba70eeb2bf7117d6e3da41890b06abf5f4d581db"
+    },
+    {
+      "id": "kcl-b-optical-glass-runtime-20260904",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    },
+    {
+      "id": "kcl-portfolio-deduplicated-backdrop-20260902",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "fb66fa59538acc49ebd1c4843813d20d526fdc438c74e09776e53c5b1bd1c361"
+    },
+    {
+      "id": "kcl-conventional-live-repair-20260907",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "5c714087a75b7888b163d38bf13fce000a7fac8eea30c1e027528dec243b0420"
+    },
+    {
+      "id": "kcl-native-cart-closed-focus-20260908",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "cd09a95a945c8db30d17dc3b1c6b808ae3162fb6e47654d3e798bfab50401246"
+    },
+    {
+      "id": "kcl-pier-home-entry-20260909",
+      "tag": "style",
+      "count": 1,
+      "exact": true,
+      "sha": "ca9321f187eaebe715fa34066e9d4b7a6b80af068e1db967760bc8f6803e4e48"
+    },
+    {
+      "id": "kcl-pier-home-entry-mount-20260909",
+      "tag": "script",
+      "count": 1,
+      "exact": true,
+      "sha": "1ef7634cee9157aced70ddbaa1420193faa186ae8af6ab879d8b08568a002ac8"
+    }
+  ],
+  "publicTouch": [
+    {
+      "state": "home390-public-top",
+      "viewportWidth": 390,
+      "documentY": 0,
+      "mastheadTop": 0,
+      "menuTop": 9,
+      "horizontalOverflow": 0
+    },
+    {
+      "state": "home390-public-touch-down",
+      "viewportWidth": 390,
+      "documentY": 447,
+      "mastheadTop": 0,
+      "menuTop": 9,
+      "horizontalOverflow": 0
+    },
+    {
+      "state": "home390-public-touch-up",
+      "viewportWidth": 390,
+      "documentY": 219,
+      "mastheadTop": 0,
+      "menuTop": 9,
+      "horizontalOverflow": 0
+    }
+  ],
+  "independentLive": {
+    "states": 33,
+    "widths": [
+      390,
+      767,
+      768,
+      1440
+    ],
+    "controls": [
+      "Home1440",
+      "Families390"
+    ],
+    "headerTop": 0,
+    "horizontalOverflow": 0
+  },
+  "protectedGallery": {
+    "count": 94,
+    "categoryBytes": 40566,
+    "categorySHA256": "4806f5f9c2f9b7d15958c24ea293f7c5d4d218c664903c65ab80e156209ddb18",
+    "hostSource": "874050f23a65d4adc4f1734572f7b6de9ef6bcaf",
+    "version": 11,
+    "runtimeChanged": false,
+    "deploymentRequested": false
+  },
+  "homeParentSaved": false,
+  "homePageCodeSaved": false,
+  "otherExternalFieldsChanged": false,
+  "limits": [
+    "Chrome emulation, not physical-phone or Safari certification",
+    "Locator keyboard path scroll-to-focus caveat retained",
+    "Bounded header review, not a whole-site redesign"
+  ]
+}

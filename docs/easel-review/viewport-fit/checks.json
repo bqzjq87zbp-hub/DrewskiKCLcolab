@@ -1,0 +1,799 @@
+{
+  "base": "402cb29",
+  "scope": "Six-file viewport correction; installed Chrome emulation, not direct Codex panel inspection",
+  "desktop": {
+    "assertions": 104,
+    "checks": [
+      {
+        "name": "800x900: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "800x900: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "800x900: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "800x900: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "800x900: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "800x900: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "800x900: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "800x900: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "800x900: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "800x900: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "800x900: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "800x900: native wheel advances walk",
+        "pass": true
+      },
+      {
+        "name": "800x900: resize preserves valid scene geometry",
+        "pass": true
+      },
+      {
+        "name": "800x900: development reload restores framed mid-walk progress",
+        "pass": true
+      },
+      {
+        "name": "640x800: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "640x800: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "640x800: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "640x800: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "640x800: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "640x800: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "640x800: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "640x800: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "640x800: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "640x800: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "640x800: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "640x800: native wheel advances walk",
+        "pass": true
+      },
+      {
+        "name": "640x800: system reduced motion preserves native walk",
+        "pass": true
+      },
+      {
+        "name": "640x800: saved Still restores",
+        "pass": true
+      },
+      {
+        "name": "640x800-still: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "640x800-still: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "640x800-still: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "640x800: Start walk restores guided navigation",
+        "pass": true
+      },
+      {
+        "name": "599x800: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "599x800: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "599x800: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "599x800: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "599x800: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "599x800: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "599x800: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "599x800: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "599x800: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "599x800: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "599x800: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "599x800: native wheel advances walk",
+        "pass": true
+      },
+      {
+        "name": "600x800: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "600x800: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "600x800: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "600x800: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "600x800: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "600x800: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "600x800: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "600x800: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "600x800: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "600x800: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "600x800: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "600x800: native wheel advances walk",
+        "pass": true
+      },
+      {
+        "name": "601x800: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "601x800: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "601x800: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "601x800: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "601x800: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "601x800: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "601x800: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "601x800: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "601x800: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "601x800: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "601x800: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "601x800: native wheel advances walk",
+        "pass": true
+      },
+      {
+        "name": "900x560: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "900x560: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "900x560: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "900x560: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "900x560: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "900x560: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "900x560: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "900x560: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "900x560: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "900x560: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "900x560: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "900x560: native wheel advances walk",
+        "pass": true
+      },
+      {
+        "name": "900x561: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "900x561: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "900x561: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "900x561: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "900x561: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "900x561: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "900x561: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "900x561: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "900x561: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "900x561: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "900x561: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "900x561: native wheel advances walk",
+        "pass": true
+      },
+      {
+        "name": "1200x400: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "1200x400: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "1200x400: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "1200x400: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "1200x400: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "1200x400: both first photos fit",
+        "pass": true
+      },
+      {
+        "name": "1200x400: both last photos fit",
+        "pass": true
+      },
+      {
+        "name": "1200x400: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "1200x400: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "1200x400: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "1200x400: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "1200x400: native wheel advances walk",
+        "pass": true
+      }
+    ]
+  },
+  "phone_retest": {
+    "status": "PASS",
+    "assertions": 21,
+    "errors": [],
+    "checks": [
+      {
+        "name": "390x844-touch: native emulated swipe advances walk",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: exact walk endpoint reached",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: no horizontal document overflow",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: rendered stage stays inside viewport",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: stage stable throughout supported walk",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: controls match camera side-look capability",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: first left photo inspectable",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: first right photo inspectable",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: last left photo inspectable",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: last right photo inspectable",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: Next pair reaches exact final stop",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: system reduced motion preserves native walk",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: saved Still restores",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch-still: menu bounded by actual scene",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch-still: menu wheel does not move journey",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch-still: last menu control reachable",
+        "pass": true
+      },
+      {
+        "name": "390x844-touch: Start walk restores guided navigation",
+        "pass": true
+      },
+      {
+        "name": "source files unchanged during validation",
+        "pass": true
+      }
+    ]
+  },
+  "initial_combined_run": {
+    "status": "FAIL",
+    "passed_assertions": 118,
+    "failed_assertions": 0,
+    "interruption": "Native swipe wait timed out after artificial mouse-wheel menu input. Raw failure retained locally. Four isolated gestures and separate phone retest passed; no phone runtime change."
+  },
+  "reload": "Synthetic reload message delivered to real EventSource handler; save/reload/restore preserved progress exactly. Does not verify filesystem event delivery.",
+  "protected_source_hashes": {
+    "physical-display.js": "6d1600be25caf132ef32c1ab2fca68627d6e332af75c6880809702c8946385a6",
+    "photographic-environment.js": "fda35aca98b47b39cc27e4d46cd6ef465bbe7bd613ba97d56c98c714d398d3cf"
+  },
+  "paired_capture": {
+    "motion": "no-preference",
+    "baseline": "402cb29",
+    "current": "six-file V2 patch",
+    "samples": [
+      {
+        "revision": "before",
+        "width": 650,
+        "height": 700,
+        "file": "650x700-before.png",
+        "progress": 0,
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 650,
+          "height": 700
+        },
+        "first": [
+          {
+            "id": "color-balls",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": -118.7177017268336,
+                "y": 292.86072260105357
+              },
+              {
+                "x": 101.87273207224375,
+                "y": 309.3803493703845
+              },
+              {
+                "x": 101.87273207224375,
+                "y": 442.19673243295745
+              },
+              {
+                "x": -118.7177017268336,
+                "y": 433.6520978970966
+              }
+            ]
+          },
+          {
+            "id": "shared-glance",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": 584.6259555917982,
+                "y": 309.3803493703845
+              },
+              {
+                "x": 805.2163893908755,
+                "y": 292.86072260105357
+              },
+              {
+                "x": 805.2163893908755,
+                "y": 433.6520978970966
+              },
+              {
+                "x": 584.6259555917982,
+                "y": 442.19673243295745
+              }
+            ]
+          }
+        ],
+        "error": null
+      },
+      {
+        "revision": "after",
+        "width": 650,
+        "height": 700,
+        "file": "650x700-after.png",
+        "progress": 0,
+        "scene": {
+          "x": 0,
+          "y": 133.296875,
+          "width": 650,
+          "height": 433.375
+        },
+        "first": [
+          {
+            "id": "color-balls",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": 55.45163881623834,
+                "y": 181.1211278341773
+              },
+              {
+                "x": 191.92107982652686,
+                "y": 191.3410824898838
+              },
+              {
+                "x": 191.92107982652686,
+                "y": 273.50864180511235
+              },
+              {
+                "x": 55.45163881623834,
+                "y": 268.2224583625055
+              }
+            ]
+          },
+          {
+            "id": "shared-glance",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": 490.57892017347314,
+                "y": 191.3410824898838
+              },
+              {
+                "x": 627.0483611837617,
+                "y": 181.1211278341773
+              },
+              {
+                "x": 627.0483611837617,
+                "y": 268.2224583625055
+              },
+              {
+                "x": 490.57892017347314,
+                "y": 273.50864180511235
+              }
+            ]
+          }
+        ],
+        "error": null
+      },
+      {
+        "revision": "before",
+        "width": 1200,
+        "height": 400,
+        "file": "1200x400-before.png",
+        "progress": 0,
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1200,
+          "height": 400
+        },
+        "first": [
+          {
+            "id": "color-balls",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": 107.220583846736,
+                "y": -6.032558705902424
+              },
+              {
+                "x": 356.8490785610524,
+                "y": 12.661676998926552
+              },
+              {
+                "x": 356.8490785610524,
+                "y": 162.9617294822033
+              },
+              {
+                "x": 107.220583846736,
+                "y": 153.29229722108488
+              }
+            ]
+          },
+          {
+            "id": "shared-glance",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": 903.1509214389476,
+                "y": 12.661676998926552
+              },
+              {
+                "x": 1152.779416153264,
+                "y": -6.032558705902424
+              },
+              {
+                "x": 1152.779416153264,
+                "y": 153.29229722108488
+              },
+              {
+                "x": 903.1509214389476,
+                "y": 162.9617294822033
+              }
+            ]
+          }
+        ],
+        "error": null
+      },
+      {
+        "revision": "after",
+        "width": 1200,
+        "height": 400,
+        "file": "1200x400-after.png",
+        "progress": 0,
+        "scene": {
+          "x": 300.03125,
+          "y": 0,
+          "width": 599.921875,
+          "height": 399.984375
+        },
+        "first": [
+          {
+            "id": "color-balls",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": 51.01383814259756,
+                "y": 167.3445822892302
+              },
+              {
+                "x": 177.06789875341877,
+                "y": 176.78454755964665
+              },
+              {
+                "x": 177.06789875341877,
+                "y": 252.68105908257584
+              },
+              {
+                "x": 51.01383814259756,
+                "y": 247.79831842546386
+              }
+            ]
+          },
+          {
+            "id": "shared-glance",
+            "source": [
+              1440,
+              960
+            ],
+            "quad": [
+              {
+                "x": 452.9321012465813,
+                "y": 176.78454755964665
+              },
+              {
+                "x": 578.9861618574025,
+                "y": 167.3445822892302
+              },
+              {
+                "x": 578.9861618574025,
+                "y": 247.79831842546386
+              },
+              {
+                "x": 452.9321012465813,
+                "y": 252.68105908257584
+              }
+            ]
+          }
+        ],
+        "error": null
+      }
+    ],
+    "errors": []
+  }
+}

@@ -1,0 +1,1384 @@
+{
+  "scope": "Fresh ordinary browser contexts, no route interception/cache disabling; existing thumbnail source versus distinct full source, then same-photo close/reopen",
+  "checks": [
+    {
+      "profile": "desktop",
+      "category": "families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "width": 3840,
+        "height": 2560
+      },
+      "fullEqualsThumbnail": true,
+      "first": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "box": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "reopened": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "box": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "networkImageResponses": {
+        "beforeOpen": 1,
+        "afterFirstOpen": 1,
+        "afterReopen": 1
+      },
+      "cacheEvents": [],
+      "pass": true
+    },
+    {
+      "profile": "desktop",
+      "category": "headshots",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "width": 1600,
+        "height": 2400
+      },
+      "fullEqualsThumbnail": true,
+      "first": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1",
+        "box": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "reopened": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1",
+        "box": {
+          "width": 1222,
+          "height": 675
+        },
+        "status": ""
+      },
+      "networkImageResponses": {
+        "beforeOpen": 1,
+        "afterFirstOpen": 1,
+        "afterReopen": 1
+      },
+      "cacheEvents": [],
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "category": "families",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "width": 3840,
+        "height": 2560
+      },
+      "fullEqualsThumbnail": true,
+      "first": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "box": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "reopened": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+        "naturalWidth": 3840,
+        "naturalHeight": 2560,
+        "opacity": "1",
+        "box": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "networkImageResponses": {
+        "beforeOpen": 1,
+        "afterFirstOpen": 1,
+        "afterReopen": 1
+      },
+      "cacheEvents": [],
+      "pass": true
+    },
+    {
+      "profile": "phone",
+      "category": "headshots",
+      "thumbnail": {
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "width": 1600,
+        "height": 2400
+      },
+      "fullEqualsThumbnail": true,
+      "first": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1",
+        "box": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "reopened": {
+        "decoded": true,
+        "src": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+        "naturalWidth": 1600,
+        "naturalHeight": 2400,
+        "opacity": "1",
+        "box": {
+          "width": 326,
+          "height": 633
+        },
+        "status": ""
+      },
+      "networkImageResponses": {
+        "beforeOpen": 1,
+        "afterFirstOpen": 1,
+        "afterReopen": 1
+      },
+      "cacheEvents": [],
+      "pass": true
+    }
+  ],
+  "responses": [
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.3"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/easel-composition-reference.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.2"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/1e7f972e651c8e41c91168b6.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.4"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c6231e82c5d10dbda7f1220d.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.5"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0d730119329ad4799756e2bd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.7"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.6"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/08bfbe519671b2a3ec187588.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.8"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/335e2ea0847bd07fec38d935.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.10"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/6c2bcb595c230d3249389708.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.9"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/aa854f83427a78814a8c9330.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.11"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/459d0941c6b06f06023017bd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.12"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/underpier-photograph.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.47"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.48"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.191"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/f40563af947ec69c20021507.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.52"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/86be855645440b5a914c953a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.50"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/8601f013a9a902169521c8b0.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.51"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/4d393268061adceca4155add.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.53"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/a602589870049a3f0fb24c83.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.49"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/955f53a8e6570b9373c299c2.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.54"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/a5837627b4f676209118e0e7.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.55"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/f06ec1bfba96659fe6b9da2f.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.56"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/2d96f735ba18201980dee971.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.57"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c58e8ca633d94a87765e2d6a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.58"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/d7ad3b51e4c774c87d7a425b.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.60"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/bea67300da7b0a77dcfa3653.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.59"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/1d1679620b5eb5e9b334276c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.61"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/fb8e63035c205a3251dcd602.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.62"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/5d3ba0d0278a7287633624d7.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.63"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/391d2e976f93016c1fc8a53e.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.64"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0339e7ad66e61d910bea5c59.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.65"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/61f6169f4002044fe1d07e9c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.66"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_nor_gl_1k.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.225"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_rough_1k.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.226"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_diff_1k.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.224"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0163dea99efa5683d470b7ad.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.230"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/3304a50e7a7a0d5e264947d8.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.233"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/ff8c5d0a7cc3a358674e851b.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.232"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/60cdc9a37a20ee409045b5eb.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.234"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/8f676584c9da2513a27baa4f.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.231"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/090c3caad475229f7e9d0695.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.235"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/24c88a7a537770a0290b8162.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.236"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/cce0d215323ba81520913403.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.237"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/e720e468c4e335f1f5698eb9.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.238"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/94a456843863c6aa31137f6c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.239"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/96ba6788e8d76e01457ef787.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.241"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/0faa7eb4c0ad1135866f4c46.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.240"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/577eb43287f3ea5d9fedf5fd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.242"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/5bf0345b84335e96d827b1a3.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.243"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/63f2317fb79e5600be818060.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.244"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/13a47c55385a48222c5a0efd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.245"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/b81afdc474c67116e06a96c9.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.246"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/44246db8df167276d79b1654.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.247"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/e3985b3a4ca015b66a441fc2.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.249"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/cfcde45e923ea4fff4ce2dac.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.250"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.248"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/e31e239fe8b11431dabc7faf.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.251"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/1864f27f41aa5333c9d38dde.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.252"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/ccec0cde43cb3cd3b23afcf7.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.253"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/c393e8d7757ba486a8bbdfd1.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.255"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/acc1ad30cbd73725d0ac6ed6.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.254"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/6f692d68168b6f54116b5d13.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.256"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.257"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/fe23574feaffede554dd289a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.259"
+    },
+    {
+      "profile": "desktop",
+      "url": "http://127.0.0.1:4274/media/69baa9ffe7a88fbc3916c1f2.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96593.258"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/easel-composition-reference.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.2"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c4a641f3b456ab59149913ea.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.3"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c6231e82c5d10dbda7f1220d.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.5"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/1e7f972e651c8e41c91168b6.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.4"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/07f59839133492f58ad8884a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.6"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0d730119329ad4799756e2bd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.7"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/6c2bcb595c230d3249389708.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.9"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/08bfbe519671b2a3ec187588.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.8"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/335e2ea0847bd07fec38d935.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.10"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/459d0941c6b06f06023017bd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.12"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/aa854f83427a78814a8c9330.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.11"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/underpier-photograph.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.47"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/363dc893eff2ab2c7ff0724e.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.48"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/34b32ab8408f756277f44d70.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.191"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/f40563af947ec69c20021507.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.52"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/86be855645440b5a914c953a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.50"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/4d393268061adceca4155add.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.53"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/8601f013a9a902169521c8b0.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.51"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/a602589870049a3f0fb24c83.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.49"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/955f53a8e6570b9373c299c2.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.54"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/a5837627b4f676209118e0e7.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.55"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/f06ec1bfba96659fe6b9da2f.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.56"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/2d96f735ba18201980dee971.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.57"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c58e8ca633d94a87765e2d6a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.58"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/bea67300da7b0a77dcfa3653.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.59"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/d7ad3b51e4c774c87d7a425b.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.60"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/1d1679620b5eb5e9b334276c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.61"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/fb8e63035c205a3251dcd602.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.62"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/5d3ba0d0278a7287633624d7.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.63"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/391d2e976f93016c1fc8a53e.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.64"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0339e7ad66e61d910bea5c59.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.65"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/61f6169f4002044fe1d07e9c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.66"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_nor_gl_1k.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.225"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_diff_1k.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.224"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/aisle/assets/coated_pine_rough_1k.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.226"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/3304a50e7a7a0d5e264947d8.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.233"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/ff8c5d0a7cc3a358674e851b.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.232"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/8f676584c9da2513a27baa4f.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.231"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/60cdc9a37a20ee409045b5eb.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.234"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0163dea99efa5683d470b7ad.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.230"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/090c3caad475229f7e9d0695.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.235"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/24c88a7a537770a0290b8162.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.236"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/cce0d215323ba81520913403.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.237"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/e720e468c4e335f1f5698eb9.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.238"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/94a456843863c6aa31137f6c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.239"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/96ba6788e8d76e01457ef787.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.241"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/0faa7eb4c0ad1135866f4c46.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.240"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/577eb43287f3ea5d9fedf5fd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.242"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/5bf0345b84335e96d827b1a3.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.243"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/63f2317fb79e5600be818060.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.244"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/b81afdc474c67116e06a96c9.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.246"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/13a47c55385a48222c5a0efd.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.245"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/44246db8df167276d79b1654.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.247"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.248"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/e3985b3a4ca015b66a441fc2.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.249"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/cfcde45e923ea4fff4ce2dac.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.250"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/e31e239fe8b11431dabc7faf.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.251"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/ccec0cde43cb3cd3b23afcf7.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.253"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/1864f27f41aa5333c9d38dde.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.252"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/acc1ad30cbd73725d0ac6ed6.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.254"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/c393e8d7757ba486a8bbdfd1.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.255"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.257"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/6f692d68168b6f54116b5d13.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.256"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/69baa9ffe7a88fbc3916c1f2.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.258"
+    },
+    {
+      "profile": "phone",
+      "url": "http://127.0.0.1:4274/media/fe23574feaffede554dd289a.jpg",
+      "status": 200,
+      "mimeType": "image/jpeg",
+      "fromDiskCache": false,
+      "fromPrefetchCache": false,
+      "requestId": "96633.259"
+    }
+  ],
+  "requestFailures": [],
+  "errors": [],
+  "before": [
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2"
+    }
+  ],
+  "closedAt": "2026-09-10T03:26:58.666Z",
+  "after": [
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2"
+    }
+  ],
+  "originAfterBrowserClose": {
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  },
+  "runtimeStable": true,
+  "status": "PASS"
+}

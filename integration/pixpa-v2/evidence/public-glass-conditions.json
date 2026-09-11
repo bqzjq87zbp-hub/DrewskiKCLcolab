@@ -1,0 +1,45 @@
+{
+  "scope": "Visual qualification only; fresh Chrome tab 138375055, CUA CDP parent-document probes and normal screenshots. No code, site, or OS changes.",
+  "url": "https://kiyonocreativelab.com/pier-gallery?release=glass-walk-restored-20260910",
+  "priorScreenshotQualification": "Earlier independent wrapper screenshots were captured with browser-default reduced transparency active. They verify walking/navigation but are accessibility-fallback evidence, not normal-glass screenshots.",
+  "default": {
+    "prefersReducedTransparency": "reduce",
+    "prefersContrast": "no-preference",
+    "forcedColors": false,
+    "pointerCoarse": false,
+    "bothIconsBackground": "rgb(16, 44, 64)",
+    "bothIconsBackdropFilter": "none"
+  },
+  "normalModeEmulation": {
+    "method": "Tab-scoped Emulation.setEmulatedMedia features; no OS preferences changed.",
+    "prefersReducedTransparency": "no-preference",
+    "prefersContrast": "no-preference",
+    "forcedColors": false,
+    "pointerCoarse": false,
+    "bothIconsBackground": "rgba(255, 255, 255, 0.067)",
+    "bothIconsBackdropFilter": "blur(3px) saturate(1.06)",
+    "bothIconsSize": {"width": 48, "height": 48},
+    "desktop": {
+      "viewport": {"width": 1440, "height": 900},
+      "screenshot": "independent-normal-glass-desktop-20260910.png",
+      "photographVisibleBeneathIcons": true
+    },
+    "narrow": {
+      "viewport": {"width": 390, "height": 844},
+      "screenshot": "independent-normal-glass-390-settled-20260910.png",
+      "leftIconRect": {"x": 14, "y": 426.0234375, "width": 48, "height": 48},
+      "rightIconRect": {"x": 328, "y": 426.0234375, "width": 48, "height": 48},
+      "photographVisibleBeneathIcons": true,
+      "limitation": "Fine-pointer narrow desktop viewport, not physical-phone or cross-origin coarse-pointer certification."
+    },
+    "supersededScreenshot": "independent-normal-glass-390-20260910.png was captured during the resize transition; use the explicitly settled screenshot instead."
+  },
+  "finalResetVerified": {
+    "viewport": {"width": 1194, "height": 825},
+    "prefersReducedTransparency": "reduce",
+    "prefersContrast": "no-preference",
+    "bothIconsBackground": "rgb(16, 44, 64)",
+    "bothIconsBackdropFilter": "none",
+    "temporaryViewportAndMediaOverridesRemoved": true
+  }
+}

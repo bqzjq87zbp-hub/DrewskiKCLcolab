@@ -1,0 +1,289 @@
+{
+  "status": "PASS",
+  "checks": 25,
+  "failures": [],
+  "allChecks": [
+    {
+      "name": "desktop: native wheel advances walk",
+      "pass": true,
+      "before": 0,
+      "after": 0.12121212121212122,
+      "systemReducedMotion": false
+    },
+    {
+      "name": "desktop: native navigation preserves system motion preference",
+      "pass": true
+    },
+    {
+      "name": "desktop-normal: idle camera stays fixed",
+      "pass": true
+    },
+    {
+      "name": "desktop-normal: visibly changing lower water at idle",
+      "pass": true,
+      "pixels": 129600,
+      "changed": 34490,
+      "changedRatio": 0.26612654320987655,
+      "meanChannelDifference": 4.127770061728313
+    },
+    {
+      "name": "desktop-normal: upper pier stays visually still at idle",
+      "pass": true,
+      "pixels": 751680,
+      "changed": 0,
+      "changedRatio": 0,
+      "meanChannelDifference": 0
+    },
+    {
+      "name": "desktop-system-reduced: native wheel advances walk",
+      "pass": true,
+      "before": 0,
+      "after": 0.12121212121212122,
+      "systemReducedMotion": true
+    },
+    {
+      "name": "desktop-system-reduced: native navigation preserves system motion preference",
+      "pass": true
+    },
+    {
+      "name": "desktop-system-reduced: idle camera stays fixed",
+      "pass": true
+    },
+    {
+      "name": "desktop-system-reduced: water remains visually still",
+      "pass": true,
+      "pixels": 129600,
+      "changed": 0,
+      "changedRatio": 0,
+      "meanChannelDifference": 0
+    },
+    {
+      "name": "desktop-system-reduced: upper pier stays visually still at idle",
+      "pass": true,
+      "pixels": 751680,
+      "changed": 0,
+      "changedRatio": 0,
+      "meanChannelDifference": 0
+    },
+    {
+      "name": "desktop: no console/shader errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "desktop: no HTTP failures",
+      "pass": true,
+      "http": []
+    },
+    {
+      "name": "phone: native emulated swipe advances walk",
+      "pass": true,
+      "before": 0,
+      "after": 0.05881085738905644,
+      "systemReducedMotion": false
+    },
+    {
+      "name": "phone: native navigation preserves system motion preference",
+      "pass": true
+    },
+    {
+      "name": "phone-normal: idle camera stays fixed",
+      "pass": true
+    },
+    {
+      "name": "phone-normal: visibly changing lower water at idle",
+      "pass": true,
+      "pixels": 33150,
+      "changed": 7046,
+      "changedRatio": 0.21254901960784314,
+      "meanChannelDifference": 3.3459426847662113
+    },
+    {
+      "name": "phone-normal: upper pier stays visually still at idle",
+      "pass": true,
+      "pixels": 191100,
+      "changed": 0,
+      "changedRatio": 0,
+      "meanChannelDifference": 0
+    },
+    {
+      "name": "phone-system-reduced: native emulated swipe advances walk",
+      "pass": true,
+      "before": 0,
+      "after": 0.05881085738905644,
+      "systemReducedMotion": true
+    },
+    {
+      "name": "phone-system-reduced: native navigation preserves system motion preference",
+      "pass": true
+    },
+    {
+      "name": "phone-system-reduced: idle camera stays fixed",
+      "pass": true
+    },
+    {
+      "name": "phone-system-reduced: water remains visually still",
+      "pass": true,
+      "pixels": 33150,
+      "changed": 0,
+      "changedRatio": 0,
+      "meanChannelDifference": 0
+    },
+    {
+      "name": "phone-system-reduced: upper pier stays visually still at idle",
+      "pass": true,
+      "pixels": 191100,
+      "changed": 0,
+      "changedRatio": 0,
+      "meanChannelDifference": 0
+    },
+    {
+      "name": "phone: no console/shader errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "phone: no HTTP failures",
+      "pass": true,
+      "http": []
+    },
+    {
+      "name": "runtime source hashes stable",
+      "pass": true
+    }
+  ],
+  "sourceBefore": [
+    {
+      "url": "/main-v2.js",
+      "status": 200,
+      "sha256": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d"
+    },
+    {
+      "url": "/aisle-integration.js",
+      "status": 200,
+      "sha256": "bdaecd5b0eadaa143382f7a6c136fc649af91ef353a71eedc5613e486c7ddf06"
+    },
+    {
+      "url": "/canvas-wrap.js",
+      "status": 200,
+      "sha256": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb"
+    },
+    {
+      "url": "/aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "023c75da2343716b4aff37793e05a867697b6303b1ba047aa8a5a12eb8639521"
+    },
+    {
+      "url": "/aisle/physical-display.js",
+      "status": 200,
+      "sha256": "6d1600be25caf132ef32c1ab2fca68627d6e332af75c6880809702c8946385a6"
+    },
+    {
+      "url": "/aisle/physical-easel.js",
+      "status": 200,
+      "sha256": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3"
+    },
+    {
+      "url": "/aisle/photographic-environment.js",
+      "status": 200,
+      "sha256": "fda35aca98b47b39cc27e4d46cd6ef465bbe7bd613ba97d56c98c714d398d3cf"
+    },
+    {
+      "url": "/aisle/gallery-layout.js",
+      "status": 200,
+      "sha256": "091d8000f0809a585004008437190cc582da4ce40f9353fd1b755284df3907f0"
+    },
+    {
+      "url": "/aisle/video-frame-seam.js",
+      "status": 200,
+      "sha256": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b"
+    },
+    {
+      "url": "/aisle/aisle.css",
+      "status": 200,
+      "sha256": "18661e06702a1a5ef348c33d96ca318685182f4211f4bfd292f464121109e395"
+    },
+    {
+      "url": "/collections.css",
+      "status": 200,
+      "sha256": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26"
+    },
+    {
+      "url": "/aisle/assets/easel-geometry.js",
+      "status": 200,
+      "sha256": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17"
+    },
+    {
+      "url": "/aisle/assets/texture-manifest.json",
+      "status": 200,
+      "sha256": "b524266ba613fcfc72c1dc3341abfe20d4cc8b77a16a5ddc37ba7b53a6ea355a"
+    }
+  ],
+  "sourceAfter": [
+    {
+      "url": "/main-v2.js",
+      "status": 200,
+      "sha256": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d"
+    },
+    {
+      "url": "/aisle-integration.js",
+      "status": 200,
+      "sha256": "bdaecd5b0eadaa143382f7a6c136fc649af91ef353a71eedc5613e486c7ddf06"
+    },
+    {
+      "url": "/canvas-wrap.js",
+      "status": 200,
+      "sha256": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb"
+    },
+    {
+      "url": "/aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "023c75da2343716b4aff37793e05a867697b6303b1ba047aa8a5a12eb8639521"
+    },
+    {
+      "url": "/aisle/physical-display.js",
+      "status": 200,
+      "sha256": "6d1600be25caf132ef32c1ab2fca68627d6e332af75c6880809702c8946385a6"
+    },
+    {
+      "url": "/aisle/physical-easel.js",
+      "status": 200,
+      "sha256": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3"
+    },
+    {
+      "url": "/aisle/photographic-environment.js",
+      "status": 200,
+      "sha256": "fda35aca98b47b39cc27e4d46cd6ef465bbe7bd613ba97d56c98c714d398d3cf"
+    },
+    {
+      "url": "/aisle/gallery-layout.js",
+      "status": 200,
+      "sha256": "091d8000f0809a585004008437190cc582da4ce40f9353fd1b755284df3907f0"
+    },
+    {
+      "url": "/aisle/video-frame-seam.js",
+      "status": 200,
+      "sha256": "3936fbe2c6732e68680f2d922925b5b4366fc40b5d1897a73cd43466c75af77b"
+    },
+    {
+      "url": "/aisle/aisle.css",
+      "status": 200,
+      "sha256": "18661e06702a1a5ef348c33d96ca318685182f4211f4bfd292f464121109e395"
+    },
+    {
+      "url": "/collections.css",
+      "status": 200,
+      "sha256": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26"
+    },
+    {
+      "url": "/aisle/assets/easel-geometry.js",
+      "status": 200,
+      "sha256": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17"
+    },
+    {
+      "url": "/aisle/assets/texture-manifest.json",
+      "status": 200,
+      "sha256": "b524266ba613fcfc72c1dc3341abfe20d4cc8b77a16a5ddc37ba7b53a6ea355a"
+    }
+  ]
+}

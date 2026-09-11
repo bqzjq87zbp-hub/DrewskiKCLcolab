@@ -1,0 +1,5265 @@
+{
+  "scope": "Actual rendered Auto path at201 native scroll positions per viewport, normal ambient motion. Actual unchanged cloned easel/print meshes raycast from actual rendered camera parameters and world transforms, with projection equality independently checked against render dimensions. Other-easel obstruction is the clearance criterion; own retaining-shelf edge contacts are separately reported, not erased. Source photograph is a finite continuous background; no reconstructed pier occlusion claim.",
+  "status": "PASS",
+  "rawReportSHA256": "398ca776a08f5dc41c7f3f1760b851592b913c64340ff3cce765a6ee61bef6bf",
+  "contract": "SCROLL-PATH-CONTRACT.json",
+  "before": {
+    "modules": [
+      {
+        "url": "/main-v2.js",
+        "status": 200,
+        "sha256": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d"
+      },
+      {
+        "url": "/collections.js",
+        "status": 200,
+        "sha256": "fc5839be42c6d9ccf5ffb777972cd28c31f4e32b198564fbc7a42721ad79711c"
+      },
+      {
+        "url": "/collections.css",
+        "status": 200,
+        "sha256": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26"
+      },
+      {
+        "url": "/canvas-wrap.js",
+        "status": 200,
+        "sha256": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb"
+      },
+      {
+        "url": "/aisle-integration.js",
+        "status": 200,
+        "sha256": "bb2662cb151280bb853e08568407f6b349210a90573bf290df3d065493e4b0fd"
+      },
+      {
+        "url": "/aisle/aisle.css",
+        "status": 200,
+        "sha256": "adf95e8d2dc9fb4199bef46a92b11709f23e7cef76ae1eff050e0fd2ba656f88"
+      },
+      {
+        "url": "/aisle/photographic-aisle.js",
+        "status": 200,
+        "sha256": "ba69e15a778e2eda68e2fbe008da3e1b554f9c5f55241a868cb9b689b8b35838"
+      },
+      {
+        "url": "/aisle/physical-display.js",
+        "status": 200,
+        "sha256": "220416e428c5968173fa174b82f8d60c0dab59de4487303ce3033f441c89087a"
+      },
+      {
+        "url": "/aisle/physical-easel.js",
+        "status": 200,
+        "sha256": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3"
+      },
+      {
+        "url": "/aisle/photographic-environment.js",
+        "status": 200,
+        "sha256": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a"
+      },
+      {
+        "url": "/aisle/gallery-layout.js",
+        "status": 200,
+        "sha256": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67"
+      },
+      {
+        "url": "/aisle/water-surface.js",
+        "status": 200,
+        "sha256": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5"
+      },
+      {
+        "url": "/aisle/assets/easel-geometry.js",
+        "status": 200,
+        "sha256": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17"
+      },
+      {
+        "url": "/aisle/assets/crafted-easel.glb",
+        "status": 404,
+        "sha256": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31"
+      }
+    ],
+    "originals": [
+      {
+        "path": "public/aisle/assets/coated_pine_diff_1k.jpg",
+        "sha256": "afee7cfb2ec1716edc712f929cdb3d3dfbac5a0ba290e25943b4472a8144bbaf"
+      },
+      {
+        "path": "public/aisle/assets/coated_pine_nor_gl_1k.jpg",
+        "sha256": "91eb707d7b0dd44133502878f37ede93e6be23c2019e64df72dffe46f6985b3a"
+      },
+      {
+        "path": "public/aisle/assets/coated_pine_rough_1k.jpg",
+        "sha256": "6ecebef8ffde1833ee9656d3bf7cf863694ad99ac041cacf2fc5432b2f5383e1"
+      },
+      {
+        "path": "public/media/0163dea99efa5683d470b7ad.jpg",
+        "sha256": "f767f35f27038bc2210dfbcbbec1a27d59676acfd9e0ee370921da23bf8d9460"
+      },
+      {
+        "path": "public/media/0339e7ad66e61d910bea5c59.jpg",
+        "sha256": "20509de2de287146047a4bb76f5901fe5732f7f4671961a6f4c87384c7523e26"
+      },
+      {
+        "path": "public/media/044ce4a7ec48b6d0528efce5.jpg",
+        "sha256": "2d96c6c7b9eefd6f1b08dc97dfb4b2ca8d49f14adb7f64c5539c2cddd820bc0e"
+      },
+      {
+        "path": "public/media/07f59839133492f58ad8884a.jpg",
+        "sha256": "07f59839133492f58ad8884a94202bd88c0c8d0b8a4b9cdb0f31fd07cc870759"
+      },
+      {
+        "path": "public/media/08bfbe519671b2a3ec187588.jpg",
+        "sha256": "08bfbe519671b2a3ec18758809917c2a53e74a565743dabeef15463bbad5f3dd"
+      },
+      {
+        "path": "public/media/090c3caad475229f7e9d0695.jpg",
+        "sha256": "090c3caad475229f7e9d069521e3b839eec24996a0cd573b7ff0fd4b3dc2517d"
+      },
+      {
+        "path": "public/media/09920ffdef0dccd54b6dfc01.jpg",
+        "sha256": "26f7fa61f4c51bb268b5fd230fc5756b769a3f984b2766fa9e19b71ba3bd52b1"
+      },
+      {
+        "path": "public/media/0a7d2faec6cf918c625f0619.jpg",
+        "sha256": "b183d2ae04fde34b08387b5fe3b1b1b3e42f31cd717c2522ebcb3137727dc4c3"
+      },
+      {
+        "path": "public/media/0d730119329ad4799756e2bd.jpg",
+        "sha256": "0d730119329ad4799756e2bdb171d2c0ea7c4f84035ec568015df9a2247112a3"
+      },
+      {
+        "path": "public/media/0faa7eb4c0ad1135866f4c46.jpg",
+        "sha256": "9f9d180e8856846e129a72b9723e54e0a6458a0cfe90a5dcbaaaf9e17e87abd7"
+      },
+      {
+        "path": "public/media/11b5d5f94bb2846f435a0384.jpg",
+        "sha256": "b032a5b1954a8fc334e10b9a946a3ac8926b7d657da1233f7156ecf6fd586496"
+      },
+      {
+        "path": "public/media/13a47c55385a48222c5a0efd.jpg",
+        "sha256": "67f780cd8a859709f5715278fad59220af89d4e800b4eb13bf0636082dbc13a8"
+      },
+      {
+        "path": "public/media/15e20340ffa0cc99b0e6464c.jpg",
+        "sha256": "c3b613c6a566aa551506b6ea7a81a90e8a696d3e0e25fce7b115161b99312bb5"
+      },
+      {
+        "path": "public/media/1825de7e0853fbdff388bf7c.jpg",
+        "sha256": "b8b00e380c560a9cd85dce2f77f4868763df9b91303e94200723aff7a1e80e5d"
+      },
+      {
+        "path": "public/media/1864f27f41aa5333c9d38dde.jpg",
+        "sha256": "1864f27f41aa5333c9d38dde64d8ca163c895d380f3f4889d29e8570527bfff8"
+      },
+      {
+        "path": "public/media/1d1679620b5eb5e9b334276c.jpg",
+        "sha256": "36df9d51d0dbf02422af9f7af3a388c563e4f0a87060defcb25b183b6002661b"
+      },
+      {
+        "path": "public/media/1e7f972e651c8e41c91168b6.jpg",
+        "sha256": "47bcd9fda2dce10d0683d25b88225c14bd453c0d24ba80b68ecfee69a3973360"
+      },
+      {
+        "path": "public/media/1f21b9be45767539b18e85ed.jpg",
+        "sha256": "f4b667aabd617a1c62ea47f3dc7dccfa6056d70efdb8093ffa57f6769bab552d"
+      },
+      {
+        "path": "public/media/1f5b70025a38abaf25c5ef97.jpg",
+        "sha256": "1dd4cbc5662f3793e14285c49b57af4bb154113d93c6dbd22fbef568cf07b349"
+      },
+      {
+        "path": "public/media/228b1d52f8f29c8495fb44b1.jpg",
+        "sha256": "d888c24cc68c68973b9c28c51f63e2f30f42e25f52fea69109b06263283117b5"
+      },
+      {
+        "path": "public/media/24c88a7a537770a0290b8162.jpg",
+        "sha256": "4db8938d6f141cb298540de48578b7ae6e373b32b39ac58a7c2eb13f1f1761fc"
+      },
+      {
+        "path": "public/media/2d96f735ba18201980dee971.jpg",
+        "sha256": "ee0ff5775769cacaf90434c19740226fda21acd788cab9f2acabe6dcc856aa2d"
+      },
+      {
+        "path": "public/media/3304a50e7a7a0d5e264947d8.jpg",
+        "sha256": "86da4ab0f98d6a6242baa82638b96494e18818501d6146e022cd2908dfc2e004"
+      },
+      {
+        "path": "public/media/335e2ea0847bd07fec38d935.jpg",
+        "sha256": "335e2ea0847bd07fec38d935c5b76d9b128f499da6c6e91dad136cc2522cb0a7"
+      },
+      {
+        "path": "public/media/34b32ab8408f756277f44d70.jpg",
+        "sha256": "34b32ab8408f756277f44d7019f0253e826994f674e83c9f53edbac998461e80"
+      },
+      {
+        "path": "public/media/363dc893eff2ab2c7ff0724e.jpg",
+        "sha256": "e4c27d5205b28a51d455b339904bf3360faa5aefd90cae87c643be05d749cb6c"
+      },
+      {
+        "path": "public/media/363fdb503e956d0273863e50.jpg",
+        "sha256": "23f1f48695f18cfe2a94480c8180aa3222d40209734c0fcdea67483f82e65ea5"
+      },
+      {
+        "path": "public/media/391d2e976f93016c1fc8a53e.jpg",
+        "sha256": "de826f5787faadaae4419c546a2e5d47865a55bd0e79bc6bfa1c9b948a67ef2a"
+      },
+      {
+        "path": "public/media/3ebbfe1b2269fd0af95899d0.jpg",
+        "sha256": "802339a75c79123c6be9e1b95f71ec28c1d3c8646d5730683733aba7fb484b76"
+      },
+      {
+        "path": "public/media/42f851b10b91c7fb7c671b0f.jpg",
+        "sha256": "1309672a4faf4e4ec5dc49b0251c25ffadeea5ef469c54c721a7f29592deed65"
+      },
+      {
+        "path": "public/media/44246db8df167276d79b1654.jpg",
+        "sha256": "44246db8df167276d79b165456e7610f01c659fc17af5234ea78b6367ce1e51b"
+      },
+      {
+        "path": "public/media/459d0941c6b06f06023017bd.jpg",
+        "sha256": "459d0941c6b06f06023017bdf3c48ac9676a863b6c49ce23339bc9b5d294811d"
+      },
+      {
+        "path": "public/media/481288d072d928eac1b8b2c6.jpg",
+        "sha256": "ab8e8b9a4d24553748a2cf7ad683adbe6f8007d98641a87876f332ed65ab921c"
+      },
+      {
+        "path": "public/media/4967ef26446203f5514ff4da.jpg",
+        "sha256": "1c1d6479c129aa718a0f5e301cd23707a75d847502c6f9eb01aba6ce8349b673"
+      },
+      {
+        "path": "public/media/4d393268061adceca4155add.jpg",
+        "sha256": "d4010301929539134fb67f5133f0e330c20d24920f75f35eac04f2cf7c3297eb"
+      },
+      {
+        "path": "public/media/577eb43287f3ea5d9fedf5fd.jpg",
+        "sha256": "d4296eee3dc3b0d78e62f85a6d6502db6cfd2854c628deac62f42b2b17bd56c2"
+      },
+      {
+        "path": "public/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+        "sha256": "69de16b368e2a6f6135a7b11a7f92cc3f903d9e1c288f02066960540f33b755a"
+      },
+      {
+        "path": "public/media/5bf0345b84335e96d827b1a3.jpg",
+        "sha256": "e9c3edaf7d44ce1489b4cfe87f82e9801f983da0309511f922e57473e464eea5"
+      },
+      {
+        "path": "public/media/5d3ba0d0278a7287633624d7.jpg",
+        "sha256": "6444135a84f42ff2fae067c9d30f2ef6b5e8cf31a82134484b08393750be336e"
+      },
+      {
+        "path": "public/media/5dbcccb90432fd253c75600a.jpg",
+        "sha256": "2335ca36194e46aca33676db61121d28f050e75d6899b15f4ea68634d214f357"
+      },
+      {
+        "path": "public/media/606c39c46a788eabd7cad94a.jpg",
+        "sha256": "33702b7c549082c6a6b86ccc446792a6d838ecd6f791b7f420687a2de1ae4a69"
+      },
+      {
+        "path": "public/media/60cdc9a37a20ee409045b5eb.jpg",
+        "sha256": "859da7f694a10ac79adff684e4d63afdef5c07d9db3bef21f305461303c6e98c"
+      },
+      {
+        "path": "public/media/61f6169f4002044fe1d07e9c.jpg",
+        "sha256": "d869c33cb0709c711bc41c0e0a5f0a82269e7972140fbdb810cb5b177a65f9b4"
+      },
+      {
+        "path": "public/media/63f2317fb79e5600be818060.jpg",
+        "sha256": "cf75b5a1698f13d594bda8fb4a755e5d46a4ce495d0e7a7a63b6626f4ae929e1"
+      },
+      {
+        "path": "public/media/69baa9ffe7a88fbc3916c1f2.jpg",
+        "sha256": "7c6903a0a1fd93194d35713c67bb3d9deae1403ce8190bf35710233e74e11a37"
+      },
+      {
+        "path": "public/media/6c2a2315ad94452845e533d8.jpg",
+        "sha256": "5062fbdc86012ccaeba9ab3de94aecb4bd20fc0d4ce5d222ac12f22b700f00b9"
+      },
+      {
+        "path": "public/media/6c2bcb595c230d3249389708.jpg",
+        "sha256": "6c2bcb595c230d32493897080d2f37be56a51b736ef7b2ab41a9c5d74e46caf5"
+      },
+      {
+        "path": "public/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+        "sha256": "da767c316c55c389584027e621a82f8c94ca3381001f5760552f1520333fab50"
+      },
+      {
+        "path": "public/media/6f692d68168b6f54116b5d13.jpg",
+        "sha256": "d724c7b3559a8dad35a264a3f53a38fa35751f6fd049fd57e948141998a34a1a"
+      },
+      {
+        "path": "public/media/70f12efe1e861d2356d7e266.jpg",
+        "sha256": "8f41b85a8288886862151367008e91eb34ba2fd453417f69dd00851904bfc322"
+      },
+      {
+        "path": "public/media/76c190762ceeff63c494f2c9.jpg",
+        "sha256": "7646d2f583d792a13a1eba80e108738705bc1d697b989bf9c2120e1194d8a8af"
+      },
+      {
+        "path": "public/media/7e59da520784cdd298b72877.jpg",
+        "sha256": "c5d669c77063579afa21b1aafa1adf32464d26d2f9e83175ad54971cca36ed5d"
+      },
+      {
+        "path": "public/media/806acd3e487f0b0fc646973b.jpg",
+        "sha256": "30495df842bb806f1ad236de8a9dca09586737be2cd901ef072bd010c62d0ecd"
+      },
+      {
+        "path": "public/media/8601f013a9a902169521c8b0.jpg",
+        "sha256": "e74eeb7b21130b462d54577ce4f340e3d3585c4a043bf7b195c74a25a7828195"
+      },
+      {
+        "path": "public/media/86be855645440b5a914c953a.jpg",
+        "sha256": "f1820cd05aa47983b5237f62f4dbcf32293fd445560e7eba09a813a600d7210f"
+      },
+      {
+        "path": "public/media/8f676584c9da2513a27baa4f.jpg",
+        "sha256": "d54c1d8befd06b3359bb25732a3d5006c84e024ad6315e585799bfc64ece3140"
+      },
+      {
+        "path": "public/media/94a456843863c6aa31137f6c.jpg",
+        "sha256": "09cacf278f42cae4712bf113603fef1d8726d8b8ea71e1ea1b4c6731e763626c"
+      },
+      {
+        "path": "public/media/955f53a8e6570b9373c299c2.jpg",
+        "sha256": "db161c0711cc56e60ac17998388499362be274474a476c26997d5db79246dfc9"
+      },
+      {
+        "path": "public/media/96ba6788e8d76e01457ef787.jpg",
+        "sha256": "96ba6788e8d76e01457ef787a249b0a72287a0a5d5ba07cca70039b1277f0a7a"
+      },
+      {
+        "path": "public/media/9bda6fe011490e01763750e4.jpg",
+        "sha256": "774a1ab0d9f13892cd8f4917ed82999e9171a1021f50c2b42e3dac8323cd3d0c"
+      },
+      {
+        "path": "public/media/a5837627b4f676209118e0e7.jpg",
+        "sha256": "63478a7d115e18689dfc516f2adf9ad213535f69ae70d91dce9a95aa320a16e3"
+      },
+      {
+        "path": "public/media/a602589870049a3f0fb24c83.jpg",
+        "sha256": "7c6d5e1cb277cf51b3499fe08c7284653c899015d20d98af5d51cbc763318c9e"
+      },
+      {
+        "path": "public/media/aa854f83427a78814a8c9330.jpg",
+        "sha256": "aa854f83427a78814a8c93308a7927f1f6604d0bf4fc8a236855c3d42f4e6001"
+      },
+      {
+        "path": "public/media/acc1ad30cbd73725d0ac6ed6.jpg",
+        "sha256": "b48147de7ba39cc83e456daabc920e2379b9cd004e53889fc2753f63d54fa73c"
+      },
+      {
+        "path": "public/media/ad462df1d55a206a67b2fc81.jpg",
+        "sha256": "e30116a3c3d4ecd232cfa7ffa9c112bb63466ff235902f35716c18d0e71d4588"
+      },
+      {
+        "path": "public/media/b52f709139bc3c03536ae335.jpg",
+        "sha256": "32090dd436fb4a68447a196601c0fb82d86646c241a2d68d719f26b44ceff735"
+      },
+      {
+        "path": "public/media/b81afdc474c67116e06a96c9.jpg",
+        "sha256": "fd168ab52233aa46b366d78d445c70adc4aedcf31acee7b3c023385ab51d9483"
+      },
+      {
+        "path": "public/media/bea67300da7b0a77dcfa3653.jpg",
+        "sha256": "6c6691e331521629cf524168f0b28eefd60d9960e9db77915bf116873cd30c97"
+      },
+      {
+        "path": "public/media/c393e8d7757ba486a8bbdfd1.jpg",
+        "sha256": "0149935fc0f9eb1ac0605acb845df507ff4b23b2ad7efd31d5c5f9c8a2fa9e67"
+      },
+      {
+        "path": "public/media/c4236e1c13029c8bfe85db2d.jpg",
+        "sha256": "3ab2f75c6919fc368a161dfc0a442f8369c47da5e9e489f6d9616e290690f89a"
+      },
+      {
+        "path": "public/media/c4a641f3b456ab59149913ea.jpg",
+        "sha256": "4bd9a3b7d6245f3bd7c5e0ac99121155080b93e9c36b593a50ce663dd693f41f"
+      },
+      {
+        "path": "public/media/c58e8ca633d94a87765e2d6a.jpg",
+        "sha256": "b26def04968d8c5c4ee64dad29f6712901d847634855789b76fd7a815222865c"
+      },
+      {
+        "path": "public/media/c6231e82c5d10dbda7f1220d.jpg",
+        "sha256": "f1f2d4b9cf194542ac486669272a5d9407c8c2de2f155bf086de64cbf3500c3b"
+      },
+      {
+        "path": "public/media/cce0d215323ba81520913403.jpg",
+        "sha256": "081cbc1954586efca64963db6141871d5f3aad3856db7cedfc6608b9caec8d6d"
+      },
+      {
+        "path": "public/media/ccec0cde43cb3cd3b23afcf7.jpg",
+        "sha256": "e4dc715b0e02fba472b8c5c934972bf96cce6a92977d918d809bd6a677b3841d"
+      },
+      {
+        "path": "public/media/cfcde45e923ea4fff4ce2dac.jpg",
+        "sha256": "702f008dc6630304f05c0c934fcd8e97af5c6552cace81cc78d5cfb153cae165"
+      },
+      {
+        "path": "public/media/d6fd42eb8fd212cf18552d2a.jpg",
+        "sha256": "b21fcb13e2f4a31ae7160adaa256cc23bfdc990c3154c4b5b244526b75f340b9"
+      },
+      {
+        "path": "public/media/d7ad3b51e4c774c87d7a425b.jpg",
+        "sha256": "44e7d62feac2e5d2762014c56eff780c87dbf5daa29b93ffec1c3cd3e7558191"
+      },
+      {
+        "path": "public/media/e31e239fe8b11431dabc7faf.jpg",
+        "sha256": "3888d887893884c000147b2074c00a8d047b72aadc9520879ea9fb437eff6b27"
+      },
+      {
+        "path": "public/media/e3985b3a4ca015b66a441fc2.jpg",
+        "sha256": "103a9de64ce05d4f0ea42c33b34eab1ee9d9a2e9b57a3341aea4e42b6c586ab9"
+      },
+      {
+        "path": "public/media/e720e468c4e335f1f5698eb9.jpg",
+        "sha256": "7d97f01396c6212e84162f21fec6464917ba69f028aa79e06b981ad7cf5eebb7"
+      },
+      {
+        "path": "public/media/e897dd444b4def376669c088.jpg",
+        "sha256": "17d2cae1bc208f2b28e6cd082d8bdeb733688b4c7f2a0bb12cc6de8476addb80"
+      },
+      {
+        "path": "public/media/easel-composition-reference.jpg",
+        "sha256": "3f787647076513eee83c6d5985c5db625d2515120a08d60f0c916ada9d4b62cc"
+      },
+      {
+        "path": "public/media/f06ec1bfba96659fe6b9da2f.jpg",
+        "sha256": "b71a6d6ff04e8cadd76667d1689bc96d067824342cbc5d1ab7d5546b7374d01d"
+      },
+      {
+        "path": "public/media/f08a52e4e0b7e4c9f4df4d0c.jpg",
+        "sha256": "92e8cf9d235c51ba9d92030ff799ac146cf9c23a496e9a4f6d2d02b591aa1ed7"
+      },
+      {
+        "path": "public/media/f3d91ee5078d8a3102569310.jpg",
+        "sha256": "5144d313928e59c9beafdfdcf9036ca0b9eae5396da00eff0996eb7f65165e04"
+      },
+      {
+        "path": "public/media/f40563af947ec69c20021507.jpg",
+        "sha256": "f40563af947ec69c20021507a3b2c07993cd40e2037460cc4366ec58c6e17f5d"
+      },
+      {
+        "path": "public/media/f4abdf1af9c237de58680c77.jpg",
+        "sha256": "3c5f02a89e940f67fa0a3f6f7ee9e8be7c5558c9294bed58ae61adccd12320bd"
+      },
+      {
+        "path": "public/media/fb8e63035c205a3251dcd602.jpg",
+        "sha256": "4f99a6e3c119e92120f116259c889cb519bcf7e13d2f05539034cfd7aea04788"
+      },
+      {
+        "path": "public/media/fe23574feaffede554dd289a.jpg",
+        "sha256": "c1fc915ae0238551ce6a5f9fe14799808d25b522815497cff1c1d9828051ecd3"
+      },
+      {
+        "path": "public/media/ff8c5d0a7cc3a358674e851b.jpg",
+        "sha256": "e47daae56f2712ef64664cbb196cb89e1fc76f42ed1765664cc95ef99881b5c9"
+      },
+      {
+        "path": "public/media/underpier-photograph.jpg",
+        "sha256": "cfa91375ee89923fdd0230a95aba042f1d4a8e698e70735de94f69fe20569ee3"
+      },
+      {
+        "path": "public/video/frame-0000.jpg",
+        "sha256": "16ccfda0b73243667688f0e373f27439e1803c7fa90a4be307f68d18b3d60ab8"
+      },
+      {
+        "path": "public/video/frame-0001.jpg",
+        "sha256": "1bcc0e8caf3f64b877b99673a0239e55214830f6449091b74ef6c28ef1d6fc5f"
+      },
+      {
+        "path": "public/video/frame-0002.jpg",
+        "sha256": "d0f06b76a8920cf89ee109f6512100813d819de6c50e75aab93ce707eee7dc57"
+      },
+      {
+        "path": "public/video/frame-0003.jpg",
+        "sha256": "81b1abe3c262d59e358bc5b94668113aef478266dd7136d255062f8a895b1a1d"
+      },
+      {
+        "path": "public/video/frame-0004.jpg",
+        "sha256": "e31e851401b57522b6777a3617526f08911c8c74abe5a0b739f16a4d86c206c5"
+      },
+      {
+        "path": "public/video/frame-0005.jpg",
+        "sha256": "f179e3ecc57e1ecbbb1378e2e3ddb5da69f2c755285d3184ddc601f00dd62adc"
+      },
+      {
+        "path": "public/video/frame-0006.jpg",
+        "sha256": "118afae309d1c3b4c0fe4813351394e7ccf1cb421c48f77412673f6fb9f7a051"
+      },
+      {
+        "path": "public/video/frame-0007.jpg",
+        "sha256": "af9bb36eea496e03978cb64d232088c065383e188307c841dded1d3a03709e8c"
+      },
+      {
+        "path": "public/video/frame-0008.jpg",
+        "sha256": "103c0c8ec0dd0745fa83d3a38cb1bef49b4eb94b822cf54e34a3f786144c8412"
+      },
+      {
+        "path": "public/video/frame-0009.jpg",
+        "sha256": "440943a153b418c9d5254b0ee9ef14ee9621eed916a1b5f76dad3d8341292204"
+      },
+      {
+        "path": "public/video/frame-0010.jpg",
+        "sha256": "b5a93018689bd0c65ca49280d3b0fda5be81dca91ce104cbd992cb9b5228180b"
+      },
+      {
+        "path": "public/video/frame-0011.jpg",
+        "sha256": "6f7ae52bbb02e7e69e2ccba17ea77f6ada20db6e245f7386f77a3f15ba4e62bc"
+      },
+      {
+        "path": "public/video/frame-0012.jpg",
+        "sha256": "55daf10fb822a66218aa51cab1e9512b3600ff73fef89200bb33e9d23e74080e"
+      },
+      {
+        "path": "public/video/frame-0013.jpg",
+        "sha256": "575abfb263d5b576541f857e400fc4546d4d1d3562cb1b3f7ff0df21adda0a2a"
+      },
+      {
+        "path": "public/video/frame-0014.jpg",
+        "sha256": "e8a1ee8f3f79d50196404d04e15ebee33ebbbc99f879e92b67b8a3ce299f9520"
+      },
+      {
+        "path": "public/video/frame-0015.jpg",
+        "sha256": "e99e7dce58f02bc2281f861bdc7834c4bf1076f195ad45ce7962ab714c58f6e8"
+      },
+      {
+        "path": "public/video/frame-0016.jpg",
+        "sha256": "a0e0b21832371804b4a482a74e0d25d44be2f21b02028169700e6afbff17a13d"
+      },
+      {
+        "path": "public/video/frame-0017.jpg",
+        "sha256": "59fa050ffe97c33edacd13b52eb7c44482c43fc148e667d4f8265e06c21de5db"
+      },
+      {
+        "path": "public/video/frame-0018.jpg",
+        "sha256": "2934956f48636f1e42c12aacd62ea6156f8dfcabccc295c32d9bedb500c91f75"
+      },
+      {
+        "path": "public/video/frame-0019.jpg",
+        "sha256": "08a91244be685601e975dfd9e5c4331cfc1e016dfeb94ea82433cd8c1b4357bc"
+      },
+      {
+        "path": "public/video/frame-0020.jpg",
+        "sha256": "4a56bc1557e9e35281726175b46a090b85519d751523f9efecfdc30960746631"
+      },
+      {
+        "path": "public/video/frame-0021.jpg",
+        "sha256": "2cc4f13bcfe698e17b5317902384ffc498a7e2d84bc058cc61934fe7737fd847"
+      },
+      {
+        "path": "public/video/frame-0022.jpg",
+        "sha256": "9f070ee5c33d96da05681eb69a707fbcb0c6d3df7f79935be055e166fdd4ba20"
+      },
+      {
+        "path": "public/video/frame-0023.jpg",
+        "sha256": "a9115efaa2871e2ef3c479d9e9536586c8ed6111eeb45d2f3c40606b59089800"
+      },
+      {
+        "path": "public/video/frame-0024.jpg",
+        "sha256": "45b7c859cd6717e989d8f60f50d742243abfcc47e3e74a9da47706754d4e1f02"
+      },
+      {
+        "path": "public/video/frame-0025.jpg",
+        "sha256": "ca6f85cf32b5ac4e3ef7e69698b5bba55c2091c1855d64ebb620bfb95d2b7645"
+      },
+      {
+        "path": "public/video/frame-0026.jpg",
+        "sha256": "64170528bfa83e31a3e9df0695a8626b01011dcfca91ab0101c29e3ab730b7c8"
+      },
+      {
+        "path": "public/video/frame-0027.jpg",
+        "sha256": "ba7850efcba920aa2a0efde7bb6c9979194b647cb0a59481aebe96211f47da68"
+      },
+      {
+        "path": "public/video/frame-0028.jpg",
+        "sha256": "fd03b3364c4c26804c7b5493b9ea9e996a790441e9ca64c57db44971a7b771ec"
+      },
+      {
+        "path": "public/video/frame-0029.jpg",
+        "sha256": "45b137d4d3ae27029da3e16c81a14fc11dcca99ebb3b89d71d748c46faef2247"
+      },
+      {
+        "path": "public/video/frame-0030.jpg",
+        "sha256": "5956709e262dd9f0bdf0ad91b9320244c31727b6c4e50d34cb847cb6692d7046"
+      },
+      {
+        "path": "public/video/frame-0031.jpg",
+        "sha256": "819b20448c16360ebfe83d6ea0fb577c38241b2dde793c495a2fddb0e11a29b9"
+      },
+      {
+        "path": "public/video/frame-0032.jpg",
+        "sha256": "21ddcd688dab71f0b5444c2537b6eda69533b61bb3de44f426f8dd0b85a84e5b"
+      },
+      {
+        "path": "public/video/frame-0033.jpg",
+        "sha256": "8229513361299e3cda05ef75f619e23de5e3c34dd17f10be6b4175bb351229bd"
+      },
+      {
+        "path": "public/video/frame-0034.jpg",
+        "sha256": "1f022926aa8597607adce14a246de81d0da105d0eaf4d1667fb88536da286d02"
+      },
+      {
+        "path": "public/video/frame-0035.jpg",
+        "sha256": "bf3144191350d6cf74f53fe0b560cc9e8bbc881b0ce7219b171d55e8d7b885a6"
+      },
+      {
+        "path": "public/video/frame-0036.jpg",
+        "sha256": "366e7f552277af9c9da6799bc08648fe2bbb72cabf1fd2a8409077ce0f161db0"
+      },
+      {
+        "path": "public/video/frame-0037.jpg",
+        "sha256": "35bf7c25051034e9f1fa803e55949cf045ec7ce9882c01e1672974af8b0b1d13"
+      },
+      {
+        "path": "public/video/frame-0038.jpg",
+        "sha256": "e47225f644184f2311cf095d5ab8e211f691ef4263d2943a7b008bd7f397b4b7"
+      },
+      {
+        "path": "public/video/frame-0039.jpg",
+        "sha256": "93e3a5c94aaab16c47960a21899a9e6f510965032a8a2adf5af71de05b178f7f"
+      },
+      {
+        "path": "public/video/frame-0040.jpg",
+        "sha256": "32187f0ab6ab9c4b1f5e388ee10635406f963676ab2e563049adba87baa7ed2a"
+      },
+      {
+        "path": "public/video/frame-0041.jpg",
+        "sha256": "0a95e4b68b5c86406a2c44f589d665ea935ac14011889e94da45f2f8a5af53e3"
+      },
+      {
+        "path": "public/video/frame-0042.jpg",
+        "sha256": "05b50c7271909a6212e890e8ca526f571348e09970925448de3a689541813672"
+      },
+      {
+        "path": "public/video/frame-0043.jpg",
+        "sha256": "89badac8436975b79e68352093fb2f307682081c23d82ab39f50b0f6cb5e6d32"
+      },
+      {
+        "path": "public/video/frame-0044.jpg",
+        "sha256": "c8ea222cfd3bc1951219a8ac561fcbb131c28034981abcfeb1f7918bd6a18318"
+      },
+      {
+        "path": "public/video/frame-0045.jpg",
+        "sha256": "3dbfc3b70f70c087f412d05c980d2226aaed74a4cb6df76de3cc3944eabcef93"
+      },
+      {
+        "path": "public/video/frame-0046.jpg",
+        "sha256": "d9f4938a2b6228bc8f156b7d0cd6e02caefe677d303f29fb2ababb279d2a520f"
+      },
+      {
+        "path": "public/video/frame-0047.jpg",
+        "sha256": "34f45c49a89c1ee360afd83b1310e5641475af4300dae034f847f7f5858c8bf3"
+      },
+      {
+        "path": "public/video/frame-0048.jpg",
+        "sha256": "51d3b777cb751cd953acc4b70c60a7dfc64ff148e798040f01e0025be954889d"
+      },
+      {
+        "path": "public/video/frame-0049.jpg",
+        "sha256": "fb108a155f6a29394ca410a282f63ab1b5554d69541f520c2f2d691187d5425b"
+      },
+      {
+        "path": "public/video/frame-0050.jpg",
+        "sha256": "e28550cf4388ead87bf1324f47daf54aa16dae0f42f5b1e65710707c0a5311ce"
+      },
+      {
+        "path": "public/video/frame-0051.jpg",
+        "sha256": "daff7a5b8197220a5c16d61740b3446631620d170f479f69a0c94dab98705a2a"
+      },
+      {
+        "path": "public/video/frame-0052.jpg",
+        "sha256": "63591bf74fc5563dd561bdac11495b58b5535d28a29da37a70c546e035555ea0"
+      },
+      {
+        "path": "public/video/frame-0053.jpg",
+        "sha256": "6de7f00a87fe12dc6779d4eac856dd0734de381709dd3b054e808dcb350d3e45"
+      },
+      {
+        "path": "public/video/frame-0054.jpg",
+        "sha256": "320a1778c6d9ece709b3788f64279b71be3ecb63a40b51aaa576777d0f07965a"
+      },
+      {
+        "path": "public/video/frame-0055.jpg",
+        "sha256": "7c047fa680ee080cf2708525ce8ed51e5a88da173adfe0e092af6e037a758703"
+      },
+      {
+        "path": "public/video/frame-0056.jpg",
+        "sha256": "8269914cbafb5f720a82b3f48b6cf1131d2beb15ff0fdba17e9dc4cac8a376ec"
+      },
+      {
+        "path": "public/video/frame-0057.jpg",
+        "sha256": "651e7e4a3c0ce731942319b1c6884d173c41b459a00ce18666ee12c5685a0567"
+      },
+      {
+        "path": "public/video/frame-0058.jpg",
+        "sha256": "9f3fdd24d087e3ff086a62fe206cb185b5c6112487f4dfdc5735c5e9cba459a9"
+      },
+      {
+        "path": "public/video/frame-0059.jpg",
+        "sha256": "4cf93e677640cbefab002b93309a4170211ef4b1491bf2dcb00817a0463a76d8"
+      },
+      {
+        "path": "public/video/frame-0060.jpg",
+        "sha256": "66c499d21ed12b65817b5f218c6c06c3dba51cba9dd49990a175e33e1b9ec852"
+      },
+      {
+        "path": "public/video/frame-0061.jpg",
+        "sha256": "4dc6cbfe7951f561476b8547be13c75a5a11b576cc63ecd9c295759105a2c94a"
+      },
+      {
+        "path": "public/video/frame-0062.jpg",
+        "sha256": "7d85cfcabbff037506e96763258d76077325e2d6fbc9ccb798b4ec6e8a6cacdb"
+      },
+      {
+        "path": "public/video/frame-0063.jpg",
+        "sha256": "26ecffe6a120030e501266473ea8c44ffdfa1034328e898f44135cde2402f0d0"
+      },
+      {
+        "path": "public/video/frame-0064.jpg",
+        "sha256": "fab4d4ecb5a28406320d94cfc216ff63798c19e3068f66e61d5468eaa66bde65"
+      },
+      {
+        "path": "public/video/frame-0065.jpg",
+        "sha256": "9fa620a6ab73c2e54431201f75d500b97c99bb2bd5f1a8d49c5fb3b1cdd8141b"
+      },
+      {
+        "path": "public/video/frame-0066.jpg",
+        "sha256": "71f5b6fae95f5b92f690c23d320fdad45622f334e46d27ff7fa4ea919dc1452c"
+      },
+      {
+        "path": "public/video/frame-0067.jpg",
+        "sha256": "a215ad9f61fddbb9d9cff563924e49b77a7a6a0b1a9ccd3ed08365a6ae00ecc1"
+      },
+      {
+        "path": "public/video/frame-0068.jpg",
+        "sha256": "2509c293369621112f85c163667c1e3eec062cfaf853f795089ebeee0702c638"
+      },
+      {
+        "path": "public/video/frame-0069.jpg",
+        "sha256": "daefb67e821e57af8d41eedf58137a6073084519e1bc490f9bf9ad560f8e0488"
+      },
+      {
+        "path": "public/video/frame-0070.jpg",
+        "sha256": "b5371cdc9e687a37b9f6e8fc0a256bc9fda7bedbd4a9d59742338f99d7f78cc1"
+      },
+      {
+        "path": "public/video/frame-0071.jpg",
+        "sha256": "bd18c0e6904b0ebaa4dbe82b7a57215f4b5bf37de96b292b2bc98f3ace6b91a6"
+      },
+      {
+        "path": "public/video/frame-0072.jpg",
+        "sha256": "03e2a5f4cbaf7875ed30c8c908e77b3bd5dd8ec8c00388e40b594a3d6cfbb4f3"
+      },
+      {
+        "path": "public/video/frame-0073.jpg",
+        "sha256": "c3f79eb17366e38868846866a052a98d651f8a592fbbf191fbaddc42246d1143"
+      },
+      {
+        "path": "public/video/frame-0074.jpg",
+        "sha256": "6c84137352488af8dc50dc1effc95178c4718304a4d39540db69a782daa18162"
+      },
+      {
+        "path": "public/video/frame-0075.jpg",
+        "sha256": "ca4e2c505680e119b73d39eb0ca6a733fe5fb2f66527a84b41575c57068baebe"
+      },
+      {
+        "path": "public/video/frame-0076.jpg",
+        "sha256": "8b0239d41c7e7615ce0a06e2b676f5d0e521ed73d6191ed581e0e0151026a7b6"
+      },
+      {
+        "path": "public/video/frame-0077.jpg",
+        "sha256": "59ff7789fb6fbe0dd7a5781d285fd0ee5f3d1dd53cbce57c3834758250962859"
+      },
+      {
+        "path": "public/video/frame-0078.jpg",
+        "sha256": "d5bef0f54bfee35663bb20292157cde4fce91e3d8b0e48d34239c3f341f6c2d8"
+      },
+      {
+        "path": "public/video/frame-0079.jpg",
+        "sha256": "6e31fb6d323dd2597268e236b3358f713ee6303fd6247ad6efdb233a40132206"
+      },
+      {
+        "path": "public/video/frame-0080.jpg",
+        "sha256": "dad0cd38431c8ff630a3d4145b1852dc651b2c6464a5c25c1086cb785756e53f"
+      },
+      {
+        "path": "public/video/frame-0081.jpg",
+        "sha256": "9cc1f32979c37d9184f77d3d9e520f7d3210771cd8eaba34f6b5fe88d021c6e1"
+      },
+      {
+        "path": "public/video/frame-0082.jpg",
+        "sha256": "98098b6dbc9712659382c7edb4bda531e7725967d8bb1e597771567445a68c59"
+      },
+      {
+        "path": "public/video/frame-0083.jpg",
+        "sha256": "a1e60db6b6c7158d294b3a214933e81206b3948d3a5a3b63dd12a3e9853b1875"
+      },
+      {
+        "path": "public/video/frame-0084.jpg",
+        "sha256": "88b37b3f52adda67c415b9bde0807d65d29dd78fd1849868cd24d95a785b1f81"
+      },
+      {
+        "path": "public/video/frame-0085.jpg",
+        "sha256": "49549de6f04875809d6a713a578dfd01bea37db054b0a3dc1664b748d1458728"
+      },
+      {
+        "path": "public/video/frame-0086.jpg",
+        "sha256": "ac6071066bcc5b5786e085ea91255b685442efe78377da200bca2c894a97233a"
+      },
+      {
+        "path": "public/video/frame-0087.jpg",
+        "sha256": "722aba6ce3185167422135168457b8bd1914cf7f08e8f2e4409656379c4d3192"
+      },
+      {
+        "path": "public/video/frame-0088.jpg",
+        "sha256": "a270d7f5fcbb1eb0257cca54b9dd7e9c1ccef10ffba9bb7a5bdbe1588b41ee93"
+      },
+      {
+        "path": "public/video/frame-0089.jpg",
+        "sha256": "b49f94522ffeb4a461aaea20e0d8c57a9c5844acfbb49a4b0c73ab79f30265fe"
+      },
+      {
+        "path": "public/video/frame-0090.jpg",
+        "sha256": "ca04a5de6305a4cbf11abc0d5a5af2fc62ee3435fcbd0adbac96239b5ce71e31"
+      },
+      {
+        "path": "public/video/frame-0091.jpg",
+        "sha256": "4bd438e671dc3cf988ac506e9731e533581d6148f6b9edcc217354f79d540ac4"
+      },
+      {
+        "path": "public/video/frame-0092.jpg",
+        "sha256": "9895067ccea590de192ff1e582ffa2ffb26d6ca5b3d25bca73bb357194060344"
+      },
+      {
+        "path": "public/video/frame-0093.jpg",
+        "sha256": "6942310b199e44a80c5b57688256a1fab8bd7fa3a68105d0838bccf07bac792d"
+      },
+      {
+        "path": "public/video/frame-0094.jpg",
+        "sha256": "eb38a128512b31cfb697045a0bd79529b8c3f54b51b57157233c31f0c0525b15"
+      },
+      {
+        "path": "public/video/frame-0095.jpg",
+        "sha256": "98ecf781279f34e43beee38e7ff5ce16cfd0121d60ee5de03fa60d574c8aab01"
+      },
+      {
+        "path": "public/video/frame-0096.jpg",
+        "sha256": "e8a41ee2c4ffb7c48b556a15895b2f998bbcf6907b917c040803819ff6efcc58"
+      },
+      {
+        "path": "public/video/frame-0097.jpg",
+        "sha256": "81edd0025e8957945faa2f1c1a6282579f5ad53d0deed95a5f9ee69c6aff9f63"
+      },
+      {
+        "path": "public/video/frame-0098.jpg",
+        "sha256": "09749187056ff80d62590e38b3f88877335969208ce4844fde20bf35f448f5e1"
+      },
+      {
+        "path": "public/video/frame-0099.jpg",
+        "sha256": "362536fea9924d73f94891d91ff3bc3b5240ab95406385e40656e9bb702701bf"
+      },
+      {
+        "path": "public/video/frame-0100.jpg",
+        "sha256": "03072d77e08271fb86a5192e6cf541bbd34c701707052ddeef579a05444a8770"
+      },
+      {
+        "path": "public/video/frame-0101.jpg",
+        "sha256": "67cba94d2d84c1222ccde36bd9ac0ac05783d42a80f26d73f99f77f18635626d"
+      },
+      {
+        "path": "public/video/frame-0102.jpg",
+        "sha256": "bc37b5fbc9c92daa7920b71810d1487285b20941490116f790eec485d2be391c"
+      },
+      {
+        "path": "public/video/frame-0103.jpg",
+        "sha256": "e76ea92f44e03c417944f9f8c026362554f5d122ace25216db3438ab367d668b"
+      },
+      {
+        "path": "public/video/frame-0104.jpg",
+        "sha256": "87ba4dc3c7f0beec6f59e05e73aa91916568ffd663101caec4fa61a4a7d84885"
+      },
+      {
+        "path": "public/video/frame-0105.jpg",
+        "sha256": "0ba15d3ceb6c5e3b2479e75e728cd8a1b35154e03e0bd59c3e9d08c1735d63c3"
+      },
+      {
+        "path": "public/video/frame-0106.jpg",
+        "sha256": "bdf63d29457f74a5c979367416ad377d427db19a28756c2b96d1f9d56a67ae98"
+      },
+      {
+        "path": "public/video/frame-0107.jpg",
+        "sha256": "6fe4650fa115e68be44d126dd72f37df13a4538bc8ea580d6e91e067d59b1806"
+      },
+      {
+        "path": "public/video/frame-0108.jpg",
+        "sha256": "dbfdd98a37889cc0fd8465b5eac532a5d1f715881963c6ce654c7f8ad43aba2e"
+      },
+      {
+        "path": "public/video/frame-0109.jpg",
+        "sha256": "6912d6617ae2d7bfcec396aa1699d2e7302b5c3b7f3ccad52c3a92b6754c1e8a"
+      },
+      {
+        "path": "public/video/frame-0110.jpg",
+        "sha256": "5ab5464b22d88151311d5331152e5706cf8830602ebc2d395243a98f3bd1476c"
+      },
+      {
+        "path": "public/video/frame-0111.jpg",
+        "sha256": "ff7b1aa32286aabb50e64aa759d4b2ead89c9b4669a365f49612e79e0284c2bf"
+      },
+      {
+        "path": "public/video/frame-0112.jpg",
+        "sha256": "0a1e59fdeef18e9a9b19442ecbaf74fb6d2505986fa6ad142cbc6a4290642967"
+      },
+      {
+        "path": "public/video/frame-0113.jpg",
+        "sha256": "694613da36757d2a1018f295d208c50b4c1f96bd139f76cc62a51d6a143267d9"
+      },
+      {
+        "path": "public/video/frame-0114.jpg",
+        "sha256": "98fcf471e911c50b857bdb7a4225cb19fee8df48fb55a5d36747a3b9fa00fd38"
+      },
+      {
+        "path": "public/video/frame-0115.jpg",
+        "sha256": "edbf5db122b8979bbb382abc89e947ad52ef6cc565618a5ff9169c9869b62e2c"
+      },
+      {
+        "path": "public/video/frame-0116.jpg",
+        "sha256": "c92bdcd8dcef06fefedf6abc4b20e929f3f65e1259a52b9f3a3392a16dd7e5d3"
+      },
+      {
+        "path": "public/video/frame-0117.jpg",
+        "sha256": "f5f63ece8620c72d4d552c1f9cacfb64fbdf57dc3f42c1d6515fecf397d097c2"
+      },
+      {
+        "path": "public/video/frame-0118.jpg",
+        "sha256": "104edc6fa2f7e244d95caf7c438d76be1ef7c8103a13a4bf7ed5efb6ca9f01dc"
+      },
+      {
+        "path": "public/video/frame-0119.jpg",
+        "sha256": "7290d54dd26b4b9f6fdc9876f7e711daa4ef794f0377cb3effa54385d32bf3ec"
+      },
+      {
+        "path": "public/video/frame-0120.jpg",
+        "sha256": "4e81c8e62b56864195e27af0be9ba225e4f9dd0b4c410f77e9e662fedd3ec672"
+      }
+    ]
+  },
+  "after": {
+    "modules": [
+      {
+        "url": "/main-v2.js",
+        "status": 200,
+        "sha256": "f58bd63fcae775ec347282362fdff89426e6d78a01992d54673359f56db8e65d"
+      },
+      {
+        "url": "/collections.js",
+        "status": 200,
+        "sha256": "fc5839be42c6d9ccf5ffb777972cd28c31f4e32b198564fbc7a42721ad79711c"
+      },
+      {
+        "url": "/collections.css",
+        "status": 200,
+        "sha256": "660df4740d606494f4cfa67e90c9010d0c5199d5fbcc38b8c0c6e96053407c26"
+      },
+      {
+        "url": "/canvas-wrap.js",
+        "status": 200,
+        "sha256": "d6c0e11047b676c1e266fb9afae00f93e0ddb09394fd4f7ac5c4fdd73a8b82fb"
+      },
+      {
+        "url": "/aisle-integration.js",
+        "status": 200,
+        "sha256": "bb2662cb151280bb853e08568407f6b349210a90573bf290df3d065493e4b0fd"
+      },
+      {
+        "url": "/aisle/aisle.css",
+        "status": 200,
+        "sha256": "adf95e8d2dc9fb4199bef46a92b11709f23e7cef76ae1eff050e0fd2ba656f88"
+      },
+      {
+        "url": "/aisle/photographic-aisle.js",
+        "status": 200,
+        "sha256": "ba69e15a778e2eda68e2fbe008da3e1b554f9c5f55241a868cb9b689b8b35838"
+      },
+      {
+        "url": "/aisle/physical-display.js",
+        "status": 200,
+        "sha256": "220416e428c5968173fa174b82f8d60c0dab59de4487303ce3033f441c89087a"
+      },
+      {
+        "url": "/aisle/physical-easel.js",
+        "status": 200,
+        "sha256": "457337f6f42629cd1b03f72dbcce0c830b35e15d353f81711cf9f6515674e7d3"
+      },
+      {
+        "url": "/aisle/photographic-environment.js",
+        "status": 200,
+        "sha256": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a"
+      },
+      {
+        "url": "/aisle/gallery-layout.js",
+        "status": 200,
+        "sha256": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67"
+      },
+      {
+        "url": "/aisle/water-surface.js",
+        "status": 200,
+        "sha256": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5"
+      },
+      {
+        "url": "/aisle/assets/easel-geometry.js",
+        "status": 200,
+        "sha256": "a1c4f0a26d6476c1e40d9a34d090a5195717cf65ae88f31718bd582892d4bc17"
+      },
+      {
+        "url": "/aisle/assets/crafted-easel.glb",
+        "status": 404,
+        "sha256": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31"
+      }
+    ],
+    "originals": [
+      {
+        "path": "public/aisle/assets/coated_pine_diff_1k.jpg",
+        "sha256": "afee7cfb2ec1716edc712f929cdb3d3dfbac5a0ba290e25943b4472a8144bbaf"
+      },
+      {
+        "path": "public/aisle/assets/coated_pine_nor_gl_1k.jpg",
+        "sha256": "91eb707d7b0dd44133502878f37ede93e6be23c2019e64df72dffe46f6985b3a"
+      },
+      {
+        "path": "public/aisle/assets/coated_pine_rough_1k.jpg",
+        "sha256": "6ecebef8ffde1833ee9656d3bf7cf863694ad99ac041cacf2fc5432b2f5383e1"
+      },
+      {
+        "path": "public/media/0163dea99efa5683d470b7ad.jpg",
+        "sha256": "f767f35f27038bc2210dfbcbbec1a27d59676acfd9e0ee370921da23bf8d9460"
+      },
+      {
+        "path": "public/media/0339e7ad66e61d910bea5c59.jpg",
+        "sha256": "20509de2de287146047a4bb76f5901fe5732f7f4671961a6f4c87384c7523e26"
+      },
+      {
+        "path": "public/media/044ce4a7ec48b6d0528efce5.jpg",
+        "sha256": "2d96c6c7b9eefd6f1b08dc97dfb4b2ca8d49f14adb7f64c5539c2cddd820bc0e"
+      },
+      {
+        "path": "public/media/07f59839133492f58ad8884a.jpg",
+        "sha256": "07f59839133492f58ad8884a94202bd88c0c8d0b8a4b9cdb0f31fd07cc870759"
+      },
+      {
+        "path": "public/media/08bfbe519671b2a3ec187588.jpg",
+        "sha256": "08bfbe519671b2a3ec18758809917c2a53e74a565743dabeef15463bbad5f3dd"
+      },
+      {
+        "path": "public/media/090c3caad475229f7e9d0695.jpg",
+        "sha256": "090c3caad475229f7e9d069521e3b839eec24996a0cd573b7ff0fd4b3dc2517d"
+      },
+      {
+        "path": "public/media/09920ffdef0dccd54b6dfc01.jpg",
+        "sha256": "26f7fa61f4c51bb268b5fd230fc5756b769a3f984b2766fa9e19b71ba3bd52b1"
+      },
+      {
+        "path": "public/media/0a7d2faec6cf918c625f0619.jpg",
+        "sha256": "b183d2ae04fde34b08387b5fe3b1b1b3e42f31cd717c2522ebcb3137727dc4c3"
+      },
+      {
+        "path": "public/media/0d730119329ad4799756e2bd.jpg",
+        "sha256": "0d730119329ad4799756e2bdb171d2c0ea7c4f84035ec568015df9a2247112a3"
+      },
+      {
+        "path": "public/media/0faa7eb4c0ad1135866f4c46.jpg",
+        "sha256": "9f9d180e8856846e129a72b9723e54e0a6458a0cfe90a5dcbaaaf9e17e87abd7"
+      },
+      {
+        "path": "public/media/11b5d5f94bb2846f435a0384.jpg",
+        "sha256": "b032a5b1954a8fc334e10b9a946a3ac8926b7d657da1233f7156ecf6fd586496"
+      },
+      {
+        "path": "public/media/13a47c55385a48222c5a0efd.jpg",
+        "sha256": "67f780cd8a859709f5715278fad59220af89d4e800b4eb13bf0636082dbc13a8"
+      },
+      {
+        "path": "public/media/15e20340ffa0cc99b0e6464c.jpg",
+        "sha256": "c3b613c6a566aa551506b6ea7a81a90e8a696d3e0e25fce7b115161b99312bb5"
+      },
+      {
+        "path": "public/media/1825de7e0853fbdff388bf7c.jpg",
+        "sha256": "b8b00e380c560a9cd85dce2f77f4868763df9b91303e94200723aff7a1e80e5d"
+      },
+      {
+        "path": "public/media/1864f27f41aa5333c9d38dde.jpg",
+        "sha256": "1864f27f41aa5333c9d38dde64d8ca163c895d380f3f4889d29e8570527bfff8"
+      },
+      {
+        "path": "public/media/1d1679620b5eb5e9b334276c.jpg",
+        "sha256": "36df9d51d0dbf02422af9f7af3a388c563e4f0a87060defcb25b183b6002661b"
+      },
+      {
+        "path": "public/media/1e7f972e651c8e41c91168b6.jpg",
+        "sha256": "47bcd9fda2dce10d0683d25b88225c14bd453c0d24ba80b68ecfee69a3973360"
+      },
+      {
+        "path": "public/media/1f21b9be45767539b18e85ed.jpg",
+        "sha256": "f4b667aabd617a1c62ea47f3dc7dccfa6056d70efdb8093ffa57f6769bab552d"
+      },
+      {
+        "path": "public/media/1f5b70025a38abaf25c5ef97.jpg",
+        "sha256": "1dd4cbc5662f3793e14285c49b57af4bb154113d93c6dbd22fbef568cf07b349"
+      },
+      {
+        "path": "public/media/228b1d52f8f29c8495fb44b1.jpg",
+        "sha256": "d888c24cc68c68973b9c28c51f63e2f30f42e25f52fea69109b06263283117b5"
+      },
+      {
+        "path": "public/media/24c88a7a537770a0290b8162.jpg",
+        "sha256": "4db8938d6f141cb298540de48578b7ae6e373b32b39ac58a7c2eb13f1f1761fc"
+      },
+      {
+        "path": "public/media/2d96f735ba18201980dee971.jpg",
+        "sha256": "ee0ff5775769cacaf90434c19740226fda21acd788cab9f2acabe6dcc856aa2d"
+      },
+      {
+        "path": "public/media/3304a50e7a7a0d5e264947d8.jpg",
+        "sha256": "86da4ab0f98d6a6242baa82638b96494e18818501d6146e022cd2908dfc2e004"
+      },
+      {
+        "path": "public/media/335e2ea0847bd07fec38d935.jpg",
+        "sha256": "335e2ea0847bd07fec38d935c5b76d9b128f499da6c6e91dad136cc2522cb0a7"
+      },
+      {
+        "path": "public/media/34b32ab8408f756277f44d70.jpg",
+        "sha256": "34b32ab8408f756277f44d7019f0253e826994f674e83c9f53edbac998461e80"
+      },
+      {
+        "path": "public/media/363dc893eff2ab2c7ff0724e.jpg",
+        "sha256": "e4c27d5205b28a51d455b339904bf3360faa5aefd90cae87c643be05d749cb6c"
+      },
+      {
+        "path": "public/media/363fdb503e956d0273863e50.jpg",
+        "sha256": "23f1f48695f18cfe2a94480c8180aa3222d40209734c0fcdea67483f82e65ea5"
+      },
+      {
+        "path": "public/media/391d2e976f93016c1fc8a53e.jpg",
+        "sha256": "de826f5787faadaae4419c546a2e5d47865a55bd0e79bc6bfa1c9b948a67ef2a"
+      },
+      {
+        "path": "public/media/3ebbfe1b2269fd0af95899d0.jpg",
+        "sha256": "802339a75c79123c6be9e1b95f71ec28c1d3c8646d5730683733aba7fb484b76"
+      },
+      {
+        "path": "public/media/42f851b10b91c7fb7c671b0f.jpg",
+        "sha256": "1309672a4faf4e4ec5dc49b0251c25ffadeea5ef469c54c721a7f29592deed65"
+      },
+      {
+        "path": "public/media/44246db8df167276d79b1654.jpg",
+        "sha256": "44246db8df167276d79b165456e7610f01c659fc17af5234ea78b6367ce1e51b"
+      },
+      {
+        "path": "public/media/459d0941c6b06f06023017bd.jpg",
+        "sha256": "459d0941c6b06f06023017bdf3c48ac9676a863b6c49ce23339bc9b5d294811d"
+      },
+      {
+        "path": "public/media/481288d072d928eac1b8b2c6.jpg",
+        "sha256": "ab8e8b9a4d24553748a2cf7ad683adbe6f8007d98641a87876f332ed65ab921c"
+      },
+      {
+        "path": "public/media/4967ef26446203f5514ff4da.jpg",
+        "sha256": "1c1d6479c129aa718a0f5e301cd23707a75d847502c6f9eb01aba6ce8349b673"
+      },
+      {
+        "path": "public/media/4d393268061adceca4155add.jpg",
+        "sha256": "d4010301929539134fb67f5133f0e330c20d24920f75f35eac04f2cf7c3297eb"
+      },
+      {
+        "path": "public/media/577eb43287f3ea5d9fedf5fd.jpg",
+        "sha256": "d4296eee3dc3b0d78e62f85a6d6502db6cfd2854c628deac62f42b2b17bd56c2"
+      },
+      {
+        "path": "public/media/57db5a2dbfd0b6bf6b48ba41.jpg",
+        "sha256": "69de16b368e2a6f6135a7b11a7f92cc3f903d9e1c288f02066960540f33b755a"
+      },
+      {
+        "path": "public/media/5bf0345b84335e96d827b1a3.jpg",
+        "sha256": "e9c3edaf7d44ce1489b4cfe87f82e9801f983da0309511f922e57473e464eea5"
+      },
+      {
+        "path": "public/media/5d3ba0d0278a7287633624d7.jpg",
+        "sha256": "6444135a84f42ff2fae067c9d30f2ef6b5e8cf31a82134484b08393750be336e"
+      },
+      {
+        "path": "public/media/5dbcccb90432fd253c75600a.jpg",
+        "sha256": "2335ca36194e46aca33676db61121d28f050e75d6899b15f4ea68634d214f357"
+      },
+      {
+        "path": "public/media/606c39c46a788eabd7cad94a.jpg",
+        "sha256": "33702b7c549082c6a6b86ccc446792a6d838ecd6f791b7f420687a2de1ae4a69"
+      },
+      {
+        "path": "public/media/60cdc9a37a20ee409045b5eb.jpg",
+        "sha256": "859da7f694a10ac79adff684e4d63afdef5c07d9db3bef21f305461303c6e98c"
+      },
+      {
+        "path": "public/media/61f6169f4002044fe1d07e9c.jpg",
+        "sha256": "d869c33cb0709c711bc41c0e0a5f0a82269e7972140fbdb810cb5b177a65f9b4"
+      },
+      {
+        "path": "public/media/63f2317fb79e5600be818060.jpg",
+        "sha256": "cf75b5a1698f13d594bda8fb4a755e5d46a4ce495d0e7a7a63b6626f4ae929e1"
+      },
+      {
+        "path": "public/media/69baa9ffe7a88fbc3916c1f2.jpg",
+        "sha256": "7c6903a0a1fd93194d35713c67bb3d9deae1403ce8190bf35710233e74e11a37"
+      },
+      {
+        "path": "public/media/6c2a2315ad94452845e533d8.jpg",
+        "sha256": "5062fbdc86012ccaeba9ab3de94aecb4bd20fc0d4ce5d222ac12f22b700f00b9"
+      },
+      {
+        "path": "public/media/6c2bcb595c230d3249389708.jpg",
+        "sha256": "6c2bcb595c230d32493897080d2f37be56a51b736ef7b2ab41a9c5d74e46caf5"
+      },
+      {
+        "path": "public/media/6c64e7f9a63f9ce01ebd8e7c.jpg",
+        "sha256": "da767c316c55c389584027e621a82f8c94ca3381001f5760552f1520333fab50"
+      },
+      {
+        "path": "public/media/6f692d68168b6f54116b5d13.jpg",
+        "sha256": "d724c7b3559a8dad35a264a3f53a38fa35751f6fd049fd57e948141998a34a1a"
+      },
+      {
+        "path": "public/media/70f12efe1e861d2356d7e266.jpg",
+        "sha256": "8f41b85a8288886862151367008e91eb34ba2fd453417f69dd00851904bfc322"
+      },
+      {
+        "path": "public/media/76c190762ceeff63c494f2c9.jpg",
+        "sha256": "7646d2f583d792a13a1eba80e108738705bc1d697b989bf9c2120e1194d8a8af"
+      },
+      {
+        "path": "public/media/7e59da520784cdd298b72877.jpg",
+        "sha256": "c5d669c77063579afa21b1aafa1adf32464d26d2f9e83175ad54971cca36ed5d"
+      },
+      {
+        "path": "public/media/806acd3e487f0b0fc646973b.jpg",
+        "sha256": "30495df842bb806f1ad236de8a9dca09586737be2cd901ef072bd010c62d0ecd"
+      },
+      {
+        "path": "public/media/8601f013a9a902169521c8b0.jpg",
+        "sha256": "e74eeb7b21130b462d54577ce4f340e3d3585c4a043bf7b195c74a25a7828195"
+      },
+      {
+        "path": "public/media/86be855645440b5a914c953a.jpg",
+        "sha256": "f1820cd05aa47983b5237f62f4dbcf32293fd445560e7eba09a813a600d7210f"
+      },
+      {
+        "path": "public/media/8f676584c9da2513a27baa4f.jpg",
+        "sha256": "d54c1d8befd06b3359bb25732a3d5006c84e024ad6315e585799bfc64ece3140"
+      },
+      {
+        "path": "public/media/94a456843863c6aa31137f6c.jpg",
+        "sha256": "09cacf278f42cae4712bf113603fef1d8726d8b8ea71e1ea1b4c6731e763626c"
+      },
+      {
+        "path": "public/media/955f53a8e6570b9373c299c2.jpg",
+        "sha256": "db161c0711cc56e60ac17998388499362be274474a476c26997d5db79246dfc9"
+      },
+      {
+        "path": "public/media/96ba6788e8d76e01457ef787.jpg",
+        "sha256": "96ba6788e8d76e01457ef787a249b0a72287a0a5d5ba07cca70039b1277f0a7a"
+      },
+      {
+        "path": "public/media/9bda6fe011490e01763750e4.jpg",
+        "sha256": "774a1ab0d9f13892cd8f4917ed82999e9171a1021f50c2b42e3dac8323cd3d0c"
+      },
+      {
+        "path": "public/media/a5837627b4f676209118e0e7.jpg",
+        "sha256": "63478a7d115e18689dfc516f2adf9ad213535f69ae70d91dce9a95aa320a16e3"
+      },
+      {
+        "path": "public/media/a602589870049a3f0fb24c83.jpg",
+        "sha256": "7c6d5e1cb277cf51b3499fe08c7284653c899015d20d98af5d51cbc763318c9e"
+      },
+      {
+        "path": "public/media/aa854f83427a78814a8c9330.jpg",
+        "sha256": "aa854f83427a78814a8c93308a7927f1f6604d0bf4fc8a236855c3d42f4e6001"
+      },
+      {
+        "path": "public/media/acc1ad30cbd73725d0ac6ed6.jpg",
+        "sha256": "b48147de7ba39cc83e456daabc920e2379b9cd004e53889fc2753f63d54fa73c"
+      },
+      {
+        "path": "public/media/ad462df1d55a206a67b2fc81.jpg",
+        "sha256": "e30116a3c3d4ecd232cfa7ffa9c112bb63466ff235902f35716c18d0e71d4588"
+      },
+      {
+        "path": "public/media/b52f709139bc3c03536ae335.jpg",
+        "sha256": "32090dd436fb4a68447a196601c0fb82d86646c241a2d68d719f26b44ceff735"
+      },
+      {
+        "path": "public/media/b81afdc474c67116e06a96c9.jpg",
+        "sha256": "fd168ab52233aa46b366d78d445c70adc4aedcf31acee7b3c023385ab51d9483"
+      },
+      {
+        "path": "public/media/bea67300da7b0a77dcfa3653.jpg",
+        "sha256": "6c6691e331521629cf524168f0b28eefd60d9960e9db77915bf116873cd30c97"
+      },
+      {
+        "path": "public/media/c393e8d7757ba486a8bbdfd1.jpg",
+        "sha256": "0149935fc0f9eb1ac0605acb845df507ff4b23b2ad7efd31d5c5f9c8a2fa9e67"
+      },
+      {
+        "path": "public/media/c4236e1c13029c8bfe85db2d.jpg",
+        "sha256": "3ab2f75c6919fc368a161dfc0a442f8369c47da5e9e489f6d9616e290690f89a"
+      },
+      {
+        "path": "public/media/c4a641f3b456ab59149913ea.jpg",
+        "sha256": "4bd9a3b7d6245f3bd7c5e0ac99121155080b93e9c36b593a50ce663dd693f41f"
+      },
+      {
+        "path": "public/media/c58e8ca633d94a87765e2d6a.jpg",
+        "sha256": "b26def04968d8c5c4ee64dad29f6712901d847634855789b76fd7a815222865c"
+      },
+      {
+        "path": "public/media/c6231e82c5d10dbda7f1220d.jpg",
+        "sha256": "f1f2d4b9cf194542ac486669272a5d9407c8c2de2f155bf086de64cbf3500c3b"
+      },
+      {
+        "path": "public/media/cce0d215323ba81520913403.jpg",
+        "sha256": "081cbc1954586efca64963db6141871d5f3aad3856db7cedfc6608b9caec8d6d"
+      },
+      {
+        "path": "public/media/ccec0cde43cb3cd3b23afcf7.jpg",
+        "sha256": "e4dc715b0e02fba472b8c5c934972bf96cce6a92977d918d809bd6a677b3841d"
+      },
+      {
+        "path": "public/media/cfcde45e923ea4fff4ce2dac.jpg",
+        "sha256": "702f008dc6630304f05c0c934fcd8e97af5c6552cace81cc78d5cfb153cae165"
+      },
+      {
+        "path": "public/media/d6fd42eb8fd212cf18552d2a.jpg",
+        "sha256": "b21fcb13e2f4a31ae7160adaa256cc23bfdc990c3154c4b5b244526b75f340b9"
+      },
+      {
+        "path": "public/media/d7ad3b51e4c774c87d7a425b.jpg",
+        "sha256": "44e7d62feac2e5d2762014c56eff780c87dbf5daa29b93ffec1c3cd3e7558191"
+      },
+      {
+        "path": "public/media/e31e239fe8b11431dabc7faf.jpg",
+        "sha256": "3888d887893884c000147b2074c00a8d047b72aadc9520879ea9fb437eff6b27"
+      },
+      {
+        "path": "public/media/e3985b3a4ca015b66a441fc2.jpg",
+        "sha256": "103a9de64ce05d4f0ea42c33b34eab1ee9d9a2e9b57a3341aea4e42b6c586ab9"
+      },
+      {
+        "path": "public/media/e720e468c4e335f1f5698eb9.jpg",
+        "sha256": "7d97f01396c6212e84162f21fec6464917ba69f028aa79e06b981ad7cf5eebb7"
+      },
+      {
+        "path": "public/media/e897dd444b4def376669c088.jpg",
+        "sha256": "17d2cae1bc208f2b28e6cd082d8bdeb733688b4c7f2a0bb12cc6de8476addb80"
+      },
+      {
+        "path": "public/media/easel-composition-reference.jpg",
+        "sha256": "3f787647076513eee83c6d5985c5db625d2515120a08d60f0c916ada9d4b62cc"
+      },
+      {
+        "path": "public/media/f06ec1bfba96659fe6b9da2f.jpg",
+        "sha256": "b71a6d6ff04e8cadd76667d1689bc96d067824342cbc5d1ab7d5546b7374d01d"
+      },
+      {
+        "path": "public/media/f08a52e4e0b7e4c9f4df4d0c.jpg",
+        "sha256": "92e8cf9d235c51ba9d92030ff799ac146cf9c23a496e9a4f6d2d02b591aa1ed7"
+      },
+      {
+        "path": "public/media/f3d91ee5078d8a3102569310.jpg",
+        "sha256": "5144d313928e59c9beafdfdcf9036ca0b9eae5396da00eff0996eb7f65165e04"
+      },
+      {
+        "path": "public/media/f40563af947ec69c20021507.jpg",
+        "sha256": "f40563af947ec69c20021507a3b2c07993cd40e2037460cc4366ec58c6e17f5d"
+      },
+      {
+        "path": "public/media/f4abdf1af9c237de58680c77.jpg",
+        "sha256": "3c5f02a89e940f67fa0a3f6f7ee9e8be7c5558c9294bed58ae61adccd12320bd"
+      },
+      {
+        "path": "public/media/fb8e63035c205a3251dcd602.jpg",
+        "sha256": "4f99a6e3c119e92120f116259c889cb519bcf7e13d2f05539034cfd7aea04788"
+      },
+      {
+        "path": "public/media/fe23574feaffede554dd289a.jpg",
+        "sha256": "c1fc915ae0238551ce6a5f9fe14799808d25b522815497cff1c1d9828051ecd3"
+      },
+      {
+        "path": "public/media/ff8c5d0a7cc3a358674e851b.jpg",
+        "sha256": "e47daae56f2712ef64664cbb196cb89e1fc76f42ed1765664cc95ef99881b5c9"
+      },
+      {
+        "path": "public/media/underpier-photograph.jpg",
+        "sha256": "cfa91375ee89923fdd0230a95aba042f1d4a8e698e70735de94f69fe20569ee3"
+      },
+      {
+        "path": "public/video/frame-0000.jpg",
+        "sha256": "16ccfda0b73243667688f0e373f27439e1803c7fa90a4be307f68d18b3d60ab8"
+      },
+      {
+        "path": "public/video/frame-0001.jpg",
+        "sha256": "1bcc0e8caf3f64b877b99673a0239e55214830f6449091b74ef6c28ef1d6fc5f"
+      },
+      {
+        "path": "public/video/frame-0002.jpg",
+        "sha256": "d0f06b76a8920cf89ee109f6512100813d819de6c50e75aab93ce707eee7dc57"
+      },
+      {
+        "path": "public/video/frame-0003.jpg",
+        "sha256": "81b1abe3c262d59e358bc5b94668113aef478266dd7136d255062f8a895b1a1d"
+      },
+      {
+        "path": "public/video/frame-0004.jpg",
+        "sha256": "e31e851401b57522b6777a3617526f08911c8c74abe5a0b739f16a4d86c206c5"
+      },
+      {
+        "path": "public/video/frame-0005.jpg",
+        "sha256": "f179e3ecc57e1ecbbb1378e2e3ddb5da69f2c755285d3184ddc601f00dd62adc"
+      },
+      {
+        "path": "public/video/frame-0006.jpg",
+        "sha256": "118afae309d1c3b4c0fe4813351394e7ccf1cb421c48f77412673f6fb9f7a051"
+      },
+      {
+        "path": "public/video/frame-0007.jpg",
+        "sha256": "af9bb36eea496e03978cb64d232088c065383e188307c841dded1d3a03709e8c"
+      },
+      {
+        "path": "public/video/frame-0008.jpg",
+        "sha256": "103c0c8ec0dd0745fa83d3a38cb1bef49b4eb94b822cf54e34a3f786144c8412"
+      },
+      {
+        "path": "public/video/frame-0009.jpg",
+        "sha256": "440943a153b418c9d5254b0ee9ef14ee9621eed916a1b5f76dad3d8341292204"
+      },
+      {
+        "path": "public/video/frame-0010.jpg",
+        "sha256": "b5a93018689bd0c65ca49280d3b0fda5be81dca91ce104cbd992cb9b5228180b"
+      },
+      {
+        "path": "public/video/frame-0011.jpg",
+        "sha256": "6f7ae52bbb02e7e69e2ccba17ea77f6ada20db6e245f7386f77a3f15ba4e62bc"
+      },
+      {
+        "path": "public/video/frame-0012.jpg",
+        "sha256": "55daf10fb822a66218aa51cab1e9512b3600ff73fef89200bb33e9d23e74080e"
+      },
+      {
+        "path": "public/video/frame-0013.jpg",
+        "sha256": "575abfb263d5b576541f857e400fc4546d4d1d3562cb1b3f7ff0df21adda0a2a"
+      },
+      {
+        "path": "public/video/frame-0014.jpg",
+        "sha256": "e8a1ee8f3f79d50196404d04e15ebee33ebbbc99f879e92b67b8a3ce299f9520"
+      },
+      {
+        "path": "public/video/frame-0015.jpg",
+        "sha256": "e99e7dce58f02bc2281f861bdc7834c4bf1076f195ad45ce7962ab714c58f6e8"
+      },
+      {
+        "path": "public/video/frame-0016.jpg",
+        "sha256": "a0e0b21832371804b4a482a74e0d25d44be2f21b02028169700e6afbff17a13d"
+      },
+      {
+        "path": "public/video/frame-0017.jpg",
+        "sha256": "59fa050ffe97c33edacd13b52eb7c44482c43fc148e667d4f8265e06c21de5db"
+      },
+      {
+        "path": "public/video/frame-0018.jpg",
+        "sha256": "2934956f48636f1e42c12aacd62ea6156f8dfcabccc295c32d9bedb500c91f75"
+      },
+      {
+        "path": "public/video/frame-0019.jpg",
+        "sha256": "08a91244be685601e975dfd9e5c4331cfc1e016dfeb94ea82433cd8c1b4357bc"
+      },
+      {
+        "path": "public/video/frame-0020.jpg",
+        "sha256": "4a56bc1557e9e35281726175b46a090b85519d751523f9efecfdc30960746631"
+      },
+      {
+        "path": "public/video/frame-0021.jpg",
+        "sha256": "2cc4f13bcfe698e17b5317902384ffc498a7e2d84bc058cc61934fe7737fd847"
+      },
+      {
+        "path": "public/video/frame-0022.jpg",
+        "sha256": "9f070ee5c33d96da05681eb69a707fbcb0c6d3df7f79935be055e166fdd4ba20"
+      },
+      {
+        "path": "public/video/frame-0023.jpg",
+        "sha256": "a9115efaa2871e2ef3c479d9e9536586c8ed6111eeb45d2f3c40606b59089800"
+      },
+      {
+        "path": "public/video/frame-0024.jpg",
+        "sha256": "45b7c859cd6717e989d8f60f50d742243abfcc47e3e74a9da47706754d4e1f02"
+      },
+      {
+        "path": "public/video/frame-0025.jpg",
+        "sha256": "ca6f85cf32b5ac4e3ef7e69698b5bba55c2091c1855d64ebb620bfb95d2b7645"
+      },
+      {
+        "path": "public/video/frame-0026.jpg",
+        "sha256": "64170528bfa83e31a3e9df0695a8626b01011dcfca91ab0101c29e3ab730b7c8"
+      },
+      {
+        "path": "public/video/frame-0027.jpg",
+        "sha256": "ba7850efcba920aa2a0efde7bb6c9979194b647cb0a59481aebe96211f47da68"
+      },
+      {
+        "path": "public/video/frame-0028.jpg",
+        "sha256": "fd03b3364c4c26804c7b5493b9ea9e996a790441e9ca64c57db44971a7b771ec"
+      },
+      {
+        "path": "public/video/frame-0029.jpg",
+        "sha256": "45b137d4d3ae27029da3e16c81a14fc11dcca99ebb3b89d71d748c46faef2247"
+      },
+      {
+        "path": "public/video/frame-0030.jpg",
+        "sha256": "5956709e262dd9f0bdf0ad91b9320244c31727b6c4e50d34cb847cb6692d7046"
+      },
+      {
+        "path": "public/video/frame-0031.jpg",
+        "sha256": "819b20448c16360ebfe83d6ea0fb577c38241b2dde793c495a2fddb0e11a29b9"
+      },
+      {
+        "path": "public/video/frame-0032.jpg",
+        "sha256": "21ddcd688dab71f0b5444c2537b6eda69533b61bb3de44f426f8dd0b85a84e5b"
+      },
+      {
+        "path": "public/video/frame-0033.jpg",
+        "sha256": "8229513361299e3cda05ef75f619e23de5e3c34dd17f10be6b4175bb351229bd"
+      },
+      {
+        "path": "public/video/frame-0034.jpg",
+        "sha256": "1f022926aa8597607adce14a246de81d0da105d0eaf4d1667fb88536da286d02"
+      },
+      {
+        "path": "public/video/frame-0035.jpg",
+        "sha256": "bf3144191350d6cf74f53fe0b560cc9e8bbc881b0ce7219b171d55e8d7b885a6"
+      },
+      {
+        "path": "public/video/frame-0036.jpg",
+        "sha256": "366e7f552277af9c9da6799bc08648fe2bbb72cabf1fd2a8409077ce0f161db0"
+      },
+      {
+        "path": "public/video/frame-0037.jpg",
+        "sha256": "35bf7c25051034e9f1fa803e55949cf045ec7ce9882c01e1672974af8b0b1d13"
+      },
+      {
+        "path": "public/video/frame-0038.jpg",
+        "sha256": "e47225f644184f2311cf095d5ab8e211f691ef4263d2943a7b008bd7f397b4b7"
+      },
+      {
+        "path": "public/video/frame-0039.jpg",
+        "sha256": "93e3a5c94aaab16c47960a21899a9e6f510965032a8a2adf5af71de05b178f7f"
+      },
+      {
+        "path": "public/video/frame-0040.jpg",
+        "sha256": "32187f0ab6ab9c4b1f5e388ee10635406f963676ab2e563049adba87baa7ed2a"
+      },
+      {
+        "path": "public/video/frame-0041.jpg",
+        "sha256": "0a95e4b68b5c86406a2c44f589d665ea935ac14011889e94da45f2f8a5af53e3"
+      },
+      {
+        "path": "public/video/frame-0042.jpg",
+        "sha256": "05b50c7271909a6212e890e8ca526f571348e09970925448de3a689541813672"
+      },
+      {
+        "path": "public/video/frame-0043.jpg",
+        "sha256": "89badac8436975b79e68352093fb2f307682081c23d82ab39f50b0f6cb5e6d32"
+      },
+      {
+        "path": "public/video/frame-0044.jpg",
+        "sha256": "c8ea222cfd3bc1951219a8ac561fcbb131c28034981abcfeb1f7918bd6a18318"
+      },
+      {
+        "path": "public/video/frame-0045.jpg",
+        "sha256": "3dbfc3b70f70c087f412d05c980d2226aaed74a4cb6df76de3cc3944eabcef93"
+      },
+      {
+        "path": "public/video/frame-0046.jpg",
+        "sha256": "d9f4938a2b6228bc8f156b7d0cd6e02caefe677d303f29fb2ababb279d2a520f"
+      },
+      {
+        "path": "public/video/frame-0047.jpg",
+        "sha256": "34f45c49a89c1ee360afd83b1310e5641475af4300dae034f847f7f5858c8bf3"
+      },
+      {
+        "path": "public/video/frame-0048.jpg",
+        "sha256": "51d3b777cb751cd953acc4b70c60a7dfc64ff148e798040f01e0025be954889d"
+      },
+      {
+        "path": "public/video/frame-0049.jpg",
+        "sha256": "fb108a155f6a29394ca410a282f63ab1b5554d69541f520c2f2d691187d5425b"
+      },
+      {
+        "path": "public/video/frame-0050.jpg",
+        "sha256": "e28550cf4388ead87bf1324f47daf54aa16dae0f42f5b1e65710707c0a5311ce"
+      },
+      {
+        "path": "public/video/frame-0051.jpg",
+        "sha256": "daff7a5b8197220a5c16d61740b3446631620d170f479f69a0c94dab98705a2a"
+      },
+      {
+        "path": "public/video/frame-0052.jpg",
+        "sha256": "63591bf74fc5563dd561bdac11495b58b5535d28a29da37a70c546e035555ea0"
+      },
+      {
+        "path": "public/video/frame-0053.jpg",
+        "sha256": "6de7f00a87fe12dc6779d4eac856dd0734de381709dd3b054e808dcb350d3e45"
+      },
+      {
+        "path": "public/video/frame-0054.jpg",
+        "sha256": "320a1778c6d9ece709b3788f64279b71be3ecb63a40b51aaa576777d0f07965a"
+      },
+      {
+        "path": "public/video/frame-0055.jpg",
+        "sha256": "7c047fa680ee080cf2708525ce8ed51e5a88da173adfe0e092af6e037a758703"
+      },
+      {
+        "path": "public/video/frame-0056.jpg",
+        "sha256": "8269914cbafb5f720a82b3f48b6cf1131d2beb15ff0fdba17e9dc4cac8a376ec"
+      },
+      {
+        "path": "public/video/frame-0057.jpg",
+        "sha256": "651e7e4a3c0ce731942319b1c6884d173c41b459a00ce18666ee12c5685a0567"
+      },
+      {
+        "path": "public/video/frame-0058.jpg",
+        "sha256": "9f3fdd24d087e3ff086a62fe206cb185b5c6112487f4dfdc5735c5e9cba459a9"
+      },
+      {
+        "path": "public/video/frame-0059.jpg",
+        "sha256": "4cf93e677640cbefab002b93309a4170211ef4b1491bf2dcb00817a0463a76d8"
+      },
+      {
+        "path": "public/video/frame-0060.jpg",
+        "sha256": "66c499d21ed12b65817b5f218c6c06c3dba51cba9dd49990a175e33e1b9ec852"
+      },
+      {
+        "path": "public/video/frame-0061.jpg",
+        "sha256": "4dc6cbfe7951f561476b8547be13c75a5a11b576cc63ecd9c295759105a2c94a"
+      },
+      {
+        "path": "public/video/frame-0062.jpg",
+        "sha256": "7d85cfcabbff037506e96763258d76077325e2d6fbc9ccb798b4ec6e8a6cacdb"
+      },
+      {
+        "path": "public/video/frame-0063.jpg",
+        "sha256": "26ecffe6a120030e501266473ea8c44ffdfa1034328e898f44135cde2402f0d0"
+      },
+      {
+        "path": "public/video/frame-0064.jpg",
+        "sha256": "fab4d4ecb5a28406320d94cfc216ff63798c19e3068f66e61d5468eaa66bde65"
+      },
+      {
+        "path": "public/video/frame-0065.jpg",
+        "sha256": "9fa620a6ab73c2e54431201f75d500b97c99bb2bd5f1a8d49c5fb3b1cdd8141b"
+      },
+      {
+        "path": "public/video/frame-0066.jpg",
+        "sha256": "71f5b6fae95f5b92f690c23d320fdad45622f334e46d27ff7fa4ea919dc1452c"
+      },
+      {
+        "path": "public/video/frame-0067.jpg",
+        "sha256": "a215ad9f61fddbb9d9cff563924e49b77a7a6a0b1a9ccd3ed08365a6ae00ecc1"
+      },
+      {
+        "path": "public/video/frame-0068.jpg",
+        "sha256": "2509c293369621112f85c163667c1e3eec062cfaf853f795089ebeee0702c638"
+      },
+      {
+        "path": "public/video/frame-0069.jpg",
+        "sha256": "daefb67e821e57af8d41eedf58137a6073084519e1bc490f9bf9ad560f8e0488"
+      },
+      {
+        "path": "public/video/frame-0070.jpg",
+        "sha256": "b5371cdc9e687a37b9f6e8fc0a256bc9fda7bedbd4a9d59742338f99d7f78cc1"
+      },
+      {
+        "path": "public/video/frame-0071.jpg",
+        "sha256": "bd18c0e6904b0ebaa4dbe82b7a57215f4b5bf37de96b292b2bc98f3ace6b91a6"
+      },
+      {
+        "path": "public/video/frame-0072.jpg",
+        "sha256": "03e2a5f4cbaf7875ed30c8c908e77b3bd5dd8ec8c00388e40b594a3d6cfbb4f3"
+      },
+      {
+        "path": "public/video/frame-0073.jpg",
+        "sha256": "c3f79eb17366e38868846866a052a98d651f8a592fbbf191fbaddc42246d1143"
+      },
+      {
+        "path": "public/video/frame-0074.jpg",
+        "sha256": "6c84137352488af8dc50dc1effc95178c4718304a4d39540db69a782daa18162"
+      },
+      {
+        "path": "public/video/frame-0075.jpg",
+        "sha256": "ca4e2c505680e119b73d39eb0ca6a733fe5fb2f66527a84b41575c57068baebe"
+      },
+      {
+        "path": "public/video/frame-0076.jpg",
+        "sha256": "8b0239d41c7e7615ce0a06e2b676f5d0e521ed73d6191ed581e0e0151026a7b6"
+      },
+      {
+        "path": "public/video/frame-0077.jpg",
+        "sha256": "59ff7789fb6fbe0dd7a5781d285fd0ee5f3d1dd53cbce57c3834758250962859"
+      },
+      {
+        "path": "public/video/frame-0078.jpg",
+        "sha256": "d5bef0f54bfee35663bb20292157cde4fce91e3d8b0e48d34239c3f341f6c2d8"
+      },
+      {
+        "path": "public/video/frame-0079.jpg",
+        "sha256": "6e31fb6d323dd2597268e236b3358f713ee6303fd6247ad6efdb233a40132206"
+      },
+      {
+        "path": "public/video/frame-0080.jpg",
+        "sha256": "dad0cd38431c8ff630a3d4145b1852dc651b2c6464a5c25c1086cb785756e53f"
+      },
+      {
+        "path": "public/video/frame-0081.jpg",
+        "sha256": "9cc1f32979c37d9184f77d3d9e520f7d3210771cd8eaba34f6b5fe88d021c6e1"
+      },
+      {
+        "path": "public/video/frame-0082.jpg",
+        "sha256": "98098b6dbc9712659382c7edb4bda531e7725967d8bb1e597771567445a68c59"
+      },
+      {
+        "path": "public/video/frame-0083.jpg",
+        "sha256": "a1e60db6b6c7158d294b3a214933e81206b3948d3a5a3b63dd12a3e9853b1875"
+      },
+      {
+        "path": "public/video/frame-0084.jpg",
+        "sha256": "88b37b3f52adda67c415b9bde0807d65d29dd78fd1849868cd24d95a785b1f81"
+      },
+      {
+        "path": "public/video/frame-0085.jpg",
+        "sha256": "49549de6f04875809d6a713a578dfd01bea37db054b0a3dc1664b748d1458728"
+      },
+      {
+        "path": "public/video/frame-0086.jpg",
+        "sha256": "ac6071066bcc5b5786e085ea91255b685442efe78377da200bca2c894a97233a"
+      },
+      {
+        "path": "public/video/frame-0087.jpg",
+        "sha256": "722aba6ce3185167422135168457b8bd1914cf7f08e8f2e4409656379c4d3192"
+      },
+      {
+        "path": "public/video/frame-0088.jpg",
+        "sha256": "a270d7f5fcbb1eb0257cca54b9dd7e9c1ccef10ffba9bb7a5bdbe1588b41ee93"
+      },
+      {
+        "path": "public/video/frame-0089.jpg",
+        "sha256": "b49f94522ffeb4a461aaea20e0d8c57a9c5844acfbb49a4b0c73ab79f30265fe"
+      },
+      {
+        "path": "public/video/frame-0090.jpg",
+        "sha256": "ca04a5de6305a4cbf11abc0d5a5af2fc62ee3435fcbd0adbac96239b5ce71e31"
+      },
+      {
+        "path": "public/video/frame-0091.jpg",
+        "sha256": "4bd438e671dc3cf988ac506e9731e533581d6148f6b9edcc217354f79d540ac4"
+      },
+      {
+        "path": "public/video/frame-0092.jpg",
+        "sha256": "9895067ccea590de192ff1e582ffa2ffb26d6ca5b3d25bca73bb357194060344"
+      },
+      {
+        "path": "public/video/frame-0093.jpg",
+        "sha256": "6942310b199e44a80c5b57688256a1fab8bd7fa3a68105d0838bccf07bac792d"
+      },
+      {
+        "path": "public/video/frame-0094.jpg",
+        "sha256": "eb38a128512b31cfb697045a0bd79529b8c3f54b51b57157233c31f0c0525b15"
+      },
+      {
+        "path": "public/video/frame-0095.jpg",
+        "sha256": "98ecf781279f34e43beee38e7ff5ce16cfd0121d60ee5de03fa60d574c8aab01"
+      },
+      {
+        "path": "public/video/frame-0096.jpg",
+        "sha256": "e8a41ee2c4ffb7c48b556a15895b2f998bbcf6907b917c040803819ff6efcc58"
+      },
+      {
+        "path": "public/video/frame-0097.jpg",
+        "sha256": "81edd0025e8957945faa2f1c1a6282579f5ad53d0deed95a5f9ee69c6aff9f63"
+      },
+      {
+        "path": "public/video/frame-0098.jpg",
+        "sha256": "09749187056ff80d62590e38b3f88877335969208ce4844fde20bf35f448f5e1"
+      },
+      {
+        "path": "public/video/frame-0099.jpg",
+        "sha256": "362536fea9924d73f94891d91ff3bc3b5240ab95406385e40656e9bb702701bf"
+      },
+      {
+        "path": "public/video/frame-0100.jpg",
+        "sha256": "03072d77e08271fb86a5192e6cf541bbd34c701707052ddeef579a05444a8770"
+      },
+      {
+        "path": "public/video/frame-0101.jpg",
+        "sha256": "67cba94d2d84c1222ccde36bd9ac0ac05783d42a80f26d73f99f77f18635626d"
+      },
+      {
+        "path": "public/video/frame-0102.jpg",
+        "sha256": "bc37b5fbc9c92daa7920b71810d1487285b20941490116f790eec485d2be391c"
+      },
+      {
+        "path": "public/video/frame-0103.jpg",
+        "sha256": "e76ea92f44e03c417944f9f8c026362554f5d122ace25216db3438ab367d668b"
+      },
+      {
+        "path": "public/video/frame-0104.jpg",
+        "sha256": "87ba4dc3c7f0beec6f59e05e73aa91916568ffd663101caec4fa61a4a7d84885"
+      },
+      {
+        "path": "public/video/frame-0105.jpg",
+        "sha256": "0ba15d3ceb6c5e3b2479e75e728cd8a1b35154e03e0bd59c3e9d08c1735d63c3"
+      },
+      {
+        "path": "public/video/frame-0106.jpg",
+        "sha256": "bdf63d29457f74a5c979367416ad377d427db19a28756c2b96d1f9d56a67ae98"
+      },
+      {
+        "path": "public/video/frame-0107.jpg",
+        "sha256": "6fe4650fa115e68be44d126dd72f37df13a4538bc8ea580d6e91e067d59b1806"
+      },
+      {
+        "path": "public/video/frame-0108.jpg",
+        "sha256": "dbfdd98a37889cc0fd8465b5eac532a5d1f715881963c6ce654c7f8ad43aba2e"
+      },
+      {
+        "path": "public/video/frame-0109.jpg",
+        "sha256": "6912d6617ae2d7bfcec396aa1699d2e7302b5c3b7f3ccad52c3a92b6754c1e8a"
+      },
+      {
+        "path": "public/video/frame-0110.jpg",
+        "sha256": "5ab5464b22d88151311d5331152e5706cf8830602ebc2d395243a98f3bd1476c"
+      },
+      {
+        "path": "public/video/frame-0111.jpg",
+        "sha256": "ff7b1aa32286aabb50e64aa759d4b2ead89c9b4669a365f49612e79e0284c2bf"
+      },
+      {
+        "path": "public/video/frame-0112.jpg",
+        "sha256": "0a1e59fdeef18e9a9b19442ecbaf74fb6d2505986fa6ad142cbc6a4290642967"
+      },
+      {
+        "path": "public/video/frame-0113.jpg",
+        "sha256": "694613da36757d2a1018f295d208c50b4c1f96bd139f76cc62a51d6a143267d9"
+      },
+      {
+        "path": "public/video/frame-0114.jpg",
+        "sha256": "98fcf471e911c50b857bdb7a4225cb19fee8df48fb55a5d36747a3b9fa00fd38"
+      },
+      {
+        "path": "public/video/frame-0115.jpg",
+        "sha256": "edbf5db122b8979bbb382abc89e947ad52ef6cc565618a5ff9169c9869b62e2c"
+      },
+      {
+        "path": "public/video/frame-0116.jpg",
+        "sha256": "c92bdcd8dcef06fefedf6abc4b20e929f3f65e1259a52b9f3a3392a16dd7e5d3"
+      },
+      {
+        "path": "public/video/frame-0117.jpg",
+        "sha256": "f5f63ece8620c72d4d552c1f9cacfb64fbdf57dc3f42c1d6515fecf397d097c2"
+      },
+      {
+        "path": "public/video/frame-0118.jpg",
+        "sha256": "104edc6fa2f7e244d95caf7c438d76be1ef7c8103a13a4bf7ed5efb6ca9f01dc"
+      },
+      {
+        "path": "public/video/frame-0119.jpg",
+        "sha256": "7290d54dd26b4b9f6fdc9876f7e711daa4ef794f0377cb3effa54385d32bf3ec"
+      },
+      {
+        "path": "public/video/frame-0120.jpg",
+        "sha256": "4e81c8e62b56864195e27af0be9ba225e4f9dd0b4c410f77e9e662fedd3ec672"
+      }
+    ]
+  },
+  "runtimeStable": true,
+  "errors": [],
+  "httpErrors": [],
+  "summary": {
+    "status": "PASS",
+    "renderedPathSamples": 603,
+    "bestViews": 30,
+    "screenshots": 36,
+    "moduleAndAssetHashes": 14,
+    "originalImageHashes": 216,
+    "runtimeStable": true,
+    "errors": [],
+    "httpErrors": [],
+    "intentionalPreviewAbortMessages": 53,
+    "unexpectedConsoleMessages": [],
+    "viewports": [
+      {
+        "id": "desktop",
+        "requestedViewport": [
+          1440,
+          900
+        ],
+        "actualScene": {
+          "width": 1350,
+          "height": 900
+        },
+        "all10Useful": true,
+        "minUsefulProgressSpan": 0.16505050505050503,
+        "minUsefulNativePixels": 817,
+        "minBestPhotoLongEdge": 237.11624713162993,
+        "minBestPhotoMargin": 88.64746611610312,
+        "maxProjectionError": 0,
+        "maxWorldCornerError": 0,
+        "rayCount": 114335,
+        "denseBestRayCount": 31850,
+        "denseBestBlockedByOtherEasel": 0,
+        "selfShelfBoundaryRayCounts": [
+          47,
+          47,
+          47,
+          65,
+          47,
+          47,
+          47,
+          47,
+          46,
+          46
+        ]
+      },
+      {
+        "id": "phone390",
+        "requestedViewport": [
+          390,
+          844
+        ],
+        "actualScene": {
+          "width": 390,
+          "height": 844
+        },
+        "all10Useful": true,
+        "minUsefulProgressSpan": 0.03489875053856095,
+        "minUsefulNativePixels": 162,
+        "minBestPhotoLongEdge": 284.31376250918527,
+        "minBestPhotoMargin": 39.92581226896692,
+        "maxProjectionError": 0,
+        "maxWorldCornerError": 0,
+        "rayCount": 54782,
+        "denseBestRayCount": 31850,
+        "denseBestBlockedByOtherEasel": 0,
+        "selfShelfBoundaryRayCounts": [
+          46,
+          46,
+          46,
+          65,
+          46,
+          46,
+          46,
+          46,
+          46,
+          46
+        ]
+      },
+      {
+        "id": "phone430",
+        "requestedViewport": [
+          430,
+          932
+        ],
+        "actualScene": {
+          "width": 430,
+          "height": 932
+        },
+        "all10Useful": true,
+        "minUsefulProgressSpan": 0.034920015606710875,
+        "minUsefulNativePixels": 179,
+        "minBestPhotoLongEdge": 313.94491812281194,
+        "minBestPhotoMargin": 43.77566416242939,
+        "maxProjectionError": 0,
+        "maxWorldCornerError": 0,
+        "rayCount": 55484,
+        "denseBestRayCount": 31850,
+        "denseBestBlockedByOtherEasel": 0,
+        "selfShelfBoundaryRayCounts": [
+          46,
+          46,
+          46,
+          65,
+          46,
+          46,
+          46,
+          46,
+          46,
+          46
+        ]
+      }
+    ],
+    "nativeInputEvidence": "Separate final native recordings; see VERIFICATION.md",
+    "resultsSHA256": "398ca776a08f5dc41c7f3f1760b851592b913c64340ff3cce765a6ee61bef6bf",
+    "allFingerprintResponses200": false,
+    "galleryLayoutSHA256": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67",
+    "harnessSHA256": "6e8e45014069be1f3064c53fb0a0cbe658be72f34486192bbab8371df0fa72a7",
+    "nonRuntimeHTTPProbe": [
+      {
+        "url": "/aisle/assets/crafted-easel.glb",
+        "status": 404,
+        "sha256": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31"
+      }
+    ],
+    "runtimeModuleAndGeometryHashes": 13,
+    "allRuntimeModuleResponses200": true
+  },
+  "cases": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900,
+      "coverage": [
+        {
+          "id": "color-balls",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 0.18,
+              "requestedStart": 0,
+              "requestedEnd": 0.18,
+              "startScrollY": 0,
+              "endScrollY": 891,
+              "samples": 37,
+              "progressSpan": 0.18,
+              "nativeScrollPixels": 891,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.1701010101010101,
+            "requestedProgress": 0.17,
+            "photo": {
+              "id": "color-balls",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 179.72170187018023,
+                  "y": 354.75565190268105
+                },
+                {
+                  "x": 474.976666728981,
+                  "y": 371.41376602740496
+                },
+                {
+                  "x": 447.94706620479366,
+                  "y": 552.6363692361647
+                },
+                {
+                  "x": 112.99726265323652,
+                  "y": 541.0264124847025
+                }
+              ],
+              "area": 58561.57901511092,
+              "frontFacing": true,
+              "margin": 112.99726265323652,
+              "longEdge": 335.1509540416043,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.1701010101010101,
+            "photo": {
+              "id": "color-balls",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 179.72170187018023,
+                  "y": 354.75565190268105
+                },
+                {
+                  "x": 474.976666728981,
+                  "y": 371.41376602740496
+                },
+                {
+                  "x": 447.94706620479366,
+                  "y": 552.6363692361647
+                },
+                {
+                  "x": 112.99726265323652,
+                  "y": 541.0264124847025
+                }
+              ],
+              "area": 58561.57901511092,
+              "frontFacing": true,
+              "margin": 112.99726265323652,
+              "longEdge": 335.1509540416043,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 47,
+              "selfContactBy": {
+                "Blender shelf timber": 47
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-color-balls.png",
+            "sha256": "3238ebce77fc22c101152b65aa5903ec7add158de81e788f11b9baa8958f0fa4"
+          }
+        },
+        {
+          "id": "shared-glance",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 0.17494949494949494,
+              "requestedStart": 0,
+              "requestedEnd": 0.175,
+              "startScrollY": 0,
+              "endScrollY": 866,
+              "samples": 36,
+              "progressSpan": 0.17494949494949494,
+              "nativeScrollPixels": 866,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.1701010101010101,
+            "requestedProgress": 0.17,
+            "photo": {
+              "id": "shared-glance",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 886.3230743024884,
+                  "y": 373.85110281484015
+                },
+                {
+                  "x": 1185.9474914675798,
+                  "y": 360.568738071552
+                },
+                {
+                  "x": 1251.5637128871008,
+                  "y": 549.7172564918612
+                },
+                {
+                  "x": 911.1444247631396,
+                  "y": 556.2135815710936
+                }
+              ],
+              "area": 59893.00296775947,
+              "frontFacing": true,
+              "margin": 98.26441211289921,
+              "longEdge": 340.4812681578233,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.1701010101010101,
+            "photo": {
+              "id": "shared-glance",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 886.3230743024884,
+                  "y": 373.85110281484015
+                },
+                {
+                  "x": 1185.9474914675798,
+                  "y": 360.568738071552
+                },
+                {
+                  "x": 1251.5637128871008,
+                  "y": 549.7172564918612
+                },
+                {
+                  "x": 911.1444247631396,
+                  "y": 556.2135815710936
+                }
+              ],
+              "area": 59893.00296775947,
+              "frontFacing": true,
+              "margin": 98.26441211289921,
+              "longEdge": 340.4812681578233,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 47,
+              "selfContactBy": {
+                "Blender shelf timber": 47
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-shared-glance.png",
+            "sha256": "440d0bef6e0fdcb1afbcf42cd979abf2d1cd79896b6a495e876264ce9968b013"
+          }
+        },
+        {
+          "id": "toward-the-water",
+          "intervals": [
+            {
+              "start": 0.20505050505050504,
+              "end": 0.38,
+              "requestedStart": 0.205,
+              "requestedEnd": 0.38,
+              "startScrollY": 1015,
+              "endScrollY": 1881,
+              "samples": 36,
+              "progressSpan": 0.17494949494949497,
+              "nativeScrollPixels": 866,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.3701010101010101,
+            "requestedProgress": 0.37,
+            "photo": {
+              "id": "toward-the-water",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 179.72170187018023,
+                  "y": 354.75565190268117
+                },
+                {
+                  "x": 474.976666728981,
+                  "y": 371.4137660274051
+                },
+                {
+                  "x": 447.94706620479366,
+                  "y": 552.6363692361648
+                },
+                {
+                  "x": 112.99726265323659,
+                  "y": 541.0264124847025
+                }
+              ],
+              "area": 58561.57901511092,
+              "frontFacing": true,
+              "margin": 112.99726265323659,
+              "longEdge": 335.1509540416042,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.3701010101010101,
+            "photo": {
+              "id": "toward-the-water",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 179.72170187018023,
+                  "y": 354.75565190268117
+                },
+                {
+                  "x": 474.976666728981,
+                  "y": 371.4137660274051
+                },
+                {
+                  "x": 447.94706620479366,
+                  "y": 552.6363692361648
+                },
+                {
+                  "x": 112.99726265323659,
+                  "y": 541.0264124847025
+                }
+              ],
+              "area": 58561.57901511092,
+              "frontFacing": true,
+              "margin": 112.99726265323659,
+              "longEdge": 335.1509540416042,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 47,
+              "selfContactBy": {
+                "Blender shelf timber": 47
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-toward-the-water.png",
+            "sha256": "ac08f6b282b819ff38f06fd272ba3f55c5798f60273835f70b6bd4eeb54cff3a"
+          }
+        },
+        {
+          "id": "coastal-poise",
+          "intervals": [
+            {
+              "start": 0.22,
+              "end": 0.38505050505050503,
+              "requestedStart": 0.22,
+              "requestedEnd": 0.385,
+              "startScrollY": 1089,
+              "endScrollY": 1906,
+              "samples": 34,
+              "progressSpan": 0.16505050505050503,
+              "nativeScrollPixels": 817,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.374949494949495,
+            "requestedProgress": 0.375,
+            "photo": {
+              "id": "coastal-poise",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 938.5204499259544,
+                  "y": 261.9875867522771
+                },
+                {
+                  "x": 1140.9076051194863,
+                  "y": 249.97614326372525
+                },
+                {
+                  "x": 1237.4257786548017,
+                  "y": 532.3217520004629
+                },
+                {
+                  "x": 989.9947576291606,
+                  "y": 537.6192025324237
+                }
+              ],
+              "area": 63387.47091940281,
+              "frontFacing": true,
+              "margin": 112.40234634519834,
+              "longEdge": 298.3869980336144,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 13,
+              "selfContactBy": {
+                "Blender shelf timber": 13
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.374949494949495,
+            "photo": {
+              "id": "coastal-poise",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 938.5204499259544,
+                  "y": 261.9875867522771
+                },
+                {
+                  "x": 1140.9076051194863,
+                  "y": 249.97614326372525
+                },
+                {
+                  "x": 1237.4257786548017,
+                  "y": 532.3217520004629
+                },
+                {
+                  "x": 989.9947576291606,
+                  "y": 537.6192025324237
+                }
+              ],
+              "area": 63387.47091940281,
+              "frontFacing": true,
+              "margin": 112.40234634519834,
+              "longEdge": 298.3869980336144,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 65,
+              "selfContactBy": {
+                "Blender shelf timber": 65
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-coastal-poise.png",
+            "sha256": "a279a4ebfe2edb051ccae6b72c6efdb8ad2209c7bfe6760f518669f2f558e49b"
+          }
+        },
+        {
+          "id": "nwprt-hat-lager",
+          "intervals": [
+            {
+              "start": 0.40505050505050505,
+              "end": 0.58,
+              "requestedStart": 0.405,
+              "requestedEnd": 0.58,
+              "startScrollY": 2005,
+              "endScrollY": 2871,
+              "samples": 36,
+              "progressSpan": 0.1749494949494949,
+              "nativeScrollPixels": 866,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.5698989898989899,
+            "requestedProgress": 0.57,
+            "photo": {
+              "id": "nwprt-hat-lager",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 181.17301304379552,
+                  "y": 356.0237943532727
+                },
+                {
+                  "x": 475.5469839538136,
+                  "y": 372.59190747888664
+                },
+                {
+                  "x": 448.68537331452353,
+                  "y": 553.3150775644617
+                },
+                {
+                  "x": 114.88446456786353,
+                  "y": 541.7709018968754
+                }
+              ],
+              "area": 58206.521680409474,
+              "frontFacing": true,
+              "margin": 114.88446456786353,
+              "longEdge": 334.00047106544645,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.5698989898989899,
+            "photo": {
+              "id": "nwprt-hat-lager",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 181.17301304379552,
+                  "y": 356.0237943532727
+                },
+                {
+                  "x": 475.5469839538136,
+                  "y": 372.59190747888664
+                },
+                {
+                  "x": 448.68537331452353,
+                  "y": 553.3150775644617
+                },
+                {
+                  "x": 114.88446456786353,
+                  "y": 541.7709018968754
+                }
+              ],
+              "area": 58206.521680409474,
+              "frontFacing": true,
+              "margin": 114.88446456786353,
+              "longEdge": 334.00047106544645,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 47,
+              "selfContactBy": {
+                "Blender shelf timber": 47
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-nwprt-hat-lager.png",
+            "sha256": "50e8a1242be5eac0df5068278d4e3fdab8ca710b6436d3265014044b4c0fbf44"
+          }
+        },
+        {
+          "id": "nwprt-underpier-branded",
+          "intervals": [
+            {
+              "start": 0.39494949494949494,
+              "end": 0.574949494949495,
+              "requestedStart": 0.395,
+              "requestedEnd": 0.575,
+              "startScrollY": 1955,
+              "endScrollY": 2846,
+              "samples": 37,
+              "progressSpan": 0.18000000000000005,
+              "nativeScrollPixels": 891,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.5698989898989899,
+            "requestedProgress": 0.57,
+            "photo": {
+              "id": "nwprt-underpier-branded",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 885.7205551945494,
+                  "y": 374.940583827342
+                },
+                {
+                  "x": 1184.4190885643593,
+                  "y": 361.7431017183905
+                },
+                {
+                  "x": 1249.623676080229,
+                  "y": 550.4407696680714
+                },
+                {
+                  "x": 910.3902679967695,
+                  "y": 556.8838432833268
+                }
+              ],
+              "area": 59552.21690137702,
+              "frontFacing": true,
+              "margin": 100.20444891977104,
+              "longEdge": 339.29458934314084,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.5698989898989899,
+            "photo": {
+              "id": "nwprt-underpier-branded",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 885.7205551945494,
+                  "y": 374.940583827342
+                },
+                {
+                  "x": 1184.4190885643593,
+                  "y": 361.7431017183905
+                },
+                {
+                  "x": 1249.623676080229,
+                  "y": 550.4407696680714
+                },
+                {
+                  "x": 910.3902679967695,
+                  "y": 556.8838432833268
+                }
+              ],
+              "area": 59552.21690137702,
+              "frontFacing": true,
+              "margin": 100.20444891977104,
+              "longEdge": 339.29458934314084,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 47,
+              "selfContactBy": {
+                "Blender shelf timber": 47
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-nwprt-underpier-branded.png",
+            "sha256": "8c8b4d32392a6caf06b990e62d87a1f9b3fe1af65c8d147d7f08ebc1a42b1b4c"
+          }
+        },
+        {
+          "id": "beach-culture",
+          "intervals": [
+            {
+              "start": 0.6050505050505051,
+              "end": 0.78,
+              "requestedStart": 0.605,
+              "requestedEnd": 0.78,
+              "startScrollY": 2995,
+              "endScrollY": 3861,
+              "samples": 36,
+              "progressSpan": 0.17494949494949497,
+              "nativeScrollPixels": 866,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.7749494949494949,
+            "requestedProgress": 0.775,
+            "photo": {
+              "id": "beach-culture",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 160.8173611251861,
+                  "y": 339.26070512330864
+                },
+                {
+                  "x": 467.5543238959155,
+                  "y": 357.07612824080064
+                },
+                {
+                  "x": 438.4379385140469,
+                  "y": 543.8948522258371
+                },
+                {
+                  "x": 88.64746611610312,
+                  "y": 531.4205692678463
+                }
+              ],
+              "area": 62969.44302776879,
+              "frontFacing": true,
+              "margin": 88.64746611610312,
+              "longEdge": 350.01283164434506,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.7749494949494949,
+            "photo": {
+              "id": "beach-culture",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 160.8173611251861,
+                  "y": 339.26070512330864
+                },
+                {
+                  "x": 467.5543238959155,
+                  "y": 357.07612824080064
+                },
+                {
+                  "x": 438.4379385140469,
+                  "y": 543.8948522258371
+                },
+                {
+                  "x": 88.64746611610312,
+                  "y": 531.4205692678463
+                }
+              ],
+              "area": 62969.44302776879,
+              "frontFacing": true,
+              "margin": 88.64746611610312,
+              "longEdge": 350.01283164434506,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 47,
+              "selfContactBy": {
+                "Blender shelf timber": 47
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-beach-culture.png",
+            "sha256": "192282c13464bbdbf1cae8db9929db29100ea1d85098ea27fa609b9fd33600c1"
+          }
+        },
+        {
+          "id": "coke-beach-campaign",
+          "intervals": [
+            {
+              "start": 0.6050505050505051,
+              "end": 0.78,
+              "requestedStart": 0.605,
+              "requestedEnd": 0.78,
+              "startScrollY": 2995,
+              "endScrollY": 3861,
+              "samples": 36,
+              "progressSpan": 0.17494949494949497,
+              "nativeScrollPixels": 866,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.7701010101010101,
+            "requestedProgress": 0.77,
+            "photo": {
+              "id": "coke-beach-campaign",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 880.9220411070032,
+                  "y": 383.97234329321367
+                },
+                {
+                  "x": 1172.2633657854358,
+                  "y": 371.45500619214204
+                },
+                {
+                  "x": 1234.1207421170309,
+                  "y": 556.2224006930907
+                },
+                {
+                  "x": 904.3555553123061,
+                  "y": 562.2472332800655
+                }
+              ],
+              "area": 56767.35125106835,
+              "frontFacing": true,
+              "margin": 115.70738288296911,
+              "longEdge": 329.8202192650658,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.7701010101010101,
+            "photo": {
+              "id": "coke-beach-campaign",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 880.9220411070032,
+                  "y": 383.97234329321367
+                },
+                {
+                  "x": 1172.2633657854358,
+                  "y": 371.45500619214204
+                },
+                {
+                  "x": 1234.1207421170309,
+                  "y": 556.2224006930907
+                },
+                {
+                  "x": 904.3555553123061,
+                  "y": 562.2472332800655
+                }
+              ],
+              "area": 56767.35125106835,
+              "frontFacing": true,
+              "margin": 115.70738288296911,
+              "longEdge": 329.8202192650658,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 47,
+              "selfContactBy": {
+                "Blender shelf timber": 47
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-coke-beach-campaign.png",
+            "sha256": "91450d5914fa71ea4b37982fcddb28b5cf97f8fe308a0750cc6d10044265d962"
+          }
+        },
+        {
+          "id": "coke-beach-cold-detail",
+          "intervals": [
+            {
+              "start": 0.785050505050505,
+              "end": 1,
+              "requestedStart": 0.785,
+              "requestedEnd": 1,
+              "startScrollY": 3886,
+              "endScrollY": 4950,
+              "samples": 44,
+              "progressSpan": 0.214949494949495,
+              "nativeScrollPixels": 1064,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 1,
+            "requestedProgress": 1,
+            "photo": {
+              "id": "coke-beach-cold-detail",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 389.032626963547,
+                  "y": 460.0610640062711
+                },
+                {
+                  "x": 605.442485247013,
+                  "y": 469.8785936124766
+                },
+                {
+                  "x": 597.7091944997084,
+                  "y": 610.8581217774938
+                },
+                {
+                  "x": 360.68739657163525,
+                  "y": 604.1661892664858
+                }
+              ],
+              "area": 32465.51088527219,
+              "frontFacing": true,
+              "margin": 289.1262532225062,
+              "longEdge": 237.11624713162993,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 1,
+            "photo": {
+              "id": "coke-beach-cold-detail",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 389.032626963547,
+                  "y": 460.0610640062711
+                },
+                {
+                  "x": 605.442485247013,
+                  "y": 469.8785936124766
+                },
+                {
+                  "x": 597.7091944997084,
+                  "y": 610.8581217774938
+                },
+                {
+                  "x": 360.68739657163525,
+                  "y": 604.1661892664858
+                }
+              ],
+              "area": 32465.51088527219,
+              "frontFacing": true,
+              "margin": 289.1262532225062,
+              "longEdge": 237.11624713162993,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-coke-beach-cold-detail.png",
+            "sha256": "8721292d364af4dcd6b3734e6d7eedc5d69c436425ad412c72bdca1b840dd5e6"
+          }
+        },
+        {
+          "id": "coastal-panorama",
+          "intervals": [
+            {
+              "start": 0.7549494949494949,
+              "end": 1,
+              "requestedStart": 0.755,
+              "requestedEnd": 1,
+              "startScrollY": 3737,
+              "endScrollY": 4950,
+              "samples": 50,
+              "progressSpan": 0.24505050505050507,
+              "nativeScrollPixels": 1213,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 1,
+            "requestedProgress": 1,
+            "photo": {
+              "id": "coastal-panorama",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 756.6183891682117,
+                  "y": 538.2762162018806
+                },
+                {
+                  "x": 984.6458732335789,
+                  "y": 533.255061306278
+                },
+                {
+                  "x": 998.6548775502985,
+                  "y": 609.4234776167305
+                },
+                {
+                  "x": 759.6871521889677,
+                  "y": 612.2005266598076
+                }
+              ],
+              "area": 17556.44007078465,
+              "frontFacing": true,
+              "margin": 287.78384834019243,
+              "longEdge": 238.98386088971793,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 1,
+            "photo": {
+              "id": "coastal-panorama",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 756.6183891682117,
+                  "y": 538.2762162018806
+                },
+                {
+                  "x": 984.6458732335789,
+                  "y": 533.255061306278
+                },
+                {
+                  "x": 998.6548775502985,
+                  "y": 609.4234776167305
+                },
+                {
+                  "x": 759.6871521889677,
+                  "y": 612.2005266598076
+                }
+              ],
+              "area": 17556.44007078465,
+              "frontFacing": true,
+              "margin": 287.78384834019243,
+              "longEdge": 238.98386088971793,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "desktop-best-coastal-panorama.png",
+            "sha256": "8fe22a6f9ea201db251b99b2b1788d97bf6d6884c3c8c031de35229c620dc66c"
+          }
+        }
+      ],
+      "checks": {
+        "all10Useful": true,
+        "allSourceGuarded": true,
+        "actualProjectionMatches": true,
+        "normalAutoOnly": true,
+        "all201Samples": true
+      }
+    },
+    {
+      "id": "phone390",
+      "width": 390,
+      "height": 844,
+      "coverage": [
+        {
+          "id": "color-balls",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 0.04006893580353296,
+              "requestedStart": 0,
+              "requestedEnd": 0.04,
+              "startScrollY": 0,
+              "endScrollY": 186,
+              "samples": 9,
+              "progressSpan": 0.04006893580353296,
+              "nativeScrollPixels": 186,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0,
+            "requestedProgress": 0,
+            "photo": {
+              "id": "color-balls",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 53.30867388892427,
+                  "y": 349.6561157468156
+                },
+                {
+                  "x": 321.85746399408623,
+                  "y": 322.06797174839767
+                },
+                {
+                  "x": 328.73938932243095,
+                  "y": 513.6787722361373
+                },
+                {
+                  "x": 44.739850990926975,
+                  "y": 527.0420719641988
+                }
+              ],
+              "area": 50954.865056267685,
+              "frontFacing": true,
+              "margin": 44.739850990926975,
+              "longEdge": 284.31376250918527,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0,
+            "photo": {
+              "id": "color-balls",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 53.30867388892427,
+                  "y": 349.6561157468156
+                },
+                {
+                  "x": 321.85746399408623,
+                  "y": 322.06797174839767
+                },
+                {
+                  "x": 328.73938932243095,
+                  "y": 513.6787722361373
+                },
+                {
+                  "x": 44.739850990926975,
+                  "y": 527.0420719641988
+                }
+              ],
+              "area": 50954.865056267685,
+              "frontFacing": true,
+              "margin": 44.739850990926975,
+              "longEdge": 284.31376250918527,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-color-balls.png",
+            "sha256": "57e220a33a8d2814ed7c4fa7e4a5acd61d59d58beca2582e017231f99e4370c8"
+          }
+        },
+        {
+          "id": "shared-glance",
+          "intervals": [
+            {
+              "start": 0.09004739336492891,
+              "end": 0.14498061180525634,
+              "requestedStart": 0.09,
+              "requestedEnd": 0.145,
+              "startScrollY": 418,
+              "endScrollY": 673,
+              "samples": 12,
+              "progressSpan": 0.05493321844032743,
+              "nativeScrollPixels": 255,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.14002585092632486,
+            "requestedProgress": 0.14,
+            "photo": {
+              "id": "shared-glance",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.04785222869917,
+                  "y": 306.4791993993845
+                },
+                {
+                  "x": 332.1858049330448,
+                  "y": 339.9424699369271
+                },
+                {
+                  "x": 339.3261053919959,
+                  "y": 523.252483019595
+                },
+                {
+                  "x": 46.545814589883165,
+                  "y": 504.0303945328804
+                }
+              ],
+              "area": 54200.82964233239,
+              "frontFacing": true,
+              "margin": 46.545814589883165,
+              "longEdge": 293.4106122279165,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.14002585092632486,
+            "photo": {
+              "id": "shared-glance",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.04785222869917,
+                  "y": 306.4791993993845
+                },
+                {
+                  "x": 332.1858049330448,
+                  "y": 339.9424699369271
+                },
+                {
+                  "x": 339.3261053919959,
+                  "y": 523.252483019595
+                },
+                {
+                  "x": 46.545814589883165,
+                  "y": 504.0303945328804
+                }
+              ],
+              "area": 54200.82964233239,
+              "frontFacing": true,
+              "margin": 46.545814589883165,
+              "longEdge": 293.4106122279165,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-shared-glance.png",
+            "sha256": "13a19f293584e97eef188fbe97954d75ecbf6444cb535285b7bb27c1ca2ca900"
+          }
+        },
+        {
+          "id": "toward-the-water",
+          "intervals": [
+            {
+              "start": 0.2050840155105558,
+              "end": 0.23998276604911675,
+              "requestedStart": 0.205,
+              "requestedEnd": 0.24,
+              "startScrollY": 952,
+              "endScrollY": 1114,
+              "samples": 8,
+              "progressSpan": 0.03489875053856095,
+              "nativeScrollPixels": 162,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.2050840155105558,
+            "requestedProgress": 0.205,
+            "photo": {
+              "id": "toward-the-water",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 52.98105380949781,
+                  "y": 349.43802435833885
+                },
+                {
+                  "x": 321.67802976396405,
+                  "y": 321.8133750498936
+                },
+                {
+                  "x": 328.5538906588169,
+                  "y": 513.5418657902707
+                },
+                {
+                  "x": 44.388598679541694,
+                  "y": 526.9249464167256
+                }
+              ],
+              "area": 51013.71921080405,
+              "frontFacing": true,
+              "margin": 44.388598679541694,
+              "longEdge": 284.4802629581197,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.2050840155105558,
+            "photo": {
+              "id": "toward-the-water",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 52.98105380949781,
+                  "y": 349.43802435833885
+                },
+                {
+                  "x": 321.67802976396405,
+                  "y": 321.8133750498936
+                },
+                {
+                  "x": 328.5538906588169,
+                  "y": 513.5418657902707
+                },
+                {
+                  "x": 44.388598679541694,
+                  "y": 526.9249464167256
+                }
+              ],
+              "area": 51013.71921080405,
+              "frontFacing": true,
+              "margin": 44.388598679541694,
+              "longEdge": 284.4802629581197,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-toward-the-water.png",
+            "sha256": "741d66b2d0a77a2667e631086d4a780555ecfc4781eca0c39685ea355e88735c"
+          }
+        },
+        {
+          "id": "coastal-poise",
+          "intervals": [
+            {
+              "start": 0.2899612236105127,
+              "end": 0.35006462731581217,
+              "requestedStart": 0.29,
+              "requestedEnd": 0.35,
+              "startScrollY": 1346,
+              "endScrollY": 1625,
+              "samples": 13,
+              "progressSpan": 0.060103403705299485,
+              "nativeScrollPixels": 279,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.33993968117190865,
+            "requestedProgress": 0.34,
+            "photo": {
+              "id": "coastal-poise",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 108.13938186872946,
+                  "y": 223.1821961080785
+                },
+                {
+                  "x": 286.99202732637633,
+                  "y": 249.41349860534427
+                },
+                {
+                  "x": 293.901946151267,
+                  "y": 520.2703238506746
+                },
+                {
+                  "x": 98.9126040350831,
+                  "y": 507.46855356735244
+                }
+              ],
+              "area": 51906.56623416567,
+              "frontFacing": true,
+              "margin": 96.098053848733,
+              "longEdge": 284.43604987176565,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 13,
+              "selfContactBy": {
+                "Blender shelf timber": 13
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.33993968117190865,
+            "photo": {
+              "id": "coastal-poise",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 108.13938186872946,
+                  "y": 223.1821961080785
+                },
+                {
+                  "x": 286.99202732637633,
+                  "y": 249.41349860534427
+                },
+                {
+                  "x": 293.901946151267,
+                  "y": 520.2703238506746
+                },
+                {
+                  "x": 98.9126040350831,
+                  "y": 507.46855356735244
+                }
+              ],
+              "area": 51906.56623416567,
+              "frontFacing": true,
+              "margin": 96.098053848733,
+              "longEdge": 284.43604987176565,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 65,
+              "selfContactBy": {
+                "Blender shelf timber": 65
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-coastal-poise.png",
+            "sha256": "2a1624900d92b1f5ff1721420066e2d7b80ccecc7affb618886f56c43e09bb31"
+          }
+        },
+        {
+          "id": "nwprt-hat-lager",
+          "intervals": [
+            {
+              "start": 0.4049978457561396,
+              "end": 0.43989659629470057,
+              "requestedStart": 0.405,
+              "requestedEnd": 0.44,
+              "startScrollY": 1880,
+              "endScrollY": 2042,
+              "samples": 8,
+              "progressSpan": 0.03489875053856095,
+              "nativeScrollPixels": 162,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.4049978457561396,
+            "requestedProgress": 0.405,
+            "photo": {
+              "id": "nwprt-hat-lager",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 52.98858890221404,
+                  "y": 349.5050330346756
+                },
+                {
+                  "x": 321.6860650598979,
+                  "y": 321.886062523712
+                },
+                {
+                  "x": 328.55980365449045,
+                  "y": 513.5462298498617
+                },
+                {
+                  "x": 44.39979465554161,
+                  "y": 526.9286797297202
+                }
+              ],
+              "area": 50995.10737849781,
+              "frontFacing": true,
+              "margin": 44.39979465554161,
+              "longEdge": 284.4749561544383,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.4049978457561396,
+            "photo": {
+              "id": "nwprt-hat-lager",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 52.98858890221404,
+                  "y": 349.5050330346756
+                },
+                {
+                  "x": 321.6860650598979,
+                  "y": 321.886062523712
+                },
+                {
+                  "x": 328.55980365449045,
+                  "y": 513.5462298498617
+                },
+                {
+                  "x": 44.39979465554161,
+                  "y": 526.9286797297202
+                }
+              ],
+              "area": 50995.10737849781,
+              "frontFacing": true,
+              "margin": 44.39979465554161,
+              "longEdge": 284.4749561544383,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-nwprt-hat-lager.png",
+            "sha256": "1fb7633a75a8dc955cd91fca79f55e13d8ef93de1239879e0374d2250026a4cd"
+          }
+        },
+        {
+          "id": "nwprt-underpier-branded",
+          "intervals": [
+            {
+              "start": 0.49009047824213703,
+              "end": 0.5450236966824644,
+              "requestedStart": 0.49,
+              "requestedEnd": 0.545,
+              "startScrollY": 2275,
+              "endScrollY": 2530,
+              "samples": 12,
+              "progressSpan": 0.05493321844032739,
+              "nativeScrollPixels": 255,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.540068935803533,
+            "requestedProgress": 0.54,
+            "photo": {
+              "id": "nwprt-underpier-branded",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.052275838973046,
+                  "y": 306.4455755183267
+                },
+                {
+                  "x": 332.1878121201532,
+                  "y": 339.9109017189673
+                },
+                {
+                  "x": 339.3295161500402,
+                  "y": 523.252173041737
+                },
+                {
+                  "x": 46.54880685146659,
+                  "y": 504.03018039807324
+                }
+              ],
+              "area": 54209.83859916774,
+              "frontFacing": true,
+              "margin": 46.54880685146659,
+              "longEdge": 293.4110235464389,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.540068935803533,
+            "photo": {
+              "id": "nwprt-underpier-branded",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.052275838973046,
+                  "y": 306.4455755183267
+                },
+                {
+                  "x": 332.1878121201532,
+                  "y": 339.9109017189673
+                },
+                {
+                  "x": 339.3295161500402,
+                  "y": 523.252173041737
+                },
+                {
+                  "x": 46.54880685146659,
+                  "y": 504.03018039807324
+                }
+              ],
+              "area": 54209.83859916774,
+              "frontFacing": true,
+              "margin": 46.54880685146659,
+              "longEdge": 293.4110235464389,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-nwprt-underpier-branded.png",
+            "sha256": "1e91f5d27496ef6854c8dce232e042f17cad1ffc75dab9b0d82075d7777dcb7c"
+          }
+        },
+        {
+          "id": "beach-culture",
+          "intervals": [
+            {
+              "start": 0.6049116760017234,
+              "end": 0.6400258509263249,
+              "requestedStart": 0.605,
+              "requestedEnd": 0.64,
+              "startScrollY": 2808,
+              "endScrollY": 2971,
+              "samples": 8,
+              "progressSpan": 0.03511417492460156,
+              "nativeScrollPixels": 163,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.6049116760017234,
+            "requestedProgress": 0.605,
+            "photo": {
+              "id": "beach-culture",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 53.00051736812897,
+                  "y": 349.4781019345229
+                },
+                {
+                  "x": 321.6904000553433,
+                  "y": 321.8577389822722
+                },
+                {
+                  "x": 328.5656320334463,
+                  "y": 513.5505314584688
+                },
+                {
+                  "x": 44.41083045369774,
+                  "y": 526.9323596312012
+                }
+              ],
+              "area": 51002.67199798228,
+              "frontFacing": true,
+              "margin": 44.41083045369774,
+              "longEdge": 284.46972525397285,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.6049116760017234,
+            "photo": {
+              "id": "beach-culture",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 53.00051736812897,
+                  "y": 349.4781019345229
+                },
+                {
+                  "x": 321.6904000553433,
+                  "y": 321.8577389822722
+                },
+                {
+                  "x": 328.5656320334463,
+                  "y": 513.5505314584688
+                },
+                {
+                  "x": 44.41083045369774,
+                  "y": 526.9323596312012
+                }
+              ],
+              "area": 51002.67199798228,
+              "frontFacing": true,
+              "margin": 44.41083045369774,
+              "longEdge": 284.46972525397285,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-beach-culture.png",
+            "sha256": "dbdd4ff2318d5025c0e5ff32c9d1859ee4d771db9dbb80aadf6d84a31c58bfe8"
+          }
+        },
+        {
+          "id": "coke-beach-campaign",
+          "intervals": [
+            {
+              "start": 0.6900043084877208,
+              "end": 0.7449375269280483,
+              "requestedStart": 0.69,
+              "requestedEnd": 0.745,
+              "startScrollY": 3203,
+              "endScrollY": 3458,
+              "samples": 12,
+              "progressSpan": 0.0549332184403275,
+              "nativeScrollPixels": 255,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.7399827660491167,
+            "requestedProgress": 0.74,
+            "photo": {
+              "id": "coke-beach-campaign",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.045990219265434,
+                  "y": 306.5083214696785
+                },
+                {
+                  "x": 332.1863304923453,
+                  "y": 339.96965876972064
+                },
+                {
+                  "x": 339.32554326641355,
+                  "y": 523.2525349334553
+                },
+                {
+                  "x": 46.54532271466365,
+                  "y": 504.0304309934743
+                }
+              ],
+              "area": 54193.04889594453,
+              "frontFacing": true,
+              "margin": 46.54532271466365,
+              "longEdge": 293.4105431408537,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.7399827660491167,
+            "photo": {
+              "id": "coke-beach-campaign",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.045990219265434,
+                  "y": 306.5083214696785
+                },
+                {
+                  "x": 332.1863304923453,
+                  "y": 339.96965876972064
+                },
+                {
+                  "x": 339.32554326641355,
+                  "y": 523.2525349334553
+                },
+                {
+                  "x": 46.54532271466365,
+                  "y": 504.0304309934743
+                }
+              ],
+              "area": 54193.04889594453,
+              "frontFacing": true,
+              "margin": 46.54532271466365,
+              "longEdge": 293.4105431408537,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-coke-beach-campaign.png",
+            "sha256": "b7de33fb9a8eb0d76c0693be00f14f42106cb0ea85c6e5ae513ed7f119088fcd"
+          }
+        },
+        {
+          "id": "coke-beach-cold-detail",
+          "intervals": [
+            {
+              "start": 0.7899612236105127,
+              "end": 0.8448944420508402,
+              "requestedStart": 0.79,
+              "requestedEnd": 0.845,
+              "startScrollY": 3667,
+              "endScrollY": 3922,
+              "samples": 12,
+              "progressSpan": 0.0549332184403275,
+              "nativeScrollPixels": 255,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.8000861697544162,
+            "requestedProgress": 0.8,
+            "photo": {
+              "id": "coke-beach-cold-detail",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 53.234027993037714,
+                  "y": 345.2313879871811
+                },
+                {
+                  "x": 328.45335736740566,
+                  "y": 329.8685953946365
+                },
+                {
+                  "x": 335.57854351106266,
+                  "y": 517.8588069221602
+                },
+                {
+                  "x": 44.54926284185053,
+                  "y": 524.6822859906761
+                }
+              ],
+              "area": 52007.10407531807,
+              "frontFacing": true,
+              "margin": 44.54926284185053,
+              "longEdge": 291.10926140100304,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.8000861697544162,
+            "photo": {
+              "id": "coke-beach-cold-detail",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 53.234027993037714,
+                  "y": 345.2313879871811
+                },
+                {
+                  "x": 328.45335736740566,
+                  "y": 329.8685953946365
+                },
+                {
+                  "x": 335.57854351106266,
+                  "y": 517.8588069221602
+                },
+                {
+                  "x": 44.54926284185053,
+                  "y": 524.6822859906761
+                }
+              ],
+              "area": 52007.10407531807,
+              "frontFacing": true,
+              "margin": 44.54926284185053,
+              "longEdge": 291.10926140100304,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-coke-beach-cold-detail.png",
+            "sha256": "b3922e557010b1ecbb969859adf945ba99d726f7d524e6c05bf382c258e193fc"
+          }
+        },
+        {
+          "id": "coastal-panorama",
+          "intervals": [
+            {
+              "start": 0.7600172339508833,
+              "end": 0.7649719948298147,
+              "requestedStart": 0.76,
+              "requestedEnd": 0.765,
+              "startScrollY": 3528,
+              "endScrollY": 3551,
+              "samples": 2,
+              "progressSpan": 0.00495476087893143,
+              "nativeScrollPixels": 23,
+              "useful": false
+            },
+            {
+              "start": 0.8899181387333046,
+              "end": 1,
+              "requestedStart": 0.89,
+              "requestedEnd": 1,
+              "startScrollY": 4131,
+              "endScrollY": 4642,
+              "samples": 23,
+              "progressSpan": 0.11008186126669539,
+              "nativeScrollPixels": 511,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.9000430848772081,
+            "requestedProgress": 0.9,
+            "photo": {
+              "id": "coastal-panorama",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.681664193640266,
+                  "y": 412.5596682420999
+                },
+                {
+                  "x": 346.0715524004481,
+                  "y": 427.2611271261883
+                },
+                {
+                  "x": 350.0741877310331,
+                  "y": 522.2215788123488
+                },
+                {
+                  "x": 52.108037570764715,
+                  "y": 511.2540742483133
+                }
+              ],
+              "area": 28439.75169483591,
+              "frontFacing": true,
+              "margin": 39.92581226896692,
+              "longEdge": 298.16792717811506,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.9000430848772081,
+            "photo": {
+              "id": "coastal-panorama",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 56.681664193640266,
+                  "y": 412.5596682420999
+                },
+                {
+                  "x": 346.0715524004481,
+                  "y": 427.2611271261883
+                },
+                {
+                  "x": 350.0741877310331,
+                  "y": 522.2215788123488
+                },
+                {
+                  "x": 52.108037570764715,
+                  "y": 511.2540742483133
+                }
+              ],
+              "area": 28439.75169483591,
+              "frontFacing": true,
+              "margin": 39.92581226896692,
+              "longEdge": 298.16792717811506,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone390-best-coastal-panorama.png",
+            "sha256": "ae83e318b58792beef931ed1eea35e86acec516f5c43ee55189c50d3a47901c4"
+          }
+        }
+      ],
+      "checks": {
+        "all10Useful": true,
+        "allSourceGuarded": true,
+        "actualProjectionMatches": true,
+        "normalAutoOnly": true,
+        "all201Samples": true
+      }
+    },
+    {
+      "id": "phone430",
+      "width": 430,
+      "height": 932,
+      "coverage": [
+        {
+          "id": "color-balls",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 0.03999219664455716,
+              "requestedStart": 0,
+              "requestedEnd": 0.04,
+              "startScrollY": 0,
+              "endScrollY": 205,
+              "samples": 9,
+              "progressSpan": 0.03999219664455716,
+              "nativeScrollPixels": 205,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0,
+            "requestedProgress": 0,
+            "photo": {
+              "id": "color-balls",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.52754921966106,
+                  "y": 386.1164424187225
+                },
+                {
+                  "x": 355.06447088493405,
+                  "y": 355.6530644509963
+                },
+                {
+                  "x": 362.6636298727606,
+                  "y": 567.2335259090534
+                },
+                {
+                  "x": 49.06568434411275,
+                  "y": 581.9895475731165
+                }
+              ],
+              "area": 62129.34932771095,
+              "frontFacing": true,
+              "margin": 49.06568434411275,
+              "longEdge": 313.94491812281194,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0,
+            "photo": {
+              "id": "color-balls",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.52754921966106,
+                  "y": 386.1164424187225
+                },
+                {
+                  "x": 355.06447088493405,
+                  "y": 355.6530644509963
+                },
+                {
+                  "x": 362.6636298727606,
+                  "y": 567.2335259090534
+                },
+                {
+                  "x": 49.06568434411275,
+                  "y": 581.9895475731165
+                }
+              ],
+              "area": 62129.34932771095,
+              "frontFacing": true,
+              "margin": 49.06568434411275,
+              "longEdge": 313.94491812281194,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-color-balls.png",
+            "sha256": "22d60707b037bb36b94360fb216ee4680ced8967a7531734fbd9ac110c5d9d8d"
+          }
+        },
+        {
+          "id": "shared-glance",
+          "intervals": [
+            {
+              "start": 0.08993367147873586,
+              "end": 0.14494732735076082,
+              "requestedStart": 0.09,
+              "requestedEnd": 0.145,
+              "startScrollY": 461,
+              "endScrollY": 743,
+              "samples": 12,
+              "progressSpan": 0.05501365587202496,
+              "nativeScrollPixels": 282,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.14007023019898557,
+            "requestedProgress": 0.14,
+            "photo": {
+              "id": "shared-glance",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 61.55546351570596,
+                  "y": 338.43914210140974
+                },
+                {
+                  "x": 366.47293490580097,
+                  "y": 375.3897345358986
+                },
+                {
+                  "x": 374.3576248701478,
+                  "y": 577.8046506212874
+                },
+                {
+                  "x": 51.06331512251173,
+                  "y": 556.5793482419245
+                }
+              ],
+              "area": 66087.34340685478,
+              "frontFacing": true,
+              "margin": 51.06331512251173,
+              "longEdge": 323.99031494212267,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.14007023019898557,
+            "photo": {
+              "id": "shared-glance",
+              "row": 1,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 61.55546351570596,
+                  "y": 338.43914210140974
+                },
+                {
+                  "x": 366.47293490580097,
+                  "y": 375.3897345358986
+                },
+                {
+                  "x": 374.3576248701478,
+                  "y": 577.8046506212874
+                },
+                {
+                  "x": 51.06331512251173,
+                  "y": 556.5793482419245
+                }
+              ],
+              "area": 66087.34340685478,
+              "frontFacing": true,
+              "margin": 51.06331512251173,
+              "longEdge": 323.99031494212267,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-shared-glance.png",
+            "sha256": "d44558a5711b3eb28f0b8e3d0a3a94f9f12d821fdffa7b79db26384d96e3706d"
+          }
+        },
+        {
+          "id": "toward-the-water",
+          "intervals": [
+            {
+              "start": 0.20503316426063206,
+              "end": 0.23995317986734296,
+              "requestedStart": 0.205,
+              "requestedEnd": 0.24,
+              "startScrollY": 1051,
+              "endScrollY": 1230,
+              "samples": 8,
+              "progressSpan": 0.0349200156067109,
+              "nativeScrollPixels": 179,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.20503316426063206,
+            "requestedProgress": 0.205,
+            "photo": {
+              "id": "toward-the-water",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.17260907217556,
+                  "y": 385.88016450276945
+                },
+                {
+                  "x": 354.8700739147682,
+                  "y": 355.37723733166837
+                },
+                {
+                  "x": 362.4626629154357,
+                  "y": 567.0852031592937
+                },
+                {
+                  "x": 48.68514152542558,
+                  "y": 581.862655067271
+                }
+              ],
+              "area": 62199.75623356794,
+              "frontFacing": true,
+              "margin": 48.68514152542558,
+              "longEdge": 314.1253030472885,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.20503316426063206,
+            "photo": {
+              "id": "toward-the-water",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.17260907217556,
+                  "y": 385.88016450276945
+                },
+                {
+                  "x": 354.8700739147682,
+                  "y": 355.37723733166837
+                },
+                {
+                  "x": 362.4626629154357,
+                  "y": 567.0852031592937
+                },
+                {
+                  "x": 48.68514152542558,
+                  "y": 581.862655067271
+                }
+              ],
+              "area": 62199.75623356794,
+              "frontFacing": true,
+              "margin": 48.68514152542558,
+              "longEdge": 314.1253030472885,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-toward-the-water.png",
+            "sha256": "97bba3e8d21652c2b982f5d6689ba7ab593be1446d5e63b40133942cfdb45ac2"
+          }
+        },
+        {
+          "id": "coastal-poise",
+          "intervals": [
+            {
+              "start": 0.2900897385875927,
+              "end": 0.3499804916113929,
+              "requestedStart": 0.29,
+              "requestedEnd": 0.35,
+              "startScrollY": 1487,
+              "endScrollY": 1794,
+              "samples": 13,
+              "progressSpan": 0.0598907530238002,
+              "nativeScrollPixels": 307,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.34490831057354665,
+            "requestedProgress": 0.345,
+            "photo": {
+              "id": "coastal-poise",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 136.2772350737552,
+                  "y": 242.9363948553658
+                },
+                {
+                  "x": 335.3760424539611,
+                  "y": 270.9529781207332
+                },
+                {
+                  "x": 344.74226526855665,
+                  "y": 572.6319440529156
+                },
+                {
+                  "x": 127.61508098273278,
+                  "y": 558.8931565129203
+                }
+              ],
+              "area": 64261.66113844569,
+              "frontFacing": true,
+              "margin": 85.25773473144335,
+              "longEdge": 316.07547856584085,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 13,
+              "selfContactBy": {
+                "Blender shelf timber": 13
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.34490831057354665,
+            "photo": {
+              "id": "coastal-poise",
+              "row": 2,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 136.2772350737552,
+                  "y": 242.9363948553658
+                },
+                {
+                  "x": 335.3760424539611,
+                  "y": 270.9529781207332
+                },
+                {
+                  "x": 344.74226526855665,
+                  "y": 572.6319440529156
+                },
+                {
+                  "x": 127.61508098273278,
+                  "y": 558.8931565129203
+                }
+              ],
+              "area": 64261.66113844569,
+              "frontFacing": true,
+              "margin": 85.25773473144335,
+              "longEdge": 316.07547856584085,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 65,
+              "selfContactBy": {
+                "Blender shelf timber": 65
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-coastal-poise.png",
+            "sha256": "9218e3781546b5b05eaa379e2074649fc41d48c32041894ede5ead12f630102e"
+          }
+        },
+        {
+          "id": "nwprt-hat-lager",
+          "intervals": [
+            {
+              "start": 0.4049941474834179,
+              "end": 0.43991416309012876,
+              "requestedStart": 0.405,
+              "requestedEnd": 0.44,
+              "startScrollY": 2076,
+              "endScrollY": 2255,
+              "samples": 8,
+              "progressSpan": 0.034920015606710875,
+              "nativeScrollPixels": 179,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.4049941474834179,
+            "requestedProgress": 0.405,
+            "photo": {
+              "id": "nwprt-hat-lager",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.174596210637546,
+                  "y": 385.9499408120344
+                },
+                {
+                  "x": 354.8754778075115,
+                  "y": 355.4525783379233
+                },
+                {
+                  "x": 362.4656059407257,
+                  "y": 567.0873752457371
+                },
+                {
+                  "x": 48.69071401023389,
+                  "y": 581.8645132196954
+                }
+              ],
+              "area": 62178.31942852278,
+              "frontFacing": true,
+              "margin": 48.69071401023389,
+              "longEdge": 314.1226617305622,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.4049941474834179,
+            "photo": {
+              "id": "nwprt-hat-lager",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.174596210637546,
+                  "y": 385.9499408120344
+                },
+                {
+                  "x": 354.8754778075115,
+                  "y": 355.4525783379233
+                },
+                {
+                  "x": 362.4656059407257,
+                  "y": 567.0873752457371
+                },
+                {
+                  "x": 48.69071401023389,
+                  "y": 581.8645132196954
+                }
+              ],
+              "area": 62178.31942852278,
+              "frontFacing": true,
+              "margin": 48.69071401023389,
+              "longEdge": 314.1226617305622,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-nwprt-hat-lager.png",
+            "sha256": "1b4705c6f854a3a0cd250b85d11af2e51948f6f05e4d58da9ab7141707c95744"
+          }
+        },
+        {
+          "id": "nwprt-underpier-branded",
+          "intervals": [
+            {
+              "start": 0.49005072181037845,
+              "end": 0.5450643776824035,
+              "requestedStart": 0.49,
+              "requestedEnd": 0.545,
+              "startScrollY": 2512,
+              "endScrollY": 2794,
+              "samples": 12,
+              "progressSpan": 0.055013655872025,
+              "nativeScrollPixels": 282,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.5399921966445571,
+            "requestedProgress": 0.54,
+            "photo": {
+              "id": "nwprt-underpier-branded",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 61.55345628298745,
+                  "y": 338.4030496690858
+                },
+                {
+                  "x": 366.46731753317107,
+                  "y": 375.3563713261693
+                },
+                {
+                  "x": 374.3530751004019,
+                  "y": 577.8050643022563
+                },
+                {
+                  "x": 51.05932389381227,
+                  "y": 556.579634150947
+                }
+              ],
+              "area": 66097.93832055363,
+              "frontFacing": true,
+              "margin": 51.05932389381227,
+              "longEdge": 323.9897659716066,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.5399921966445571,
+            "photo": {
+              "id": "nwprt-underpier-branded",
+              "row": 3,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 61.55345628298745,
+                  "y": 338.4030496690858
+                },
+                {
+                  "x": 366.46731753317107,
+                  "y": 375.3563713261693
+                },
+                {
+                  "x": 374.3530751004019,
+                  "y": 577.8050643022563
+                },
+                {
+                  "x": 51.05932389381227,
+                  "y": 556.579634150947
+                }
+              ],
+              "area": 66097.93832055363,
+              "frontFacing": true,
+              "margin": 51.05932389381227,
+              "longEdge": 323.9897659716066,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-nwprt-underpier-branded.png",
+            "sha256": "5da3a078f7701766c9b0138a5971030ab265621605b83a8cc1f386c023f407d1"
+          }
+        },
+        {
+          "id": "beach-culture",
+          "intervals": [
+            {
+              "start": 0.6049551307062037,
+              "end": 0.6400702301989856,
+              "requestedStart": 0.605,
+              "requestedEnd": 0.64,
+              "startScrollY": 3101,
+              "endScrollY": 3281,
+              "samples": 8,
+              "progressSpan": 0.03511509949278191,
+              "nativeScrollPixels": 180,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.6049551307062037,
+            "requestedProgress": 0.605,
+            "photo": {
+              "id": "beach-culture",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.18156563151534,
+                  "y": 385.91607457304394
+                },
+                {
+                  "x": 354.87686756264173,
+                  "y": 355.41648328308486
+                },
+                {
+                  "x": 362.4685298044752,
+                  "y": 567.0895331900928
+                },
+                {
+                  "x": 48.69625022258994,
+                  "y": 581.8663592770225
+                }
+              ],
+              "area": 62188.773354269426,
+              "frontFacing": true,
+              "margin": 48.69625022258994,
+              "longEdge": 314.1200376022137,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.6049551307062037,
+            "photo": {
+              "id": "beach-culture",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.18156563151534,
+                  "y": 385.91607457304394
+                },
+                {
+                  "x": 354.87686756264173,
+                  "y": 355.41648328308486
+                },
+                {
+                  "x": 362.4685298044752,
+                  "y": 567.0895331900928
+                },
+                {
+                  "x": 48.69625022258994,
+                  "y": 581.8663592770225
+                }
+              ],
+              "area": 62188.773354269426,
+              "frontFacing": true,
+              "margin": 48.69625022258994,
+              "longEdge": 314.1200376022137,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-beach-culture.png",
+            "sha256": "67d0744c6c0e71b38c96bb0487d1063646e49f1bf5a44ddd1c9010c86c75deea"
+          }
+        },
+        {
+          "id": "coke-beach-campaign",
+          "intervals": [
+            {
+              "start": 0.6900117050331642,
+              "end": 0.7450253609051892,
+              "requestedStart": 0.69,
+              "requestedEnd": 0.745,
+              "startScrollY": 3537,
+              "endScrollY": 3819,
+              "samples": 12,
+              "progressSpan": 0.055013655872025,
+              "nativeScrollPixels": 282,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.739953179867343,
+            "requestedProgress": 0.74,
+            "photo": {
+              "id": "coke-beach-campaign",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 61.55013499261166,
+                  "y": 338.4718072699737
+                },
+                {
+                  "x": 366.4697866809067,
+                  "y": 375.4204793635814
+                },
+                {
+                  "x": 374.35304587062603,
+                  "y": 577.8050735063659
+                },
+                {
+                  "x": 51.059308377334666,
+                  "y": 556.5796452465895
+                }
+              ],
+              "area": 66077.6671990073,
+              "frontFacing": true,
+              "margin": 51.059308377334666,
+              "longEdge": 323.9897521638487,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.739953179867343,
+            "photo": {
+              "id": "coke-beach-campaign",
+              "row": 4,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 61.55013499261166,
+                  "y": 338.4718072699737
+                },
+                {
+                  "x": 366.4697866809067,
+                  "y": 375.4204793635814
+                },
+                {
+                  "x": 374.35304587062603,
+                  "y": 577.8050735063659
+                },
+                {
+                  "x": 51.059308377334666,
+                  "y": 556.5796452465895
+                }
+              ],
+              "area": 66077.6671990073,
+              "frontFacing": true,
+              "margin": 51.059308377334666,
+              "longEdge": 323.9897521638487,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-coke-beach-campaign.png",
+            "sha256": "937d4bde632d556dee843ddd75d0406233d27c620bfde0e1fb7b84827dcbf9c1"
+          }
+        },
+        {
+          "id": "coke-beach-cold-detail",
+          "intervals": [
+            {
+              "start": 0.7900897385875927,
+              "end": 0.8449083105735467,
+              "requestedStart": 0.79,
+              "requestedEnd": 0.845,
+              "startScrollY": 4050,
+              "endScrollY": 4331,
+              "samples": 12,
+              "progressSpan": 0.05481857198595397,
+              "nativeScrollPixels": 281,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.8000390167772142,
+            "requestedProgress": 0.8,
+            "photo": {
+              "id": "coke-beach-cold-detail",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.44519598753256,
+                  "y": 381.23063461890473
+                },
+                {
+                  "x": 362.34781222707244,
+                  "y": 364.2667391981364
+                },
+                {
+                  "x": 370.2155846945323,
+                  "y": 571.8492412943907
+                },
+                {
+                  "x": 48.855311053274555,
+                  "y": 579.3838595854861
+                }
+              ],
+              "area": 63412.32600882848,
+              "frontFacing": true,
+              "margin": 48.855311053274555,
+              "longEdge": 321.4485898982551,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.8000390167772142,
+            "photo": {
+              "id": "coke-beach-cold-detail",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 58.44519598753256,
+                  "y": 381.23063461890473
+                },
+                {
+                  "x": 362.34781222707244,
+                  "y": 364.2667391981364
+                },
+                {
+                  "x": 370.2155846945323,
+                  "y": 571.8492412943907
+                },
+                {
+                  "x": 48.855311053274555,
+                  "y": 579.3838595854861
+                }
+              ],
+              "area": 63412.32600882848,
+              "frontFacing": true,
+              "margin": 48.855311053274555,
+              "longEdge": 321.4485898982551,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-coke-beach-cold-detail.png",
+            "sha256": "cec56746d4cf262fbdefc9e9fd35998f70801d9808fc21d358f943671278d4dc"
+          }
+        },
+        {
+          "id": "coastal-panorama",
+          "intervals": [
+            {
+              "start": 0.760046820132657,
+              "end": 0.7649239172844323,
+              "requestedStart": 0.76,
+              "requestedEnd": 0.765,
+              "startScrollY": 3896,
+              "endScrollY": 3921,
+              "samples": 2,
+              "progressSpan": 0.0048770971517753114,
+              "nativeScrollPixels": 25,
+              "useful": false
+            },
+            {
+              "start": 0.8899726882559501,
+              "end": 1,
+              "requestedStart": 0.89,
+              "requestedEnd": 1,
+              "startScrollY": 4562,
+              "endScrollY": 5126,
+              "samples": 23,
+              "progressSpan": 0.1100273117440499,
+              "nativeScrollPixels": 564,
+              "useful": true
+            }
+          ],
+          "pass": true,
+          "best": {
+            "progress": 0.8999219664455715,
+            "requestedProgress": 0.9,
+            "photo": {
+              "id": "coastal-panorama",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 62.25438490208488,
+                  "y": 455.57593779611335
+                },
+                {
+                  "x": 381.80447746995384,
+                  "y": 471.8093748933902
+                },
+                {
+                  "x": 386.2243358375706,
+                  "y": 576.6666252799099
+                },
+                {
+                  "x": 57.20416715969728,
+                  "y": 564.5562293252443
+                }
+              ],
+              "area": 34676.63430631554,
+              "frontFacing": true,
+              "margin": 43.77566416242939,
+              "longEdge": 329.2429696849958,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 117,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 9,
+              "selfContactBy": {
+                "Blender shelf timber": 9
+              },
+              "clear": true
+            }
+          },
+          "denseBest": {
+            "progress": 0.8999219664455715,
+            "photo": {
+              "id": "coastal-panorama",
+              "row": 5,
+              "passed": false,
+              "quad": [
+                {
+                  "x": 62.25438490208488,
+                  "y": 455.57593779611335
+                },
+                {
+                  "x": 381.80447746995384,
+                  "y": 471.8093748933902
+                },
+                {
+                  "x": 386.2243358375706,
+                  "y": 576.6666252799099
+                },
+                {
+                  "x": 57.20416715969728,
+                  "y": 564.5562293252443
+                }
+              ],
+              "area": 34676.63430631554,
+              "frontFacing": true,
+              "margin": 43.77566416242939,
+              "longEdge": 329.2429696849958,
+              "collisions": [],
+              "complete": true,
+              "candidate": true,
+              "rays": 3185,
+              "blocked": 0,
+              "by": {},
+              "selfContactRays": 46,
+              "selfContactBy": {
+                "Blender shelf timber": 46
+              },
+              "clear": true
+            },
+            "maxProjectionError": 0
+          },
+          "screenshot": {
+            "file": "phone430-best-coastal-panorama.png",
+            "sha256": "2c67f4af89403b48c36843d2bf445baabb13f2a1a77eabe66bca0fb1a49cf309"
+          }
+        }
+      ],
+      "checks": {
+        "all10Useful": true,
+        "allSourceGuarded": true,
+        "actualProjectionMatches": true,
+        "normalAutoOnly": true,
+        "all201Samples": true
+      }
+    }
+  ]
+}

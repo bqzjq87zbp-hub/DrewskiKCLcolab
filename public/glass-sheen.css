@@ -1,0 +1,27 @@
+/* Add reflected light to the existing optical surface, never to a photograph. */
+/* Zero specificity lets existing late-loaded absolute/sticky positions win. */
+:where(.kcl-sheen-position){position:relative}
+[data-kcl-sheen-surface]{isolation:isolate}
+[data-kcl-sheen-surface]>.kcl-glass-sheen-layer{
+  position:absolute;inset:1px;z-index:1;border-radius:inherit;
+  width:auto;height:auto;max-width:none;margin:0;padding:0;
+  overflow:hidden;pointer-events:none;contain:paint;
+}
+.kcl-glass-sheen-reflection{
+  position:absolute;inset:-30% 0;width:100%;height:160%;
+  background:linear-gradient(112deg,transparent 19%,rgb(255 255 255 / .08) 35%,rgb(255 255 255 / .42) 47%,rgb(255 255 255 / .1) 55%,transparent 70%);
+  transform:translate3d(var(--kcl-sheen-x,-120%),0,0) skewX(-12deg);
+  opacity:var(--kcl-sheen-opacity,.07);pointer-events:none;
+}
+body[data-kcl-sheen=enabled] :is(select,.aisle-video-status)[data-kcl-sheen-surface]{
+  background-image:linear-gradient(112deg,transparent calc(var(--kcl-sheen-x,-120%) - 28%),rgb(255 255 255 / .13) var(--kcl-sheen-x,-120%),transparent calc(var(--kcl-sheen-x,-120%) + 28%));
+}
+/* Match the already-clear aisle controls without adding frosting to collections. */
+body[data-appearance=clear] :is(.collection-header,.glass-control,.category-sign){
+  backdrop-filter:saturate(1.08);-webkit-backdrop-filter:saturate(1.08);
+}
+body:not([data-kcl-sheen=enabled]) .kcl-glass-sheen-layer{display:none}
+@media(prefers-reduced-motion:reduce),(prefers-reduced-transparency:reduce),(prefers-contrast:more),(forced-colors:active){
+  .kcl-glass-sheen-layer{display:none!important}
+  :is(select,.aisle-video-status)[data-kcl-sheen-surface]{background-image:none!important}
+}

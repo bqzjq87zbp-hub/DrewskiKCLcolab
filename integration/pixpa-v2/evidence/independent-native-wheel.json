@@ -1,0 +1,153 @@
+{
+  "started": "2026-09-10T06:54:45.374Z",
+  "finished": "2026-09-10T06:55:13.407Z",
+  "browserVersion": "152.0.7977.83",
+  "method": "Fresh isolated Google Chrome, headed; Playwright mouse.move and mouse.wheel browser input. No synthetic DOM wheel, scrollTo, forced motion preference, or existing user browser attachment.",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "tests": [
+    {
+      "name": "direct",
+      "url": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+      "iframe": null,
+      "inputPoint": {
+        "x": 806,
+        "y": 620
+      },
+      "topmostAtInput": {
+        "tag": "DIV",
+        "id": "",
+        "class": "aisle-viewport"
+      },
+      "errors": [],
+      "pass": true,
+      "observations": [
+        {
+          "step": "before",
+          "at": "2026-09-10T06:54:55.430Z",
+          "childY": 0,
+          "progress": 0,
+          "cameraDistance": 0,
+          "outerY": 0,
+          "outerRange": 5824,
+          "engineRange": 5500,
+          "systemReducedMotion": false,
+          "motionPreference": "system",
+          "reducedMotion": false,
+          "physicalReady": true
+        },
+        {
+          "step": "forward",
+          "at": "2026-09-10T06:54:57.621Z",
+          "childY": 900,
+          "progress": 0.16363636363636364,
+          "cameraDistance": 0.6894217658680464,
+          "outerY": 900,
+          "outerRange": 5824,
+          "engineRange": 5500,
+          "systemReducedMotion": false,
+          "motionPreference": "system",
+          "reducedMotion": false,
+          "physicalReady": true
+        },
+        {
+          "step": "reverse",
+          "at": "2026-09-10T06:54:59.776Z",
+          "childY": 350,
+          "progress": 0.06363636363636363,
+          "cameraDistance": 0.06350666351595491,
+          "outerY": 350,
+          "outerRange": 5824,
+          "engineRange": 5500,
+          "systemReducedMotion": false,
+          "motionPreference": "system",
+          "reducedMotion": false,
+          "physicalReady": true
+        }
+      ]
+    },
+    {
+      "name": "pixpa",
+      "url": "https://kiyonocreativelab.com/pier-gallery?release=walk-restored-20260910-qa",
+      "iframe": {
+        "src": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 955,
+          "top": 0,
+          "right": 1440,
+          "bottom": 955,
+          "left": 0
+        },
+        "pointerEvents": "auto",
+        "scrolling": null,
+        "sandbox": null
+      },
+      "inputPoint": {
+        "x": 806,
+        "y": 592
+      },
+      "topmostAtInput": {
+        "tag": "IFRAME",
+        "id": "",
+        "class": ""
+      },
+      "errors": [],
+      "pass": true,
+      "observations": [
+        {
+          "step": "before",
+          "at": "2026-09-10T06:55:08.086Z",
+          "childY": 0,
+          "progress": 0,
+          "cameraDistance": 0,
+          "outerY": 0,
+          "outerRange": 0,
+          "engineRange": 5253,
+          "systemReducedMotion": false,
+          "motionPreference": "system",
+          "reducedMotion": false,
+          "physicalReady": true
+        },
+        {
+          "step": "forward",
+          "at": "2026-09-10T06:55:10.237Z",
+          "childY": 900,
+          "progress": 0.17133066818960593,
+          "cameraDistance": 0.9961904944680093,
+          "outerY": 0,
+          "outerRange": 0,
+          "engineRange": 5253,
+          "systemReducedMotion": false,
+          "motionPreference": "system",
+          "reducedMotion": false,
+          "physicalReady": true
+        },
+        {
+          "step": "reverse",
+          "at": "2026-09-10T06:55:12.422Z",
+          "childY": 350,
+          "progress": 0.06662859318484675,
+          "cameraDistance": 0.06659529439104085,
+          "outerY": 0,
+          "outerRange": 0,
+          "engineRange": 5253,
+          "systemReducedMotion": false,
+          "motionPreference": "system",
+          "reducedMotion": false,
+          "physicalReady": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Desktop Chrome only; no physical touch-device or mobile Safari proof.",
+    "Observed system reduced motion was false; no motion preference was changed.",
+    "Native wheel was browser-automation input using Playwright mouse.wheel, not physical mouse operation. No scrollTo or DOM-dispatched wheel events used.",
+    "The in-app-browser discrepancy was not reproduced in this environment; its precise cause is unproven."
+  ]
+}

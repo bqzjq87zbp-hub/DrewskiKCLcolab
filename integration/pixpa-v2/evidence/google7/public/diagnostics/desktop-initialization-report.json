@@ -1,0 +1,115 @@
+{
+  "scope": "Representative actual-public desktop photograph/collection check only; no camera/input acceptance",
+  "started": "2026-09-11T16:29:14.400Z",
+  "wrapperURL": "https://kiyonocreativelab.com/pier-gallery?release=google111-live-20260910",
+  "childURL": "https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/",
+  "viewers": [],
+  "metadata": [],
+  "runtime": [
+    {
+      "path": "aisle/aisle.css",
+      "status": 200,
+      "bytes": 11190,
+      "sha256": "8ebabe99629f4b892addc249ffe3930fd7643d38dad270a5d43470a9a51615a8",
+      "accepted17SHA256": "8ebabe99629f4b892addc249ffe3930fd7643d38dad270a5d43470a9a51615a8",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "startup.js",
+      "status": 200,
+      "bytes": 955,
+      "sha256": "e27861295f2d6a73a9e20a579a35948f0d2be3e00b3a4d629e902c899d0ac147",
+      "accepted17SHA256": "e27861295f2d6a73a9e20a579a35948f0d2be3e00b3a4d629e902c899d0ac147",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 10172,
+      "sha256": "1c276b4bee1927e4a0b245bc4f9eeea9bc4aa31092b0237d96fecf84428aa005",
+      "accepted17SHA256": "b98cd11e3f6490e88182f32b019722913de33b7b85cbf244909fcb96fd5538df",
+      "matchesAccepted17": false
+    },
+    {
+      "path": "main-v2.js",
+      "status": 200,
+      "bytes": 7127,
+      "sha256": "1c8933738945538bea0c392ab83f95b34df5eb70efa86ea71d13a1264c1b466a",
+      "accepted17SHA256": "1c8933738945538bea0c392ab83f95b34df5eb70efa86ea71d13a1264c1b466a",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "scene-images.js",
+      "status": 200,
+      "bytes": 2245,
+      "sha256": "4d2a89aede1d255ea24cb58da423ddc428204a2b06817bfdc3775debd41d245f",
+      "accepted17SHA256": "4d2a89aede1d255ea24cb58da423ddc428204a2b06817bfdc3775debd41d245f",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "aisle-integration.js",
+      "status": 200,
+      "bytes": 8719,
+      "sha256": "27ed7980d68d73bddeb773a7b01b4fdd435678b77d8b19b22e1327916071e134",
+      "accepted17SHA256": "27ed7980d68d73bddeb773a7b01b4fdd435678b77d8b19b22e1327916071e134",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "collections.js",
+      "status": 200,
+      "bytes": 8324,
+      "sha256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43",
+      "accepted17SHA256": "0284d5d488f43d1d81861d4a52bdacceb0dec6d505b23fb19edfd01c9f068a43",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "glass-sheen.js",
+      "status": 200,
+      "bytes": 8280,
+      "sha256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+      "accepted17SHA256": "2600e91b10d6483b876821640dbb15296b6dbda95ece0d58d8103d3ce51fa9a8",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "aisle/photographic-aisle.js",
+      "status": 200,
+      "bytes": 14922,
+      "sha256": "6f462a072e2179061247a0b38a825fbacf452c2710d2b298c45929dd720db0c3",
+      "accepted17SHA256": "6f462a072e2179061247a0b38a825fbacf452c2710d2b298c45929dd720db0c3",
+      "matchesAccepted17": true
+    },
+    {
+      "path": "slots.json",
+      "status": 200,
+      "bytes": 7323,
+      "sha256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21",
+      "accepted17SHA256": "6488477c2b3294f9fd292d24e052b690a9a91b370020312a1870d2ed7b2dbc21",
+      "matchesAccepted17": true
+    }
+  ],
+  "console": [
+    {
+      "type": "warning",
+      "message": "Unrecognized feature: 'webgpu'.",
+      "url": "https://kiyonocreativelab.com/pier-gallery?release=google111-live-20260910"
+    }
+  ],
+  "screenshots": [
+    "failure.png"
+  ],
+  "physicalDevice": false,
+  "browser": "152.0.7977.83",
+  "pass": false,
+  "failure": "Unexpected iframe",
+  "runtimeChanges": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 10172,
+      "sha256": "1c276b4bee1927e4a0b245bc4f9eeea9bc4aa31092b0237d96fecf84428aa005",
+      "accepted17SHA256": "b98cd11e3f6490e88182f32b019722913de33b7b85cbf244909fcb96fd5538df",
+      "matchesAccepted17": false
+    }
+  ],
+  "finished": "2026-09-11T16:29:16.914Z"
+}

@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-09-10T17:16:10.332Z",
+  "status": "PASS",
+  "method": "Fresh anonymous public GET; exact unique native optical script per route. Rendered acceptance is separate.",
+  "routesChecked": [
+    {
+      "route": "/",
+      "status": 200,
+      "finalURL": "https://kiyonocreativelab.com/?release=sheen-source-check-1789060569233",
+      "owners": 1,
+      "runtimeSha256": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    },
+    {
+      "route": "/families",
+      "status": 200,
+      "finalURL": "https://kiyonocreativelab.com/families?release=sheen-source-check-1789060569250",
+      "owners": 1,
+      "runtimeSha256": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "finalURL": "https://kiyonocreativelab.com/about?release=sheen-source-check-1789060569251",
+      "owners": 1,
+      "runtimeSha256": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    },
+    {
+      "route": "/portfolio",
+      "status": 200,
+      "finalURL": "https://kiyonocreativelab.com/portfolio?release=sheen-source-check-1789060569251",
+      "owners": 1,
+      "runtimeSha256": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    },
+    {
+      "route": "/content-creation",
+      "status": 200,
+      "finalURL": "https://kiyonocreativelab.com/content-creation?release=sheen-source-check-1789060569252",
+      "owners": 1,
+      "runtimeSha256": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    },
+    {
+      "route": "/inquiry-form",
+      "status": 200,
+      "finalURL": "https://kiyonocreativelab.com/inquiry-form?release=sheen-source-check-1789060569252",
+      "owners": 1,
+      "runtimeSha256": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    },
+    {
+      "route": "/professional-headshots",
+      "status": 200,
+      "finalURL": "https://kiyonocreativelab.com/professional-headshots?release=sheen-source-check-1789060569252",
+      "owners": 1,
+      "runtimeSha256": "93d81d23e261dc3b72db526231c9d328e479942ebb685142f456e63849bf40d7"
+    }
+  ],
+  "fields": [
+    {
+      "file": "shared-body-rollback.html",
+      "bytes": 286002,
+      "sha256": "c29620c604d825e315522b9edbc08b7189d6ea63ac384d6130b5cb4823417484"
+    },
+    {
+      "file": "shared-body-candidate.html",
+      "bytes": 286466,
+      "sha256": "3b538d6cbbdf38d037143bac07bf6b80daabd60db42b9b3452b43cc4e2bc76d9"
+    },
+    {
+      "file": "shared-body-persisted.html",
+      "bytes": 286466,
+      "sha256": "3b538d6cbbdf38d037143bac07bf6b80daabd60db42b9b3452b43cc4e2bc76d9"
+    },
+    {
+      "file": "pier-pagecode-rollback.html",
+      "bytes": 3900,
+      "sha256": "3618931079d93eed39867d54ae242c1808390a9bafbaf95a8b57fd51c40e6ab9"
+    },
+    {
+      "file": "pier-pagecode-candidate.html",
+      "bytes": 6806,
+      "sha256": "edb2d2248d2f385e0bd5a5e99326a055cc4190f0b4dd04ca60d299267423cfc7"
+    },
+    {
+      "file": "pier-pagecode-persisted.html",
+      "bytes": 6805,
+      "sha256": "f9774d3dfbfd0f99f366a065538d83580b959b846ca4834cef0f78daeef5b17d"
+    }
+  ]
+}

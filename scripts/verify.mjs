@@ -10,6 +10,34 @@ const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const categories=JSON.parse(await fs.readFile(path.join(pub,'categories.json'),'utf8'));
 const manifest=JSON.parse(await fs.readFile(path.join(root,'docs/asset-manifest.json'),'utf8'));
 const expected={branding:13,families:21,headshots:31,coastal:4};
+const baselineBytes=await fs.readFile(path.join(root,'docs/expansion-baseline.json'));
+assert(hash(baselineBytes)==='6eb94e96d67f8a6103b1414ab8b72aef4d265d9ed0ec346802395a7892a2134c','Accepted category baseline changed');
+const baseline=JSON.parse(baselineBytes);
+const additions=JSON.parse(await fs.readFile(path.join(root,'docs/expansion-assets.json'),'utf8'));
+const review=JSON.parse(await fs.readFile(path.join(pub,'expansion-review.json'),'utf8'));
+const fulls=additions.assets.filter(a=>a.role==='full');
+assert(new Set(fulls.map(a=>a.photo_id)).size===fulls.length,'Duplicate reviewed photo identity');
+assert(JSON.stringify([...review.reviewedIDs].sort())===JSON.stringify(fulls.map(a=>a.photo_id).sort()),'Review and asset allowlist disagree');
+for(const c of categories.categories){
+  const base=baseline.categories.find(b=>b.id===c.id);
+  const originalIDs=new Set(base?.items.map(i=>i.id));
+  assert(base&&JSON.stringify({...c,items:c.items.filter(i=>originalIDs.has(i.id))})===JSON.stringify(base),'Accepted category content or relative order changed');
+  const newItems=c.items.filter(i=>!originalIDs.has(i.id));
+  assert(newItems.length===fulls.filter(a=>a.category===c.id).length,'Unreviewed category addition');
+  for(const item of newItems)for(const [role,key] of [['full','full'],['thumbnail','src']]){
+    const asset=additions.assets.find(a=>a.photo_id===item.id&&a.role===role&&a.category===c.id);
+    assert(asset&&asset.path==='public'+item[key],'Added photo is outside derivative allowlist');
+    if(role==='full')assert(item.width===asset.width&&item.height===asset.height,'Added photo dimensions differ from reviewed export');
+  }
+  expected[c.id]+=newItems.length;
+}
+assert(categories.categories.length===baseline.categories.length,'Unexpected category');
+for(const asset of additions.assets){
+  assert(/^public\/media\/expansion\/[a-f0-9]{64}\.(jpg|jpeg|png|webp)$/.test(asset.path),'Invalid derivative path');
+  const bytes=await fs.readFile(path.join(root,asset.path));
+  assert(bytes.length===asset.bytes&&hash(bytes)===asset.sha256,'Expansion asset changed');
+  assert(['eligible','local-review-only','unverified'].includes(asset.public_eligibility),'Missing explicit public eligibility');
+}
 const seen=new Set();
 async function local(url){
   assert(typeof url==='string'&&url.startsWith('/')&&!url.startsWith('//')&&!url.includes('..'),'Invalid local asset URL');
@@ -20,8 +48,9 @@ for(const c of categories.categories){
   assert(c.rooms.length===0,'Purchased room assets must remain excluded');
   for(const item of c.items){assert(!seen.has(c.id+':'+item.id),'Duplicate item ID');seen.add(c.id+':'+item.id);await local(item.src);await local(item.full);assert(item.alt&&item.width>0&&item.height>0,'Incomplete photo metadata');}
 }
-assert(seen.size===69,'Unexpected total photo entries');
+assert(seen.size===69+fulls.length,'Unexpected total photo entries');
 const slots=JSON.parse(await fs.readFile(path.join(pub,'slots.json'),'utf8'));
+assert(hash(await fs.readFile(path.join(pub,'slots.json')))==='f6bbcd495c1533a5e5f3f1ca10a06343e6d8ba5ea68d99a789fad85dd9cb07b8','Accepted easel slots changed');
 assert(slots.length===10,'Expected ten easel slots');
 for(const slot of slots){await local(slot.src);await local(slot.full);assert(slot.quad.length===4,'Invalid slot corners');}
 assert(manifest.assets.length===92,'Unexpected image allowlist count');
@@ -56,5 +85,5 @@ try{
   for(const url of ['/server.mjs','/package.json','/docs/asset-manifest.json','/.git/config','/.env','/%2e%2e/package.json','/media/%2e%2e/%2e%2e/server.mjs'])assert((await fetch(base+url)).status===404,'Private route exposed '+url);
   assert((await fetch(base+'/',{method:'POST'})).status===405,'POST should be rejected');
   assert((await fetch(base+'/',{method:'HEAD'})).status===200,'HEAD failed');
-  console.log(JSON.stringify({status:'PASS',categories:expected,photoEntries:69,easelSlots:10,purchasedRooms:0,uniquePhotographs:92,imageBytes:manifest.imageBytes,videoFrames:sequence.frames.length,videoFrameBytes,videoReviewStatus:sequence.reviewStatus,assetHashes:'all match',textFilesScanned:textFiles.length,privatePathOrSecretPatternMatches:0,symlinks:0,serverRuntimeRoutes:'PASS',privateServerRoutes:'404',writeMethods:'405',files:files.length},null,2));
+  console.log(JSON.stringify({status:'PASS',categories:expected,photoEntries:seen.size,easelSlots:10,purchasedRooms:0,baselineImageFiles:92,addedPhotographs:fulls.length,addedDerivativeBytes:additions.assets.reduce((n,a)=>n+a.bytes,0),imageBytes:manifest.imageBytes,videoFrames:sequence.frames.length,videoFrameBytes,videoReviewStatus:sequence.reviewStatus,assetHashes:'all match',textFilesScanned:textFiles.length,privatePathOrSecretPatternMatches:0,symlinks:0,serverRuntimeRoutes:'PASS',privateServerRoutes:'404',writeMethods:'405',files:files.length},null,2));
 }finally{child.kill('SIGTERM');}

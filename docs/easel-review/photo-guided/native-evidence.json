@@ -1,0 +1,87 @@
+{
+  "status": "TECHNICAL PASS; MOTION REVIEW REQUIRED",
+  "runtimeStable": true,
+  "errors": [],
+  "sourceFingerprints": [
+    {
+      "url": "/main-v2.js",
+      "status": 200,
+      "sha256": "9114b28935e50f624050966032e1747a8e3128f47eec3cda66d47b588d048d6a"
+    },
+    {
+      "url": "/collections.js",
+      "status": 200,
+      "sha256": "f67a920331b8619fd75716e80a4effe3e9d5558261a5448823b43142e0b14681"
+    },
+    {
+      "url": "/aisle/photographic-environment.js",
+      "status": 200,
+      "sha256": "b02bb20191720694315f7935c178a6e25183b409044eda882d305bd13da9f13a"
+    },
+    {
+      "url": "/aisle/physical-display.js",
+      "status": 200,
+      "sha256": "b789013835bbc24ade3f3750b4684241203d538afdfff0166dd4deb459924caa"
+    },
+    {
+      "url": "/aisle/gallery-layout.js",
+      "status": 200,
+      "sha256": "8dce2b4b907ba810162c99b902fe851fa163b5bbbea65124ac484ac3d2204b67"
+    },
+    {
+      "url": "/aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    },
+    {
+      "url": "/aisle-integration.js",
+      "status": 200,
+      "sha256": "707bb6b86f1314de8f9e69df7bd0fd8ba6b84ed6af8acef8a5fa48b540af09d8"
+    },
+    {
+      "url": "/aisle/aisle.css",
+      "status": 200,
+      "sha256": "c7d10efe666e36b89872b9b6ea9c45d8bd915a834c8ce5ff3d622b964d6b652e"
+    },
+    {
+      "url": "/aisle/water-surface.js",
+      "status": 200,
+      "sha256": "cacde7ea838c518651af338b4c6518d149d2d9472d057ff2811f2f65910b95d5"
+    }
+  ],
+  "rawReportSHA256": "c5e90c02bbc4726cb5a055e37b683eb4db6b3c80ff3799bd276e294dff21fbb8",
+  "cases": [
+    {
+      "device": "desktop",
+      "samples": 632,
+      "durationSeconds": 38.5785,
+      "scrollRange": 4950,
+      "startProgress": 0,
+      "endProgress": 0,
+      "maxProgress": 1,
+      "minDistance": 0,
+      "maxDistance": 7,
+      "distanceReversalViolations": 0,
+      "maxSampledYawDegreesPerSecond": 0.0,
+      "p95SampledYawDegreesPerSecond": 0.0,
+      "video": "desktop-native-forward-reverse.webm",
+      "videoSHA256": "6ed764618a69608ff557e04e93e5bc49934dbcdb732016586df80aabfa2cfcdd"
+    },
+    {
+      "device": "phone",
+      "samples": 555,
+      "durationSeconds": 33.89869999980927,
+      "scrollRange": 7596,
+      "startProgress": 0,
+      "endProgress": 0,
+      "maxProgress": 1,
+      "minDistance": 0,
+      "maxDistance": 7,
+      "distanceReversalViolations": 0,
+      "maxSampledYawDegreesPerSecond": 110.74731361872591,
+      "p95SampledYawDegreesPerSecond": 95.24220715570875,
+      "video": "phone-native-forward-reverse.webm",
+      "videoSHA256": "1bf6977e1526999fca02e2c07f2e22c6edf1e1f22dcc5118b6c471110b22ca6e"
+    }
+  ]
+}

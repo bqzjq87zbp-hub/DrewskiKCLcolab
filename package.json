@@ -9,5 +9,10 @@
     "dev": "node server.mjs",
     "check": "node scripts/verify.mjs"
   },
-  "engines": {"node": ">=20"}
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  }
 }

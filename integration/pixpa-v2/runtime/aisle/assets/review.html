@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Easel and canvas construction review</title><style>
+html,body{margin:0;background:#303b41;color:#e4e9eb;font:14px system-ui;height:100%;overflow:hidden}canvas{display:block}nav{position:absolute;top:18px;left:18px;display:flex;gap:7px}button{background:#172227b8;color:white;border:1px solid #82939b;border-radius:5px;padding:9px 12px;cursor:pointer}p{position:absolute;left:18px;bottom:5px;color:#d7e0e3;font-size:12px}
+</style><nav><button data-view="front">Front</button><button data-view="oblique">Oblique</button><button data-view="rear">Rear</button><button data-view="edge">Canvas edge</button></nav><p>Blender timber • 38 mm stretched canvas • full source photograph • construction review</p><script type="module">
+import * as THREE from '/pier-v2-20260910/vendor/three.module.js';
+import { createPhysicalEasel } from '../physical-easel.js';
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
+renderer.toneMappingExposure=1;document.body.append(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x303b41);
+scene.add(new THREE.HemisphereLight(0xc4d7e2,0x394e50,1.5));
+const key=new THREE.DirectionalLight(0xffeed7,1.7);key.position.set(-8,9,6);scene.add(key);
+const fill=new THREE.DirectionalLight(0x91bad5,.85);fill.position.set(7,4,-8);scene.add(fill);
+const camera=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,.01,100);
+const slots=await(await fetch('/pier-v2-20260910/slots.json')).json();const slot=slots.find(s=>s.id==='color-balls')||slots[0];
+const image=new Image();image.src=slot.full||slot.src;await image.decode();
+const model=createPhysicalEasel({THREE,slot,image,index:0});await model.ready;scene.add(model.group);
+const centre=model.dimensions.printBottom+model.dimensions.printHeight/2;
+function view(name){
+  if(name==='front'){camera.position.set(0,1.08,4.1);camera.lookAt(0,1.08,0);}
+  if(name==='oblique'){camera.position.set(2.15,1.85,3.4);camera.lookAt(0,1.08,0);}
+  if(name==='rear'){camera.position.set(-.55,1.7,-1.12);camera.lookAt(0,1.30,.04);}
+  if(name==='edge'){camera.position.set(.60,model.dimensions.printTop+.036,.145);camera.lookAt(.495,model.dimensions.printTop-.018,.066);}
+  renderer.render(scene,camera);
+  document.body.dataset.view=name;
+}
+document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>view(b.dataset.view)));
+addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.render(scene,camera)});
+view('oblique');
+</script></html>

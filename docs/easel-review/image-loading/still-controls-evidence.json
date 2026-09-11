@@ -1,0 +1,151 @@
+{
+  "before": [
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2"
+    },
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    }
+  ],
+  "checks": [
+    {
+      "profile": "desktop",
+      "name": "Still-hides-pair-controls",
+      "pass": true,
+      "hidden": true,
+      "still": {
+        "progress": 0,
+        "motionPreference": "still",
+        "reducedMotion": true,
+        "systemReducedMotion": false
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "Start-walk-restores-steps-and-boundaries",
+      "pass": true,
+      "visible": true,
+      "startDisabled": true,
+      "endDisabled": true,
+      "forward": {
+        "progress": 0.1995959595959596,
+        "motionPreference": "guided",
+        "reducedMotion": false,
+        "systemReducedMotion": false
+      },
+      "reverse": {
+        "progress": 0.00040404040404040404,
+        "motionPreference": "guided",
+        "reducedMotion": false,
+        "systemReducedMotion": false
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "system-reduced-motion-retains-native-pair-controls",
+      "pass": true,
+      "reducedVisible": true,
+      "reducedForward": {
+        "progress": 0.2,
+        "motionPreference": "system",
+        "reducedMotion": false,
+        "systemReducedMotion": true
+      },
+      "reducedReverse": {
+        "progress": 0,
+        "motionPreference": "system",
+        "reducedMotion": false,
+        "systemReducedMotion": true
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "Still-hides-pair-controls",
+      "pass": true,
+      "hidden": true,
+      "still": {
+        "progress": 0,
+        "motionPreference": "still",
+        "reducedMotion": true,
+        "systemReducedMotion": false
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "Start-walk-restores-steps-and-boundaries",
+      "pass": true,
+      "visible": true,
+      "startDisabled": true,
+      "endDisabled": true,
+      "forward": {
+        "progress": 0.19957872564507637,
+        "motionPreference": "guided",
+        "reducedMotion": false,
+        "systemReducedMotion": false
+      },
+      "reverse": {
+        "progress": 0.0007898894154818325,
+        "motionPreference": "guided",
+        "reducedMotion": false,
+        "systemReducedMotion": false
+      }
+    },
+    {
+      "profile": "phone",
+      "name": "system-reduced-motion-retains-native-pair-controls",
+      "pass": true,
+      "reducedVisible": true,
+      "reducedForward": {
+        "progress": 0.19997367035281727,
+        "motionPreference": "system",
+        "reducedMotion": false,
+        "systemReducedMotion": true
+      },
+      "reducedReverse": {
+        "progress": 0,
+        "motionPreference": "system",
+        "reducedMotion": false,
+        "systemReducedMotion": true
+      }
+    }
+  ],
+  "errors": [],
+  "after": [
+    {
+      "url": "aisle-integration.js",
+      "status": 200,
+      "sha256": "8199816349bab995130fa1283e604fac71f066acdf84d9a80759a79dc8b962d2"
+    },
+    {
+      "url": "main-v2.js",
+      "status": 200,
+      "sha256": "56969fc561a58096e942e71da6a3f046cfa90949060e5fdfb47e3595efa401e5"
+    },
+    {
+      "url": "collections.js",
+      "status": 200,
+      "sha256": "2f2dfa7b4f55aac376279f87ee3fb4d84000d64dd815f77c9a8fc06ea31a8cc2"
+    },
+    {
+      "url": "aisle/photographic-aisle.js",
+      "status": 200,
+      "sha256": "7574db834454c64a7af710ba0cdc93372872d471c6414ca8d3fa3b559706f0be"
+    }
+  ],
+  "runtimeStable": true,
+  "status": "PASS"
+}

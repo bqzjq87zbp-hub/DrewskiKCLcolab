@@ -1,0 +1,72 @@
+<style id="kcl-pier-native-style-20260910">
+/* This page only: the photographic child owns scrolling. Exit controls float over its photograph. */
+body:has(#kcl-pier-native){margin:0!important;padding:0!important;min-height:0!important;background:#061019!important}
+body:has(> #kcl-pier-native)>:not(#kcl-pier-native):not(script):not(style){display:none!important}
+#kcl-pier-native{box-sizing:border-box;position:relative;width:100%;height:100vh;height:100dvh;min-height:0;margin:0;padding:0;background:#061019;color:#fff;font:14px/1.4 system-ui,sans-serif}
+#kcl-pier-native iframe{display:block;width:100%;height:100%;min-height:0;border:0;margin:0;padding:0;background:#061019}
+#kcl-pier-native nav{position:absolute;inset:0;pointer-events:none;--exit-x:14px;--exit-y:16px}
+#kcl-pier-native .kcl-pier-exit{box-sizing:border-box;position:absolute;bottom:var(--exit-y);left:var(--exit-x);display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:1px solid #ffffff80;border-radius:14px;color:#fff;text-decoration:none;pointer-events:auto;background:rgba(255,255,255,.065);backdrop-filter:blur(3px) saturate(1.06);-webkit-backdrop-filter:blur(3px) saturate(1.06);box-shadow:inset 0 1px 0 #ffffff66,inset 0 -1px 0 #ffffff18,0 3px 8px #00101d2e,0 10px 24px #00101d20}
+#kcl-pier-native .kcl-pier-exit:last-child{left:auto;right:var(--exit-x)}
+#kcl-pier-native .kcl-pier-exit svg{width:22px;height:22px;filter:drop-shadow(0 1px 2px #00101dcc);pointer-events:none}
+#kcl-pier-native .kcl-pier-exit:focus-visible{outline:3px solid #c7edff;outline-offset:4px}
+@media(hover:hover) and (pointer:fine){#kcl-pier-native nav{--exit-x:max(14px,calc((100vw - 149.9812523435dvh)/2 + 14px));--exit-y:max(16px,calc((100dvh - 66.675vw)/2 + 16px))}#kcl-pier-native .kcl-pier-exit:hover{background:rgba(255,255,255,.13);border-color:#ffffffbf}}
+@media(max-width:650px){#kcl-pier-native nav{--exit-y:78px}}
+@media(max-width:650px) and (hover:hover) and (pointer:fine){#kcl-pier-native nav{--exit-y:max(78px,calc((100dvh - 66.675vw)/2 + 78px))}}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){#kcl-pier-native .kcl-pier-exit{background:#102c40;border-color:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(forced-colors:active){#kcl-pier-native{background:Canvas;color:CanvasText}#kcl-pier-native .kcl-pier-exit{background:ButtonFace;color:ButtonText;border:1px solid ButtonText;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}#kcl-pier-native .kcl-pier-exit svg{filter:none}}
+</style>
+<main id="kcl-pier-native" aria-label="Newport Pier photographic gallery">
+<iframe src="https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/" title="Newport Pier gallery: scroll to walk, or use the gallery menu" allow="webgpu; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<nav aria-label="Gallery exit and fallback">
+<a class="kcl-pier-exit" href="/" aria-label="Return to main site" title="Return to main site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
+<a class="kcl-pier-exit" href="https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site/pier-v2-20260910/" target="_blank" rel="noopener" aria-label="Open gallery directly in a new tab" title="Open gallery directly"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6m0-6-10 10M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/></svg></a>
+</nav>
+</main>
+<script id="kcl-pier-native-mount-20260909">
+(function(){'use strict';var root=document.getElementById('kcl-pier-native');if(root&&root.parentNode!==document.body)document.body.appendChild(root);})();
+</script>
+
+<style id="kcl-pier-exit-sheen-style-20260910">
+#kcl-pier-native .kcl-pier-exit-sheen{position:absolute;inset:1px;overflow:hidden;border-radius:inherit;pointer-events:none;contain:paint}
+#kcl-pier-native .kcl-pier-exit-reflection{position:absolute;inset:-30% 0;width:100%;height:160%;pointer-events:none;opacity:0;background:linear-gradient(112deg,transparent 19%,rgb(255 255 255 / .08) 35%,rgb(255 255 255 / .42) 47%,rgb(255 255 255 / .1) 55%,transparent 70%)}
+@media(prefers-reduced-motion:reduce),(prefers-reduced-transparency:reduce),(prefers-contrast:more),(forced-colors:active){#kcl-pier-native .kcl-pier-exit-sheen{display:none!important}}
+</style>
+<script id="kcl-pier-exit-sheen-20260910">
+(function(){
+ 'use strict';
+ var root=document.getElementById('kcl-pier-native');
+ if(!root||root.dataset.exitSheen==='v1')return;
+ var iframe=root.querySelector('iframe');
+ var trustedOrigin='https://kiyono-coastal-gallery.kiyonophotography.chatgpt.site';
+ if(!iframe||new URL(iframe.src,location.href).origin!==trustedOrigin)return;
+ root.dataset.exitSheen='v1';
+ var preferences=['(prefers-reduced-motion: reduce)','(prefers-reduced-transparency: reduce)','(prefers-contrast: more)','(forced-colors: active)'].map(function(q){return matchMedia(q)});
+ var layers=Array.from(root.querySelectorAll('.kcl-pier-exit')).map(function(exit){
+  var clip=document.createElement('span');clip.className='kcl-pier-exit-sheen';clip.setAttribute('aria-hidden','true');
+  var light=document.createElement('span');light.className='kcl-pier-exit-reflection';
+  clip.appendChild(light);exit.appendChild(clip);return{clip:clip,light:light};
+ });
+ var last={enabled:false,x:-120,opacity:0};
+ function paint(){
+  var enabled=last.enabled&&!document.hidden&&!preferences.some(function(p){return p.matches})&&document.body.dataset.appearance!=='solid';
+  layers.forEach(function(layer){
+   layer.clip.style.display=enabled?'':'none';
+   layer.light.style.transform='translate3d('+last.x+'%,0,0) skewX(-12deg)';
+   layer.light.style.opacity=String(enabled?last.opacity:0);
+  });
+ }
+ function receive(event){
+  if(event.source!==iframe.contentWindow||event.origin!==trustedOrigin)return;
+  var data=event.data;
+  if(!data||data.type!=='kcl-glass-sheen-v1'||typeof data.enabled!=='boolean'||!Number.isFinite(data.x)||!Number.isFinite(data.opacity)||['up','down'].indexOf(data.direction)<0)return;
+  last={enabled:data.enabled,x:Math.min(120,Math.max(-120,data.x)),opacity:Math.min(.36,Math.max(0,data.opacity))};paint();
+ }
+ var appearance=new MutationObserver(paint);
+ appearance.observe(document.body,{attributes:true,attributeFilter:['data-appearance']});
+ window.addEventListener('message',receive);
+ document.addEventListener('visibilitychange',paint);
+ preferences.forEach(function(p){p.addEventListener('change',paint)});
+ iframe.addEventListener('load',function(){last.enabled=false;paint()});
+ paint();
+})();
+</script>
