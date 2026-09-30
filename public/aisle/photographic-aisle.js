@@ -38,6 +38,12 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');let motionPreference='system',frame=0,destroyed=false,p=0,z=0,dimensions={width:0,height:0},frameCount=0;
   const video=createVideoFrameSeam({viewport,poster:original,onReady:schedule});
   const isReduced=()=>motionPreference==='still'||(motionPreference==='system'&&reduced.matches);
+  // The generated walk is the background. Still and reduced motion keep the photograph.
+  if(!isReduced())void video.setEnabled(true);
+  // Living water: WebGPU-only overlay that keeps the sea moving while scroll is idle.
+  // Browsers without WebGPU never fetch the bundle; any failure leaves the img pipeline as-is.
+  let water=null;
+  if('gpu'in navigator)import('/aisle/water-layer.js').then(m=>m.mountWaterLayer(viewport)).then(w=>{water=w;}).catch(()=>{});
   function measure(){dimensions={width:viewport.clientWidth,height:viewport.clientHeight};}
   function render(){
     frame=0;if(destroyed||!dimensions.width||!dimensions.height)return;frameCount++;
@@ -85,8 +91,8 @@ export function initPhotographicAisle({container,slots,onSelect,onCategory}){
   function setMotionPreference(mode){if(!['system','guided','still'].includes(mode))throw new TypeError('Motion preference must be system, guided or still');motionPreference=mode;preference();return mode;}
   const observer=new ResizeObserver(resize);observer.observe(viewport);window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',resize,{passive:true});reduced.addEventListener('change',preference);preference();
   Promise.all([original.decode(),...records.map(r=>r.wood.decode())]).then(resize).catch(()=>{const error=document.createElement('p');error.className='aisle-source-failure';error.textContent='A source photograph could not load. The ordinary photograph list remains available below.';viewport.append(error);journey.dataset.reduced='true';resize();});
-  const getState=()=>({kind:video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',scrollY,cameraZ:z,progress:p,motionPreference,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
+  const getState=()=>({kind:video.getState().committedFrame!==null?'generated-video frames with measured 2D alignment; depth approximate':'photographic2.5D independent-depth projection',water:water?.getState?.()??null,scrollY,cameraZ:z,progress:p,motionPreference,reducedMotion:isReduced(),systemReducedMotion:reduced.matches,backgroundAnimated:video.getState().committedFrame!==null,video:video.getState(),frameCount,viewport:{...dimensions},slots:records.map(r=>({id:r.slot.id,depth:r.depth,depthGroup:r.slot.depth,distance:z===null?null:r.depth-z,scale:r.scale,passed:r.group.dataset.passed==='true',trackingValid:r.trackingValid,projectionMatrix:r.projectionMatrix,projectedQuad:r.projectedQuad,interactive:r.anchor.tabIndex===0}))});
   const restore=state=>{if(!state||!Number.isFinite(state.scrollY))return;scrollTo({top:state.scrollY,behavior:'instant'});schedule();};
-  const destroy=()=>{destroyed=true;if(frame)cancelAnimationFrame(frame);video.destroy();observer.disconnect();window.removeEventListener('scroll',schedule);window.removeEventListener('resize',resize);reduced.removeEventListener('change',preference);journey.remove();ownedStyle.remove();};
+  const destroy=()=>{destroyed=true;if(frame)cancelAnimationFrame(frame);water?.destroy();video.destroy();observer.disconnect();window.removeEventListener('scroll',schedule);window.removeEventListener('resize',resize);reduced.removeEventListener('change',preference);journey.remove();ownedStyle.remove();};
   return{viewport,journey,getState,restore,destroy,setMotionPreference,setVideoPreview:video.setEnabled,slotAnchors:records.map(({slot,anchor,group})=>({slot,anchor,group})),homography};
 }

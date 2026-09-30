@@ -1,0 +1,164 @@
+/* Shared optical control surface. Photography remains visible through a
+   near-colorless film; compact text-local shadows protect white labels.
+   Explicit Solid and the System accessibility preference share one fallback.
+   No photograph, navigation destination, or camera behavior is changed here. */
+
+:root{
+  --ctl-font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;
+  --ctl-ease:cubic-bezier(.25,.1,.25,1);
+  --ctl-bg:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.008) 55%,rgba(255,255,255,.02));
+  --ctl-bg-hover:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02) 55%,rgba(255,255,255,.04));
+  --ctl-bg-press:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015) 55%,rgba(255,255,255,.03));
+  --ctl-blur:blur(8px);
+  --ctl-ink-shadow:0 1px 2px rgba(0,8,16,.98),0 0 3px rgba(0,8,16,.92);
+  --ctl-transition:transform .22s var(--ctl-ease),background-color .2s ease,background .2s ease,border-color .2s ease;
+  --ctl-border:rgba(255,255,255,.4);
+  --ctl-border-hover:rgba(255,255,255,.6);
+  --ctl-highlight:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.07);
+  --ctl-float:0 1px 2px rgba(0,8,16,.22),0 8px 28px rgba(0,10,20,.28);
+}
+
+/* ---- shared material -------------------------------------------------- */
+body[data-appearance] :is(.menu>button,.menu nav,.menu select,
+.glass-control,.category-sign,.aisle-video-toggle,.walk-step,
+dialog button,.aisle-progress,.aisle-video-status,.collection-header,.card-arrow){
+  border:1px solid var(--ctl-border);
+  background:var(--ctl-bg);
+  box-shadow:var(--ctl-highlight),var(--ctl-float);
+  backdrop-filter:var(--ctl-blur);
+  -webkit-backdrop-filter:var(--ctl-blur);
+  color:#fff;text-shadow:var(--ctl-ink-shadow);
+  transition:var(--ctl-transition);
+}
+.menu nav button,.menu nav a{
+  border:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+  color:#fff;text-shadow:var(--ctl-ink-shadow);border-radius:11px;
+  transition:background-color .15s ease;
+}
+
+/* ---- shape: capsules for actions, circles for steps, concentric panel -- */
+.menu>button,.glass-control,.category-sign,.aisle-video-toggle,dialog button,.aisle-progress{border-radius:980px}
+.menu nav{border-radius:18px;padding:7px}
+.menu select{border-radius:10px}
+.walk-step{border-radius:50%}
+
+/* ---- the label voice: system SF, sentence case, tight ------------------ */
+.menu>button,.menu nav button,.menu nav a,.menu select,.menu label,
+.glass-control,.category-sign,.aisle-video-toggle,dialog button,
+.aisle-progress span,.aisle-video-status{
+  font-family:var(--ctl-font);
+  text-transform:none;
+}
+.menu>button{font-size:15px;font-weight:700;letter-spacing:-.02em;padding:13px 24px}
+.menu nav button,.menu nav a{font-size:15px;font-weight:600;letter-spacing:-.015em}
+.menu label{font-size:13px;font-weight:500;letter-spacing:-.008em;color:#fff}
+.menu select{font-size:14px;font-weight:600}
+/* Native selects keep their keyboard/popup behavior. A small two-tone
+   chevron remains distinguishable over bright photography; no nested blur. */
+body[data-appearance] .menu select{
+  appearance:none;-webkit-appearance:none;padding-right:28px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='m2 4 4 4 4-4' fill='none' stroke='%23000810' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m2 4 4 4 4-4' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 9px center;background-size:12px 12px;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+body[data-appearance] :is(.collection-header>.glass-control,.aisle-progress>.walk-step){
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+.glass-control,dialog button{font-size:14px;font-weight:700;letter-spacing:-.018em;line-height:1.2;padding:11px 22px}
+.category-sign{font-size:13px;font-weight:700;letter-spacing:-.014em;line-height:1.25;padding:10px 17px;min-width:0}
+.aisle-video-toggle{font-size:13px;font-weight:700;letter-spacing:-.014em;padding:11px 20px}
+.aisle-progress span{font-size:13px;font-weight:700;letter-spacing:-.012em}
+.aisle-video-status{font-size:11px;font-weight:450;letter-spacing:-.004em;line-height:1.35;
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:980px;padding:5px 14px;max-width:420px;text-align:center}
+.walk-step{font-size:17px}
+body[data-appearance] :is(.menu nav a,.menu nav button,.menu label,
+.collection-switcher a,.aisle-progress span){color:#fff;text-shadow:var(--ctl-ink-shadow)}
+
+/* ---- states: material brightens, springy press, no lift ---------------- */
+@media(hover:hover){
+  body[data-appearance] :is(.menu>button:hover,.glass-control:hover,.category-sign:hover,
+  .aisle-video-toggle:hover:not(:disabled),dialog button:hover,
+  .walk-step:hover:not(:disabled)){
+    background:var(--ctl-bg-hover);
+    border-color:var(--ctl-border-hover);
+  }
+  .menu nav button:hover,.menu nav a:hover{background:rgba(255,255,255,.2)}
+  .site-footer nav a:hover{color:#fff}
+}
+.menu>button:active,.glass-control:active,.aisle-video-toggle:active:not(:disabled),
+dialog button:active,.walk-step:active:not(:disabled){
+  transform:scale(.96);
+  background:var(--ctl-bg-press);
+  transition-duration:.1s;
+}
+.category-sign:active{transform:translate(-50%,-100%) scale(.96);transition-duration:.1s}
+.menu nav button:active,.menu nav a:active{background:rgba(255,255,255,.28)}
+.walk-step:disabled{opacity:.3}
+
+/* ---- the wayfinding track --------------------------------------------- */
+.aisle-progress progress{width:96px;height:3px;accent-color:#fff}
+.aisle-progress progress::-webkit-progress-bar{background:rgba(255,255,255,.22);border-radius:99px}
+.aisle-progress progress::-webkit-progress-value{background:#fff;border-radius:99px}
+
+/* ---- the photograph viewer is the same material ------------------------ */
+dialog{
+  background:rgba(10,22,32,.6);
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:22px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 24px 80px rgba(0,8,16,.55);
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+}
+dialog::backdrop{background:rgba(2,8,14,.7)}
+
+/* ---- chips and footer speak the same language -------------------------- */
+.card-arrow{border-color:var(--ctl-border);background:var(--ctl-bg);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
+.site-footer nav a{transition:color .2s ease,border-color .2s ease}
+
+/* Keep the title and every focus ring inside a narrow native dialog. */
+@media(max-width:480px){
+  #viewer nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px}
+  #viewer-title{grid-column:1/-1;grid-row:1;min-width:0;overflow-wrap:anywhere}
+  #viewer nav button{min-width:0;min-height:44px;padding:10px 8px}
+}
+/* The footer controls remain reachable in short landscape; the existing
+   invitation fits above them without concealing its scroll/swipe cue. */
+@media(max-height:430px) and (min-width:650px){
+  .aisle-viewport>#menu{top:12px}
+  .aisle-invitation{top:74px}
+  .aisle-invitation .invitation-body{margin-top:6px}
+  .aisle-invitation .invitation-cue{margin-top:6px}
+}
+
+body[data-appearance=solid]{
+  --ctl-bg:#102c40;--ctl-bg-hover:#16384f;--ctl-bg-press:#0c2334;
+  --ctl-blur:none;--ctl-ink-shadow:none;--ctl-transition:none;
+}
+
+/* ---- accessibility contracts stay intact ------------------------------ */
+@media(prefers-reduced-motion:reduce){
+  body{--ctl-transition:none}
+  .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
+  .aisle-video-toggle,.walk-step,dialog button,.site-footer nav a,.aisle-progress{transition:none}
+  .menu>button:active,.glass-control:active,.aisle-video-toggle:active:not(:disabled),
+  dialog button:active,.walk-step:active:not(:disabled){transform:none}
+  .category-sign:active{transform:translate(-50%,-100%)}
+}
+/* Respect System's reduced-transparency setting without overriding an
+   explicit Clear choice. Explicit Solid uses the same opaque tokens above. */
+@media(prefers-reduced-transparency:reduce){
+  body:not([data-appearance=clear]){
+    --ctl-bg:#102c40;--ctl-bg-hover:#16384f;--ctl-bg-press:#0c2334;
+    --ctl-blur:none;--ctl-ink-shadow:none;--ctl-transition:none;
+  }
+}
+@media(forced-colors:active){
+  .menu>button,.menu nav button,.menu nav a,.menu select,.glass-control,.category-sign,
+  .aisle-video-toggle,.walk-step,dialog button,.aisle-progress,.aisle-video-status,.card-arrow,.collection-header,dialog{
+    background:ButtonFace!important;color:ButtonText!important;border:1px solid ButtonText!important;
+    box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;text-shadow:none!important;transition:none!important}
+  body[data-appearance] :is(.menu label,.collection-switcher a,.aisle-progress span){color:ButtonText!important;text-shadow:none!important}
+  body[data-appearance] .menu select{appearance:auto;-webkit-appearance:auto;background-image:none!important}
+}

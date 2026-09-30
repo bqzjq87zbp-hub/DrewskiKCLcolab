@@ -28,7 +28,7 @@ assert(manifest.assets.length===92,'Unexpected image allowlist count');
 for(const item of manifest.assets){const bytes=await fs.readFile(path.join(root,item.path));assert(bytes.length===item.bytes&&hash(bytes)===item.sha256,'Asset hash mismatch: '+item.path);}
 const sequence=JSON.parse(await fs.readFile(path.join(pub,'video/frames.json'),'utf8'));
 assert(sequence.reviewStatus==='preview-only','Video must remain labeled preview-only until tracking is reviewed');
-assert(sequence.frames.length===121,'Expected 121 actual video samples');
+assert(sequence.frames.length===241,'Expected 241 actual video samples');
 let previousTime=-1,videoFrameBytes=0;
 for(const frame of sequence.frames){
   assert(/^frame-\d{4}\.jpg$/.test(frame.file),'Invalid video frame filename');
@@ -52,7 +52,7 @@ let output='';child.stdout.on('data',chunk=>output+=chunk);child.stderr.on('data
 try{
   await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Test server did not start: '+output)),5000);child.once('error',reject);child.once('exit',code=>reject(Error('Server exited '+code+': '+output)));child.stdout.on('data',()=>{if(output.includes('Portfolio preview:')){clearTimeout(timer);resolve();}});});
   const base='http://127.0.0.1:'+port;
-  for(const url of ['/','/categories.json','/main-v2.js','/aisle/photographic-aisle.js','/aisle/video-frame-seam.js','/video/frames.json','/video/frame-0000.jpg','/video/frame-0120.jpg'])assert((await fetch(base+url)).status===200,'Runtime route failed '+url);
+  for(const url of ['/','/categories.json','/main.js','/archive/archive.js','/archive/archive.css','/aisle/photographic-aisle.js','/aisle/video-frame-seam.js','/video/frames.json','/video/frame-0000.jpg','/video/frame-0120.jpg','/video/frame-0240.jpg'])assert((await fetch(base+url)).status===200,'Runtime route failed '+url);
   for(const url of ['/server.mjs','/package.json','/docs/asset-manifest.json','/.git/config','/.env','/%2e%2e/package.json','/media/%2e%2e/%2e%2e/server.mjs'])assert((await fetch(base+url)).status===404,'Private route exposed '+url);
   assert((await fetch(base+'/',{method:'POST'})).status===405,'POST should be rejected');
   assert((await fetch(base+'/',{method:'HEAD'})).status===200,'HEAD failed');
