@@ -118,9 +118,9 @@ function buildFooter({ collections, sound, bookingHref }) {
   const counter = el("strong", { class: "foot-total", text: "0" });
   const footer = el("footer", { class: "foot" },
     el("div", { class: "foot-inner" },
-      el("p", { class: "foot-eyebrow", text: "Newport Beach, California" }),
+      el("p", { class: "foot-eyebrow", text: "Kiyono Creative Lab" }),
       el("h2", { class: "foot-title" }, splitWords("Book now.")),
-      el("p", { class: "foot-pitch", text: "Portraits, branding and coastal work on the sand at Newport. Tell me what you have in mind." }),
+      el("p", { class: "foot-pitch", text: "Portraits, branding and coastal work. Tell me what you have in mind." }),
       el("div", { class: "foot-actions" },
         el("a", { class: "foot-book", href: bookingHref, dataset: { cursor: "book", cursorLabel: "Book" } },
           el("span", { text: "Book a session" }),

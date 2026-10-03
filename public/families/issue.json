@@ -4,7 +4,7 @@
   "mark": "Families",
   "cover": "img/955f53a8e6570b9373c299c2.jpg",
   "standfirst": "Family portraits made outside: under broad trees, out in the Southern California hills, down at the shoreline and on into the evening.",
-  "footer": "Kiyono Creative Lab · Families · Southern California",
+  "footer": "Kiyono Creative Lab · Families",
   "backline": "Hold on to this one.",
   "theme": {
     "mark": "Families",
@@ -438,13 +438,6 @@
     "heroInk": "#5f6a52",
     "acc": "#6c8746",
     "intro": "Twenty-one photographs in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
-    "place": {
-      "name": "Newport Beach",
-      "lat": 33.6073,
-      "lon": -117.9289,
-      "tz": "America/Los_Angeles"
-    },
-    "almanac": "sun",
     "sound": "river",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"

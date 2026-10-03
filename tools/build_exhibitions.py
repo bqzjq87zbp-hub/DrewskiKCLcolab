@@ -209,11 +209,6 @@ def front_door(site, issues):
     <a href="/walk/" data-go="#061522" data-go-label="The Walk" data-preview="/video/walk-scrub.mp4" data-cursor="label" data-cursor-label="Walk">Walk the pier</a>
     <a href="mailto:{a(site["booking"])}?subject=Booking%20enquiry" data-cursor="label" data-cursor-label="Email">Book a session</a>
   </nav>
-  <div class="ld-bot lbl">
-    <span class="ld-count">&nbsp;</span>
-    <span>{a(site["season"])}</span>
-    <span class="r"><span data-live="place"></span> <span class="num" data-live="time"></span><br><span data-live="line"></span></span>
-  </div>
 </main>
 <noscript><p style="padding:40px;color:#eee;font:16px/1.5 Georgia,serif">The exhibitions need JavaScript. The flat editions: {noscript}. Or <a style="color:#fff" href="/walk/">walk the pier</a>.</p></noscript>
 <div class="grain" aria-hidden="true"></div>
@@ -397,7 +392,9 @@ def main():
             "exhibit": {
                 "wordmark": ex["mark"], "font": ex["font"], "weight": ex["weight"], "variation": ex["variation"],
                 "hero": ex["hero"], "heroInk": ex["heroInk"], "acc": acc, "intro": ex["intro"],
-                "place": site["place"], "almanac": "sun", "sound": ex["sound"], "game": "skip",
+                # a live clock and light only when the site names a place
+                **({"place": site["place"], "almanac": "sun"} if site.get("place") else {}),
+                "sound": ex["sound"], "game": "skip",
                 "booking": site["booking"],
             },
         }

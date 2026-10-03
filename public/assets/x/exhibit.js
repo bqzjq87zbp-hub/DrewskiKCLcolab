@@ -119,7 +119,7 @@ async function boot() {
   wireFooter(ctx);
   initReveals(document);
   bindAll(document);
-  startLive(document, ex);
+  if (ex.place || ex.almanac) startLive(document, ex);
 
   scroll.unlock();
   refresh();
@@ -243,7 +243,7 @@ function render(ctx) {
         <li><button type="button" data-act="play" data-cursor="play">Skip a stone</button></li>
         <li><button type="button" data-act="menu">Settings</button></li></ul></div>
     </div>
-    <div class="ft-base lbl"><span>${esc(issue.footer || "")}</span><span data-live="all"></span><span>Kiyono Creative Lab &middot; The Exhibitions</span></div>`);
+    <div class="ft-base lbl"><span>${esc(issue.footer || "")}</span>${ex.place ? '<span data-live="all"></span>' : ""}<span>The Exhibitions</span></div>`);
 
   const grain = h("div", { class: "grain", "aria-hidden": "true" });
   const app = $("#app") || document.body;

@@ -28,7 +28,9 @@ test("the front door lists four exhibitions with covers, colours and true plate 
     const n = json(`${i.slug}/issue.json`).stories.reduce((a, s) => a + s.plates.length, 0);
     assert.equal(i.plates, n, `${i.slug}: catalog says ${i.plates}, the exhibition hangs ${n}`);
   }
-  assert.ok(catalog.site.booking && catalog.site.place.tz, "booking address and place");
+  assert.ok(catalog.site.booking, "booking address");
+  assert.ok(!catalog.site.place, "no studio location or clock: the studio is not in Newport");
+  assert.ok(!/Newport Beach/.test(readFileSync(path("index.html"), "utf8")), "the front door names no studio location");
 });
 
 for (const { slug } of catalog.issues) {
@@ -46,7 +48,7 @@ for (const { slug } of catalog.issues) {
     }
     for (const c of issue.palette) assert.ok(HEX.test(c.hex) && c.name && c.plates.length >= 1, `swatch ${c.name}`);
     assert.equal(new Set(issue.palette.map((c) => c.name)).size, issue.palette.length, "swatch names are unique");
-    assert.ok(ex.wordmark && ex.font && ex.place && ex.almanac === "sun" && ex.booking);
+    assert.ok(ex.wordmark && ex.font && ex.booking && !ex.place, "no live clock for a place");
     assert.ok(["cruise", "river"].includes(ex.sound) && ex.game === "skip");
     const shell = readFileSync(path(`${slug}/index.html`), "utf8");
     assert.match(shell, /assets\/x\/exhibit\.js/);

@@ -4,7 +4,7 @@
   "mark": "Coastal",
   "cover": "img/07f59839133492f58ad8884a.jpg",
   "standfirst": "Coastal photographs made around the pier: two kids, two bright balls and the light under the boards, then one figure alone in the shallows.",
-  "footer": "Kiyono Creative Lab · Coastal · Newport Beach",
+  "footer": "Kiyono Creative Lab · Coastal",
   "backline": "Get your feet wet.",
   "theme": {
     "mark": "Coastal",
@@ -147,13 +147,6 @@
     "heroInk": "#46646e",
     "acc": "#2c6c84",
     "intro": "Four photographs in two chapters. Scroll to walk the exhibition. Open any frame to read it.",
-    "place": {
-      "name": "Newport Beach",
-      "lat": 33.6073,
-      "lon": -117.9289,
-      "tz": "America/Los_Angeles"
-    },
-    "almanac": "sun",
     "sound": "river",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"

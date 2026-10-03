@@ -3,10 +3,8 @@
   "site": {
     "title": "The Exhibitions",
     "studio": "Kiyono Creative Lab",
-    "note": "Portraits, branding and coastal work from Newport Beach, hung as exhibitions",
-    "season": "Newport Beach, California",
-    "booking": "bqzjq87zbp@privaterelay.appleid.com",
-    "place": { "name": "Newport Beach", "lat": 33.6073, "lon": -117.9289, "tz": "America/Los_Angeles" }
+    "note": "Portraits, branding and coastal work, hung as exhibitions",
+    "booking": "bqzjq87zbp@privaterelay.appleid.com"
   },
   "exhibitions": [
     {
@@ -15,10 +13,10 @@
       "mark": "Branding",
       "issue": "Product and place",
       "blurb": "NWPRT on the sand, and a cold bottle three ways.",
-      "standfirst": "Brand work made where the product actually lives: on the sand at Newport, under yellow patio umbrellas, and up close for a cold bottle.",
+      "standfirst": "Brand work made where the product actually lives: on the sand, under yellow patio umbrellas, and up close for a cold bottle.",
       "intro": "Thirteen photographs in four chapters: apparel, patio hours, the waterline and a cold bottle. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Product told through the place.",
-      "footer": "Kiyono Creative Lab · Branding · Newport Beach",
+      "footer": "Kiyono Creative Lab · Branding",
       "font": "'Fraunces', Georgia, serif",
       "weight": 850,
       "variation": "'SOFT' 100, 'WONK' 0, 'opsz' 144",
@@ -31,42 +29,106 @@
         {
           "title": "Worn",
           "deck": "NWPRT apparel off the rack and on a person. The garment first, then the attitude.",
-          "mood": { "bg": "#f4efe6", "ink": "#1d1913" },
+          "mood": {
+            "bg": "#f4efe6",
+            "ink": "#1d1913"
+          },
           "plates": [
-            { "id": "nwprt-apparel-display", "kicker": "The Rack", "caption": "An orange NWPRT shirt, a blue tie-dye hoodie, a burgundy cap and orange sunglasses on a wooden rack by the window." },
-            { "id": "nwprt-cap-portrait", "kicker": "Cap Tip", "caption": "Sunglasses on, a white NWPRT cap tipped beside a dark doorway." }
+            {
+              "id": "nwprt-apparel-display",
+              "kicker": "The Rack",
+              "caption": "An orange NWPRT shirt, a blue tie-dye hoodie, a burgundy cap and orange sunglasses on a wooden rack by the window."
+            },
+            {
+              "id": "nwprt-cap-portrait",
+              "kicker": "Cap Tip",
+              "caption": "Sunglasses on, a white NWPRT cap tipped beside a dark doorway."
+            }
           ]
         },
         {
           "title": "Patio Hours",
           "deck": "Yellow umbrellas, orange chairs and a cold lager. The slow half of a beach day.",
-          "mood": { "bg": "#f7efd6", "ink": "#231c0c" },
+          "mood": {
+            "bg": "#f7efd6",
+            "ink": "#231c0c"
+          },
           "plates": [
-            { "id": "nwprt-hat-lager", "kicker": "Hat and Lager", "caption": "A blue-and-red NWPRT Lager hat beside a glass of golden beer, under yellow patio umbrellas." },
-            { "id": "nwprt-lager-charlies", "kicker": "Charlie's", "caption": "The cap and a golden beer in front of the Charlie's Chili menu, beneath the yellow umbrellas." },
-            { "id": "nwprt-yellow-patio", "kicker": "The Walkway", "caption": "Yellow umbrellas and orange chairs line the beachside walk, under palms and a white streetlamp." }
+            {
+              "id": "nwprt-hat-lager",
+              "kicker": "Hat and Lager",
+              "caption": "A blue-and-red NWPRT Lager hat beside a glass of golden beer, under yellow patio umbrellas."
+            },
+            {
+              "id": "nwprt-lager-charlies",
+              "kicker": "Charlie's",
+              "caption": "The cap and a golden beer in front of the Charlie's Chili menu, beneath the yellow umbrellas."
+            },
+            {
+              "id": "nwprt-yellow-patio",
+              "kicker": "The Walkway",
+              "caption": "Yellow umbrellas and orange chairs line the beachside walk, under palms and a white streetlamp."
+            }
           ]
         },
         {
           "title": "The Waterline",
           "deck": "Lifeguard towers, bodyboards and the pier. The brand placed where the beach actually happens.",
-          "mood": { "bg": "#eaf1f4", "ink": "#0f1f2a" },
+          "mood": {
+            "bg": "#eaf1f4",
+            "ink": "#0f1f2a"
+          },
           "plates": [
-            { "id": "nwprt-lifeguard-campaign", "kicker": "The Tower", "caption": "A lifeguard climbs a wooden tower under yellow flags, the NWPRT graphic set against a blue sky." },
-            { "id": "nwprt-bodyboard-wind", "kicker": "Afternoon Wind", "caption": "Two kids hold their bodyboards in the breeze beside a lifeguard tower." },
-            { "id": "nwprt-gulls-beachfront", "kicker": "Gulls", "caption": "One gull spreads its wings beside another above a busy, palm-lined beachfront." },
-            { "id": "nwprt-pier-shore-activity", "kicker": "Newport Pier", "caption": "Two kids and their boards meet the surf beside the pier, doubled in the wet sand." },
-            { "id": "nwprt-underpier-branded", "kicker": "Under the Pier", "caption": "Waves pass beneath the timber pier, the NWPRT Supply Co badge set low in the frame." }
+            {
+              "id": "nwprt-lifeguard-campaign",
+              "kicker": "The Tower",
+              "caption": "A lifeguard climbs a wooden tower under yellow flags, the NWPRT graphic set against a blue sky."
+            },
+            {
+              "id": "nwprt-bodyboard-wind",
+              "kicker": "Afternoon Wind",
+              "caption": "Two kids hold their bodyboards in the breeze beside a lifeguard tower."
+            },
+            {
+              "id": "nwprt-gulls-beachfront",
+              "kicker": "Gulls",
+              "caption": "One gull spreads its wings beside another above a busy, palm-lined beachfront."
+            },
+            {
+              "id": "nwprt-pier-shore-activity",
+              "kicker": "At the Waterline",
+              "caption": "Two kids and their boards meet the surf beside the pier, doubled in the wet sand."
+            },
+            {
+              "id": "nwprt-underpier-branded",
+              "kicker": "Under the Pier",
+              "caption": "Waves pass beneath the timber pier, the NWPRT Supply Co badge set low in the frame."
+            }
           ]
         },
         {
           "title": "A Cold Bottle",
           "deck": "One classic bottle, three ways: white gloves, an ice bucket on the sand, and caps under droplets.",
-          "mood": { "bg": "#170d0c", "ink": "#f3e8e3" },
+          "mood": {
+            "bg": "#170d0c",
+            "ink": "#f3e8e3"
+          },
           "plates": [
-            { "id": "branding-12", "kicker": "White Gloves", "caption": "White-gloved hands present the bottle beside a wine glass in a reflective product composition." },
-            { "id": "branding-13", "kicker": "Ice Bucket", "caption": "Bottles on ice in a red bucket, a game of beach volleyball in play behind them." },
-            { "id": "branding-14", "kicker": "Four Caps", "caption": "Four red bottle caps on a pale surface beaded with water." }
+            {
+              "id": "branding-12",
+              "kicker": "White Gloves",
+              "caption": "White-gloved hands present the bottle beside a wine glass in a reflective product composition."
+            },
+            {
+              "id": "branding-13",
+              "kicker": "Ice Bucket",
+              "caption": "Bottles on ice in a red bucket, a game of beach volleyball in play behind them."
+            },
+            {
+              "id": "branding-14",
+              "kicker": "Four Caps",
+              "caption": "Four red bottle caps on a pale surface beaded with water."
+            }
           ]
         }
       ]
@@ -80,7 +142,7 @@
       "standfirst": "Family portraits made outside: under broad trees, out in the Southern California hills, down at the shoreline and on into the evening.",
       "intro": "Twenty-one photographs in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Hold on to this one.",
-      "footer": "Kiyono Creative Lab · Families · Southern California",
+      "footer": "Kiyono Creative Lab · Families",
       "font": "'Pinyon Script', 'Snell Roundhand', cursive",
       "weight": 400,
       "variation": "",
@@ -93,57 +155,156 @@
         {
           "title": "Under the Tree",
           "deck": "Shade, dappled light and everyone close together.",
-          "mood": { "bg": "#eef0e4", "ink": "#1b2114" },
+          "mood": {
+            "bg": "#eef0e4",
+            "ink": "#1b2114"
+          },
           "plates": [
-            { "id": "families-02", "kicker": "Newborn", "caption": "Two children kiss their mother while she cradles a newborn beneath the tree." },
-            { "id": "families-03", "kicker": "The Two of Them", "caption": "A couple sits together under a broad tree, smiling at one another." },
-            { "id": "families-05", "kicker": "Laughing", "caption": "Two parents laugh while holding their young child beneath a leafy tree." },
-            { "id": "families-12", "kicker": "Five", "caption": "A family of five gathers beneath a tree in a relaxed portrait." },
-            { "id": "families-11", "kicker": "Layers", "caption": "A father holds the baby in the foreground while the rest of the family gathers behind." },
-            { "id": "families-16", "kicker": "Wide", "caption": "A father holds a baby in the foreground while the mother and children gather beneath the tree behind them." }
+            {
+              "id": "families-02",
+              "kicker": "Newborn",
+              "caption": "Two children kiss their mother while she cradles a newborn beneath the tree."
+            },
+            {
+              "id": "families-03",
+              "kicker": "The Two of Them",
+              "caption": "A couple sits together under a broad tree, smiling at one another."
+            },
+            {
+              "id": "families-05",
+              "kicker": "Laughing",
+              "caption": "Two parents laugh while holding their young child beneath a leafy tree."
+            },
+            {
+              "id": "families-12",
+              "kicker": "Five",
+              "caption": "A family of five gathers beneath a tree in a relaxed portrait."
+            },
+            {
+              "id": "families-11",
+              "kicker": "Layers",
+              "caption": "A father holds the baby in the foreground while the rest of the family gathers behind."
+            },
+            {
+              "id": "families-16",
+              "kicker": "Wide",
+              "caption": "A father holds a baby in the foreground while the mother and children gather beneath the tree behind them."
+            }
           ]
         },
         {
           "title": "In the Hills",
           "deck": "Open sky, tall grass and room to move.",
-          "mood": { "bg": "#f4eedf", "ink": "#241d10" },
+          "mood": {
+            "bg": "#f4eedf",
+            "ink": "#241d10"
+          },
           "plates": [
-            { "id": "families-01", "kicker": "Four", "caption": "A family of four sits together in the Southern California hills." },
-            { "id": "families-07", "kicker": "Up High", "caption": "A father lifts his son high against an open blue sky in the hills." },
-            { "id": "families-09", "kicker": "The Dance", "caption": "A father dances with his daughter outdoors while another child watches." },
-            { "id": "families-13", "kicker": "Tall Grass", "caption": "Two sisters hold hands while moving through tall grass." },
-            { "id": "families-lacie-004", "kicker": "Sisters", "caption": "An older sister wraps her younger sister in a hug, standing together in tall grass." }
+            {
+              "id": "families-01",
+              "kicker": "Four",
+              "caption": "A family of four sits together in the Southern California hills."
+            },
+            {
+              "id": "families-07",
+              "kicker": "Up High",
+              "caption": "A father lifts his son high against an open blue sky in the hills."
+            },
+            {
+              "id": "families-09",
+              "kicker": "The Dance",
+              "caption": "A father dances with his daughter outdoors while another child watches."
+            },
+            {
+              "id": "families-13",
+              "kicker": "Tall Grass",
+              "caption": "Two sisters hold hands while moving through tall grass."
+            },
+            {
+              "id": "families-lacie-004",
+              "kicker": "Sisters",
+              "caption": "An older sister wraps her younger sister in a hug, standing together in tall grass."
+            }
           ]
         },
         {
           "title": "Close",
           "deck": "Closer in: a newborn on a shoulder, a laughing child, and two faces in black and white.",
-          "mood": { "bg": "#ecebe7", "ink": "#1a1816" },
+          "mood": {
+            "bg": "#ecebe7",
+            "ink": "#1a1816"
+          },
           "plates": [
-            { "id": "families-04", "kicker": "First Look", "caption": "A newborn looks toward the camera, resting against their mother's shoulder." },
-            { "id": "families-lacie-001", "kicker": "Father and Child", "caption": "A smiling father cradles his laughing child in a close outdoor portrait." },
-            { "id": "families-10", "kicker": "Black and White", "caption": "A close black-and-white portrait of an older woman looking straight into the camera." },
-            { "id": "families-lacie-003", "kicker": "Eye Contact", "caption": "A young child looks directly into the camera, close and in black and white." }
+            {
+              "id": "families-04",
+              "kicker": "First Look",
+              "caption": "A newborn looks toward the camera, resting against their mother's shoulder."
+            },
+            {
+              "id": "families-lacie-001",
+              "kicker": "Father and Child",
+              "caption": "A smiling father cradles his laughing child in a close outdoor portrait."
+            },
+            {
+              "id": "families-10",
+              "kicker": "Black and White",
+              "caption": "A close black-and-white portrait of an older woman looking straight into the camera."
+            },
+            {
+              "id": "families-lacie-003",
+              "kicker": "Eye Contact",
+              "caption": "A young child looks directly into the camera, close and in black and white."
+            }
           ]
         },
         {
           "title": "By the Water",
           "deck": "Down at the shoreline and under the pier, with two very bright balls.",
-          "mood": { "bg": "#e7f0f2", "ink": "#0e1f27" },
+          "mood": {
+            "bg": "#e7f0f2",
+            "ink": "#0e1f27"
+          },
           "plates": [
-            { "id": "families-06", "kicker": "Shoreline", "caption": "Two children play with colorful balls along the shoreline under an open sky." },
-            { "id": "families-08", "kicker": "Under the Pier", "caption": "Two siblings smile at each other beneath the pier, holding glowing balls." },
-            { "id": "families-14", "kicker": "Color and Play", "caption": "Two children stand back to back by the beach, holding pink and blue balls." },
-            { "id": "families-15", "kicker": "Toward the Water", "caption": "Seen from behind, two children hold hands and carry their pink and blue balls toward the ocean." }
+            {
+              "id": "families-06",
+              "kicker": "Shoreline",
+              "caption": "Two children play with colorful balls along the shoreline under an open sky."
+            },
+            {
+              "id": "families-08",
+              "kicker": "Under the Pier",
+              "caption": "Two siblings smile at each other beneath the pier, holding glowing balls."
+            },
+            {
+              "id": "families-14",
+              "kicker": "Color and Play",
+              "caption": "Two children stand back to back by the beach, holding pink and blue balls."
+            },
+            {
+              "id": "families-15",
+              "kicker": "Toward the Water",
+              "caption": "Seen from behind, two children hold hands and carry their pink and blue balls toward the ocean."
+            }
           ]
         },
         {
           "title": "Into the Evening",
           "deck": "The light goes soft, then it goes. Silhouettes against a pale sky.",
-          "mood": { "bg": "#221a24", "ink": "#f1e7ee" },
+          "mood": {
+            "bg": "#221a24",
+            "ink": "#f1e7ee"
+          },
           "plates": [
-            { "id": "families-lacie-002", "kicker": "Balance", "caption": "A child in a pink dress balances on one leg, one arm out, beneath a pale evening sky." },
-            { "id": "families-lacie-005", "kicker": "Dusk", "caption": "A father carries two children while a mother holds the baby, all of them silhouetted against the evening sky." }
+            {
+              "id": "families-lacie-002",
+              "kicker": "Balance",
+              "caption": "A child in a pink dress balances on one leg, one arm out, beneath a pale evening sky."
+            },
+            {
+              "id": "families-lacie-005",
+              "kicker": "Dusk",
+              "caption": "A father carries two children while a mother holds the baby, all of them silhouetted against the evening sky."
+            }
           ]
         }
       ]
@@ -157,7 +318,7 @@
       "standfirst": "Professional portraits in the studio and on location: a warm red backdrop, clean light, walls with character, the places people work, and the odd event under neon.",
       "intro": "Thirty-one portraits in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Look like yourself, on purpose.",
-      "footer": "Kiyono Creative Lab · Headshots · Studio and on location",
+      "footer": "Kiyono Creative Lab · Headshots",
       "font": "'Fraunces', Georgia, serif",
       "weight": 200,
       "variation": "'SOFT' 0, 'WONK' 1, 'opsz' 144",
@@ -170,67 +331,206 @@
         {
           "title": "The Red Room",
           "deck": "One warm red backdrop and eight very different people. The backdrop stays, everyone else changes.",
-          "mood": { "bg": "#f6e9e5", "ink": "#2a1310" },
+          "mood": {
+            "bg": "#f6e9e5",
+            "ink": "#2a1310"
+          },
           "plates": [
-            { "id": "headshots-01", "kicker": "Gray Blazer", "caption": "An angled, smiling portrait in a light gray blazer against the warm red backdrop." },
-            { "id": "headshots-07", "kicker": "Braids", "caption": "Long braids, hoop earrings and a navy blazer against warm red." },
-            { "id": "headshots-13", "kicker": "Green Shirt", "caption": "A direct portrait in a light blazer and green shirt against the red studio backdrop." },
-            { "id": "headshots-19", "kicker": "Black Glasses", "caption": "Black glasses, a black jacket and a big smile against warm red." },
-            { "id": "headshots-24", "kicker": "Silver Necklace", "caption": "A composed portrait in a patterned top and a silver necklace against warm red." },
-            { "id": "headshots-lacie-twist-portrait", "kicker": "Twists", "caption": "Side-swept twists and a dark sweater, composed against the red backdrop." },
-            { "id": "headshots-lacie-cream-knit", "kicker": "Cream Knit", "caption": "Curly hair, a cream knit shirt and a beaded necklace against warm red." },
-            { "id": "headshots-lacie-burgundy-jacket", "kicker": "Burgundy", "caption": "Long dark hair and a burgundy jacket with black lapels, smiling against the red." }
+            {
+              "id": "headshots-01",
+              "kicker": "Gray Blazer",
+              "caption": "An angled, smiling portrait in a light gray blazer against the warm red backdrop."
+            },
+            {
+              "id": "headshots-07",
+              "kicker": "Braids",
+              "caption": "Long braids, hoop earrings and a navy blazer against warm red."
+            },
+            {
+              "id": "headshots-13",
+              "kicker": "Green Shirt",
+              "caption": "A direct portrait in a light blazer and green shirt against the red studio backdrop."
+            },
+            {
+              "id": "headshots-19",
+              "kicker": "Black Glasses",
+              "caption": "Black glasses, a black jacket and a big smile against warm red."
+            },
+            {
+              "id": "headshots-24",
+              "kicker": "Silver Necklace",
+              "caption": "A composed portrait in a patterned top and a silver necklace against warm red."
+            },
+            {
+              "id": "headshots-lacie-twist-portrait",
+              "kicker": "Twists",
+              "caption": "Side-swept twists and a dark sweater, composed against the red backdrop."
+            },
+            {
+              "id": "headshots-lacie-cream-knit",
+              "kicker": "Cream Knit",
+              "caption": "Curly hair, a cream knit shirt and a beaded necklace against warm red."
+            },
+            {
+              "id": "headshots-lacie-burgundy-jacket",
+              "kicker": "Burgundy",
+              "caption": "Long dark hair and a burgundy jacket with black lapels, smiling against the red."
+            }
           ]
         },
         {
           "title": "Clean Light",
           "deck": "Quiet backgrounds, crisp light and nothing between you and the camera.",
-          "mood": { "bg": "#f4f4f1", "ink": "#16181a" },
+          "mood": {
+            "bg": "#f4f4f1",
+            "ink": "#16181a"
+          },
           "plates": [
-            { "id": "headshots-02", "kicker": "Straight On", "caption": "A professional faces the camera in a clean portrait against a quiet background." },
-            { "id": "headshots-04", "kicker": "Glasses", "caption": "Glasses, a patterned blouse and a smile against a pale backdrop." },
-            { "id": "headshots-09", "kicker": "Editorial", "caption": "A neutral top and a direct gaze in a clean editorial headshot." },
-            { "id": "headshots-10", "kicker": "Formal", "caption": "A business professional smiles in formal attire against a bright, clean background." },
-            { "id": "headshots-16", "kicker": "Close", "caption": "A short beard and a steady look in a crisp close headshot against a clean neutral background." },
-            { "id": "headshots-17", "kicker": "Creative", "caption": "A creative professional meets the camera in a crisp headshot against a quiet backdrop." }
+            {
+              "id": "headshots-02",
+              "kicker": "Straight On",
+              "caption": "A professional faces the camera in a clean portrait against a quiet background."
+            },
+            {
+              "id": "headshots-04",
+              "kicker": "Glasses",
+              "caption": "Glasses, a patterned blouse and a smile against a pale backdrop."
+            },
+            {
+              "id": "headshots-09",
+              "kicker": "Editorial",
+              "caption": "A neutral top and a direct gaze in a clean editorial headshot."
+            },
+            {
+              "id": "headshots-10",
+              "kicker": "Formal",
+              "caption": "A business professional smiles in formal attire against a bright, clean background."
+            },
+            {
+              "id": "headshots-16",
+              "kicker": "Close",
+              "caption": "A short beard and a steady look in a crisp close headshot against a clean neutral background."
+            },
+            {
+              "id": "headshots-17",
+              "kicker": "Creative",
+              "caption": "A creative professional meets the camera in a crisp headshot against a quiet backdrop."
+            }
           ]
         },
         {
           "title": "Walls With Character",
           "deck": "Graphic walls, white brick and timber panels. A backdrop that says something.",
-          "mood": { "bg": "#efebe3", "ink": "#201c16" },
+          "mood": {
+            "bg": "#efebe3",
+            "ink": "#201c16"
+          },
           "plates": [
-            { "id": "headshots-03", "kicker": "Graphic Wall", "caption": "A warm three-quarter portrait against a clean graphic wall." },
-            { "id": "headshots-14", "kicker": "Curls", "caption": "Voluminous curls and a close smile against a graphic white wall." },
-            { "id": "headshots-18", "kicker": "Red Blazer", "caption": "A patterned red blazer against a clean white brick wall." },
-            { "id": "headshots-lacie-garrett-studio", "kicker": "Timber", "caption": "A tan jacket and a white shirt against vertical timber panels." },
-            { "id": "headshots-lacie-flat-cap", "kicker": "Flat Cap", "caption": "A gray flat cap and a patterned shirt against pale brick." }
+            {
+              "id": "headshots-03",
+              "kicker": "Graphic Wall",
+              "caption": "A warm three-quarter portrait against a clean graphic wall."
+            },
+            {
+              "id": "headshots-14",
+              "kicker": "Curls",
+              "caption": "Voluminous curls and a close smile against a graphic white wall."
+            },
+            {
+              "id": "headshots-18",
+              "kicker": "Red Blazer",
+              "caption": "A patterned red blazer against a clean white brick wall."
+            },
+            {
+              "id": "headshots-lacie-garrett-studio",
+              "kicker": "Timber",
+              "caption": "A tan jacket and a white shirt against vertical timber panels."
+            },
+            {
+              "id": "headshots-lacie-flat-cap",
+              "kicker": "Flat Cap",
+              "caption": "A gray flat cap and a patterned shirt against pale brick."
+            }
           ]
         },
         {
           "title": "On Location",
           "deck": "Scrubs, tea, a flag and a shop floor. Portraits made where the work happens.",
-          "mood": { "bg": "#e9efe6", "ink": "#141c12" },
+          "mood": {
+            "bg": "#e9efe6",
+            "ink": "#141c12"
+          },
           "plates": [
-            { "id": "headshots-05", "kicker": "Scrubs", "caption": "A medical professional in scrubs holds a stethoscope." },
-            { "id": "headshots-06", "kicker": "Tea", "caption": "A hospitality professional holds a branded tea, seated against a botanical wall." },
-            { "id": "headshots-08", "kicker": "Botanical Wall", "caption": "A hospitality professional smiles against a lush botanical wall." },
-            { "id": "headshots-11", "kicker": "City Wall", "caption": "A woman in a white dress sits beside a reflective city wall." },
-            { "id": "headshots-12", "kicker": "Foliage", "caption": "A woman in a white dress smiles in a close portrait against green foliage." },
-            { "id": "headshots-15", "kicker": "Elevator", "caption": "A woman in a white dress faces the camera in a polished elevator portrait." },
-            { "id": "headshots-21", "kicker": "The Flag", "caption": "A bearded community leader holds a flag in an environmental portrait." },
-            { "id": "headshots-23", "kicker": "Cap", "caption": "A creative professional in a cap smiles in a lively environmental portrait." },
-            { "id": "headshots-26", "kicker": "Shop Floor", "caption": "A retail professional smiles at work, the shop visible behind." }
+            {
+              "id": "headshots-05",
+              "kicker": "Scrubs",
+              "caption": "A medical professional in scrubs holds a stethoscope."
+            },
+            {
+              "id": "headshots-06",
+              "kicker": "Tea",
+              "caption": "A hospitality professional holds a branded tea, seated against a botanical wall."
+            },
+            {
+              "id": "headshots-08",
+              "kicker": "Botanical Wall",
+              "caption": "A hospitality professional smiles against a lush botanical wall."
+            },
+            {
+              "id": "headshots-11",
+              "kicker": "City Wall",
+              "caption": "A woman in a white dress sits beside a reflective city wall."
+            },
+            {
+              "id": "headshots-12",
+              "kicker": "Foliage",
+              "caption": "A woman in a white dress smiles in a close portrait against green foliage."
+            },
+            {
+              "id": "headshots-15",
+              "kicker": "Elevator",
+              "caption": "A woman in a white dress faces the camera in a polished elevator portrait."
+            },
+            {
+              "id": "headshots-21",
+              "kicker": "The Flag",
+              "caption": "A bearded community leader holds a flag in an environmental portrait."
+            },
+            {
+              "id": "headshots-23",
+              "kicker": "Cap",
+              "caption": "A creative professional in a cap smiles in a lively environmental portrait."
+            },
+            {
+              "id": "headshots-26",
+              "kicker": "Shop Floor",
+              "caption": "A retail professional smiles at work, the shop visible behind."
+            }
           ]
         },
         {
           "title": "After Hours",
           "deck": "Event portraits under neon. The same care, louder light.",
-          "mood": { "bg": "#120f19", "ink": "#ece6f2" },
+          "mood": {
+            "bg": "#120f19",
+            "ink": "#ece6f2"
+          },
           "plates": [
-            { "id": "headshots-20", "kicker": "Neon", "caption": "A creative professional smiles in a polished event portrait framed by colorful neon." },
-            { "id": "headshots-22", "kicker": "Mid-Laugh", "caption": "A contemporary event portrait, mid-laugh, in restrained neon light." },
-            { "id": "headshots-25", "kicker": "Green Blazer", "caption": "A business professional in a green blazer smiles in a polished event portrait." }
+            {
+              "id": "headshots-20",
+              "kicker": "Neon",
+              "caption": "A creative professional smiles in a polished event portrait framed by colorful neon."
+            },
+            {
+              "id": "headshots-22",
+              "kicker": "Mid-Laugh",
+              "caption": "A contemporary event portrait, mid-laugh, in restrained neon light."
+            },
+            {
+              "id": "headshots-25",
+              "kicker": "Green Blazer",
+              "caption": "A business professional in a green blazer smiles in a polished event portrait."
+            }
           ]
         }
       ]
@@ -244,7 +544,7 @@
       "standfirst": "Coastal photographs made around the pier: two kids, two bright balls and the light under the boards, then one figure alone in the shallows.",
       "intro": "Four photographs in two chapters. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Get your feet wet.",
-      "footer": "Kiyono Creative Lab · Coastal · Newport Beach",
+      "footer": "Kiyono Creative Lab · Coastal",
       "font": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif",
       "weight": 700,
       "variation": "'wdth' 75",
@@ -257,19 +557,41 @@
         {
           "title": "Under the Boards",
           "deck": "Two kids, a pink ball and a blue one, by the water and under the pier.",
-          "mood": { "bg": "#e6eff1", "ink": "#0f2028" },
+          "mood": {
+            "bg": "#e6eff1",
+            "ink": "#0f2028"
+          },
           "plates": [
-            { "id": "shared-glance", "kicker": "A Shared Glance", "caption": "Two children in yellow shirts look toward each other beneath the timber pier, holding colored balls." },
-            { "id": "color-balls", "kicker": "Color and Play", "caption": "Two children stand back to back by the beach, holding pink and blue balls." },
-            { "id": "toward-the-water", "kicker": "Toward the Water", "caption": "Seen from behind, they hold hands and carry the balls toward the ocean." }
+            {
+              "id": "shared-glance",
+              "kicker": "A Shared Glance",
+              "caption": "Two children in yellow shirts look toward each other beneath the timber pier, holding colored balls."
+            },
+            {
+              "id": "color-balls",
+              "kicker": "Color and Play",
+              "caption": "Two children stand back to back by the beach, holding pink and blue balls."
+            },
+            {
+              "id": "toward-the-water",
+              "kicker": "Toward the Water",
+              "caption": "Seen from behind, they hold hands and carry the balls toward the ocean."
+            }
           ]
         },
         {
           "title": "Shallows",
           "deck": "One figure, ankle-deep, hair in hand.",
-          "mood": { "bg": "#dbe7ea", "ink": "#0c1a20" },
+          "mood": {
+            "bg": "#dbe7ea",
+            "ink": "#0c1a20"
+          },
           "plates": [
-            { "id": "coastal-poise", "kicker": "Coastal Poise", "caption": "Seen from behind, a person holds their hair while standing in shallow surf." }
+            {
+              "id": "coastal-poise",
+              "kicker": "Coastal Poise",
+              "caption": "Seen from behind, a person holds their hair while standing in shallow surf."
+            }
           ]
         }
       ]

@@ -15,7 +15,6 @@ import { initScroll } from "./core/scroll.js";
 import { initCursor, bindAll } from "./core/cursor.js";
 import { slot } from "./core/type.js";
 import { sound } from "./core/sound.js";
-import { startLive } from "./core/live.js";
 import { track, preloader, go, bindLinks, arriving } from "./core/transition.js";
 import { stage } from "./gl/stage.js";
 import { enter } from "./gl/plates.js";
@@ -35,7 +34,10 @@ async function boot() {
   prefs.apply();
   initScroll();
   initCursor();
-  stage.init({ z: 1 });
+  // The canvas sits ABOVE the covers here: the covers flip in on it, and
+  // under the cards their dark backgrounds hid the whole flip, so every card
+  // showed black until it landed. It is click-through and hides when idle.
+  stage.init({ z: 3 });
   bindLinks();
   sound.init("river");
   const pre = $("#pre");
@@ -59,22 +61,27 @@ async function boot() {
       </nav>
     </div>`;
   }).join("");
-  const total = issues.reduce((a, b) => a + (b.plates || 0), 0);
-  $(".ld-count", main).textContent = `${issues.length} exhibition${issues.length > 1 ? "s" : ""} · ${total} photographs`;
 
   const covers = $$(".iss-m img", pick);
   await track(covers, (p) => pl.set(0.15 + p * 0.85));
   await pl.finish();
 
-  const here = { place: (cat.site && cat.site.place) || { name: "Newport Beach", lat: 33.6073, lon: -117.9289, tz: "America/Los_Angeles" }, almanac: "sun" };
-  const menu = initMenu({ catalog: cat, menuTitle: "The Exhibitions", ex: here });
+  const menu = initMenu({ catalog: cat, menuTitle: "The Exhibitions" });
   $(".menu-btn", main).addEventListener("click", () => menu.open());
   const calm = prefs.get().motion === "calm";
   const backdrop = photoBackdrop(issues);
   wire();
-  startLive(document, here);
 
-  // hand off: the lockup lifts away and the covers flip in
+  // hand off: the lockup lifts away and the covers flip in. Everything that
+  // animates in is hidden BEFORE the preloader lifts; hidden after, it showed
+  // through the fading preloader, vanished and came back, which read as the
+  // intro running backwards.
+  const top = $(".ld-top", main), caps = $$(".iss-t, .iss-l", pick);
+  if (!calm) {
+    gsap.set(top, { autoAlpha: 0, y: 12 });
+    gsap.set(caps, { autoAlpha: 0, y: 14 });
+    $$(".iss", pick).forEach((b) => b.classList.add("is-flipping"));
+  }
   main.hidden = false;
   if (calm) {
     pre.classList.add("is-gone");
@@ -87,14 +94,18 @@ async function boot() {
   sessionStorage.removeItem("x.handoff");
   if (!calm) {
     slot($(".ld-q", main), { type: "words", stagger: 0.04, rotate: 0 });
-    gsap.from([$(".ld-top", main), $(".ld-bot", main)], { autoAlpha: 0, y: 12, duration: 1, stagger: 0.08, delay: 0.3, ease: "expo.out" });
-    // clearProps hands each caption back to its stylesheet opacity when it lands;
-    // without it the links under the covers finished at opacity 0 and never showed
-    $$(".iss-t, .iss-l", pick).forEach((t, k) => gsap.from(t, { autoAlpha: 0, y: 14, duration: 1, delay: 0.9 + k * 0.08, ease: "expo.out", clearProps: "opacity,visibility,transform,translate" }));
+    gsap.to(top, { autoAlpha: 1, y: 0, duration: 1, delay: 0.3, ease: "expo.out", clearProps: "opacity,visibility,transform,translate" });
+    // the links under the covers rest at .6 in the stylesheet; land there, then
+    // hand back to it
+    caps.forEach((t, k) => gsap.to(t, { autoAlpha: t.classList.contains("iss-l") ? 0.6 : 1, y: 0, duration: 1, delay: 0.9 + k * 0.08, ease: "expo.out", clearProps: "opacity,visibility,transform,translate" }));
   }
   covers.forEach((img, k) => {
     if (calm) return;
+    const box = img.closest(".iss");
+    // The card stays hidden while its photograph flips in on the canvas, and
+    // shows the moment the flip lands on exactly the same spot.
     enter(img, { mode: "flip", delay: 0.15 + k * 0.18, duration: 1.6 }).then((ok) => {
+      box.classList.remove("is-flipping");
       if (!ok) gsap.from(img.closest(".iss-m"), { autoAlpha: 0, rotateY: -70, duration: 1.2, delay: k * 0.15, ease: "expo.out", transformPerspective: 900 });
     });
   });

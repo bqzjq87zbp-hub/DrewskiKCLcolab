@@ -70,7 +70,7 @@ export function initMenu(ctx) {
       ${chaptersHTML}
       ${searchHTML}
       <div class="mn-col mn-set"><h3 class="lbl">Viewing</h3>${segs}</div>
-      <div class="mn-live lbl"><span data-live="all"></span><span>Kiyono Creative Lab &middot; Newport Beach, California</span></div>
+      <div class="mn-live lbl">${ctx.ex && ctx.ex.place ? '<span data-live="all"></span>' : "<span></span>"}<span>Kiyono Creative Lab &middot; The Exhibitions</span></div>
     </div>`);
   document.body.appendChild(root);
   bindAll(root);
@@ -113,7 +113,7 @@ export function initMenu(ctx) {
     q.addEventListener("keydown", (e) => { if (e.key === "Enter") { const b = $("button", res); if (b) b.click(); } });
   }
 
-  if (ctx.ex) startLive(root, ctx.ex);
+  if (ctx.ex && (ctx.ex.place || ctx.ex.almanac)) startLive(root, ctx.ex);
 
   let open = false, busy = false, opener = null, pendingClose = false;
   async function show() {

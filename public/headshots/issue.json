@@ -4,7 +4,7 @@
   "mark": "Headshots",
   "cover": "img/090c3caad475229f7e9d0695.jpg",
   "standfirst": "Professional portraits in the studio and on location: a warm red backdrop, clean light, walls with character, the places people work, and the odd event under neon.",
-  "footer": "Kiyono Creative Lab · Headshots · Studio and on location",
+  "footer": "Kiyono Creative Lab · Headshots",
   "backline": "Look like yourself, on purpose.",
   "theme": {
     "mark": "Headshots",
@@ -566,13 +566,6 @@
     "heroInk": "#7a4f45",
     "acc": "#a8382a",
     "intro": "Thirty-one portraits in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
-    "place": {
-      "name": "Newport Beach",
-      "lat": 33.6073,
-      "lon": -117.9289,
-      "tz": "America/Los_Angeles"
-    },
-    "almanac": "sun",
     "sound": "cruise",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"

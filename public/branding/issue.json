@@ -3,8 +3,8 @@
   "issue": "Product and place",
   "mark": "Branding",
   "cover": "img/7e59da520784cdd298b72877.jpg",
-  "standfirst": "Brand work made where the product actually lives: on the sand at Newport, under yellow patio umbrellas, and up close for a cold bottle.",
-  "footer": "Kiyono Creative Lab · Branding · Newport Beach",
+  "standfirst": "Brand work made where the product actually lives: on the sand, under yellow patio umbrellas, and up close for a cold bottle.",
+  "footer": "Kiyono Creative Lab · Branding",
   "backline": "Product told through the place.",
   "theme": {
     "mark": "Branding",
@@ -153,7 +153,7 @@
         {
           "id": "nwprt-pier-shore-activity",
           "img": "img/15e20340ffa0cc99b0e6464c.jpg",
-          "kicker": "Newport Pier",
+          "kicker": "At the Waterline",
           "caption": "Two kids and their boards meet the surf beside the pier, doubled in the wet sand.",
           "w": 1600,
           "h": 843,
@@ -311,13 +311,6 @@
     "heroInk": "#6f6250",
     "acc": "#b8442f",
     "intro": "Thirteen photographs in four chapters: apparel, patio hours, the waterline and a cold bottle. Scroll to walk the exhibition. Open any frame to read it.",
-    "place": {
-      "name": "Newport Beach",
-      "lat": 33.6073,
-      "lon": -117.9289,
-      "tz": "America/Los_Angeles"
-    },
-    "almanac": "sun",
     "sound": "cruise",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"
