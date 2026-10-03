@@ -17,8 +17,16 @@ import * as prefs from "./prefs.js";
 const gsap = window.gsap;
 let root, dot, disc, label, preview, previewVid;
 let px = -100, py = -100, dx = -100, dy = -100, cx = -100, cy = -100;
-let state = "", on = false, hidden = false, magnetsBusy = false;
+// hidden starts true so the very first move places the cursor on the pointer
+let state = "", on = false, hidden = true, magnetsBusy = false;
 const magnets = new Set();
+const DISC = /^(view|drag|enter|close|play|label)\|/;
+
+function put() {
+  dot.style.transform = `translate3d(${dx.toFixed(1)}px,${dy.toFixed(1)}px,0)`;
+  disc.style.transform = `translate3d(${cx.toFixed(1)}px,${cy.toFixed(1)}px,0)`;
+  preview.style.transform = `translate3d(${(cx + 28).toFixed(1)}px,${(cy + 28).toFixed(1)}px,0)`;
+}
 
 export const pointer = { x: innerWidth / 2, y: innerHeight / 2, nx: 0, ny: 0, down: false, moved: false };
 
@@ -53,7 +61,9 @@ export function initCursor() {
   addEventListener("pointermove", (e) => {
     if (e.pointerType !== "mouse") return;
     px = e.clientX; py = e.clientY;
-    if (hidden) { hidden = false; root.classList.remove("is-out"); }
+    // First move on a page, or back into the window: start on the pointer.
+    // Easing from the parked -100,-100 made the disc swoop in from the top-left.
+    if (hidden) { hidden = false; root.classList.remove("is-out"); dx = cx = px; dy = cy = py; put(); }
     const t = e.target.closest ? e.target.closest("[data-cursor],a,button,input,textarea,label,[role=button]") : null;
     setState(t);
   }, { passive: true });
@@ -68,9 +78,7 @@ export function initCursor() {
     if (!settled) {
       dx = damp(dx, px, 38, dt); dy = damp(dy, py, 38, dt);
       cx = damp(cx, px, 13, dt); cy = damp(cy, py, 13, dt);
-      dot.style.transform = `translate3d(${dx.toFixed(1)}px,${dy.toFixed(1)}px,0)`;
-      disc.style.transform = `translate3d(${cx.toFixed(1)}px,${cy.toFixed(1)}px,0)`;
-      preview.style.transform = `translate3d(${(cx + 28).toFixed(1)}px,${(cy + 28).toFixed(1)}px,0)`;
+      put();
     }
     // magnets: measure all, then move all (no read/write interleaving), and
     // skip entirely once the pointer is still and everything has settled
@@ -93,6 +101,8 @@ function setState(el) {
   } else showPreview(null);
   const key = s + "|" + l;
   if (key === state) return;
+  // the disc grows where the pointer is, never slides in from where it trailed
+  if (DISC.test(key) && !DISC.test(state)) { cx = px; cy = py; put(); }
   state = key;
   root.setAttribute("data-state", s);
   label.textContent = l || (s === "drag" ? "Drag" : s === "enter" ? "Enter" : s === "close" ? "Close" : s === "play" ? "Play" : "");
