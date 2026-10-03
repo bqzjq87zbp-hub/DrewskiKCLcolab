@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Photographic Newport Pier portfolio collaboration preview",
+  "description": "Kiyono Creative Lab: four photography exhibitions and the Newport Pier walk",
   "scripts": {
     "start": "node server.mjs",
     "dev": "node server.mjs",
-    "check": "node scripts/verify.mjs"
+    "check": "node scripts/verify.mjs",
+    "test": "node --test tests/unit/*.test.mjs",
+    "exhibitions": "python tools/build_exhibitions.py"
   },
-  "engines": {"node": ">=20"}
+  "engines": {
+    "node": ">=20"
+  }
 }

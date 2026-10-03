@@ -1,0 +1,325 @@
+{
+  "title": "Branding · Product and place",
+  "issue": "Product and place",
+  "mark": "Branding",
+  "cover": "img/7e59da520784cdd298b72877.jpg",
+  "standfirst": "Brand work made where the product actually lives: on the sand at Newport, under yellow patio umbrellas, and up close for a cold bottle.",
+  "footer": "Kiyono Creative Lab · Branding · Newport Beach",
+  "backline": "Product told through the place.",
+  "theme": {
+    "mark": "Branding",
+    "paper": "#f3eee4",
+    "ink": "#1d1913",
+    "acc": "#b8442f",
+    "acc2": "#6f6250",
+    "edge": "#d8d0c2",
+    "deep": "#0d0c0b",
+    "display": "'Fraunces', Georgia, serif",
+    "mono": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "stories": [
+    {
+      "title": "Worn",
+      "deck": "NWPRT apparel off the rack and on a person. The garment first, then the attitude.",
+      "mood": {
+        "bg": "#f4efe6",
+        "ink": "#1d1913"
+      },
+      "plates": [
+        {
+          "id": "nwprt-apparel-display",
+          "img": "img/1f21b9be45767539b18e85ed.jpg",
+          "kicker": "The Rack",
+          "caption": "An orange NWPRT shirt, a blue tie-dye hoodie, a burgundy cap and orange sunglasses on a wooden rack by the window.",
+          "w": 1506,
+          "h": 1600,
+          "palette": [
+            "#6f7277",
+            "#2e3844",
+            "#08090e"
+          ]
+        },
+        {
+          "id": "nwprt-cap-portrait",
+          "img": "img/70f12efe1e861d2356d7e266.jpg",
+          "kicker": "Cap Tip",
+          "caption": "Sunglasses on, a white NWPRT cap tipped beside a dark doorway.",
+          "w": 1119,
+          "h": 1600,
+          "palette": [
+            "#000000",
+            "#d0c5cc",
+            "#a89aa1"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Patio Hours",
+      "deck": "Yellow umbrellas, orange chairs and a cold lager. The slow half of a beach day.",
+      "mood": {
+        "bg": "#f7efd6",
+        "ink": "#231c0c"
+      },
+      "plates": [
+        {
+          "id": "nwprt-hat-lager",
+          "img": "img/0d730119329ad4799756e2bd.jpg",
+          "kicker": "Hat and Lager",
+          "caption": "A blue-and-red NWPRT Lager hat beside a glass of golden beer, under yellow patio umbrellas.",
+          "w": 1600,
+          "h": 1066,
+          "palette": [
+            "#85aeca",
+            "#ed7e0c",
+            "#492c25"
+          ]
+        },
+        {
+          "id": "nwprt-lager-charlies",
+          "img": "img/3ebbfe1b2269fd0af95899d0.jpg",
+          "kicker": "Charlie's",
+          "caption": "The cap and a golden beer in front of the Charlie's Chili menu, beneath the yellow umbrellas.",
+          "w": 1077,
+          "h": 1600,
+          "palette": [
+            "#e39613",
+            "#c2d4b3",
+            "#a2906d"
+          ]
+        },
+        {
+          "id": "nwprt-yellow-patio",
+          "img": "img/1f5b70025a38abaf25c5ef97.jpg",
+          "kicker": "The Walkway",
+          "caption": "Yellow umbrellas and orange chairs line the beachside walk, under palms and a white streetlamp.",
+          "w": 1600,
+          "h": 1527,
+          "palette": [
+            "#89a7d3",
+            "#4c71a5",
+            "#363e4e"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Waterline",
+      "deck": "Lifeguard towers, bodyboards and the pier. The brand placed where the beach actually happens.",
+      "mood": {
+        "bg": "#eaf1f4",
+        "ink": "#0f1f2a"
+      },
+      "plates": [
+        {
+          "id": "nwprt-lifeguard-campaign",
+          "img": "img/7e59da520784cdd298b72877.jpg",
+          "kicker": "The Tower",
+          "caption": "A lifeguard climbs a wooden tower under yellow flags, the NWPRT graphic set against a blue sky.",
+          "w": 1143,
+          "h": 1600,
+          "palette": [
+            "#3162a5",
+            "#3a2f2a",
+            "#c8cbcf"
+          ]
+        },
+        {
+          "id": "nwprt-bodyboard-wind",
+          "img": "img/11b5d5f94bb2846f435a0384.jpg",
+          "kicker": "Afternoon Wind",
+          "caption": "Two kids hold their bodyboards in the breeze beside a lifeguard tower.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#789fd0",
+            "#abc6ea",
+            "#d4beab"
+          ]
+        },
+        {
+          "id": "nwprt-gulls-beachfront",
+          "img": "img/9bda6fe011490e01763750e4.jpg",
+          "kicker": "Gulls",
+          "caption": "One gull spreads its wings beside another above a busy, palm-lined beachfront.",
+          "w": 1600,
+          "h": 910,
+          "palette": [
+            "#3875b2",
+            "#af9e8e",
+            "#59504d"
+          ]
+        },
+        {
+          "id": "nwprt-pier-shore-activity",
+          "img": "img/15e20340ffa0cc99b0e6464c.jpg",
+          "kicker": "Newport Pier",
+          "caption": "Two kids and their boards meet the surf beside the pier, doubled in the wet sand.",
+          "w": 1600,
+          "h": 843,
+          "palette": [
+            "#64aaf9",
+            "#869dc5",
+            "#5a76a3"
+          ]
+        },
+        {
+          "id": "nwprt-underpier-branded",
+          "img": "img/08bfbe519671b2a3ec187588.jpg",
+          "kicker": "Under the Pier",
+          "caption": "Waves pass beneath the timber pier, the NWPRT Supply Co badge set low in the frame.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#81a1d7",
+            "#3e3d34",
+            "#b5cef2"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "A Cold Bottle",
+      "deck": "One classic bottle, three ways: white gloves, an ice bucket on the sand, and caps under droplets.",
+      "mood": {
+        "bg": "#170d0c",
+        "ink": "#f3e8e3"
+      },
+      "plates": [
+        {
+          "id": "branding-12",
+          "img": "img/c4236e1c13029c8bfe85db2d.jpg",
+          "kicker": "White Gloves",
+          "caption": "White-gloved hands present the bottle beside a wine glass in a reflective product composition.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#251d15",
+            "#d7d6d4",
+            "#87786b"
+          ]
+        },
+        {
+          "id": "branding-13",
+          "img": "img/335e2ea0847bd07fec38d935.jpg",
+          "kicker": "Ice Bucket",
+          "caption": "Bottles on ice in a red bucket, a game of beach volleyball in play behind them.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#7393b6",
+            "#977b6b",
+            "#842221"
+          ]
+        },
+        {
+          "id": "branding-14",
+          "img": "img/aa854f83427a78814a8c9330.jpg",
+          "kicker": "Four Caps",
+          "caption": "Four red bottle caps on a pale surface beaded with water.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#838891",
+            "#4e1521",
+            "#676371"
+          ]
+        }
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#ed7e0c",
+      "name": "Orange",
+      "family": "orange",
+      "plates": [
+        2,
+        3
+      ]
+    },
+    {
+      "hex": "#64aaf9",
+      "name": "Sky",
+      "family": "blue",
+      "plates": [
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "hex": "#3162a5",
+      "name": "Ocean",
+      "family": "blue",
+      "plates": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "hex": "#abc6ea",
+      "name": "Lilac",
+      "family": "blue",
+      "plates": [
+        2,
+        4,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "hex": "#4e1521",
+      "name": "Wine",
+      "family": "red",
+      "plates": [
+        2,
+        12
+      ]
+    },
+    {
+      "hex": "#842221",
+      "name": "Red",
+      "family": "red",
+      "plates": [
+        11
+      ]
+    },
+    {
+      "hex": "#d4beab",
+      "name": "Blush",
+      "family": "orange",
+      "plates": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        10
+      ]
+    }
+  ],
+  "exhibit": {
+    "wordmark": "Branding",
+    "font": "'Fraunces', Georgia, serif",
+    "weight": 850,
+    "variation": "'SOFT' 100, 'WONK' 0, 'opsz' 144",
+    "hero": "#ebe3d5",
+    "heroInk": "#6f6250",
+    "acc": "#b8442f",
+    "intro": "Thirteen photographs in four chapters: apparel, patio hours, the waterline and a cold bottle. Scroll to walk the exhibition. Open any frame to read it.",
+    "place": {
+      "name": "Newport Beach",
+      "lat": 33.6073,
+      "lon": -117.9289,
+      "tz": "America/Los_Angeles"
+    },
+    "almanac": "sun",
+    "sound": "cruise",
+    "game": "skip",
+    "booking": "bqzjq87zbp@privaterelay.appleid.com"
+  }
+}

@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&amp;family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&amp;family=Pinyon+Script&amp;display=swap">
+<title>Coastal · The Atelier</title>
+<link rel="stylesheet" href="../../assets/atelier.css">
+</head><body>
+<canvas id="gl"></canvas>
+<div id="vig"></div><div id="grain"></div>
+
+<div id="hud">
+  <div class="tl"><div class="kick" id="aMark">&nbsp;</div><div class="ttl" id="aTitle">&nbsp;</div></div>
+  <div class="tr"><div class="ind" id="aInd">&nbsp;</div></div>
+  <div class="hint">drag the left or right page to turn it &middot; drag the lamp to move the light</div>
+  <a class="pill" id="toWardrobe" href="/walk/">Walk the pier</a>
+  <div style="position:absolute;top:26px;left:50%;transform:translateX(-50%)">
+    <a class="pill" id="toBook" href="../book/">The Book</a>
+  </div>
+</div>
+
+<div id="desk">
+  <h3>Lamp</h3>
+  <div class="swatches" id="sw"></div>
+  <div class="row"><label for="pw">Power</label><input id="pw" type="range" min="0" max="60" step="1" value="26"></div>
+  <div class="row"><label for="ex">Exposure</label><input id="ex" type="range" min="40" max="180" step="1" value="100"></div>
+  <div class="envs" id="envs">
+    <div class="env on" data-h="studio_small_09">Studio</div>
+    <div class="env" data-h="brown_photostudio_02">Warm</div>
+  </div>
+</div>
+
+<div id="boot"><div>Binding the volume</div><div class="bar"><i></i></div></div>
+
+<script type="importmap">
+{"imports":{
+  "three":"https://unpkg.com/three@0.185.1/build/three.module.js",
+  "three/addons/":"https://unpkg.com/three@0.185.1/examples/jsm/"
+}}
+</script>
+<script type="module">
+import { start, setLampColour, setLampPower, setExposure, setEnvironment } from "../../assets/atelier.js";
+
+// A book that cannot render is worse than a fast one: fall back to the flat
+// edition rather than showing a black screen.
+function webgl(){ try{ const c=document.createElement("canvas");
+  return !!(window.WebGLRenderingContext && (c.getContext("webgl2")||c.getContext("webgl"))); }
+  catch(e){ return false; } }
+if(!webgl()){ location.replace(location.pathname.replace(/\/atelier\/?$/, "") + "/book/?nogl=1"); }
+
+const COLOURS = ["#ffd9a0","#fff3e2","#2c6c84","#e0533d","#4f7fd6","#4fd6a8","#c86bd6","#f2c94c"];
+const sw = document.getElementById("sw");
+COLOURS.forEach(function(c,i){
+  const d=document.createElement("div");
+  d.className="sw"+(i===0?" on":""); d.style.background=c; d.title=c;
+  d.onclick=function(){ setLampColour(c);
+    sw.querySelectorAll(".sw").forEach(function(x){x.classList.remove("on")});
+    d.classList.add("on"); };
+  sw.appendChild(d);
+});
+document.getElementById("pw").oninput = function(e){ setLampPower(+e.target.value); };
+document.getElementById("ex").oninput = function(e){ setExposure(+e.target.value/100); };
+document.getElementById("envs").onclick = function(e){
+  const t=e.target.closest(".env"); if(!t) return;
+  document.querySelectorAll(".env").forEach(function(x){x.classList.remove("on")});
+  t.classList.add("on");
+  setEnvironment(t.dataset.h);
+};
+
+start({}).catch(function(err){
+  const b=document.getElementById("boot");
+  b.className="err"; b.textContent="The Atelier could not start: "+err.message;
+});
+</script>
+</body></html>

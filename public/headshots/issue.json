@@ -1,0 +1,580 @@
+{
+  "title": "Headshots · The red room",
+  "issue": "The red room",
+  "mark": "Headshots",
+  "cover": "img/090c3caad475229f7e9d0695.jpg",
+  "standfirst": "Professional portraits in the studio and on location: a warm red backdrop, clean light, walls with character, the places people work, and the odd event under neon.",
+  "footer": "Kiyono Creative Lab · Headshots · Studio and on location",
+  "backline": "Look like yourself, on purpose.",
+  "theme": {
+    "mark": "Headshots",
+    "paper": "#f3eee4",
+    "ink": "#1d1913",
+    "acc": "#a8382a",
+    "acc2": "#7a4f45",
+    "edge": "#d8d0c2",
+    "deep": "#0d0c0b",
+    "display": "'Fraunces', Georgia, serif",
+    "mono": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "stories": [
+    {
+      "title": "The Red Room",
+      "deck": "One warm red backdrop and eight very different people. The backdrop stays, everyone else changes.",
+      "mood": {
+        "bg": "#f6e9e5",
+        "ink": "#2a1310"
+      },
+      "plates": [
+        {
+          "id": "headshots-01",
+          "img": "img/34b32ab8408f756277f44d70.jpg",
+          "kicker": "Gray Blazer",
+          "caption": "An angled, smiling portrait in a light gray blazer against the warm red backdrop.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#7f848d",
+            "#a94f3e",
+            "#772013"
+          ]
+        },
+        {
+          "id": "headshots-07",
+          "img": "img/090c3caad475229f7e9d0695.jpg",
+          "kicker": "Braids",
+          "caption": "Long braids, hoop earrings and a navy blazer against warm red.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#8d312f",
+            "#0f1d29",
+            "#a87b68"
+          ]
+        },
+        {
+          "id": "headshots-13",
+          "img": "img/96ba6788e8d76e01457ef787.jpg",
+          "kicker": "Green Shirt",
+          "caption": "A direct portrait in a light blazer and green shirt against the red studio backdrop.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#6c1c10",
+            "#8f1f10",
+            "#778187"
+          ]
+        },
+        {
+          "id": "headshots-19",
+          "img": "img/44246db8df167276d79b1654.jpg",
+          "kicker": "Black Glasses",
+          "caption": "Black glasses, a black jacket and a big smile against warm red.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#0e1216",
+            "#a9594f",
+            "#7e3e2f"
+          ]
+        },
+        {
+          "id": "headshots-24",
+          "img": "img/1864f27f41aa5333c9d38dde.jpg",
+          "kicker": "Silver Necklace",
+          "caption": "A composed portrait in a patterned top and a silver necklace against warm red.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#621c1d",
+            "#9b211f",
+            "#595a5f"
+          ]
+        },
+        {
+          "id": "headshots-lacie-twist-portrait",
+          "img": "img/1825de7e0853fbdff388bf7c.jpg",
+          "kicker": "Twists",
+          "caption": "Side-swept twists and a dark sweater, composed against the red backdrop.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#000000",
+            "#803e39",
+            "#45201a"
+          ]
+        },
+        {
+          "id": "headshots-lacie-cream-knit",
+          "img": "img/09920ffdef0dccd54b6dfc01.jpg",
+          "kicker": "Cream Knit",
+          "caption": "Curly hair, a cream knit shirt and a beaded necklace against warm red.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#781f15",
+            "#a62d2d",
+            "#d4d9e1"
+          ]
+        },
+        {
+          "id": "headshots-lacie-burgundy-jacket",
+          "img": "img/228b1d52f8f29c8495fb44b1.jpg",
+          "kicker": "Burgundy",
+          "caption": "Long dark hair and a burgundy jacket with black lapels, smiling against the red.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#9c330e",
+            "#211b17",
+            "#430f0d"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Clean Light",
+      "deck": "Quiet backgrounds, crisp light and nothing between you and the camera.",
+      "mood": {
+        "bg": "#f4f4f1",
+        "ink": "#16181a"
+      },
+      "plates": [
+        {
+          "id": "headshots-02",
+          "img": "img/0163dea99efa5683d470b7ad.jpg",
+          "kicker": "Straight On",
+          "caption": "A professional faces the camera in a clean portrait against a quiet background.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#171b20",
+            "#b3bbc6",
+            "#987975"
+          ]
+        },
+        {
+          "id": "headshots-04",
+          "img": "img/ff8c5d0a7cc3a358674e851b.jpg",
+          "kicker": "Glasses",
+          "caption": "Glasses, a patterned blouse and a smile against a pale backdrop.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#d0dae3",
+            "#2b2e34",
+            "#5c534e"
+          ]
+        },
+        {
+          "id": "headshots-09",
+          "img": "img/cce0d215323ba81520913403.jpg",
+          "kicker": "Editorial",
+          "caption": "A neutral top and a direct gaze in a clean editorial headshot.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#60615d",
+            "#9fadb8",
+            "#a68980"
+          ]
+        },
+        {
+          "id": "headshots-10",
+          "img": "img/e720e468c4e335f1f5698eb9.jpg",
+          "kicker": "Formal",
+          "caption": "A business professional smiles in formal attire against a bright, clean background.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#1f1818",
+            "#d6e8f8",
+            "#93614f"
+          ]
+        },
+        {
+          "id": "headshots-16",
+          "img": "img/63f2317fb79e5600be818060.jpg",
+          "kicker": "Close",
+          "caption": "A short beard and a steady look in a crisp close headshot against a clean neutral background.",
+          "w": 1266,
+          "h": 1600,
+          "palette": [
+            "#6d584a",
+            "#bdc2b7",
+            "#252220"
+          ]
+        },
+        {
+          "id": "headshots-17",
+          "img": "img/13a47c55385a48222c5a0efd.jpg",
+          "kicker": "Creative",
+          "caption": "A creative professional meets the camera in a crisp headshot against a quiet backdrop.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#040405",
+            "#bdbfb8",
+            "#72523f"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Walls With Character",
+      "deck": "Graphic walls, white brick and timber panels. A backdrop that says something.",
+      "mood": {
+        "bg": "#efebe3",
+        "ink": "#201c16"
+      },
+      "plates": [
+        {
+          "id": "headshots-03",
+          "img": "img/8f676584c9da2513a27baa4f.jpg",
+          "kicker": "Graphic Wall",
+          "caption": "A warm three-quarter portrait against a clean graphic wall.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#665a53",
+            "#c9c9ca",
+            "#2c201c"
+          ]
+        },
+        {
+          "id": "headshots-14",
+          "img": "img/577eb43287f3ea5d9fedf5fd.jpg",
+          "kicker": "Curls",
+          "caption": "Voluminous curls and a close smile against a graphic white wall.",
+          "w": 1121,
+          "h": 1600,
+          "palette": [
+            "#806e65",
+            "#e3e2e4",
+            "#1e1717"
+          ]
+        },
+        {
+          "id": "headshots-18",
+          "img": "img/b81afdc474c67116e06a96c9.jpg",
+          "kicker": "Red Blazer",
+          "caption": "A patterned red blazer against a clean white brick wall.",
+          "w": 1059,
+          "h": 1600,
+          "palette": [
+            "#b4b4b0",
+            "#492731",
+            "#dddddd"
+          ]
+        },
+        {
+          "id": "headshots-lacie-garrett-studio",
+          "img": "img/606c39c46a788eabd7cad94a.jpg",
+          "kicker": "Timber",
+          "caption": "A tan jacket and a white shirt against vertical timber panels.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#68503e",
+            "#9d7b64",
+            "#ceb8ad"
+          ]
+        },
+        {
+          "id": "headshots-lacie-flat-cap",
+          "img": "img/f08a52e4e0b7e4c9f4df4d0c.jpg",
+          "kicker": "Flat Cap",
+          "caption": "A gray flat cap and a patterned shirt against pale brick.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#cfd7e1",
+            "#9ba3af",
+            "#403a42"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "On Location",
+      "deck": "Scrubs, tea, a flag and a shop floor. Portraits made where the work happens.",
+      "mood": {
+        "bg": "#e9efe6",
+        "ink": "#141c12"
+      },
+      "plates": [
+        {
+          "id": "headshots-05",
+          "img": "img/3304a50e7a7a0d5e264947d8.jpg",
+          "kicker": "Scrubs",
+          "caption": "A medical professional in scrubs holds a stethoscope.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#0e1a41",
+            "#0d0f13",
+            "#988378"
+          ]
+        },
+        {
+          "id": "headshots-06",
+          "img": "img/60cdc9a37a20ee409045b5eb.jpg",
+          "kicker": "Tea",
+          "caption": "A hospitality professional holds a branded tea, seated against a botanical wall.",
+          "w": 1280,
+          "h": 1600,
+          "palette": [
+            "#45441a",
+            "#776a28",
+            "#324436"
+          ]
+        },
+        {
+          "id": "headshots-08",
+          "img": "img/24c88a7a537770a0290b8162.jpg",
+          "kicker": "Botanical Wall",
+          "caption": "A hospitality professional smiles against a lush botanical wall.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#111c13",
+            "#333f2a",
+            "#606556"
+          ]
+        },
+        {
+          "id": "headshots-11",
+          "img": "img/94a456843863c6aa31137f6c.jpg",
+          "kicker": "City Wall",
+          "caption": "A woman in a white dress sits beside a reflective city wall.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#696768",
+            "#fbfafa",
+            "#c7c7cd"
+          ]
+        },
+        {
+          "id": "headshots-12",
+          "img": "img/0faa7eb4c0ad1135866f4c46.jpg",
+          "kicker": "Foliage",
+          "caption": "A woman in a white dress smiles in a close portrait against green foliage.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#34351c",
+            "#d7d9e3",
+            "#bb8866"
+          ]
+        },
+        {
+          "id": "headshots-15",
+          "img": "img/5bf0345b84335e96d827b1a3.jpg",
+          "kicker": "Elevator",
+          "caption": "A woman in a white dress faces the camera in a polished elevator portrait.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#917766",
+            "#2f282a",
+            "#e1e5ea"
+          ]
+        },
+        {
+          "id": "headshots-21",
+          "img": "img/e3985b3a4ca015b66a441fc2.jpg",
+          "kicker": "The Flag",
+          "caption": "A bearded community leader holds a flag in an environmental portrait.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#7f9ac9",
+            "#090611",
+            "#986351"
+          ]
+        },
+        {
+          "id": "headshots-23",
+          "img": "img/e31e239fe8b11431dabc7faf.jpg",
+          "kicker": "Cap",
+          "caption": "A creative professional in a cap smiles in a lively environmental portrait.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#27434e",
+            "#1f262b",
+            "#d4e0db"
+          ]
+        },
+        {
+          "id": "headshots-26",
+          "img": "img/acc1ad30cbd73725d0ac6ed6.jpg",
+          "kicker": "Shop Floor",
+          "caption": "A retail professional smiles at work, the shop visible behind.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#11181d",
+            "#8f756f",
+            "#ccbfbd"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "After Hours",
+      "deck": "Event portraits under neon. The same care, louder light.",
+      "mood": {
+        "bg": "#120f19",
+        "ink": "#ece6f2"
+      },
+      "plates": [
+        {
+          "id": "headshots-20",
+          "img": "img/6c64e7f9a63f9ce01ebd8e7c.jpg",
+          "kicker": "Neon",
+          "caption": "A creative professional smiles in a polished event portrait framed by colorful neon.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#3e2f2c",
+            "#bb9889",
+            "#010102"
+          ]
+        },
+        {
+          "id": "headshots-22",
+          "img": "img/cfcde45e923ea4fff4ce2dac.jpg",
+          "kicker": "Mid-Laugh",
+          "caption": "A contemporary event portrait, mid-laugh, in restrained neon light.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#2a2119",
+            "#8d5541",
+            "#c3ced3"
+          ]
+        },
+        {
+          "id": "headshots-25",
+          "img": "img/ccec0cde43cb3cd3b23afcf7.jpg",
+          "kicker": "Green Blazer",
+          "caption": "A business professional in a green blazer smiles in a polished event portrait.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#677170",
+            "#2b2425",
+            "#080205"
+          ]
+        }
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e1a41",
+      "name": "Navy",
+      "family": "blue",
+      "plates": [
+        19
+      ]
+    },
+    {
+      "hex": "#9c330e",
+      "name": "Red",
+      "family": "brown",
+      "plates": [
+        0,
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "hex": "#d6e8f8",
+      "name": "White",
+      "family": "blue",
+      "plates": [
+        6,
+        8,
+        9,
+        11,
+        14,
+        15,
+        16,
+        18,
+        22,
+        23,
+        24,
+        26,
+        29
+      ]
+    },
+    {
+      "hex": "#7f9ac9",
+      "name": "Sky",
+      "family": "blue",
+      "plates": [
+        25
+      ]
+    },
+    {
+      "hex": "#45441a",
+      "name": "Moss",
+      "family": "green",
+      "plates": [
+        20,
+        21,
+        23
+      ]
+    },
+    {
+      "hex": "#430f0d",
+      "name": "Umber",
+      "family": "red",
+      "plates": [
+        4,
+        5,
+        7,
+        16
+      ]
+    },
+    {
+      "hex": "#a9594f",
+      "name": "Wine",
+      "family": "red",
+      "plates": [
+        0,
+        1,
+        3,
+        5,
+        11,
+        25,
+        29
+      ]
+    }
+  ],
+  "exhibit": {
+    "wordmark": "Headshots",
+    "font": "'Fraunces', Georgia, serif",
+    "weight": 200,
+    "variation": "'SOFT' 0, 'WONK' 1, 'opsz' 144",
+    "hero": "#ece0da",
+    "heroInk": "#7a4f45",
+    "acc": "#a8382a",
+    "intro": "Thirty-one portraits in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
+    "place": {
+      "name": "Newport Beach",
+      "lat": 33.6073,
+      "lon": -117.9289,
+      "tz": "America/Los_Angeles"
+    },
+    "almanac": "sun",
+    "sound": "cruise",
+    "game": "skip",
+    "booking": "bqzjq87zbp@privaterelay.appleid.com"
+  }
+}

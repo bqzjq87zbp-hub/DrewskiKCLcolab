@@ -24,6 +24,24 @@ assert(seen.size===69,'Unexpected total photo entries');
 const slots=JSON.parse(await fs.readFile(path.join(pub,'slots.json'),'utf8'));
 assert(slots.length===10,'Expected ten easel slots');
 for(const slot of slots){await local(slot.src);await local(slot.full);assert(slot.quad.length===4,'Invalid slot corners');}
+// The exhibitions: every plate is a web copy of an approved photograph from its own collection.
+const catalog=JSON.parse(await fs.readFile(path.join(pub,'catalog.json'),'utf8'));
+const approved=new Map(categories.categories.map(c=>[c.id,new Set(c.items.map(i=>i.full.split('/').pop()))]));
+let exhibitionPlates=0;
+for(const ex of catalog.issues){
+  const issue=JSON.parse(await fs.readFile(path.join(pub,ex.slug,'issue.json'),'utf8'));
+  const plates=issue.stories.flatMap(s=>s.plates);
+  assert(plates.length===ex.plates&&plates.length===expected[ex.slug],'Unexpected exhibition plate count: '+ex.slug);
+  for(const shell of ['index.html','book/index.html','atelier/index.html'])await local('/'+ex.slug+'/'+shell);
+  await local('/'+ex.slug+'/'+issue.cover);
+  for(const p of plates){
+    await local('/'+ex.slug+'/'+p.img);
+    assert(approved.get(ex.slug).has(p.img.split('/').pop()),'Exhibition plate is not an approved '+ex.slug+' photograph: '+p.img);
+    assert(p.kicker&&p.caption&&p.w>0&&p.h>0&&p.palette.every(c=>/^#[0-9a-f]{6}$/.test(c)),'Incomplete plate data: '+p.img);
+  }
+  exhibitionPlates+=plates.length;
+}
+assert(exhibitionPlates===69,'Unexpected exhibition plate total');
 assert(manifest.assets.length===92,'Unexpected image allowlist count');
 for(const item of manifest.assets){const bytes=await fs.readFile(path.join(root,item.path));assert(bytes.length===item.bytes&&hash(bytes)===item.sha256,'Asset hash mismatch: '+item.path);}
 const sequence=JSON.parse(await fs.readFile(path.join(pub,'video/frames.json'),'utf8'));
@@ -53,8 +71,14 @@ try{
   await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Test server did not start: '+output)),5000);child.once('error',reject);child.once('exit',code=>reject(Error('Server exited '+code+': '+output)));child.stdout.on('data',()=>{if(output.includes('Portfolio preview:')){clearTimeout(timer);resolve();}});});
   const base='http://127.0.0.1:'+port;
   for(const url of ['/','/categories.json','/main.js','/archive/archive.js','/archive/archive.css','/aisle/photographic-aisle.js','/aisle/video-frame-seam.js','/video/frames.json','/video/frame-0000.jpg','/video/frame-0120.jpg','/video/frame-0240.jpg'])assert((await fetch(base+url)).status===200,'Runtime route failed '+url);
-  for(const url of ['/server.mjs','/package.json','/docs/asset-manifest.json','/.git/config','/.env','/%2e%2e/package.json','/media/%2e%2e/%2e%2e/server.mjs'])assert((await fetch(base+url)).status===404,'Private route exposed '+url);
+  for(const url of ['/walk/','/catalog.json','/assets/x/exhibit.js','/assets/x/x.css','/video/walk-scrub.mp4',...catalog.issues.flatMap(e=>['/'+e.slug+'/','/'+e.slug+'/issue.json','/'+e.slug+'/book/','/'+e.slug+'/atelier/'])])assert((await fetch(base+url)).status===200,'Runtime route failed '+url);
+  const folder=await fetch(base+'/branding',{redirect:'manual'});
+  assert(folder.status===301&&folder.headers.get('location')==='/branding/','A folder without its trailing slash should redirect to it');
+  const part=await fetch(base+'/video/walk-scrub.mp4',{headers:{Range:'bytes=0-99'}});
+  assert(part.status===206&&(await part.arrayBuffer()).byteLength===100&&/^bytes 0-99\//.test(part.headers.get('content-range')||''),'Byte ranges must work so the reel can seek');
+  assert((await fetch(base+'/video/walk-scrub.mp4',{headers:{Range:'bytes=999999999-'}})).status===416,'An unsatisfiable range should be 416');
+  for(const url of ['/server.mjs','/package.json','/docs/asset-manifest.json','/.git/config','/.env','/%2e%2e/package.json','/media/%2e%2e/%2e%2e/server.mjs','/tools/exhibitions.json','/tools/build_exhibitions.py'])assert((await fetch(base+url)).status===404,'Private route exposed '+url);
   assert((await fetch(base+'/',{method:'POST'})).status===405,'POST should be rejected');
   assert((await fetch(base+'/',{method:'HEAD'})).status===200,'HEAD failed');
-  console.log(JSON.stringify({status:'PASS',categories:expected,photoEntries:69,easelSlots:10,purchasedRooms:0,uniquePhotographs:92,imageBytes:manifest.imageBytes,videoFrames:sequence.frames.length,videoFrameBytes,videoReviewStatus:sequence.reviewStatus,assetHashes:'all match',textFilesScanned:textFiles.length,privatePathOrSecretPatternMatches:0,symlinks:0,serverRuntimeRoutes:'PASS',privateServerRoutes:'404',writeMethods:'405',files:files.length},null,2));
+  console.log(JSON.stringify({status:'PASS',categories:expected,photoEntries:69,exhibitions:catalog.issues.length,exhibitionPlates,folderRedirect:'301',byteRanges:'206',easelSlots:10,purchasedRooms:0,uniquePhotographs:92,imageBytes:manifest.imageBytes,videoFrames:sequence.frames.length,videoFrameBytes,videoReviewStatus:sequence.reviewStatus,assetHashes:'all match',textFilesScanned:textFiles.length,privatePathOrSecretPatternMatches:0,symlinks:0,serverRuntimeRoutes:'PASS',privateServerRoutes:'404',writeMethods:'405',files:files.length},null,2));
 }finally{child.kill('SIGTERM');}

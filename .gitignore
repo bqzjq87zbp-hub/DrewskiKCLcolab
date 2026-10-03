@@ -14,6 +14,8 @@ public/local-rooms.json
 
 # Keep provider masters, private evidence and local credentials out of collaboration.
 *.mp4
+# ...except the 2.4 MB web encode of the walk frames the reel scrubs (Safari and iOS need H.264).
+!public/video/walk-scrub.mp4
 *.mov
 *.mkv
 private/

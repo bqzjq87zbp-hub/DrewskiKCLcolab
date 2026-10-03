@@ -1,0 +1,77 @@
+{
+  "site": {
+    "title": "The Exhibitions",
+    "studio": "Kiyono Creative Lab",
+    "note": "Portraits, branding and coastal work from Newport Beach, hung as exhibitions",
+    "season": "Newport Beach, California",
+    "booking": "bqzjq87zbp@privaterelay.appleid.com",
+    "place": {
+      "name": "Newport Beach",
+      "lat": 33.6073,
+      "lon": -117.9289,
+      "tz": "America/Los_Angeles"
+    }
+  },
+  "issues": [
+    {
+      "slug": "branding",
+      "title": "Branding · Product and place",
+      "issue": "Product and place",
+      "mark": "Branding",
+      "plates": 13,
+      "cover": "branding/img/7e59da520784cdd298b72877.jpg",
+      "font": "'Fraunces', Georgia, serif",
+      "weight": 850,
+      "variation": "'SOFT' 100, 'WONK' 0, 'opsz' 144",
+      "hero": "#ebe3d5",
+      "heroInk": "#6f6250",
+      "acc": "#b8442f",
+      "blurb": "NWPRT on the sand, and a cold bottle three ways."
+    },
+    {
+      "slug": "families",
+      "title": "Families · Under the trees",
+      "issue": "Under the trees",
+      "mark": "Families",
+      "plates": 21,
+      "cover": "families/img/955f53a8e6570b9373c299c2.jpg",
+      "font": "'Pinyon Script', 'Snell Roundhand', cursive",
+      "weight": 400,
+      "variation": "",
+      "hero": "#e9e8dc",
+      "heroInk": "#5f6a52",
+      "acc": "#6c8746",
+      "blurb": "Hills, tall grass, the shoreline and some very small people."
+    },
+    {
+      "slug": "headshots",
+      "title": "Headshots · The red room",
+      "issue": "The red room",
+      "mark": "Headshots",
+      "plates": 31,
+      "cover": "headshots/img/090c3caad475229f7e9d0695.jpg",
+      "font": "'Fraunces', Georgia, serif",
+      "weight": 200,
+      "variation": "'SOFT' 0, 'WONK' 1, 'opsz' 144",
+      "hero": "#ece0da",
+      "heroInk": "#7a4f45",
+      "acc": "#a8382a",
+      "blurb": "Thirty-one people, a warm red backdrop, and the places they work."
+    },
+    {
+      "slug": "coastal",
+      "title": "Coastal · Pier light",
+      "issue": "Pier light",
+      "mark": "Coastal",
+      "plates": 4,
+      "cover": "coastal/img/07f59839133492f58ad8884a.jpg",
+      "font": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif",
+      "weight": 700,
+      "variation": "'wdth' 75",
+      "hero": "#dde7e9",
+      "heroInk": "#46646e",
+      "acc": "#2c6c84",
+      "blurb": "Two kids, two bright balls and the timber pier."
+    }
+  ]
+}

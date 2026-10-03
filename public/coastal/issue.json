@@ -1,0 +1,161 @@
+{
+  "title": "Coastal · Pier light",
+  "issue": "Pier light",
+  "mark": "Coastal",
+  "cover": "img/07f59839133492f58ad8884a.jpg",
+  "standfirst": "Coastal photographs made around the pier: two kids, two bright balls and the light under the boards, then one figure alone in the shallows.",
+  "footer": "Kiyono Creative Lab · Coastal · Newport Beach",
+  "backline": "Get your feet wet.",
+  "theme": {
+    "mark": "Coastal",
+    "paper": "#f3eee4",
+    "ink": "#1d1913",
+    "acc": "#2c6c84",
+    "acc2": "#46646e",
+    "edge": "#d8d0c2",
+    "deep": "#0d0c0b",
+    "display": "'Fraunces', Georgia, serif",
+    "mono": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "stories": [
+    {
+      "title": "Under the Boards",
+      "deck": "Two kids, a pink ball and a blue one, by the water and under the pier.",
+      "mood": {
+        "bg": "#e6eff1",
+        "ink": "#0f2028"
+      },
+      "plates": [
+        {
+          "id": "shared-glance",
+          "img": "img/481288d072d928eac1b8b2c6.jpg",
+          "kicker": "A Shared Glance",
+          "caption": "Two children in yellow shirts look toward each other beneath the timber pier, holding colored balls.",
+          "w": 1600,
+          "h": 1066,
+          "palette": [
+            "#f2f2f4",
+            "#a56c2c",
+            "#8d8aa9"
+          ]
+        },
+        {
+          "id": "color-balls",
+          "img": "img/363fdb503e956d0273863e50.jpg",
+          "kicker": "Color and Play",
+          "caption": "Two children stand back to back by the beach, holding pink and blue balls.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#a3bbdf",
+            "#81828b",
+            "#d0d9e7"
+          ]
+        },
+        {
+          "id": "toward-the-water",
+          "img": "img/0a7d2faec6cf918c625f0619.jpg",
+          "kicker": "Toward the Water",
+          "caption": "Seen from behind, they hold hands and carry the balls toward the ocean.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#8ba7ca",
+            "#8e6459",
+            "#b1bccb"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Shallows",
+      "deck": "One figure, ankle-deep, hair in hand.",
+      "mood": {
+        "bg": "#dbe7ea",
+        "ink": "#0c1a20"
+      },
+      "plates": [
+        {
+          "id": "coastal-poise",
+          "img": "img/07f59839133492f58ad8884a.jpg",
+          "kicker": "Coastal Poise",
+          "caption": "Seen from behind, a person holds their hair while standing in shallow surf.",
+          "w": 1143,
+          "h": 1600,
+          "palette": [
+            "#607ea4",
+            "#666563",
+            "#acbfd6"
+          ]
+        }
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#a56c2c",
+      "name": "Tan",
+      "family": "brown",
+      "plates": [
+        0
+      ]
+    },
+    {
+      "hex": "#a3bbdf",
+      "name": "Sky",
+      "family": "blue",
+      "plates": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "hex": "#8e6459",
+      "name": "Brown",
+      "family": "red",
+      "plates": [
+        2
+      ]
+    },
+    {
+      "hex": "#81828b",
+      "name": "Stone",
+      "family": "grey",
+      "plates": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "hex": "#f2f2f4",
+      "name": "White",
+      "family": "white",
+      "plates": [
+        0,
+        1
+      ]
+    }
+  ],
+  "exhibit": {
+    "wordmark": "Coastal",
+    "font": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif",
+    "weight": 700,
+    "variation": "'wdth' 75",
+    "hero": "#dde7e9",
+    "heroInk": "#46646e",
+    "acc": "#2c6c84",
+    "intro": "Four photographs in two chapters. Scroll to walk the exhibition. Open any frame to read it.",
+    "place": {
+      "name": "Newport Beach",
+      "lat": 33.6073,
+      "lon": -117.9289,
+      "tz": "America/Los_Angeles"
+    },
+    "almanac": "sun",
+    "sound": "river",
+    "game": "skip",
+    "booking": "bqzjq87zbp@privaterelay.appleid.com"
+  }
+}

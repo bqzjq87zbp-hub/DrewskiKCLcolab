@@ -2,20 +2,39 @@
 
 A self-contained Newport Pier photography portfolio, exported for collaboration. It has 13 Branding, 21 Family, 31 Headshot and 4 Coastal gallery entries, including ten NWPRT photographs within Branding.
 
+The front door hangs those four collections as exhibitions, built on the exhibition engine from Drewski's Newsstand site: a dark lockup and four covers, then one exhibition per collection with a hang in chapters, a reading view, a 3D hall, a palette of colours measured from the photographs, a reel under the pier, a flip book and a 3D atelier. The pier walk below is one of its rooms, at `/walk/`.
+
 ## Run locally
 
 Install Node.js 20 or newer, then run:
 
 ```sh
 npm run check
+npm test
 npm start
 ```
 
-Open `http://127.0.0.1:4260/`. No package installation, API key or account is required. Use `PORT=4300 npm start` for a different local port. The server exposes only inventoried files under `public/`; repository documentation and development scripts are not public routes.
+Open `http://127.0.0.1:4260/`. No package installation, API key or account is required. The exhibitions load their typefaces from Google Fonts and the atelier loads three.js from unpkg; offline, the type falls back to system serif and sans, and the atelier falls back to the flat book. Use `PORT=4300 npm start` for a different local port. The server exposes only inventoried files under `public/`; repository documentation and development scripts are not public routes.
 
-## Current experience
+## The exhibitions
 
-The entrance is a photographic 2.5D forward/back projection using separately positioned canvas layers. The pier background is a real photograph. `public/media/easel-composition-reference.jpg` is the supplied AI-generated composition reference used for easel wood cutouts. It is not an unaltered photograph of a physical gallery. `public/media/underpier-photograph.jpg` is the real pier photograph.
+| Route | What it is |
+| --- | --- |
+| `/` | The front door: the lockup, four covers, a live Newport Beach clock with the next golden hour. Hovering a cover turns the dust behind it into that photograph. |
+| `/branding/`, `/families/`, `/headshots/`, `/coastal/` | One exhibition per collection: hero, the hang in chapters (zoom, reading view, canvas view), Walk the hall, The palette, the reel under the pier, the contents and the footer. |
+| `/<exhibition>/book/` | The flip book. Landscape photographs are printed whole on the page. |
+| `/<exhibition>/atelier/` | The same photographs as a lit 3D book (WebGL). |
+| `/walk/` | The Newport Pier walk described below, unchanged apart from a link back. |
+
+Every photograph in an exhibition is a 1600 px web copy of an approved file from `public/categories.json`, made by `tools/build_exhibitions.py`; the originals in `public/media/` are only read. Colours on the palette, in the reading view and in the finder are measured from the pixels, not described. "Ask the exhibition" runs entirely on the visitor's device: it navigates, picks out photographs by colour or subject, changes viewing settings, and plans a session in three questions before opening a booking email with the answers in its subject line. No AI service is called and no prices are stated. Booking links use the address in `tools/exhibitions.json`, currently Kyle's Apple private relay, which may reject unknown senders; changing that one value and rebuilding updates every link.
+
+To change captions, chapters, colours or covers, edit `tools/exhibitions.json`, then run `npm run exhibitions` (Python 3 with Pillow) and restart the server. That rewrites `public/catalog.json`, each `public/<exhibition>/issue.json`, the page shells and the web copies; unchanged inputs give byte-identical files. The reel is `public/video/walk-scrub.webm`/`.mp4`, encoded from the 241 walk frames with ffmpeg; the server answers byte-range requests so the browser can seek it.
+
+WebGL drives the page turns, paper entrances, hall, dust portraits, pool light and atelier. Without WebGL, or in Low power or Calm motion, each one falls back to a CSS or flat version and nothing is hidden.
+
+## The pier walk
+
+The walk (`/walk/`) is a photographic 2.5D forward/back projection using separately positioned canvas layers. The pier background is a real photograph. `public/media/easel-composition-reference.jpg` is the supplied AI-generated composition reference used for easel wood cutouts. It is not an unaltered photograph of a physical gallery. `public/media/underpier-photograph.jpg` is the real pier photograph.
 
 Each canvas opens a category. Galleries include full-image enlargement, keyboard dismissal and focus return. Appearance offers Clear, Solid and System settings; Travel offers Guided, Still and System settings. Reduced-motion and reduced-transparency alternatives remain available.
 
@@ -27,8 +46,14 @@ The generation used the requested 4K provider setting and the original no-logo p
 
 ## Project layout
 
-- `public/index.html`: page shell and no-JavaScript photograph links.
-- `public/main-v2.js`: canvas/category integration, menu and enlargement.
+- `public/index.html`, `public/catalog.json`: the front door and its list of exhibitions (generated).
+- `public/<exhibition>/`: each exhibition's shell, `issue.json`, `img/` web copies, `book/` and `atelier/` (generated).
+- `public/assets/x/`: the exhibition engine (plain ES modules, no build step); `public/assets/vendor/`: GSAP 3.15 (ScrollTrigger, SplitText, Flip) and Lenis 1.3.
+- `public/assets/flipbook.*`, `public/assets/stpageflip.js`: the flip book; `public/assets/atelier.*`, `public/assets/env/`: the 3D book and its two CC0 Poly Haven HDRIs.
+- `tools/exhibitions.json`, `tools/build_exhibitions.py`: the exhibitions' content and the script that builds them.
+- `tests/unit/`: `npm test`, covering the hang, physics, astronomy, search, the content and the finder.
+- `public/walk/index.html`: the pier walk's page shell and no-JavaScript photograph links.
+- `public/main.js`: canvas/category integration, menu and enlargement for the walk.
 - `public/collections.js`, `public/collections.css`: category galleries.
 - `public/aisle/`: photographic camera projection and easel masks.
 - `public/canvas-wrap.js`, `public/slots.json`: image-to-canvas geometry.

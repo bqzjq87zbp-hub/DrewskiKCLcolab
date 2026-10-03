@@ -1,0 +1,452 @@
+{
+  "title": "Families · Under the trees",
+  "issue": "Under the trees",
+  "mark": "Families",
+  "cover": "img/955f53a8e6570b9373c299c2.jpg",
+  "standfirst": "Family portraits made outside: under broad trees, out in the Southern California hills, down at the shoreline and on into the evening.",
+  "footer": "Kiyono Creative Lab · Families · Southern California",
+  "backline": "Hold on to this one.",
+  "theme": {
+    "mark": "Families",
+    "paper": "#f3eee4",
+    "ink": "#1d1913",
+    "acc": "#6c8746",
+    "acc2": "#5f6a52",
+    "edge": "#d8d0c2",
+    "deep": "#0d0c0b",
+    "display": "'Fraunces', Georgia, serif",
+    "mono": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "stories": [
+    {
+      "title": "Under the Tree",
+      "deck": "Shade, dappled light and everyone close together.",
+      "mood": {
+        "bg": "#eef0e4",
+        "ink": "#1b2114"
+      },
+      "plates": [
+        {
+          "id": "families-02",
+          "img": "img/a602589870049a3f0fb24c83.jpg",
+          "kicker": "Newborn",
+          "caption": "Two children kiss their mother while she cradles a newborn beneath the tree.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#e6dce9",
+            "#433b2f",
+            "#0f0e09"
+          ]
+        },
+        {
+          "id": "families-03",
+          "img": "img/86be855645440b5a914c953a.jpg",
+          "kicker": "The Two of Them",
+          "caption": "A couple sits together under a broad tree, smiling at one another.",
+          "w": 1600,
+          "h": 1027,
+          "palette": [
+            "#3e4428",
+            "#5a7136",
+            "#baa977"
+          ]
+        },
+        {
+          "id": "families-05",
+          "img": "img/f40563af947ec69c20021507.jpg",
+          "kicker": "Laughing",
+          "caption": "Two parents laugh while holding their young child beneath a leafy tree.",
+          "w": 1066,
+          "h": 1600,
+          "palette": [
+            "#a6b1c2",
+            "#755545",
+            "#1b1e0d"
+          ]
+        },
+        {
+          "id": "families-12",
+          "img": "img/bea67300da7b0a77dcfa3653.jpg",
+          "kicker": "Five",
+          "caption": "A family of five gathers beneath a tree in a relaxed portrait.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#979695",
+            "#685949",
+            "#413d2c"
+          ]
+        },
+        {
+          "id": "families-11",
+          "img": "img/c58e8ca633d94a87765e2d6a.jpg",
+          "kicker": "Layers",
+          "caption": "A father holds the baby in the foreground while the rest of the family gathers behind.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#a4936a",
+            "#35381b",
+            "#655f3a"
+          ]
+        },
+        {
+          "id": "families-16",
+          "img": "img/1d1679620b5eb5e9b334276c.jpg",
+          "kicker": "Wide",
+          "caption": "A father holds a baby in the foreground while the mother and children gather beneath the tree behind them.",
+          "w": 1600,
+          "h": 900,
+          "palette": [
+            "#a19869",
+            "#3c3e1e",
+            "#759491"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "In the Hills",
+      "deck": "Open sky, tall grass and room to move.",
+      "mood": {
+        "bg": "#f4eedf",
+        "ink": "#241d10"
+      },
+      "plates": [
+        {
+          "id": "families-01",
+          "img": "img/363dc893eff2ab2c7ff0724e.jpg",
+          "kicker": "Four",
+          "caption": "A family of four sits together in the Southern California hills.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#907955",
+            "#a2bce7",
+            "#524f3a"
+          ]
+        },
+        {
+          "id": "families-07",
+          "img": "img/955f53a8e6570b9373c299c2.jpg",
+          "kicker": "Up High",
+          "caption": "A father lifts his son high against an open blue sky in the hills.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#b1cbf2",
+            "#5a583a",
+            "#878444"
+          ]
+        },
+        {
+          "id": "families-09",
+          "img": "img/f06ec1bfba96659fe6b9da2f.jpg",
+          "kicker": "The Dance",
+          "caption": "A father dances with his daughter outdoors while another child watches.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#98906d",
+            "#4c4e37",
+            "#f6f8f6"
+          ]
+        },
+        {
+          "id": "families-13",
+          "img": "img/d7ad3b51e4c774c87d7a425b.jpg",
+          "kicker": "Tall Grass",
+          "caption": "Two sisters hold hands while moving through tall grass.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#a19b76",
+            "#404823",
+            "#75784d"
+          ]
+        },
+        {
+          "id": "families-lacie-004",
+          "img": "img/5dbcccb90432fd253c75600a.jpg",
+          "kicker": "Sisters",
+          "caption": "An older sister wraps her younger sister in a hug, standing together in tall grass.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#ddd7df",
+            "#70674e",
+            "#be9d87"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Close",
+      "deck": "Closer in: a newborn on a shoulder, a laughing child, and two faces in black and white.",
+      "mood": {
+        "bg": "#ecebe7",
+        "ink": "#1a1816"
+      },
+      "plates": [
+        {
+          "id": "families-04",
+          "img": "img/8601f013a9a902169521c8b0.jpg",
+          "kicker": "First Look",
+          "caption": "A newborn looks toward the camera, resting against their mother's shoulder.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#d9b9ad",
+            "#3a3729",
+            "#1f1c1b"
+          ]
+        },
+        {
+          "id": "families-lacie-001",
+          "img": "img/4967ef26446203f5514ff4da.jpg",
+          "kicker": "Father and Child",
+          "caption": "A smiling father cradles his laughing child in a close outdoor portrait.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#dbdab6",
+            "#5c4f4c",
+            "#141211"
+          ]
+        },
+        {
+          "id": "families-10",
+          "img": "img/2d96f735ba18201980dee971.jpg",
+          "kicker": "Black and White",
+          "caption": "A close black-and-white portrait of an older woman looking straight into the camera.",
+          "w": 1029,
+          "h": 1600,
+          "palette": [
+            "#e4e4e4",
+            "#818080",
+            "#5d5c5d"
+          ]
+        },
+        {
+          "id": "families-lacie-003",
+          "img": "img/806acd3e487f0b0fc646973b.jpg",
+          "kicker": "Eye Contact",
+          "caption": "A young child looks directly into the camera, close and in black and white.",
+          "w": 1062,
+          "h": 1600,
+          "palette": [
+            "#fbfbfb",
+            "#828282",
+            "#484848"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "By the Water",
+      "deck": "Down at the shoreline and under the pier, with two very bright balls.",
+      "mood": {
+        "bg": "#e7f0f2",
+        "ink": "#0e1f27"
+      },
+      "plates": [
+        {
+          "id": "families-06",
+          "img": "img/4d393268061adceca4155add.jpg",
+          "kicker": "Shoreline",
+          "caption": "Two children play with colorful balls along the shoreline under an open sky.",
+          "w": 1600,
+          "h": 900,
+          "palette": [
+            "#4f8ac5",
+            "#8bb7eb",
+            "#024f89"
+          ]
+        },
+        {
+          "id": "families-08",
+          "img": "img/a5837627b4f676209118e0e7.jpg",
+          "kicker": "Under the Pier",
+          "caption": "Two siblings smile at each other beneath the pier, holding glowing balls.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#f2f2f4",
+            "#a66d2d",
+            "#8d8ba9"
+          ]
+        },
+        {
+          "id": "families-14",
+          "img": "img/363fdb503e956d0273863e50.jpg",
+          "kicker": "Color and Play",
+          "caption": "Two children stand back to back by the beach, holding pink and blue balls.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#a3bbdf",
+            "#81828b",
+            "#d0d9e7"
+          ]
+        },
+        {
+          "id": "families-15",
+          "img": "img/0a7d2faec6cf918c625f0619.jpg",
+          "kicker": "Toward the Water",
+          "caption": "Seen from behind, two children hold hands and carry their pink and blue balls toward the ocean.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#8ba7ca",
+            "#8e6459",
+            "#b1bccb"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Into the Evening",
+      "deck": "The light goes soft, then it goes. Silhouettes against a pale sky.",
+      "mood": {
+        "bg": "#221a24",
+        "ink": "#f1e7ee"
+      },
+      "plates": [
+        {
+          "id": "families-lacie-002",
+          "img": "img/f3d91ee5078d8a3102569310.jpg",
+          "kicker": "Balance",
+          "caption": "A child in a pink dress balances on one leg, one arm out, beneath a pale evening sky.",
+          "w": 1067,
+          "h": 1600,
+          "palette": [
+            "#e2e6e6",
+            "#363728",
+            "#151510"
+          ]
+        },
+        {
+          "id": "families-lacie-005",
+          "img": "img/044ce4a7ec48b6d0528efce5.jpg",
+          "kicker": "Dusk",
+          "caption": "A father carries two children while a mother holds the baby, all of them silhouetted against the evening sky.",
+          "w": 1600,
+          "h": 1067,
+          "palette": [
+            "#988f90",
+            "#0b0b09",
+            "#e3c8b0"
+          ]
+        }
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#b1cbf2",
+      "name": "Sky",
+      "family": "blue",
+      "plates": [
+        2,
+        6,
+        7,
+        15,
+        17,
+        18
+      ]
+    },
+    {
+      "hex": "#024f89",
+      "name": "Navy",
+      "family": "blue",
+      "plates": [
+        15
+      ]
+    },
+    {
+      "hex": "#a66d2d",
+      "name": "Tan",
+      "family": "brown",
+      "plates": [
+        16
+      ]
+    },
+    {
+      "hex": "#a19869",
+      "name": "Sage",
+      "family": "yellow",
+      "plates": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "hex": "#d9b9ad",
+      "name": "Blush",
+      "family": "orange",
+      "plates": [
+        10,
+        11,
+        20
+      ]
+    },
+    {
+      "hex": "#3c3e1e",
+      "name": "Moss",
+      "family": "green",
+      "plates": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        19
+      ]
+    },
+    {
+      "hex": "#8e6459",
+      "name": "Brown",
+      "family": "red",
+      "plates": [
+        2,
+        3,
+        6,
+        10,
+        18
+      ]
+    }
+  ],
+  "exhibit": {
+    "wordmark": "Families",
+    "font": "'Pinyon Script', 'Snell Roundhand', cursive",
+    "weight": 400,
+    "variation": "",
+    "hero": "#e9e8dc",
+    "heroInk": "#5f6a52",
+    "acc": "#6c8746",
+    "intro": "Twenty-one photographs in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
+    "place": {
+      "name": "Newport Beach",
+      "lat": 33.6073,
+      "lon": -117.9289,
+      "tz": "America/Los_Angeles"
+    },
+    "almanac": "sun",
+    "sound": "river",
+    "game": "skip",
+    "booking": "bqzjq87zbp@privaterelay.appleid.com"
+  }
+}
