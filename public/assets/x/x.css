@@ -505,8 +505,16 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .iss-t b { font-weight: var(--w, 400); font-family: var(--f); font-variation-settings: var(--v, normal); font-size: clamp(24px, 2.6vw, 38px); line-height: 1; }
 .iss-t span { font: 300 13px/1.35 var(--disp); font-style: italic; opacity: .7; max-width: 26ch; }
 /* only a hovered cover dims its neighbours; the gaps between covers do not */
-.ld-pick:has(.iss:hover) .iss:not(:hover) { opacity: .45; }
-.iss { transition: opacity .5s var(--ease); }
+.ld-pick:has(.iss:hover) .iss:not(:hover) { filter: brightness(.42) saturate(.7); }
+.iss { transition: filter .5s var(--ease); }
+/* the hovered cover's photograph, laid across the room behind the covers */
+.ld-photo { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.ld-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06);
+  transition: opacity .9s var(--ease), transform 7s var(--ease); }
+.ld-photo img.on { opacity: .5; transform: none; }
+.ld-photo::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(rgba(7,7,7,.6), transparent 24%, transparent 72%, rgba(7,7,7,.7)), radial-gradient(80% 70% at 50% 45%, transparent, rgba(7,7,7,.55)); }
+html[data-motion="calm"] .ld-photo img { transform: none; transition: opacity .4s; }
 .ld-bot { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 16px; font-size: 12px; opacity: .8; }
 .ld-bot .r { justify-self: end; text-align: right; }
 .ld-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(60% 50% at 50% 55%, color-mix(in srgb, var(--tint, #222) 34%, transparent), transparent 75%); transition: background .8s; }

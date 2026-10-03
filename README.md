@@ -20,7 +20,7 @@ Open `http://127.0.0.1:4260/`. No package installation, API key or account is re
 
 | Route | What it is |
 | --- | --- |
-| `/` | The front door: the lockup, four covers, a live Newport Beach clock with the next golden hour. Hovering a cover turns the dust behind it into that photograph. |
+| `/` | The front door: the lockup, four covers, a live Newport Beach clock with the next golden hour. Hovering a cover lays its photograph across the room, dimmed, behind the covers. |
 | `/branding/`, `/families/`, `/headshots/`, `/coastal/` | One exhibition per collection: hero, the hang in chapters (zoom, reading view, canvas view), Walk the hall, The palette, the reel under the pier, the contents and the footer. |
 | `/<exhibition>/book/` | The flip book. Landscape photographs are printed whole on the page. |
 | `/<exhibition>/atelier/` | The same photographs as a lit 3D book (WebGL). |
@@ -30,7 +30,7 @@ Every photograph in an exhibition is a 1600 px web copy of an approved file from
 
 To change captions, chapters, colours or covers, edit `tools/exhibitions.json`, then run `npm run exhibitions` (Python 3 with Pillow) and restart the server. That rewrites `public/catalog.json`, each `public/<exhibition>/issue.json`, the page shells and the web copies; unchanged inputs give byte-identical files. The reel is `public/video/walk-scrub.webm`/`.mp4`, encoded from the 241 walk frames with ffmpeg; the server answers byte-range requests so the browser can seek it.
 
-WebGL drives the page turns, paper entrances, hall, dust portraits, pool light and atelier. Without WebGL, or in Low power or Calm motion, each one falls back to a CSS or flat version and nothing is hidden.
+WebGL drives the page turns, paper entrances, hall, pool light and atelier. Without WebGL, or in Low power or Calm motion, each one falls back to a CSS or flat version and nothing is hidden.
 
 ## The pier walk
 

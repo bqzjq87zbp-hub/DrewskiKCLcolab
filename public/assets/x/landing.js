@@ -4,12 +4,12 @@
  *                   loading counter under it
  *   the covers      flip in on an oblique axis and land (gl/plates.js flip)
  *   the choice      "Choose which exhibition you want to explore"; hover tilts
- *                   the cover and turns the dust behind it into that cover's
- *                   portrait (gl/particles.js); click turns the page into it
+ *                   the cover and lays its photograph across the room behind
+ *                   every cover; click turns the page into it
  *
  * Everything comes from catalog.json: a fifth exhibition is a fifth cover.
  */
-import { $, $$, h, esc, fetchJSON, appUrl, BB, luma, rgb01, mixHex } from "./util.js";
+import { $, $$, h, esc, fetchJSON, appUrl, BB } from "./util.js";
 import * as prefs from "./core/prefs.js";
 import { initScroll } from "./core/scroll.js";
 import { initCursor, bindAll } from "./core/cursor.js";
@@ -19,7 +19,6 @@ import { startLive } from "./core/live.js";
 import { track, preloader, go, bindLinks, arriving } from "./core/transition.js";
 import { stage } from "./gl/stage.js";
 import { enter } from "./gl/plates.js";
-import { particles } from "./gl/particles.js";
 import { initMenu } from "./ui/menu.js";
 
 const gsap = window.gsap;
@@ -71,7 +70,7 @@ async function boot() {
   const menu = initMenu({ catalog: cat, menuTitle: "The Exhibitions", ex: here });
   $(".menu-btn", main).addEventListener("click", () => menu.open());
   const calm = prefs.get().motion === "calm";
-  const field = stage.ok && !calm ? particles({ dust: rgb01("#8a8278") }) : null;
+  const backdrop = photoBackdrop(issues);
   wire();
   startLive(document, here);
 
@@ -86,7 +85,6 @@ async function boot() {
   }
   document.documentElement.removeAttribute("data-arriving");
   sessionStorage.removeItem("x.handoff");
-  if (field) field.start();
   if (!calm) {
     slot($(".ld-q", main), { type: "words", stagger: 0.04, rotate: 0 });
     gsap.from([$(".ld-top", main), $(".ld-bot", main)], { autoAlpha: 0, y: 12, duration: 1, stagger: 0.08, delay: 0.3, ease: "expo.out" });
@@ -103,18 +101,16 @@ async function boot() {
   bindAll(document);
 
   function wire() {
-    const bg = $(".ld-bg");
     $$(".iss", pick).forEach((box) => {
       const i = issues.find((x) => x.slug === box.dataset.slug);
-      const a = $(".iss-a", box), img = $("img", a);
+      const a = $(".iss-a", box);
       a.addEventListener("pointerenter", () => {
-        bg.style.setProperty("--tint", i.acc || "#333");
-        if (field) field.form(img);
+        backdrop.show(i.slug);
         sound.play("tick", { i: issues.indexOf(i) * 3 });
       });
-      a.addEventListener("pointerleave", () => { bg.style.setProperty("--tint", "#222"); if (field) field.form(null); });
-      a.addEventListener("focus", () => { if (field) field.form(img); });
-      a.addEventListener("blur", () => { if (field) field.form(null); });
+      a.addEventListener("pointerleave", () => backdrop.show(null));
+      a.addEventListener("focus", () => backdrop.show(i.slug));
+      a.addEventListener("blur", () => backdrop.show(null));
       a.addEventListener("click", (e) => {
         if (e.metaKey || e.ctrlKey || e.shiftKey) return;
         e.preventDefault();
@@ -127,4 +123,23 @@ async function boot() {
     prefs.onChange(({ key }) => key === "sound" && sync());
     sync();
   }
+}
+
+/* Hovering a cover lays its photograph across the whole room, dimmed so the
+ * covers and captions stay readable. Moving from one cover to the next
+ * crossfades; leaving waits a beat, so crossing the gap between two covers
+ * does not flash back to black. */
+function photoBackdrop(issues) {
+  const el = h("div", { class: "ld-photo", "aria-hidden": "true" },
+    issues.map((i) => `<img src="${esc(appUrl(i.cover))}" alt="" decoding="async" data-slug="${esc(i.slug)}">`).join(""));
+  $(".ld-bg").after(el);
+  const imgs = $$("img", el);
+  let t = 0;
+  const set = (slug) => imgs.forEach((im) => im.classList.toggle("on", im.dataset.slug === slug));
+  return {
+    show(slug) {
+      clearTimeout(t);
+      if (slug) set(slug); else t = setTimeout(() => set(null), 220);
+    },
+  };
 }
