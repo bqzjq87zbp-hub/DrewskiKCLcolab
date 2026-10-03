@@ -22,10 +22,15 @@ let state = "", on = false, hidden = true, magnetsBusy = false;
 const magnets = new Set();
 const DISC = /^(view|drag|enter|close|play|label)\|/;
 
+// Position goes on the `translate` property, never `transform`. The disc and
+// the preview grow and shrink with the CSS `scale` property, which the browser
+// applies on top of `transform`: a transform offset got scaled with them, so
+// every shrink slid the disc toward the top-left corner of the page and every
+// grow swung it back out. `translate` sits outside `scale`, so they grow in place.
 function put() {
-  dot.style.transform = `translate3d(${dx.toFixed(1)}px,${dy.toFixed(1)}px,0)`;
-  disc.style.transform = `translate3d(${cx.toFixed(1)}px,${cy.toFixed(1)}px,0)`;
-  preview.style.transform = `translate3d(${(cx + 28).toFixed(1)}px,${(cy + 28).toFixed(1)}px,0)`;
+  dot.style.translate = `${dx.toFixed(1)}px ${dy.toFixed(1)}px`;
+  disc.style.translate = `${cx.toFixed(1)}px ${cy.toFixed(1)}px`;
+  preview.style.translate = `${(cx + 28).toFixed(1)}px ${(cy + 28).toFixed(1)}px`;
 }
 
 export const pointer = { x: innerWidth / 2, y: innerHeight / 2, nx: 0, ny: 0, down: false, moved: false };
