@@ -20,7 +20,6 @@ import { stage } from "../gl/stage.js";
 import { scroll } from "../core/scroll.js";
 import { scramble, slot } from "../core/type.js";
 import { sound } from "../core/sound.js";
-import { resetCursor } from "../core/cursor.js";
 import * as prefs from "../core/prefs.js";
 
 const gsap = window.gsap;
@@ -29,7 +28,7 @@ export function initSlider(ctx) {
   const back = h("div", { class: "sl-back", "aria-hidden": "true" });
   const frame = h("div", { class: "sl-img" }, `<img alt="" decoding="async">`);
   const ui = h("div", { class: "sl-ui", role: "dialog", "aria-modal": "true", "aria-label": "Reading view" }, `
-    <button class="sl-close lbl" type="button" data-cursor="close" data-magnetic="0.25">Close</button>
+    <button class="sl-close lbl" type="button" data-magnetic="0.25">Close</button>
     <div class="sl-text" aria-live="polite">
       <div class="sl-idx"><span class="num sl-n"></span> &nbsp;<span class="sl-story"></span></div>
       <h2 class="sl-k"></h2>
@@ -86,7 +85,7 @@ export function initSlider(ctx) {
     g.innerHTML = [["Exhibition", ctx.issue.mark], ["Chapter", `${pad(p.story + 1)} · ${p.storyTitle}`], ["Format", p.shape]]
       .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("") +
       (p.palette.length ? `<dt>Colours</dt><dd class="sl-sw">${p.palette.map((c) => `<i style="background:${esc(c)}" title="${esc(c)}"></i>`).join("")}</dd>` : "") +
-      `<a href="${esc(ctx.booking(`Booking enquiry: ${ctx.issue.mark}, like plate ${pad(p.n)} (${p.kicker})`))}" data-cursor="label" data-cursor-label="Email">Book a session like this &rarr;</a>`;
+      `<a href="${esc(ctx.booking(`Booking enquiry: ${ctx.issue.mark}, like plate ${pad(p.n)} (${p.kicker})`))}">Book a session like this &rarr;</a>`;
     g.hidden = false;
     im.alt = p.alt;
     $$("button", thumbs).forEach((b) => {
@@ -106,7 +105,6 @@ export function initSlider(ctx) {
     const p = ctx.plates[i];
     im.src = p.src;
     document.documentElement.classList.add("sl-open");
-    resetCursor();
     const t = target();
     const calm = prefs.get().motion === "calm";
     const src = from && from.getBoundingClientRect();

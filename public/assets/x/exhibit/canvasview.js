@@ -10,14 +10,13 @@
 import { $, h, esc, pad, clamp, damp } from "../util.js";
 import { scroll } from "../core/scroll.js";
 import { hover } from "../gl/plates.js";
-import { resetCursor } from "../core/cursor.js";
 import { sound } from "../core/sound.js";
 import * as prefs from "../core/prefs.js";
 
 const gsap = window.gsap;
 
 export function initCanvas(ctx) {
-  const root = h("div", { class: "cv", role: "dialog", "aria-modal": "true", "aria-label": "Canvas view: drag to explore every photograph", "data-cursor": "drag", tabindex: "-1" },
+  const root = h("div", { class: "cv", role: "dialog", "aria-modal": "true", "aria-label": "Canvas view: drag to explore every photograph", tabindex: "-1" },
     `<div class="cv-t"></div><div class="cv-hint lbl">Drag to explore &middot; Esc to close</div>`);
   document.body.appendChild(root);
   const track = $(".cv-t", root);
@@ -36,7 +35,7 @@ export function initCanvas(ctx) {
 
   function tile(k) {
     if (!pool[k]) {
-      const t = h("button", { class: "tile", type: "button", "data-cursor": "view", tabindex: "-1" }, `<img alt="" decoding="async"><span class="num"></span>`);
+      const t = h("button", { class: "tile", type: "button", tabindex: "-1" }, `<img alt="" decoding="async"><span class="num"></span>`);
       track.appendChild(t);
       pool[k] = t;
     }
@@ -140,7 +139,6 @@ export function initCanvas(ctx) {
     scroll.lock();
     root.classList.add("open");
     document.documentElement.classList.add("cv-open");
-    resetCursor();
     if (opts.push !== false) { history.pushState({ v: "canvas" }, "", `${location.pathname}?view=canvas`); pushed = true; }
     tx = ox = -(cw + gap) * 0.5; ty = oy = -(ch + gap) * 0.25;
     render();

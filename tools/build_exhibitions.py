@@ -206,8 +206,8 @@ def front_door(site, issues):
   </div>
   <div class="ld-pick"></div>
   <nav class="ld-more" aria-label="More ways in">
-    <a href="/walk/" data-go="#061522" data-go-label="The Walk" data-preview="/video/walk-scrub.mp4" data-cursor="label" data-cursor-label="Walk">Walk the pier</a>
-    <a href="mailto:{a(site["booking"])}?subject=Booking%20enquiry" data-cursor="label" data-cursor-label="Email">Book a session</a>
+    <a href="/walk/" data-go="#061522" data-go-label="The Walk">Walk the pier</a>
+    <a href="mailto:{a(site["booking"])}?subject=Booking%20enquiry">Book a session</a>
   </nav>
 </main>
 <noscript><p style="padding:40px;color:#eee;font:16px/1.5 Georgia,serif">The exhibitions need JavaScript. The flat editions: {noscript}. Or <a style="color:#fff" href="/walk/">walk the pier</a>.</p></noscript>

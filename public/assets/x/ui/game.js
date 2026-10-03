@@ -17,7 +17,6 @@ import { $, h, clamp, lerp, pad } from "../util.js";
 import { moon } from "../core/live-math.js";
 import { sound } from "../core/sound.js";
 import { scroll } from "../core/scroll.js";
-import { hideCursor } from "../core/cursor.js";
 import * as prefs from "../core/prefs.js";
 
 export function initGame(ctx) {
@@ -283,7 +282,7 @@ export function initGame(ctx) {
   function show() {
     if (open) return;
     open = true;
-    scroll.lock(); hideCursor(true);
+    scroll.lock();
     size(); reset();
     root.classList.add("open");
     document.documentElement.classList.add("gm-open");
@@ -297,7 +296,7 @@ export function initGame(ctx) {
     cancelAnimationFrame(raf);
     root.classList.remove("open");
     document.documentElement.classList.remove("gm-open");
-    scroll.unlock(); hideCursor(false);
+    scroll.unlock();
   }
   return { open: show, close };
 }

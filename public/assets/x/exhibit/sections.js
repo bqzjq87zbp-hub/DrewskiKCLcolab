@@ -188,7 +188,6 @@ export function initPalette(ctx, sec) {
     const [x, y] = local(e);
     if (held) W.move(held, x, y);
     else cv.style.cursor = W.pick(x, y) ? "grab" : "";
-    if (!held && e.pointerType === "mouse") cv.dataset.cursor = W.pick(x, y) ? "label" : "";
   });
   const up = (e) => {
     if (!held) return;

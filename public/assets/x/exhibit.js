@@ -14,7 +14,7 @@
 import { $, $$, h, esc, pad, fetchJSON, hereDir, appUrl, APP, BB, mixHex, luma, clamp, listen, emit } from "./util.js";
 import * as prefs from "./core/prefs.js";
 import { initScroll, scroll, refresh } from "./core/scroll.js";
-import { initCursor, bindAll } from "./core/cursor.js";
+import { bindAll } from "./core/cursor.js";
 import { slot, lines, marquee, axis, scramble } from "./core/type.js";
 import { initReveals } from "./core/reveal.js";
 import { sound } from "./core/sound.js";
@@ -53,7 +53,6 @@ async function boot() {
   prefs.apply();
   initScroll();
   scroll.lock();
-  initCursor();
   stage.init({ z: 30 });
   bindLinks();
 
@@ -192,7 +191,7 @@ function render(ctx) {
             <dl><dt>Chapter</dt><dd>${pad(g.story + 1)} of ${pad(stories.length)}</dd><dt>Frames</dt><dd>${stories[g.story].plates.length}</dd>
               <dt>Lead</dt><dd>[${pad(p.n)}] ${esc(p.kicker)}</dd><dt>Format</dt><dd>${esc(p.shape)}</dd></dl>
             <p>${esc(g.note)}</p>
-            <a class="card-go" style="margin-top:10px;font-size:15px" href="#chapter-${g.story + 1}" data-chapter="${g.story}" data-cursor="enter">Read the chapter &rarr;</a>
+            <a class="card-go" style="margin-top:10px;font-size:15px" href="#chapter-${g.story + 1}" data-chapter="${g.story}">Read the chapter &rarr;</a>
           </div></article>`;
         }).join("")}
       </div>
@@ -233,14 +232,14 @@ function render(ctx) {
       <div><h4 class="lbl">This exhibition</h4><ul>
         <li><a href="${esc(root)}book/">The book</a></li>
         <li><a href="${esc(root)}atelier/">The atelier</a></li>
-        <li><a href="${esc(ctx.walk)}" data-go="${esc(ctx.roomColor)}" data-go-label="The Walk" data-preview="${esc(appUrl("video/walk-scrub.mp4"))}">Walk the pier</a></li></ul></div>
+        <li><a href="${esc(ctx.walk)}" data-go="${esc(ctx.roomColor)}" data-go-label="The Walk"video/walk-scrub.mp4"))}">Walk the pier</a></li></ul></div>
       <div><h4 class="lbl">Chapters</h4><ul>${stories.map((s) => `<li><a href="#chapter-${s.i + 1}" data-chapter="${s.i}">${esc(s.title)}</a></li>`).join("")}</ul></div>
       <div><h4 class="lbl">Other exhibitions</h4><ul>${others.map((o) => `<li><a href="${esc(appUrl(o.slug + "/"))}" data-go="${esc(o.hero || "#111")}" data-go-label="${esc(o.mark)}" data-go-font="${esc(o.font || "")}" data-go-weight="${o.weight || 400}" data-go-variation="${esc(o.variation || "normal")}">${esc(o.mark)}</a></li>`).join("")}
         <li><a href="${esc(appUrl(""))}" data-go="#070707">The front door</a></li></ul></div>
       <div><h4 class="lbl">Sessions</h4><ul>
         <li><a href="${esc(ctx.booking(`Booking enquiry: ${issue.mark}`))}">Book a session</a></li>
         <li><button type="button" data-act="ask">Plan a session</button></li>
-        <li><button type="button" data-act="play" data-cursor="play">Skip a stone</button></li>
+        <li><button type="button" data-act="play">Skip a stone</button></li>
         <li><button type="button" data-act="menu">Settings</button></li></ul></div>
     </div>
     <div class="ft-base lbl"><span>${esc(issue.footer || "")}</span>${ex.place ? '<span data-live="all"></span>' : ""}<span>The Exhibitions</span></div>`);

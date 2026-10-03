@@ -55,8 +55,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .lbl { font: 500 11px/1.2 var(--ui); letter-spacing: .09em; text-transform: uppercase; }
 .num { font-variant-numeric: tabular-nums; }
-html.has-cursor, html.has-cursor * { cursor: none !important; }
-html.has-cursor input, html.has-cursor textarea { cursor: text !important; }
 
 /* grain over everything, the printed-matter feel */
 /* Plain alpha noise, no blend mode: a full-screen blend forces the compositor
@@ -75,31 +73,11 @@ html[data-effects="off"] .hd::before { -webkit-backdrop-filter: none; backdrop-f
 /* the GL stage */
 .gl-stage { position: fixed; left: 0; top: 0; width: 100vw; height: 100lvh; pointer-events: none; z-index: 30; }
 
-/* ─── cursor (/iw-pointer-magic) ─────────────────────────────────────── */
-/* zero-size container: only the dot and the disc become compositor layers */
-.cur { position: fixed; left: 0; top: 0; width: 0; height: 0; z-index: 100; pointer-events: none; display: none; }
-html.has-cursor .cur { display: block; }
-.cur.is-out, .cur.is-hidden { opacity: 0; }
-.cur-dot { position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; border-radius: 50%; background: var(--ink);
-  transition: width .3s var(--ease), height .3s var(--ease), left .3s var(--ease), top .3s var(--ease), opacity .2s, background-color .6s; }
-.cur-disc { position: absolute; left: -50px; top: -50px; width: 100px; height: 100px; border-radius: 50%;
-  background: #0b0a09; color: #f4efe6; display: grid; place-items: center; overflow: hidden;
-  scale: 0; transition: scale .45s var(--ease), background-color .3s; }
-.cur-grain { position: absolute; inset: 0; opacity: .35; filter: invert(1); background: url("grain.png") 0 0 / 96px 96px; }
-.cur-label { position: relative; font: 500 10.5px/1 var(--ui); letter-spacing: .1em; text-transform: uppercase; }
-.cur-plus { position: absolute; width: 18px; height: 18px; stroke: #cfc9bf; stroke-width: 1.4; fill: none; opacity: 0; transition: opacity .2s; }
-.cur[data-state="view"] .cur-disc, .cur[data-state="drag"] .cur-disc, .cur[data-state="enter"] .cur-disc,
-.cur[data-state="close"] .cur-disc, .cur[data-state="play"] .cur-disc, .cur[data-state="label"] .cur-disc { scale: 1; }
-.cur[data-state="view"] .cur-plus { opacity: 1; }
-.cur[data-state="view"] .cur-dot, .cur[data-state="drag"] .cur-dot, .cur[data-state="enter"] .cur-dot, .cur[data-state="close"] .cur-dot,
-.cur[data-state="play"] .cur-dot, .cur[data-state="label"] .cur-dot { opacity: 0; }
-.cur[data-state="link"] .cur-dot { width: 30px; height: 30px; left: -15px; top: -15px; background: color-mix(in srgb, var(--ink) 12%, transparent); }
-.cur[data-state="text"] .cur-dot { width: 2px; height: 22px; left: -1px; top: -11px; border-radius: 1px; }
-.cur.is-down .cur-disc { scale: .86; }
-.cur-preview { position: fixed; left: 0; top: 0; z-index: 99; width: 220px; aspect-ratio: 16/9; pointer-events: none; overflow: hidden;
-  border-radius: 3px; opacity: 0; scale: .7; transition: opacity .35s var(--ease), scale .45s var(--ease); box-shadow: 0 20px 50px -20px rgba(0,0,0,.6); }
-.cur-preview.on { opacity: 1; scale: 1; }
-.cur-preview video { width: 100%; height: 100%; object-fit: cover; }
+/* ─── pointer ─────────────────────────────────────────────────────────── */
+/* the system pointer, with the native cursor that names each action */
+.fr-a { cursor: zoom-in; }
+.cv { cursor: grab; }
+.cv.dragging { cursor: grabbing; }
 .tilt-glare { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .4s; mix-blend-mode: soft-light;
   background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,.55), transparent 55%); }
 

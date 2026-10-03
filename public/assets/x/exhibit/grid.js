@@ -40,7 +40,7 @@ export function initGrid(ctx) {
     const eager = p.i < 6;
     const lab = `<span class="num" data-text="[${pad(p.n)}]">[${pad(p.n)}]</span><small>${esc(p.kicker)}</small>`;
     return `<figure class="fr is-waiting" id="p-${pad(p.n)}" data-i="${p.i}" style="grid-row:${r};grid-column:${it.start + 1} / span ${it.span};--drop:${it.drop}">
-      <a class="fr-a" href="?view=slider&amp;id=${p.n}" data-cursor="view" aria-label="Plate ${pad(p.n)}, ${esc(p.kicker)}. ${esc(p.caption)}">
+      <a class="fr-a" href="?view=slider&amp;id=${p.n}" aria-label="Plate ${pad(p.n)}, ${esc(p.kicker)}. ${esc(p.caption)}">
         <div class="fr-m" style="aspect-ratio:${p.w} / ${p.h}"><img src="${esc(p.src)}" alt="${esc(p.alt)}" width="${p.w}" height="${p.h}" decoding="async" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'}></div>
       </a>
       <figcaption class="fr-lab" data-side="${it.label}">${lab}</figcaption>

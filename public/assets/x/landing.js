@@ -12,7 +12,7 @@
 import { $, $$, h, esc, fetchJSON, appUrl, BB } from "./util.js";
 import * as prefs from "./core/prefs.js";
 import { initScroll } from "./core/scroll.js";
-import { initCursor, bindAll } from "./core/cursor.js";
+import { bindAll } from "./core/cursor.js";
 import { slot } from "./core/type.js";
 import { sound } from "./core/sound.js";
 import { track, preloader, go, bindLinks, arriving } from "./core/transition.js";
@@ -33,7 +33,6 @@ boot().catch((e) => {
 async function boot() {
   prefs.apply();
   initScroll();
-  initCursor();
   // The canvas sits ABOVE the covers here: the covers flip in on it, and
   // under the cards their dark backgrounds hid the whole flip, so every card
   // showed black until it landed. It is click-through and hides when idle.
@@ -52,7 +51,7 @@ async function boot() {
   pick.innerHTML = issues.map((i) => {
     const base = appUrl(i.slug + "/");
     return `<div class="iss" data-slug="${esc(i.slug)}" style="--f:${esc(i.font)};--w:${i.weight || 400};--v:${esc(i.variation || "normal")}">
-      <a class="iss-a" href="${esc(base)}" data-cursor="enter" aria-label="${esc(i.mark)}, ${esc(i.issue)}: enter the exhibition">
+      <a class="iss-a" href="${esc(base)}" aria-label="${esc(i.mark)}, ${esc(i.issue)}: enter the exhibition">
         <div class="iss-m" data-tilt="8"><img src="${esc(appUrl(i.cover))}" alt="${esc(i.mark)} cover, ${esc(i.issue)}" decoding="async"></div>
         <div class="iss-t"><b>${esc(i.mark)}</b><span>${esc(i.issue)}. ${esc(i.blurb || "")}</span></div>
       </a>

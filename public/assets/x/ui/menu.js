@@ -63,7 +63,7 @@ export function initMenu(ctx) {
       <div class="mn-col mn-issues"><h3 class="lbl">The exhibitions</h3>${issueHTML}
         <div class="chips" style="margin-top:4px">
           ${ctx.plates ? '<button type="button" data-act="ask">Plan a session</button><button type="button" data-act="play">Play</button>' : ""}
-          <a class="chipa" href="${esc(appUrl("walk/"))}" data-go="#061522" data-go-label="The Walk" data-preview="${esc(appUrl("video/walk-scrub.mp4"))}" data-cursor="label" data-cursor-label="Walk">Walk the pier</a>
+          <a class="chipa" href="${esc(appUrl("walk/"))}" data-go="#061522" data-go-label="The Walk"video/walk-scrub.mp4"))}">Walk the pier</a>
           <a class="chipa" href="${esc(appUrl(""))}" data-go="#070707">The front door</a>
         </div>
       </div>
