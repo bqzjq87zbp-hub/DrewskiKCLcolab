@@ -35,7 +35,7 @@ const server=http.createServer(async(req,res)=>{
     if(!resolved.startsWith(root+path.sep)||resolved!==file){res.writeHead(403).end();return;}
     const bytes=await readFile(file);
     const head={'Content-Type':types[path.extname(file).toLowerCase()],'Accept-Ranges':'bytes'};
-    // Byte ranges, so a browser can seek inside the scrubbed videos.
+    // Byte ranges, so a browser can resume or seek inside a large file.
     const range=/^bytes=(\d*)-(\d*)$/.exec(req.headers.range||'');
     if(range&&(range[1]||range[2])){
       const start=range[1]?Number(range[1]):Math.max(0,bytes.length-Number(range[2]));

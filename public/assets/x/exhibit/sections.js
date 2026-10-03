@@ -1,25 +1,20 @@
 /* The rooms after the grid.
  *
- *   hall    /iw-webgl-world      walk the corridor; scroll is the camera
+ *   hall    /iw-webgl-world      walk a bright gallery to Kyle Kiyono's name on
+ *           the end wall, then break through it into the palette below
  *   palette /iw-horizontal-infinite + /iw-particles-physics
  *           each chapter's lead print on a pinned horizontal track (a native
  *           swipe rail on touch), opened by a tray of the colours measured
  *           from the photographs, which you can toss; tap one to find the
  *           photographs it came from, on the rail and in the grid
- *   reel    /iw-media-scrub + /iw-entrance-reveals + /iw-drag-gestures
- *           ten seconds under the pier, scrubbed by scroll inside a
- *           clip-path window that opens to full bleed, ending on a
- *           slide-to-confirm onto the pier walk
  *   stack   /iw-parallax-stack   the chapters as a deck of cards in their
  *           own moods, each settling under the next
  */
-import { $, $$, h, esc, pad, clamp, lerp, damp, mixHex, luma, rgb01 } from "../util.js";
+import { $, $$, clamp, smooth, luma, appUrl, media } from "../util.js";
 import { hall } from "../gl/hall.js";
 import { stage } from "../gl/stage.js";
 import { scrub, scroll, whenVisible } from "../core/scroll.js";
-import { tilt } from "../core/cursor.js";
 import { world } from "./physics.js";
-import { go } from "../core/transition.js";
 import { sound } from "../core/sound.js";
 import * as prefs from "../core/prefs.js";
 
@@ -28,30 +23,59 @@ const ScrollTrigger = window.ScrollTrigger;
 
 /* ─── the hall ──────────────────────────────────────────────────────────── */
 export function initHall(ctx, sec) {
-  const pin = $(".hall-pin", sec);
-  const cap = $(".hall-cur", sec), num = $(".hall-n", sec), bar = $(".hall-bar i", sec);
+  const pin = $(".hall-pin", sec), ui = $(".hall-ui", sec), head = ui.firstElementChild;
+  const cap = $(".hall-cur", sec), bar = $(".hall-bar", sec), fill = $("i", bar);
   const off = () => { sec.classList.add("is-off"); ScrollTrigger.refresh(); };
   if (!stage.ok || prefs.get().motion === "calm") return off();
-  const coverPlate = ctx.plates.find((p) => p.src === ctx.cover);
+  const tone = ctx.moods.hall.bg;
   const c = hall({
-    srcs: ctx.plates.map((p) => p.src), aspects: ctx.plates.map((p) => p.ar), cover: ctx.cover,
-    coverAspect: coverPlate ? coverPlate.ar : 0.57, wall: mixHex(ctx.ex.hero || "#e5dfd5", "#0b0908", 0.74),
+    srcs: ctx.plates.map((p) => p.src), aspects: ctx.plates.map((p) => p.ar),
+    tone, accent: ctx.ex.acc, logo: appUrl("brand/kiyono-logo.png"),
     rect: () => pin.getBoundingClientRect(),
   });
   if (!c) return off();
+  // looking around follows a mouse; a finger on a phone is scrolling the page
+  const idle = media.fine() ? "Scroll to walk. Move the pointer to look around." : "Scroll to walk.";
+  cap.textContent = idle;
+  // the walk keeps one pace whatever the size of the issue
+  sec.style.setProperty("--hall-h", Math.round(clamp(300 + ctx.plates.length * 10, 420, 640)) + "lvh");
   whenVisible(sec, () => c.load(), "150% 0px 150% 0px");
-  let last = -2;
+  const T = c.T;
+  let last = -2, phase = "", open = false;
+  const after = [];
+  sec.style.setProperty("--hall-bg", tone);
+  // a bright room until its end wall gives; then it wears the mood of the room below,
+  // which is what shows through the break (the header reads it from the page)
+  ctx.hallMood = () => (open ? ctx.moods.palette : ctx.moods.hall);
+  /** The palette's first screen waits under the end wall (x.css): what it
+   *  does on being seen waits for the wall to give. */
+  ctx.afterHall = (fn) => (open ? fn() : after.push(fn));
+  const centred = () => { const r = sec.getBoundingClientRect(); return r.top <= innerHeight / 2 && r.bottom >= innerHeight / 2; };
   scrub(sec, (p) => {
     c.progress = p;
-    bar.style.transform = `scaleX(${p.toFixed(4)})`;
-    const i = c.plateAt(p);
+    fill.style.transform = `scaleX(${p.toFixed(4)})`;
+    // the title steps aside for the end wall; caption and bar go when it gives
+    head.style.opacity = (1 - smooth(clamp((p - 0.62) / 0.08))).toFixed(3);
+    ui.style.opacity = bar.style.opacity = (1 - smooth(clamp((p - T.crack) / 0.03))).toFixed(3);
+    const ph = c.phaseAt(p);
+    if (ph !== phase) { phase = ph; sec.dataset.hallPhase = ph; }
+    // the room opens at the burst, not the crack: until then its cream wall
+    // fills the screen, and a header already in the palette's colour sat over it
+    if ((p >= T.burst) !== open) {
+      open = !open;
+      sec.classList.toggle("is-open", open);
+      sec.style.setProperty("--hall-bg", open ? "transparent" : tone);
+      if (ctx.setMood && centred()) ctx.setMood(ctx.hallMood());
+      // a soft thump as the wall gives (heard only if the visitor turned sound on)
+      if (open) { sound.play("thump", { gain: 0.22 }); after.splice(0).forEach((fn) => fn()); }
+    }
+    const i = ph === "walk" ? c.plateAt(p) : -3;
     if (i !== last) {
       last = i;
       const pl = ctx.plates[i];
-      cap.textContent = pl ? `${pl.kicker}. ${pl.caption}` : i === -1 && p > 0.85 ? `${ctx.issue.mark}, ${ctx.issue.issue}. The cover, at the end of the hall.` : "Scroll to walk. Move the pointer to look around.";
-      num.textContent = pl ? `[${pad(pl.n)}]` : "";
+      cap.textContent = pl ? `${pl.kicker}. ${pl.caption}` : i === -3 ? "Kyle Kiyono, Kiyono Creative Lab" : idle;
     }
-  }, { onToggle: (st) => { c.visible = st.isActive; } });
+  });
   ScrollTrigger.create({ trigger: sec, start: "top bottom", end: "bottom top", onToggle: (st) => { c.visible = st.isActive; } });
 }
 
@@ -60,10 +84,12 @@ export function initPalette(ctx, sec) {
   const track = $(".range-track", sec);
   const prints = ctx.prints;
   const cards = $$(".gar", sec);
-  cards.forEach((c) => tilt($(".gar-m", c), 6));
 
   // pinned horizontal track on wide pointer screens; native swipe rail elsewhere
   const wide = () => matchMedia("(min-width: 900px) and (hover: hover)").matches && prefs.get().motion === "full";
+  // through the hall's end wall you arrive in the palette, and it holds still a
+  // quarter screen before the rail moves (x.css holds the unpinned one the same)
+  const hold = () => (ctx.afterHall ? Math.round(innerHeight * 0.25) : 0);
   let st = null;
   function setup() {
     if (st) { st.kill(); st = null; }
@@ -71,8 +97,8 @@ export function initPalette(ctx, sec) {
     sec.classList.toggle("is-pinned", wide());
     if (!wide()) { sec.style.removeProperty("--range-h"); return; }
     const dist = () => Math.max(0, track.scrollWidth - innerWidth);
-    sec.style.setProperty("--range-h", `calc(100lvh + ${dist()}px)`);
-    st = scrub(sec, (p) => gsap.set(track, { x: -dist() * p }));
+    sec.style.setProperty("--range-h", `calc(100lvh + ${dist() + hold()}px)`);
+    st = scrub(sec, (p) => gsap.set(track, { x: -dist() * p }), { start: () => `top+=${hold()} top` });
   }
   setup();
   let rt;
@@ -200,71 +226,10 @@ export function initPalette(ctx, sec) {
   };
   cv.addEventListener("pointerup", up);
   cv.addEventListener("pointercancel", up);
-  whenVisible(tray, drop, "0px 0px -20% 0px");
+  // under the hall's end wall the tray is on screen but unseen: the colours fall in as it gives
+  whenVisible(tray, () => (ctx.afterHall ? ctx.afterHall(drop) : drop()), "0px 0px -20% 0px");
   // the tray's box settles after fonts, pinning and resizes; follow it
   new ResizeObserver(() => { if (dropped) { size(); start(); } }).observe(tray);
-}
-
-/* ─── the reel ──────────────────────────────────────────────────────────── */
-export function initReel(ctx, sec) {
-  const win = $(".reel-win", sec), vid = $("video", sec), tc = $(".reel-t", sec), fr = $(".reel-f", sec), cta = $(".reel-cta", sec);
-  const calm = () => prefs.get().motion === "calm";
-  let dur = 10.04, target = 0, ready = false;
-  const FPS = 24;
-  whenVisible(sec, () => { vid.preload = "auto"; vid.load(); }, "120% 0px 120% 0px");
-  vid.addEventListener("loadedmetadata", () => { dur = vid.duration || dur; ready = true; });
-  // iOS paints a seeked frame only after the video has played once; do that
-  // silently on the first touch.
-  const prime = () => { vid.play().then(() => vid.pause()).catch(() => {}); removeEventListener("touchstart", prime); };
-  addEventListener("touchstart", prime, { passive: true });
-
-  let lastSet = -1;
-  gsap.ticker.add(() => {
-    if (!ready || vid.seeking) return;
-    if (Math.abs(target - lastSet) > 1 / (FPS * 2)) {
-      lastSet = target;
-      try { vid.currentTime = target; } catch (e) {}
-    }
-  });
-  scrub(sec, (p) => {
-    const open = clamp(p / 0.22);
-    const e = 1 - Math.pow(1 - open, 3);
-    const inset = calm() ? 0 : lerp(1, 0, e);
-    win.style.clipPath = `inset(${(inset * 22).toFixed(2)}% ${(inset * 30).toFixed(2)}% ${(inset * 22).toFixed(2)}% ${(inset * 30).toFixed(2)}%)`;
-    const vp = clamp((p - 0.12) / 0.8);
-    target = vp * Math.max(0, dur - 0.05);
-    const f = Math.round(vp * (dur * FPS - 1));
-    const s = Math.floor(target), ff = Math.round((target - s) * FPS);
-    tc.textContent = `00:${pad(s)}:${pad(ff)}`;
-    fr.textContent = `frame ${pad(f, 3)} / ${pad(Math.round(dur * FPS), 3)}`;
-    cta.classList.toggle("is-in", p > 0.9);
-    sound.drive(Math.abs(scroll.v) / 40);
-  });
-  // calm motion: no scrubbing, just a player
-  if (calm()) { vid.controls = true; vid.loop = true; }
-
-  // slide to confirm, then the curl onto the pier
-  const sl = $(".slide", sec), knob = $(".slide-k", sl), fill = $(".slide-fill", sl);
-  let dragging = false, x0 = 0, x = 0, max = 0;
-  const setX = (v) => { x = clamp(v, 0, max); sl.style.setProperty("--x", x + "px"); fill.style.transform = `scaleX(${max ? x / max : 0})`; };
-  knob.addEventListener("pointerdown", (e) => {
-    dragging = true; max = sl.clientWidth - knob.offsetWidth - 8; x0 = e.clientX - x;
-    knob.setPointerCapture(e.pointerId); e.preventDefault();
-  });
-  knob.addEventListener("pointermove", (e) => { if (dragging) setX(e.clientX - x0); });
-  const done = () => {
-    sl.classList.add("done");
-    sound.play("chime");
-    go(ctx.walk, { color: ctx.roomColor, label: "The Walk" });
-  };
-  knob.addEventListener("pointerup", () => {
-    if (!dragging) return;
-    dragging = false;
-    if (x > max * 0.86) { setX(max); done(); }
-    else gsap.to({ v: x }, { v: 0, duration: 0.5, ease: "expo.out", onUpdate() { setX(this.targets()[0].v); } });
-  });
-  // keyboard: the knob is a button; Enter or Space confirms
-  knob.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); max = sl.clientWidth - knob.offsetWidth - 8; setX(max); done(); } });
 }
 
 /* ─── the stack ─────────────────────────────────────────────────────────── */
@@ -273,8 +238,10 @@ export function initStack(ctx, sec) {
   cards.forEach((c, k) => {
     const next = cards[k + 1];
     if (!next) return;
+    // settles back under a wash of the page colour (x.css), not opacity: a
+    // see-through card let the cards beneath show through it, text over text
     gsap.to($(".card-in", c), {
-      scale: 0.93, opacity: 0.55, ease: "none",
+      scale: 0.93, "--wash": 0.45, ease: "none",
       scrollTrigger: { trigger: next, start: "top 90%", end: "top 30%", scrub: true },
     });
   });

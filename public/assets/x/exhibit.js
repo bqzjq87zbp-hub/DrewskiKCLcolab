@@ -4,18 +4,18 @@
  * rooms together. The shell HTML is the same for every exhibition; nothing
  * here knows which one it is showing.
  *
- *   preloader -> hero (light on water, the wordmark) -> the grid, chapter by
- *   chapter -> walk the hall -> the palette -> the reel under the pier ->
- *   the contents -> the footer, revealed from under the page
+ *   preloader -> hero (light on water over the blurred pier, the wordmark) ->
+ *   the grid, chapter by chapter -> walk the hall -> the palette -> the
+ *   contents -> the footer, revealed from under the page
  *
  * with the reading view, the canvas, the menu, the finder and the game as
- * overlays, and the book, the atelier and the pier walk one page turn away.
+ * overlays, and the book and the atelier one page turn away.
  */
-import { $, $$, h, esc, pad, fetchJSON, hereDir, appUrl, APP, BB, mixHex, luma, clamp, listen, emit } from "./util.js";
+import { $, $$, h, esc, fetchJSON, hereDir, appUrl, APP, BB, mixHex, luma, clamp, listen, emit } from "./util.js";
 import * as prefs from "./core/prefs.js";
 import { initScroll, scroll, refresh } from "./core/scroll.js";
 import { bindAll } from "./core/cursor.js";
-import { slot, lines, marquee, axis, scramble } from "./core/type.js";
+import { split, marquee, axis } from "./core/type.js";
 import { initReveals } from "./core/reveal.js";
 import { sound } from "./core/sound.js";
 import { startLive } from "./core/live.js";
@@ -26,7 +26,7 @@ import { caustics } from "./gl/caustics.js";
 import { initGrid } from "./exhibit/grid.js";
 import { initSlider } from "./exhibit/slider.js";
 import { initCanvas } from "./exhibit/canvasview.js";
-import { initHall, initPalette, initReel, initStack } from "./exhibit/sections.js";
+import { initHall, initPalette, initStack } from "./exhibit/sections.js";
 import { initMenu } from "./ui/menu.js";
 import { initFinder } from "./ui/finder.js";
 import { initGame } from "./ui/game.js";
@@ -75,18 +75,15 @@ async function boot() {
   b.setProperty("--wm-weight", ex.weight || 400);
   if (ex.variation) b.setProperty("--wm-var", ex.variation);
   document.title = `${issue.mark} · ${issue.issue} · Kiyono Creative Lab`;
-  // the pier walk is the dark room every exhibition opens onto
-  const roomColor = "#061522";
   const first = issue.stories[0] && issue.stories[0].mood;
   const paper = (first && first.bg) || "#fbf8f2";
   setPaper(mixHex(paper, "#ffffff", 0.3), mixHex(paper, "#d9d2c5", 0.35));
 
   const booking = (subject) => `mailto:${ex.booking || ""}?subject=${encodeURIComponent(subject || "Booking enquiry")}`;
   const ctx = {
-    root, slug, issue, ex, catalog, roomColor, paper, booking,
+    root, slug, issue, ex, catalog, paper, booking,
     plates: m.plates, stories: m.stories, prints: m.prints, palette: m.palette, other: m.others,
     cover: root + issue.cover,
-    walk: appUrl("walk/"),
     menuTitle: `${issue.mark} · ${issue.issue}`,
     el: {},
   };
@@ -105,9 +102,9 @@ async function boot() {
   ctx.open = (i, from) => ctx.slider.open(i, from);
   ctx.canvas = initCanvas(ctx);
   ctx.emitView = (v) => syncView(ctx, v);
+  ctx.moods = roomMoods(ctx);
   initHall(ctx, $("#hall"));
   initPalette(ctx, $("#palette"));
-  initReel(ctx, $("#reel"));
   initStack(ctx, $("#contents"));
   sectionMoods(ctx);
   ctx.menu = initMenu(ctx);
@@ -122,8 +119,11 @@ async function boot() {
 
   scroll.unlock();
   refresh();
-  await reveal(pre, getComputedStyle(document.body).getPropertyValue("--hero").trim() || ex.hero);
+  // The hero takes its start state before the sheet lifts and rises under the
+  // peel (the front door's rule too). Hidden after the peel, the wordmark
+  // showed through it, vanished and came back: the intro running backwards.
   heroIntro(ctx);
+  await reveal(pre, getComputedStyle(document.body).getPropertyValue("--hero").trim() || ex.hero);
   deepLink(ctx);
   BB("note", "exhibit ready", { slug });
 }
@@ -135,15 +135,15 @@ function render(ctx) {
   const wm = esc(ex.wordmark || issue.mark);
   const live = ex.place || ex.almanac ? `<div class="hero-live lbl"><span data-live="place"></span> <span class="num" data-live="time"></span><br><span data-live="line"></span></div>` : "<div></div>";
 
+  // the intro is the one place that says to scroll; the cue below it is a line, not a third "Scroll"
   const hero = h("header", { class: "hero", "aria-label": `${issue.mark}, ${issue.issue}` }, `
-    <div class="hero-top lbl">Scroll to explore</div>
     <div class="hero-mid"><div>
       <h1 class="hero-wm">${wm}</h1>
       <div class="hero-sub">${esc(issue.issue)}</div>
     </div></div>
     <div class="hero-bot">
       <p>${esc(ex.intro || issue.standfirst)}</p>
-      <div class="hero-cue lbl" aria-hidden="true"><span>Scroll</span><i></i></div>
+      <div class="hero-cue" aria-hidden="true"><i></i></div>
       ${live}
     </div>`);
 
@@ -155,7 +155,7 @@ function render(ctx) {
         <button type="button" role="menuitemradio" data-view="grid" aria-pressed="true">Grid <small>exhibit</small></button>
         <button type="button" role="menuitemradio" data-view="slider" aria-pressed="false">Slider <small>one by one</small></button>
         <button type="button" role="menuitemradio" data-view="canvas" aria-pressed="false">Canvas <small>drag it</small></button>
-        <a class="hd-btn" style="padding:9px 10px;text-decoration:none" href="${esc(root)}book/">Book <small class="lbl" style="float:right;color:var(--mut)">flip it</small></a>
+        <a class="hd-btn" role="menuitem" href="${esc(root)}book/">Book <small>flip it</small></a>
       </div>
     </div>
     <a class="hd-wm" href="${esc(appUrl(""))}" data-go="#070707" aria-label="The front door, all exhibitions">${wm}</a>
@@ -165,15 +165,15 @@ function render(ctx) {
       <button type="button" class="hd-btn menu-btn" aria-haspopup="dialog" aria-controls="menu" data-magnetic="0.3">Menu</button>
     </div>`);
 
-  const hud = h("div", { class: "hud lbl", "aria-hidden": "true" }, `<span class="hud-ch"></span><span class="hud-bar"><i></i></span><span class="hud-seen">Seen <span class="num">00/00</span></span>`);
+  const hud = h("div", { class: "hud lbl", "aria-hidden": "true" }, `<span class="hud-ch"></span><span class="hud-bar"><i></i></span>`);
   const zoom = h("div", { class: "zoom", role: "group", "aria-label": "Zoom the wall" }, `
     <button type="button" aria-label="Zoom in: fewer, larger frames" data-magnetic="0.4"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10"/></svg></button>
     <button type="button" aria-label="Zoom out: more, smaller frames" data-magnetic="0.4"><svg viewBox="0 0 12 12"><path d="M1 6h10"/></svg></button>`);
 
-  const hallSec = `<section class="sec hall" id="hall" aria-label="Walk the hall">
+  const hallSec = `<section class="sec hall" id="hall" aria-label="Walk the hall" data-hall-phase="walk">
     <div class="hall-pin"><div class="hall-ui">
       <div><div class="lbl" style="opacity:.7">A room, not a page</div><h2>Walk the hall</h2></div>
-      <div class="hall-cap"><p class="hall-cur">Scroll to walk. Move the pointer to look around.</p><span class="hall-n"></span></div>
+      <div class="hall-cap"><p class="hall-cur"></p></div>
     </div><div class="hall-bar"><i></i></div></div>
   </section>`;
 
@@ -182,14 +182,14 @@ function render(ctx) {
       <div class="sec-h"><h2 data-reveal="lines">The <em>palette</em></h2><p data-reveal="up">Every colour here was measured from the photographs themselves. Throw one, or follow each chapter's lead print along the rail.</p></div>
       <div class="range-track">
         <div class="tray"><div class="tray-t"><div class="lbl">Measured colours</div><h3>Throw a colour</h3><p>Pick one up, toss it around. Tap one to find the photographs it came from.</p></div>
-          <canvas aria-label="Colour swatches you can drag and throw"></canvas><div class="tray-hint lbl">Drag &middot; throw &middot; tap</div></div>
+          <canvas aria-label="Colour swatches you can drag and throw"></canvas></div>
         ${prints.map((g) => {
           const p = plates[g.plate];
           return `<article class="gar" data-g="${g.id}">
           <div class="gar-m"><img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" decoding="async"></div>
           <div class="gar-b"><h3>${esc(g.name)}</h3><span class="sw">${g.swatch.map((c) => `<i style="background:${esc(c)}"></i>`).join("")}</span>
-            <dl><dt>Chapter</dt><dd>${pad(g.story + 1)} of ${pad(stories.length)}</dd><dt>Frames</dt><dd>${stories[g.story].plates.length}</dd>
-              <dt>Lead</dt><dd>[${pad(p.n)}] ${esc(p.kicker)}</dd><dt>Format</dt><dd>${esc(p.shape)}</dd></dl>
+            <dl><dt>Chapter</dt><dd>${esc(stories[g.story].title)}</dd>
+              <dt>Lead</dt><dd>${esc(p.kicker)}</dd><dt>Format</dt><dd>${esc(p.shape)}</dd></dl>
             <p>${esc(g.note)}</p>
             <a class="card-go" style="margin-top:10px;font-size:15px" href="#chapter-${g.story + 1}" data-chapter="${g.story}">Read the chapter &rarr;</a>
           </div></article>`;
@@ -198,23 +198,12 @@ function render(ctx) {
     </div>
   </section>`;
 
-  const reelSec = `<section class="sec reel" id="reel" aria-label="The reel">
-    <div class="reel-pin">
-      <div class="reel-win"><video muted playsinline preload="metadata" disablepictureinpicture poster="${esc(appUrl("video/walk-poster.jpg"))}">
-        <source src="${esc(appUrl("video/walk-scrub.webm"))}" type='video/webm; codecs="vp9"'><source src="${esc(appUrl("video/walk-scrub.mp4"))}" type="video/mp4"></video></div>
-      <div class="reel-ui"><div class="lbl">The reel &middot; scroll to run it</div><div><h2>Ten seconds<br>under the pier</h2></div>
-        <div class="reel-tc"><span class="reel-t">00:00:00</span><span class="reel-f">frame 000</span></div></div>
-      <div class="reel-cta"><div class="slide"><div class="slide-fill"></div><div class="slide-t">Slide onto the pier</div>
-        <button type="button" class="slide-k" aria-label="Walk the pier"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button></div></div>
-    </div>
-  </section>`;
-
   const stackSec = `<section class="sec stack" id="contents" aria-label="Contents">
     <div class="sec-h"><h2 data-reveal="lines">The exhibition, <em>wall to wall</em></h2><p data-reveal="up">${esc(issue.standfirst)}</p></div>
     <ol class="stack-list">${stories.map((s, k) => {
       const bg = (s.mood && s.mood.bg) || "#f4efe6", ink = (s.mood && s.mood.ink) || "#1b1712";
       return `<li class="card" style="--i:${k};--card-bg:${esc(bg)};--card-ink:${esc(ink)}"><div class="card-in">
-        <div><div class="card-n num">${pad(k + 1)}</div><h3>${esc(s.title)}</h3><p>${esc(s.deck)}</p>
+        <div><h3>${esc(s.title)}</h3><p>${esc(s.deck)}</p>
           <a class="card-go" href="#chapter-${k + 1}" data-chapter="${k}">Read the chapter &rarr;</a></div>
         <div class="card-th">${s.plates.slice(0, 3).map((i) => `<img src="${esc(plates[i].src)}" alt="" loading="lazy" decoding="async">`).join("")}</div>
       </div></li>`;
@@ -223,7 +212,7 @@ function render(ctx) {
 
   const main = h("main", { class: "sheet", id: "main" }, `
     <div class="sheet-in"><div class="grid" id="grid"></div></div>
-    ${hallSec}${paletteSec}${reelSec}${stackSec}`);
+    ${hallSec}${paletteSec}${stackSec}`);
 
   const back = esc(issue.backline || issue.issue);
   const footer = h("footer", { class: "ft", "aria-label": "Footer" }, `
@@ -231,8 +220,7 @@ function render(ctx) {
     <div class="ft-cols">
       <div><h4 class="lbl">This exhibition</h4><ul>
         <li><a href="${esc(root)}book/">The book</a></li>
-        <li><a href="${esc(root)}atelier/">The atelier</a></li>
-        <li><a href="${esc(ctx.walk)}" data-go="${esc(ctx.roomColor)}" data-go-label="The Walk"video/walk-scrub.mp4"))}">Walk the pier</a></li></ul></div>
+        <li><a href="${esc(root)}atelier/">The atelier</a></li></ul></div>
       <div><h4 class="lbl">Chapters</h4><ul>${stories.map((s) => `<li><a href="#chapter-${s.i + 1}" data-chapter="${s.i}">${esc(s.title)}</a></li>`).join("")}</ul></div>
       <div><h4 class="lbl">Other exhibitions</h4><ul>${others.map((o) => `<li><a href="${esc(appUrl(o.slug + "/"))}" data-go="${esc(o.hero || "#111")}" data-go-label="${esc(o.mark)}" data-go-font="${esc(o.font || "")}" data-go-weight="${o.weight || 400}" data-go-variation="${esc(o.variation || "normal")}">${esc(o.mark)}</a></li>`).join("")}
         <li><a href="${esc(appUrl(""))}" data-go="#070707">The front door</a></li></ul></div>
@@ -244,9 +232,8 @@ function render(ctx) {
     </div>
     <div class="ft-base lbl"><span>${esc(issue.footer || "")}</span>${ex.place ? '<span data-live="all"></span>' : ""}<span>The Exhibitions</span></div>`);
 
-  const grain = h("div", { class: "grain", "aria-hidden": "true" });
   const app = $("#app") || document.body;
-  app.append(footer, hero, main, header, hud, zoom, grain);
+  app.append(footer, hero, main, header, hud, zoom);
   Object.assign(ctx.el, { hero, header, hud, zoom, main, footer, grid: $("#grid", main) });
 }
 
@@ -292,9 +279,12 @@ function wireHeader(ctx) {
   $(".menu-btn", hd).addEventListener("click", () => ctx.menu.open());
 
   // the header comes in once the sheet has covered most of the hero
+  ScrollTrigger.create({ trigger: ctx.el.main, start: "top 45%", onToggle: (st) => hd.classList.toggle("is-in", st.isActive) });
+  // the finder button comes in with it, and steps aside as the footer rises: it
+  // sat on the footer's last line, and the footer has its own "Plan a session"
   ScrollTrigger.create({
-    trigger: ctx.el.main, start: "top 45%",
-    onToggle: (st) => { hd.classList.toggle("is-in", st.isActive); ctx.finder.fab.classList.toggle("is-in", st.isActive); },
+    trigger: ctx.el.main, start: "top 45%", end: "bottom bottom",
+    onToggle: (st) => ctx.finder.fab.classList.toggle("is-in", st.isActive),
   });
 }
 
@@ -334,47 +324,65 @@ function wireHero(ctx) {
     if (Math.abs(p - lastP) < 0.0005) return;
     lastP = p;
     if (calm()) { wmEl.style.transform = ""; wmEl.style.opacity = ""; return; }
-    wmEl.style.transform = `translate3d(0,${(-p * 12).toFixed(2)}vh,0) scale(${(1 - p * 0.12).toFixed(4)})`;
+    wmEl.style.transform = `translate3d(0,${(-p * 12).toFixed(2)}vh,0) scale(${(1 - p * 0.06).toFixed(4)})`;
     wmEl.style.opacity = (1 - p * 0.55).toFixed(3);
   });
-  // pool light on the hero, only where the sheet has not covered it yet
+  // pool light on the hero, only where the sheet has not covered it yet: a
+  // faint play of light under the wordmark, never a net over the photograph
   if (ctx.ex.hero) {
     caustics(() => ({ left: 0, top: 0, width: innerWidth, height: Math.max(0, Math.min(innerHeight, ctx.sheetTop())) }),
       () => !calm() && !overlayOpen() && ctx.sheetTop() > 2 && !document.hidden,
-    { tint: ctx.ex.sound === "river" ? "#d8efe9" : "#ffe7b3", amount: luma(ctx.ex.hero) > 0.5 ? 0.075 : 0.14 });
+    { tint: ctx.ex.sound === "river" ? "#d8efe9" : "#ffe7b3", amount: luma(ctx.ex.hero) > 0.5 ? 0.045 : 0.08 });
   }
   // variable-font breathing on the issue line, driven by scroll speed
   axis($(".hero-sub", hero), () => Math.abs(scroll.v) / 30, { wght: 300, opsz: 24 }, { wght: 700, opsz: 72 });
 }
 
-/* The rooms after the grid carry their own mood, like the chapters do. */
+/* The rooms after the grid carry their own mood, like the chapters do. The
+ * hall is a bright gallery in the issue's own warm white; the palette takes
+ * the lightest chapter's mood (the hall hands over to it when its end wall
+ * gives); the contents go back to the first chapter's. */
+function roomMoods(ctx) {
+  const moods = ctx.stories.map((s) => s.mood).filter(Boolean);
+  const lightest = moods.slice().sort((a, b) => luma(b.bg) - luma(a.bg))[0] || { bg: "#f7f3ec", ink: "#1c1812" };
+  return {
+    hall: { bg: mixHex("#f4efe7", ctx.ex.hero || "#e5dfd5", 0.3), ink: "#1d1914" },
+    palette: lightest, contents: ctx.stories[0].mood || lightest,
+  };
+}
+
 function sectionMoods(ctx) {
   const d = document.documentElement;
-  const moods = ctx.stories.map((s) => s.mood).filter(Boolean);
-  // the palette sits between the dark hall and the dark reel, so it takes the
-  // lightest chapter's mood and the walk through the rooms alternates
-  const last = moods.slice().sort((a, b) => luma(b.bg) - luma(a.bg))[0] || { bg: "#f7f3ec", ink: "#1c1812" };
-  const first = ctx.stories[0].mood || last;
-  const set = (m) => {
+  ctx.setMood = (m) => {
     d.style.setProperty("--bg", m.bg);
     d.style.setProperty("--ink", m.ink);
     const meta = $('meta[name="theme-color"]');
     if (meta) meta.content = prefs.get().theme === "dark" ? "#0d0c0b" : m.bg;
     sound.mood(1 - luma(m.bg));
   };
-  [["#hall", { bg: "#0e0c0a", ink: "#f1ebe1" }], ["#palette", last], ["#reel", { bg: "#050505", ink: "#f4efe6" }], ["#contents", first]]
+  // the palette slides a screen up under the hall (x.css): with the hall on,
+  // its mood starts where the hall's ends, not where its own box starts
+  const hall = $("#hall"), under = hall && !hall.classList.contains("is-off");
+  [["#hall", () => (ctx.hallMood ? ctx.hallMood() : ctx.moods.hall)], ["#palette", () => ctx.moods.palette], ["#contents", () => ctx.moods.contents]]
     .forEach(([sel, m]) => {
       const el = $(sel);
       if (!el || el.classList.contains("is-off")) return;
-      ScrollTrigger.create({ trigger: el, start: "top 50%", end: "bottom 50%", onToggle: (st) => { if (st.isActive) set(m); } });
+      const from = sel === "#palette" && under ? { trigger: hall, start: "bottom 50%", endTrigger: el } : { trigger: el, start: "top 50%" };
+      ScrollTrigger.create({ ...from, end: "bottom 50%", onToggle: (st) => { if (st.isActive) ctx.setMood(m()); } });
     });
 }
 
+/** The wordmark rises out of its masks, then the issue line and the intro.
+ *  fromTo renders the start state at once; the rise waits until the sheet
+ *  has uncovered the middle of the screen, so it is seen, and seen once. */
 function heroIntro(ctx) {
-  const hero = ctx.el.hero;
   if (prefs.get().motion === "calm") return;
-  slot($(".hero-wm", hero), { stagger: { each: 0.045, from: "center" }, duration: 1.4, from: 150, rotate: 6 });
-  gsap.from([$(".hero-sub", hero), $(".hero-top", hero), $(".hero-bot", hero)], { autoAlpha: 0, y: 16, duration: 1.1, stagger: 0.1, delay: 0.45, ease: "expo.out" });
+  const hero = ctx.el.hero, wm = $(".hero-wm", hero), s = split(wm, "chars");
+  gsap.timeline({ delay: 0.5 })
+    .fromTo(s ? s.chars : wm, { yPercent: 150, rotate: 6, autoAlpha: 0 },
+      { yPercent: 0, rotate: 0, autoAlpha: 1, duration: 1.4, ease: "expo.out", stagger: { each: 0.045, from: "center" } })
+    .fromTo([$(".hero-sub", hero), $(".hero-bot", hero)], { autoAlpha: 0, y: 16 },
+      { autoAlpha: 1, y: 0, duration: 1.1, stagger: 0.1, ease: "expo.out" }, 0.45);
 }
 
 function wireFooter(ctx) {
@@ -410,7 +418,10 @@ function deepLink(ctx) {
     history.replaceState({ v: "slider", id: n }, "", location.href);
     ctx.slider.open(n - 1, null, { push: false });
   } else if (v === "canvas") {
-    ctx.canvas.open();
+    // the link is already the canvas entry, as with the slider: pushing a second
+    // one left ?view=canvas in the address after Close, so a reload reopened it
+    history.replaceState({ v: "canvas" }, "", location.href);
+    ctx.canvas.open({ push: false });
   } else if (/^#chapter-\d+$/.test(location.hash)) {
     ctx.grid.goChapter(parseInt(location.hash.slice(9), 10) - 1);
   }

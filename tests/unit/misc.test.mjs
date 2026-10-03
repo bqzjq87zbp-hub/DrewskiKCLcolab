@@ -20,7 +20,7 @@ test("search: every word must match, place names rank first", () => {
 
 test("prefs resolve system choices and never turn effects on without WebGL", () => {
   const env = { dark: true, reduced: true, webgl: true, saveData: false, lowMemory: false };
-  assert.deepEqual(resolve(DEFAULTS, env), { theme: "light", motion: "calm", effects: "on", sound: false, grain: true });
+  assert.deepEqual(resolve(DEFAULTS, env), { theme: "light", motion: "calm", effects: "on", sound: false });
   assert.equal(resolve({ ...DEFAULTS, theme: "system" }, env).theme, "dark");
   assert.equal(resolve({ ...DEFAULTS, effects: "on" }, { ...env, webgl: false }).effects, "off");
   assert.equal(resolve(DEFAULTS, { ...env, saveData: true }).effects, "off");

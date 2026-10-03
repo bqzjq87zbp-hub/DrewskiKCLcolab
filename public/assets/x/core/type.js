@@ -2,7 +2,6 @@
  *
  *   slot      characters rise out of a mask, staggered (SplitText)
  *   lines     lines rise out of their own masks, for paragraphs
- *   scramble  decrypts a label left to right through glyph noise
  *   marquee   an endless strip whose speed and direction follow the scroll
  *   axis      drives variable-font axes (wght, SOFT, opsz) from a signal
  */
@@ -49,36 +48,6 @@ export function lines(el, opts = {}) {
     yPercent: 105, duration: opts.duration || 1.05, ease: "expo.out",
     stagger: opts.stagger || 0.08, delay: opts.delay || 0,
   });
-}
-
-const GLYPHS = "ABCDEFGHJKLMNPRSTUVWXYZ0123456789#%&*+/<>";
-/** Decrypt the element's own text left to right. */
-export function scramble(el, opts = {}) {
-  const final = el.dataset.text || (el.dataset.text = el.textContent);
-  if (calm()) { el.textContent = final; return Promise.resolve(); }
-  const dur = opts.duration || 0.55;
-  const start = performance.now();
-  cancelAnimationFrame(el._scr);
-  return new Promise((res) => {
-    const step = (now) => {
-      const p = clamp((now - start) / (dur * 1000));
-      const reveal = Math.floor(p * final.length);
-      let out = "";
-      for (let i = 0; i < final.length; i++) {
-        const ch = final[i];
-        if (i < reveal || ch === " " || ch === "[" || ch === "]") out += ch;
-        else out += GLYPHS[(Math.random() * GLYPHS.length) | 0];
-      }
-      el.textContent = out;
-      if (p < 1) el._scr = requestAnimationFrame(step);
-      else { el.textContent = final; res(); }
-    };
-    el._scr = requestAnimationFrame(step);
-  });
-}
-export function bindScramble(trigger, target = trigger) {
-  trigger.addEventListener("pointerenter", () => scramble(target));
-  trigger.addEventListener("focus", () => scramble(target));
 }
 
 /**
@@ -132,13 +101,4 @@ export function axis(el, get, from, to, opts = {}) {
   };
   gsap.ticker.add(tick);
   return () => gsap.ticker.remove(tick);
-}
-
-/** A number that counts to its target, for counters and live readouts. */
-export function countTo(el, to, opts = {}) {
-  const o = { v: +el.textContent.replace(/[^\d.-]/g, "") || 0 };
-  return gsap.to(o, {
-    v: to, duration: calm() ? 0 : opts.duration || 1, ease: "power3.out",
-    onUpdate: () => { el.textContent = (opts.format || ((n) => Math.round(n)))(o.v); },
-  });
 }

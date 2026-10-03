@@ -4,12 +4,9 @@
  * WebGL plane is drawn exactly over it (same rect, read after the scroll
  * engine moved the page this frame) and the DOM image waits underneath:
  *
- *   fold   entrance. A crease sweeps diagonally from the bottom-left corner;
- *          paper behind it is still lifted off the page and bends down onto
- *          it, shaded by its angle to the light. When the crease has crossed,
- *          the plane is flat, identical to the <img>, and hands back to it.
- *   flip   entrance for covers: the sheet turns over on an oblique axis and
- *          bows as it lands, its reverse showing plain paper.
+ *   flip   entrance for the front door's covers: the sheet turns over on an
+ *          oblique axis and bows as it lands, its reverse showing plain
+ *          paper. The prints on the walls never bend: they come in flat.
  *   loupe  hover. Inside a lens under the pointer the photograph is shown
  *          magnified as halftone print dots; outside it ripples faintly.
  *          The plane covers the image exactly, so the DOM never has to hide.
@@ -27,8 +24,7 @@ const gsap = window.gsap;
 const VS = `
 attribute vec2 aUv;
 uniform vec4 uRect; uniform vec2 uView; uniform float uD;
-uniform float uMode; uniform float uFold; uniform float uLift; uniform float uBendW;
-uniform float uFlip;
+uniform float uMode; uniform float uFlip;
 varying vec2 vUv; varying float vLight; varying float vFacing;
 mat3 rot(vec3 a, float g){
   a = normalize(a); float s = sin(g), c = cos(g), o = 1.0 - c;
@@ -41,23 +37,7 @@ void main(){
   vec2 p = vec2(aUv.x * uRect.z, (1.0 - aUv.y) * uRect.w);
   vec3 pos = vec3(p, 0.0);
   vec3 n = vec3(0.0, 0.0, 1.0);
-  if (uMode < 0.5) {
-    vec2 d = vec2(0.70710678);
-    float S = dot(uRect.zw, d);
-    float F = uFold * (S + 2.0);
-    float x = dot(p, d) - F;
-    if (x > 0.0) {
-      float th = uLift * (1.0 - 0.45 * uFold);
-      float w = uBendW;
-      float R = w / th;
-      float ph = x < w ? x / R : th;
-      float along = x < w ? R * sin(ph) : R * sin(th) + (x - w) * cos(th);
-      float z = x < w ? R * (1.0 - cos(ph)) : R * (1.0 - cos(th)) + (x - w) * sin(th);
-      pos.xy = p - d * x + d * along;
-      pos.z = z;
-      n = vec3(-d * sin(ph), cos(ph));
-    }
-  } else if (uMode > 1.5) {
+  if (uMode > 0.5) {
     vec3 c = vec3(uRect.zw * 0.5, 0.0);
     float fp = smoothstep(aUv.x * 0.35, 0.72 + aUv.x * 0.28, uFlip);
     mat3 R = rot(vec3(0.55, 1.0, 0.2), (1.0 - fp) * 3.14159);
@@ -158,9 +138,7 @@ export const platesLayer = {
       if (!it.hoverOn && it.hover < 0.002 && !it.anim) { drop(it); continue; }
       makeTex(it, r);
       prog.set("uRect", [r.left, r.top, r.width, r.height])
-        .set("uMode", it.mode === "flip" ? 2 : it.mode === "fold" ? 0 : 1)
-        .set("uFold", it.p).set("uFlip", it.p)
-        .set("uLift", 1.22).set("uBendW", Math.max(r.width, r.height) * 0.3)
+        .set("uMode", it.mode === "flip" ? 1 : 0).set("uFlip", it.p)
         .set("uSize", [r.width, r.height]).set("uAlpha", it.alpha)
         .set("uHover", it.hover).set("uPointer", [it.px, it.py]).set("uLens", clamp(Math.min(r.width, r.height) * 0.36, 44, 130))
         .set("uTex", it.tex);
@@ -189,14 +167,14 @@ function item(img, box) {
 }
 
 /**
- * Entrance. The <img> stays hidden (class is-gl) until the plane has landed.
- * Resolves false when WebGL is unavailable, so the caller can run the CSS
- * version instead.
+ * The flip entrance. The <img> stays hidden (class is-gl) until the plane has
+ * landed. Resolves false when WebGL is unavailable, so the caller can run the
+ * CSS version instead.
  */
 export function enter(img, opts = {}) {
   if (!ensure() || !img.naturalWidth) return Promise.resolve(false);
   const it = item(img, opts.box);
-  it.mode = opts.mode || "fold";
+  it.mode = "flip";
   it.p = 0; it.alpha = 0; it.anim = true;
   img.classList.add("is-gl");
   return new Promise((res) => {
@@ -210,7 +188,7 @@ export function enter(img, opts = {}) {
       },
     });
     tl.to(it, { alpha: 1, duration: 0.28, ease: "power1.out" }, 0);
-    tl.to(it, { p: 1, duration: opts.duration || (it.mode === "flip" ? 1.5 : 1.55), ease: opts.ease || (it.mode === "flip" ? "power3.out" : "sine.out") }, 0);
+    tl.to(it, { p: 1, duration: opts.duration || 1.5, ease: opts.ease || "power3.out" }, 0);
   });
 }
 

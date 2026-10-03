@@ -5,14 +5,11 @@
  * the photographs by tools/build_exhibitions.py.
  * Pure, unit-tested (the finder tests run against exactly this). */
 
-const RATIOS = [[1, 1], [5, 4], [4, 3], [7, 5], [3, 2], [16, 9], [2, 1]];
-
-/** "Portrait, 2:3" from pixel dimensions: the nearest common print ratio. */
+/** "Portrait", "Landscape" or "Square" from pixel dimensions, in words: the
+ *  site shows no numbers, so no print ratio. */
 export function shape(w, h) {
-  const r = w / h, wide = r >= 1, k = wide ? r : 1 / r;
-  if (k < 1.08) return "Square";
-  const [a, b] = RATIOS.reduce((best, q) => (Math.abs(q[0] / q[1] - k) < Math.abs(best[0] / best[1] - k) ? q : best));
-  return wide ? `Landscape, ${a}:${b}` : `Portrait, ${b}:${a}`;
+  const r = w / h;
+  return r >= 1.08 ? "Landscape" : r > 1 / 1.08 ? "Square" : "Portrait";
 }
 
 export function model(issue, catalog, root, slug) {

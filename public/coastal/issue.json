@@ -3,7 +3,7 @@
   "issue": "Pier light",
   "mark": "Coastal",
   "cover": "img/07f59839133492f58ad8884a.jpg",
-  "standfirst": "Coastal photographs made around the pier: two kids, two bright balls and the light under the boards, then one figure alone in the shallows.",
+  "standfirst": "Coastal photographs made around the pier: kids with bright balls and the light under the boards, then a figure alone in the shallows.",
   "footer": "Kiyono Creative Lab · Coastal",
   "backline": "Get your feet wet.",
   "theme": {
@@ -20,7 +20,7 @@
   "stories": [
     {
       "title": "Under the Boards",
-      "deck": "Two kids, a pink ball and a blue one, by the water and under the pier.",
+      "deck": "Kids with a pink ball and a blue ball, by the water and under the pier.",
       "mood": {
         "bg": "#e6eff1",
         "ink": "#0f2028"
@@ -69,7 +69,7 @@
     },
     {
       "title": "Shallows",
-      "deck": "One figure, ankle-deep, hair in hand.",
+      "deck": "A figure, ankle-deep, hair in hand.",
       "mood": {
         "bg": "#dbe7ea",
         "ink": "#0c1a20"
@@ -146,7 +146,7 @@
     "hero": "#dde7e9",
     "heroInk": "#46646e",
     "acc": "#2c6c84",
-    "intro": "Four photographs in two chapters. Scroll to walk the exhibition. Open any frame to read it.",
+    "intro": "Under the boards, then out in the shallows. Scroll to walk the exhibition. Open any frame to read it.",
     "sound": "river",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Kiyono Creative Lab: four photography exhibitions and the Newport Pier walk",
+  "description": "Kiyono Creative Lab: four photography exhibitions",
   "scripts": {
     "start": "node server.mjs",
     "dev": "node server.mjs",

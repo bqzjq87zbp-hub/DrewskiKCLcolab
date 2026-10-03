@@ -10,8 +10,10 @@
  *         the moon as it actually is tonight. Hold for power, let go, count
  *         the skips.
  *
- * Three tries a round, best score kept on this device. Space, Enter, mouse
- * or touch; Escape or the exit button leaves. Only runs while open.
+ * Three tries a round, best score kept on this device. Scores, tries and the
+ * best read as pips (a pip a skip, or ten inches of hop), never digits; the
+ * figure itself is only in the aria-label. Space, Enter, mouse or touch;
+ * Escape or the exit button leaves. Only runs while open.
  */
 import { $, h, clamp, lerp, pad } from "../util.js";
 import { moon } from "../core/live-math.js";
@@ -29,15 +31,27 @@ export function initGame(ctx) {
       <div class="gm-top"><span class="gm-t">${title}</span><button type="button" class="gm-x">Exit</button></div>
       <div></div>
       <div class="gm-bot">
-        <div><div class="lbl gm-msg" aria-live="polite">Hold, then let go</div><div class="gm-score num" aria-live="polite">0</div></div>
-        <div class="lbl" style="text-align:right">Try <span class="gm-try num">1</span>/3<br>Best <span class="gm-best num">0</span> ${unit}</div>
+        <div><div class="lbl gm-msg" aria-live="polite">Hold, then let go</div><div class="gm-score gm-pips" role="img" aria-live="polite"></div></div>
+        <div class="lbl" style="text-align:right">Tries <span class="gm-try gm-pips" role="img"></span><br>Best <span class="gm-best gm-pips" role="img"></span></div>
       </div>
     </div>`);
   document.body.appendChild(root);
   const cv = $("canvas", root), g = cv.getContext("2d");
   const KEY = "x.game." + mode;
   let best = +(localStorage.getItem(KEY) || 0);
-  $(".gm-best", root).textContent = best;
+  const per = mode === "hop" ? 10 : 1;
+  /** `n` pips, the first `lit` of them lit; the figure goes to screen readers only. */
+  const pips = (sel, n, lit, label) => {
+    const el = $(sel, root);
+    el.innerHTML = '<i class="on"></i>'.repeat(lit) + "<i></i>".repeat(Math.max(0, n - lit));
+    el.setAttribute("aria-label", label);
+  };
+  const say = (v) => `${v} ${v === 1 ? unit.replace(/s$/, "") : unit}`;
+  const scorePips = (v) => { const k = Math.round(v / per); pips(".gm-score", k, k, say(v)); };
+  // no best yet reads as one empty pip
+  const bestPips = () => { const k = Math.round(best / per); pips(".gm-best", Math.max(1, k), k, `Best ${say(best)}`); };
+  const tryPips = (k) => pips(".gm-try", 3, k, `Try ${k} of 3`);
+  bestPips();
 
   let W = 0, H = 0, dpr = 1, open = false, raf = 0, last = 0, t = 0;
   let state = "ready", charge = 0, holdT = 0, tries = 0, roundBest = 0, score = 0;
@@ -197,7 +211,7 @@ export function initGame(ctx) {
             stone.skips++; stone.y = water; stone.vy = -stone.vy * 0.52 - 60; stone.vx *= 0.8;
             ripples.push({ x: stone.x, y: water, r: 2, a: 0.8 });
             sound.play("plink", { i: stone.skips });
-            score = stone.skips; $(".gm-score", root).textContent = score;
+            score = stone.skips; scorePips(score);
           } else {
             stone.live = false;
             ripples.push({ x: stone.x, y: water, r: 4, a: 1, big: true });
@@ -246,27 +260,29 @@ export function initGame(ctx) {
       sound.play("hiss", { dur: 0.5 });
     } else {
       Object.assign(stone, { live: true, skips: 0, x: 70, y: H * 0.6 - 70, vx: 380 + p * 1100, vy: -120 - p * 80 });
-      score = 0; $(".gm-score", root).textContent = 0;
+      score = 0; scorePips(0);
     }
     charge = 0;
   }
   function land(v) {
     score = v;
-    $(".gm-score", root).textContent = v + (mode === "hop" ? " in" : "");
+    scorePips(v);
     tries++;
     roundBest = Math.max(roundBest, v);
-    if (v > best) { best = v; try { localStorage.setItem(KEY, String(best)); } catch (e) {} $(".gm-best", root).textContent = best; sound.play("chime"); }
+    if (v > best) { best = v; try { localStorage.setItem(KEY, String(best)); } catch (e) {} bestPips(); sound.play("chime"); }
     if (tries >= 3) {
       state = "done";
-      $(".gm-msg", root).textContent = `Round over. Best this round: ${roundBest} ${unit}. Press to go again.`;
+      // the big pips now hold the round's best throw, right under this line
+      scorePips(roundBest);
+      $(".gm-msg", root).textContent = "Round over. Press to go again. Your best this round:";
     } else {
       state = "wait";
       $(".gm-msg", root).textContent = mode === "hop" ? (v > 60 ? "That's a hop." : "More pump.") : v > 5 ? "Lovely." : "Flatter and faster.";
       setTimeout(() => { if (open && state === "wait") { state = "ready"; $(".gm-msg", root).textContent = "Hold, then let go"; } }, 1100);
     }
-    $(".gm-try", root).textContent = Math.min(3, tries + 1);
+    tryPips(Math.min(3, tries + 1));
   }
-  function reset() { tries = 0; roundBest = 0; score = 0; state = "ready"; $(".gm-try", root).textContent = 1; $(".gm-score", root).textContent = 0; $(".gm-msg", root).textContent = "Hold, then let go"; }
+  function reset() { tries = 0; roundBest = 0; score = 0; state = "ready"; tryPips(1); scorePips(0); $(".gm-msg", root).textContent = "Hold, then let go"; }
 
   cv.addEventListener("pointerdown", (e) => { e.preventDefault(); if (state === "done") { reset(); return; } press(); });
   addEventListener("pointerup", () => open && release());

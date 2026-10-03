@@ -5,8 +5,9 @@
  *   turn    next / previous is a page turn: the current photograph peels off
  *           as paper (gl/curl.js) revealing the next one underneath, its back
  *           showing the print faintly through. Clip wipe without WebGL.
- *   read    index, place, caption and chapter, then the print's format, its
- *           measured colours and a way to book a session like it
+ *   read    chapter, place and caption, then the print's format, its
+ *           measured colours and a way to book a session like it; a thin
+ *           line, not a counter, shows how far through the wall you are
  *   shape   the frame takes each photograph's own proportions; a turn between
  *           two shapes re-cuts the frame instead of curling
  *   input   arrows and Escape; wheel; swipe sideways to turn, pull down to
@@ -18,7 +19,7 @@ import { $, $$, h, esc, pad, clamp, loadImage, sleep, BB } from "../util.js";
 import { curl } from "../gl/curl.js";
 import { stage } from "../gl/stage.js";
 import { scroll } from "../core/scroll.js";
-import { scramble, slot } from "../core/type.js";
+import { slot } from "../core/type.js";
 import { sound } from "../core/sound.js";
 import * as prefs from "../core/prefs.js";
 
@@ -30,14 +31,14 @@ export function initSlider(ctx) {
   const ui = h("div", { class: "sl-ui", role: "dialog", "aria-modal": "true", "aria-label": "Reading view" }, `
     <button class="sl-close lbl" type="button" data-magnetic="0.25">Close</button>
     <div class="sl-text" aria-live="polite">
-      <div class="sl-idx"><span class="num sl-n"></span> &nbsp;<span class="sl-story"></span></div>
+      <div class="sl-story"></div>
       <h2 class="sl-k"></h2>
       <p class="sl-c"></p>
       <dl class="sl-g" hidden></dl>
     </div>
     <div class="sl-thumbs" role="list"></div>
     <div class="sl-nav">
-      <span class="sl-count num"></span>
+      <span class="sl-count" role="img"><i></i></span>
       <button type="button" class="sl-prev" aria-label="Previous plate" data-magnetic="0.3">&larr;</button>
       <button type="button" class="sl-next" aria-label="Next plate" data-magnetic="0.3">&rarr;</button>
     </div>`);
@@ -61,7 +62,9 @@ export function initSlider(ctx) {
       let w = vw - 32, hh = w * r;
       const room = vh - hd - 200;
       if (hh > room) { hh = room; w = hh / r; }
-      return { left: (vw - w) / 2, top: hd + 6, width: w, height: hh };
+      // centred in the room above the caption: pinned to the top, a landscape
+      // print left a screen of empty paper under it
+      return { left: (vw - w) / 2, top: hd + 6 + (room - hh) / 2, width: w, height: hh };
     }
     // keep a band clear at the bottom for the counter and arrows
     const band = 72;
@@ -76,16 +79,17 @@ export function initSlider(ctx) {
 
   function fill(i) {
     const p = ctx.plates[i];
-    $(".sl-n", ui).textContent = `[${pad(p.n)}]`;
-    $(".sl-story", ui).textContent = `${pad(p.story + 1)} · ${p.storyTitle}`;
+    $(".sl-story", ui).textContent = p.storyTitle;
     $(".sl-k", ui).textContent = p.kicker;
     $(".sl-c", ui).textContent = p.caption;
-    $(".sl-count", ui).textContent = `${pad(p.n)} / ${pad(N)}`;
+    const count = $(".sl-count", ui);
+    count.setAttribute("aria-label", `Plate ${p.n} of ${N}`);
+    count.firstChild.style.transform = `scaleX(${(p.n / N).toFixed(4)})`;
     const g = $(".sl-g", ui);
-    g.innerHTML = [["Exhibition", ctx.issue.mark], ["Chapter", `${pad(p.story + 1)} · ${p.storyTitle}`], ["Format", p.shape]]
+    g.innerHTML = [["Exhibition", ctx.issue.mark], ["Chapter", p.storyTitle], ["Format", p.shape]]
       .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("") +
-      (p.palette.length ? `<dt>Colours</dt><dd class="sl-sw">${p.palette.map((c) => `<i style="background:${esc(c)}" title="${esc(c)}"></i>`).join("")}</dd>` : "") +
-      `<a href="${esc(ctx.booking(`Booking enquiry: ${ctx.issue.mark}, like plate ${pad(p.n)} (${p.kicker})`))}">Book a session like this &rarr;</a>`;
+      (p.palette.length ? `<dt>Colours</dt><dd class="sl-sw">${p.palette.map((c) => `<i style="background:${esc(c)}"></i>`).join("")}</dd>` : "") +
+      `<a href="${esc(ctx.booking(`Booking enquiry: ${ctx.issue.mark}, like "${p.kicker}"`))}">Book a session like this &rarr;</a>`;
     g.hidden = false;
     im.alt = p.alt;
     $$("button", thumbs).forEach((b) => {
@@ -116,8 +120,8 @@ export function initSlider(ctx) {
     if (src && src.width && !calm) {
       place(src);
       await Promise.all([
-        new Promise((res) => gsap.to(frame, { left: t.left, top: t.top, width: t.width, height: t.height, duration: 1.0, ease: "expo.inOut", onComplete: res })),
-        new Promise((res) => gsap.to(back, { autoAlpha: 1, duration: 0.7, ease: "power2.out", onComplete: res })),
+        new Promise((res) => gsap.to(frame, { left: t.left, top: t.top, width: t.width, height: t.height, duration: 0.7, ease: "expo.inOut", onComplete: res })),
+        new Promise((res) => gsap.to(back, { autoAlpha: 1, duration: 0.5, ease: "power2.out", onComplete: res })),
       ]);
     } else {
       place(t);
@@ -125,7 +129,7 @@ export function initSlider(ctx) {
       await new Promise((res) => gsap.to(back, { autoAlpha: 1, duration: 0.45, onComplete: res }));
     }
     gsap.to(ui, { autoAlpha: 1, duration: 0.5 });
-    if (!calm) { slot($(".sl-k", ui), { type: "words", stagger: 0.05, rotate: 0 }); scramble($(".sl-n", ui)); }
+    if (!calm) slot($(".sl-k", ui), { type: "words", stagger: 0.05, rotate: 0 });
     $(".sl-close", ui).focus({ preventScroll: true });
     sound.play("paper", { dur: 0.45, gain: 0.08 });
     settle();
@@ -157,7 +161,6 @@ export function initSlider(ctx) {
       await new Promise((r) => requestAnimationFrame(r));
       im.src = p.src;
       fill(j);
-      scramble($(".sl-n", ui));
       sound.play("paper", { dur: 0.6, gain: 0.1 });
       await run;
     } else {
@@ -195,8 +198,8 @@ export function initSlider(ctx) {
     gsap.to(ui, { autoAlpha: 0, duration: 0.25 });
     if (r && r.width && !calm) {
       await Promise.all([
-        new Promise((res) => gsap.to(frame, { left: r.left, top: r.top, width: r.width, height: r.height, x: 0, y: 0, scale: 1, duration: 0.9, ease: "expo.inOut", onComplete: res })),
-        new Promise((res) => gsap.to(back, { autoAlpha: 0, duration: 0.8, delay: 0.1, ease: "power2.inOut", onComplete: res })),
+        new Promise((res) => gsap.to(frame, { left: r.left, top: r.top, width: r.width, height: r.height, x: 0, y: 0, scale: 1, duration: 0.55, ease: "expo.inOut", onComplete: res })),
+        new Promise((res) => gsap.to(back, { autoAlpha: 0, duration: 0.45, delay: 0.05, ease: "power2.out", onComplete: res })),
       ]);
     } else {
       await new Promise((res) => gsap.to([frame, back], { autoAlpha: 0, duration: 0.35, onComplete: res }));

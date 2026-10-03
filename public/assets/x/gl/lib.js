@@ -97,12 +97,15 @@ export function drawGrid(gl, prog, g, attr = "aUv") {
   gl.drawElements(gl.TRIANGLES, g.count, g.type, 0);
 }
 
-/** Upload an image, canvas or video. Mipmaps when the context allows it. */
+/** Upload an image, canvas or video. Mipmaps when the context allows it.
+ *  `premul` uploads premultiplied, so cut-outs never fringe dark as they
+ *  shrink into their mipmaps; `aniso` keeps floors and walls sharp at a
+ *  grazing angle. */
 export function texture(gl, src, opts = {}) {
   const t = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, t);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
-  gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);
+  gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, !!opts.premul);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, opts.repeat ? gl.REPEAT : gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, opts.repeat ? gl.REPEAT : gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
@@ -114,6 +117,8 @@ export function texture(gl, src, opts = {}) {
       gl.generateMipmap(gl.TEXTURE_2D);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
     } else gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    const an = opts.aniso && gl.getExtension("EXT_texture_filter_anisotropic");
+    if (an) gl.texParameterf(gl.TEXTURE_2D, an.TEXTURE_MAX_ANISOTROPY_EXT, Math.min(8, gl.getParameter(an.MAX_TEXTURE_MAX_ANISOTROPY_EXT)));
   } else gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
   return t;
 }
@@ -132,33 +137,33 @@ export function fitCanvas(src, w, hgt) {
   return c;
 }
 
-/* ─── mat4, column-major, just what the hall needs ────────────────────── */
+/* ─── mat4, column-major, just what the hall needs. Each writes into `o`
+ * (a new array when it is left out), so a render loop can reuse its own. */
 export const mat4 = {
-  perspective(fovy, aspect, near, far) {
+  perspective(fovy, aspect, near, far, o = new Float32Array(16)) {
     const f = 1 / Math.tan(fovy / 2), nf = 1 / (near - far);
-    return new Float32Array([f / aspect, 0, 0, 0, 0, f, 0, 0, 0, 0, (far + near) * nf, -1, 0, 0, 2 * far * near * nf, 0]);
+    o.fill(0);
+    o[0] = f / aspect; o[5] = f; o[10] = (far + near) * nf; o[11] = -1; o[14] = 2 * far * near * nf;
+    return o;
   },
-  lookAt(e, c, up) {
+  lookAt(e, c, up, o = new Float32Array(16)) {
     let zx = e[0] - c[0], zy = e[1] - c[1], zz = e[2] - c[2];
     let l = Math.hypot(zx, zy, zz); zx /= l; zy /= l; zz /= l;
     let xx = up[1] * zz - up[2] * zy, xy = up[2] * zx - up[0] * zz, xz = up[0] * zy - up[1] * zx;
     l = Math.hypot(xx, xy, xz); xx /= l; xy /= l; xz /= l;
     const yx = zy * xz - zz * xy, yy = zz * xx - zx * xz, yz = zx * xy - zy * xx;
-    return new Float32Array([xx, yx, zx, 0, xy, yy, zy, 0, xz, yz, zz, 0,
-      -(xx * e[0] + xy * e[1] + xz * e[2]), -(yx * e[0] + yy * e[1] + yz * e[2]), -(zx * e[0] + zy * e[1] + zz * e[2]), 1]);
+    o[0] = xx; o[1] = yx; o[2] = zx; o[3] = 0; o[4] = xy; o[5] = yy; o[6] = zy; o[7] = 0;
+    o[8] = xz; o[9] = yz; o[10] = zz; o[11] = 0;
+    o[12] = -(xx * e[0] + xy * e[1] + xz * e[2]); o[13] = -(yx * e[0] + yy * e[1] + yz * e[2]);
+    o[14] = -(zx * e[0] + zy * e[1] + zz * e[2]); o[15] = 1;
+    return o;
   },
-  multiply(a, b) {
-    const o = new Float32Array(16);
+  multiply(a, b, o = new Float32Array(16)) {
     for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) {
       let s = 0;
       for (let k = 0; k < 4; k++) s += a[k * 4 + j] * b[i * 4 + k];
       o[i * 4 + j] = s;
     }
     return o;
-  },
-  /** translate * rotateY(ry) * scale(sx, sy, 1) */
-  model(x, y, z, ry, sx, sy) {
-    const c = Math.cos(ry), s = Math.sin(ry);
-    return new Float32Array([c * sx, 0, -s * sx, 0, 0, sy, 0, 0, s, 0, c, 0, x, y, z, 1]);
   },
 };

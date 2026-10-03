@@ -1,4 +1,4 @@
-/* /iw-viewer-controls: the visitor owns theme, motion, effects, sound, grain.
+/* /iw-viewer-controls: the visitor owns theme, motion, effects and sound.
  *
  * Stored per browser in localStorage (a per-viewer convenience, nothing shared)
  * and mirrored onto <html> as data attributes so CSS can react without JS.
@@ -12,9 +12,8 @@ export const OPTIONS = {
   motion: [["system", "System"], ["full", "Full"], ["calm", "Calm"]],
   effects: [["auto", "Auto"], ["on", "On"], ["off", "Low power"]],
   sound: [["off", "Off"], ["on", "On"]],
-  grain: [["on", "On"], ["off", "Off"]],
 };
-export const DEFAULTS = { theme: "light", motion: "system", effects: "auto", sound: "off", grain: "on" };
+export const DEFAULTS = { theme: "light", motion: "system", effects: "auto", sound: "off" };
 
 let state = { ...DEFAULTS };
 try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) {}
@@ -39,7 +38,7 @@ export function resolve(s, env) {
   let effects = s.effects;
   if (effects === "auto") effects = env.webgl && !env.saveData && !env.lowMemory ? "on" : "off";
   if (!env.webgl) effects = "off";
-  return { theme, motion, effects, sound: s.sound === "on", grain: s.grain !== "off" };
+  return { theme, motion, effects, sound: s.sound === "on" };
 }
 
 function env() {
@@ -63,7 +62,6 @@ export function apply() {
   d.setAttribute("data-theme", current.theme);
   d.setAttribute("data-motion", current.motion);
   d.setAttribute("data-effects", current.effects);
-  d.setAttribute("data-grain", current.grain ? "on" : "off");
   return current;
 }
 

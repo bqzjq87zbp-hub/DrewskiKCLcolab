@@ -16,8 +16,9 @@ import * as prefs from "../core/prefs.js";
 const gsap = window.gsap;
 
 export function initCanvas(ctx) {
+  // a visible Close, like the reading view's: "Esc to close" meant nothing on a phone
   const root = h("div", { class: "cv", role: "dialog", "aria-modal": "true", "aria-label": "Canvas view: drag to explore every photograph", tabindex: "-1" },
-    `<div class="cv-t"></div><div class="cv-hint lbl">Drag to explore &middot; Esc to close</div>`);
+    `<div class="cv-t"></div><button class="sl-close lbl" type="button" data-magnetic="0.25">Close</button><div class="cv-hint lbl">Drag to explore</div>`);
   document.body.appendChild(root);
   const track = $(".cv-t", root);
   const N = ctx.plates.length;
@@ -35,7 +36,7 @@ export function initCanvas(ctx) {
 
   function tile(k) {
     if (!pool[k]) {
-      const t = h("button", { class: "tile", type: "button", tabindex: "-1" }, `<img alt="" decoding="async"><span class="num"></span>`);
+      const t = h("button", { class: "tile", type: "button", tabindex: "-1" }, `<img alt="" decoding="async">`);
       track.appendChild(t);
       pool[k] = t;
     }
@@ -58,9 +59,7 @@ export function initCanvas(ctx) {
         if (t._i !== i) {
           const p = ctx.plates[i];
           t._i = i;
-          const im = t.firstChild;
-          im.src = p.src;
-          t.lastChild.textContent = `[${pad(p.n)}]`;
+          t.firstChild.src = p.src;
           t.setAttribute("aria-label", `Plate ${pad(p.n)}, ${p.kicker}`);
         }
         t.style.width = cw + "px";
@@ -86,6 +85,8 @@ export function initCanvas(ctx) {
 
   let px = 0, py = 0, lx = 0, ly = 0, lt = 0;
   root.addEventListener("pointerdown", (e) => {
+    // capturing this pointer would retarget the Close button's click to the wall
+    if (e.target.closest(".sl-close")) return;
     dragging = true; moved = 0; px = lx = e.clientX; py = ly = e.clientY; lt = performance.now(); vx = vy = 0;
     root.classList.add("dragging");
     root.setPointerCapture(e.pointerId);
@@ -128,6 +129,7 @@ export function initCanvas(ctx) {
     if (t) hover(t.firstChild, false, t);
   });
 
+  $(".sl-close", root).addEventListener("click", () => close());
   gsap.ticker.add(tick);
   addEventListener("resize", () => { if (open) { metrics(); render(); } });
 
@@ -144,7 +146,7 @@ export function initCanvas(ctx) {
     render();
     const calm = prefs.get().motion === "calm";
     gsap.fromTo(root, { clipPath: calm ? "inset(0 0 0 0)" : "inset(50% 50% 50% 50%)", autoAlpha: calm ? 0 : 1 },
-      { clipPath: "inset(0% 0% 0% 0%)", autoAlpha: 1, duration: calm ? 0.3 : 1.0, ease: "expo.inOut" });
+      { clipPath: "inset(0% 0% 0% 0%)", autoAlpha: 1, duration: calm ? 0.3 : 0.6, ease: "power4.out" });
     if (!calm) { vx = -6; vy = -3; }
     root.focus({ preventScroll: true });
     sound.play("paper", { dur: 0.5, gain: 0.08 });
@@ -157,7 +159,7 @@ export function initCanvas(ctx) {
     pushed = false;
     for (const t of pool) if (t._i != null) hover(t.firstChild, false, t);
     gsap.killTweensOf(root);
-    await new Promise((res) => gsap.to(root, { clipPath: "inset(50% 50% 50% 50%)", duration: prefs.get().motion === "calm" ? 0.01 : 0.7, ease: "expo.inOut", onComplete: res }));
+    await new Promise((res) => gsap.to(root, { clipPath: "inset(50% 50% 50% 50%)", duration: prefs.get().motion === "calm" ? 0.01 : 0.4, ease: "power3.out", onComplete: res }));
     root.classList.remove("open");
     document.documentElement.classList.remove("cv-open");
     // autoAlpha leaves an inline visibility behind that would beat the CSS

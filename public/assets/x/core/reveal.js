@@ -6,7 +6,6 @@
  *   data-reveal="lines"   text lines rise out of masks
  *   data-reveal="chars"   characters slot in
  *   data-reveal="clip"    a clip-path window opens from the bottom edge
- *   data-reveal="wipe"    a curtain in the accent colour wipes across and off
  *   data-reveal="fade"    plain fade, for anything delicate
  *
  * data-delay adds seconds. Calm motion collapses everything to short fades,
@@ -31,16 +30,6 @@ function play(el) {
     case "clip":
       return gsap.fromTo(el, { clipPath: "inset(100% 0% 0% 0%)" },
         { clipPath: "inset(0% 0% 0% 0%)", duration: 1.3, ease: "expo.inOut", delay, clearProps: "clipPath" });
-    case "wipe": {
-      const c = document.createElement("span");
-      c.className = "rv-curtain";
-      el.appendChild(c);
-      gsap.set(el, { autoAlpha: 1 });
-      return gsap.timeline({ delay, onComplete: () => c.remove() })
-        .fromTo(c, { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.55, ease: "expo.in" })
-        .set(el, { "--rv-o": 1 })
-        .to(c, { scaleX: 0, transformOrigin: "100% 50%", duration: 0.7, ease: "expo.out" });
-    }
     case "fade": return gsap.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, delay, ease: "power2.out" });
     default: {
       const kids = el.children.length ? Array.from(el.children) : [el];

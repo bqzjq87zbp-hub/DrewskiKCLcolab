@@ -12,9 +12,9 @@
       "category": "branding",
       "mark": "Branding",
       "issue": "Product and place",
-      "blurb": "NWPRT on the sand, and a cold bottle three ways.",
+      "blurb": "NWPRT on the sand, and a cold bottle up close.",
       "standfirst": "Brand work made where the product actually lives: on the sand, under yellow patio umbrellas, and up close for a cold bottle.",
-      "intro": "Thirteen photographs in four chapters: apparel, patio hours, the waterline and a cold bottle. Scroll to walk the exhibition. Open any frame to read it.",
+      "intro": "Apparel, patio hours, the waterline and a cold bottle, chapter by chapter. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Product told through the place.",
       "footer": "Kiyono Creative Lab · Branding",
       "font": "'Fraunces', Georgia, serif",
@@ -98,17 +98,12 @@
               "id": "nwprt-pier-shore-activity",
               "kicker": "At the Waterline",
               "caption": "Two kids and their boards meet the surf beside the pier, doubled in the wet sand."
-            },
-            {
-              "id": "nwprt-underpier-branded",
-              "kicker": "Under the Pier",
-              "caption": "Waves pass beneath the timber pier, the NWPRT Supply Co badge set low in the frame."
             }
           ]
         },
         {
           "title": "A Cold Bottle",
-          "deck": "One classic bottle, three ways: white gloves, an ice bucket on the sand, and caps under droplets.",
+          "deck": "A classic bottle, shot every way: white gloves, an ice bucket on the sand, and caps under droplets.",
           "mood": {
             "bg": "#170d0c",
             "ink": "#f3e8e3"
@@ -140,7 +135,7 @@
       "issue": "Under the trees",
       "blurb": "Hills, tall grass, the shoreline and some very small people.",
       "standfirst": "Family portraits made outside: under broad trees, out in the Southern California hills, down at the shoreline and on into the evening.",
-      "intro": "Twenty-one photographs in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
+      "intro": "Under the trees, in the hills, up close, by the water and into the evening. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Hold on to this one.",
       "footer": "Kiyono Creative Lab · Families",
       "font": "'Pinyon Script', 'Snell Roundhand', cursive",
@@ -229,7 +224,7 @@
         },
         {
           "title": "Close",
-          "deck": "Closer in: a newborn on a shoulder, a laughing child, and two faces in black and white.",
+          "deck": "Closer in: a newborn on a shoulder, a laughing child, and faces young and old in black and white.",
           "mood": {
             "bg": "#ecebe7",
             "ink": "#1a1816"
@@ -259,7 +254,7 @@
         },
         {
           "title": "By the Water",
-          "deck": "Down at the shoreline and under the pier, with two very bright balls.",
+          "deck": "Down at the shoreline and under the pier, with very bright balls.",
           "mood": {
             "bg": "#e7f0f2",
             "ink": "#0e1f27"
@@ -314,9 +309,9 @@
       "category": "headshots",
       "mark": "Headshots",
       "issue": "The red room",
-      "blurb": "Thirty-one people, a warm red backdrop, and the places they work.",
+      "blurb": "Real people, a warm red backdrop, and the places they work.",
       "standfirst": "Professional portraits in the studio and on location: a warm red backdrop, clean light, walls with character, the places people work, and the odd event under neon.",
-      "intro": "Thirty-one portraits in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
+      "intro": "Portraits against red, in clean light, by walls with character, on location and after hours. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Look like yourself, on purpose.",
       "footer": "Kiyono Creative Lab · Headshots",
       "font": "'Fraunces', Georgia, serif",
@@ -330,7 +325,7 @@
       "stories": [
         {
           "title": "The Red Room",
-          "deck": "One warm red backdrop and eight very different people. The backdrop stays, everyone else changes.",
+          "deck": "The same warm red backdrop behind very different people. The backdrop stays, everyone else changes.",
           "mood": {
             "bg": "#f6e9e5",
             "ink": "#2a1310"
@@ -540,9 +535,9 @@
       "category": "coastal",
       "mark": "Coastal",
       "issue": "Pier light",
-      "blurb": "Two kids, two bright balls and the timber pier.",
-      "standfirst": "Coastal photographs made around the pier: two kids, two bright balls and the light under the boards, then one figure alone in the shallows.",
-      "intro": "Four photographs in two chapters. Scroll to walk the exhibition. Open any frame to read it.",
+      "blurb": "Kids, bright balls and the timber pier.",
+      "standfirst": "Coastal photographs made around the pier: kids with bright balls and the light under the boards, then a figure alone in the shallows.",
+      "intro": "Under the boards, then out in the shallows. Scroll to walk the exhibition. Open any frame to read it.",
       "backline": "Get your feet wet.",
       "footer": "Kiyono Creative Lab · Coastal",
       "font": "'Instrument Sans', 'Helvetica Neue', Arial, sans-serif",
@@ -556,7 +551,7 @@
       "stories": [
         {
           "title": "Under the Boards",
-          "deck": "Two kids, a pink ball and a blue one, by the water and under the pier.",
+          "deck": "Kids with a pink ball and a blue ball, by the water and under the pier.",
           "mood": {
             "bg": "#e6eff1",
             "ink": "#0f2028"
@@ -581,7 +576,7 @@
         },
         {
           "title": "Shallows",
-          "deck": "One figure, ankle-deep, hair in hand.",
+          "deck": "A figure, ankle-deep, hair in hand.",
           "mood": {
             "bg": "#dbe7ea",
             "ink": "#0c1a20"

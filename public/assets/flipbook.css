@@ -1,13 +1,10 @@
 *{box-sizing:border-box}
 :root{--paper:#14100c;--ink:#f3e6cf;--acc:#FFB211;--acc2:#c1440e;--edge:#3a2f22;--deep:#0a0806;
-  --disp:'Georgia','Times New Roman',serif;--mono:'Helvetica Neue',Arial,sans-serif}
+  --disp:'Georgia','Times New Roman',serif;--mono:'Helvetica Neue',Arial,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
 html,body{margin:0;height:100%;background:var(--deep);color:var(--ink);
   font-family:var(--mono);-webkit-font-smoothing:antialiased;overflow:hidden}
 #stage{position:fixed;inset:0 0 66px 0;display:flex;align-items:center;justify-content:center;padding:10px}
-/* texture: grain over the whole spread, plus an accent glow behind the book */
-body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.06;
-  mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* an accent glow behind the book */
 body:before{content:"";position:fixed;left:50%;top:46%;width:min(90vw,1000px);
   height:min(90vw,1000px);transform:translate(-50%,-50%);pointer-events:none;z-index:0;
   opacity:.35;background:radial-gradient(circle,color-mix(in srgb,var(--acc) 22%,transparent),transparent 62%)}
@@ -20,9 +17,6 @@ body:before{content:"";position:fixed;left:50%;top:46%;width:min(90vw,1000px);
 .cover .bleed img{object-position:center center}
 .plate.land .bleed{background:var(--deep)}
 .plate.land .bleed img{object-fit:contain;object-position:center 42%}
-.fol{position:absolute;bottom:10px;right:14px;font-size:10px;letter-spacing:.16em;
-  color:var(--acc);opacity:.75;z-index:3}
-.plate .fol{color:#fff;mix-blend-mode:difference;opacity:.9}
 
 .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:34px 22px 22px;
   background:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.45) 55%,transparent);
@@ -39,16 +33,15 @@ body:before{content:"";position:fixed;left:50%;top:46%;width:min(90vw,1000px);
 .toc-h{margin-top:auto;font-size:9px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--acc);padding-bottom:.7em;border-bottom:1px solid var(--edge)}
 .toc{list-style:none;margin:.9em 0 0;padding:0}
-.toc li{display:flex;gap:12px;align-items:baseline;padding:.42em 0;font-size:12px;
-  border-bottom:1px dotted var(--edge)}
-.tn{color:var(--acc);font-size:10px;letter-spacing:.1em}
+.toc li{padding:.42em 0;font-size:12px;border-bottom:1px dotted var(--edge)}
+/* no chapter numerals: the titles carry the contents */
+.tt{font-weight:700;font-size:13.5px}
 .mast-foot{margin-top:1.4em;font-size:9px;letter-spacing:.14em;opacity:.5;text-transform:uppercase}
 
 .section{background:var(--deep);color:#fff}
 .sec{position:absolute;inset:0;padding:11%;display:flex;flex-direction:column;justify-content:center}
-.sec-n{font-size:11px;letter-spacing:.3em;color:var(--acc)}
 .sec-t{font-family:var(--disp);font-size:clamp(24px,5.4vw,40px);line-height:1.05;
-  margin:.35em 0 0;font-weight:700;color:#fff}
+  margin:0;font-weight:700;color:#fff}
 .sec-rule{height:2px;width:44px;background:var(--acc);margin:1.1em 0}
 .sec-d{font-size:11.5px;line-height:1.65;opacity:.72;margin:0;max-width:30ch}
 
@@ -65,19 +58,29 @@ body:before{content:"";position:fixed;left:50%;top:46%;width:min(90vw,1000px);
   justify-content:center;gap:20px;background:linear-gradient(to top,var(--deep),transparent);z-index:20}
 #bar button{width:44px;height:44px;border-radius:50%;border:1px solid var(--edge);
   background:rgba(255,255,255,.06);color:var(--acc);font-size:20px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;transition:.18s}
-#bar button:hover{background:var(--acc);color:var(--deep);transform:translateY(-2px)}
-#ind{font-size:10px;letter-spacing:.18em;color:var(--acc);opacity:.8;min-width:74px;text-align:center}
+  display:flex;align-items:center;justify-content:center;
+  transition:background-color .18s,color .18s,transform .18s var(--ease),scale .16s var(--ease)}
+/* hover only where a pointer really hovers; every control answers a press */
+@media (hover:hover) and (pointer:fine){#bar button:hover{background:var(--acc);color:var(--deep);transform:translateY(-2px)}}
+#bar button:active,#atelier:active,#home:active{scale:.97}
+/* how far through the book: a hairline that fills, not a page count */
+#ind{position:relative;width:74px;height:1px;overflow:hidden;
+  background:color-mix(in srgb,var(--acc) 25%,transparent)}
+#ind:after{content:"";position:absolute;inset:0;background:var(--acc);transform-origin:left;
+  transform:scaleX(var(--p,0));transition:transform .5s}
 #atelier{position:fixed;top:14px;right:16px;z-index:25;font-size:9.5px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--deep);text-decoration:none;
   border:1px solid var(--acc);padding:7px 14px;border-radius:99px;background:var(--acc);
-  transition:.24s cubic-bezier(.22,1,.36,1);
+  transition:transform .24s var(--ease),box-shadow .24s var(--ease),scale .16s var(--ease);
   box-shadow:0 8px 26px -8px color-mix(in srgb,var(--acc) 70%,transparent)}
-#atelier:hover{transform:translateY(-2px);box-shadow:0 14px 34px -8px color-mix(in srgb,var(--acc) 80%,transparent)}
 #home{position:fixed;top:14px;left:16px;z-index:25;font-size:9.5px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--acc);text-decoration:none;opacity:.7;
-  border:1px solid var(--edge);padding:7px 12px;border-radius:99px;background:rgba(0,0,0,.35)}
-#home:hover{opacity:1;background:var(--acc);color:var(--deep)}
+  border:1px solid var(--edge);padding:7px 12px;border-radius:99px;background:rgba(0,0,0,.35);
+  transition:opacity .24s,background-color .24s,color .24s,scale .16s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  #atelier:hover{transform:translateY(-2px);box-shadow:0 14px 34px -8px color-mix(in srgb,var(--acc) 80%,transparent)}
+  #home:hover{opacity:1;background:var(--acc);color:var(--deep)}
+}
 #hint{position:fixed;bottom:74px;left:0;right:0;text-align:center;font-size:9.5px;
   letter-spacing:.2em;text-transform:uppercase;color:var(--acc);opacity:.5;
   transition:opacity .5s;pointer-events:none;z-index:20}
@@ -85,54 +88,3 @@ body:before{content:"";position:fixed;left:50%;top:46%;width:min(90vw,1000px);
   background:var(--deep);color:var(--acc);font-size:11px;letter-spacing:.24em;
   text-transform:uppercase;z-index:50}
 #loading.err{color:#ff6b6b;text-transform:none;letter-spacing:.04em;font-size:13px;padding:24px;text-align:center}
-
-/* ── end-of-book pop-out ────────────────────────────────────────────────
-   Reaching the back cover reveals a prompt. Taking it stands a set of flat
-   panels upright like a pop-up spread, then blacks out onto the pier walk. */
-#fold{position:fixed;inset:0;z-index:30;pointer-events:none;
-  perspective:1500px;perspective-origin:50% 62%;opacity:0;transition:opacity .5s ease}
-#fold.armed{opacity:1;pointer-events:auto}
-/* Scrim the finished book so the invitation reads as a threshold rather than
-   a button sitting on top of the artwork. */
-#fold.armed::before{content:"";position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.62),rgba(0,0,0,.86));
-  animation:scrimIn .55s ease both}
-#fold.popping::before{opacity:0;transition:opacity .5s ease}
-@keyframes scrimIn{from{opacity:0}to{opacity:1}}
-#fold .prompt{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
-  text-align:center;animation:promptIn .7s cubic-bezier(.16,.9,.3,1) both}
-@keyframes promptIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-#fold .prompt button{font-family:inherit;font-size:10px;letter-spacing:.28em;
-  text-transform:uppercase;color:var(--deep);background:var(--acc);border:0;
-  padding:15px 30px;border-radius:99px;cursor:pointer;transition:.22s;
-  box-shadow:0 12px 40px rgba(0,0,0,.5)}
-#fold .prompt button:hover{transform:translateY(-2px);box-shadow:0 18px 52px rgba(0,0,0,.6)}
-#fold .prompt small{display:block;margin-top:14px;font-size:9px;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--acc);opacity:.6}
-
-#stand{position:absolute;left:50%;top:50%;width:min(78vw,760px);height:min(56vh,430px);
-  transform:translate(-50%,-46%);transform-style:preserve-3d;opacity:0}
-#fold.popping #stand{opacity:1}
-.flap{position:absolute;left:0;right:0;bottom:0;transform-origin:bottom center;
-  transform:rotateX(-92deg);backface-visibility:hidden;
-  background:linear-gradient(180deg,var(--paper),var(--deep));
-  border-top:1px solid var(--acc);box-shadow:0 -18px 50px rgba(0,0,0,.6)}
-#fold.popping .flap{animation:stand .95s cubic-bezier(.22,1.02,.36,1) forwards}
-@keyframes stand{to{transform:rotateX(0deg)}}
-.flap .lbl{position:absolute;left:0;right:0;top:16px;text-align:center;
-  font-family:var(--disp);font-size:clamp(15px,2.6vw,28px);color:var(--acc);
-  letter-spacing:.04em;opacity:0}
-#fold.popping .flap .lbl{animation:lblIn .5s ease .55s forwards}
-@keyframes lblIn{to{opacity:1}}
-.flap .railline{position:absolute;left:8%;right:8%;top:50%;height:2px;
-  background:linear-gradient(to right,transparent,var(--acc),transparent);opacity:.55}
-/* easels standing on the boards, like the walk's own */
-.easel{position:absolute;top:calc(50% - 46px);width:40px;height:30px;
-  border:1.5px solid var(--acc);opacity:.75}
-.easel:before,.easel:after{content:"";position:absolute;top:100%;width:1.5px;height:42px;background:var(--acc)}
-.easel:before{left:6px;transform:rotate(8deg);transform-origin:top}
-.easel:after{right:6px;transform:rotate(-8deg);transform-origin:top}
-
-#blackout{position:fixed;inset:0;background:#000;z-index:35;opacity:0;
-  pointer-events:none;transition:opacity .85s ease}
-#blackout.on{opacity:1;pointer-events:auto}

@@ -2,11 +2,12 @@
  *
  * A conversation as a second way through the site, never the only one: every
  * answer is also an action (scroll to a chapter, open a frame, pick out every
- * photograph that carries red, change a setting, walk the pier, start the
- * booking email) and the ordinary navigation stays exactly where it was. Replies stream in; the send button runs through
- * idle, thinking and answered (/iw-live-data-forms three-state submit).
+ * photograph that carries red, change a setting, start the booking email)
+ * and the ordinary navigation stays exactly where it was. Replies stream in;
+ * the send button runs through idle, thinking and answered
+ * (/iw-live-data-forms three-state submit).
  */
-import { $, h, esc, pad, appUrl, sleep } from "../util.js";
+import { $, h, esc, appUrl, sleep } from "../util.js";
 import { makeBrain } from "./finder-brain.js";
 import * as prefs from "../core/prefs.js";
 import { sound } from "../core/sound.js";
@@ -35,7 +36,7 @@ export function initFinder(ctx) {
 
   function cardHTML(c) {
     const p = ctx.plates[c.plate];
-    return `<button type="button" data-plate="${p.i}"><img src="${esc(p.src)}" alt="">[${pad(p.n)}] ${esc(p.kicker)}</button>`;
+    return `<button type="button" data-plate="${p.i}"><img src="${esc(p.src)}" alt="">${esc(p.kicker)}</button>`;
   }
 
   async function say(r) {
@@ -67,11 +68,11 @@ export function initFinder(ctx) {
         break;
       case "book": setTimeout(() => { location.href = ctx.booking(a.subject); }, 400); break;
       case "go": {
-        const to = a.to === "book" ? `${ctx.root}book/` : a.to === "atelier" ? `${ctx.root}atelier/` : a.to === "walk" ? ctx.walk
+        const to = a.to === "book" ? `${ctx.root}book/` : a.to === "atelier" ? `${ctx.root}atelier/`
           : a.to === "issue" ? appUrl(a.slug + "/") : appUrl("");
         const other = a.to === "issue" && ctx.other.find((o) => o.slug === a.slug);
-        const color = a.to === "walk" ? ctx.roomColor : other ? other.hero : a.to === "home" ? "#070707" : ctx.ex.hero;
-        setTimeout(() => go(to, { color, label: a.to === "walk" ? "The Walk" : other ? other.mark : null }), 500);
+        const color = other ? other.hero : a.to === "home" ? "#070707" : ctx.ex.hero;
+        setTimeout(() => go(to, { color, label: other ? other.mark : null }), 500);
         break;
       }
     }

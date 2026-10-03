@@ -7,8 +7,8 @@
  *
  * Stacking, bottom to top: footer (0) < hero (0, later in the DOM) < main
  * (auto, later still; deliberately NOT a stacking context so its children can
- * rise above the GL canvas) < GL canvas (30) < UI chrome (35-60) < grain (95)
- * < cursor (100) < preloader (1000) < page-transition cover.
+ * rise above the GL canvas) < GL canvas (30) < UI chrome (35-70) < preloader
+ * (1000) < page-transition cover.
  */
 
 :root {
@@ -51,23 +51,16 @@ body {
 img { display: block; max-width: 100%; }
 a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+/* press feedback on every button and pill. `scale` is its own property, so it
+   composes with the magnetic pull (an inline transform) instead of replacing it */
+button, .hd-btn, .chipa { transition: scale .16s var(--ease); }
+button:active, .hd-btn:active, .chipa:active { scale: .97; }
 :focus-visible { outline: 1.5px solid var(--acc); outline-offset: 3px; }
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .lbl { font: 500 11px/1.2 var(--ui); letter-spacing: .09em; text-transform: uppercase; }
 .num { font-variant-numeric: tabular-nums; }
 
-/* grain over everything, the printed-matter feel */
-/* Plain alpha noise, no blend mode: a full-screen blend forces the compositor
-   to render everything beneath into its own surface every frame. */
-.grain { position: fixed; inset: -10%; z-index: 95; pointer-events: none; opacity: .22;
-  background-image: url("grain.png"); background-size: 192px 192px;
-  animation: grain 1.2s steps(6) infinite; }
-html[data-theme="dark"] .grain { filter: invert(1); opacity: .05; }
-html[data-grain="off"] .grain, html[data-motion="calm"] .grain { animation: none; }
-html[data-grain="off"] .grain { display: none; }
-@keyframes grain { 0%{transform:translate3d(0,0,0)} 20%{transform:translate3d(-4%,3%,0)} 40%{transform:translate3d(3%,-4%,0)} 60%{transform:translate3d(-3%,-2%,0)} 80%{transform:translate3d(4%,4%,0)} 100%{transform:translate3d(0,0,0)} }
-/* low power: no moving grain, no live blur behind the header */
-html[data-effects="off"] .grain { animation: none; }
+/* low power: no live blur behind the header */
 html[data-effects="off"] .hd::before { -webkit-backdrop-filter: none; backdrop-filter: none; background: color-mix(in srgb, var(--bg) 94%, transparent); }
 
 /* the GL stage */
@@ -78,12 +71,9 @@ html[data-effects="off"] .hd::before { -webkit-backdrop-filter: none; backdrop-f
 .fr-a { cursor: zoom-in; }
 .cv { cursor: grab; }
 .cv.dragging { cursor: grabbing; }
-.tilt-glare { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .4s; mix-blend-mode: soft-light;
-  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,.55), transparent 55%); }
 
 /* ─── reveals (/iw-entrance-reveals) ─────────────────────────────────── */
 .js .rv-armed:not(.rv-in) { visibility: hidden; }
-.rv-curtain { position: absolute; inset: 0; background: var(--acc); z-index: 2; pointer-events: none; }
 .sl, .sw { padding-bottom: .06em; margin-bottom: -.06em; }
 
 /* ─── preloader + transitions (/iw-transitions-preloader) ────────────── */
@@ -97,16 +87,23 @@ html[data-arriving] .pre { background: var(--handoff); color: var(--handoff-ink)
 .pre-ring { width: 26px; height: 26px; transform: rotate(-90deg); }
 .pre-ring circle { fill: none; stroke: currentColor; stroke-width: 1.2; }
 .pre-ring circle.bg { opacity: .2; }
-.pre-num { font: 500 12px/1 var(--ui); letter-spacing: .12em; font-variant-numeric: tabular-nums; }
 .tx-cover { position: fixed; inset: 0; z-index: 2147483001; }
 .tx-label { position: fixed; inset: 0; z-index: 2147483002; display: grid; place-items: center; pointer-events: none;
   font: 400 clamp(44px, 8vw, 110px)/1 var(--disp); }
 
 /* ─── hero ───────────────────────────────────────────────────────────── */
-.hero { position: fixed; left: 0; right: 0; top: 0; height: 100lvh; z-index: 0; background: var(--hero); color: var(--hero-ink);
-  display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; transition: background-color .9s var(--ease), color .9s; }
+/* The blurred pier is the base of every hero. The luminosity blend recolours
+   it in the exhibition's own hero colour and a veil of that colour keeps it
+   faint, so each exhibition keeps its identity and the wordmark reads. The
+   photograph is blurred in the file: no live filter runs. */
+.hero { position: fixed; left: 0; right: 0; top: 0; height: 100lvh; z-index: 0; color: var(--hero-ink);
+  --veil: color-mix(in srgb, var(--hero) 74%, transparent);
+  background: linear-gradient(var(--veil), var(--veil)), url("../../brand/pier-blur.jpg") 50% 50% / cover no-repeat, var(--hero);
+  background-blend-mode: normal, luminosity;
+  display: grid; grid-template-rows: 1fr auto; overflow: hidden; transition: background-color .9s var(--ease), color .9s; }
+/* the blend lifts a dark hero toward the photograph's brightness: a thicker veil keeps it as faint */
+html[data-theme="dark"] .hero { --veil: color-mix(in srgb, var(--hero) 88%, transparent); }
 .hero.is-past { visibility: hidden; }
-.hero-top { padding: 22px var(--gut) 0; display: flex; justify-content: center; color: color-mix(in srgb, var(--hero-ink) 88%, transparent); }
 .hero-mid { display: grid; place-items: center; padding: 0 var(--gut); }
 .hero-wm { margin: 0; font: var(--wm-weight) clamp(78px, 19.5vw, 330px)/.84 var(--wm); font-variation-settings: var(--wm-var);
   letter-spacing: -.012em; text-align: center; white-space: nowrap; will-change: transform; padding: .1em .06em; }
@@ -114,15 +111,21 @@ html[data-arriving] .pre { background: var(--handoff); color: var(--handoff-ink)
 .hero-sub { margin-top: 8px; text-align: center; font: 300 clamp(15px, 1.5vw, 21px)/1.3 var(--disp); font-style: italic; letter-spacing: .005em; }
 .hero-bot { padding: 0 var(--gut) 22px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 16px; }
 .hero-bot p { margin: 0; max-width: 34ch; font-size: 12.5px; line-height: 1.5; }
+/* phones: one column, the intro centred under the wordmark and the cue under
+   it; three columns squeezed the intro into a third of the screen */
+@media (max-width: 759px) { .hero-bot { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 14px; } .hero-bot p { max-width: 40ch; } .hero-bot > :empty { display: none; } }
 .hero-live { justify-self: end; text-align: right; }
-.hero-cue { display: grid; justify-items: center; gap: 8px; }
-.hero-cue i { display: block; width: 1px; height: 38px; background: currentColor; transform-origin: top; animation: cue 2.2s var(--ease-io) infinite; }
-@keyframes cue { 0% { transform: scaleY(0); } 45% { transform: scaleY(1); transform-origin: top; } 55% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+/* the intro already says to scroll; the cue is the line alone */
+.hero-cue { display: grid; justify-items: center; }
+.hero-cue i { display: block; width: 1px; height: 38px; background: currentColor; animation: cue 2.2s var(--ease-io) infinite; }
+/* drawn down, then wiped off downward: a clip, so the line never grows out of a zero scale */
+@keyframes cue { 0% { clip-path: inset(0 0 100% 0); } 45%, 55% { clip-path: inset(0); } 100% { clip-path: inset(100% 0 0 0); } }
 html[data-motion="calm"] .hero-cue i { animation: none; }
 
 /* ─── header ─────────────────────────────────────────────────────────── */
-.hd { position: fixed; left: 0; right: 0; top: 0; z-index: 40; height: var(--hd); display: grid; grid-template-columns: 1fr auto 1fr;
-  align-items: center; padding: 0 var(--gut); color: var(--ink); transform: translateY(-100%); transition: transform .8s var(--ease), color .9s; }
+/* the column gap keeps the wordmark clear of a pill pulled toward it (cursor.js PULL) */
+.hd { position: fixed; left: 0; right: 0; top: 0; z-index: 40; height: var(--hd); display: grid; grid-template-columns: 1fr auto 1fr; column-gap: 8px;
+  align-items: center; padding: 0 var(--gut); color: var(--ink); transform: translateY(-100%); transition: transform .5s var(--ease), color .9s; }
 .hd::before { content: ""; position: absolute; inset: 0; z-index: -1; background: color-mix(in srgb, var(--bg) 78%, transparent);
   -webkit-backdrop-filter: blur(10px) saturate(1.2); backdrop-filter: blur(10px) saturate(1.2); transition: background-color .9s; }
 .hd.is-in { transform: none; }
@@ -131,32 +134,38 @@ html[data-motion="calm"] .hero-cue i { animation: none; }
 .hd-wm { font: var(--wm-weight) 25px/1 var(--wm); font-variation-settings: var(--wm-var); text-decoration: none; padding: 6px 10px; display: inline-block; }
 .hd-btn { display: inline-flex; align-items: center; gap: 8px; font: 400 15px/1 var(--disp); padding: 8px 2px; }
 .hd-btn svg { width: 13px; height: 13px; }
-/* the one action that matters on every wall: booking, outlined so it reads first */
-.hd-book { padding: 7px 14px; border: 1px solid currentColor; border-radius: 999px; text-decoration: none; transition: background-color .3s, color .3s; }
-.hd-book:hover { background: var(--ink); color: var(--bg); }
+/* the one action that matters on every wall: booking, outlined so it reads first.
+   Plain inline text, not flex: a flex gap opened a double space before "a session" */
+.hd-book { display: inline-block; padding: 7px 14px; border: 1px solid currentColor; border-radius: 999px; text-decoration: none; transition: background-color .3s, color .3s, scale .16s var(--ease); }
+@media (hover: hover) and (pointer: fine) { .hd-book:hover { background: var(--ink); color: var(--bg); } }
 .chipa { padding: 6px 11px; border: 1px solid var(--line); border-radius: 14px; font-size: 12.5px; text-decoration: none; }
-@media (max-width: 759px) { .hd-long, .snd-btn .snd-l { display: none; } .hd-r { gap: 12px; } .hd-book { padding: 6px 11px; } }
+/* phones: the wordmark gives up side padding so the header still fits at 360px with its gap */
+@media (max-width: 759px) { .hd-long, .snd-btn .snd-l { display: none; } .hd-r { gap: 12px; } .hd-book { padding: 6px 11px; } .hd-wm { padding: 6px 4px; } }
 .snd { display: inline-flex; align-items: flex-end; gap: 2px; height: 13px; padding: 0 2px; }
-.snd i { width: 2px; height: 3px; background: currentColor; border-radius: 1px; transition: height .3s; }
+/* at rest, an equalizer standing at four heights: all at one height, the four
+   bars read as a stray row of dots, and on phones the label beside them is gone */
+.snd i { width: 2px; height: 5px; background: currentColor; border-radius: 1px; transition: height .3s; }
+.snd i:nth-child(2) { height: 9px; } .snd i:nth-child(3) { height: 6px; } .snd i:nth-child(4) { height: 11px; }
 .snd.on i { animation: bars 1s ease-in-out infinite; }
 .snd.on i:nth-child(2) { animation-delay: -.3s; } .snd.on i:nth-child(3) { animation-delay: -.6s; } .snd.on i:nth-child(4) { animation-delay: -.15s; }
 @keyframes bars { 0%, 100% { height: 3px; } 50% { height: 13px; } }
 .vmenu { position: absolute; top: calc(var(--hd) - 4px); left: var(--gut); display: grid; gap: 2px; padding: 8px; min-width: 170px;
   background: var(--bg); border: 1px solid var(--line); box-shadow: 0 24px 50px -24px rgba(0,0,0,.35);
-  opacity: 0; transform: translateY(-6px); pointer-events: none; transition: opacity .3s, transform .4s var(--ease); }
-.vmenu.open { opacity: 1; transform: none; pointer-events: auto; }
-.vmenu button { text-align: left; padding: 9px 10px; display: flex; justify-content: space-between; gap: 20px; font: 400 15px/1 var(--disp); }
+  opacity: 0; transform: translateY(-6px); pointer-events: none; transition: opacity .15s, transform .2s var(--ease); }
+.vmenu.open { opacity: 1; transform: none; pointer-events: auto; transition-duration: .2s, .25s; }
+/* the Book link is set like the views above it, its note flush right */
+.vmenu button, .vmenu a { text-align: left; padding: 9px 10px; display: flex; justify-content: space-between; gap: 20px; font: 400 15px/1 var(--disp); text-decoration: none; }
 .vmenu button[aria-pressed="true"] { background: var(--soft); }
-.vmenu button small { font: 500 10px/1 var(--ui); letter-spacing: .1em; color: var(--mut); text-transform: uppercase; }
+.vmenu small { font: 500 10px/1 var(--ui); letter-spacing: .1em; color: var(--mut); text-transform: uppercase; }
 
 /* chapter HUD (/iw-chapter-flow) */
 .hud { position: fixed; left: var(--gut); right: var(--gut); top: var(--hd); z-index: 39; height: 26px; display: flex; align-items: center; gap: 14px;
-  color: var(--mut); opacity: 0; transform: translateY(-8px); transition: opacity .5s, transform .6s var(--ease), color .9s; pointer-events: none; }
+  color: var(--mut); opacity: 0; transform: translateY(-8px); transition: opacity .3s, transform .4s var(--ease), color .9s; pointer-events: none; }
 .hud.is-in { opacity: 1; transform: none; }
 .hud-bar { flex: 1; height: 1px; background: var(--line); position: relative; overflow: hidden; }
 .hud-bar i { position: absolute; inset: 0; background: var(--ink); transform-origin: left; transform: scaleX(0); }
-.hud-ch { color: var(--ink); white-space: nowrap; }
-.hud-seen { white-space: nowrap; }
+/* the chapter title carries the HUD now that it shows no numbers */
+.hud-ch { color: var(--ink); white-space: nowrap; font-size: 13px; font-weight: 700; }
 
 /* ─── the sheet ──────────────────────────────────────────────────────── */
 main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h); background: var(--bg); color: var(--ink);
@@ -171,41 +180,48 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .fr { position: relative; margin: calc(var(--drop, 0) * var(--small-h)) 0 0; align-self: start; }
 .fr-a { display: block; position: relative; text-decoration: none; color: inherit; outline-offset: 4px; }
 .fr-m { position: relative; aspect-ratio: 4 / 7; overflow: hidden; background: var(--soft); }
-.fr-m img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .6s var(--ease), filter .6s; }
-.fr-m img.is-gl { opacity: 0; transition: none; }
+.fr-m img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .6s var(--ease); }
 .fr.is-waiting .fr-m img { opacity: 0; }
-.fr.is-css .fr-m img { animation: fold-css 1.25s var(--ease) both; }
-@keyframes fold-css { from { clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%); filter: blur(8px) brightness(1.08); } 60% { filter: blur(1px); } to { clip-path: polygon(0 -60%, 160% 100%, 0 100%, 0 100%) ; filter: none; } }
-.fr-lab { position: absolute; top: -2px; font: 400 12.5px/1.3 var(--ui); font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* the entrance: the print rises a little into place as it fades up, flat and
+   level the whole way. A paper fold used to bend every portrait as it came in */
+.fr.is-in .fr-m { animation: fr-in .9s var(--ease) var(--in-delay, 0s) backwards; }
+@keyframes fr-in { from { opacity: 0; transform: translateY(24px); } }
+/* the kicker beside the frame, in the free column. As wide as its words, up to
+   that column and its far gutter, 9px clear of the next frame: left to
+   shrink-to-fit, an absolute box beside the frame had no room at all and broke
+   every title into a column of single words */
+.fr-lab { position: absolute; top: -2px; width: max-content; max-width: calc(var(--colw) + 2 * var(--gut) - 18px); }
 .fr-lab[data-side="right"] { left: calc(100% + 9px); }
 .fr-lab[data-side="left"] { right: calc(100% + 9px); text-align: right; }
-.fr-lab[data-side="inside"] { top: 8px; right: 8px; padding: 3px 6px; background: color-mix(in srgb, var(--bg) 86%, transparent); z-index: 2; }
-.fr-lab small { display: block; color: var(--mut); font-size: 11px; max-width: calc(var(--colw) - 8px); white-space: normal; opacity: 0; transform: translateY(4px); transition: opacity .4s, transform .5s var(--ease); }
-.fr-lab[data-side="inside"] small { display: none; }
-.fr:hover .fr-lab small, .fr-a:focus-visible + .fr-lab small, html[data-pointer="coarse"] .fr-lab small { opacity: 1; transform: none; }
+/* no free column beside the frame: the kicker would sit on the photograph */
+.fr-lab[data-side="inside"] { display: none; }
+/* no plate number above it any more, so the title itself is set to be read */
+.fr-lab small { display: block; font: 600 14px/1.25 var(--ui); letter-spacing: -.005em; opacity: 0; transform: translateY(4px); transition: opacity .4s, transform .5s var(--ease); }
+.fr-a:focus-visible + .fr-lab small, html[data-pointer="coarse"] .fr-lab small { opacity: 1; transform: none; }
+@media (hover: hover) and (pointer: fine) { .fr:hover .fr-lab small { opacity: 1; transform: none; } }
 .fr.is-dim { opacity: .18; transition: opacity .5s; }
 .fr.is-hit .fr-m { outline: 1.5px solid var(--acc); outline-offset: 4px; }
 
 /* chapter heads */
 .ch { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: end; padding-top: clamp(20px, 6vw, 90px); scroll-margin-top: calc(var(--hd) + 30px); }
-.ch-in { grid-column: 1 / span 5; display: grid; grid-template-columns: auto 1fr; column-gap: clamp(16px, 2.4vw, 40px); align-items: end; }
+.ch-in { grid-column: 1 / span 5; }
 .ch[data-side="right"] .ch-in { grid-column: -6 / -1; }
-.ch-n { font: 200 clamp(64px, 11vw, 170px)/.78 var(--disp); font-variation-settings: "opsz" 144; letter-spacing: -.04em; }
-.ch-t { margin: 0 0 .1em; font: 300 clamp(30px, 4.4vw, 70px)/.95 var(--disp); font-style: italic; letter-spacing: -.02em; font-variation-settings: "SOFT" 50, "opsz" 144; }
-.ch-d { grid-column: 1 / -1; margin: 18px 0 0; max-width: 42ch; color: var(--mut); font-size: 13.5px; }
-.ch-meta { grid-column: 1 / -1; margin-top: 12px; color: var(--mut); }
+/* no numeral beside it: the title is the chapter's hero, upright and heavy */
+.ch-t { margin: 0; font: 800 clamp(48px, 7.4vw, 128px)/.9 var(--disp); letter-spacing: -.035em; font-variation-settings: "SOFT" 50, "opsz" 144;
+  text-wrap: balance; overflow-wrap: break-word; }
+.ch-d { margin: 18px 0 0; max-width: 42ch; color: var(--mut); font-size: 13.5px; }
 @media (max-width: 759px) {
   .ch-in, .ch[data-side="right"] .ch-in { grid-column: 1 / -1; }
-  .fr-lab small { display: none; }
+  .fr-lab { display: none; }
 }
 
 /* zoom (/iw-pointer-magic magnetic) */
-.zoom { position: fixed; left: 50%; bottom: 18px; z-index: 36; display: flex; gap: 6px; transform: translate(-50%, 16px); opacity: 0; pointer-events: none;
-  transition: opacity .4s, transform .6s var(--ease); }
+.zoom { position: fixed; left: 50%; bottom: 18px; z-index: 36; display: flex; gap: 14px; transform: translate(-50%, 16px); opacity: 0; pointer-events: none;
+  transition: opacity .3s, transform .4s var(--ease); }
 .zoom.is-in { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
 .zoom button { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--ink); background: color-mix(in srgb, var(--bg) 80%, transparent);
-  display: grid; place-items: center; transition: background-color .3s, color .3s, opacity .3s; }
-.zoom button:hover:not(:disabled) { background: var(--ink); color: var(--bg); }
+  display: grid; place-items: center; transition: background-color .3s, color .3s, opacity .3s, scale .16s var(--ease); }
+@media (hover: hover) and (pointer: fine) { .zoom button:hover:not(:disabled) { background: var(--ink); color: var(--bg); } }
 .zoom button:disabled { opacity: .3; }
 .zoom svg { width: 11px; height: 11px; stroke: currentColor; stroke-width: 1.4; }
 /* phones always hang at four columns, so the zoom has nothing to do there */
@@ -219,27 +235,30 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .sl-open .sl-back, .sl-open .sl-img, .sl-open .sl-ui { visibility: visible; }
 .sl-ui > * { pointer-events: auto; }
 .sl-text { position: absolute; left: var(--gut); bottom: 28px; width: min(30vw, 380px); display: grid; gap: 12px; }
-.sl-idx { font: 400 13px/1 var(--ui); font-variant-numeric: tabular-nums; }
+.sl-story { font: 700 14px/1.2 var(--ui); }
 .sl-k { margin: 0; font: 300 clamp(30px, 3.4vw, 54px)/.98 var(--disp); font-style: italic; letter-spacing: -.02em; }
 .sl-c { margin: 0; font-size: 14px; line-height: 1.55; max-width: 36ch; }
-.sl-story { color: var(--mut); }
 .sl-g { border-top: 1px solid var(--line); padding-top: 12px; display: grid; grid-template-columns: auto 1fr; gap: 5px 16px; font-size: 12.5px; }
 .sl-g dt { color: var(--mut); } .sl-g dd { margin: 0; }
 .sl-g .sl-sw { display: flex; gap: 5px; align-items: center; }
 .sl-g .sl-sw i { width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--line); }
 .sl-g a { grid-column: 1 / -1; margin-top: 6px; font: 400 15px/1 var(--disp); text-decoration: none; border-bottom: 1px solid var(--line); justify-self: start; padding-bottom: 3px; }
+/* rows sized to the thumbnails: auto rows shrank to share the rail's height
+   and every thumbnail overlapped the next */
 .sl-thumbs { position: absolute; right: var(--gut); top: calc(var(--hd) + 12px); bottom: 80px; width: 64px; overflow-y: auto; scrollbar-width: none;
-  display: grid; align-content: start; gap: 8px; padding: 2px; }
+  display: grid; grid-auto-rows: max-content; align-content: start; gap: 8px; padding: 2px; }
 .sl-thumbs::-webkit-scrollbar { display: none; }
-.sl-thumbs button { aspect-ratio: 4/7; overflow: hidden; opacity: .38; transition: opacity .3s; outline-offset: 2px; }
+.sl-thumbs button { aspect-ratio: 4/7; overflow: hidden; opacity: .38; transition: opacity .3s, scale .16s var(--ease); outline-offset: 2px; }
 .sl-thumbs button[aria-current="true"] { opacity: 1; outline: 1px solid var(--ink); }
-.sl-thumbs button:hover { opacity: .85; }
+@media (hover: hover) and (pointer: fine) { .sl-thumbs button:hover { opacity: .85; } }
 .sl-thumbs img { width: 100%; height: 100%; object-fit: cover; }
-.sl-nav { position: absolute; right: calc(var(--gut) + 80px); bottom: 26px; display: flex; gap: 8px; align-items: center; }
+.sl-nav { position: absolute; right: calc(var(--gut) + 80px); bottom: 26px; display: flex; gap: 14px; align-items: center; }
 .sl-nav button, .sl-close { height: 34px; min-width: 34px; border-radius: 17px; border: 1px solid var(--line); padding: 0 12px; display: inline-grid; place-items: center; font: 400 14px/1 var(--disp); background: var(--bg); }
-.sl-nav button:hover, .sl-close:hover { border-color: var(--ink); }
+@media (hover: hover) and (pointer: fine) { .sl-nav button:hover, .sl-close:hover { border-color: var(--ink); } }
 .sl-close { position: absolute; top: 12px; right: var(--gut); }
-.sl-count { font: 400 13px/1 var(--ui); font-variant-numeric: tabular-nums; margin-right: 8px; }
+/* how far through the wall: a hairline that fills, not a counter */
+.sl-count { position: relative; width: 72px; height: 1px; background: var(--line); overflow: hidden; }
+.sl-count i { position: absolute; inset: 0; background: var(--ink); transform-origin: left; transform: scaleX(0); transition: transform .6s var(--ease); }
 @media (max-width: 759px) {
   .sl-text { left: var(--gut); right: var(--gut); width: auto; bottom: 64px; gap: 8px; }
   .sl-k { font-size: 26px; } .sl-c { font-size: 13px; } .sl-g { display: none; }
@@ -253,9 +272,11 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .cv-t { position: absolute; left: 0; top: 0; will-change: transform; }
 .cv-t .tile { position: absolute; left: 0; top: 0; aspect-ratio: 4/7; overflow: hidden; background: var(--soft); }
 .cv-t .tile img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none; }
-.cv-t .tile span { position: absolute; left: 6px; bottom: 5px; font: 400 11px/1 var(--ui); color: #fff; mix-blend-mode: difference; }
-.cv-hint { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 2; padding: 8px 14px; border-radius: 20px;
+.cv-hint { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 2; padding: 8px 14px; border-radius: 20px; white-space: nowrap;
   background: color-mix(in srgb, var(--bg) 85%, transparent); color: var(--ink); pointer-events: none; }
+.cv .sl-close { z-index: 2; }
+/* a press on the wall starts a drag; a tile shrinking under it reads as a stuck button */
+.cv .tile:active { scale: none; }
 .cv.dragging .cv-t .tile { transition: none; }
 
 /* ─── sections ───────────────────────────────────────────────────────── */
@@ -266,19 +287,36 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .sec-h p { grid-column: 9 / span 4; align-self: end; margin: 0; color: var(--mut); max-width: 38ch; }
 @media (max-width: 759px) { .sec-h h2, .sec-h p { grid-column: 1 / -1; } .sec-h p { margin-top: 14px; } }
 
-/* the hall (/iw-webgl-world) */
-.hall { height: 520lvh; background: #0e0c0a; color: #f1ebe1; }
+/* the hall (/iw-webgl-world): a bright gallery, so its words are set in ink.
+   Its last screen is the palette's first: the palette slides up under it by
+   one viewport, so the end wall gives onto the real palette and the walk ends
+   inside it. --hall-bg is the room's warm white until the wall gives, then
+   nothing, so the page's own colour shows through the break */
+.hall { height: var(--hall-h, 520lvh); margin-bottom: -100lvh; background: var(--hall-bg, #f2ece4); color: #1d1914; }
 /* sticky makes a stacking context; lift the whole (transparent) pin above the
-   GL canvas so its captions sit on top of the 3D hall drawn underneath */
-.hall-pin { position: sticky; top: 0; height: 100lvh; overflow: hidden; z-index: 31; }
+   GL canvas so its captions sit on top of the 3D hall drawn underneath. It
+   lets the pointer through to the palette's tray, which ends up under it */
+.hall-pin { position: sticky; top: 0; height: 100lvh; overflow: hidden; z-index: 31; pointer-events: none; }
 .hall-ui { position: absolute; inset: 0; z-index: 31; pointer-events: none; display: grid; grid-template-rows: 1fr auto; padding: calc(var(--hd) + 36px) var(--gut) 28px; }
-.hall-ui h2 { margin: 0; font: 300 clamp(44px, 8vw, 130px)/.9 var(--disp); letter-spacing: -.03em; font-style: italic; text-shadow: 0 2px 40px rgba(0,0,0,.4); }
+/* the title hangs centred over the skylight: at the left, the first picture
+   light along the wall ran straight through it */
+.hall-ui > :first-child { text-align: center; }
+.hall-ui h2 { margin: 0; font: 300 clamp(44px, 8vw, 130px)/.9 var(--disp); letter-spacing: -.03em; font-style: italic; text-shadow: 0 1px 30px rgba(255,251,244,.7); }
 .hall-cap { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
 .hall-cap p { margin: 0; max-width: 40ch; font-size: 13px; opacity: .9; }
-.hall-cap .num { font: 400 13px/1 var(--ui); }
-.hall-bar { position: absolute; left: var(--gut); right: var(--gut); bottom: 18px; height: 1px; background: rgba(255,255,255,.2); }
-.hall-bar i { position: absolute; inset: 0; background: #fff; transform-origin: left; transform: scaleX(0); }
+.hall-bar { position: absolute; left: var(--gut); right: var(--gut); bottom: 18px; height: 1px; background: rgba(29,25,20,.16); }
+.hall-bar i { position: absolute; inset: 0; background: #1d1914; transform-origin: left; transform: scaleX(0); }
 .hall.is-off { display: none; }
+/* until the end wall gives, the palette under it stays out of sight: the
+   cracks open onto the room's own white, not onto specks of the palette */
+.hall:not(.is-off):not(.is-open) + .range { visibility: hidden; }
+/* through the wall you arrive in the palette, and it holds still a quarter
+   screen before the page moves on (the pinned rail pauses the same, in JS) */
+.hall:not(.is-off) + .range:not(.is-pinned) { padding-top: 0; }
+.hall:not(.is-off) + .range:not(.is-pinned) .range-pin { position: sticky; top: 0; padding-top: 16vh; }
+.hall:not(.is-off) + .range:not(.is-pinned)::after { content: ""; display: block; height: 25lvh; }
+/* phones: the caption rides above the finder button instead of under it for the whole walk */
+@media (max-width: 759px) { .hall-ui { padding-bottom: 76px; } }
 
 /* the range (/iw-horizontal-infinite + /iw-particles-physics) */
 .range { padding: 16vh 0 12vh; }
@@ -286,8 +324,11 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .range-track { display: flex; gap: var(--gut); padding: 0 var(--gut); }
 @media (min-width: 900px) and (hover: hover) {
   .range.is-pinned { height: var(--range-h, 300lvh); padding: 0; }
-  .range.is-pinned .range-pin { position: sticky; top: 0; height: 100lvh; display: grid; grid-template-rows: auto 1fr; padding-top: calc(var(--hd) + 40px); overflow: hidden; }
-  .range.is-pinned .range-track { will-change: transform; align-items: stretch; }
+  /* one viewport-wide column: sized to the rail, it pushed the heading's
+     paragraph past the right edge of the screen */
+  .range.is-pinned .range-pin { position: sticky; top: 0; height: 100lvh; display: grid; grid-template-rows: auto 1fr; grid-template-columns: minmax(0, 1fr); padding-top: calc(var(--hd) + 40px); overflow: hidden; }
+  /* the rail keeps its own full width (and end padding) inside that column */
+  .range.is-pinned .range-track { width: max-content; will-change: transform; align-items: stretch; }
 }
 @media (max-width: 899px), (hover: none) {
   .range-track { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 8px; }
@@ -299,9 +340,8 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .tray-t { position: absolute; left: 18px; top: 16px; right: 18px; z-index: 1; pointer-events: none; }
 .tray-t h3 { margin: 6px 0 0; font: 300 30px/1 var(--disp); font-style: italic; }
 .tray-t p { margin: 8px 0 0; color: var(--mut); max-width: 32ch; font-size: 13px; }
-.tray-hint { position: absolute; left: 18px; bottom: 14px; color: var(--mut); pointer-events: none; }
 .gar { position: relative; flex: 0 0 min(30vw, 400px); display: grid; grid-template-rows: auto 1fr; gap: 14px; text-decoration: none; color: inherit; }
-.gar-m { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--soft); transform-style: preserve-3d; }
+.gar-m { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--soft); }
 .gar-m img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 .gar-b { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; align-content: start; }
 .gar-b h3 { margin: 0; font: 300 28px/1 var(--disp); font-style: italic; }
@@ -313,34 +353,18 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .gar.is-hit .gar-m { outline: 2px solid var(--acc); outline-offset: 5px; }
 @media (max-width: 899px) { .tray { flex-basis: 84vw; } .gar { flex-basis: 72vw; } }
 
-/* the reel (/iw-media-scrub) */
-.reel { height: 360lvh; }
-.reel-pin { position: sticky; top: 0; height: 100lvh; overflow: hidden; display: grid; place-items: center; background: #050505; }
-.reel-win { position: absolute; inset: 0; clip-path: inset(22% 30% 22% 30%); will-change: clip-path; background: #000; }
-.reel-win video, .reel-win img { width: 100%; height: 100%; object-fit: cover; }
-.reel-ui { position: absolute; inset: 0; z-index: 31; pointer-events: none; display: grid; grid-template-rows: auto 1fr auto; padding: calc(var(--hd) + 30px) var(--gut) 26px; color: #fff; mix-blend-mode: difference; }
-.reel-ui h2 { margin: 0; font: 300 clamp(40px, 7vw, 110px)/.9 var(--disp); font-style: italic; letter-spacing: -.03em; }
-.reel-tc { display: flex; justify-content: space-between; align-items: end; font: 400 13px/1 var(--ui); font-variant-numeric: tabular-nums; }
-.reel-cta { position: absolute; left: 50%; bottom: 72px; transform: translateX(-50%); z-index: 32; }
-
-/* drag to confirm (/iw-drag-gestures) */
-.slide { --x: 0px; position: relative; width: min(360px, 84vw); height: 56px; border-radius: 28px; background: color-mix(in srgb, #fff 16%, transparent);
-  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.35); color: #fff; touch-action: none; user-select: none; overflow: hidden; }
-.slide-fill { position: absolute; inset: 0; background: rgba(255,255,255,.18); transform-origin: left; transform: scaleX(0); }
-.slide-t { position: absolute; inset: 0; display: grid; place-items: center; padding-left: 40px; font: 500 11px/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; }
-.slide-k { position: absolute; left: 4px; top: 4px; width: 46px; height: 46px; border-radius: 50%; background: #fff; color: #111; display: grid; place-items: center;
-  transform: translateX(var(--x)); cursor: grab; box-shadow: 0 6px 20px -6px rgba(0,0,0,.5); }
-.slide-k svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 1.6; fill: none; }
-.slide.done .slide-k { background: var(--acc); color: #fff; }
-
 /* contents: sticky stacking cards (/iw-parallax-stack) */
 .stack { padding: 14vh 0 10vh; }
 .stack-list { list-style: none; margin: 0; padding: 0 var(--gut); }
 .card { position: sticky; top: calc(var(--hd) + 34px + var(--i) * 14px); margin-bottom: 18vh; transform-origin: 50% 0; }
-.card-in { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--gut); min-height: min(64lvh, 560px); padding: clamp(18px, 2.4vw, 36px);
-  background: var(--card-bg); color: var(--card-ink); border-radius: 3px; box-shadow: 0 -18px 40px -30px rgba(0,0,0,.5); }
-.card-n { font: 200 clamp(56px, 8vw, 128px)/.8 var(--disp); letter-spacing: -.04em; }
-.card h3 { margin: 16px 0 0; font: 300 clamp(30px, 4vw, 64px)/.95 var(--disp); font-style: italic; letter-spacing: -.02em; }
+.card-in { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--gut); min-height: min(64lvh, 560px); padding: clamp(18px, 2.4vw, 36px);
+  background: var(--card-bg); color: var(--card-ink); border-radius: 3px; box-shadow: 0 -18px 40px -30px rgba(0,0,0,.5); --wash: 0; }
+/* a settled card fades under a wash of the page colour instead of going
+   see-through: see-through, the cards under it showed through, titles over titles */
+.card-in::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--bg); opacity: var(--wash); pointer-events: none; }
+/* the chapter titles again, a step smaller than on the wall */
+.card h3 { margin: 0; font: 800 clamp(40px, 6vw, 104px)/.9 var(--disp); letter-spacing: -.035em; font-variation-settings: "SOFT" 50, "opsz" 144;
+  text-wrap: balance; overflow-wrap: break-word; }
 .card p { margin: 16px 0 0; max-width: 40ch; opacity: .75; }
 .card-go { margin-top: 22px; display: inline-flex; gap: 10px; align-items: center; font: 400 16px/1 var(--disp); border-bottom: 1px solid currentColor; padding-bottom: 4px; text-decoration: none; }
 .card-th { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; align-content: end; }
@@ -358,7 +382,7 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .ft-cols h4 { margin: 0 0 10px; }
 .ft-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 .ft-cols a, .ft-cols button { font: 400 17px/1.2 var(--disp); text-decoration: none; text-align: left; }
-.ft-cols a:hover, .ft-cols button:hover { font-style: italic; }
+@media (hover: hover) and (pointer: fine) { .ft-cols a:hover, .ft-cols button:hover { font-style: italic; } }
 .ft-base { display: flex; justify-content: space-between; gap: 20px; padding: 14px var(--gut) 18px; border-top: 1px solid color-mix(in srgb, var(--hero-ink) 25%, transparent); }
 @media (max-width: 759px) { .ft-cols { grid-template-columns: 1fr 1fr; row-gap: 22px; } .ft-base { flex-direction: column; gap: 6px; } }
 
@@ -375,12 +399,12 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .mn-iss .wm { font: var(--w, 400) 34px/1 var(--f); font-variation-settings: var(--v, normal); text-decoration: none; display: inline-block; }
 .mn-iss ul { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .mn-iss ul a { font: 400 15px/1.2 var(--disp); text-decoration: none; border-bottom: 1px solid transparent; }
-.mn-iss ul a:hover { border-color: currentColor; }
+@media (hover: hover) and (pointer: fine) { .mn-iss ul a:hover { border-color: currentColor; } }
 .mn-iss[aria-current="true"] .wm::after { content: " ●"; font: 400 10px/1 var(--ui); vertical-align: super; color: var(--acc); }
 .mn-ch { grid-column: 7 / span 6; }
 .mn-ch ol { list-style: none; margin: 0; padding: 0; counter-reset: c; }
-.mn-ch li a { display: grid; grid-template-columns: 44px 1fr auto; align-items: baseline; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); text-decoration: none; }
-.mn-ch li a b { font: 300 clamp(24px, 2.6vw, 38px)/1 var(--disp); font-style: italic; }
+.mn-ch li a { display: block; padding: 10px 0; border-top: 1px solid var(--line); text-decoration: none; }
+.mn-ch li a b { font: 700 clamp(28px, 3vw, 44px)/1 var(--disp); letter-spacing: -.02em; }
 .mn-ch li a[aria-current="true"] b::before { content: "→ "; font-style: normal; }
 .mn-search { grid-column: 1 / span 5; }
 .mn-set { grid-column: 7 / span 6; }
@@ -394,29 +418,34 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .fld input:focus + label, .fld input:not(:placeholder-shown) + label { transform: translateY(-22px) scale(.72); color: var(--ink); }
 .fld .cnt { position: absolute; right: 0; top: 30px; color: var(--mut); }
 .res { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 2px; max-height: 44vh; overflow: auto; }
-.res li button { width: 100%; display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; text-align: left; padding: 6px 4px; }
-.res li button:hover, .res li button:focus-visible { background: var(--soft); }
+.res li button { width: 100%; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: center; text-align: left; padding: 6px 4px; }
+.res li button:focus-visible { background: var(--soft); }
+@media (hover: hover) and (pointer: fine) { .res li button:hover { background: var(--soft); } }
 .res img { width: 34px; aspect-ratio: 4/7; object-fit: cover; }
 .res mark { background: color-mix(in srgb, var(--acc) 30%, transparent); color: inherit; }
 .res small { color: var(--mut); }
 .seg { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); }
 .seg > div { display: inline-flex; flex-wrap: wrap; gap: 4px; }
-.seg button { padding: 7px 12px; border-radius: 16px; border: 1px solid var(--line); font-size: 12.5px; transition: background-color .25s, color .25s, border-color .25s; }
+.seg button { padding: 7px 12px; border-radius: 16px; border: 1px solid var(--line); font-size: 12.5px; transition: background-color .25s, color .25s, border-color .25s, scale .16s var(--ease); }
 .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .mn-live { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 20px; color: var(--mut); border-top: 1px solid var(--line); padding-top: 16px; }
 
 /* ─── finder (/iw-agentic-interface) ─────────────────────────────────── */
 .fd-fab { position: fixed; right: var(--gut); bottom: 18px; z-index: 46; height: 40px; padding: 0 16px 0 12px; border-radius: 20px; display: inline-flex; gap: 8px; align-items: center;
   background: var(--ink); color: var(--bg); font: 400 15px/1 var(--disp); box-shadow: 0 14px 30px -14px rgba(0,0,0,.5);
-  transform: translateY(80px); transition: transform .7s var(--ease), background-color .9s, color .9s; }
-.fd-fab.is-in { transform: none; }
+  translate: 0 80px; transition: translate .5s var(--ease), scale .16s var(--ease), background-color .9s, color .9s; }
+/* in and out on `translate`, not `transform`: the magnetic pull writes the
+   transform inline, and over a hidden button it pulled it back into view */
+.fd-fab.is-in { translate: none; }
 .fd-fab i { width: 8px; height: 8px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 0 0 var(--acc); animation: pulse 2.4s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--acc) 60%, transparent); } 70%, 100% { box-shadow: 0 0 0 10px transparent; } }
-.fd { position: fixed; right: var(--gut); bottom: 68px; z-index: 46; width: min(420px, calc(100vw - 2 * var(--gut))); max-height: min(640px, calc(100svh - 110px));
+/* 100%, not 100vw: on a fixed box 100vw counts a desktop scrollbar, and the
+   panel's left edge went off screen at phone widths */
+.fd { position: fixed; right: var(--gut); bottom: 68px; z-index: 46; width: min(420px, calc(100% - 2 * var(--gut))); max-height: min(640px, calc(100svh - 110px));
   display: grid; grid-template-rows: auto 1fr auto; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 4px;
   box-shadow: 0 40px 80px -40px rgba(0,0,0,.55); visibility: hidden; opacity: 0; transform: translateY(14px) scale(.98); transform-origin: 100% 100%;
-  transition: opacity .35s, transform .5s var(--ease), visibility 0s .5s; }
-.fd.open { visibility: visible; opacity: 1; transform: none; transition: opacity .35s, transform .5s var(--ease); }
+  transition: opacity .2s, transform .25s var(--ease), visibility 0s .25s; }
+.fd.open { visibility: visible; opacity: 1; transform: none; transition: opacity .3s, transform .4s var(--ease); }
 .fd-h { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid var(--line); }
 .fd-h b { font: 400 17px/1 var(--disp); font-style: italic; }
 .fd-log { overflow-y: auto; padding: 14px; display: grid; align-content: start; gap: 12px; overscroll-behavior: contain; }
@@ -428,12 +457,12 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .msg .cards img { aspect-ratio: 4/7; width: 100%; object-fit: cover; margin-bottom: 4px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .chips button { padding: 6px 11px; border: 1px solid var(--line); border-radius: 14px; font-size: 12.5px; }
-.chips button:hover { border-color: var(--ink); }
+@media (hover: hover) and (pointer: fine) { .chips button:hover { border-color: var(--ink); } }
 .fd-f { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 10px 14px 12px; border-top: 1px solid var(--line); align-items: end; }
 .fd-f .fld input { font-size: 18px; padding: 18px 0 6px; }
 .fd-f .fld label { top: 20px; font-size: 14px; }
 .fd-f .fld input:focus + label, .fd-f .fld input:not(:placeholder-shown) + label { transform: translateY(-16px) scale(.8); }
-.send { height: 36px; min-width: 64px; padding: 0 14px; border-radius: 18px; background: var(--ink); color: var(--bg); display: inline-grid; place-items: center; font-size: 12.5px; transition: background-color .3s, min-width .4s var(--ease); }
+.send { height: 36px; min-width: 64px; padding: 0 14px; border-radius: 18px; background: var(--ink); color: var(--bg); display: inline-grid; place-items: center; font-size: 12.5px; transition: background-color .3s, min-width .4s var(--ease), scale .16s var(--ease); }
 .send[data-state="busy"] { background: var(--mut); }
 .send[data-state="done"] { background: var(--acc); }
 .fd-note { padding: 0 14px 10px; color: var(--mut); font-size: 11px; }
@@ -442,7 +471,7 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 @keyframes dot { 0%, 100% { opacity: .2; } 50% { opacity: 1; } }
 
 /* ─── game (/iw-playable-fiction) ────────────────────────────────────── */
-.gm { position: fixed; inset: 0; z-index: 60; background: #0b0a0a; color: #f3ede3; visibility: hidden; opacity: 0; transition: opacity .4s, visibility 0s .4s; touch-action: none; }
+.gm { position: fixed; inset: 0; z-index: 60; background: #0b0a0a; color: #f3ede3; visibility: hidden; opacity: 0; transition: opacity .25s, visibility 0s .25s; touch-action: none; }
 .gm.open { visibility: visible; opacity: 1; transition: opacity .4s; }
 .gm canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .gm-ui { position: absolute; inset: 0; pointer-events: none; display: grid; grid-template-rows: auto 1fr auto; padding: 18px var(--gut); }
@@ -450,7 +479,12 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .gm-top button { pointer-events: auto; border: 1px solid rgba(255,255,255,.35); border-radius: 16px; padding: 7px 13px; font-size: 12px; }
 .gm-t { font: 300 clamp(30px, 4vw, 54px)/1 var(--disp); font-style: italic; }
 .gm-bot { display: flex; justify-content: space-between; align-items: end; gap: 20px; font-size: 13px; }
-.gm-score { font: 300 clamp(40px, 6vw, 88px)/1 var(--disp); font-variant-numeric: tabular-nums; }
+/* scores as pips, never digits: a pip a skip, lit for what counts */
+.gm-pips { display: inline-flex; flex-wrap: wrap; gap: 5px; vertical-align: middle; }
+.gm-pips i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid currentColor; }
+.gm-pips i.on { background: currentColor; }
+.gm-score { display: flex; gap: 10px; min-height: 18px; margin-top: 14px; max-width: 60vw; }
+.gm-score i { width: 18px; height: 18px; }
 
 /* ─── landing ────────────────────────────────────────────────────────── */
 .ld { min-height: 100svh; background: #070707; color: #efe9df; }
@@ -465,17 +499,21 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .ld-pre .pre-meta { margin-top: 42px; justify-content: center; }
 .ld-note { margin-top: 14px; font: 400 12px/1.4 var(--disp); font-style: italic; opacity: .7; }
 .ld-main { position: relative; min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto; padding: 22px var(--gut); }
-.ld-wm { font: 200 22px/1 var(--disp); letter-spacing: .08em; padding: 6px 0; font-variation-settings: "opsz" 144; }
+/* only as wide as the word: stretched across its column, the empty space beside
+   it was a link too, and Sound, pulled toward it, landed on it */
+.ld-wm { justify-self: start; font: 200 22px/1 var(--disp); letter-spacing: .08em; padding: 6px 0; font-variation-settings: "opsz" 144; }
 .ld-top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .ld-top .r { justify-self: end; display: flex; gap: 18px; align-items: center; }
 .ld-q { text-align: center; font: 400 13.5px/1.35 var(--ui); max-width: 22ch; margin: 0 auto; }
-.ld-pick { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(22px, 4vw, 64px); padding: 5vh 0; position: relative; z-index: 2; }
+/* the rows sit in the middle of the room, and every cover in a row shares one
+   top edge: centred one by one, a caption a line longer than its neighbour's
+   dropped that cover below the other */
+.ld-pick { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; align-items: flex-start; gap: clamp(22px, 4vw, 64px); padding: 5vh 0; position: relative; z-index: 2; }
 .iss { position: relative; display: grid; justify-items: center; gap: 14px; width: clamp(138px, 16vw, 240px); }
 .iss-a { display: grid; justify-items: center; gap: 16px; width: 100%; text-decoration: none; color: inherit; }
 .iss-l { display: flex; gap: 14px; opacity: .6; transition: opacity .3s; }
 .iss-l a { text-decoration: none; border-bottom: 1px solid transparent; }
-.iss-l a:hover { border-color: currentColor; }
-.iss:hover .iss-l { opacity: 1; }
+@media (hover: hover) and (pointer: fine) { .iss-l a:hover { border-color: currentColor; } .iss:hover .iss-l { opacity: 1; } }
 .iss-m { position: relative; width: 100%; aspect-ratio: 4/7; overflow: hidden; background: #151413; box-shadow: 0 40px 80px -40px rgba(0,0,0,.9); }
 .iss-m img { width: 100%; height: 100%; object-fit: cover; }
 .iss-m img.is-gl { opacity: 0; }
@@ -483,7 +521,7 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .iss-t b { font-weight: var(--w, 400); font-family: var(--f); font-variation-settings: var(--v, normal); font-size: clamp(24px, 2.6vw, 38px); line-height: 1; }
 .iss-t span { font: 300 13px/1.35 var(--disp); font-style: italic; opacity: .7; max-width: 26ch; }
 /* only a hovered cover dims its neighbours; the gaps between covers do not */
-.ld-pick:has(.iss:hover) .iss:not(:hover) { filter: brightness(.42) saturate(.7); }
+@media (hover: hover) and (pointer: fine) { .ld-pick:has(.iss:hover) .iss:not(:hover) { filter: brightness(.42) saturate(.7); } }
 .iss { transition: filter .5s var(--ease); }
 /* the hovered cover's photograph, laid across the room behind the covers */
 .ld-photo { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
@@ -493,13 +531,17 @@ main.sheet { position: relative; margin-top: 100lvh; margin-bottom: var(--foot-h
 .ld-photo::after { content: ""; position: absolute; inset: 0;
   background: linear-gradient(rgba(7,7,7,.6), transparent 24%, transparent 72%, rgba(7,7,7,.7)), radial-gradient(80% 70% at 50% 45%, transparent, rgba(7,7,7,.55)); }
 html[data-motion="calm"] .ld-photo img { transform: none; transition: opacity .4s; }
-.ld-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(60% 50% at 50% 55%, color-mix(in srgb, var(--tint, #222) 34%, transparent), transparent 75%); transition: background .8s; }
+/* the foundation under everything: the blurred pier (blurred in the file, so
+   no live filter runs) under a dark scrim, so the covers and captions stay crisp */
+.ld-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(rgba(7,7,7,.6), rgba(7,7,7,.6)), url("../../brand/pier-blur.jpg") 50% 50% / cover no-repeat #070707; }
 /* above the covers, so their flip-in is seen (it is click-through and hides when idle) */
 .ld .gl-stage { z-index: 3; }
 /* a cover waiting for, or in, its flip: the canvas draws it, the card stays out of sight */
 .iss.is-flipping .iss-m { visibility: hidden; }
 .ld-more { position: relative; z-index: 2; display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; font: 400 14px/1 var(--disp); opacity: .8; margin: 0 0 22px; }
-.ld-more a { text-decoration: none; border-bottom: 1px solid transparent; } .ld-more a:hover { border-color: currentColor; }
+.ld-more a { text-decoration: none; border-bottom: 1px solid transparent; }
+@media (hover: hover) and (pointer: fine) { .ld-more a:hover { border-color: currentColor; } }
 @media (max-width: 599px) { .ld-pick { gap: 18px; } .iss { width: 42vw; }
   /* the question gets its own row under the wordmark and controls */
   .ld-top { grid-template-columns: 1fr auto; row-gap: 16px; } .ld-q { grid-column: 1 / -1; grid-row: 2; max-width: none; } .ld-top .r { gap: 14px; } .ld-wm { font-size: 18px; } }
@@ -508,8 +550,6 @@ html[data-motion="calm"] .ld-photo img { transform: none; transition: opacity .4
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
 
-/* velocity skew is set on the grid; frames lean with a hard fling */
-.fr-m { transform: skewY(var(--skew, 0deg)); transform-origin: 50% 50%; }
 /* long-press peek (/iw-drag-gestures) */
 .peek { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; background: color-mix(in srgb, var(--bg) 88%, transparent);
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; pointer-events: none; transition: opacity .25s; }
@@ -528,7 +568,7 @@ html[data-motion="calm"] .ld-photo img { transform: none; transition: opacity .4
 .sl-open .hd, .cv-open .hd, .gm-open .hd { transform: translateY(-100%); }
 .sl-open .hud, .cv-open .hud, .sl-open .zoom, .cv-open .zoom, .mn-open .zoom, .gm-open .zoom,
 .mn-open .hud, .gm-open .hud { opacity: 0 !important; pointer-events: none !important; }
-.sl-open .fd-fab, .cv-open .fd-fab, .mn-open .fd-fab, .gm-open .fd-fab { transform: translateY(90px); }
+.sl-open .fd-fab, .cv-open .fd-fab, .mn-open .fd-fab, .gm-open .fd-fab { translate: 0 90px; }
 
 /* pinned range: size by height so the whole rail fits the screen it pins to */
 @media (min-width: 900px) and (hover: hover) {
@@ -541,7 +581,7 @@ html[data-motion="calm"] .ld-photo img { transform: none; transition: opacity .4
   .range.is-pinned .gar-b p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 }
 
-/* the chapter HUD joins the header bar, so big numerals scroll under both */
+/* the chapter HUD joins the header bar, so big titles scroll under both */
 .hud { left: 0; right: 0; padding: 0 var(--gut); }
 .hud::before { content: ""; position: absolute; inset: 0; z-index: -1; background: color-mix(in srgb, var(--bg) 78%, transparent);
   -webkit-backdrop-filter: blur(10px) saturate(1.2); backdrop-filter: blur(10px) saturate(1.2); transition: background-color .9s; }

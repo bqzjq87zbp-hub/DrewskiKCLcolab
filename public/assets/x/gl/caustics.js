@@ -33,11 +33,14 @@ float edge(vec2 p, float t){
   return f2 - f1;
 }
 void main(){
+  // big, soft cells: small sharp ones drew a bright crackle, like cracked glass
+  // or a noise texture over the whole hero
+  const float SC = 4.0;
   vec2 px = vUv * uRes;
   float sc = 1.0 / max(uRes.x, uRes.y);
-  vec2 p = px * sc * 7.0;
+  vec2 p = px * sc * SC;
   // ripple from the pointer
-  vec2 dp = (px - uPtr) * sc * 7.0;
+  vec2 dp = (px - uPtr) * sc * SC;
   float d = length(dp);
   float rip = sin(d * 9.0 - uRipT * 7.0) * exp(-d * 1.2) * uRip * 0.22;
   p += (d > 0.0 ? dp / d : vec2(0.0)) * rip;
@@ -45,9 +48,9 @@ void main(){
   p += 0.18 * vec2(sin(p.y * 1.3 + uTime * 0.4), cos(p.x * 1.1 - uTime * 0.35));
   float e1 = edge(p, uTime * 0.55);
   float e2 = edge(p * 1.7 + 3.1, -uTime * 0.42);
-  float c = pow(clamp(1.0 - e1 * 4.2, 0.0, 1.0), 7.0) * 0.75 + pow(clamp(1.0 - e2 * 4.8, 0.0, 1.0), 8.0) * 0.4;
-  // light falls off toward the edges, like a pool lamp under the middle of the frame
-  c *= 0.55 + 0.45 * smoothstep(1.1, 0.2, length(vUv - vec2(0.5, 0.45)) * 1.6);
+  float c = pow(clamp(1.0 - e1 * 2.6, 0.0, 1.0), 3.5) * 0.7 + pow(clamp(1.0 - e2 * 3.0, 0.0, 1.0), 4.0) * 0.3;
+  // a pool lamp under the middle of the frame: the light dies out before the edges
+  c *= smoothstep(1.1, 0.15, length((vUv - vec2(0.5, 0.45)) * vec2(1.0, 1.2)) * 1.5);
   vec3 col = uTint * vec3(pow(c, 0.95), pow(c, 1.05), pow(c, 1.18)) * uAmt;
   gl_FragColor = vec4(col, 0.0);
 }`;

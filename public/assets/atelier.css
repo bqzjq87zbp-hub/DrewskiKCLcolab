@@ -13,10 +13,6 @@ html,body{margin:0;height:100%;background:#070609;color:var(--ink);
   cursor:grab}
 #gl:active{cursor:grabbing}
 
-/* film grain over the render so WebGL and photography share a surface */
-#grain{position:fixed;inset:0;pointer-events:none;z-index:6;opacity:.09;
-  mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
 #vig{position:fixed;inset:0;pointer-events:none;z-index:5;
   background:radial-gradient(ellipse at 50% 46%,transparent 42%,rgba(0,0,0,.72) 100%)}
 
@@ -29,38 +25,51 @@ body.ready #hud{opacity:1}
 .kick{font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--acc)}
 .ttl{font-family:var(--disp);font-size:clamp(18px,2.4vw,27px);margin:.34em 0 0;
   font-weight:400;letter-spacing:-.01em}
-.ind{font-size:9.5px;letter-spacing:.26em;color:var(--dim)}
-.hint{position:absolute;left:0;right:0;bottom:30px;text-align:center;font-size:9px;
+/* how far through the volume: a hairline that fills, not a page count */
+.ind{position:relative;width:96px;height:1px;margin-top:6px;overflow:hidden;
+  background:color-mix(in srgb,var(--dim) 45%,transparent)}
+.ind:after{content:"";position:absolute;inset:0;background:var(--acc);transform-origin:left;
+  transform:scaleX(var(--p,0));transition:transform .6s var(--ease)}
+/* between the two corner pills, the way back and the lamp */
+.hint{position:absolute;left:240px;right:240px;bottom:36px;text-align:center;font-size:9px;
   letter-spacing:.24em;text-transform:uppercase;color:var(--dim);opacity:.7}
+.tc{position:absolute;top:26px;left:50%;transform:translateX(-50%)}
 
 .pill{pointer-events:auto;display:inline-block;font-family:var(--ui);font-size:9px;
   letter-spacing:.2em;text-transform:uppercase;color:var(--acc);text-decoration:none;
   border:1px solid color-mix(in srgb,var(--acc) 34%,transparent);
   padding:9px 16px;border-radius:999px;background:rgba(0,0,0,.42);
-  backdrop-filter:blur(8px);cursor:pointer;transition:.24s var(--ease)}
-.pill:hover{background:var(--acc);color:#070609;transform:translateY(-2px)}
-.pill:active{transform:translateY(1px) scale(.985)}
+  backdrop-filter:blur(8px);cursor:pointer;
+  transition:background-color .24s var(--ease),color .24s var(--ease),transform .24s var(--ease),scale .16s var(--ease)}
+/* hover only where a pointer really hovers; every control answers a press,
+   on `scale`, which composes with the pills' positioning transforms */
+@media (hover:hover) and (pointer:fine){.pill:hover{background:var(--acc);color:#070609;transform:translateY(-2px)}}
+.pill:active,.sw:active,.env:active{scale:.97}
 
-#toWardrobe{position:absolute;left:50%;bottom:74px;transform:translateX(-50%) translateY(10px);
-  opacity:0;pointer-events:none;transition:.6s var(--ease)}
-#toWardrobe.show{opacity:1;transform:translateX(-50%);pointer-events:auto}
+/* the way back is always at hand, bottom left; on the last spread it lights up */
+#toExhibit{position:absolute;left:30px;bottom:26px}
+#toExhibit.show{background:var(--acc);color:#070609}
+#lampBtn{position:absolute;right:30px;bottom:26px}
+body.desk-open #lampBtn{background:var(--acc);color:#070609}
 
-/* lamp desk ---------------------------------------------------------- */
-#desk{position:fixed;right:26px;bottom:26px;z-index:12;width:236px;
+/* lamp desk: folded away until the Lamp pill opens it, just above the pill.
+   Open all the time, it sat on the corner of the open book */
+#desk{position:fixed;right:26px;bottom:70px;z-index:12;width:236px;
   border:1px solid rgba(239,228,210,.13);border-radius:14px;
   background:linear-gradient(170deg,rgba(28,23,18,.86),rgba(10,8,7,.9));
   backdrop-filter:blur(16px) saturate(150%);
   box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 24px 60px -20px rgba(0,0,0,.9);
-  padding:16px 16px 14px;opacity:0;transform:translateY(12px);
-  transition:.7s var(--ease) .5s}
-body.ready #desk{opacity:1;transform:none}
+  padding:16px 16px 14px;opacity:0;transform:translateY(8px);visibility:hidden;
+  transition:opacity .18s ease-in,transform .2s ease-in,visibility 0s .2s}
+body.desk-open #desk{opacity:1;transform:none;visibility:visible;
+  transition:opacity .22s var(--ease),transform .28s var(--ease)}
 #desk h3{font-family:var(--ui);font-size:9px;letter-spacing:.3em;text-transform:uppercase;
   color:var(--acc);margin:0 0 12px;display:flex;align-items:center;gap:9px}
 #desk h3:after{content:"";flex:1;height:1px;background:rgba(239,228,210,.14)}
 .swatches{display:flex;flex-wrap:wrap;gap:8px}
 .sw{width:26px;height:26px;border-radius:50%;border:1px solid rgba(239,228,210,.2);
-  cursor:pointer;transition:.22s var(--ease);position:relative}
-.sw:hover{transform:translateY(-2px) scale(1.06)}
+  cursor:pointer;transition:transform .22s var(--ease),scale .16s var(--ease);position:relative}
+@media (hover:hover) and (pointer:fine){.sw:hover{transform:translateY(-2px) scale(1.06)}}
 .sw.on{box-shadow:0 0 0 2px #070609,0 0 0 3px var(--beam)}
 .row{display:flex;align-items:center;gap:10px;margin-top:14px}
 .row label{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);
@@ -75,10 +84,10 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border:0;border-radiu
 .envs{display:flex;gap:6px;margin-top:12px}
 .env{flex:1;font-family:var(--ui);font-size:8px;letter-spacing:.14em;text-transform:uppercase;
   padding:7px 4px;border-radius:7px;text-align:center;cursor:pointer;color:var(--dim);
-  border:1px solid rgba(239,228,210,.13);background:rgba(255,255,255,.03);transition:.22s}
-.env:hover{color:var(--ink)}
+  border:1px solid rgba(239,228,210,.13);background:rgba(255,255,255,.03);
+  transition:color .22s,background-color .22s,border-color .22s,scale .16s var(--ease)}
+@media (hover:hover) and (pointer:fine){.env:hover{color:var(--ink)}}
 .env.on{color:#070609;background:var(--acc);border-color:var(--acc)}
-#deskToggle{position:fixed;right:26px;bottom:26px;z-index:13}
 
 /* boot --------------------------------------------------------------- */
 #boot{position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;
@@ -93,10 +102,14 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border:0;border-radiu
 #boot.err{color:#ff7a6b;letter-spacing:.04em;text-transform:none;font-size:13px;
   padding:30px;text-align:center;line-height:1.6}
 
+/* phones: the hint goes under the title, The Book takes the free top right,
+   and the desk opens across the bottom, above the two corner pills */
 @media (max-width:760px){
-  #desk{left:16px;right:16px;width:auto;bottom:16px}
+  #desk{left:16px;right:16px;width:auto;bottom:60px}
   .tr{display:none}
-  .hint{bottom:150px}
-  #toWardrobe{bottom:186px}
+  .hint{left:30px;right:30px;top:84px;bottom:auto}
+  .tc{left:auto;right:30px;transform:none}
+  #toExhibit{left:16px;bottom:16px}
+  #lampBtn{right:16px;bottom:16px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}

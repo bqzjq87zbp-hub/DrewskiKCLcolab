@@ -1,12 +1,14 @@
 /* Runtime flipbook renderer.
    Reads issue.json from the current directory and builds the book from it, so
-   adding a plate is a JSON edit plus an image drop with no rebuild step. */
+   adding a plate is a JSON edit plus an image drop with no rebuild step.
+   The book prints no numbers: no folios, no chapter numerals, and a hairline
+   under it fills as you read instead of a page count. */
 (function () {
   var stage = document.getElementById("stage");
   var indEl = document.getElementById("ind");
   var hint = document.getElementById("hint");
   var loading = document.getElementById("loading");
-  var pf = null, SRC = "", TOTAL = 0, isPortrait = false;
+  var pf = null, SRC = "", TOTAL = 0;
 
   // cleanUrls serves this at /<slug>/book with NO trailing slash, so bare
   // relative URLs resolve one level too high. Normalise to a trailing slash,
@@ -33,9 +35,8 @@
     out.push({cls: "pg cover", hard: true,
               html: '<div class="bleed"><img src="' + esc(RES(d.cover)) + '" alt=""></div>'});
 
-    var toc = d.stories.map(function (s, i) {
-      return '<li><span class="tn">' + ("0" + (i + 1)).slice(-2) +
-             '</span><span class="tt">' + esc(s.title) + "</span></li>";
+    var toc = d.stories.map(function (s) {
+      return '<li><span class="tt">' + esc(s.title) + "</span></li>";
     }).join("");
 
     out.push({cls: "pg paper", html:
@@ -46,10 +47,9 @@
       '<div class="toc-h">In this exhibition</div><ol class="toc">' + toc + "</ol>" +
       '<div class="mast-foot">' + esc(d.footer) + "</div></div>"});
 
-    d.stories.forEach(function (s, i) {
+    d.stories.forEach(function (s) {
       out.push({cls: "pg section", html:
-        '<div class="sec"><div class="sec-n">' + ("0" + (i + 1)).slice(-2) + "</div>" +
-        '<h2 class="sec-t">' + esc(s.title) + "</h2>" +
+        '<div class="sec"><h2 class="sec-t">' + esc(s.title) + "</h2>" +
         '<div class="sec-rule"></div><p class="sec-d">' + esc(s.deck) + "</p></div>"});
       (s.plates || []).forEach(function (p) {
         var cap = p.caption
@@ -115,7 +115,6 @@
       return;
     }
     settleTries = 0;
-    isPortrait = z.portrait;
     var pgs = book.querySelectorAll(".pg");
     for (var i = 0; i < pgs.length; i++) {
       pgs[i].style.width = z.pw + "px";
@@ -128,64 +127,17 @@
       flippingTime: 850, swipeDistance: 18
     });
     pf.loadFromHTML(pgs);
-    function upd() { indEl.textContent = (pf.getCurrentPageIndex() + 1) + " / " + TOTAL; }
-    pf.on("flip", function () { upd(); if (hint) hint.style.opacity = 0; armFold(); });
+    function upd() {
+      var n = pf.getCurrentPageIndex() + 1;
+      indEl.style.setProperty("--p", (n / TOTAL).toFixed(4));
+      indEl.setAttribute("aria-label", "Page " + n + " of " + TOTAL);
+    }
+    pf.on("flip", function () { upd(); if (hint) hint.style.opacity = 0; });
     pf.on("changeState", fit);
-    upd(); fit(); armFold();
+    upd(); fit();
     setTimeout(fit, 120); setTimeout(fit, 400);
     loading.style.display = "none";
     window.__pf = pf;
-  }
-
-  /* ── end-of-book pop-out ───────────────────────────────────────────────
-     On the back cover a prompt appears. Taking it stands flat panels upright
-     like a pop-up spread, blacks out, then hands off to the pier walk, which
-     opens on the same dark water so the two pages read as one move. */
-  // The walk lives at the site root, one level above every exhibition.
-  var walkHref = function () { return BASE.replace(/[^/]+\/$/, "") + "walk/"; };
-  var fold = null, popped = false;
-
-  function buildFold() {
-    if (fold) return fold;
-    fold = document.createElement("div");
-    fold.id = "fold";
-    var easels = "";
-    for (var i = 0; i < 5; i++) {
-      easels += '<div class="easel" style="left:' + (12 + i * 18) + '%"></div>';
-    }
-    fold.innerHTML =
-      '<div id="stand">' +
-        '<div class="flap" style="height:38%;animation-delay:0s">' +
-          '<div class="railline"></div>' + easels + "</div>" +
-        '<div class="flap" style="height:60%;animation-delay:.1s;opacity:.72"></div>' +
-        '<div class="flap" style="height:80%;animation-delay:.2s;opacity:.5">' +
-          '<div class="lbl">The Walk</div></div>' +
-      "</div>" +
-      '<div class="prompt"><button type="button">Walk the pier</button>' +
-      "<small>the last page opens onto the water</small></div>";
-    document.body.appendChild(fold);
-    fold.querySelector("button").addEventListener("click", popOut);
-    return fold;
-  }
-
-  function armFold() {
-    if (!pf || popped) return;
-    // In a spread, getCurrentPageIndex() is the LEFT page, so the back cover is
-    // on screen one index early. In portrait it is the current page itself.
-    var edge = TOTAL - (isPortrait ? 1 : 2);
-    buildFold().classList.toggle("armed", pf.getCurrentPageIndex() >= edge);
-  }
-
-  function popOut() {
-    if (popped) return;
-    popped = true;
-    fold.querySelector(".prompt").style.display = "none";
-    fold.classList.add("popping");
-    var black = document.createElement("div");
-    black.id = "blackout";
-    document.body.appendChild(black);
-    setTimeout(function () { black.classList.add("on"); }, 900);
-    setTimeout(function () { location.href = walkHref(); }, 1750);
   }
 
   document.getElementById("prev").onclick = function () { window.__pf && window.__pf.flipPrev(); };
@@ -211,10 +163,9 @@
       theme(d.theme);
       var ps = pagesFrom(d);
       TOTAL = ps.length;
-      SRC = ps.map(function (p, n) {
+      SRC = ps.map(function (p) {
         return '<div class="' + p.cls + '"' + (p.hard ? ' data-density="hard"' : "") +
-               '><div class="pi">' + p.html + "</div>" +
-               (p.hard ? "" : '<div class="fol">' + n + "</div>") + "</div>";
+               '><div class="pi">' + p.html + "</div></div>";
       }).join("");
       build();
     })

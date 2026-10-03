@@ -53,16 +53,39 @@ for (const { slug } of catalog.issues) {
     const shell = readFileSync(path(`${slug}/index.html`), "utf8");
     assert.match(shell, /assets\/x\/exhibit\.js/);
     assert.ok(shell.includes(`--hero-base:${ex.hero}`), "the preloader is already in the exhibition's colour");
+    assert.ok(!shell.includes("pre-num"), "the preloader shows a ring, not a percentage");
     assert.ok(!/\u2014/.test(shell + JSON.stringify(issue)), "no em dashes in the copy");
   });
 }
 
-test("print formats are named from real proportions", () => {
-  assert.equal(shape(1067, 1600), "Portrait, 2:3");
-  assert.equal(shape(1600, 1067), "Landscape, 3:2");
-  assert.equal(shape(1000, 1400), "Portrait, 5:7");
+test("the pier photograph is only the blurred foundation: no wall hangs it", () => {
+  assert.ok(existsSync(path("brand/pier-blur.jpg")));
+  for (const { slug } of catalog.issues) {
+    const ids = json(`${slug}/issue.json`).stories.flatMap((s) => s.plates.map((p) => p.id));
+    assert.ok(!ids.includes("nwprt-underpier-branded"), `${slug} hangs the pier photograph`);
+  }
+});
+
+test("print formats are named in words from real proportions", () => {
+  assert.equal(shape(1067, 1600), "Portrait");
+  assert.equal(shape(1600, 1067), "Landscape");
   assert.equal(shape(1400, 1336), "Square");
-  assert.equal(shape(1600, 900), "Landscape, 16:9");
+  assert.equal(shape(1336, 1400), "Square");
+  assert.equal(shape(1600, 900), "Landscape");
+});
+
+test("the finder never prints a number: no counts, no plate numbers", () => {
+  const asks = ["hello", "show me everything", "chapters", "something red", "something blue", "the pier", "beach",
+    "golden hour", "after hours", "red", "plan a session", "Family", "The beach and the pier", "Golden hour"];
+  for (const { slug } of catalog.issues) {
+    const { b, m } = brainFor(slug);
+    for (const q of asks) {
+      const r = b.reply(q);
+      assert.ok(!/\d/.test(r.text), `${slug} "${q}": ${r.text}`);
+      for (const c of r.chips || []) assert.ok(!/\d/.test(c), `${slug} "${q}" chip: ${c}`);
+    }
+    for (const p of m.plates) assert.ok(!/\d/.test(p.shape + p.kicker + p.storyTitle), `${slug}: ${p.kicker}`);
+  }
 });
 
 test("the model keeps shapes and hangs one lead print per chapter", () => {
@@ -122,7 +145,11 @@ test("navigation, settings and destinations", () => {
   assert.deepEqual(b.reply("dark mode").action, { type: "pref", key: "theme", value: "dark" });
   assert.equal(b.reply("let me play").action.type, "play");
   assert.equal(b.reply("open the flipbook").action.to, "book");
-  assert.equal(b.reply("walk the pier").action.to, "walk");
+  // the pier walk and its reel are gone: nothing leads there anymore
+  for (const q of ["walk the pier", "pier walk", "walk", "easels", "the reel", "play the video"]) {
+    const a = b.reply(q).action || {};
+    assert.ok(a.to !== "walk" && a.id !== "reel", q);
+  }
   assert.equal(b.reply("show me everything").action.type, "canvas");
   assert.equal(b.reply("book a session").action.type, "book");
   assert.match(b.reply("quantum chromodynamics").text, /only know what's on these walls/);

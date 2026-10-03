@@ -1,8 +1,10 @@
 /* /iw-pointer-magic: the page answers the pointer without replacing it.
  *
  *   pointer    where the pointer is, read by the GL layers (hall, pool light)
- *   magnetic   [data-magnetic] leans toward the pointer and springs back
- *   tilt       [data-tilt] turns in 3D under the pointer with a moving glare
+ *   magnetic   [data-magnetic] leans toward the pointer and springs back, a
+ *              few pixels at most, so it never lands on its neighbour
+ *
+ * Nothing here turns or skews a photograph: covers and prints stay level.
  *
  * The system pointer is never hidden or replaced. The engine's custom cursor
  * (a trailing dot, a disc that grew over links and a video that floated by
@@ -11,7 +13,7 @@
  * can drag). Fine pointers only; touch gets none of this, and calm motion
  * keeps everything still.
  */
-import { h, clamp, damp, media } from "../util.js";
+import { clamp, damp, media } from "../util.js";
 import * as prefs from "./prefs.js";
 
 const gsap = window.gsap;
@@ -42,6 +44,11 @@ function tick(t, dtms) {
   for (const m of magnets) if (m.write(dt)) busy = true;
 }
 
+// The furthest a magnet moves on each axis, in px. Magnetic neighbours sit at
+// least 12px apart (the phone header), so even two pulled toward each other
+// never touch; a still neighbour, like the wordmark, keeps at least 8px.
+const PULL = 5;
+
 /** Lean toward the pointer within a radius, spring back on leave. */
 export function magnetic(el, strength = 0.32, radius = 1.5) {
   if (!media.fine()) return () => {};
@@ -57,7 +64,7 @@ export function magnetic(el, strength = 0.32, radius = 1.5) {
       const ddx = px - mx, ddy = py - my;
       const reach = Math.max(r.width, r.height) * radius;
       const d = Math.hypot(ddx, ddy);
-      if (d < reach) { const f = 1 - d / reach; tx = ddx * strength * (0.4 + f); ty = ddy * strength * (0.4 + f); }
+      if (d < reach) { const f = 1 - d / reach; tx = clamp(ddx * strength * (0.4 + f), -PULL, PULL); ty = clamp(ddy * strength * (0.4 + f), -PULL, PULL); }
       else { tx = 0; ty = 0; }
       x = damp(x, tx, 9, dt); y = damp(y, ty, 9, dt);
       if (Math.abs(x) < 0.05 && Math.abs(y) < 0.05 && !tx && !ty) { if (el.style.transform) el.style.transform = ""; x = y = 0; return false; }
@@ -69,30 +76,6 @@ export function magnetic(el, strength = 0.32, radius = 1.5) {
   return () => { magnets.delete(m); el.style.transform = ""; };
 }
 
-/** 3D card tilt with a glare that tracks the pointer. */
-export function tilt(el, max = 9) {
-  if (!media.fine()) return () => {};
-  let glare = el.querySelector(".tilt-glare");
-  if (!glare) { glare = h("span", { class: "tilt-glare", "aria-hidden": "true" }); el.appendChild(glare); }
-  const qx = gsap.quickTo(el, "rotationY", { duration: 0.6, ease: "power3" });
-  const qy = gsap.quickTo(el, "rotationX", { duration: 0.6, ease: "power3" });
-  gsap.set(el, { transformPerspective: 900, transformStyle: "preserve-3d" });
-  const move = (e) => {
-    if (!live()) return;
-    const r = el.getBoundingClientRect();
-    const u = clamp((e.clientX - r.left) / r.width), v = clamp((e.clientY - r.top) / r.height);
-    qx((u - 0.5) * 2 * max); qy(-(v - 0.5) * 2 * max);
-    glare.style.setProperty("--gx", (u * 100).toFixed(1) + "%");
-    glare.style.setProperty("--gy", (v * 100).toFixed(1) + "%");
-    glare.style.opacity = "1";
-  };
-  const leave = () => { qx(0); qy(0); glare.style.opacity = "0"; };
-  el.addEventListener("pointermove", move);
-  el.addEventListener("pointerleave", leave);
-  return () => { el.removeEventListener("pointermove", move); el.removeEventListener("pointerleave", leave); };
-}
-
 export function bindAll(scope = document) {
   scope.querySelectorAll("[data-magnetic]").forEach((el) => { if (!el._mag) el._mag = magnetic(el, +el.dataset.magnetic || 0.32); });
-  scope.querySelectorAll("[data-tilt]").forEach((el) => { if (!el._tilt) el._tilt = tilt(el, +el.dataset.tilt || 9); });
 }

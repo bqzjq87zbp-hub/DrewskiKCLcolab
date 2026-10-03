@@ -1,6 +1,6 @@
 /* THE ATELIER: the issue as a real book, in WebGL.
  *
- * Gilded edges that reflect a room, a lamp you can move and recolour, and
+ * Gilded edges that reflect a room, a lamp you can recolour and dim, and
  * grabbing either the left or the right leaf all need real PBR and real
  * lights. CSS 3D cannot reflect anything, which is why this exists.
  *
@@ -238,13 +238,15 @@ function glide(g, from, to, after) {
   setTimeout(finish, TURN_MS + 400);
 }
 
+// Keys and taps land here; a turn already running must finish first, or a
+// held arrow turns the same leaf twice and the spread overshoots the book.
 function commitForward() {
-  if (spread >= leaves.length) return;
+  if (anim || spread >= leaves.length) return;
   const g = leaves[spread];
   glide(g, g.userData.turn, 1, () => { spread++; relayout(false); hud(); });
 }
 function commitBack() {
-  if (spread <= 0) return;
+  if (anim || spread <= 0) return;
   const g = leaves[spread - 1];
   glide(g, g.userData.turn, 0, () => { spread--; relayout(false); hud(); });
 }
@@ -290,14 +292,23 @@ function buildLamp() {
   lamp.add(shade, lampShadeIn, lampBulb, stem, base, lampLight);
   lamp.position.set(-1.62, 1.72, 0.85);
   scene.add(lamp);
-  scene.add(lampLight.target);        // target lives in world space
-  aimLamp();
+  scene.add(lampLight.target);        // target lives in world space, at the book
 }
 
-// Keep the beam pointed at the book no matter where the lamp is dragged.
-function aimLamp() {
-  lampLight.target.position.set(0, 0, 0);
-  lampLight.target.updateMatrixWorld();
+/* The lamp stands just outside the frame, high and to the front left, so its
+   light falls across the pages. A frame wider than the house one takes it a
+   little further out: in view it only ever showed as a sliver of brass at the
+   edge, which no one could take for a lamp. */
+const LAMP_EDGE = [[0.26, -1.56, -0.26], [0.26, -1.56, 0.26], [0.32, 0, 0], [0.02, -0.8, 0]];
+function placeLamp() {
+  camera.updateMatrixWorld();
+  const v = new THREE.Vector3();
+  const seen = () => LAMP_EDGE.some(([x, y, z]) => {
+    v.set(lamp.position.x + x, lamp.position.y + y, lamp.position.z + z).project(camera);
+    return v.x > -1.02 && v.x < 1.02 && v.y > -1.02 && v.y < 1.02 && v.z < 1;
+  });
+  lamp.position.x = -1.62;
+  for (let i = 0; i < 60 && seen(); i++) lamp.position.x -= 0.05;
 }
 
 export function setLampColour(hex) {
@@ -436,6 +447,7 @@ function frameBook() {
   camera.position.set(0, Math.sin(ang) * dist, Math.cos(ang) * dist);
   camera.lookAt(0, 0, 0);
   camera.updateProjectionMatrix();
+  placeLamp();
 }
 
 function resize() {
@@ -458,9 +470,7 @@ function tick() {
 
 /* ─── input ─────────────────────────────────────────────────────────── */
 function wire(canvas) {
-  const ray = new THREE.Raycaster();
-  const ndc = new THREE.Vector2();
-  let mode = null, sx = 0, sy = 0, lamp0 = null, leaf = null, from = 0;
+  let mode = null, sx = 0, leaf = null, from = 0;
   let lastX = 0, lastT = 0, vel = 0;      // px/ms, for flick detection
 
   // How far you must drag for a full turn. Was innerWidth*0.42, which on a
@@ -470,19 +480,11 @@ function wire(canvas) {
   const COMMIT = 0.22;                    // fraction of travel that counts
   const FLICK = 0.32;                     // px/ms that counts as a throw
 
-  const overLamp = (e) => {
-    ndc.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
-    ray.setFromCamera(ndc, camera);
-    return ray.intersectObject(lamp, true).length > 0;
-  };
-
   canvas.addEventListener("pointerdown", (e) => {
     if (anim) return;
     canvas.setPointerCapture(e.pointerId);
-    sx = e.clientX; sy = e.clientY;
+    sx = e.clientX;
     lastX = e.clientX; lastT = performance.now(); vel = 0;
-
-    if (overLamp(e)) { mode = "lamp"; lamp0 = lamp.position.clone(); return; }
 
     // right half grabs the next leaf forward, left half the last one back
     if (e.clientX >= innerWidth / 2 && spread < leaves.length) {
@@ -494,12 +496,6 @@ function wire(canvas) {
 
   canvas.addEventListener("pointermove", (e) => {
     if (!mode) return;
-    if (mode === "lamp") {
-      lamp.position.x = clamp(lamp0.x + ((e.clientX - sx) / innerWidth) * 8, -3.2, 3.2);
-      lamp.position.z = clamp(lamp0.z + ((e.clientY - sy) / innerHeight) * 4, -1.8, 2.6);
-      aimLamp();
-      return;
-    }
     // running velocity so a quick flick can carry the page over even when the
     // drag itself was short
     const nt = performance.now(), dt = nt - lastT;
@@ -514,7 +510,6 @@ function wire(canvas) {
 
   const up = (e) => {
     if (!mode) return;
-    if (mode === "lamp") { mode = null; return; }
     const moved = Math.abs(e.clientX - sx);
     const t = leaf.userData.turn;
 
@@ -539,11 +534,12 @@ function wire(canvas) {
 }
 
 function hud() {
-  const p = Math.min(spread * 2, issue.pages);
+  const p = Math.max(1, Math.min(spread * 2, issue.pages));
   const el = $("aInd");
-  if (el) el.textContent = ("0" + Math.max(1, p)).slice(-2) + " / " + ("0" + issue.pages).slice(-2);
-  const w = $("toWardrobe");
-  if (w) w.classList.toggle("show", spread >= leaves.length);
+  // a hairline that fills as you read, not a page count; the figure is for screen readers
+  if (el) { el.style.setProperty("--p", (p / issue.pages).toFixed(4)); el.setAttribute("aria-label", `Page ${p} of ${issue.pages}`); }
+  const x = $("toExhibit");
+  if (x) x.classList.toggle("show", spread >= leaves.length);
 }
 
 /* ─── boot ──────────────────────────────────────────────────────────── */
@@ -579,8 +575,8 @@ export async function start(opts) {
   $("aMark").textContent = d.mark;
   $("aTitle").textContent = d.issue;
   if (d.theme && d.theme.acc) document.documentElement.style.setProperty("--acc", d.theme.acc);
-  const wl = $("toWardrobe");
-  if (wl) wl.href = R.app + "walk/";
+  const xl = $("toExhibit");
+  if (xl) xl.href = R.issue;
   const bl = $("toBook");
   if (bl) bl.href = R.issue + "book/";
 

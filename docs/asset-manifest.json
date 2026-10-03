@@ -1,6 +1,6 @@
 {
   "status": "LOCAL_EXPORT_PREPARED_NOT_PUSHED",
-  "sourceClass": "Existing approved portfolio web images; supplied AI easel reference; original pier photograph",
+  "sourceClass": "Existing approved portfolio web images; original pier photograph",
   "categories": [
     {
       "id": "branding",
@@ -25,8 +25,8 @@
   ],
   "excludedPurchasedRooms": 3,
   "excludedRoomArtOverlays": 6,
-  "uniqueImageFiles": 92,
-  "imageBytes": 135713230,
+  "uniqueImageFiles": 91,
+  "imageBytes": 133186888,
   "sourcesUnchanged": true,
   "metadataPolicy": "Exported copies retain ICC color profiles; other embedded metadata removed. Original source files untouched.",
   "assets": [
@@ -439,11 +439,6 @@
       "path": "public/media/e897dd444b4def376669c088.jpg",
       "bytes": 246820,
       "sha256": "17d2cae1bc208f2b28e6cd082d8bdeb733688b4c7f2a0bb12cc6de8476addb80"
-    },
-    {
-      "path": "public/media/easel-composition-reference.jpg",
-      "bytes": 2526342,
-      "sha256": "3f787647076513eee83c6d5985c5db625d2515120a08d60f0c916ada9d4b62cc"
     },
     {
       "path": "public/media/f06ec1bfba96659fe6b9da2f.jpg",

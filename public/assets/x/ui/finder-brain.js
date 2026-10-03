@@ -131,13 +131,11 @@ export function makeBrain(d) {
     if (has(t, ["play", "game", "skip", "stone", "bored"])) return { text: "Skip a stone off the pier. Hold, then let go.", action: { type: "play" } };
     if (/\bthe book\b|flipbook|flat edition|turn the pages/.test(t)) return { text: "The flat edition, page by page.", action: { type: "go", to: "book" } };
     if (has(t, ["atelier", "3d", "real book"])) return { text: "The atelier: the exhibition as a real book, under a lamp.", action: { type: "go", to: "atelier" } };
-    if (/walk the pier|pier walk|\bwalk\b|easels/.test(t)) return { text: "Onto the pier. Scroll to walk under it.", action: { type: "go", to: "walk" } };
     for (const o of d.other || []) if (t.includes(o.mark.toLowerCase()) || t.includes(o.slug)) return { text: `Over to ${o.mark}.`, action: { type: "go", to: "issue", slug: o.slug } };
     if (has(t, ["home", "front door", "all exhibitions", "other exhibitions", "back"])) return { text: "Back to the front door.", action: { type: "go", to: "home" } };
-    if (has(t, ["everything", "all photos", "all the photos", "wall", "canvas", "overview"])) return { text: `All ${P.length}, on a wall with no edges. Drag around.`, action: { type: "canvas" } };
+    if (has(t, ["everything", "all photos", "all the photos", "wall", "canvas", "overview"])) return { text: "Every photograph, on a wall with no edges. Drag around.", action: { type: "canvas" } };
     if (has(t, ["hall", "gallery"])) return { text: "Walk the hall. Scroll is your feet.", action: { type: "section", id: "hall" } };
-    if (has(t, ["reel", "video", "film", "movie"])) return { text: "The reel. Scroll to run it.", action: { type: "section", id: "reel" } };
-    if (has(t, ["contents", "chapters", "index", "table of contents"])) return { text: `${S.length} chapters.`, action: { type: "section", id: "contents" }, chips: S.map((s) => s.title) };
+    if (has(t, ["contents", "chapters", "index", "table of contents"])) return { text: "The chapters, wall to wall.", action: { type: "section", id: "contents" }, chips: S.map((s) => s.title) };
     if (has(t, ["palette", "colours", "colors", "swatches"])) return { text: "The palette: every colour measured from these photographs. You can throw the swatches.", action: { type: "section", id: "palette" } };
 
     // a chapter named outright wins over any colour in its title ("The Red Room")
@@ -155,7 +153,7 @@ export function makeBrain(d) {
       if (plates.length) {
         const names = hits.map((c) => c.name.toLowerCase()).join(" and ");
         return {
-          text: `${plates.length} photograph${plates.length > 1 ? "s carry" : " carries"} ${names}, measured from the pixels. They're picked out on the wall.`,
+          text: `${plates.length > 1 ? "These photographs carry" : "This photograph carries"} ${names}, measured from the pixels. ${plates.length > 1 ? "They're" : "It's"} picked out on the wall.`,
           cards: plates.slice(0, 3).map((i) => ({ plate: i })),
           action: { type: "highlight", plates },
           chips: ["Plan a session", "Show me the palette"],
@@ -189,7 +187,7 @@ export function makeBrain(d) {
       const top = scored.slice(0, 3);
       const p = top[0].p;
       return {
-        text: top.length === 1 ? `Plate ${String(p.n).padStart(2, "0")}, ${p.kicker}. ${p.caption}` : `${scored.length} frame${scored.length > 1 ? "s" : ""} match. The closest is ${p.kicker}: ${p.caption}`,
+        text: top.length === 1 ? `${p.kicker}. ${p.caption}` : `The frames that match are picked out on the wall. The closest is ${p.kicker}: ${p.caption}`,
         cards: top.map((x) => ({ plate: x.p.i })),
         action: { type: "highlight", plates: scored.map((x) => x.p.i) },
       };

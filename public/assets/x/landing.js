@@ -1,11 +1,12 @@
 /* The front door, after the Hearst exhibit's.
  *
  *   black lockup    THE / Kiyono / creative lab / EXHIBITIONS, with a real
- *                   loading counter under it
+ *                   loading ring under it
  *   the covers      flip in on an oblique axis and land (gl/plates.js flip)
- *   the choice      "Choose which exhibition you want to explore"; hover tilts
- *                   the cover and lays its photograph across the room behind
- *                   every cover; click turns the page into it
+ *   the choice      "Choose which exhibition you want to explore"; hover lays
+ *                   the cover's photograph across the room behind every cover
+ *                   and dims the others (the cover itself never turns); click
+ *                   turns the page into it
  *
  * Everything comes from catalog.json: a fifth exhibition is a fifth cover.
  */
@@ -52,7 +53,7 @@ async function boot() {
     const base = appUrl(i.slug + "/");
     return `<div class="iss" data-slug="${esc(i.slug)}" style="--f:${esc(i.font)};--w:${i.weight || 400};--v:${esc(i.variation || "normal")}">
       <a class="iss-a" href="${esc(base)}" aria-label="${esc(i.mark)}, ${esc(i.issue)}: enter the exhibition">
-        <div class="iss-m" data-tilt="8"><img src="${esc(appUrl(i.cover))}" alt="${esc(i.mark)} cover, ${esc(i.issue)}" decoding="async"></div>
+        <div class="iss-m"><img src="${esc(appUrl(i.cover))}" alt="${esc(i.mark)} cover, ${esc(i.issue)}" decoding="async"></div>
         <div class="iss-t"><b>${esc(i.mark)}</b><span>${esc(i.issue)}. ${esc(i.blurb || "")}</span></div>
       </a>
       <nav class="iss-l lbl" aria-label="${esc(i.mark)}, other ways in">
@@ -85,8 +86,9 @@ async function boot() {
   if (calm) {
     pre.classList.add("is-gone");
   } else {
-    await new Promise((res) => gsap.to($(".lock", pre), { y: -30, autoAlpha: 0, duration: 0.7, ease: "power3.in", onComplete: res }));
-    await new Promise((res) => gsap.to(pre, { autoAlpha: 0, duration: 0.5, onComplete: res }));
+    // ease-out: an ease-in held the lockup still for the first beat of its exit
+    await new Promise((res) => gsap.to($(".lock", pre), { y: -30, autoAlpha: 0, duration: 0.5, ease: "power3.out", onComplete: res }));
+    await new Promise((res) => gsap.to(pre, { autoAlpha: 0, duration: 0.4, onComplete: res }));
     pre.classList.add("is-gone");
   }
   document.documentElement.removeAttribute("data-arriving");
@@ -103,7 +105,7 @@ async function boot() {
     const box = img.closest(".iss");
     // The card stays hidden while its photograph flips in on the canvas, and
     // shows the moment the flip lands on exactly the same spot.
-    enter(img, { mode: "flip", delay: 0.15 + k * 0.18, duration: 1.6 }).then((ok) => {
+    enter(img, { delay: 0.15 + k * 0.18, duration: 1.6 }).then((ok) => {
       box.classList.remove("is-flipping");
       if (!ok) gsap.from(img.closest(".iss-m"), { autoAlpha: 0, rotateY: -70, duration: 1.2, delay: k * 0.15, ease: "expo.out", transformPerspective: 900 });
     });

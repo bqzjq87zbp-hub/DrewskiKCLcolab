@@ -10,19 +10,18 @@
 <link rel="stylesheet" href="../../assets/atelier.css">
 </head><body>
 <canvas id="gl"></canvas>
-<div id="vig"></div><div id="grain"></div>
+<div id="vig"></div>
 
 <div id="hud">
   <div class="tl"><div class="kick" id="aMark">&nbsp;</div><div class="ttl" id="aTitle">&nbsp;</div></div>
-  <div class="tr"><div class="ind" id="aInd">&nbsp;</div></div>
-  <div class="hint">drag the left or right page to turn it &middot; drag the lamp to move the light</div>
-  <a class="pill" id="toWardrobe" href="/walk/">Walk the pier</a>
-  <div style="position:absolute;top:26px;left:50%;transform:translateX(-50%)">
-    <a class="pill" id="toBook" href="../book/">The Book</a>
-  </div>
+  <div class="tr"><div class="ind" id="aInd" role="img"></div></div>
+  <div class="hint">drag the left or right page to turn it</div>
+  <a class="pill" id="toExhibit" href="../">Back to the exhibition</a>
+  <div class="tc"><a class="pill" id="toBook" href="../book/">The Book</a></div>
+  <button type="button" class="pill" id="lampBtn" aria-expanded="false" aria-controls="desk">Lamp</button>
 </div>
 
-<div id="desk">
+<div id="desk" role="group" aria-label="Lamp">
   <h3>Lamp</h3>
   <div class="swatches" id="sw"></div>
   <div class="row"><label for="pw">Power</label><input id="pw" type="range" min="0" max="60" step="1" value="26"></div>
@@ -55,7 +54,7 @@ const COLOURS = ["#ffd9a0","#fff3e2","#6c8746","#e0533d","#4f7fd6","#4fd6a8","#c
 const sw = document.getElementById("sw");
 COLOURS.forEach(function(c,i){
   const d=document.createElement("div");
-  d.className="sw"+(i===0?" on":""); d.style.background=c; d.title=c;
+  d.className="sw"+(i===0?" on":""); d.style.background=c;
   d.onclick=function(){ setLampColour(c);
     sw.querySelectorAll(".sw").forEach(function(x){x.classList.remove("on")});
     d.classList.add("on"); };
@@ -69,6 +68,13 @@ document.getElementById("envs").onclick = function(e){
   t.classList.add("on");
   setEnvironment(t.dataset.h);
 };
+// the lamp's controls fold away behind one pill, so the book has the whole
+// stage; Escape or reaching for a page folds them away again
+const lampBtn = document.getElementById("lampBtn");
+lampBtn.onclick = function(){ lampBtn.setAttribute("aria-expanded", document.body.classList.toggle("desk-open")); };
+function shut(){ if (document.body.classList.contains("desk-open")) lampBtn.click(); }
+addEventListener("keydown", function(e){ if (e.key === "Escape") shut(); });
+document.getElementById("gl").addEventListener("pointerdown", shut);
 
 start({}).catch(function(err){
   const b=document.getElementById("boot");

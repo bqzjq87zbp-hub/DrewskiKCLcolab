@@ -38,13 +38,11 @@ uniform vec4 uRect; uniform vec2 uO; uniform vec2 uDir;
 uniform float uL; uniform float uR; uniform float uUseTex; uniform float uShow; uniform float uShadow;
 uniform sampler2D uTex; uniform vec3 uFront; uniform vec3 uBack;
 varying vec2 vPx;
-float hash(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233))) * 43758.5453); }
 bool inRect(vec2 p){ return p.x >= 0.0 && p.y >= 0.0 && p.x <= uRect.z && p.y <= uRect.w; }
 vec3 front(vec2 p){ return uUseTex > 0.5 ? texture2D(uTex, p / uRect.zw).rgb : uFront; }
 vec3 back(vec2 p){ vec3 c = uBack; if (uUseTex > 0.5) c = mix(uBack, texture2D(uTex, p / uRect.zw).rgb, uShow); return c; }
 void main(){
   vec2 P = vPx;
-  float g = (hash(floor(P)) - 0.5) * 0.025;
   float t = dot(P - uO, uDir);
   float L = uL, R = uR;
   if (inRect(P) && t >= L) {
@@ -53,12 +51,12 @@ void main(){
     if (u <= L && inRect(Po)) {
       // flipped layer lying back over the sheet, reverse side up
       float edge = smoothstep(0.0, R * 1.2, L - u);
-      gl_FragColor = vec4(back(Po) * (0.9 + 0.08 * edge) + g, 1.0);
+      gl_FragColor = vec4(back(Po) * (0.9 + 0.08 * edge), 1.0);
       return;
     }
     // flat sheet, darkened where the curl crowds it
     float occ = exp(-(t - L) / (R * 1.4)) * 0.22;
-    gl_FragColor = vec4(front(P) * (1.0 - occ) + g, 1.0);
+    gl_FragColor = vec4(front(P) * (1.0 - occ), 1.0);
     return;
   }
   if (t >= L - R && t < L + 0.001) {
@@ -69,7 +67,7 @@ void main(){
     if (u2 <= L && inRect(P2)) {
       float lit = 0.62 + 0.38 * (-cos(a2));
       float spec = pow(max(0.0, sin(a2 * 1.0 + 0.5)), 24.0) * 0.12;
-      gl_FragColor = vec4(back(P2) * lit + spec + g, 1.0);
+      gl_FragColor = vec4(back(P2) * lit + spec, 1.0);
       return;
     }
     float u1 = R * a1;
@@ -77,7 +75,7 @@ void main(){
     if (u1 <= L && inRect(P1)) {
       float lit = 0.5 + 0.5 * cos(a1);
       float spec = pow(max(0.0, cos(a1 - 0.55)), 30.0) * 0.18;
-      gl_FragColor = vec4(front(P1) * lit + spec + g, 1.0);
+      gl_FragColor = vec4(front(P1) * lit + spec, 1.0);
       return;
     }
   }

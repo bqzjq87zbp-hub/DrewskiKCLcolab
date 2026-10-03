@@ -12,7 +12,7 @@
  *   - positions are fractional and resolved per column count, so the same
  *     hang works at every zoom level and on a phone
  *   - frames in a row keep a free column between them where they can, and
- *     the [n] label goes into that free column
+ *     the label (the plate's kicker) goes into that free column
  */
 import { prng } from "../util.js";
 

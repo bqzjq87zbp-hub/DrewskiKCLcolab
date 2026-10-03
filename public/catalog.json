@@ -11,7 +11,7 @@
       "title": "Branding · Product and place",
       "issue": "Product and place",
       "mark": "Branding",
-      "plates": 13,
+      "plates": 12,
       "cover": "branding/img/7e59da520784cdd298b72877.jpg",
       "font": "'Fraunces', Georgia, serif",
       "weight": 850,
@@ -19,7 +19,7 @@
       "hero": "#ebe3d5",
       "heroInk": "#6f6250",
       "acc": "#b8442f",
-      "blurb": "NWPRT on the sand, and a cold bottle three ways."
+      "blurb": "NWPRT on the sand, and a cold bottle up close."
     },
     {
       "slug": "families",
@@ -49,7 +49,7 @@
       "hero": "#ece0da",
       "heroInk": "#7a4f45",
       "acc": "#a8382a",
-      "blurb": "Thirty-one people, a warm red backdrop, and the places they work."
+      "blurb": "Real people, a warm red backdrop, and the places they work."
     },
     {
       "slug": "coastal",
@@ -64,7 +64,7 @@
       "hero": "#dde7e9",
       "heroInk": "#46646e",
       "acc": "#2c6c84",
-      "blurb": "Two kids, two bright balls and the timber pier."
+      "blurb": "Kids, bright balls and the timber pier."
     }
   ]
 }

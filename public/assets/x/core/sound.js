@@ -7,7 +7,7 @@
  *   - it suspends when the tab is hidden and never plays over other media
  *
  * Beds are scored to the page: `mood(dark)` darkens the filter as chapters
- * go to night, `drive(v)` lets scroll speed open it up a little.
+ * go to night.
  *
  *   cruise   a warm detuned Rhodes-ish pad and vinyl crackle (branding, headshots)
  *   river    moving water and a low drone (families, coastal, the front door)
@@ -16,7 +16,7 @@ import * as prefs from "./prefs.js";
 import { clamp, emit } from "../util.js";
 
 let ctx = null, master = null, bedGain = null, bedFilter = null, bedNodes = [], noiseBuf = null;
-let kind = "cruise", wanted = false, moodV = 0, driveV = 0;
+let kind = "cruise", wanted = false, moodV = 0;
 const PENTA = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21];
 
 export const sound = {
@@ -45,7 +45,6 @@ export const sound = {
   toggle() { prefs.set("sound", wanted ? "off" : "on"); },
   play(name, opt) { if (sound.on && SFX[name]) try { SFX[name](opt || {}); } catch (e) {} },
   mood(dark) { moodV = clamp(dark); retune(); },
-  drive(v) { driveV = clamp(v); retune(); },
 };
 
 function start() {
@@ -139,7 +138,7 @@ function crackle(c, seconds) {
 function retune() {
   if (!ctx || !bedFilter) return;
   const base = kind === "river" ? 1500 : 1100;
-  const f = base * (1 - moodV * 0.62) * (1 + driveV * 0.9);
+  const f = base * (1 - moodV * 0.62);
   bedFilter.frequency.setTargetAtTime(Math.max(220, f), ctx.currentTime, 0.35);
 }
 

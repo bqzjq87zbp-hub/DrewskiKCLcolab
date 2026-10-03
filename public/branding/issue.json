@@ -162,25 +162,12 @@
             "#869dc5",
             "#5a76a3"
           ]
-        },
-        {
-          "id": "nwprt-underpier-branded",
-          "img": "img/08bfbe519671b2a3ec187588.jpg",
-          "kicker": "Under the Pier",
-          "caption": "Waves pass beneath the timber pier, the NWPRT Supply Co badge set low in the frame.",
-          "w": 1600,
-          "h": 1067,
-          "palette": [
-            "#81a1d7",
-            "#3e3d34",
-            "#b5cef2"
-          ]
         }
       ]
     },
     {
       "title": "A Cold Bottle",
-      "deck": "One classic bottle, three ways: white gloves, an ice bucket on the sand, and caps under droplets.",
+      "deck": "A classic bottle, shot every way: white gloves, an ice bucket on the sand, and caps under droplets.",
       "mood": {
         "bg": "#170d0c",
         "ink": "#f3e8e3"
@@ -244,8 +231,7 @@
       "family": "blue",
       "plates": [
         6,
-        8,
-        9
+        8
       ]
     },
     {
@@ -267,8 +253,7 @@
         2,
         4,
         6,
-        8,
-        9
+        8
       ]
     },
     {
@@ -277,7 +262,7 @@
       "family": "red",
       "plates": [
         2,
-        12
+        11
       ]
     },
     {
@@ -285,7 +270,7 @@
       "name": "Red",
       "family": "red",
       "plates": [
-        11
+        10
       ]
     },
     {
@@ -298,7 +283,7 @@
         5,
         6,
         7,
-        10
+        9
       ]
     }
   ],
@@ -310,7 +295,7 @@
     "hero": "#ebe3d5",
     "heroInk": "#6f6250",
     "acc": "#b8442f",
-    "intro": "Thirteen photographs in four chapters: apparel, patio hours, the waterline and a cold bottle. Scroll to walk the exhibition. Open any frame to read it.",
+    "intro": "Apparel, patio hours, the waterline and a cold bottle, chapter by chapter. Scroll to walk the exhibition. Open any frame to read it.",
     "sound": "cruise",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"

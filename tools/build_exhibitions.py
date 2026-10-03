@@ -151,8 +151,9 @@ HEAD = """<meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts}">""".replace("{fonts}", FONTS)
+# The loading ring alone: the site shows no numbers, so no percentage beside it.
 RING = ('<div class="pre-meta"><svg class="pre-ring" viewBox="0 0 26 26" aria-hidden="true"><circle class="bg" cx="13" cy="13" r="11"/>'
-        '<circle cx="13" cy="13" r="11"/></svg><span class="pre-num">000</span></div>')
+        '<circle cx="13" cy="13" r="11"/></svg></div>')
 GSAP = "".join(f'<script src="{{up}}assets/vendor/{f}"></script>\n' for f in
                ("gsap.min.js", "ScrollTrigger.min.js", "SplitText.min.js", "Flip.min.js", "lenis.min.js"))
 
@@ -173,7 +174,7 @@ def front_door(site, issues):
 <head>
 {HEAD}
 <title>{a(site["title"])} · {a(site["studio"])}</title>
-<meta name="description" content="{a(site["note"])}. Walk the pier, open an exhibition, turn the pages.">
+<meta name="description" content="{a(site["note"])}. Open an exhibition, turn the pages.">
 <meta name="theme-color" content="#070707">
 <meta property="og:title" content="{a(site["title"])} · {a(site["studio"])}">
 <meta property="og:description" content="{a(site["note"])}">
@@ -206,12 +207,10 @@ def front_door(site, issues):
   </div>
   <div class="ld-pick"></div>
   <nav class="ld-more" aria-label="More ways in">
-    <a href="/walk/" data-go="#061522" data-go-label="The Walk">Walk the pier</a>
     <a href="mailto:{a(site["booking"])}?subject=Booking%20enquiry">Book a session</a>
   </nav>
 </main>
-<noscript><p style="padding:40px;color:#eee;font:16px/1.5 Georgia,serif">The exhibitions need JavaScript. The flat editions: {noscript}. Or <a style="color:#fff" href="/walk/">walk the pier</a>.</p></noscript>
-<div class="grain" aria-hidden="true"></div>
+<noscript><p style="padding:40px;color:#eee;font:16px/1.5 Georgia,serif">The exhibitions need JavaScript. The flat editions: {noscript}.</p></noscript>
 {GSAP.replace("{up}", "")}<script type="module" src="assets/x/landing.js"></script>
 </body>
 </html>
@@ -264,7 +263,7 @@ def book_shell(ex):
 <div id="stage"><div id="book"></div></div>
 <div id="hint">drag a page corner to turn</div>
 <div id="bar"><button id="prev" aria-label="Previous page">&lsaquo;</button>
-<div id="ind">&nbsp;</div><button id="next" aria-label="Next page">&rsaquo;</button></div>
+<div id="ind" role="img"></div><button id="next" aria-label="Next page">&rsaquo;</button></div>
 <script src="../../assets/stpageflip.js"></script>
 <script src="../../assets/flipbook.js"></script>
 </body></html>
@@ -278,19 +277,18 @@ def atelier_shell(ex):
 <link rel="stylesheet" href="../../assets/atelier.css">
 </head><body>
 <canvas id="gl"></canvas>
-<div id="vig"></div><div id="grain"></div>
+<div id="vig"></div>
 
 <div id="hud">
   <div class="tl"><div class="kick" id="aMark">&nbsp;</div><div class="ttl" id="aTitle">&nbsp;</div></div>
-  <div class="tr"><div class="ind" id="aInd">&nbsp;</div></div>
-  <div class="hint">drag the left or right page to turn it &middot; drag the lamp to move the light</div>
-  <a class="pill" id="toWardrobe" href="/walk/">Walk the pier</a>
-  <div style="position:absolute;top:26px;left:50%;transform:translateX(-50%)">
-    <a class="pill" id="toBook" href="../book/">The Book</a>
-  </div>
+  <div class="tr"><div class="ind" id="aInd" role="img"></div></div>
+  <div class="hint">drag the left or right page to turn it</div>
+  <a class="pill" id="toExhibit" href="../">Back to the exhibition</a>
+  <div class="tc"><a class="pill" id="toBook" href="../book/">The Book</a></div>
+  <button type="button" class="pill" id="lampBtn" aria-expanded="false" aria-controls="desk">Lamp</button>
 </div>
 
-<div id="desk">
+<div id="desk" role="group" aria-label="Lamp">
   <h3>Lamp</h3>
   <div class="swatches" id="sw"></div>
   <div class="row"><label for="pw">Power</label><input id="pw" type="range" min="0" max="60" step="1" value="26"></div>
@@ -323,7 +321,7 @@ const COLOURS = ["#ffd9a0","#fff3e2","{ex["acc"]}","#e0533d","#4f7fd6","#4fd6a8"
 const sw = document.getElementById("sw");
 COLOURS.forEach(function(c,i){{
   const d=document.createElement("div");
-  d.className="sw"+(i===0?" on":""); d.style.background=c; d.title=c;
+  d.className="sw"+(i===0?" on":""); d.style.background=c;
   d.onclick=function(){{ setLampColour(c);
     sw.querySelectorAll(".sw").forEach(function(x){{x.classList.remove("on")}});
     d.classList.add("on"); }};
@@ -337,6 +335,13 @@ document.getElementById("envs").onclick = function(e){{
   t.classList.add("on");
   setEnvironment(t.dataset.h);
 }};
+// the lamp's controls fold away behind one pill, so the book has the whole
+// stage; Escape or reaching for a page folds them away again
+const lampBtn = document.getElementById("lampBtn");
+lampBtn.onclick = function(){{ lampBtn.setAttribute("aria-expanded", document.body.classList.toggle("desk-open")); }};
+function shut(){{ if (document.body.classList.contains("desk-open")) lampBtn.click(); }}
+addEventListener("keydown", function(e){{ if (e.key === "Escape") shut(); }});
+document.getElementById("gl").addEventListener("pointerdown", shut);
 
 start({{}}).catch(function(err){{
   const b=document.getElementById("boot");

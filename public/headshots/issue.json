@@ -20,7 +20,7 @@
   "stories": [
     {
       "title": "The Red Room",
-      "deck": "One warm red backdrop and eight very different people. The backdrop stays, everyone else changes.",
+      "deck": "The same warm red backdrop behind very different people. The backdrop stays, everyone else changes.",
       "mood": {
         "bg": "#f6e9e5",
         "ink": "#2a1310"
@@ -565,7 +565,7 @@
     "hero": "#ece0da",
     "heroInk": "#7a4f45",
     "acc": "#a8382a",
-    "intro": "Thirty-one portraits in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
+    "intro": "Portraits against red, in clean light, by walls with character, on location and after hours. Scroll to walk the exhibition. Open any frame to read it.",
     "sound": "cruise",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"

@@ -1,8 +1,8 @@
 /* /iw-transitions-preloader: the site as one continuous film.
  *
- * Preloader: the counter is real. It counts decoded images and loaded fonts,
- * not a timer, and a ring draws itself in step (SVG line motion). It hands
- * off straight into the page by peeling away as a sheet of paper.
+ * Preloader: the ring is real. It draws itself (SVG line motion) as images
+ * decode and fonts load, not on a timer, and shows no numbers. It hands off
+ * straight into the page by peeling away as a sheet of paper.
  *
  * Page transitions: leaving lays a sheet in the destination's colour over the
  * screen (paper curl, WebGL), the next page opens already covered by that
@@ -12,7 +12,7 @@
  */
 import { curl } from "../gl/curl.js";
 import { stage } from "../gl/stage.js";
-import { $, h, clamp, pad, sleep, mixHex, luma, BB } from "../util.js";
+import { $, h, clamp, sleep, mixHex, luma, BB } from "../util.js";
 import * as prefs from "./prefs.js";
 import { sound } from "./sound.js";
 
@@ -39,17 +39,14 @@ export function track(items, onProgress) {
   return Promise.race([Promise.all([...ps, fonts]), sleep(9000)]);
 }
 
-/** Wire a preloader element: counter text and ring follow progress smoothly. */
+/** Wire a preloader element: the ring follows progress smoothly. */
 export function preloader(el) {
-  const num = $(".pre-num", el), ring = $(".pre-ring circle", el);
+  const ring = $(".pre-ring circle", el);
   const len = ring ? ring.getTotalLength() : 0;
   if (ring) { ring.style.strokeDasharray = len; ring.style.strokeDashoffset = len; }
   const shown = { v: 0 };
   let target = 0;
-  const render = () => {
-    if (num) num.textContent = pad(Math.round(shown.v * 100), 3);
-    if (ring) ring.style.strokeDashoffset = len * (1 - shown.v);
-  };
+  const render = () => { if (ring) ring.style.strokeDashoffset = len * (1 - shown.v); };
   return {
     set(p) {
       target = Math.max(target, clamp(p));

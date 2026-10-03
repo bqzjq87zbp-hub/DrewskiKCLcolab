@@ -1,23 +1,22 @@
 /* The exhibition grid: the heart of the page.
  *
  *   hang        layout.js decides where every frame goes (pure, tested)
- *   entrance    each frame lands as paper (gl/plates.js), or a clip-path fold
- *               where there is no WebGL
- *   hover       print loupe, a pentatonic tick, the [n] label decrypts
- *   depth       frames drift at their own rates (multi-rate parallax) and
- *               lean with a hard fling (velocity skew)
+ *   entrance    each print rises a little into place as it fades up, flat
+ *               and level the whole way (x.css)
+ *   hover       print loupe, a pentatonic tick, the kicker beside the frame
+ *   depth       frames drift gently at their own rates (multi-rate parallax);
+ *               they never lean or skew, so every portrait stays level
  *   chapters    each story swaps the page mood at its boundary; the HUD shows
- *               where you are, how far through, and how many frames you've seen
+ *               which chapter you are in and how far through the wall you are
  *   zoom        + / - re-hangs the wall at 6, 8 or 10 columns and every frame
  *               glides to its new place (GSAP Flip), anchored on what you were
  *               looking at
  *   touch       press and hold a frame to peek at it full screen
  */
 import { layout, columnsFor } from "./layout.js";
-import { $, $$, h, esc, pad, clamp, damp, hashStr, luma, emit, ready, media } from "../util.js";
-import { enter, hover } from "../gl/plates.js";
+import { $, $$, h, esc, pad, clamp, hashStr, luma, emit, ready, media } from "../util.js";
+import { hover } from "../gl/plates.js";
 import { scroll, whenVisible } from "../core/scroll.js";
-import { scramble } from "../core/type.js";
 import { initReveals } from "../core/reveal.js";
 import { sound } from "../core/sound.js";
 import * as prefs from "../core/prefs.js";
@@ -30,29 +29,26 @@ export function initGrid(ctx) {
   const el = ctx.el.grid;
   const hud = ctx.el.hud, zoomEl = ctx.el.zoom;
   let zoom = 0, cols = 0, rows = [];
-  const seen = new Set();
   const entered = new WeakSet();
   const visible = new Set();
-  const speeds = ctx.plates.map((p) => 1 + ((hashStr(p.src) % 1000) / 1000 - 0.5) * 0.14);
-  let skew = 0, flipping = false;
+  // a gentle drift: each frame within 3.5% of the scroll rate
+  const speeds = ctx.plates.map((p) => 1 + ((hashStr(p.src) % 1000) / 1000 - 0.5) * 0.07);
+  let flipping = false;
 
   function frameHTML(p, it, r) {
     const eager = p.i < 6;
-    const lab = `<span class="num" data-text="[${pad(p.n)}]">[${pad(p.n)}]</span><small>${esc(p.kicker)}</small>`;
     return `<figure class="fr is-waiting" id="p-${pad(p.n)}" data-i="${p.i}" style="grid-row:${r};grid-column:${it.start + 1} / span ${it.span};--drop:${it.drop}">
       <a class="fr-a" href="?view=slider&amp;id=${p.n}" aria-label="Plate ${pad(p.n)}, ${esc(p.kicker)}. ${esc(p.caption)}">
         <div class="fr-m" style="aspect-ratio:${p.w} / ${p.h}"><img src="${esc(p.src)}" alt="${esc(p.alt)}" width="${p.w}" height="${p.h}" decoding="async" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'}></div>
       </a>
-      <figcaption class="fr-lab" data-side="${it.label}">${lab}</figcaption>
+      <figcaption class="fr-lab" data-side="${it.label}"><small>${esc(p.kicker)}</small></figcaption>
     </figure>`;
   }
   function chapterHTML(s, row, r) {
     return `<section class="ch" id="chapter-${s.i + 1}" data-story="${s.i}" data-side="${row.side}" style="grid-row:${r}" aria-labelledby="cht-${s.i}">
       <div class="ch-in">
-        <div class="ch-n num" aria-hidden="true">${pad(s.i + 1)}</div>
         <h2 class="ch-t" id="cht-${s.i}" data-reveal="chars">${esc(s.title)}</h2>
         <p class="ch-d" data-reveal="lines">${esc(s.deck)}</p>
-        <div class="ch-meta lbl" data-reveal="fade">${s.plates.length} photograph${s.plates.length > 1 ? "s" : ""}</div>
       </div>
     </section>`;
   }
@@ -94,24 +90,18 @@ export function initGrid(ctx) {
   function land(f) {
     if (entered.has(f)) return;
     entered.add(f);
-    const i = +f.dataset.i;
     const now = performance.now();
     if (now - batchT > 180) batch = 0;
     batchT = now;
     const delay = Math.min(batch++ * 0.09, 0.45);
     const im = img(f);
     ready(im).then(() => {
-      if (!im.naturalWidth) { f.classList.remove("is-waiting"); return; }
-      const calm = prefs.get().motion === "calm";
-      const go = calm ? Promise.resolve(false) : enter(im, { box: $(".fr-m", f), delay });
-      go.then((ok) => {
-        seen.add(i); updateHud();
-        if (ok) { f.classList.remove("is-waiting"); return; }
-        f.classList.remove("is-waiting");
-        if (!calm) { f.style.setProperty("animation-delay", delay + "s"); f.classList.add("is-css"); }
-      });
-      if (!calm) setTimeout(() => sound.play("paper", { dur: 0.28, gain: 0.035 }), delay * 1000);
-      requestAnimationFrame(() => f.classList.remove("is-waiting"));
+      f.classList.remove("is-waiting");
+      if (!im.naturalWidth || prefs.get().motion === "calm") return;
+      // a custom property, because the animation runs on the frame's child
+      f.style.setProperty("--in-delay", delay + "s");
+      f.classList.add("is-in");
+      setTimeout(() => sound.play("paper", { dur: 0.28, gain: 0.035 }), delay * 1000);
     });
   }
   const io = new IntersectionObserver((es) => {
@@ -124,16 +114,14 @@ export function initGrid(ctx) {
 
   /* hover, click, long press ---------------------------------------------- */
   frames.forEach((f) => {
-    const a = $(".fr-a", f), m = $(".fr-m", f), num = $(".fr-lab .num", f);
+    const a = $(".fr-a", f), m = $(".fr-m", f);
     const i = +f.dataset.i;
     a.addEventListener("pointerenter", (e) => {
       if (e.pointerType !== "mouse") return;
       hover(img(f), true, m);
-      scramble(num);
       sound.play("tick", { i });
     });
     a.addEventListener("pointerleave", () => hover(img(f), false, m));
-    a.addEventListener("focus", () => scramble(num));
     a.addEventListener("click", (e) => {
       if (e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault();
@@ -161,13 +149,13 @@ export function initGrid(ctx) {
   let peekEl = null;
   function peek(p) {
     if (!peekEl) { peekEl = h("div", { class: "peek", "aria-hidden": "true" }); document.body.appendChild(peekEl); }
-    peekEl.innerHTML = `<img src="${esc(p.src)}" alt=""><div class="peek-t"><span class="num">[${pad(p.n)}]</span> ${esc(p.kicker)}</div>`;
+    peekEl.innerHTML = `<img src="${esc(p.src)}" alt=""><div class="peek-t">${esc(p.kicker)}</div>`;
     peekEl.classList.add("on");
     if (navigator.vibrate) try { navigator.vibrate(8); } catch (e) {}
   }
   function unpeek() { if (peekEl) peekEl.classList.remove("on"); }
 
-  /* depth: parallax + velocity skew --------------------------------------- */
+  /* depth: parallax ------------------------------------------------------- */
   // Each frame's resting centre in document space, measured only when layout
   // changes (load, resize, re-hang), so scrolling never reads layout.
   const measure = () => {
@@ -181,15 +169,14 @@ export function initGrid(ctx) {
   };
   measure();
   ScrollTrigger.addEventListener("refresh", measure);
-  let lastSkew = 0;
-  scroll.on((s, dt) => {
-    const calm = prefs.get().motion === "calm";
-    skew = damp(skew, calm ? 0 : clamp(s.v * 0.045, -1.8, 1.8), 8, dt);
-    if (Math.abs(skew - lastSkew) > 0.002) { lastSkew = skew; el.style.setProperty("--skew", skew.toFixed(3) + "deg"); }
-    if (calm || flipping) return;
+  scroll.on((s) => {
+    if (prefs.get().motion === "calm" || flipping) return;
     const mid = s.y + innerHeight / 2;
     for (const f of visible) {
-      const off = (f._cy - mid) * (speeds[+f.dataset.i] - 1) * -1;
+      // A hard fling outruns the observer: a frame already far off screen can
+      // still be in `visible` and would keep a big offset into its next entry
+      // (a visible jump). Distance is capped at a screen height so it cannot.
+      const off = clamp(f._cy - mid, -innerHeight, innerHeight) * (speeds[+f.dataset.i] - 1) * -1;
       if (Math.abs(off - (f._py || 0)) < 0.05) continue;
       f._py = off;
       f.style.transform = `translate3d(0,${off.toFixed(2)}px,0)`;
@@ -214,8 +201,7 @@ export function initGrid(ctx) {
     if (si === current) return;
     current = si;
     mood(si);
-    const s = ctx.stories[si];
-    $(".hud-ch", hud).innerHTML = `<span class="num">${pad(si + 1)}</span> &nbsp;${esc(s.title)}`;
+    $(".hud-ch", hud).textContent = ctx.stories[si].title;
     emit("chapter", si);
   }
   heads.forEach((c, k) => {
@@ -238,11 +224,6 @@ export function initGrid(ctx) {
       if (!st.isActive && st.direction < 0) setChapter(0);
     },
   });
-  function updateHud() {
-    const n = $(".hud-seen .num", hud);
-    if (n) n.textContent = `${pad(seen.size)}/${pad(ctx.plates.length)}`;
-  }
-  updateHud();
 
   /* zoom -------------------------------------------------------------------- */
   const [zin, zout] = $$("button", zoomEl);
@@ -302,7 +283,6 @@ export function initGrid(ctx) {
     media: (i) => $(`#p-${pad(i + 1)} .fr-m`, el),
     chapterEl: (si) => $(`#chapter-${si + 1}`, el),
     get chapter() { return Math.max(0, current); },
-    seen,
     /** Pick out frames: everything else dims for a few seconds. */
     highlight(indices, opts = {}) {
       clearTimeout(hitT);

@@ -12,7 +12,6 @@
   if (motion === "system") motion = mq("(prefers-reduced-motion: reduce)") ? "calm" : "full";
   d.setAttribute("data-theme", theme);
   d.setAttribute("data-motion", motion);
-  d.setAttribute("data-grain", p.grain === "off" ? "off" : "on");
   d.setAttribute("data-effects", p.effects === "off" ? "off" : "on");
   d.setAttribute("data-pointer", mq("(hover: hover) and (pointer: fine)") ? "fine" : "coarse");
   try {

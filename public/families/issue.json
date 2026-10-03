@@ -183,7 +183,7 @@
     },
     {
       "title": "Close",
-      "deck": "Closer in: a newborn on a shoulder, a laughing child, and two faces in black and white.",
+      "deck": "Closer in: a newborn on a shoulder, a laughing child, and faces young and old in black and white.",
       "mood": {
         "bg": "#ecebe7",
         "ink": "#1a1816"
@@ -245,7 +245,7 @@
     },
     {
       "title": "By the Water",
-      "deck": "Down at the shoreline and under the pier, with two very bright balls.",
+      "deck": "Down at the shoreline and under the pier, with very bright balls.",
       "mood": {
         "bg": "#e7f0f2",
         "ink": "#0e1f27"
@@ -437,7 +437,7 @@
     "hero": "#e9e8dc",
     "heroInk": "#5f6a52",
     "acc": "#6c8746",
-    "intro": "Twenty-one photographs in five chapters. Scroll to walk the exhibition. Open any frame to read it.",
+    "intro": "Under the trees, in the hills, up close, by the water and into the evening. Scroll to walk the exhibition. Open any frame to read it.",
     "sound": "river",
     "game": "skip",
     "booking": "bqzjq87zbp@privaterelay.appleid.com"

@@ -1,14 +1,14 @@
 /* The menu: navigation, search, and the visitor's own settings.
  *
- *   exhibits   every exhibition and its four ways in; hovering the pier walk
- *              plays it under the cursor (/iw-pointer-magic hover preview)
+ *   exhibits   every exhibition and its three ways in
  *   chapters   scrollspy: the chapter you are in is marked
- *   search     floating label, live results with matches highlighted and a
- *              running count (/iw-live-data-forms); Enter opens the first
- *   settings   theme, motion, effects, sound, grain (/iw-viewer-controls)
+ *   search     floating label, live results with matches highlighted, and a
+ *              word when nothing matches (/iw-live-data-forms); Enter opens
+ *              the first
+ *   settings   theme, motion, effects, sound (/iw-viewer-controls)
  *   live       the issue's clock and light, ticking
  */
-import { $, $$, h, esc, pad, listen, appUrl } from "../util.js";
+import { $, $$, h, esc, listen, appUrl } from "../util.js";
 import * as prefs from "../core/prefs.js";
 import { scroll } from "../core/scroll.js";
 import { startLive } from "../core/live.js";
@@ -51,9 +51,9 @@ export function initMenu(ctx) {
   }).join("");
 
   const chaptersHTML = ctx.stories ? `<div class="mn-col mn-ch"><h3 class="lbl">Chapters</h3><ol>${ctx.stories.map((s) =>
-    `<li><a href="#chapter-${s.i + 1}" data-chapter="${s.i}"><span class="num lbl">${pad(s.i + 1)}</span><b>${esc(s.title)}</b><span class="lbl num">${s.plates.length}</span></a></li>`).join("")}</ol></div>` : "";
+    `<li><a href="#chapter-${s.i + 1}" data-chapter="${s.i}"><b>${esc(s.title)}</b></a></li>`).join("")}</ol></div>` : "";
   const searchHTML = ctx.plates ? `<div class="mn-col mn-search"><h3 class="lbl">Search the exhibition</h3>
-      <div class="fld"><input id="mn-q" type="search" placeholder=" " autocomplete="off" spellcheck="false" aria-describedby="mn-cnt"><label for="mn-q">A place, a colour, a time&hellip;</label><span class="cnt lbl num" id="mn-cnt" aria-live="polite"></span></div>
+      <div class="fld"><input id="mn-q" type="search" placeholder=" " autocomplete="off" spellcheck="false" aria-describedby="mn-cnt"><label for="mn-q">A place, a colour, a time&hellip;</label><span class="cnt lbl" id="mn-cnt" aria-live="polite"></span></div>
       <ul class="res" id="mn-res"></ul></div>` : "";
 
   const root = h("div", { class: "mn", id: "menu", role: "dialog", "aria-modal": "true", "aria-label": "Menu" }, `
@@ -63,7 +63,6 @@ export function initMenu(ctx) {
       <div class="mn-col mn-issues"><h3 class="lbl">The exhibitions</h3>${issueHTML}
         <div class="chips" style="margin-top:4px">
           ${ctx.plates ? '<button type="button" data-act="ask">Plan a session</button><button type="button" data-act="play">Play</button>' : ""}
-          <a class="chipa" href="${esc(appUrl("walk/"))}" data-go="#061522" data-go-label="The Walk"video/walk-scrub.mp4"))}">Walk the pier</a>
           <a class="chipa" href="${esc(appUrl(""))}" data-go="#070707">The front door</a>
         </div>
       </div>
@@ -105,9 +104,9 @@ export function initMenu(ctx) {
     const run = () => {
       const v = q.value.trim();
       const hits = v ? searchPlates(ctx.plates, v) : [];
-      cnt.textContent = v ? `${hits.length} of ${ctx.plates.length}` : "";
+      cnt.textContent = v && !hits.length ? "No match" : "";
       res.innerHTML = hits.slice(0, 8).map((p) => `<li><button type="button" data-plate="${p.i}">
-        <img src="${esc(p.src)}" alt=""><span><b>${mark(p.kicker, v)}</b><br><small>${mark(p.caption, v)}</small></span><span class="num lbl">[${pad(p.n)}]</span></button></li>`).join("");
+        <img src="${esc(p.src)}" alt=""><span><b>${mark(p.kicker, v)}</b><br><small>${mark(p.caption, v)}</small></span></button></li>`).join("");
     };
     q.addEventListener("input", run);
     q.addEventListener("keydown", (e) => { if (e.key === "Enter") { const b = $("button", res); if (b) b.click(); } });
@@ -123,8 +122,10 @@ export function initMenu(ctx) {
     root.classList.add("open");
     document.documentElement.classList.add("mn-open");
     const calm = prefs.get().motion === "calm";
-    await new Promise((res) => gsap.fromTo(root, { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: calm ? 0.01 : 0.85, ease: "expo.inOut", onComplete: res }));
-    if (!calm) gsap.from($$(".mn-col, .mn-live", root), { y: 30, autoAlpha: 0, duration: 0.8, stagger: 0.06, ease: "expo.out" });
+    // the columns rise while the panel wipes in. Started after the wipe, they
+    // showed through it, vanished and came back.
+    if (!calm) gsap.fromTo($$(".mn-col, .mn-live", root), { y: 24, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.05, delay: 0.1, ease: "power4.out", overwrite: true });
+    await new Promise((res) => gsap.fromTo(root, { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: calm ? 0.01 : 0.5, ease: "power4.out", onComplete: res }));
     $(".mn-close", root).focus({ preventScroll: true });
     sound.play("paper", { dur: 0.4, gain: 0.07 });
     busy = false;
@@ -135,7 +136,7 @@ export function initMenu(ctx) {
     if (busy) { pendingClose = true; return; }
     busy = true; open = false;
     const calm = prefs.get().motion === "calm";
-    await new Promise((res) => gsap.to(root, { clipPath: "inset(100% 0 0% 0)", duration: calm ? 0.01 : 0.75, ease: "expo.inOut", onComplete: res }));
+    await new Promise((res) => gsap.to(root, { clipPath: "inset(100% 0 0% 0)", duration: calm ? 0.01 : 0.4, ease: "power4.out", onComplete: res }));
     root.classList.remove("open");
     document.documentElement.classList.remove("mn-open");
     gsap.set(root, { clipPath: "inset(0 0 100% 0)" });
