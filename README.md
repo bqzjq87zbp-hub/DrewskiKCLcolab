@@ -1,5 +1,7 @@
 # Drewski KCL collaboration
 
+**See it live: https://kiyono-exhibitions.vercel.app** (the exhibitions branch, hosted as a preview).
+
 A self-contained photography portfolio for Kiyono Creative Lab, exported for collaboration. It has 13 Branding, 21 Family, 31 Headshot and 4 Coastal gallery entries, including ten NWPRT photographs within Branding.
 
 The front door hangs those four collections as exhibitions, built on the exhibition engine from Drewski's Newsstand site: a dark lockup and four covers, then one exhibition per collection with a hang in chapters, a reading view, a 3D hall, a palette of colours measured from the photographs, a flip book and a 3D atelier.
