@@ -18,6 +18,12 @@ npm start
 
 Open `http://127.0.0.1:4260/`. No package installation, API key or account is required. The exhibitions load their typefaces from Google Fonts and the atelier loads three.js from unpkg; offline, the type falls back to system serif and sans, and the atelier falls back to the flat book. Use `PORT=4300 npm start` for a different local port. The server exposes only inventoried files under `public/`; repository documentation and development scripts are not public routes.
 
+## Put it online
+
+GitHub stores the site; it does not run it, which is why the repository page shows code. To get a live link, import this repository into Vercel (free): sign in at vercel.com with the GitHub account that owns the repository, choose Add New, then Project, and import `DrewskiKCLcolab`. `vercel.json` already sets everything (the site is the `public/` folder, and pages work with or without a trailing slash), so press Deploy without changing any settings.
+
+After that, every push deploys by itself. The `main` branch becomes the production site, every other branch (such as `exhibitions`) gets its own preview link, and the links appear on the right of the repository page under Deployments. To put the site on a domain whose DNS is on Cloudflare, add the domain in the Vercel project's Domains settings and create the DNS record Vercel shows there; a subdomain such as `exhibitions.example.com` can go live without touching the site already on the main domain.
+
 ## The exhibitions
 
 | Route | What it is |
